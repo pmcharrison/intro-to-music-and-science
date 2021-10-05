@@ -1,1 +1,45 @@
 # Quantitative methods (I): Experiment design
+
+Designing good experiments is a true art. One must deeply understand the relevant literature so as to identify which important scientific questions remain unsolved. One must ....
+
+## Identifying a research topic
+
+Every scientist has their own motivations for working in a particular field
+
+-   You find it interesting / you like working there
+
+-   You think that the topic is understudied
+
+-   You think the research would have important implications
+
+    -   You think we would learn something important
+
+    -   You think you will influence other researchers
+
+    -   You think your work will have important applications
+
+-   You are interested in the skillset that the work involves
+
+    -   Make the most of existing skills
+
+    -   Develop skills that you want to develop
+
+How do you find the right topic?
+
+-   Reading broadly
+
+-   Attending talks/conferences
+
+-   Thinking broadly (I wonder if someone has studied this?)
+
+## Identifying a research question
+
+-   Literature reviews
+
+    -   Ad hoc review
+
+    -   Systematic literature review
+
+## Further reading
+
+-   Chapter 1, 'Research questions' in @Williamon2021-ld ([eBook link](https://ezp.lib.cam.ac.uk/login?url=http://dx.doi.org/10.1093/oso/9780198714545.001.0001)).
