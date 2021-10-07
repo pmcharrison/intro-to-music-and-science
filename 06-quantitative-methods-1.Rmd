@@ -48,37 +48,31 @@ Impact can be defined as the sense in which a piece of research affects the worl
 
 2.  The sense in which the research solves practical problems in the real world (*applied* research). This can be achieved for example by developing a new technology that can be applied in non-research contexts, or by generating information that influences public or private policy.
 
-Several factors contribute to determining your capacity to achieve impact within a given research topic.
+Several factors contribute to determining your capacity to achieve impact within a given research topic. Some relate to the research topic itself; some relate to you as a researcher.
 
-What is a research topic?
+1.  Perhaps the topic itself has intrinsically high potential impact. Cancer research would be one such example; successful contributions in cancer research can have immensely high impact on cancer sufferers around the world.
 
-Every scientist has their own motivations for working in a particular field
+2.  Perhaps the topic is understudied. This most commonly happens when a field is new, and there has not yet been sufficient time for many researchers to recognise and migrate to the field.
 
--   Enjoyment: You find it interesting / you like working there
+3.  Perhaps the topic matches your own skills particularly well. Different skillsets are useful for different research topics; this is particularly relevant in music psychology, where musical researchers will often have deep personal experience with a particular research topic. This personal experience can be useful in all kinds of ways, ranging from identifying good research questions to developing good hypotheses to recruiting suitable participants.
 
--   Impact: You think it's a good field in which to make impact
+### Support
 
-    -   Perhaps because it matches your skills well
+It is essential to consider whether you have the right environment available for performing your work. There are two particularly important factors to consider:
 
-    -   Perhaps because the topic is understudied
+-   **Academic input**. Will you have a supervisor? Does your supervisor have expertise in the planned research topic, and/or in the relevant methodologies for that research topic?
 
-    -   Perhaps because the topic has high potential implications
+-   **Resources**.
 
-        -   Perhaps in the sense of influencing other research (basic research)
+### Cost
 
-        -   Perhaps in the sense of achieving actionable outcomes
-
-            -   Create a useful technology/methodology
-
-            -   Influence policy for the better
-
--   Support: is the right environment available for performing the work?
+1.  Support: is the right environment available for performing the work?
 
     -   Academic input (supervisor, research community)
 
     -   Resources (special equipment, money)
 
--   Cost
+2.  Cost
 
     -   Financial
 
