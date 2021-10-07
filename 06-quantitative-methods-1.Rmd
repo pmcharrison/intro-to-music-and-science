@@ -22,7 +22,7 @@ Designing an effective experiment that satisfies all of these principles while a
 
 ## Identifying a research topic
 
-All experiments are situated within some kind of research topic. The research topic defines the body of knowledge to which we want to contribute, and typically has important implications for the methodologies that we will end up using. Here are some examples of research topics within music psychology:
+All experiments are situated within some kind of research topic. The research topic defines the body of knowledge to which we want to contribute, and typically has important implications for the methodologies that we will end up using. Here are some examples of research topics within the field of music psychology:
 
 -   Music and dementia
 
@@ -36,10 +36,6 @@ All experiments are situated within some kind of research topic. The research to
 
 Sometimes you might dream up the research topic totally by yourself, for example when you apply for a PhD; other times you might be choosing between different predetermined research topics, for example as part of the research component of a university course, or when applying for postdoctoral researcher positions. In both scenarios, though, it is important to be able to critically evaluate different research topics and decide which possibilities work best for you. Let's go through a few different dimensions to think about:
 
-### Personal interest
-
-There's no escaping the fact that different people find different things interesting. I might be biased, but I think that music psychology is a particularly rich field in this respect, because it contains so many research topics that music enthusiasts can connect to in a deep and personal sense. There is no shame in studying film music because you have a particular interest in listening to film music, or in studying music and dementia because you have a relative with dementia.
-
 ### Impact
 
 Impact can be defined as the sense in which a piece of research affects the world around it. Research can have impact in many ways, but it's often helpful to differentiate two kinds of impact:
@@ -52,7 +48,7 @@ Several factors contribute to determining your capacity to achieve impact within
 
 1.  Perhaps the topic itself has intrinsically high potential impact. Cancer research would be one such example; successful contributions in cancer research can have immensely high impact on cancer sufferers around the world.
 
-2.  Perhaps the topic is understudied. This most commonly happens when a field is new, and there has not yet been sufficient time for many researchers to recognise and migrate to the field.
+2.  Perhaps the topic is understudied. This most commonly happens early on in the study of a topic, when there has not yet been sufficient time for many researchers to recognise its potential.
 
 3.  Perhaps the topic matches your own skills particularly well. Different skillsets are useful for different research topics; this is particularly relevant in music psychology, where musical researchers will often have deep personal experience with a particular research topic. This personal experience can be useful in all kinds of ways, ranging from identifying good research questions to developing good hypotheses to recruiting suitable participants.
 
@@ -64,6 +60,16 @@ It is essential to consider whether you have the right environment available for
 
 -   **Resources**. Does your planned research topic require special equipment, or large amounts of money (e.g. for funding travel to remote locations, or for recruiting participants)? If so, will this equipment/money be available from your group/department/faculty/institution? If not, are there relevant grants you can apply to (e.g. from your college/university/national funding body) that could support the work?
 
+### Personal interest
+
+There's no escaping the fact that different people find different things interesting. I might be biased, but I think that music psychology is a particularly rich field in this respect, because it contains so many research topics that music enthusiasts can connect to in a deep and personal sense. There is no shame in studying film music because you have a particular interest in listening to film music, or in studying music and dementia because you have a relative with dementia.
+
+### Personal development
+
+Most research projects offer opportunities for knowledge and skill development. By working in a field, you will necessarily have to learn a lot about the relevant literature, and become something of an expert in the particular topic that you are studying. It's worth taking some time to consider which research topics you would find most rewarding to learn so much about. Conducting scientific experiments moreover gives an opportunity to develop many practical skills, such as interviewing, survey design, programming, or data analysis; it's worth considering which of these potential skills would be most valuable to you to learn, either because you think you would enjoy learning them, or because you think they would serve you well in the future.
+
+Learning new skills is good, but it is also time-consuming. Generally you should choose topics that provide some balance between the familiar and unfamiliar; the unfamiliar aspects are useful learning opportunities, but the familiar aspects help you to work efficiently and effectively.
+
 ### Cost-benefit trade-off
 
 Lastly, it is important to evaluate the potential costs involved in the proposed research direction, and determine how they compare to the potential impact of the work. This becomes particularly relevant in the latter stages of planning process, but we'll discuss this issue here anyway for completeness.
@@ -72,41 +78,15 @@ The most obvious kind of costs are *financial* costs: some research simply costs
 
 -   **Time.** It is important to consider time both in terms of wall-clock hours (i.e. how much time elapses before the start and end of a project) and in terms of person hours (i.e. how many hours the researchers need to spend actively working on the project). Wall-clock hours become increasingly important for research projects with short time windows and strict deadlines, for example undergraduate or masters' projects.
 
--   **Ethics.**
+-   **Ethics.** Certain projects bring personal costs, or risks of costs, to the participants. For example, a trial medical drug could harm participants through unknown side effects, or a survey about taboo behaviours could harm its participants if their anonymity were compromised. The research should only be undertaken if the likely benefits of the research outweigh the likely costs, and then only if the participants provide informed consent. All psychological research projects (even undergraduate projects) should generally go to an institutional ethics board for approval before the research is conducted.
 
--   **Training.**
+### Idea generation
 
-*Financial* costs are the most obvious kinds of costs, and typically the easiest to quantify.
+It is one thing to appraise a given research topic along these different dimensions, but how do we identify candidate research topics in the first place? This is fundamentally a personal process, and so it's difficult to prescribe a universal strategy here. Nonetheless, there are a couple of useful things worth considering:
 
-some research simply costs a lot of money. A second
+-   **Reading broadly.** Most fields have a fair few high-level books that lay out the many research topics that make up the field. In music psychology, good examples would be the *Psychology of Music* [@Deutsch2013-xv], the *Oxford Handbook of Music Psychology* [@Hallam2017-xk], or *The Science and Psychology of Music* [@Thompson2021-eu]*.*
 
-1.  Cost
-
-    -   Financial
-
-    -   Time
-
-    -   Ethics
-
-    -   Training
-
-Need to think also about the cost of working in a field.
-
--   Equipment and other resources: do you need lots of money/equipment?
-
--   Time: do experiments take a lot of time to design/implement?
-
--   Ethics:
-
--   Training:
-
-How to get ideas about potential topics?
-
--   Reading broadly
-
--   Attending talks/conferences
-
--   Thinking broadly (I wonder if someone has studied this?)
+-   **Attending talks and conferences.** Listening to other people present their work is a great way to foster your own ideas. Most academic institutions hold regular seminar series concerning various research fields or topics, which typically include a mixture of internal and external speakers. In addition to this, particular research fields tend to hold regular national or international conferences, where researchers congregate to share and discuss their latest research. Attending one of these conferences (or workshops, which are essentially informal versions of conferences) can be a great way to be exposed to research topics and methodologies you had never really considered before, as well as meeting other interesting people in the field. Conferences can be expensive to attend in person, but many offer special discounts or funding to students. Moreover, if you can't attend in person, it is nowadays often possible to watch recordings of the talks afterwards on YouTube, or at least to read the conference's 'proceedings' book which compiles summaries of the research projects that were presented.
 
 ## Identifying a research question
 
