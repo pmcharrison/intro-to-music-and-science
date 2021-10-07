@@ -56,23 +56,31 @@ Several factors contribute to determining your capacity to achieve impact within
 
 3.  Perhaps the topic matches your own skills particularly well. Different skillsets are useful for different research topics; this is particularly relevant in music psychology, where musical researchers will often have deep personal experience with a particular research topic. This personal experience can be useful in all kinds of ways, ranging from identifying good research questions to developing good hypotheses to recruiting suitable participants.
 
-### Support
+### Environment
 
 It is essential to consider whether you have the right environment available for performing your work. There are two particularly important factors to consider:
 
--   **Academic input**. Will you have a supervisor? Does your supervisor have expertise in the planned research topic, and/or in the relevant methodologies for that research topic?
+-   **Academic input**. Will you have a supervisor? (If you are an undergraduate or postgraduate student, almost certainly) Does your supervisor have expertise in the planned research topic, and/or in the relevant methodologies for that research topic? Are there other people in the research group/department/faculty/institution who could also give you useful feedback on your work?
 
--   **Resources**.
+-   **Resources**. Does your planned research topic require special equipment, or large amounts of money (e.g. for funding travel to remote locations, or for recruiting participants)? If so, will this equipment/money be available from your group/department/faculty/institution? If not, are there relevant grants you can apply to (e.g. from your college/university/national funding body) that could support the work?
 
-### Cost
+### Cost-benefit trade-off
 
-1.  Support: is the right environment available for performing the work?
+Lastly, it is important to evaluate the potential costs involved in the proposed research direction, and determine how they compare to the potential impact of the work. This becomes particularly relevant in the latter stages of planning process, but we'll discuss this issue here anyway for completeness.
 
-    -   Academic input (supervisor, research community)
+The most obvious kind of costs are *financial* costs: some research simply costs a lot of money. There are however several other kinds of costs which are often underappreciated in the project planning stage.
 
-    -   Resources (special equipment, money)
+-   **Time.** It is important to consider time both in terms of wall-clock hours (i.e. how much time elapses before the start and end of a project) and in terms of person hours (i.e. how many hours the researchers need to spend actively working on the project). Wall-clock hours become increasingly important for research projects with short time windows and strict deadlines, for example undergraduate or masters' projects.
 
-2.  Cost
+-   **Ethics.**
+
+-   **Training.**
+
+*Financial* costs are the most obvious kinds of costs, and typically the easiest to quantify.
+
+some research simply costs a lot of money. A second
+
+1.  Cost
 
     -   Financial
 
