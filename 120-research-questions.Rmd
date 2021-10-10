@@ -6,9 +6,11 @@ A research question is, simply put, a question about a particular aspect of a re
 
 ## What makes a good research question?
 
--   We don't know the answer already
+A good scientific research question must possess three essential criteria:
 
--   Getting the answer would be useful
+-   **We don't know the answer already.**
+
+-   **It would be useful to know the answer.**
 
     -   Impact, as defined above
 
@@ -16,7 +18,7 @@ A research question is, simply put, a question about a particular aspect of a re
 
         -   Applied
 
--   It is practical to get the answer
+-   **Finding the answer seems achievable and practical.**
 
 Useful heuristic: try to compress it
 
