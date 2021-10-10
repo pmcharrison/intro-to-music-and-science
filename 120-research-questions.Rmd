@@ -1,0 +1,45 @@
+# Research questions
+
+## What is a research question?
+
+A research question is, simply put, a question about a particular aspect of a research topic. There will typically be many relevant research questions within a particular research topic. Ideally, as time goes on, historic research questions will be answered by new empirical studies, and new research questions will be postulated to replace them. This incremental answering and renewal of research questions through empirical studies is the basic mechanism by which the frontier of scientific knowledge is expanded.
+
+## What makes a good research question?
+
+-   We don't know the answer already
+
+-   Getting the answer would be useful
+
+    -   Impact, as defined above
+
+        -   Theoretic
+
+        -   Applied
+
+-   It is practical to get the answer
+
+Useful heuristic: try to compress it
+
+-   Answering it will advance knowledge in a desirable way
+
+    -   We don't know the answer already
+
+    -   
+
+-   It is practical to design an experiment to answer that question (Tractability/feasibility)
+
+## How to develop good research questions?
+
+What makes a good research question?
+
+While research topics are relatively long-lived, research questions have a shorter timespan. Ideally, each study identifies an important unsolved research question, then conducts experiments to find the anwer to that research question. The field gradually moves forward by successively answering research questions. Of course, it's difficult to get a definitive answer in any one study, and sometimes the field gets stuck on particular research questions for a long time!
+
+-   Literature reviews
+
+    -   Ad hoc review
+
+    -   Systematic literature review
+
+## Further reading
+
+-   Chapter 1, 'Research questions' in @Williamon2021-ld ([eBook link](https://ezp.lib.cam.ac.uk/login?url=http://dx.doi.org/10.1093/oso/9780198714545.001.0001)).

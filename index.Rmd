@@ -14,4 +14,4 @@ biblio-style: apalike
 csl: chicago-fullnote-bibliography.csl
 ---
 
-# General introduction
+# About this book
