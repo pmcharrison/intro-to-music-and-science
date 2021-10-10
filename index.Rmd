@@ -1,5 +1,5 @@
 --- 
-title: "Introduction to Music and Science"
+title: "Music and Science"
 author: "Peter M. C. Harrison"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
@@ -14,4 +14,4 @@ biblio-style: apalike
 csl: chicago-fullnote-bibliography.csl
 ---
 
-# About
+# General introduction

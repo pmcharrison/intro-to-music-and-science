@@ -1,6 +1,6 @@
-# Quantitative (I): Experiment design
+# (PART) Methods {.unnumbered}
 
-## Experiments
+# Introduction
 
 Humans are natural experimenters. From a very young age, children naturally learn about the world through experimentation. Watching a young child play, you can just imagine the kinds of questions going through their heads: I wonder what sound it'll make if I hit this block on that pipe? I wonder what that bug tastes like? I wonder what will happen if I flush my toy car down the toilet?
 
@@ -20,9 +20,15 @@ Experiments need certain qualities in order to be useful to future scientists. T
 
 Designing an effective experiment that satisfies all of these principles while also telling us something useful is a challenging task, but it is also creative and rewarding. This chapter will go through this process step-by-step.
 
-## Identifying a research topic
+# Research topics
 
-All experiments are situated within some kind of research topic. The research topic defines the body of knowledge to which we want to contribute, and typically has important implications for the methodologies that we will end up using. Here are some examples of research topics within the field of music psychology:
+## What is a research topic?
+
+All experiments are situated within some kind of *research topic*. The research topic defines the body of knowledge to which we want to contribute, and can typically be associated with a collection of publications (e.g. journal articles, book chapters) in the academic literature that span multiple years or decades.
+
+A given research topic will typically be associated with many publications from multiple researchers or research groups around the world. These publications will typically make many references to one another, with these references ('citations') being sometimes supportive ('based on the findings of X, we know already that Y...'; 'our results support the hypotheses of X, who suggested that...') and sometimes negative ('our results contract those of X'; 'we disagree with the conclusions of X, because...'). Reading recent publications within a research topic is one of the best ways of quickly familiarising oneself with a particular topic; particularly helpful here are *review articles*, written with the explicit goal of summarising the current state of knowledge in a particular research topic, as well as outlining potential future directions.
+
+The definition of the term 'research topic' is necessarily nebulous, and there is a lot of subjectivity involved in grouping the research literature into different research topics, especially as individual papers might often be associated with multiple topics. Nonetheless the notion of research topic remains useful for categorising and describing the academic literature. Here are some examples of research topics within the field of music psychology:
 
 -   Music and dementia
 
@@ -34,7 +40,11 @@ All experiments are situated within some kind of research topic. The research to
 
 -   Timbre and synaesthesia
 
-Sometimes you might dream up the research topic totally by yourself, for example when you apply for a PhD; other times you might be choosing between different predetermined research topics, for example as part of the research component of a university course, or when applying for postdoctoral researcher positions. In both scenarios, though, it is important to be able to critically evaluate different research topics and decide which possibilities work best for you. Let's go through a few different dimensions to think about:
+## Choosing a research topic
+
+In most cases you will join a research topic that already exists and that has already been studied by previous researchers. In this case you can inherit some of the pre-established legitimacy of that topic, but you will eventually have to establish exactly how your research will contribute beyond what exists already. In some cases, conversely, you will be trying to establish a new research topic in its own right; in such cases, you will have to think carefully about your justifications for why the research topic deserves to be studied in its own right.
+
+Most researchers have several moments in their careers where they have to choose between several possible research topics. This can begin as early as the undergraduate degree, where one might be choosing between different candidate final-year research projects. It is important in these situations to be able to critically evaluate different research topics and decide which possibilities work best for you. Let's go through a few different dimensions to think about:
 
 ### Impact
 
@@ -80,7 +90,7 @@ The most obvious kind of costs are *financial* costs: some research simply costs
 
 -   **Ethics.** Certain projects bring personal costs, or risks of costs, to the participants. For example, a trial medical drug could harm participants through unknown side effects, or a survey about taboo behaviours could harm its participants if their anonymity were compromised. The research should only be undertaken if the likely benefits of the research outweigh the likely costs, and then only if the participants provide informed consent. All psychological research projects (even undergraduate projects) should generally go to an institutional ethics board for approval before the research is conducted.
 
-### Idea generation
+## Finding candidate research topics
 
 It is one thing to appraise a given research topic along these different dimensions, but how do we identify candidate research topics in the first place? This is fundamentally a personal process, and so it's difficult to prescribe a universal strategy here. Nonetheless, there are a couple of useful things worth considering:
 
@@ -88,9 +98,39 @@ It is one thing to appraise a given research topic along these different dimensi
 
 -   **Attending talks and conferences.** Listening to other people present their work is a great way to foster your own ideas. Most academic institutions hold regular seminar series concerning various research fields or topics, which typically include a mixture of internal and external speakers. In addition to this, particular research fields tend to hold regular national or international conferences, where researchers congregate to share and discuss their latest research. Attending one of these conferences (or workshops, which are essentially informal versions of conferences) can be a great way to be exposed to research topics and methodologies you had never really considered before, as well as meeting other interesting people in the field. Conferences can be expensive to attend in person, but many offer special discounts or funding to students. Moreover, if you can't attend in person, it is nowadays often possible to watch recordings of the talks afterwards on YouTube, or at least to read the conference's 'proceedings' book which compiles summaries of the research projects that were presented.
 
-## Identifying a research question
+# Research questions
 
-What is a research question?
+## What is a research question?
+
+A research question is, simply put, a question about a particular aspect of a research topic. There will typically be many relevant research questions within a particular research topic. Ideally, as time goes on, historic research questions will be answered by new empirical studies, and new research questions will be postulated to replace them. This incremental answering and renewal of research questions through empirical studies is the basic mechanism by which the frontier of scientific knowledge is expanded.
+
+## What makes a good research question?
+
+-   We don't know the answer already
+
+-   Getting the answer would be useful
+
+    -   Impact, as defined above
+
+        -   Theoretic
+
+        -   Applied
+
+-   It is practical to get the answer
+
+Useful heuristic: try to compress it
+
+-   Answering it will advance knowledge in a desirable way
+
+    -   We don't know the answer already
+
+    -   
+
+-   It is practical to design an experiment to answer that question (Tractability/feasibility)
+
+## How to develop good research questions?
+
+What makes a good research question?
 
 While research topics are relatively long-lived, research questions have a shorter timespan. Ideally, each study identifies an important unsolved research question, then conducts experiments to find the anwer to that research question. The field gradually moves forward by successively answering research questions. Of course, it's difficult to get a definitive answer in any one study, and sometimes the field gets stuck on particular research questions for a long time!
 
@@ -100,17 +140,21 @@ While research topics are relatively long-lived, research questions have a short
 
     -   Systematic literature review
 
-## Identifying an appropriate methodology
+# Quantitative vs. qualitative
 
 ### Qualitative versus quantitative research
 
-### Relevant quantitative methodologies for music psychology
+### Quantitative methodologies for music psychology
 
 #### Psychological studies
 
 #### Corpus studies
 
 #### Acoustic studies
+
+# Quantitative (I): Design
+
+# Quantitative (II): Analysis
 
 ## Further reading
 
