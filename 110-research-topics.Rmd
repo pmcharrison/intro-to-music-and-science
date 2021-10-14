@@ -32,6 +32,8 @@ Impact can be defined as the sense in which a piece of research affects the worl
 
 2.  The sense in which the research solves practical problems in the real world (*applied* research). This can be achieved for example by developing a new technology that can be applied in non-research contexts, or by generating information that influences public or private policy.
 
+The former category (fundamental research impact) is particularly challenging to quantify. It's intuitive that some pieces of knowledge are more impactful than others, but it's very difficult to quantify this differential in an absolute sense. A common heuristic used in academia is to count the number of citations received by a given research article or book; the idea is that the most impactful pieces of research are those that other researchers refer to a lot in their own research. This metric is clearly imperfect, and there is an ongoing drive in academia to find better replacements.
+
 Several factors contribute to determining your capacity to achieve impact within a given research topic. Some relate to the research topic itself; some relate to you as a researcher.
 
 1.  Perhaps the topic itself has intrinsically high potential impact. Cancer research would be one such example; successful contributions in cancer research can have immensely high impact on cancer sufferers around the world.
