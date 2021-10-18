@@ -84,17 +84,12 @@ What kinds of variables might we have in music psychology experiments? There are
 
 -   **Participant variables.** These are properties of the participant. Many of these are personal traits that existed before the experiment, for example age, gender, prior musical training, and so on. Other of these might be variables that are determined during the experiment, for example when the experimenter assigns the participants to different experimental conditions. For example, suppose that we conduct a study on schoolchildren, investigating the effect of music lessons on intelligence; we might end up with the following table, where each row is a participant, and each column is a participant variable:
 
-+----------+----------+-----------+---------------+----------+----------+
-| Name     | Gender   | Start age | Condition     | Start IQ | End IQ   |
-+==========+==========+===========+===============+==========+==========+
-| Oliver   | Male     | 12        | No lessons    | 110      | 111      |
-+----------+----------+-----------+---------------+----------+----------+
-| George   | Male     | 11        | Music lessons | 105      | 110      |
-+----------+----------+-----------+---------------+----------+----------+
-| Olivia   | Female   | 11        | No lessons    | 99       | 98       |
-+----------+----------+-----------+---------------+----------+----------+
-| Amelia   | Female   | 12        | Music lessons | 103      | 104      |
-+----------+----------+-----------+---------------+----------+----------+
+| Name   | Gender | Start age | Condition     | Start IQ | End IQ |
+|--------|--------|-----------|---------------|----------|--------|
+| Oliver | Male   | 12        | No lessons    | 110      | 111    |
+| George | Male   | 11        | Music lessons | 105      | 110    |
+| Olivia | Female | 11        | No lessons    | 99       | 98     |
+| Amelia | Female | 12        | Music lessons | 103      | 104    |
 
 : Fictional dataset illustrating different participant variables.
 
@@ -134,9 +129,7 @@ In contrast, it is relatively complicated to define a valid measurement process 
 
 The idea is that each person's personality can be summarised (to some extent) as a collection of five scores, one for each of these five dimensions.
 
-you might have some questions
-
-Physical variables such as height and weight
+TODO - example from TIPI @Gosling2003-bt
 
 ## Studying relationships between variables
 
