@@ -38,23 +38,81 @@ It feels very natural to speak about car engines in these numeric constructs suc
 
 ## Defining variables
 
-We can define a variable as a measurement with a well-defined set of potential values. One example might be age (in years), corresponding to a number ranging typically between 0 and 100. Another example might be nationality, which might take values such as French, German, or Italian. Traditional statistics textbooks often provide taxonomies of different kinds of variabel often differentiate various kinds of variables, in particular categorical/nominal variabls
+We can define a variable as a measurement with a well-defined set of potential values. One example might be age (in years), corresponding to a number ranging typically between 0 and 100. Another example might be nationality, which might take values such as French, German, or Italian.
 
-It is traditional to differentiate four kinds of variables:
+Variables come in many forms, and these forms have important implications for how you design an experiment as well as how you analyse the resulting data. Here are several types of variable, as commonly defined in methods textbooks:
 
--   **Ratio variables.** These are numeric variables that satisfy the following property: multiplication is a 'meaningful' operation.
+-   **Categorical variables (a.k.a. nominal variables).** These take one of a finite set of values, with these values having no intrinsic ordering. An example might be nationality, which could take values such as French, German, and Indian. A special kind of categorical variable is a **binary variable (a.k.a. dichotomous variable)**: this is simply a categorical variable with only two possible values, which comes up for example in True/False questions.
 
--   **Categorical/nominal variables**. These take one of a finite set of values, with these values having no intrinsic ordering. An example might be nationality, which could take values such as French, German, and Indian.
+-   **Ordinal variables.** Like categorical variables, these take one of a finite set of values, but unlike categorical variables, these values have an intrinsic order. An example of an ordinal variable might be a participant's response to the following question: "How much do you like jazz music?" where the participant has to choose from four options labelled 1-4:
 
--   **Ordinal variables.** These take one of a finite set of values, but these values have an intrinsic ordering.
+    1.  Not at all;
 
--   **Interval variables.**
+    2.  A little;
 
--   
+    3.  A lot;
 
--   
+    4.  Very much.
 
--   
+-   **Continuous variables**. These are variables that take numeric values within a continuous range. A truly continuous variable should be able to be specified to an arbitrary degree of precision: for example, we might say that the temperature is 45.832 degrees Centigrade. There are two main types of continuous variable:
+
+    -   **Interval variables**. A variable is an 'interval' variable if (and only if) addition and subtraction are 'meaningful' operations. For example, the time of day is an interval variable, because it makes sense to say 'ten minutes after' (addition) or 'five minutes before' (subtraction) a given time.
+
+    -   **Ratio variables.** These are like interval variables, but they have an additional property: multiplication is also a meaningful operation. Money is an example of a ratio variable, because it makes sense to say that Anna (for example) has twice as much money as Bob. Temperature in Centigrade is meanwhile **not** a ratio variable, because it doesn't make sense to say that 20°C is 20 times as hot as 1°C (at least, not if we listen to our physics teacher).
+
+It is worth making a few notes at this point:
+
+-   In practice, most analysis methods used in psychology do not differentiate between interval and ratio variables, so it is rarely worth losing much sleep over this distinction.
+
+-   There are nonetheless often grey areas where different variable categories overlap. For example, a student might take a multiple-choice exam with a 100 questions, and therefore possible marks would be 1, 2, 3, ..., 99, or 100. This is technically not a fully continuous variable, because the set of possible marks is finite, and it is not possible to get 'in-between' marks such as 22.5 or 33.7. However, in many situations (e.g. data analysis) it will be useful here to treat the variable as if it is indeed continuous.
+
+-   A particularly debated area is multiple-choice questionnaires, where participants have to choose from multiple numbered options arranged in a scale, for example:
+
+    1.  Not at all;
+
+    2.  A little;
+
+    3.  A lot;
+
+    4.  Very much.
+
+    Some might argue that this variable is ordinal, because it's not obvious that addition and subtraction make sense here. Others might say that participants naturally understand that the scale is meant to be interpreted as an interval scale, and hence respond in a manner that is consistent with that. This question is not really resolved in the literature, but it is fairly accepted practice in these scenarios to pretend like the variable is an interval variable.
+
+What kinds of variables might we have in music psychology experiments? There are many possibilities. Most can usually be categorised as either *participant variables* or *stimulus variables*.
+
+-   **Participant variables.** These are properties of the participant. Many of these are personal traits that existed before the experiment, for example age, gender, prior musical training, and so on. Other of these might be variables that are determined during the experiment, for example when the experimenter assigns the participants to different experimental conditions. For example, suppose that we conduct a study on schoolchildren, investigating the effect of music lessons on intelligence; we might end up with the following table, where each row is a participant, and each column is a participant variable:
+
++----------+----------+-----------+---------------+----------+----------+
+| Name     | Gender   | Start age | Condition     | Start IQ | End IQ   |
++==========+==========+===========+===============+==========+==========+
+| Oliver   | Male     | 12        | No lessons    | 110      | 111      |
++----------+----------+-----------+---------------+----------+----------+
+| George   | Male     | 11        | Music lessons | 105      | 110      |
++----------+----------+-----------+---------------+----------+----------+
+| Olivia   | Female   | 11        | No lessons    | 99       | 98       |
++----------+----------+-----------+---------------+----------+----------+
+| Amelia   | Female   | 12        | Music lessons | 103      | 104      |
++----------+----------+-----------+---------------+----------+----------+
+
+: Fictional dataset illustrating different participant variables.
+
+-   **Stimulus variables.** These are properties of a stimulus. A given music psychology experiment might involve many different musical stimuli, and we might be interested in how different stimuli elicit different responses from participants. Below is an excerpt from a real published dataset [@Bowling2018-hz] of 'attractiveness' ratings for musical chords, supplemented with computational analyses of these chords from a later publication [@Harrison2020-gx]:
+
+```{r}
+
+readRDS("input/consonance/perception-bowling.rds") %>% 
+  transmute(
+    # Chord = Hmisc::capitalize(name), 
+    `Interval (semitones)` = map_chr(pi_chord, ~ paste(sprintf("%.2f", diff(.)), collapse = ", ")),
+    # Pitches = map_chr(pi_chord, ~ paste(sprintf("%.2f", .), collapse = ", ")),
+    `Attractiveness rating` = sprintf("%.2f", rating),
+    Roughness = sprintf("%.2f", hutch_78_roughness),
+    Harmonicity = sprintf("%.2f", har_18_harmonicity),
+    Familiarity = sprintf("%.2f", - scale(har_19_corpus))
+  ) %>% 
+  slice(1:12) %>% 
+  knitr::kable(caption = "Attractiveness ratings for dyads from @Bowling2018-hz supplemented with computational analyses from @Harrison2020-gx.")
+```
 
 -   Surveys
 
