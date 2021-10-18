@@ -1,5 +1,83 @@
 # Quantitative (I): Design
 
+```{r, include = FALSE}
+library(tidyverse)
+library(ggpubr)
+theme_set(theme_pubr())
+knitr::opts_chunk$set(echo = FALSE)
+
+```
+
+Quantitative methods, at their core, are all about characterising two things:
+
+(a) distributions of variables;
+
+(b) relationships between variables.
+
+These relationships can be summarised either numerically (e.g. using tables) or graphically (e.g. using plots). For example, we might study how fuel efficiency (measured in miles per gallon) is distributed in a collection of cars:
+
+```{r}
+mtcars |> 
+  ggplot(aes(mpg)) + 
+  geom_histogram(bins = 20) +
+  scale_x_continuous("Fuel efficiency (miles per gallon)") + 
+  scale_y_continuous("Count")
+```
+
+We might follow that up by studying how fuel efficiency relates to the car engine's horsepower:
+
+```{r}
+mtcars |> 
+  ggplot(aes(hp, mpg)) + 
+  geom_point() + 
+  scale_x_continuous("Engine horsepower") +
+  scale_y_continuous("Fuel efficiency (miles per gallon)") 
+```
+
+It feels very natural to speak about car engines in these numeric constructs such as miles per gallon and horsepower, and to quantify relationships between them using data plots. In contrast, it is less obvious how to construct equivalent numeric constructs for human psychology, where many of the relevant concepts (e.g. personality, attention, consciousness) are hard to define and even harder to measure. This task of defining appropriate variables is one of the key challenges of psychology research.
+
+## Defining variables
+
+We can define a variable as a measurement with a well-defined set of potential values. One example might be age (in years), corresponding to a number ranging typically between 0 and 100. Another example might be nationality, which might take values such as French, German, or Italian. Traditional statistics textbooks often provide taxonomies of different kinds of variabel often differentiate various kinds of variables, in particular categorical/nominal variabls
+
+It is traditional to differentiate four kinds of variables:
+
+-   **Ratio variables.** These are numeric variables that satisfy the following property: multiplication is a 'meaningful' operation.
+
+-   **Categorical/nominal variables**. These take one of a finite set of values, with these values having no intrinsic ordering. An example might be nationality, which could take values such as French, German, and Indian.
+
+-   **Ordinal variables.** These take one of a finite set of values, but these values have an intrinsic ordering.
+
+-   **Interval variables.**
+
+-   
+
+-   
+
+-   
+
+-   Surveys
+
+-   Behaviour (what do people do?)
+
+    -   Reaction times
+
+    -   Choices (gambling, music listening)
+
+-   Neuroimaging
+
+Relationships between variables What is a variable? (measurement, operationalisation) (Kinds of variables) What can we read into a relationship? (association, prediction, causality) How reliable is a relationship? (inference) How generalisable is a relationship? (generalisability)
+
+## Measurement
+
+## Causality
+
+## Generalisability
+
+## Ethics
+
+## Examples
+
 #### Psychological studies
 
 #### Corpus studies
