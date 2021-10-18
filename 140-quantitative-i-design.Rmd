@@ -38,6 +38,8 @@ It feels very natural to speak about car engines in these numeric constructs suc
 
 ## Defining variables
 
+### Taxonomies of variables
+
 We can define a variable as a measurement with a well-defined set of potential values. One example might be age (in years), corresponding to a number ranging typically between 0 and 100. Another example might be nationality, which might take values such as French, German, or Italian.
 
 Variables come in many forms, and these forms have important implications for how you design an experiment as well as how you analyse the resulting data. Here are several types of variable, as commonly defined in methods textbooks:
@@ -113,6 +115,30 @@ readRDS("input/consonance/perception-bowling.rds") %>%
   slice(1:12) %>% 
   knitr::kable(caption = "Attractiveness ratings for dyads from @Bowling2018-hz supplemented with computational analyses from @Harrison2020-gx.")
 ```
+
+### The challenge of psychological measurement
+
+It is relatively easy to define a valid measurement process for many physical variables, for example height and weight. You can measure someone's height with a tape measure, and you can measure their weight with a weighing scale. Sure, if you're doing it properly you might have to think carefully about some subtle points of the methodology (should the height measurement include the person's hair? does it matter whether we measure the person in the morning versus the evening, or before or after a large meal?), but conceptually it is not too difficult to convince oneself of the validity of the measurement process.
+
+In contrast, it is relatively complicated to define a valid measurement process for many psychological variables, because these variables are generally much more theoretical in their conceptualisation. Take *personality* as an example. Psychologists often conceptualise personality using the so-called *Big Five* model, which characterises personality in terms of five underlying factors:
+
+1.  Extraversion;
+
+2.  Agreeableness;
+
+3.  Openness to experience;
+
+4.  Conscientiousness;
+
+5.  Neuroticism.
+
+The idea is that each person's personality can be summarised (to some extent) as a collection of five scores, one for each of these five dimensions.
+
+you might have some questions
+
+Physical variables such as height and weight
+
+## Studying relationships between variables
 
 -   Surveys
 
