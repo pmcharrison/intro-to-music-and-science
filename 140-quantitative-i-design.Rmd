@@ -82,7 +82,7 @@ It is worth making a few notes at this point:
 
 What kinds of variables might we have in music psychology experiments? There are many possibilities. Most can usually be categorised as either *participant variables* or *stimulus variables*.
 
--   **Participant variables.** These are properties of the participant. Many of these are personal traits that existed before the experiment, for example age, gender, prior musical training, and so on. Other of these might be variables that are determined during the experiment, for example when the experimenter assigns the participants to different experimental conditions. For example, suppose that we conduct a study on schoolchildren, investigating the effect of music lessons on intelligence; we might end up with the following table, where each row is a participant, and each column is a participant variable:
+-   **Participant variables.** These are properties of the *participant*. Many of these are personal traits that existed before the experiment, for example age, gender, prior musical training, and so on. Other of these might be variables that are determined during the experiment, for example when the experimenter assigns the participants to different experimental conditions. For example, suppose that we conduct a study on schoolchildren, investigating the effect of music lessons on intelligence; we might end up with the following table, where each row is a participant, and each column is a participant variable:
 
 | Name   | Gender | Start age | Condition     | Start IQ | End IQ |
 |--------|--------|-----------|---------------|----------|--------|
@@ -93,7 +93,7 @@ What kinds of variables might we have in music psychology experiments? There are
 
 : Fictional dataset illustrating different participant variables.
 
--   **Stimulus variables.** These are properties of a stimulus. A given music psychology experiment might involve many different musical stimuli, and we might be interested in how different stimuli elicit different responses from participants. Below is an excerpt from a real published dataset [@Bowling2018-hz] of 'attractiveness' ratings for musical chords, supplemented with computational analyses of these chords from a later publication [@Harrison2020-gx]:
+-   **Stimulus variables.** These are properties of a *stimulus*. A given music psychology experiment might involve many different musical stimuli, and we might be interested in how different stimuli elicit different responses from participants. Below is an excerpt from a real published dataset [@Bowling2018-hz] of 'attractiveness' ratings for musical chords, supplemented with computational analyses of these chords from a later publication [@Harrison2020-gx]:
 
 ```{r}
 
@@ -129,9 +129,59 @@ In contrast, it is relatively complicated to define a valid measurement process 
 
 The idea is that each person's personality can be summarised (to some extent) as a collection of five scores, one for each of these five dimensions.
 
-TODO - example from TIPI @Gosling2003-bt
+How do we measure these different dimensions? It's hardly as if we can take out a ruler and measure the size of different areas of the brain corresponding to these different personality traits. Even if we had a spare magnetic resonance imaging (MRI) scanner lying around with which to measure individual brain anatomy, the mapping between brain dimensions and psychological traits tends to be rather too complicated for such a procedure to be practical in most situations.
 
-## Studying relationships between variables
+Instead, like many psychological traits, we tend to assess personality using *questionnaires*. A questionnaire is simply a collection of standardised questions that we administer to a participant. Many question formats are possible, but in quantitative studies it's particularly common to administer questionnaires with numeric responses. For example, when assessing someone's personality, we might ask them the following question, sourced from the Ten Item Personality Inventory (TIPI) [@Gosling2003-bt]:
+
+> *Please indicate the extent to which you agree with the following statement.*
+>
+> I see myself as: sympathetic, warm.
+
+We could then ask the participant to give their response on a seven-point scale:
+
+1.  Disagree strongly
+2.  Disagree moderately
+3.  Disagree a little
+4.  Neither agree nor disagree
+5.  Agree a lot
+6.  Agree moderately
+7.  Agree strongly
+
+The question is designed to assess the participant's *agreeableness*. High scores (e.g. 6, 7) reflect an agreeable participant, whereas low scores (e.g. 1, 2) reflect a disagreeable participant.
+
+A given questionnaire would typically contain multiple such questions. In the TIPI, there are ten questions in total, two for each of the five personality dimensions. The second agreeableness question looks like this:
+
+> *Please indicate the extent to which you agree with the following statement.*
+>
+> I see myself as: critical, quarrelsome.
+
+This second question is what we call a *reverse-scored* question. When we analyse data from reverse-scored questions, we interpret high numbers as a low numbers and low numbers as high numbers. In this case, participants who responded 'Disagree strongly' would receive a score of 1, whereas participants who responded 'Agree strongly' would receive a score of 7. The necessity to reverse-score the question comes from the nature of the words being used: while 'sympathetic' and 'warm' are near-synonyms of 'agreeable', 'critical' and 'quarrelsome' are near-antonyms (i.e. opposites). To get an overall agreeableness score, we could then simply average the numeric results from the first and second (reverse-scored) agreeableness questions. For example, if I wrote 'Agree moderately' to the question 'I see myself as sympathetic, warm', and 'Disagree strongly' to the question 'I see myself as critical, quarrelsome', I'd get an agreeableness score of `(6 + 1) / 2 = 3.5`.
+
+It's certainly quick and efficient to measure someone's personality using just 10 multiple-choice questions. The question is, though, how 'good' is the resulting measurement? In psychology we typically answer that question by thinking about two subcomponents of measurement quality: *reliability* and *construct* *validity.*
+
+#### Reliability
+
+A measurement instrument's *reliability* may be defined as the extent to which it produces similar measurements under similar conditions. In the context of psychological measures, this is most commonly interpreted as meaning 'if I were to measure the same person multiple times, would I get similar results?' In the context of measuring someone's height, we'd class a measuring scale as 'reliable' if it gave a similar reading if we weighed the same person twice in a row. In the context of a personality questionnaire, we might expect a reliable questionnaire to give the same participant similar scores no matter whether they take the test on a Tuesday versus a Wednesday.
+
+Reliability is necessary but not sufficient for a measure to be a 'good' measure. What if we measure an adult's extraversion by counting how many friends they had in primary school? This measure will be highly *reliable* in the sense that this number is not going to change now that the adult has left school, so we're always going to get the same answer no matter how many times we ask the question. On the other hand, this question is clearly not a particularly 'good' measure of extraversion, because there are many other factors that can contribute to the size of someone's friendship group, for example whether they were home-schooled or not. This brings us to the following notion of *construct validity*.
+
+#### Validity
+
+A measurement instrument's *construct* *validity* may be defined as the extent to which it truly measures the underlying trait which it is purported to measure [@Cronbach1955-ep]. It is generally accepted that construct validity can only be established with some reference to theoretical arguments, which are used (a) to define the trait that we are trying to measure and (b) to predict how that trait should manifest in the observable world.
+
+Psychological texts often differentiate various kinds of construct validity. These represent different strategies that a researcher might use to substantiate the construct validity of a given measurement instrument. For example:
+
+-   **Concurrent validity. - gold-standard**
+
+-   **Convergent validity. - correlates with things it's meant to correlate with**
+
+-   **Discriminant validity.**
+
+-   **Predictive validity. -- predicting future outcomes**
+
+Unfortunately there is some discrepancy in the literature about the definitions of these different terms. This is somewhat inevitable given the fuzziness of the underlying topic. Do not worry too much about this; the important thing is that these different terms provide useful starting points for conversations about interpreting psychological measures.
+
+#### Other kinds of psychological variables
 
 -   Surveys
 
@@ -143,7 +193,15 @@ TODO - example from TIPI @Gosling2003-bt
 
 -   Neuroimaging
 
-Relationships between variables What is a variable? (measurement, operationalisation) (Kinds of variables) What can we read into a relationship? (association, prediction, causality) How reliable is a relationship? (inference) How generalisable is a relationship? (generalisability)
+#### Summary: Psychological measurement is challenging
+
+## Studying relationships between variables
+
+What can we read into a relationship? (association, prediction, causality)
+
+How reliable is a relationship? (inference)
+
+How generalisable is a relationship? (generalisability)
 
 ## Measurement
 
