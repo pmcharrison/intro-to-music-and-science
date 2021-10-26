@@ -1,4 +1,4 @@
-# Quantitative (I): Defining variables
+# Quantitative I: Variables
 
 ```{r, include = FALSE}
 library(tidyverse)
@@ -7,6 +7,36 @@ theme_set(theme_pubr())
 knitr::opts_chunk$set(echo = FALSE)
 
 ```
+
+## Introduction
+
+Quantitative methods, at their core, are all about characterising two things:
+
+(a) distributions of variables;
+
+(b) relationships between variables.
+
+These relationships can be summarised either numerically (e.g. using tables) or graphically (e.g. using plots). For example, we might study how fuel efficiency (measured in miles per gallon) is distributed in a collection of cars:
+
+```{r}
+mtcars |> 
+  ggplot(aes(mpg)) + 
+  geom_histogram(bins = 20) +
+  scale_x_continuous("Fuel efficiency (miles per gallon)") + 
+  scale_y_continuous("Count")
+```
+
+We might follow that up by studying how fuel efficiency relates to the car engine's horsepower:
+
+```{r}
+mtcars |> 
+  ggplot(aes(hp, mpg)) + 
+  geom_point() + 
+  scale_x_continuous("Engine horsepower") +
+  scale_y_continuous("Fuel efficiency (miles per gallon)") 
+```
+
+It feels very natural to speak about car engines in these numeric constructs such as miles per gallon and horsepower, and to quantify relationships between them using data plots. In contrast, it is less obvious how to construct equivalent numeric constructs for human psychology, where many of the relevant concepts (e.g. personality, attention, consciousness) are hard to define and even harder to measure. This task of defining appropriate variables is one of the key challenges of psychology research, and it's the focus of the present chapter.
 
 ## Scientific variables
 
@@ -63,7 +93,7 @@ Psychological studies can include various kinds of variables. These can be organ
 
 Let's discuss each of these in turn.
 
-### Experimental manipulations
+### Manipulations
 
 Psychological studies often involve performing some kind of *manipulation* on the participant or the stimulus. For example, we might randomly split the participants into two groups, and play half of them Mozart and the other half Britney Spears. We'd then have a variable called 'Participant group' which takes two possible values, Mozart and Britney spears:
 
@@ -89,21 +119,21 @@ Likewise, we might have a dataset of chords, and play them with either a piano t
 
 The examples above are categorical variables, but we can also have continuous experimental variables, for example if we were to give each participant a random amount of music-store credit upon entering the experiment:
 
-+----------------------------------+-----------------------------------+
-| Participant name                 | Starting credit (£)               |
-+==================================+===================================+
-| Peter                            | 2.33                              |
-+----------------------------------+-----------------------------------+
-| Gemma                            | 1.50                              |
-+----------------------------------+-----------------------------------+
-| Paul                             | 1.40                              |
-+----------------------------------+-----------------------------------+
-| Catharine                        | 2.45                              |
-+----------------------------------+-----------------------------------+
-| Juliet                           | 2.00                              |
-+----------------------------------+-----------------------------------+
-| ...                              | ...                               |
-+----------------------------------+-----------------------------------+
++---------------------------------+----------------------------------+
+| Participant name                | Starting credit (£)              |
++=================================+==================================+
+| Peter                           | 2.33                             |
++---------------------------------+----------------------------------+
+| Gemma                           | 1.50                             |
++---------------------------------+----------------------------------+
+| Paul                            | 1.40                             |
++---------------------------------+----------------------------------+
+| Catharine                       | 2.45                             |
++---------------------------------+----------------------------------+
+| Juliet                          | 2.00                             |
++---------------------------------+----------------------------------+
+| ...                             | ...                              |
++---------------------------------+----------------------------------+
 
 ### Physical behaviours
 
@@ -146,7 +176,7 @@ It has been known for decades that psychological processes are ultimately mediat
 
 -   *Functional magnetic resonance imaging* (fMRI) measures changes in blood flow through the brain. This is useful because (as it turns out) blood flow is a reliable marker of neural activity; when a particular brain region is experiencing high neural activity, blood flow to that region will increase so as to provide more oxygen for respiration. fMRI has much better localisation capacity than EEG or MEG; however, its temporal sensitivity is much lower than either method, producing data on the granularity of seconds rather than milliseconds.
 
-### Physiological responses
+### Physiology
 
 Psychological processes also affect the body in systematic and measurable ways. These are termed *physiological* effects. In musical contexts, physiological effects are most commonly associated with emotional responses. For example, in cases of high emotional arousal, participants tend to exhibit faster heart rates and respiration rates, as well as high skin temperature and perspiration. These can be measured using standardised laboratory equipment as discussed in the \@ref(emotion) chapter.
 
@@ -322,7 +352,7 @@ There are various useful audio-analysis toolboxes out there in the literature, f
 
 When using pre-existing pieces (e.g. classical music compositions) one can often source many other musical variables based on the music's metadata. One might for example include the music genre, the composer, the date of composition, the number of record sales, and so on.
 
-## Critically evaluating operationalisations
+## Limitations
 
 When we define scientific variables, we are in most cases trying to *operationalise* some fundamental concept of interest. For example, we might be interested in learning about the subjective pleasantness of musical chords, and we operationalise this concept by asking a collection of participants to rate the pleasantness of particular musical chords on a scale of 1 to 7. Operationalisation is invaluable to psychology, because without it we can't measure most of the things we care about. However, it's also very dangerous, because an improper operationalisation can cause us to draw highly misleading conclusions from our experiments. It's therefore essential to maintain a critical perspective on variable definitions at all times, both when conducting one's own studies and when reading other studies in the literature.
 
@@ -350,9 +380,9 @@ Validity issues are particularly salient for latent traits, for example personal
 
 -   I am able to hit the right notes when I sing along with a recording.
 
--   I am not able to sing in harmony when somebody is singing a familiar tune. \[reverse-scored\]
+-   I am not able to sing in harmony when somebody is singing a familiar tune. [reverse-scored]
 
--   I don't like singing in public because I'm afraid that I would sing wrong notes. \[reverse-scored\]
+-   I don't like singing in public because I'm afraid that I would sing wrong notes. [reverse-scored]
 
 -   After hearing a new song two or three times, I can usually sing it by myself.
 

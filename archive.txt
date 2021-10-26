@@ -1,30 +1,4 @@
-Quantitative methods, at their core, are all about characterising two things:
 
-(a) distributions of variables;
-
-(b) relationships between variables.
-
-These relationships can be summarised either numerically (e.g. using tables) or graphically (e.g. using plots). For example, we might study how fuel efficiency (measured in miles per gallon) is distributed in a collection of cars:
-
-```{r}
-mtcars |> 
-  ggplot(aes(mpg)) + 
-  geom_histogram(bins = 20) +
-  scale_x_continuous("Fuel efficiency (miles per gallon)") + 
-  scale_y_continuous("Count")
-```
-
-We might follow that up by studying how fuel efficiency relates to the car engine's horsepower:
-
-```{r}
-mtcars |> 
-  ggplot(aes(hp, mpg)) + 
-  geom_point() + 
-  scale_x_continuous("Engine horsepower") +
-  scale_y_continuous("Fuel efficiency (miles per gallon)") 
-```
-
-It feels very natural to speak about car engines in these numeric constructs such as miles per gallon and horsepower, and to quantify relationships between them using data plots. In contrast, it is less obvious how to construct equivalent numeric constructs for human psychology, where many of the relevant concepts (e.g. personality, attention, consciousness) are hard to define and even harder to measure. This task of defining appropriate variables is one of the key challenges of psychology research.
 
 ### Levels of measurement
 

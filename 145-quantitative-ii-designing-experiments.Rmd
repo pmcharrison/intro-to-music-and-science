@@ -1,3 +1,5 @@
+# Quantitative II: Causality
+
 ## Studying relationships between variables
 
 What can we read into a relationship? (association, prediction, causality)
