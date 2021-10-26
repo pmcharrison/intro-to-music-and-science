@@ -80,6 +80,73 @@ It is worth making a few notes at this point:
 
     Some might argue that this variable is ordinal, because it's not obvious that addition and subtraction make sense here. Others might say that participants naturally understand that the scale is meant to be interpreted as an interval scale, and hence respond in a manner that is consistent with that. This question is not really resolved in the literature, but it is fairly accepted practice in these scenarios to pretend like the variable is an interval variable.
 
+### Psychological variables
+
+Psychological studies can include various kinds of variables. Most of these can be grouped into one of the following categories:
+
+1.  Physical behaviours;
+2.  Subjective experiences;
+3.  (Neuro-)physiological responses;
+4.  Demographic data;
+5.  Latent traits.
+
+Let's discuss each of these in turn.
+
+#### Physical behaviours
+
+A *behaviour* is something that a person does with their physical body. This could be something specific to the laboratory context (e.g. pressing a green button on a response pad), but it could also mean something in everyday life, for example buying a particular CD in a shop.
+
+Psychoacoustic experiments often produce variables in this category. For example, we might play a participant two tones, and ask them to press 'Button A' if the first one was the highest pitch, and 'Button B' if the second tone was the highest pitch. We might then end up with a dataset like the following, where the 'Response' column is the behavioural variable:
+
+| Participant ID | Frequency 1 (Hz) | Frequency 2 (Hz) | Response |
+|----------------|------------------|------------------|----------|
+| 1              | 440              | 460              | B        |
+| 1              | 420              | 421              | A        |
+| 1              | 375              | 400              | B        |
+| ...            | ...              | ...              | ...      |
+
+Behavioural variables also come up in studies of everyday musical behaviours. For example, a recent paper [@Park2019-kb] studied global music listening patterns as collected through the music streaming service Spotify, and identified how people in different countries listen to different kinds of music at different times of day. A dataset from such a study might look like this:
+
++----------------+-----------------+-----------------+-----------------------------+
+| Participant ID | Date            | Time            | Musical track               |
++================+=================+=================+=============================+
+| 1              | 03-01-2020      | 08:57           | 'Toxic' by Britney Spears   |
++----------------+-----------------+-----------------+-----------------------------+
+| 1              | 03-01-2020      | 14:27           | 'Caravan' by Duke Ellington |
++----------------+-----------------+-----------------+-----------------------------+
+| 1              | 04-01-2020      | 10:03           | 'Lingus' by Snarky Puppy    |
++----------------+-----------------+-----------------+-----------------------------+
+| ...            | ...             | ...             | ...                         |
++----------------+-----------------+-----------------+-----------------------------+
+
+Here the behavioural variable would be the musical track that the individual chose to listen to. Of course, we can get pedantic here about the extent to which an individual actively chooses to listen to a specific musical track: for example, if they've selected 'Shuffle' then Spotify will be choosing the next song for them, albeit from a limited selection. But the general point is clear, that this dataset reflects to some extent real-world decisions that the individual is making about what music to listen to.
+
+#### Subjective experiences
+
+if you're pedantic, you could say it's a physical behaviour... though in theory you could measure it neuroscientifically as well. a matter of interpretation
+
+#### (Neuro-)physiological responses
+
+#### Subjective experiences
+
+#### Demographic background
+
+#### Latent traits
+
+### Musical variables
+
+#### Human annotations
+
+#### Computational annotations
+
+-   Symbolic
+
+-   Audio
+
+#### Other metadata
+
+### Levels of measurement
+
 What kinds of variables might we have in music psychology experiments? There are many possibilities. Most can usually be categorised as either *participant variables* or *stimulus variables*.
 
 -   **Participant variables.** These are properties of the *participant*. Many of these are personal traits that existed before the experiment, for example age, gender, prior musical training, and so on. Other of these might be variables that are determined during the experiment, for example when the experimenter assigns the participants to different experimental conditions. For example, suppose that we conduct a study on schoolchildren, investigating the effect of music lessons on intelligence; we might end up with the following table, where each row is a participant, and each column is a participant variable:
@@ -112,14 +179,6 @@ readRDS("input/consonance/perception-bowling.rds") %>%
 ```
 
 ### The challenge of psychological measurement
-
--   Physical behaviours
-
--   (Neuro-)physiological responses
-
--   Subjective experiences
-
--   Latent traits
 
 It is relatively easy to define a valid measurement process for many physical variables, for example height and weight. You can measure someone's height with a tape measure, and you can measure their weight with a weighing scale. Sure, if you're doing it properly you might have to think carefully about some subtle points of the methodology (should the height measurement include the person's hair? does it matter whether we measure the person in the morning versus the evening, or before or after a large meal?), but conceptually it is not too difficult to convince oneself of the validity of the measurement process.
 
