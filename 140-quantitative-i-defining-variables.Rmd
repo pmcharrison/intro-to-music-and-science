@@ -1,4 +1,6 @@
-# Quantitative I: Variables
+# (PART) Quantitative methods {.unnumbered}
+
+# Variables
 
 ```{r, include = FALSE}
 library(tidyverse)

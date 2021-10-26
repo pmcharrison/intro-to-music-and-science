@@ -1,22 +1,33 @@
-# Quantitative II: Causality
+# Prediction/causation
 
-## Studying relationships between variables
+The primary challenge in quantitative research is to characterise relationships between variables. Scientists look in particular for two kinds of relationships:
 
-What can we read into a relationship? (association, prediction, causality)
+-   **Prediction**. When we say that variable X *predicts* variable Y, this means that if you tell me the value of variable X, I can give a good estimate of the value of variable Y.
 
-How reliable is a relationship? (inference)
+-   **Causation.** When we say that variable X *causally affects* variable Y, this means that if I *expressly change* variable X in a particular manner, I should elicit a predictable effect on variable Y.
 
-How generalisable is a relationship? (generalisability)
+When two variables predict each other well, this is a sign that there is some kind of underlying causal connection. However, we must be very careful about how we identify the nature of that causal connection. Take for example the connection between going to hospital and dying prematurely. Going to hospital and dying prematurely are clearly associated, because many people who die prematurely tend to do so in hospital. However, this does not mean that going to hospital *causes* one to die prematurely; in all likelihood, going to hospital has the opposite effect!
 
-## Measurement
+This erroneous correlation between going to hospital and dying prematurely comes about through what is called *omitted variable* *bias.* Here, the omitted variable is the individual's bodily health. For a given individual, going to hospital indeed improves their health. However, this effect is outweighed by the fact that people who go to hospital tend *already* to be in poor bodily health. So, if we don't account for this third variable of bodily health, we end up with the paradoxical correlation observed above.
 
-## Causality
+Most scientific studies are expressly interested in understanding causal relationships, not just predictive relationships. From a theoretical perspective, a causal understanding is necessary for clarifying the precise mechanistic relationships between different components of a system. From a practical perspective, a causal understanding is necessary before we can predict the impact of a proposed policy intervention on a particular outcome. In the case above, identifying the wrong causal model (going to hospital causes one to die prematurely) would cause us to perform the wrong action (closing all the hospitals), with obviously negative long-term impacts.
 
-## Generalisability
+So, what can we do to characterise causal relationships reliably? There are two main strategies, which we will discuss in turn:
 
-## Ethics
+1.  Adjusting for relevant variables;
+2.  Randomised experiments.
 
-## Examples
+## Adjusting for relevant variables
+
+## Randomised experiments
+
+## Conclusion
+
+# Generalisability
+
+# Ethics
+
+# Examples
 
 #### Psychological studies
 

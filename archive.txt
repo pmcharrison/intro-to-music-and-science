@@ -81,3 +81,6 @@ Predictive validity. – predicting future outcomes
 
 Unfortunately there is some discrepancy in the literature about the definitions of these different terms. This is somewhat inevitable given the fuzziness of the underlying topic. Do not worry too much about this; the important thing is that these different terms provide useful starting points for conversations about interpreting psychological measures.
 
+Prediction
+
+In some situations we are interested in learning to predict a certain variable from another collection of variables. For example, in a music education context, we might be interested in predicting which of the new intake of students are likely to do well in their end-of-degree exams. We could compile various kinds of variables for these students — age, gender, pitch discrimination skill, melodic dictation skill, piano performance skill, musicology exam results — and develop a model that predicts final outcomes on the basis of all of these variables. 

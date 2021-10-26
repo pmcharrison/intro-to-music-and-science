@@ -1,4 +1,4 @@
-# (PART) Methods {.unnumbered}
+# (PART) Methods introduction {.unnumbered}
 
 # Introduction
 
