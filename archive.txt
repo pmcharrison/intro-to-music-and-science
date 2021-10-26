@@ -25,3 +25,85 @@ mtcars |>
 ```
 
 It feels very natural to speak about car engines in these numeric constructs such as miles per gallon and horsepower, and to quantify relationships between them using data plots. In contrast, it is less obvious how to construct equivalent numeric constructs for human psychology, where many of the relevant concepts (e.g. personality, attention, consciousness) are hard to define and even harder to measure. This task of defining appropriate variables is one of the key challenges of psychology research.
+
+### Levels of measurement
+
+What kinds of variables might we have in music psychology experiments? There are many possibilities. Most can usually be categorised as either *participant variables* or *stimulus variables*.
+
+-   **Participant variables.** These are properties of the *participant*. Many of these are personal traits that existed before the experiment, for example age, gender, prior musical training, and so on. Other of these might be variables that are determined during the experiment, for example when the experimenter assigns the participants to different experimental conditions. For example, suppose that we conduct a study on schoolchildren, investigating the effect of music lessons on intelligence; we might end up with the following table, where each row is a participant, and each column is a participant variable:
+
+| Name   | Gender | Start age | Condition     | Start IQ | End IQ |
+|--------|--------|-----------|---------------|----------|--------|
+| Oliver | Male   | 12        | No lessons    | 110      | 111    |
+| George | Male   | 11        | Music lessons | 105      | 110    |
+| Olivia | Female | 11        | No lessons    | 99       | 98     |
+| Amelia | Female | 12        | Music lessons | 103      | 104    |
+
+: Fictional dataset illustrating different participant variables.
+
+-   **Stimulus variables.** These are properties of a *stimulus*. A given music psychology experiment might involve many different musical stimuli, and we might be interested in how different stimuli elicit different responses from participants. Below is an excerpt from a real published dataset [@Bowling2018-hz] of 'attractiveness' ratings for musical chords, supplemented with computational analyses of these chords from a later publication [@Harrison2020-gx]:
+
+```{r}
+
+readRDS("input/consonance/perception-bowling.rds") %>% 
+  transmute(
+    # Chord = Hmisc::capitalize(name), 
+    `Interval (semitones)` = map_chr(pi_chord, ~ paste(sprintf("%.2f", diff(.)), collapse = ", ")),
+    # Pitches = map_chr(pi_chord, ~ paste(sprintf("%.2f", .), collapse = ", ")),
+    `Attractiveness rating` = sprintf("%.2f", rating),
+    Roughness = sprintf("%.2f", hutch_78_roughness),
+    Harmonicity = sprintf("%.2f", har_18_harmonicity),
+    Familiarity = sprintf("%.2f", - scale(har_19_corpus))
+  ) %>% 
+  slice(1:12) %>% 
+  knitr::kable(caption = "Attractiveness ratings for dyads from @Bowling2018-hz supplemented with computational analyses from @Harrison2020-gx.")
+```
+
+When we collect scientific data, we generally wish to attribute some meaning to this data that goes beyond the immediate mechanism by which the data were generated. For example, if we collect multiple-choice 'pleasantness' ratings for musical stimuli, this is probably because we want to get a handle on the underlying pleasantness of these stimuli. In other words, we have operationalised pleasantness in terms of 
+
+Creating scientific variables is essentially a reductive process. We are taking a complex phenomenon, for example personality, and operationalising it in terms of a mechanistic measurement procedure that generates (most commonly) one or more numbers as an output. This process of operationalisation is highly valuable in that it allows us downstream to apply a whole range of quantitative data analysis techniques. However, it's dangerous in that flaws in our operationalisations can cause us to draw highly misleading conclusions from our datasets. It is therefore essential to maintain a critical perspective on variable definitions at all times, both when conducting one's own studies and when reading other studies in the literature.
+
+The challenge of psychological measurement
+
+It is relatively easy to define a valid measurement process for many physical variables, for example height and weight. You can measure someone's height with a tape measure, and you can measure their weight with a weighing scale. Sure, if you're doing it properly you might have to think carefully about some subtle points of the methodology (should the height measurement include the person's hair? does it matter whether we measure the person in the morning versus the evening, or before or after a large meal?), but conceptually it is not too difficult to convince oneself of the validity of the measurement process.
+
+In contrast, it is relatively complicated to define a valid measurement process for many psychological variables, because these variables are generally much more theoretical in their conceptualisation. Take personality as an example.
+
+It's certainly quick and efficient to measure someone's personality using just 10 multiple-choice questions. The question is, though, how 'good' is the resulting measurement? In psychology we typically answer that question by thinking about two subcomponents of measurement quality: reliability and construct validity.
+
+A clear limitation of this questionnaire
+
+Certain behavioural measures can be questioned for their validity. For example, if we play people
+
+it truly measures the underlying trait which it is purported to measure [@Cronbach1955-ep].
+
+It is generally accepted that establishing construct validity requires the researcher to engage explicitly with theoretical aspects of the trait and its measurement process; in other words, construct validity cannot be established in a theory-free manner. This differentiates it from reliability, which can typically be established without any kind of reference to theory (e.g. by administering the same test twice to the same participants and correlating the results).
+
+Theorising about construct validity requires the researcher to be particularly clear about two criteria:
+
+How exactly do we define the trait that we are trying to measure?
+
+How should this trait manifest in the observable world?
+
+Different theorists have proposed different routines for establishing construct validity. There is still no real consensus on the precise procedures to carry out, though, and in practice construct validity establishment is often dealt with in a somewhat ad hoc, case-by-base manner.
+
+Psychological texts often differentiate various kinds of construct validity. These represent different strategies that a researcher might use to substantiate the construct validity of a given measurement instrument. Here are several particularly important examples:
+
+Concurrent validity
+
+Concurrent validity is established when a new measure is shown to correlate highly with a pre-established 'gold-standard' measure. This gives us confidence that, if the old measure was valid, then the new measure is also valid, because it produces similar results. This kind of validity is useful when developing new forms of tests for new kinds of testing environments; for example, the personality questionnaire described above (the TIPI [@Gosling2003-bt]) was developed to replicate the results from pre-existing personality questionnaires but in a particularly short and efficient manner. However, it is not very useful when trying to establish a completely new measurement instrument, in which case there is no pre-existing reference instrument to work with.
+
+Convergent validity
+
+Convergent validity is established when a new measure is shown to correlate positively and substantially with certain other measures as predicted by theoretical considerations. The difference between convergent validity and concurrent validity is that these other measures are not meant to be measuring the same trait as the new measure; rather, they are meant to be measuring related traits. For example, suppose that I try to validate a new musical ability questionnaire by correlating its results with scores from a melodic dictation exercise. In general, I would expect participants with higher musical ability to score higher on the melodic dictation exercise, and so a positive correlation between the two scores would provide some support
+
+- gold-standard
+
+Convergent validity. - correlates with things it's meant to correlate with
+
+Discriminant validity.
+
+Predictive validity. – predicting future outcomes
+
+Unfortunately there is some discrepancy in the literature about the definitions of these different terms. This is somewhat inevitable given the fuzziness of the underlying topic. Do not worry too much about this; the important thing is that these different terms provide useful starting points for conversations about interpreting psychological measures.
+
