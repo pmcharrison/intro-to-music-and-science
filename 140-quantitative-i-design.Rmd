@@ -82,15 +82,19 @@ It is worth making a few notes at this point:
 
 ### Psychological variables
 
-Psychological studies can include various kinds of variables. Most of these can be grouped into one of the following categories:
+Psychological studies can include various kinds of variables. These can be organised more-or-less into the following categories:
 
-1.  Physical behaviours;
-2.  Subjective experiences;
+1.  Experimental condition;
+2.  Physical behaviours;
 3.  (Neuro-)physiological responses;
-4.  Demographic data;
-5.  Latent traits.
+4.  Latent traits;
+5.  Demographics;
 
 Let's discuss each of these in turn.
+
+#### Experimental condition
+
+TODO
 
 #### Physical behaviours
 
@@ -121,27 +125,144 @@ Behavioural variables also come up in studies of everyday musical behaviours. Fo
 
 Here the behavioural variable would be the musical track that the individual chose to listen to. Of course, we can get pedantic here about the extent to which an individual actively chooses to listen to a specific musical track: for example, if they've selected 'Shuffle' then Spotify will be choosing the next song for them, albeit from a limited selection. But the general point is clear, that this dataset reflects to some extent real-world decisions that the individual is making about what music to listen to.
 
-#### Subjective experiences
-
-if you're pedantic, you could say it's a physical behaviour... though in theory you could measure it neuroscientifically as well. a matter of interpretation
+Music psychology experiments are often particularly interested in quantifying listeners' *subjective* experiences when they listen to music: for example, the sense in which a listener finds certain sounds beautiful, or happy, or moving. Though it is difficult (impossible?) to measure subjective experiences directly, it is perfectly possible to ask the participant to describe these subjective experiences. For example, if we were interested in subjective beauty, we might ask the participant to rate the stimulus for beauty on a scale from 1 to 4, where 1 means 'not at all beautiful' and 4 means 'very beautiful'.
 
 #### (Neuro-)physiological responses
 
-#### Subjective experiences
+It has been known for decades that psychological processes are ultimately mediated by the brain. Historically speaking, the brain's workings have been opaque to external observers, but recent neuroscientific techniques now give us various ways to measure aspects of brain activity. The resulting data is typically highly complex, and interpreting it is no easy task. However, the approach is appealing because it gives a real insight into how psychological processes are mediated by neural biology. Some important examples are given below:
 
-#### Demographic background
+-   *Electroencephalography (EEG)* records tiny electrical currents from the scalp that reflect firing patterns of neurons in the outer layers of the brain. EEG has a high temporal sensitivity which makes it particularly good for tracking the time course of responses to auditory stimuli. However, it is limited in its ability to localise brain activity to particular regions.
+
+-   *Magnetoencephalography* (MEG) records faint magnetic fields that, similar to EEG, reflect firing patterns of neurons in the brain. Like EEG, MEG has a high temporal sensitivity, but it also has somewhat greater localisation abilities than EEG.
+
+-   *Functional magnetic resonance imaging* (fMRI) measures changes in blood flow through the brain. This is useful because (as it turns out) blood flow is a reliable marker of neural activity; when a particular brain region is experiencing high neural activity, blood flow to that region will increase so as to provide more oxygen for respiration. fMRI has much better localisation capacity than EEG or MEG; however, its temporal sensitivity is much lower than either method, producing data on the granularity of seconds rather than milliseconds.
 
 #### Latent traits
 
+In everyday life we often speak of certain personal characteristics that are not physically measurable (e.g. height, weight) but rather reflect something less tangible. In psychology we call these characteristics *latent traits*. A fundamental challenge in psychology research is how to quantify these latent traits.
+
+One example of a latent trait is *personality*. A prominent psychological theory of personality is the so-called *Big Five* model, which characterises personality in terms of five underlying factors:
+
+1.  Extraversion;
+
+2.  Agreeableness;
+
+3.  Openness to experience;
+
+4.  Conscientiousness;
+
+5.  Neuroticism.
+
+The idea is that each person's personality can be summarised (to some extent) as a collection of five scores, one for each of these five dimensions.
+
+How do we measure these different dimensions? It's hardly as if we can take out a ruler and measure the size of different areas of the brain corresponding to these different personality traits. Even if we had a spare magnetic resonance imaging (MRI) scanner lying around with which to measure individual brain anatomy, the mapping between brain dimensions and psychological traits tends to be rather too complicated for such a procedure to be practical in most situations.
+
+Instead, like many latent traits, we tend to assess personality using *questionnaires*. A questionnaire is simply a collection of standardised questions that we administer to a participant. Many question formats are possible, but in quantitative studies it's particularly common to administer questionnaires with numeric responses. For example, when assessing someone's personality, we might ask them the following question, sourced from the Ten Item Personality Inventory (TIPI) [@Gosling2003-bt]:
+
+> *Please indicate the extent to which you agree with the following statement.*
+>
+> I see myself as: sympathetic, warm.
+
+We could then ask the participant to give their response on a seven-point scale:
+
+1.  Disagree strongly
+2.  Disagree moderately
+3.  Disagree a little
+4.  Neither agree nor disagree
+5.  Agree a lot
+6.  Agree moderately
+7.  Agree strongly
+
+The question is designed to assess the participant's *agreeableness*. High scores (e.g. 6, 7) reflect an agreeable participant, whereas low scores (e.g. 1, 2) reflect a disagreeable participant.
+
+A given questionnaire would typically contain multiple such questions. In the TIPI, there are ten questions in total, two for each of the five personality dimensions. The second agreeableness question looks like this:
+
+> *Please indicate the extent to which you agree with the following statement.*
+>
+> I see myself as: critical, quarrelsome.
+
+This second question is what we call a *reverse-scored* question. When we analyse data from reverse-scored questions, we interpret high numbers as a low numbers and low numbers as high numbers. In this case, participants who responded 'Disagree strongly' would receive a score of 1, whereas participants who responded 'Agree strongly' would receive a score of 7. The necessity to reverse-score the question comes from the nature of the words being used: while 'sympathetic' and 'warm' are near-synonyms of 'agreeable', 'critical' and 'quarrelsome' are near-antonyms (i.e. opposites). To get an overall agreeableness score, we could then simply average the numeric results from the first and second (reverse-scored) agreeableness questions. For example, if I wrote 'Agree moderately' to the question 'I see myself as sympathetic, warm', and 'Disagree strongly' to the question 'I see myself as critical, quarrelsome', I'd get an agreeableness score of `(6 + 1) / 2 = 3.5`.
+
+#### Demographics
+
+Lastly, we have demographic variables. These are generic characteristics of individuals as seen for example in a census. It is important to record at least some of these variables in order to build an approximate picture of the participant group. Some examples are given below:
+
+-   Age
+
+-   Gender
+
+-   Country of birth
+
+-   Country of residence
+
+-   Educational level (measured e.g. in terms of the highest educational qualification received)
+
+-   Socioeconomic status (corresponding broadly to one's income level and position within society)
+
+Of these, age, gender, and country of residence are considered particularly essential for psychological studies; it is difficult to publish a paper that omits this information.
+
 ### Musical variables
+
+Music psychology studies also often involve some kind of music, and often it is possible to derive useful variables from this music. Here we will consider three main categories of musical variables:
+
+1.  Human annotations
+2.  Computational annotations
+3.  Other metadata
 
 #### Human annotations
 
+Human annotations are variables that represent human evaluations of the music, typically collected in advance of the main study itself. These annotations could come from expert musicians who are fluent in relevant music theory and terminology; for example, we could ask some expert musicians to annotate the implied harmonies for various folk melodies. Alternatively, non-expert listeners can also provide useful annotations in some cases, though typically it is necessary to get a larger number of such listeners and average over their responses in order to get reliable data. An example is given in the fictional dataset below:
+
+| Melody ID | Tonic | Mode  |
+|-----------|-------|-------|
+| 1         | A     | Minor |
+| 2         | F     | Major |
+| 3         | G     | Major |
+| ...       | ...   | ...   |
+
 #### Computational annotations
 
--   Symbolic
+It is also possible to generate useful variables by running musical extracts through computer algorithms. Variables extracted in such a way are typically called *features*.
 
--   Audio
+There are many such algorithms out there, designed to perform all kinds of tasks. Particularly relevant are algorithms designed explicitly for the purpose of psychological modelling.
+
+These computer algorithms can be differentiated in terms of the kind of data that they ingest. Some take so-called *symbolic* data, whereas others take *audio* data.
+
+##### Symbolic approaches
+
+We say that music is represented 'symbolically' when we write it down in terms of a (relatively) small set of discrete symbols. Classical score notation is an example of a symbolic notation system, with categorical representations for both rhythm (e.g. minim, dotted minim, crotchet, quaver) and pitch (e.g. C4, C#4, F5). When dealing with computers, we tend to write things as numbers where possible, so we might write the first phrase of 'Twinkle twinkle little star' as follows:
+
+| Note ID | Pitch | Time | Duration |
+|---------|-------|------|----------|
+| 1       | 60    | 0    | 1        |
+| 2       | 60    | 1    | 1        |
+| 3       | 67    | 2    | 1        |
+| 4       | 67    | 3    | 1        |
+| 5       | 69    | 4    | 1        |
+| 6       | 69    | 5    | 1        |
+| 7       | 67    | 6    | 2        |
+
+We then might feed this data into a collection of symbolic algorithms in order to extract some useful features for our experiment. For a simple example, suppose we run two algorithms: a key-finding algorithm and a melodic expectation algorithm. Let's further agree that we run both in a sliding-window fashion, such that the algorithm at timepoint 1 only sees data from timepoints 0 and 1, and so on.
+
+| Note ID | Pitch | Time | Duration | Est. tonic | Est. mode | Probability |
+|---------|-------|------|----------|------------|-----------|-------------|
+| 1       | 60    | 0    | 1        | F          | Major     | 0.1         |
+| 2       | 60    | 1    | 1        | F          | Major     | 0.3         |
+| 3       | 67    | 2    | 1        | C          | Major     | 0.2         |
+| 4       | 67    | 3    | 1        | C          | Major     | 0.3         |
+| 5       | 69    | 4    | 1        | C          | Major     | 0.3         |
+| 6       | 69    | 5    | 1        | C          | Major     | 0.4         |
+| 7       | 67    | 6    | 2        | C          | Major     | 0.4         |
+
+Here we've ended up with three computational features in our fictional dataset:
+
+-   'Est. tonic' tells us the tonic as estimated by the key-finding algorithm. It starts off thinking that the melody is in F (with the first note being the dominant), but once it hears the third note it decides that the melody is in C after all. A well-known such algorithm is the *Krumhansl-Kessler key-finding algorithm* \[@krumhansl1990cognitive\].
+
+-   'Est. mode' tells us the estimated mode; in our case it believes that the melody is in the major mode throughout.
+
+-   'Probability' tells us how likely the melodic expectation algorithm believes the current note to be, taking into account what happened so far in the melody. Prominent examples of melodic expectation algorithms are Temperley's melodic expectation algorithm [@Temperley2008-tj] and Pearce's Information Dynamics Of Music (IDyOM) model [@Pearce2005-bm].
+
+##### Audio approaches
 
 #### Other metadata
 
@@ -182,47 +303,7 @@ readRDS("input/consonance/perception-bowling.rds") %>%
 
 It is relatively easy to define a valid measurement process for many physical variables, for example height and weight. You can measure someone's height with a tape measure, and you can measure their weight with a weighing scale. Sure, if you're doing it properly you might have to think carefully about some subtle points of the methodology (should the height measurement include the person's hair? does it matter whether we measure the person in the morning versus the evening, or before or after a large meal?), but conceptually it is not too difficult to convince oneself of the validity of the measurement process.
 
-In contrast, it is relatively complicated to define a valid measurement process for many psychological variables, because these variables are generally much more theoretical in their conceptualisation. Take *personality* as an example. Psychologists often conceptualise personality using the so-called *Big Five* model, which characterises personality in terms of five underlying factors:
-
-1.  Extraversion;
-
-2.  Agreeableness;
-
-3.  Openness to experience;
-
-4.  Conscientiousness;
-
-5.  Neuroticism.
-
-The idea is that each person's personality can be summarised (to some extent) as a collection of five scores, one for each of these five dimensions.
-
-How do we measure these different dimensions? It's hardly as if we can take out a ruler and measure the size of different areas of the brain corresponding to these different personality traits. Even if we had a spare magnetic resonance imaging (MRI) scanner lying around with which to measure individual brain anatomy, the mapping between brain dimensions and psychological traits tends to be rather too complicated for such a procedure to be practical in most situations.
-
-Instead, like many psychological traits, we tend to assess personality using *questionnaires*. A questionnaire is simply a collection of standardised questions that we administer to a participant. Many question formats are possible, but in quantitative studies it's particularly common to administer questionnaires with numeric responses. For example, when assessing someone's personality, we might ask them the following question, sourced from the Ten Item Personality Inventory (TIPI) [@Gosling2003-bt]:
-
-> *Please indicate the extent to which you agree with the following statement.*
->
-> I see myself as: sympathetic, warm.
-
-We could then ask the participant to give their response on a seven-point scale:
-
-1.  Disagree strongly
-2.  Disagree moderately
-3.  Disagree a little
-4.  Neither agree nor disagree
-5.  Agree a lot
-6.  Agree moderately
-7.  Agree strongly
-
-The question is designed to assess the participant's *agreeableness*. High scores (e.g. 6, 7) reflect an agreeable participant, whereas low scores (e.g. 1, 2) reflect a disagreeable participant.
-
-A given questionnaire would typically contain multiple such questions. In the TIPI, there are ten questions in total, two for each of the five personality dimensions. The second agreeableness question looks like this:
-
-> *Please indicate the extent to which you agree with the following statement.*
->
-> I see myself as: critical, quarrelsome.
-
-This second question is what we call a *reverse-scored* question. When we analyse data from reverse-scored questions, we interpret high numbers as a low numbers and low numbers as high numbers. In this case, participants who responded 'Disagree strongly' would receive a score of 1, whereas participants who responded 'Agree strongly' would receive a score of 7. The necessity to reverse-score the question comes from the nature of the words being used: while 'sympathetic' and 'warm' are near-synonyms of 'agreeable', 'critical' and 'quarrelsome' are near-antonyms (i.e. opposites). To get an overall agreeableness score, we could then simply average the numeric results from the first and second (reverse-scored) agreeableness questions. For example, if I wrote 'Agree moderately' to the question 'I see myself as sympathetic, warm', and 'Disagree strongly' to the question 'I see myself as critical, quarrelsome', I'd get an agreeableness score of `(6 + 1) / 2 = 3.5`.
+In contrast, it is relatively complicated to define a valid measurement process for many psychological variables, because these variables are generally much more theoretical in their conceptualisation. Take *personality* as an example.
 
 It's certainly quick and efficient to measure someone's personality using just 10 multiple-choice questions. The question is, though, how 'good' is the resulting measurement? In psychology we typically answer that question by thinking about two subcomponents of measurement quality: *reliability* and *construct* *validity.*
 
