@@ -38,9 +38,9 @@ It feels very natural to speak about car engines in these numeric constructs suc
 
 ## Defining variables
 
-### Taxonomies of variables
+### Scientific variables
 
-We can define a variable as a measurement with a well-defined set of potential values. One example might be age (in years), corresponding to a number ranging typically between 0 and 100. Another example might be nationality, which might take values such as French, German, or Italian.
+In scientific contexts, a variable may be defined as a measurement with a well-defined set of potential values. One example might be age (in years), corresponding to a number ranging typically between 0 and 100. Another example might be nationality, which might take values such as French, German, or Italian.
 
 Variables come in many forms, and these forms have important implications for how you design an experiment as well as how you analyse the resulting data. Here are several types of variable, as commonly defined in methods textbooks:
 
@@ -113,6 +113,14 @@ readRDS("input/consonance/perception-bowling.rds") %>%
 
 ### The challenge of psychological measurement
 
+-   Physical behaviours
+
+-   (Neuro-)physiological responses
+
+-   Subjective experiences
+
+-   Latent traits
+
 It is relatively easy to define a valid measurement process for many physical variables, for example height and weight. You can measure someone's height with a tape measure, and you can measure their weight with a weighing scale. Sure, if you're doing it properly you might have to think carefully about some subtle points of the methodology (should the height measurement include the person's hair? does it matter whether we measure the person in the morning versus the evening, or before or after a large meal?), but conceptually it is not too difficult to convince oneself of the validity of the measurement process.
 
 In contrast, it is relatively complicated to define a valid measurement process for many psychological variables, because these variables are generally much more theoretical in their conceptualisation. Take *personality* as an example. Psychologists often conceptualise personality using the so-called *Big Five* model, which characterises personality in terms of five underlying factors:
@@ -167,11 +175,29 @@ Reliability is necessary but not sufficient for a measure to be a 'good' measure
 
 #### Validity
 
-A measurement instrument's *construct* *validity* may be defined as the extent to which it truly measures the underlying trait which it is purported to measure [@Cronbach1955-ep]. It is generally accepted that construct validity can only be established with some reference to theoretical arguments, which are used (a) to define the trait that we are trying to measure and (b) to predict how that trait should manifest in the observable world.
+A measurement instrument's *construct* *validity* may be defined as the extent to which it truly measures the underlying trait which it is purported to measure [@Cronbach1955-ep].
 
-Psychological texts often differentiate various kinds of construct validity. These represent different strategies that a researcher might use to substantiate the construct validity of a given measurement instrument. For example:
+It is generally accepted that establishing construct validity requires the researcher to engage explicitly with theoretical aspects of the trait and its measurement process; in other words, construct validity *cannot* be established in a theory-free manner. This differentiates it from reliability, which can typically be established without any kind of reference to theory (e.g. by administering the same test twice to the same participants and correlating the results).
 
--   **Concurrent validity. - gold-standard**
+Theorising about construct validity requires the researcher to be particularly clear about two criteria:
+
+1.  How exactly do we define the trait that we are trying to measure?
+
+2.  How should this trait manifest in the observable world?
+
+Different theorists have proposed different routines for establishing construct validity. There is still no real consensus on the precise procedures to carry out, though, and in practice construct validity establishment is often dealt with in a somewhat *ad hoc,* case-by-base manner.
+
+Psychological texts often differentiate various kinds of construct validity. These represent different strategies that a researcher might use to substantiate the construct validity of a given measurement instrument. Here are several particularly important examples:
+
+##### Concurrent validity
+
+*Concurrent validity* is established when a new measure is shown to correlate highly with a pre-established 'gold-standard' measure. This gives us confidence that, if the old measure was valid, then the new measure is also valid, because it produces similar results. This kind of validity is useful when developing new forms of tests for new kinds of testing environments; for example, the personality questionnaire described above (the TIPI \[@Gosling2003-bt\]) was developed to replicate the results from pre-existing personality questionnaires but in a particularly short and efficient manner. However, it is not very useful when trying to establish a completely new measurement instrument, in which case there is no pre-existing reference instrument to work with.
+
+##### Convergent validity
+
+*Convergent validity* is established when a new measure is shown to correlate positively and substantially with certain other measures as predicted by theoretical considerations. The difference between convergent validity and concurrent validity is that these other measures are not meant to be measuring the *same* trait as the new measure; rather, they are meant to be measuring *related* traits. For example, suppose that I try to validate a new musical ability questionnaire by correlating its results with scores from a melodic dictation exercise. In general, I would expect participants with higher musical ability to score higher on the melodic dictation exercise, and so a positive correlation between the two scores would provide some support
+
+-    **- gold-standard**
 
 -   **Convergent validity. - correlates with things it's meant to correlate with**
 
