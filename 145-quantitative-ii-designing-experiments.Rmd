@@ -1,0 +1,23 @@
+## Studying relationships between variables
+
+What can we read into a relationship? (association, prediction, causality)
+
+How reliable is a relationship? (inference)
+
+How generalisable is a relationship? (generalisability)
+
+## Measurement
+
+## Causality
+
+## Generalisability
+
+## Ethics
+
+## Examples
+
+#### Psychological studies
+
+#### Corpus studies
+
+#### Acoustic studies

@@ -1,4 +1,4 @@
-# Quantitative (I): Design
+# Quantitative (I): Defining variables
 
 ```{r, include = FALSE}
 library(tidyverse)
@@ -7,36 +7,6 @@ theme_set(theme_pubr())
 knitr::opts_chunk$set(echo = FALSE)
 
 ```
-
-Quantitative methods, at their core, are all about characterising two things:
-
-(a) distributions of variables;
-
-(b) relationships between variables.
-
-These relationships can be summarised either numerically (e.g. using tables) or graphically (e.g. using plots). For example, we might study how fuel efficiency (measured in miles per gallon) is distributed in a collection of cars:
-
-```{r}
-mtcars |> 
-  ggplot(aes(mpg)) + 
-  geom_histogram(bins = 20) +
-  scale_x_continuous("Fuel efficiency (miles per gallon)") + 
-  scale_y_continuous("Count")
-```
-
-We might follow that up by studying how fuel efficiency relates to the car engine's horsepower:
-
-```{r}
-mtcars |> 
-  ggplot(aes(hp, mpg)) + 
-  geom_point() + 
-  scale_x_continuous("Engine horsepower") +
-  scale_y_continuous("Fuel efficiency (miles per gallon)") 
-```
-
-It feels very natural to speak about car engines in these numeric constructs such as miles per gallon and horsepower, and to quantify relationships between them using data plots. In contrast, it is less obvious how to construct equivalent numeric constructs for human psychology, where many of the relevant concepts (e.g. personality, attention, consciousness) are hard to define and even harder to measure. This task of defining appropriate variables is one of the key challenges of psychology research.
-
-## Defining variables
 
 ### Scientific variables
 
@@ -111,17 +81,17 @@ Psychoacoustic experiments often produce variables in this category. For example
 
 Behavioural variables also come up in studies of everyday musical behaviours. For example, a recent paper [@Park2019-kb] studied global music listening patterns as collected through the music streaming service Spotify, and identified how people in different countries listen to different kinds of music at different times of day. A dataset from such a study might look like this:
 
-+----------------+-----------------+-----------------+-----------------------------+
-| Participant ID | Date            | Time            | Musical track               |
-+================+=================+=================+=============================+
-| 1              | 03-01-2020      | 08:57           | 'Toxic' by Britney Spears   |
-+----------------+-----------------+-----------------+-----------------------------+
-| 1              | 03-01-2020      | 14:27           | 'Caravan' by Duke Ellington |
-+----------------+-----------------+-----------------+-----------------------------+
-| 1              | 04-01-2020      | 10:03           | 'Lingus' by Snarky Puppy    |
-+----------------+-----------------+-----------------+-----------------------------+
-| ...            | ...             | ...             | ...                         |
-+----------------+-----------------+-----------------+-----------------------------+
++----------------+--------------+--------------+-----------------------------+
+| Participant ID | Date         | Time         | Musical track               |
++================+==============+==============+=============================+
+| 1              | 03-01-2020   | 08:57        | 'Toxic' by Britney Spears   |
++----------------+--------------+--------------+-----------------------------+
+| 1              | 03-01-2020   | 14:27        | 'Caravan' by Duke Ellington |
++----------------+--------------+--------------+-----------------------------+
+| 1              | 04-01-2020   | 10:03        | 'Lingus' by Snarky Puppy    |
++----------------+--------------+--------------+-----------------------------+
+| ...            | ...          | ...          | ...                         |
++----------------+--------------+--------------+-----------------------------+
 
 Here the behavioural variable would be the musical track that the individual chose to listen to. Of course, we can get pedantic here about the extent to which an individual actively chooses to listen to a specific musical track: for example, if they've selected 'Shuffle' then Spotify will be choosing the next song for them, albeit from a limited selection. But the general point is clear, that this dataset reflects to some extent real-world decisions that the individual is making about what music to listen to.
 
@@ -256,13 +226,44 @@ We then might feed this data into a collection of symbolic algorithms in order t
 
 Here we've ended up with three computational features in our fictional dataset:
 
--   'Est. tonic' tells us the tonic as estimated by the key-finding algorithm. It starts off thinking that the melody is in F (with the first note being the dominant), but once it hears the third note it decides that the melody is in C after all. A well-known such algorithm is the *Krumhansl-Kessler key-finding algorithm* \[@krumhansl1990cognitive\].
+-   'Est. tonic' tells us the tonic as estimated by the key-finding algorithm. It starts off thinking that the melody is in F (with the first note being the dominant), but once it hears the third note it decides that the melody is in C after all. A well-known such algorithm is the *Krumhansl-Kessler key-finding algorithm* [@krumhansl1990cognitive].
 
 -   'Est. mode' tells us the estimated mode; in our case it believes that the melody is in the major mode throughout.
 
 -   'Probability' tells us how likely the melodic expectation algorithm believes the current note to be, taking into account what happened so far in the melody. Prominent examples of melodic expectation algorithms are Temperley's melodic expectation algorithm [@Temperley2008-tj] and Pearce's Information Dynamics Of Music (IDyOM) model [@Pearce2005-bm].
 
+**To do**: compile table of prominent symbolic models from the literature.
+
 ##### Audio approaches
+
+A disadvantage of symbolic approaches is that they require music to be encoded in a symbolic format. This is not always easy to achieve, especially for musical styles that tend not to use musical scores. Moreover, from the perspective of psychological simulation, there is something unrealistic about relying on a symbolic encoding of a particular musical extract, because symbolic encodings typically discard important parts of the musical stimulus (e.g. timbre, room acoustics, performance parameters).
+
+An alternative is to use audio-based algorithms. These algorithms analyse audio files directly, and do not require a symbolic encoding stage. Rather than returning feature values for each note, they will more commonly return feature values for many different timesteps, for example:
+
+| Stimulus ID | Time (s) | Roughness |
+|-------------|----------|-----------|
+| 1           | 0.0      | 0.85      |
+| 1           | 0.1      | 0.75      |
+| 1           | 0.2      | 0.50      |
+| 1           | 0.3      | 0.65      |
+| 1           | 0.4      | 0.66      |
+| 1           | 0.5      | 0.20      |
+| 1           | 0.6      | 0.25      |
+| 1           | 0.7      | 0.22      |
+| 1           | 0.8      | 0.39      |
+| ...         | ...      | ...       |
+
+There are various useful audio-analysis toolboxes out there in the literature, for example:
+
+-   [MIRToolbox](https://www.jyu.fi/hytk/fi/laitokset/mutku/en/research/materials/mirtoolbox)
+
+-   [Essentia](https://essentia.upf.edu/)
+
+-   [IPEM Toolbox](https://www.ugent.be/lw/kunstwetenschappen/ipem/en/research/projects/finishedprojects/ipem-toolbox.htm)
+
+-   [Janata Lab Music Toolbox](https://atonal.ucdavis.edu/resources/software/jlmt/)
+
+**To do**: compile table of prominent audio models from the literature.
 
 #### Other metadata
 
@@ -331,13 +332,13 @@ Psychological texts often differentiate various kinds of construct validity. The
 
 ##### Concurrent validity
 
-*Concurrent validity* is established when a new measure is shown to correlate highly with a pre-established 'gold-standard' measure. This gives us confidence that, if the old measure was valid, then the new measure is also valid, because it produces similar results. This kind of validity is useful when developing new forms of tests for new kinds of testing environments; for example, the personality questionnaire described above (the TIPI \[@Gosling2003-bt\]) was developed to replicate the results from pre-existing personality questionnaires but in a particularly short and efficient manner. However, it is not very useful when trying to establish a completely new measurement instrument, in which case there is no pre-existing reference instrument to work with.
+*Concurrent validity* is established when a new measure is shown to correlate highly with a pre-established 'gold-standard' measure. This gives us confidence that, if the old measure was valid, then the new measure is also valid, because it produces similar results. This kind of validity is useful when developing new forms of tests for new kinds of testing environments; for example, the personality questionnaire described above (the TIPI [@Gosling2003-bt]) was developed to replicate the results from pre-existing personality questionnaires but in a particularly short and efficient manner. However, it is not very useful when trying to establish a completely new measurement instrument, in which case there is no pre-existing reference instrument to work with.
 
 ##### Convergent validity
 
 *Convergent validity* is established when a new measure is shown to correlate positively and substantially with certain other measures as predicted by theoretical considerations. The difference between convergent validity and concurrent validity is that these other measures are not meant to be measuring the *same* trait as the new measure; rather, they are meant to be measuring *related* traits. For example, suppose that I try to validate a new musical ability questionnaire by correlating its results with scores from a melodic dictation exercise. In general, I would expect participants with higher musical ability to score higher on the melodic dictation exercise, and so a positive correlation between the two scores would provide some support
 
--    **- gold-standard**
+-   **- gold-standard**
 
 -   **Convergent validity. - correlates with things it's meant to correlate with**
 
@@ -347,40 +348,6 @@ Psychological texts often differentiate various kinds of construct validity. The
 
 Unfortunately there is some discrepancy in the literature about the definitions of these different terms. This is somewhat inevitable given the fuzziness of the underlying topic. Do not worry too much about this; the important thing is that these different terms provide useful starting points for conversations about interpreting psychological measures.
 
-#### Other kinds of psychological variables
-
--   Surveys
-
--   Behaviour (what do people do?)
-
-    -   Reaction times
-
-    -   Choices (gambling, music listening)
-
--   Neuroimaging
-
 #### Summary: Psychological measurement is challenging
 
-## Studying relationships between variables
-
-What can we read into a relationship? (association, prediction, causality)
-
-How reliable is a relationship? (inference)
-
-How generalisable is a relationship? (generalisability)
-
-## Measurement
-
-## Causality
-
-## Generalisability
-
-## Ethics
-
-## Examples
-
-#### Psychological studies
-
-#### Corpus studies
-
-#### Acoustic studies
+## 
