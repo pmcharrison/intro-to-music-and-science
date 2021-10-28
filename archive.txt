@@ -84,3 +84,9 @@ Unfortunately there is some discrepancy in the literature about the definitions 
 Prediction
 
 In some situations we are interested in learning to predict a certain variable from another collection of variables. For example, in a music education context, we might be interested in predicting which of the new intake of students are likely to do well in their end-of-degree exams. We could compile various kinds of variables for these students — age, gender, pitch discrimination skill, melodic dictation skill, piano performance skill, musicology exam results — and develop a model that predicts final outcomes on the basis of all of these variables. 
+
+The primary challenge in quantitative research is to characterise relationships between variables. Scientists look in particular for two kinds of relationships: 
+
+Prediction. When we say that variable X predicts variable Y, this means that if you tell me the value of variable X, I can give a good estimate of the value of variable Y.
+
+Causation. When we say that variable X causally affects variable Y, this means that if I expressly change variable X in a particular manner, I should elicit a predictable effect on variable Y.

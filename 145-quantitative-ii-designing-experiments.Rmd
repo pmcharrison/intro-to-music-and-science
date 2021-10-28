@@ -1,11 +1,5 @@
 # Causality
 
-The primary challenge in quantitative research is to characterise relationships between variables. Scientists look in particular for two kinds of relationships:
-
--   **Prediction**. When we say that variable X *predicts* variable Y, this means that if you tell me the value of variable X, I can give a good estimate of the value of variable Y.
-
--   **Causation.** When we say that variable X *causally affects* variable Y, this means that if I *expressly change* variable X in a particular manner, I should elicit a predictable effect on variable Y.
-
 When two variables predict each other well, this is a sign that there is some kind of underlying causal connection. However, we must be very careful about how we identify the nature of that causal connection.
 
 A classic example from the music psychology is the association between musical training and intelligence. Many studies have noted that, on average, individuals with greater levels of musical training tend to have higher levels of general intelligence, as measured for example by IQ tests.
