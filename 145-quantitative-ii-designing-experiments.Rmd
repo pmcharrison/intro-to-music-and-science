@@ -1,4 +1,4 @@
-# Prediction/causation
+# Causality
 
 The primary challenge in quantitative research is to characterise relationships between variables. Scientists look in particular for two kinds of relationships:
 
@@ -6,31 +6,36 @@ The primary challenge in quantitative research is to characterise relationships 
 
 -   **Causation.** When we say that variable X *causally affects* variable Y, this means that if I *expressly change* variable X in a particular manner, I should elicit a predictable effect on variable Y.
 
-When two variables predict each other well, this is a sign that there is some kind of underlying causal connection. However, we must be very careful about how we identify the nature of that causal connection. Take for example the connection between going to hospital and dying prematurely. Going to hospital and dying prematurely are clearly associated, because many people who die prematurely tend to do so in hospital. However, this does not mean that going to hospital *causes* one to die prematurely; in all likelihood, going to hospital has the opposite effect!
+When two variables predict each other well, this is a sign that there is some kind of underlying causal connection. However, we must be very careful about how we identify the nature of that causal connection.
 
-This erroneous correlation between going to hospital and dying prematurely comes about through what is called *omitted variable* *bias.* Here, the omitted variable is the individual's bodily health. For a given individual, going to hospital indeed improves their health. However, this effect is outweighed by the fact that people who go to hospital tend *already* to be in poor bodily health. So, if we don't account for this third variable of bodily health, we end up with the paradoxical correlation observed above.
+A classic example from the music psychology is the association between musical training and intelligence. Many studies have noted that, on average, individuals with greater levels of musical training tend to have higher levels of general intelligence, as measured for example by IQ tests.
 
-Most scientific studies are expressly interested in understanding causal relationships, not just predictive relationships. From a theoretical perspective, a causal understanding is necessary for clarifying the precise mechanistic relationships between different components of a system. From a practical perspective, a causal understanding is necessary before we can predict the impact of a proposed policy intervention on a particular outcome. In the case above, identifying the wrong causal model (going to hospital causes one to die prematurely) would cause us to perform the wrong action (closing all the hospitals), with obviously negative long-term impacts.
+A popular explanation for this association is that musical training *causes* an individual to develop greater cognitive skills. After all, playing music is a complex intellectual activity that loads on basic cognitive capacities such as attention, memory, and hand-eye coordination. If these cognitive capacities are anything like muscles, then training them should enhance them, with positive consequences for general intelligence.
 
-So, what can we do to characterise causal relationships reliably? There are two main strategies, which we will discuss in turn:
+An alternative explanation is that high intelligence predisposes individuals to pursue musical training. One way this could happen is if intelligent people tend to be more successful in the early stages of music learning, which encourages them to continue with the training process.
 
-1.  Adjusting for relevant variables;
-2.  Randomised experiments.
+A third potential explanation is that neither musical training nor general intelligence causally affect each other, and instead there is some unnoticed third variable that drives both of them. For example, we know that different children grow up with different levels of household income. Perhaps having higher household income has two relevant effects here: (a) it makes the family more likely to pay for music lessons, and (b) it makes the family invest more money in the child's academic education, increasing their performance on intelligence tests as a result.
 
-## Adjusting for relevant variables
+These kinds of causal dilemmas are common whenever a scientist works with an *observational* dataset. An observational dataset is a dataset collected solely by observing and measuring a given phenomenon. There are various statistical techniques out there (e.g. regression modelling, causal modelling) that can be helpful for interrogating such datasets, but all rely on certain assumptions, and it is difficult to get a definitive answer out of them. It seems strange to imagine nowadays, but it took decades for health organisations to be convinced that smoking had a causal effect on lung cancer incidence, despite the correlation between smoking and lung cancer being established long prior.
 
-## Randomised experiments
+In practice, the scientist's most powerful tool for solving these kinds of causal problems tends to be *manipulation*. What happens here is that the scientist actively manipulates Variable A, and observes whether Variable B changes in response. If Variable B does change, then we have strong evidence that Variable A causally influences Variable B. If not, then we must think again.
 
-## Conclusion
+When conducting an experiment with a manipulation, it is conventional to classify the variables into two categories: *independent* and *dependent* variables. Independent variables are variables that the experimenter manipulates (Variable A in the example above). Dependent variables are variables that the experimenter measures without manipulating them directly (Variable B in the example above).
 
-# Generalisability
+Experimental manipulations generally fall into two categories: *within-subjects* and *between-subjects*. Let's consider each in turn.
 
-# Ethics
+In a *within-subjects* design, we have a collection of participants, and we wish to examine the impact of a manipulation on these participants. Here the term 'manipulation' can be interpreted broadly. It could mean doing something literally to the participants --- for example giving them a cup of coffee --- but it could also mean doing something to the experimental setup that the participant experiences, for example changing the volume of the auditory stimuli. The defining characteristic of a within-subjects design is that we expose each individual participant to multiple *levels* of the manipulation. Depending on the experiment, these levels could mean different things:
 
-# Examples
+1.  Before or after an intervention, for example before or after a cup of coffee;
+2.  Different categories of a discrete independent variable, for example running, walking, or sitting;
+3.  Different values of a continuous independent variable, for example 33% volume, 49% volume, or 52% volume.
 
-#### Psychological studies
+Sometimes it is not practical for the same subject to experience multiple levels of the same independent variable. In this case we conduct a *between-subjects design*, where each participant only experiences only level of the independent variable. For the experimental manipulation to be considered valid, it is essential that the assignment of participants to independent variable levels be *randomised*. In principle, this could be done by rolling a die for each participant and choosing the value of the independent variable on the basis of the die roll; in practice researchers tend to use random number generators instead. Other methods (e.g. each participant choosing their own condition) *do not* qualify as proper manipulations, because the values of the independent variable will be affected by unknown pre-existing differences between the participants, which may have their own causal associations with the dependent variable.
 
-#### Corpus studies
+It is possible to have multiple independent variables in the same experiment. Experiments with all within-subjects variables or all between-subjects variables are called within-subjects and between-subjects designs respectively; experiments with *both* within-subjects and between-subjects variables are called *mixed* designs.
 
-#### Acoustic studies
+In practice, within-subjects designs tend to be considerably more powerful than between-subjects designs. This is because within-subjects are very good at accounting for individual differences between participants; even if one participant tends to score particularly low or particularly high on a dependent variable, this idiosyncrasy should apply equally across the different levels of the independent variable, so it can be controlled for when analysing the data. In contrast, in a between-subjects design it is much harder to separate individual differences from the effects of the experimental manipulations; as a consequence, such designs can require many times more participants to achieve the same statistical reliability (see [this blog post](https://daniellakens.blogspot.com/2016/11/why-waithin-subject-designs-require-less.html) for an analysis). So, where possible, it is advisable to try and formulate studies as within-subjects rather than between-subjects designs.
+
+One disadvantage of within-subjects designs, though, is that they can be susceptible to *carry-over* *effects*. A carry-over effect is one where the identity of preceding conditions influences scores in the current condition. For example, suppose we are studying the effect of physical exercise on music listening, and we have three values of the independent variable: running, walking, and sitting. The effects of physical exercise on heart rate and body temperature can be fairly long-lasting. If we have the participant run for five minutes, then sit for five minutes, then walk for five minutes, their heart rate in the 'sit' condition is likely to be inflated by the fact that they were running in the previous condition. It's essential therefore in within-subjects designs to ensure that the order of conditions is *balanced* between participants, rather than being the same for all participants. One way of achieving this is simply to randomise the order of conditions across participants. There also exist more sophisticated ways of achieving this, for example *Latin square designs*, which ensure that the order of conditions is *perfectly* balanced between participants, rather than just being balanced on average. These only become important for very small participant groups, and we won't consider them here.
+
+Experimental manipulations are a very valuable tool for identifying causal relationships. Unfortunately, however, they are not always practical to conduct. Some kinds of manipulations take too long to achieve in the context of a particular study, or are too expensive, or raise problematic ethical issues. In these cases observational studies may be the only way forward. Fortunately, there are still many interesting things that we can learn from such studies with the right kinds of statistical methods. We'll explore some of these in the next chapter.
