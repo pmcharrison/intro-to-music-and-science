@@ -307,8 +307,6 @@ Here we've ended up with three computational features in our fictional dataset:
 
 -   'Probability' tells us how likely the melodic expectation algorithm believes the current note to be, taking into account what happened so far in the melody. Prominent examples of melodic expectation algorithms are Temperley's melodic expectation algorithm [@Temperley2008-tj] and Pearce's Information Dynamics Of Music (IDyOM) model [@Pearce2005-bm].
 
-**To do**: compile table of prominent symbolic models from the literature.
-
 #### Audio approaches
 
 A disadvantage of symbolic approaches is that they require music to be encoded in a symbolic format. This is not always easy to achieve, especially for musical styles that tend not to use musical scores. Moreover, from the perspective of psychological simulation, there is something unrealistic about relying on a symbolic encoding of a particular musical extract, because symbolic encodings typically discard important parts of the musical stimulus (e.g. timbre, room acoustics, performance parameters).
@@ -347,8 +345,6 @@ There are various useful audio-analysis toolboxes out there in the literature, f
 -   [IPEM Toolbox](https://www.ugent.be/lw/kunstwetenschappen/ipem/en/research/projects/finishedprojects/ipem-toolbox.htm)
 
 -   [Janata Lab Music Toolbox](https://atonal.ucdavis.edu/resources/software/jlmt/)
-
-**To do**: compile table of prominent audio models from the literature.
 
 ### Other metadata
 

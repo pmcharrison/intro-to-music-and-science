@@ -1,0 +1,6 @@
+# Variables
+
+compile table of prominent audio models from the literature.
+compile table of prominent symbolic models from the literature.
+
+
