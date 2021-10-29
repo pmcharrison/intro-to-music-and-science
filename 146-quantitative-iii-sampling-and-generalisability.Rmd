@@ -1,0 +1,23 @@
+# Sampling and generalisability
+
+Scientific studies often rely on some kind of *sampling*. This could mean recruiting people to take part in the study, or it could mean compiling a collection of musical scores or recordings to analyse in a corpus analysis. In either case, we'd describe the resulting collection of participants or musical extracts as a *sample group*.
+
+The goal of the scientific study is, in most cases, to establish findings that *generalise* outside of the particular sample groups tested. We are not interested, *per se*, in quantifying the psychological tendencies of the particular participants who happened to come and do our study; we are interested rather in understanding psychological tendencies of the broader human population.
+
+When performing such a generalisation, we need to think carefully about two main criteria: *size* and *representativity*. Let's discuss each in turn.
+
+## Sample group size
+
+People vary in all kinds of ways, and this variation manifests itself in the data that we collect in psychological experiments. Think back to the study discussed in a previous chapter about the impact of music lessons on general intelligence [@Deutsch2013-xv]
+
+## Sample group representativity 
+
+A fundamental process in scientific studies
+
+A priority in scientific research is to establish findings that are as *general* as possible.
+
+As scientists, we wish to develop findings that are as *general* as possible.
+
+Our goal in scientific studies is typically to establish some kind of *general* findings. For example, we might want to make statements such as 'consonance perception is driven by roughness, not by harmonicity' or 'functional asymmetry in chord progressions is stronger in Classical music than in Renaissance music.
+
+Scientific studies often rely on some kind of *sampling*. This could mean recruiting people to take part in the study, or it could mean compiling a collection of musical scores or recordings to analyse in a corpus analysis.
