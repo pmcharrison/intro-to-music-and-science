@@ -1,0 +1,23 @@
+---
+title: "Music and Science"
+author: "Peter M. C. Harrison"
+date: "2021-11-11"
+site: bookdown::bookdown_site
+documentclass: book
+bibliography: [book.bib, packages.bib]
+# url: your book url like https://bookdown.org/yihui/bookdown
+# cover-image: path to the social sharing image like images/cover.jpg
+description: |
+  This is a collection of draft lecture notes for Music and Science teaching 
+  at the Centre for Music and Science at the University of Cambridge.
+biblio-style: apalike
+csl: chicago-fullnote-bibliography.csl
+---
+
+# About this website
+
+This website hosts a collection of draft lecture notes for Music and Science teaching at the [Centre for Music and Science](https://cms.mus.cam.ac.uk/) at the University of Cambridge. I'm populating these incrementally as I work through these first few terms of teaching the new courses.
+
+# Copyright
+
+This work is licensed under a [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-nc-sa/4.0/).

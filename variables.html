@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Chapter 7 Variables | Music and Science</title>
+<meta name="author" content="Peter M. C. Harrison">
+<meta name="description" content="7.1 Introduction Quantitative methods, at their core, are all about characterising two things: distributions of variables; relationships between variables. These relationships can be summarised...">
+<meta name="generator" content="bookdown 0.24 with bs4_book()">
+<meta property="og:title" content="Chapter 7 Variables | Music and Science">
+<meta property="og:type" content="book">
+<meta property="og:description" content="7.1 Introduction Quantitative methods, at their core, are all about characterising two things: distributions of variables; relationships between variables. These relationships can be summarised...">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Chapter 7 Variables | Music and Science">
+<meta name="twitter:description" content="7.1 Introduction Quantitative methods, at their core, are all about characterising two things: distributions of variables; relationships between variables. These relationships can be summarised...">
+<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.3.1/transition.js"></script><script src="libs/bs3compat-0.3.1/tabs.js"></script><script src="libs/bs3compat-0.3.1/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><link rel="stylesheet" href="bs4_style.css">
+</head>
+<body data-spy="scroll" data-target="#toc">
+
+<div class="container-fluid">
+<div class="row">
+  <header class="col-sm-12 col-lg-3 sidebar sidebar-book"><a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+
+    <div class="d-flex align-items-start justify-content-between">
+      <h1>
+        <a href="index.html" title="">Music and Science</a>
+      </h1>
+      <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
+    </div>
+
+    <div id="main-nav" class="collapse-lg">
+      <form role="search">
+        <input id="search" class="form-control" type="search" placeholder="Search" aria-label="Search">
+</form>
+
+      <nav aria-label="Table of contents"><h2>Table of contents</h2>
+        <ul class="book-toc list-unstyled">
+<li><a class="" href="index.html"><span class="header-section-number">1</span> About this website</a></li>
+<li><a class="" href="copyright.html"><span class="header-section-number">2</span> Copyright</a></li>
+<li class="book-part">Methods overview</li>
+<li><a class="" href="introduction.html"><span class="header-section-number">3</span> Introduction</a></li>
+<li><a class="" href="research-topics.html"><span class="header-section-number">4</span> Research topics</a></li>
+<li><a class="" href="research-questions.html"><span class="header-section-number">5</span> Research questions</a></li>
+<li><a class="" href="quantitativequalitative.html"><span class="header-section-number">6</span> Quantitative/qualitative</a></li>
+<li class="book-part">Quantitative methods</li>
+<li><a class="active" href="variables.html"><span class="header-section-number">7</span> Variables</a></li>
+<li><a class="" href="causality.html"><span class="header-section-number">8</span> Causality</a></li>
+<li><a class="" href="generalisability.html"><span class="header-section-number">9</span> Generalisability</a></li>
+<li><a class="" href="references.html">References</a></li>
+</ul>
+
+        <div class="book-extra">
+          <p><a id="book-repo" href="https://github.com/pmcharrison/intro-to-music-and-science">View book source <i class="fab fa-github"></i></a></p>
+        </div>
+      </nav>
+</div>
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="variables" class="section level1">
+<h1>
+<span class="header-section-number">7</span> Variables<a class="anchor" aria-label="anchor" href="#variables"><i class="fas fa-link"></i></a>
+</h1>
+<div id="introduction-1" class="section level2">
+<h2>
+<span class="header-section-number">7.1</span> Introduction<a class="anchor" aria-label="anchor" href="#introduction-1"><i class="fas fa-link"></i></a>
+</h2>
+<p>Quantitative methods, at their core, are all about characterising two things:</p>
+<ol style="list-style-type: lower-alpha">
+<li><p>distributions of variables;</p></li>
+<li><p>relationships between variables.</p></li>
+</ol>
+<p>These relationships can be summarised either numerically (e.g. using tables) or graphically (e.g. using plots). For example, we might study how fuel efficiency (measured in miles per gallon) is distributed in a collection of cars:</p>
+<div class="inline-figure"><img src="140-quantitative-i-defining-variables_files/figure-html/unnamed-chunk-2-1.png" width="672"></div>
+<p>We might follow that up by studying how fuel efficiency relates to the car engine’s horsepower:</p>
+<div class="inline-figure"><img src="140-quantitative-i-defining-variables_files/figure-html/unnamed-chunk-3-1.png" width="672"></div>
+<p>It feels very natural to speak about car engines in these numeric constructs such as miles per gallon and horsepower, and to quantify relationships between them using data plots. In contrast, it is less obvious how to construct equivalent numeric constructs for human psychology, where many of the relevant concepts (e.g. personality, attention, consciousness) are hard to define and even harder to measure. This task of defining appropriate variables is one of the key challenges of psychology research, and it’s the focus of the present chapter.</p>
+</div>
+<div id="scientific-variables" class="section level2">
+<h2>
+<span class="header-section-number">7.2</span> Scientific variables<a class="anchor" aria-label="anchor" href="#scientific-variables"><i class="fas fa-link"></i></a>
+</h2>
+<p>In scientific contexts, a variable may be defined as a measurement with a well-defined set of potential values. One example might be age (in years), corresponding to a number ranging typically between 0 and 100. Another example might be nationality, which might take values such as French, German, or Italian.</p>
+<p>Variables come in many forms, and these forms have important implications for how you design an experiment as well as how you analyse the resulting data. Here are several types of variable, as commonly defined in methods textbooks:</p>
+<ul>
+<li><p><strong>Categorical variables (a.k.a. nominal variables).</strong> These take one of a finite set of values, with these values having no intrinsic ordering. An example might be nationality, which could take values such as French, German, and Indian. A special kind of categorical variable is a <strong>binary variable (a.k.a. dichotomous variable)</strong>: this is simply a categorical variable with only two possible values, which comes up for example in True/False questions.</p></li>
+<li>
+<p><strong>Ordinal variables.</strong> Like categorical variables, these take one of a finite set of values, but unlike categorical variables, these values have an intrinsic order. An example of an ordinal variable might be a participant’s response to the following question: “How much do you like jazz music?” where the participant has to choose from four options labelled 1-4:</p>
+<ol style="list-style-type: decimal">
+<li><p>Not at all;</p></li>
+<li><p>A little;</p></li>
+<li><p>A lot;</p></li>
+<li><p>Very much.</p></li>
+</ol>
+</li>
+<li>
+<p><strong>Continuous variables</strong>. These are variables that take numeric values within a continuous range. A truly continuous variable should be able to be specified to an arbitrary degree of precision: for example, we might say that the temperature is 45.832 degrees Centigrade. There are two main types of continuous variable:</p>
+<ul>
+<li><p><strong>Interval variables</strong>. A variable is an ‘interval’ variable if (and only if) addition and subtraction are ‘meaningful’ operations. For example, the time of day is an interval variable, because it makes sense to say ‘ten minutes after’ (addition) or ‘five minutes before’ (subtraction) a given time.</p></li>
+<li><p><strong>Ratio variables.</strong> These are like interval variables, but they have an additional property: multiplication is also a meaningful operation. Money is an example of a ratio variable, because it makes sense to say that Anna (for example) has twice as much money as Bob. Temperature in Centigrade is meanwhile <strong>not</strong> a ratio variable, because it doesn’t make sense to say that 20°C is 20 times as hot as 1°C (at least, not if we listen to our physics teacher).</p></li>
+</ul>
+</li>
+</ul>
+<p>It is worth making a few notes at this point:</p>
+<ul>
+<li><p>In practice, most analysis methods used in psychology do not differentiate between interval and ratio variables, so it is rarely worth losing much sleep over this distinction.</p></li>
+<li><p>There are nonetheless often grey areas where different variable categories overlap. For example, a student might take a multiple-choice exam with a 100 questions, and therefore possible marks would be 1, 2, 3, …, 99, or 100. This is technically not a fully continuous variable, because the set of possible marks is finite, and it is not possible to get ‘in-between’ marks such as 22.5 or 33.7. However, in many situations (e.g. data analysis) it will be useful here to treat the variable as if it is indeed continuous.</p></li>
+<li>
+<p>A particularly debated area is multiple-choice questionnaires, where participants have to choose from multiple numbered options arranged in a scale, for example:</p>
+<ol style="list-style-type: decimal">
+<li><p>Not at all;</p></li>
+<li><p>A little;</p></li>
+<li><p>A lot;</p></li>
+<li><p>Very much.</p></li>
+</ol>
+<p>Some might argue that this variable is ordinal, because it’s not obvious that addition and subtraction make sense here. Others might say that participants naturally understand that the scale is meant to be interpreted as an interval scale, and hence respond in a manner that is consistent with that. This question is not really resolved in the literature, but it is fairly accepted practice in these scenarios to pretend like the variable is an interval variable.</p>
+</li>
+</ul>
+</div>
+<div id="psychological-variables" class="section level2">
+<h2>
+<span class="header-section-number">7.3</span> Psychological variables<a class="anchor" aria-label="anchor" href="#psychological-variables"><i class="fas fa-link"></i></a>
+</h2>
+<p>Psychological studies can include various kinds of variables. These can be organised more-or-less into the following categories:</p>
+<ol style="list-style-type: decimal">
+<li>Experimental manipulations;</li>
+<li>Physical behaviours;</li>
+<li>Neural responses;</li>
+<li>Physiological responses;</li>
+<li>Latent traits;</li>
+<li>Demographics;</li>
+</ol>
+<p>Let’s discuss each of these in turn.</p>
+<div id="manipulations" class="section level3">
+<h3>
+<span class="header-section-number">7.3.1</span> Manipulations<a class="anchor" aria-label="anchor" href="#manipulations"><i class="fas fa-link"></i></a>
+</h3>
+<p>Psychological studies often involve performing some kind of <em>manipulation</em> on the participant or the stimulus. For example, we might randomly split the participants into two groups, and play half of them Mozart and the other half Britney Spears. We’d then have a variable called ‘Participant group’ which takes two possible values, Mozart and Britney spears:</p>
+<div class="inline-table"><table class="table table-sm">
+<thead><tr class="header">
+<th>Participant name</th>
+<th>Participant group</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td>Peter</td>
+<td>Britney Spears</td>
+</tr>
+<tr class="even">
+<td>Gemma</td>
+<td>Britney Spears</td>
+</tr>
+<tr class="odd">
+<td>Paul</td>
+<td>Mozart</td>
+</tr>
+<tr class="even">
+<td>Catharine</td>
+<td>Mozart</td>
+</tr>
+<tr class="odd">
+<td>Juliet</td>
+<td>Britney Spears</td>
+</tr>
+<tr class="even">
+<td>…</td>
+<td>…</td>
+</tr>
+</tbody>
+</table></div>
+<p>Likewise, we might have a dataset of chords, and play them with either a piano timbre or an organ timbre:</p>
+<div class="inline-table"><table class="table table-sm">
+<thead><tr class="header">
+<th>Chord</th>
+<th>Timbre</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td>Major triad</td>
+<td>Piano</td>
+</tr>
+<tr class="even">
+<td>Major triad</td>
+<td>Organ</td>
+</tr>
+<tr class="odd">
+<td>Minor triad</td>
+<td>Piano</td>
+</tr>
+<tr class="even">
+<td>Minor triad</td>
+<td>Organ</td>
+</tr>
+<tr class="odd">
+<td>Diminished triad</td>
+<td>Piano</td>
+</tr>
+<tr class="even">
+<td>Diminished triad</td>
+<td>Organ</td>
+</tr>
+</tbody>
+</table></div>
+<p>The examples above are categorical variables, but we can also have continuous experimental variables, for example if we were to give each participant a random amount of music-store credit upon entering the experiment:</p>
+<div class="inline-table"><table style="width:96%;" class="table table-sm">
+<colgroup>
+<col width="47%">
+<col width="48%">
+</colgroup>
+<thead><tr class="header">
+<th>Participant name</th>
+<th>Starting credit (£)</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td>Peter</td>
+<td>2.33</td>
+</tr>
+<tr class="even">
+<td>Gemma</td>
+<td>1.50</td>
+</tr>
+<tr class="odd">
+<td>Paul</td>
+<td>1.40</td>
+</tr>
+<tr class="even">
+<td>Catharine</td>
+<td>2.45</td>
+</tr>
+<tr class="odd">
+<td>Juliet</td>
+<td>2.00</td>
+</tr>
+<tr class="even">
+<td>…</td>
+<td>…</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div id="physical-behaviours" class="section level3">
+<h3>
+<span class="header-section-number">7.3.2</span> Physical behaviours<a class="anchor" aria-label="anchor" href="#physical-behaviours"><i class="fas fa-link"></i></a>
+</h3>
+<p>A <em>behaviour</em> is something that a person does with their physical body. This could be something specific to the laboratory context (e.g. pressing a green button on a response pad), but it could also mean something in everyday life, for example buying a particular CD in a shop.</p>
+<p>Psychoacoustic experiments often produce variables in this category. For example, we might play a participant two tones, and ask them to press ‘Button A’ if the first one was the highest pitch, and ‘Button B’ if the second tone was the highest pitch. We might then end up with a dataset like the following, where the ‘Response’ column is the behavioural variable:</p>
+<div class="inline-table"><table class="table table-sm">
+<thead><tr class="header">
+<th>Participant ID</th>
+<th>Frequency 1 (Hz)</th>
+<th>Frequency 2 (Hz)</th>
+<th>Response</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>440</td>
+<td>460</td>
+<td>B</td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>420</td>
+<td>421</td>
+<td>A</td>
+</tr>
+<tr class="odd">
+<td>1</td>
+<td>375</td>
+<td>400</td>
+<td>B</td>
+</tr>
+<tr class="even">
+<td>…</td>
+<td>…</td>
+<td>…</td>
+<td>…</td>
+</tr>
+</tbody>
+</table></div>
+<p>Behavioural variables also come up in studies of everyday musical behaviours. For example, a recent paper<span class="citation"><a class="footnote-ref" tabindex="0" data-toggle="popover" data-content="&lt;p&gt;Minsu Park et al., “Global Music Streaming Data Reveal Diurnal and Seasonal Patterns of Affective Preference,” &lt;em&gt;Nat Hum Behav&lt;/em&gt; 3, no. 3 (March 2019): 230–36.&lt;/p&gt;"><sup>5</sup></a></span> studied global music listening patterns as collected through the music streaming service Spotify, and identified how people in different countries listen to different kinds of music at different times of day. A dataset from such a study might look like this:</p>
+<div class="inline-table"><table class="table table-sm">
+<colgroup>
+<col width="22%">
+<col width="19%">
+<col width="19%">
+<col width="38%">
+</colgroup>
+<thead><tr class="header">
+<th>Participant ID</th>
+<th>Date</th>
+<th>Time</th>
+<th>Musical track</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>03-01-2020</td>
+<td>08:57</td>
+<td>‘Toxic’ by Britney Spears</td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>03-01-2020</td>
+<td>14:27</td>
+<td>‘Caravan’ by Duke Ellington</td>
+</tr>
+<tr class="odd">
+<td>1</td>
+<td>04-01-2020</td>
+<td>10:03</td>
+<td>‘Lingus’ by Snarky Puppy</td>
+</tr>
+<tr class="even">
+<td>…</td>
+<td>…</td>
+<td>…</td>
+<td>…</td>
+</tr>
+</tbody>
+</table></div>
+<p>Here the behavioural variable would be the musical track that the individual chose to listen to. Of course, we can get pedantic here about the extent to which an individual actively chooses to listen to a specific musical track: for example, if they’ve selected ‘Shuffle’ then Spotify will be choosing the next song for them, albeit from a limited selection. But the general point is clear, that this dataset reflects to some extent real-world decisions that the individual is making about what music to listen to.</p>
+<p>Music psychology experiments are often particularly interested in quantifying listeners’ <em>subjective</em> experiences when they listen to music: for example, the sense in which a listener finds certain sounds beautiful, or happy, or moving. Though it is difficult (impossible?) to measure subjective experiences directly, it is perfectly possible to ask the participant to describe these subjective experiences. For example, if we were interested in subjective beauty, we might ask the participant to rate the stimulus for beauty on a scale from 1 to 4, where 1 means ‘not at all beautiful’ and 4 means ‘very beautiful’.</p>
+</div>
+<div id="neural-responses" class="section level3">
+<h3>
+<span class="header-section-number">7.3.3</span> Neural responses<a class="anchor" aria-label="anchor" href="#neural-responses"><i class="fas fa-link"></i></a>
+</h3>
+<p>It has been known for decades that psychological processes are ultimately mediated by the brain. Historically speaking, the brain’s workings have been opaque to external observers, but recent neuroscientific techniques now give us various ways to measure aspects of brain activity. The resulting data is typically highly complex, and interpreting it is no easy task. However, the approach is appealing because it gives a real insight into how psychological processes are mediated by neural biology. Some important examples are given below:</p>
+<ul>
+<li><p><em>Electroencephalography (EEG)</em> records tiny electrical currents from the scalp that reflect firing patterns of neurons in the outer layers of the brain. EEG has a high temporal sensitivity which makes it particularly good for tracking the time course of responses to auditory stimuli. However, it is limited in its ability to localise brain activity to particular regions.</p></li>
+<li><p><em>Magnetoencephalography</em> (MEG) records faint magnetic fields that, similar to EEG, reflect firing patterns of neurons in the brain. Like EEG, MEG has a high temporal sensitivity, but it also has somewhat greater localisation abilities than EEG.</p></li>
+<li><p><em>Functional magnetic resonance imaging</em> (fMRI) measures changes in blood flow through the brain. This is useful because (as it turns out) blood flow is a reliable marker of neural activity; when a particular brain region is experiencing high neural activity, blood flow to that region will increase so as to provide more oxygen for respiration. fMRI has much better localisation capacity than EEG or MEG; however, its temporal sensitivity is much lower than either method, producing data on the granularity of seconds rather than milliseconds.</p></li>
+</ul>
+</div>
+<div id="physiology" class="section level3">
+<h3>
+<span class="header-section-number">7.3.4</span> Physiology<a class="anchor" aria-label="anchor" href="#physiology"><i class="fas fa-link"></i></a>
+</h3>
+<p>Psychological processes also affect the body in systematic and measurable ways. These are termed <em>physiological</em> effects. In musical contexts, physiological effects are most commonly associated with emotional responses. For example, in cases of high emotional arousal, participants tend to exhibit faster heart rates and respiration rates, as well as high skin temperature and perspiration. These can be measured using standardised laboratory equipment as discussed in the Emotion chapter.</p>
+</div>
+<div id="latent-traits" class="section level3">
+<h3>
+<span class="header-section-number">7.3.5</span> Latent traits<a class="anchor" aria-label="anchor" href="#latent-traits"><i class="fas fa-link"></i></a>
+</h3>
+<p>In everyday life we often speak of certain personal characteristics that are not physically measurable (e.g. height, weight) but rather reflect something less tangible. In psychology we call these characteristics <em>latent traits</em>. A fundamental challenge in psychology research is how to quantify these latent traits.</p>
+<p>One example of a latent trait is <em>personality</em>. A prominent psychological theory of personality is the so-called <em>Big Five</em> model, which characterises personality in terms of five underlying factors:</p>
+<ol style="list-style-type: decimal">
+<li><p>Extraversion;</p></li>
+<li><p>Agreeableness;</p></li>
+<li><p>Openness to experience;</p></li>
+<li><p>Conscientiousness;</p></li>
+<li><p>Neuroticism.</p></li>
+</ol>
+<p>The idea is that each person’s personality can be summarised (to some extent) as a collection of five scores, one for each of these five dimensions.</p>
+<p>How do we measure these different dimensions? It’s hardly as if we can take out a ruler and measure the size of different areas of the brain corresponding to these different personality traits. Even if we had a spare magnetic resonance imaging (MRI) scanner lying around with which to measure individual brain anatomy, the mapping between brain dimensions and psychological traits tends to be rather too complicated for such a procedure to be practical in most situations.</p>
+<p>Instead, like many latent traits, we tend to assess personality using <em>questionnaires</em>. A questionnaire is simply a collection of standardised questions that we administer to a participant. Many question formats are possible, but in quantitative studies it’s particularly common to administer questionnaires with numeric responses. For example, when assessing someone’s personality, we might ask them the following question, sourced from the Ten Item Personality Inventory (TIPI):<span class="citation"><a class="footnote-ref" tabindex="0" data-toggle="popover" data-content="&lt;p&gt;Samuel D Gosling, Peter J Rentfrow, and William B Swann, “A Very Brief Measure of the Big-Five Personality Domains,” &lt;em&gt;J. Res. Pers.&lt;/em&gt; 37, no. 6 (2003): 504–28.&lt;/p&gt;"><sup>6</sup></a></span></p>
+<blockquote>
+<p><em>Please indicate the extent to which you agree with the following statement.</em></p>
+<p>I see myself as: sympathetic, warm.</p>
+</blockquote>
+<p>We could then ask the participant to give their response on a seven-point scale:</p>
+<ol style="list-style-type: decimal">
+<li>Disagree strongly</li>
+<li>Disagree moderately</li>
+<li>Disagree a little</li>
+<li>Neither agree nor disagree</li>
+<li>Agree a lot</li>
+<li>Agree moderately</li>
+<li>Agree strongly</li>
+</ol>
+<p>The question is designed to assess the participant’s <em>agreeableness</em>. High scores (e.g. 6, 7) reflect an agreeable participant, whereas low scores (e.g. 1, 2) reflect a disagreeable participant.</p>
+<p>A given questionnaire would typically contain multiple such questions. In the TIPI, there are ten questions in total, two for each of the five personality dimensions. The second agreeableness question looks like this:</p>
+<blockquote>
+<p><em>Please indicate the extent to which you agree with the following statement.</em></p>
+<p>I see myself as: critical, quarrelsome.</p>
+</blockquote>
+<p>This second question is what we call a <em>reverse-scored</em> question. When we analyse data from reverse-scored questions, we interpret high numbers as a low numbers and low numbers as high numbers. In this case, participants who responded ‘Disagree strongly’ would receive a score of 1, whereas participants who responded ‘Agree strongly’ would receive a score of 7. The necessity to reverse-score the question comes from the nature of the words being used: while ‘sympathetic’ and ‘warm’ are near-synonyms of ‘agreeable’, ‘critical’ and ‘quarrelsome’ are near-antonyms (i.e. opposites). To get an overall agreeableness score, we could then simply average the numeric results from the first and second (reverse-scored) agreeableness questions. For example, if I wrote ‘Agree moderately’ to the question ‘I see myself as sympathetic, warm’, and ‘Disagree strongly’ to the question ‘I see myself as critical, quarrelsome’, I’d get an agreeableness score of <code>(6 + 1) / 2 = 3.5</code>.</p>
+</div>
+<div id="demographics" class="section level3">
+<h3>
+<span class="header-section-number">7.3.6</span> Demographics<a class="anchor" aria-label="anchor" href="#demographics"><i class="fas fa-link"></i></a>
+</h3>
+<p>Lastly, we have demographic variables. These are generic characteristics of individuals as seen for example in a census. It is important to record at least some of these variables in order to build an approximate picture of the participant group. Some examples are given below:</p>
+<ul>
+<li><p>Age</p></li>
+<li><p>Gender</p></li>
+<li><p>Country of birth</p></li>
+<li><p>Country of residence</p></li>
+<li><p>Educational level (measured e.g. in terms of the highest educational qualification received)</p></li>
+<li><p>Socioeconomic status (corresponding broadly to one’s income level and position within society)</p></li>
+</ul>
+<p>Of these, age, gender, and country of residence are considered particularly essential for psychological studies; it is difficult to publish a paper that omits this information.</p>
+</div>
+</div>
+<div id="musical-variables" class="section level2">
+<h2>
+<span class="header-section-number">7.4</span> Musical variables<a class="anchor" aria-label="anchor" href="#musical-variables"><i class="fas fa-link"></i></a>
+</h2>
+<p>Music psychology studies also often involve some kind of music, and often it is possible to derive useful variables from this music. Here we will consider three main categories of musical variables:</p>
+<ol style="list-style-type: decimal">
+<li>Human annotations</li>
+<li>Computational features</li>
+<li>Other metadata</li>
+</ol>
+<div id="human-annotations" class="section level3">
+<h3>
+<span class="header-section-number">7.4.1</span> Human annotations<a class="anchor" aria-label="anchor" href="#human-annotations"><i class="fas fa-link"></i></a>
+</h3>
+<p>Human annotations are variables that represent human evaluations of the music, typically collected in advance of the main study itself. These annotations could come from expert musicians who are fluent in relevant music theory and terminology; for example, we could ask some expert musicians to annotate the implied harmonies for various folk melodies. Alternatively, non-expert listeners can also provide useful annotations in some cases, though typically it is necessary to get a larger number of such listeners and average over their responses in order to get reliable data. An example is given in the fictional dataset below:</p>
+<div class="inline-table"><table class="table table-sm">
+<thead><tr class="header">
+<th>Melody ID</th>
+<th>Tonic</th>
+<th>Mode</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>A</td>
+<td>Minor</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>F</td>
+<td>Major</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>G</td>
+<td>Major</td>
+</tr>
+<tr class="even">
+<td>…</td>
+<td>…</td>
+<td>…</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div id="computational-features" class="section level3">
+<h3>
+<span class="header-section-number">7.4.2</span> Computational features<a class="anchor" aria-label="anchor" href="#computational-features"><i class="fas fa-link"></i></a>
+</h3>
+<p>It is also possible to generate useful variables by running musical extracts through computer algorithms. Variables extracted in such a way are typically called <em>features</em>.</p>
+<p>There are many such algorithms out there, designed to perform all kinds of tasks. Particularly relevant are algorithms designed explicitly for the purpose of psychological modelling.</p>
+<p>These computer algorithms can be differentiated in terms of the kind of data that they ingest. Some take so-called <em>symbolic</em> data, whereas others take <em>audio</em> data.</p>
+<div id="symbolic-approaches" class="section level4">
+<h4>
+<span class="header-section-number">7.4.2.1</span> Symbolic approaches<a class="anchor" aria-label="anchor" href="#symbolic-approaches"><i class="fas fa-link"></i></a>
+</h4>
+<p>We say that music is represented ‘symbolically’ when we write it down in terms of a (relatively) small set of discrete symbols. Classical score notation is an example of a symbolic notation system, with categorical representations for both rhythm (e.g. minim, dotted minim, crotchet, quaver) and pitch (e.g. C4, C#4, F5). When dealing with computers, we tend to write things as numbers where possible, so we might write the first phrase of ‘Twinkle twinkle little star’ as follows:</p>
+<div class="inline-table"><table class="table table-sm">
+<thead><tr class="header">
+<th>Note ID</th>
+<th>Pitch</th>
+<th>Time</th>
+<th>Duration</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>60</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>60</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>67</td>
+<td>2</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>67</td>
+<td>3</td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>69</td>
+<td>4</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td>69</td>
+<td>5</td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td>7</td>
+<td>67</td>
+<td>6</td>
+<td>2</td>
+</tr>
+</tbody>
+</table></div>
+<p>We then might feed this data into a collection of symbolic algorithms in order to extract some useful features for our experiment. For a simple example, suppose we run two algorithms: a key-finding algorithm and a melodic expectation algorithm. Let’s further agree that we run both in a sliding-window fashion, such that the algorithm at timepoint 1 only sees data from timepoints 0 and 1, and so on.</p>
+<div class="inline-table"><table class="table table-sm">
+<thead><tr class="header">
+<th>Note ID</th>
+<th>Pitch</th>
+<th>Time</th>
+<th>Duration</th>
+<th>Est. tonic</th>
+<th>Est. mode</th>
+<th>Probability</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>60</td>
+<td>0</td>
+<td>1</td>
+<td>F</td>
+<td>Major</td>
+<td>0.1</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>60</td>
+<td>1</td>
+<td>1</td>
+<td>F</td>
+<td>Major</td>
+<td>0.3</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>67</td>
+<td>2</td>
+<td>1</td>
+<td>C</td>
+<td>Major</td>
+<td>0.2</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>67</td>
+<td>3</td>
+<td>1</td>
+<td>C</td>
+<td>Major</td>
+<td>0.3</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>69</td>
+<td>4</td>
+<td>1</td>
+<td>C</td>
+<td>Major</td>
+<td>0.3</td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td>69</td>
+<td>5</td>
+<td>1</td>
+<td>C</td>
+<td>Major</td>
+<td>0.4</td>
+</tr>
+<tr class="odd">
+<td>7</td>
+<td>67</td>
+<td>6</td>
+<td>2</td>
+<td>C</td>
+<td>Major</td>
+<td>0.4</td>
+</tr>
+</tbody>
+</table></div>
+<p>Here we’ve ended up with three computational features in our fictional dataset:</p>
+<ul>
+<li><p>‘Est. tonic’ tells us the tonic as estimated by the key-finding algorithm. It starts off thinking that the melody is in F (with the first note being the dominant), but once it hears the third note it decides that the melody is in C after all. A well-known such algorithm is the <em>Krumhansl-Kessler key-finding algorithm</em>.<span class="citation"><a class="footnote-ref" tabindex="0" data-toggle="popover" data-content="&lt;p&gt;C. L. Krumhansl, “Cognitive Foundations of Musical Pitch,” &lt;em&gt;Oxford Psychology Series&lt;/em&gt;, 1990.&lt;/p&gt;"><sup>7</sup></a></span></p></li>
+<li><p>‘Est. mode’ tells us the estimated mode; in our case it believes that the melody is in the major mode throughout.</p></li>
+<li><p>‘Probability’ tells us how likely the melodic expectation algorithm believes the current note to be, taking into account what happened so far in the melody. Prominent examples of melodic expectation algorithms are Temperley’s melodic expectation algorithm<span class="citation"><a class="footnote-ref" tabindex="0" data-toggle="popover" data-content="&lt;p&gt;David Temperley, “A Probabilistic Model of Melody Perception,” &lt;em&gt;Cogn. Sci.&lt;/em&gt; 32, no. 2 (2008): 418–44.&lt;/p&gt;"><sup>8</sup></a></span> and Pearce’s Information Dynamics Of Music (IDyOM) model.<span class="citation"><a class="footnote-ref" tabindex="0" data-toggle="popover" data-content="&lt;p&gt;Marcus T Pearce, “The Construction and Evaluation of Statistical Models of Melodic Structure in Music Perception and Composition” (PhD thesis, City University, London, 2005).&lt;/p&gt;"><sup>9</sup></a></span></p></li>
+</ul>
+</div>
+<div id="audio-approaches" class="section level4">
+<h4>
+<span class="header-section-number">7.4.2.2</span> Audio approaches<a class="anchor" aria-label="anchor" href="#audio-approaches"><i class="fas fa-link"></i></a>
+</h4>
+<p>A disadvantage of symbolic approaches is that they require music to be encoded in a symbolic format. This is not always easy to achieve, especially for musical styles that tend not to use musical scores. Moreover, from the perspective of psychological simulation, there is something unrealistic about relying on a symbolic encoding of a particular musical extract, because symbolic encodings typically discard important parts of the musical stimulus (e.g. timbre, room acoustics, performance parameters).</p>
+<p>An alternative is to use audio-based algorithms. These algorithms analyse audio files directly, and do not require a symbolic encoding stage. Rather than returning feature values for each note, they will more commonly return feature values for many different timesteps, for example:</p>
+<div class="inline-table"><table class="table table-sm">
+<thead><tr class="header">
+<th>Stimulus ID</th>
+<th>Time (s)</th>
+<th>Roughness</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>0.0</td>
+<td>0.85</td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>0.1</td>
+<td>0.75</td>
+</tr>
+<tr class="odd">
+<td>1</td>
+<td>0.2</td>
+<td>0.50</td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>0.3</td>
+<td>0.65</td>
+</tr>
+<tr class="odd">
+<td>1</td>
+<td>0.4</td>
+<td>0.66</td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>0.5</td>
+<td>0.20</td>
+</tr>
+<tr class="odd">
+<td>1</td>
+<td>0.6</td>
+<td>0.25</td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>0.7</td>
+<td>0.22</td>
+</tr>
+<tr class="odd">
+<td>1</td>
+<td>0.8</td>
+<td>0.39</td>
+</tr>
+<tr class="even">
+<td>…</td>
+<td>…</td>
+<td>…</td>
+</tr>
+</tbody>
+</table></div>
+<p>Depending on the study, it may often make sense to average over all the timesteps to create one feature value per stimulus. In this case the dataset might look something like this:</p>
+<div class="inline-table"><table class="table table-sm">
+<thead><tr class="header">
+<th>Stimulus ID</th>
+<th>Mean roughness</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>0.65</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>0.34</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>0.44</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>0.40</td>
+</tr>
+<tr class="odd">
+<td>…</td>
+<td>…</td>
+</tr>
+</tbody>
+</table></div>
+<p>There are various useful audio-analysis toolboxes out there in the literature, for example:</p>
+<ul>
+<li><p><a href="https://www.jyu.fi/hytk/fi/laitokset/mutku/en/research/materials/mirtoolbox">MIRToolbox</a></p></li>
+<li><p><a href="https://essentia.upf.edu/">Essentia</a></p></li>
+<li><p><a href="https://www.ugent.be/lw/kunstwetenschappen/ipem/en/research/projects/finishedprojects/ipem-toolbox.htm">IPEM Toolbox</a></p></li>
+<li><p><a href="https://atonal.ucdavis.edu/resources/software/jlmt/">Janata Lab Music Toolbox</a></p></li>
+</ul>
+</div>
+</div>
+<div id="other-metadata" class="section level3">
+<h3>
+<span class="header-section-number">7.4.3</span> Other metadata<a class="anchor" aria-label="anchor" href="#other-metadata"><i class="fas fa-link"></i></a>
+</h3>
+<p>When using pre-existing pieces (e.g. classical music compositions) one can often source many other musical variables based on the music’s metadata. One might for example include the music genre, the composer, the date of composition, the number of record sales, and so on.</p>
+</div>
+</div>
+<div id="limitations" class="section level2">
+<h2>
+<span class="header-section-number">7.5</span> Limitations<a class="anchor" aria-label="anchor" href="#limitations"><i class="fas fa-link"></i></a>
+</h2>
+<p>When we define scientific variables, we are in most cases trying to <em>operationalise</em> some fundamental concept of interest. For example, we might be interested in learning about the subjective pleasantness of musical chords, and we operationalise this concept by asking a collection of participants to rate the pleasantness of particular musical chords on a scale of 1 to 7. Operationalisation is invaluable to psychology, because without it we can’t measure most of the things we care about. However, it’s also very dangerous, because an improper operationalisation can cause us to draw highly misleading conclusions from our experiments. It’s therefore essential to maintain a critical perspective on variable definitions at all times, both when conducting one’s own studies and when reading other studies in the literature.</p>
+<p>There are two main features that contribute to the quality of an operationalisation: <em>reliability</em> and <em>validity</em>. Let’s consider each in turn.</p>
+<div id="reliability" class="section level3">
+<h3>
+<span class="header-section-number">7.5.1</span> Reliability<a class="anchor" aria-label="anchor" href="#reliability"><i class="fas fa-link"></i></a>
+</h3>
+<p>A measurement procedure’s <em>reliability</em> may be defined as the extent to which it produces similar measurements under similar conditions. In the context of psychological measures, this is most commonly interpreted as meaning ‘if I were to measure the same person multiple times, would I get similar results?’ In the context of measuring someone’s height, we’d class a measuring scale as ‘reliable’ if it gave a similar reading if we weighed the same person twice in a row. In the context of a personality questionnaire, we might expect a reliable questionnaire to give the same participant similar scores no matter whether they take the test on a Tuesday versus a Wednesday.</p>
+<p>A useful thing to know is that low reliability can generally be combated by increasing the sample size (e.g. the number of participants, the number of stimuli, etc.). If we average over many data points, the noise reduces, and we are left with a clearer signal. Of course, increasing sample size comes with its own logistic costs, and so it is generally helpful to try and use reliable measures wherever possible.</p>
+<p>Some of our psychological variables have very high reliability. For example, if we ask a UK participant to report their age in a demographic questionnaire, they are likely to give a very reliable answer as long as they are not incentivised to lie. Others have relatively low reliability; for example, many neuroimaging modalities have intrinsically low reliability, in large part because the brain is always doing many other things in addition to processing the current experimental stimulus.</p>
+<p>Reliability is necessary but not sufficient for an operationalisation to be effective. What if we measure an adult’s extraversion by counting how many friends they had in primary school? This measure will be highly <em>reliable</em> in the sense that this number is not going to change now that the adult has left school, so we’re always going to get the same answer no matter how many times we ask the question. On the other hand, this question is clearly not a particularly ‘good’ measure of extraversion, because there are many other factors that can contribute to the size of someone’s friendship group, for example whether they were home-schooled or not. This brings us to the following notion of <em>validity</em>.</p>
+</div>
+<div id="validity" class="section level3">
+<h3>
+<span class="header-section-number">7.5.2</span> Validity<a class="anchor" aria-label="anchor" href="#validity"><i class="fas fa-link"></i></a>
+</h3>
+<p>A measurement procedure’s <em>validity</em> may be defined as the extent to which the procedure truly measures what it’s meant to measure. Validity is much harder to establish than reliability, because it requires deep engagement with the psychological processes surrounding a measurement.</p>
+<p>Validity issues are particularly salient for latent traits, for example personality and intelligence. In this context researchers often use the more specific term <em>construct validity</em>.<span class="citation"><a class="footnote-ref" tabindex="0" data-toggle="popover" data-content="&lt;p&gt;L J Cronbach and P E Meehl, “Construct Validity in Psychological Tests,” &lt;em&gt;Psychol. Bull.&lt;/em&gt; 52, no. 4 (1955): 281–302.&lt;/p&gt;"><sup>10</sup></a></span> The issue here is that we are talking about latent constructs that are impossible to measure and very difficult to introspect effectively about. It is possible to create standardised instruments for measuring these constructs, for example IQ tests or personality tests, but it is very easy for certain biases or confounds to find their way into these instruments. For example, the self-report component of the Goldsmiths Musical Sophistication Index (Gold-MSI) assesses the participant’s singing abilities by asking them how much they agree with the following statements:</p>
+<ul>
+<li><p>If somebody starts singing a song I don’t know, I can usually join in.</p></li>
+<li><p>I can sing or play music from memory.</p></li>
+<li><p>I am able to hit the right notes when I sing along with a recording.</p></li>
+<li><p>I am not able to sing in harmony when somebody is singing a familiar tune. [reverse-scored]</p></li>
+<li><p>I don’t like singing in public because I’m afraid that I would sing wrong notes. [reverse-scored]</p></li>
+<li><p>After hearing a new song two or three times, I can usually sing it by myself.</p></li>
+<li><p>I only need to hear a new tune once and I can sing it back hours later.</p></li>
+</ul>
+<p>This questionnaire does seem to do quite a good job in practice of capturing variation in singing abilities, even in participants without formal musical training. Nonetheless, it has a clear limitation, namely that it relies primarily on the participant’s <em>conception</em> of their own musical abilities rather than their actual musical abilities. Humble participants, or participants whose peer group is highly musically talented, are therefore likely to deliver lower ratings than equivalently skilled participants who are less humble or who have less musically talented peer groups.</p>
+<p>A dangerous thing about validity is that it cannot be combated by increasing sample size. Validity problems will cause systematic biases in the data analyses that only become stronger, not weaker, with more data. This phenomenon is becoming particularly relevant in the era of big data, where companies are collecting larger and larger datasets containing all kinds of information about consumers, without necessarily investing equal effort in minimising bias in their data-collection methods.</p>
+<p>Validity is something important to consider and discuss both in the study planning stage and in the study write-up stage. In the planning stage, one should carefully consider the operationalisations being adopted, and try to design them such as to maximise validity. Of course, it is never possible to achieve perfection here. In the write-up stage, it is therefore important to be explicit and open about the potential validity limitations of the present work, and to explain how these should or should not affect the conclusions being made. It is always acceptable to point to ways in which future work could or should address these limitations.</p>
+</div>
+</div>
+<div id="summary" class="section level2">
+<h2>
+<span class="header-section-number">7.6</span> Summary<a class="anchor" aria-label="anchor" href="#summary"><i class="fas fa-link"></i></a>
+</h2>
+<p>We have established a broad variety of relevant variables for psychological studies, and for music and science research in general. We spoke in particular of various families of scientific variables:</p>
+<ul>
+<li><p>Categorical variables (a.k.a. nominal variables), including binary variables (a.k.a. dichotomous variables);</p></li>
+<li><p>Ordinal variables;</p></li>
+<li><p>Continuous variables, including interval variables and ratio variables.</p></li>
+</ul>
+<p>We also covered various kinds of psychological variables:</p>
+<ul>
+<li><p>Experimental manipulations;</p></li>
+<li><p>Physical behaviours;</p></li>
+<li><p>Neural responses;</p></li>
+<li><p>Physiological responses;</p></li>
+<li><p>Latent traits;</p></li>
+<li><p>Demographics</p></li>
+</ul>
+<p>as well as musical variables, both human- and computer-derived.</p>
+<p>Finally, we emphasised the importance of critically evaluating the way that we operationalise theoretical constructs (e.g. personality, intelligence) using scientific methods, and discussed ways in which an operationalisation might prove to be compromised in terms of reliability or validity.</p>
+
+</div>
+</div>
+
+  <div class="chapter-nav">
+<div class="prev"><a href="quantitativequalitative.html"><span class="header-section-number">6</span> Quantitative/qualitative</a></div>
+<div class="next"><a href="causality.html"><span class="header-section-number">8</span> Causality</a></div>
+</div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
+    <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
+      <ul class="nav navbar-nav">
+<li><a class="nav-link" href="#variables"><span class="header-section-number">7</span> Variables</a></li>
+<li><a class="nav-link" href="#introduction-1"><span class="header-section-number">7.1</span> Introduction</a></li>
+<li><a class="nav-link" href="#scientific-variables"><span class="header-section-number">7.2</span> Scientific variables</a></li>
+<li>
+<a class="nav-link" href="#psychological-variables"><span class="header-section-number">7.3</span> Psychological variables</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#manipulations"><span class="header-section-number">7.3.1</span> Manipulations</a></li>
+<li><a class="nav-link" href="#physical-behaviours"><span class="header-section-number">7.3.2</span> Physical behaviours</a></li>
+<li><a class="nav-link" href="#neural-responses"><span class="header-section-number">7.3.3</span> Neural responses</a></li>
+<li><a class="nav-link" href="#physiology"><span class="header-section-number">7.3.4</span> Physiology</a></li>
+<li><a class="nav-link" href="#latent-traits"><span class="header-section-number">7.3.5</span> Latent traits</a></li>
+<li><a class="nav-link" href="#demographics"><span class="header-section-number">7.3.6</span> Demographics</a></li>
+</ul>
+</li>
+<li>
+<a class="nav-link" href="#musical-variables"><span class="header-section-number">7.4</span> Musical variables</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#human-annotations"><span class="header-section-number">7.4.1</span> Human annotations</a></li>
+<li><a class="nav-link" href="#computational-features"><span class="header-section-number">7.4.2</span> Computational features</a></li>
+<li><a class="nav-link" href="#other-metadata"><span class="header-section-number">7.4.3</span> Other metadata</a></li>
+</ul>
+</li>
+<li>
+<a class="nav-link" href="#limitations"><span class="header-section-number">7.5</span> Limitations</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#reliability"><span class="header-section-number">7.5.1</span> Reliability</a></li>
+<li><a class="nav-link" href="#validity"><span class="header-section-number">7.5.2</span> Validity</a></li>
+</ul>
+</li>
+<li><a class="nav-link" href="#summary"><span class="header-section-number">7.6</span> Summary</a></li>
+</ul>
+
+      <div class="book-extra">
+        <ul class="list-unstyled">
+<li><a id="book-source" href="https://github.com/pmcharrison/intro-to-music-and-science/blob/master/140-quantitative-i-defining-variables.Rmd">View source <i class="fab fa-github"></i></a></li>
+          <li><a id="book-edit" href="https://github.com/pmcharrison/intro-to-music-and-science/edit/master/140-quantitative-i-defining-variables.Rmd">Edit this page <i class="fab fa-github"></i></a></li>
+        </ul>
+</div>
+    </nav>
+</div>
+
+</div>
+</div> <!-- .container -->
+
+<footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>"<strong>Music and Science</strong>" was written by Peter M. C. Harrison. It was last built on 2021-11-11.</p>
+  </div>
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>This book was built by the <a class="text-light" href="https://bookdown.org">bookdown</a> R package.</p>
+  </div>
+
+</div></div>
+</footer>
+</body>
+</html>
