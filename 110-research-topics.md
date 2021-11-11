@@ -80,7 +80,7 @@ It is one thing to appraise a given research topic along these different dimensi
 
     -   [ICMCP](http://www.icmpc.org/) - International Conference of Music Perception and Cognition
 
-    -   [ESCOM](http://musicweb.hmt-hannover.de/escom/) - European Society for the Cognitive Sciences of Music
+    -   [ESCOM](https://www.escomsociety.org/) - European Society for the Cognitive Sciences of Music
 
     -   [SMPC](http://www.musicperception.org/) - Society for Music Perception and Cognition (US-based)
 
