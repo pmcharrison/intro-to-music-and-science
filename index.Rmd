@@ -20,4 +20,4 @@ This website hosts a collection of draft lecture notes for Music and Science tea
 
 # Copyright
 
-This work is licensed under a [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License. Creative Commons License](http://creativecommons.org/licenses/by-nc-sa/4.0/).
+This work is licensed under a [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-nc-sa/4.0/).
