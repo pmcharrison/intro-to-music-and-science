@@ -180,7 +180,7 @@ It has been known for decades that psychological processes are ultimately mediat
 
 ### Physiology
 
-Psychological processes also affect the body in systematic and measurable ways. These are termed *physiological* effects. In musical contexts, physiological effects are most commonly associated with emotional responses. For example, in cases of high emotional arousal, participants tend to exhibit faster heart rates and respiration rates, as well as high skin temperature and perspiration. These can be measured using standardised laboratory equipment as discussed in the \@ref(emotion) chapter.
+Psychological processes also affect the body in systematic and measurable ways. These are termed *physiological* effects. In musical contexts, physiological effects are most commonly associated with emotional responses. For example, in cases of high emotional arousal, participants tend to exhibit faster heart rates and respiration rates, as well as high skin temperature and perspiration. These can be measured using standardised laboratory equipment as discussed in the Emotion chapter.
 
 ### Latent traits
 

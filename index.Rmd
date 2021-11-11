@@ -16,7 +16,7 @@ csl: chicago-fullnote-bibliography.csl
 
 # About this website
 
-This website hosts a collection of draft lecture notes for Music and Science teaching at the [Centre for Music and Science](https://cms.mus.cam.ac.uk/) at the University of Cambridge. I'm populating these incrementally as I work through these first few terms of teaching music and science courses.
+This website hosts a collection of draft lecture notes for Music and Science teaching at the [Centre for Music and Science](https://cms.mus.cam.ac.uk/) at the University of Cambridge. I'm populating these incrementally as I work through these first few terms of teaching the new courses.
 
 # Copyright
 
