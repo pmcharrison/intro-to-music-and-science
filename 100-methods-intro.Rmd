@@ -1,2 +1,5 @@
 # (PART) Methods overview {.unnumbered}
 
+## Introduction
+
+This part of the course focuses on developing the knowledge and skills required to conduct one's own research study in music and science. We will cover topics ranging from the high level (e.g. how to identify appropriate research topics and research questions) to the low level (e.g. how to design surveys, how to create scatterplots). These should be particularly useful for those writing research proposals for the Part II music psychology course, for those conducting their own dissertation research projects, and for those interested in applying for music and science master's programmes.

@@ -34,13 +34,13 @@ Impact can be defined as the sense in which a piece of research affects the worl
 
 The former category (fundamental research impact) is particularly challenging to quantify. It's intuitive that some pieces of knowledge are more impactful than others, but it's very difficult to quantify this differential in an absolute sense. A common heuristic used in academia is to count the number of citations received by a given research article or book; the idea is that the most impactful pieces of research are those that other researchers refer to a lot in their own research. This metric is clearly imperfect, and there is an ongoing drive in academia to find better replacements.
 
-Several factors contribute to determining your capacity to achieve impact within a given research topic. Some relate to the research topic itself; some relate to you as a researcher.
+Several factors contribute to determining whether a research project has the capacity to achieve high impact.
 
-1.  Perhaps the topic itself has intrinsically high potential impact. Cancer research would be one such example; successful contributions in cancer research can have immensely high impact on cancer sufferers around the world.
+1.  Perhaps the topic itself has *intrinsically high potential impact*. Cancer research would be one such example; successful contributions in cancer research can have immensely high impact on cancer sufferers around the world.
 
-2.  Perhaps the topic is understudied. This most commonly happens early on in the study of a topic, when there has not yet been sufficient time for many researchers to recognise its potential.
+2.  Perhaps the topic is *understudied*. This most commonly happens early on in the study of a topic, when there has not yet been sufficient time for many researchers to recognise its potential.
 
-3.  Perhaps the topic matches your own skills particularly well. Different skillsets are useful for different research topics; this is particularly relevant in music psychology, where musical researchers will often have deep personal experience with a particular research topic. This personal experience can be useful in all kinds of ways, ranging from identifying good research questions to developing good hypotheses to recruiting suitable participants.
+3.  Perhaps the topic matches *your own skills* particularly well. Different skillsets are useful for different research topics; this is particularly relevant in music psychology, where musical researchers will often have deep personal experience with a particular research topic. This personal experience can be useful in all kinds of ways, ranging from identifying good research questions to developing good hypotheses to recruiting suitable participants.
 
 ### Environment
 
@@ -52,7 +52,7 @@ It is essential to consider whether you have the right environment available for
 
 ### Personal interest
 
-There's no escaping the fact that different people find different things interesting. I might be biased, but I think that music psychology is a particularly rich field in this respect, because it contains so many research topics that music enthusiasts can connect to in a deep and personal sense. There is no shame in studying film music because you have a particular interest in listening to film music, or in studying music and dementia because you have a relative with dementia.
+Different people find different things interesting. Music psychology is particularly attractive to many people, because it contains so many research topics that music enthusiasts can connect to in a deep and personal sense. One might therefore choose to study film music because of a particular personal interest in listening to film music, or to study music and dementia because of having a relative with dementia.
 
 ### Personal development
 
@@ -76,4 +76,16 @@ It is one thing to appraise a given research topic along these different dimensi
 
 -   **Reading broadly.** Most fields have a fair few high-level books that lay out the many research topics that make up the field. In music psychology, good examples would be the *Psychology of Music* [@Deutsch2013-xv], the *Oxford Handbook of Music Psychology* [@Hallam2017-xk], or *The Science and Psychology of Music* [@Thompson2021-eu]*.*
 
--   **Attending talks and conferences.** Listening to other people present their work is a great way to foster your own ideas. Most academic institutions hold regular seminar series concerning various research fields or topics, which typically include a mixture of internal and external speakers. In addition to this, particular research fields tend to hold regular national or international conferences, where researchers congregate to share and discuss their latest research. Attending one of these conferences (or workshops, which are essentially informal versions of conferences) can be a great way to be exposed to research topics and methodologies you had never really considered before, as well as meeting other interesting people in the field. Conferences can be expensive to attend in person, but many offer special discounts or funding to students. Moreover, if you can't attend in person, it is nowadays often possible to watch recordings of the talks afterwards on YouTube, or at least to read the conference's 'proceedings' book which compiles summaries of the research projects that were presented.
+-   **Attending research talks.** Listening to other people present their work is a great way to foster your own ideas. Most academic institutions hold regular seminar series concerning various research fields or topics, which typically include a mixture of internal and external speakers. The Centre for Music and Science at Cambridge holds fortnightly seminars during term-time, which you can learn more about [here](https://cms.mus.cam.ac.uk/cms-seminars). In addition to this, particular research fields tend to hold regular national or international conferences, where researchers congregate to share and discuss their latest research. Attending one of these conferences (or workshops, which are essentially informal versions of conferences) can be a great way to be exposed to research topics and methodologies you had never really considered before, as well as meeting other interesting people in the field. Conferences can be expensive to attend in person, but many offer special discounts or funding to students. Moreover, if you can't attend in person, it is nowadays often possible to watch recordings of the talks afterwards on YouTube, or at least to read the conference's 'proceedings' book which compiles summaries of the research projects that were presented. The following conference series are particularly well known in music and science:
+
+    -   [ICMCP](http://www.icmpc.org/) - International Conference of Music Perception and Cognition
+
+    -   [ESCOM](http://musicweb.hmt-hannover.de/escom/) - European Society for the Cognitive Sciences of Music
+
+    -   [SMPC](http://www.musicperception.org/) - Society for Music Perception and Cognition (US-based)
+
+    -   [ASA](http://asa.aip.org/index.html) - Acoustical Society of America
+
+    -   [SEMPRE](http://www.sempre.org.uk/) - Society for Education, Music and Psychology Research (UK-based)
+
+    -   [ISMIR](https://ismir.net/) - International Society for Music Information Retrieval

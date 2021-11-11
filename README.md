@@ -1,13 +1,1 @@
-Welcome! 
-
-This is a minimal example of a book based on R Markdown and **bookdown** (https://github.com/rstudio/bookdown). 
-
-This template provides a skeleton file structure that you can edit to create your book. 
-
-The contents inside the .Rmd files provide some pointers to help you get started, but feel free to also delete the content in each file and start fresh.
-
-Additional resources:
-
-The **bookdown** book: https://bookdown.org/yihui/bookdown/
-
-The **bookdown** package reference site: https://pkgs.rstudio.com/bookdown
+This repository hosts a collection of draft lecture notes for Music and Science teaching at the Centre for Music and Science at the University of Cambridge. I'm populating these incrementally as I work through these first few terms of teaching music and science courses.
