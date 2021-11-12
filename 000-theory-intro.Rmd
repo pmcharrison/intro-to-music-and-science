@@ -1,8 +1,58 @@
 # (PART) Theory {.unnumbered}
 
-# Introduction to music and science
+# Science
 
-What is science?
+Academic research is all about generating knowledge: knowledge about how the world works, and how humans operate within it. This knowledge can be desirable for its practical implications --- building aircraft, developing better educational policies, curing diseases --- but it can also be desirable for its own sake, satisfying our intrinsic human curiosity for understanding our environment.
+
+There are many ways of generating knowledge. We might develop important insights into a historical phenomenon by reading appropriate source material and thinking about how it all fits together. We might learn about educational inequality by analysing demographic data and exam results for students around the country. We might learn about role of religion in indigenous societies by living with these societies and interviewing their members. Different kinds of knowledge demand different kinds of approaches, and there's no one-size-fits-all solution that covers everything.
+
+Scientific research corresponds to a particular approach to knowledge generation. This approach is characterised by (a) a set of ideals about what knowledge should look like, and (b) a set of methods for generating such knowledge.
+
+## Scientific ideals
+
+Scientific research tends to hold the following principles in high regard:
+
+**Objectivity.** A piece of knowledge is *objective* if it is independent of the subjective biases of the researcher. Conversely, a piece of knowledge is *subjective* if it depends substantially on a researcher's personal judgements, feelings or experiences. For example, if I wanted to talk about changes in chord progressions through the history of jazz harmony, it would not be very objective to say "I listened to a lot of jazz music over the weekend, and I noticed that older jazz tends to use perfect-fourth root progressions much more than recent jazz". It would be much more objective to say "I used a computer to count root progressions in a dataset of 1,000 jazz standards, and I found a statistically reliable decrease in perfect-fourth root progressions over time" (see [@Broze2013-hm] for such an analysis).
+
+**Reductionism.** Scientists believe that all natural phenomena can ultimately be explained by breaking them down into their constituent parts. For example, the social dynamics studied by sociologists will reflect psychological aspects of the individuals in the social group; these psychological aspects have their basis in the behaviour of individual neurons within the brain; the behaviour of these neurons is driven by chemical reactions; these chemical reactions are a consequence of the basic physics of atoms and molecules. Scientific knowledge must fit coherently within this reductionist framework.
+
+![Credit: [XKCD](https://xkcd.com/435), [CC BY-NC 2.5](https://creativecommons.org/licenses/by-nc/2.5/)](images/xkcd-purity.png){width="100%"}
+
+**Generalisability**. A piece of knowledge is *generalisable* if it applies in a broad range of contexts. In the context of music research, scientists tend to seek out generalisability by focusing less on particular musical pieces or particular musical recordings, and instead focusing more broadly on characterising entire musical styles or entire musical cultures.
+
+**Simplicity.** Scientists value simple explanations over complex explanations, a principle which is often termed *Occam's razor*. This principle has practical advantages: it makes theories easier to reason about, easier to test, and easier to communicate to others. There are also some deep mathematical reasons why one should, all else aside, prefer simpler theories (e.g. Chapter 28 of [@MacKay2003-ki]). The clinching motivation for Occam's razor, though, is simply that it seems to work very well in practice. One famous example is when the mathematician and astronomer Nicolaus Copernicus (1473-1543) proposed his *heliocentric* model which placed the Sun at the centre of the universe, as opposed to Ptolemy's *geocentric* model which placed the Earth at the centre of the universe. Copernicus's new model was no better at predicting the movements of celestial bodies than contemporary geocentric models, but it was much simpler, and hence favoured by Occam's razor. Ultimately, of course, Copernicus's model proved to be a much more accurate description of the universe (or at least of our solar system!).
+
+![**Inner planets of the solar system.** Credit: [Datumizer](https://commons.wikimedia.org/wiki/File:Solar_system_orrery_inner_planets.gif), [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0), via Wikimedia Commons](images/solar-system-inner-planets.gif "The inner planets of the solar system"){width="100%"}
+
+## Scientific methods
+
+Knowledge comes in all kinds of forms.
+
+-   Intuitive vs explicit
+
+-   Individual vs communal
+
+-   Science, arts, humanities
+
+Each kind of knowledge has its own place.
+
+Science corresponds to a particular approach to generating knowledge. It is characterised both by (a) goals and (b) methodologies.
+
+Goals:
+
+-   Reductionism, simplicity
+
+-   Generalisability
+
+-   Objectivity
+
+Methodologies (the scientific method)
+
+-   Where the evidence comes from: Focus on measurement as opposed to introspection
+
+-   What the evidence is for: testing (and potentially falsifying) theories
+
+-   How the analysis is conducted: Focus on quantitative analysis techniques rather than subjective appraisal
 
 ## Science and music
 
@@ -13,5 +63,3 @@ Why should we apply scientific methods to music?
 What do we need to be careful about?
 
 ## Varieties of musical science
-
-What are the different
