@@ -30,13 +30,17 @@ Four criteria are held to be particularly important for scientific theories: *ge
 
 ## Scientific evidence
 
-Scientists rely on evidence for formulating and evaluating their theories. Two criteria are particularly valued for scientific evidence: *objectivity* and *replicability*.
+Scientists rely on evidence for formulating and evaluating their theories. Three criteria are particularly valued for scientific evidence: *objectivity*, *replicability*, and *theoretical impact*.
 
 **Objectivity.** A piece of evidence is *objective* if it is independent of the subjective biases of the researcher. Conversely, a piece of evidence is *subjective* if it depends substantially on a researcher's personal judgements, feelings or experiences. For example, if I wanted to talk about changes in chord progressions through the history of jazz harmony, it would not be very objective to say "I listened to a lot of jazz music over the weekend, and I noticed that older jazz tends to use perfect-fourth root progressions much more than recent jazz". It would be much more objective to say "I used a computer to count root progressions in a dataset of 1,000 jazz standards, and I found a statistically reliable decrease in perfect-fourth root progressions over time" (see [@Broze2013-hm] for such an analysis).
 
-**Replicability.**
+**Replicability.** A piece of evidence is *replicable* if it can be recreated by other researchers using analogous methods. If a piece of evidence proves not to be replicable this suggests that the original result may have been a statistical fluke, or that the initial methods were flawed in an unexpected way. In either case, non-replicable results are poor building blocks for scientific theories.
 
-Scientific research tends to hold the following principles in high regard:
+![Credit: [XKCD](https://xkcd.com/242), [CC BY-NC 2.5](https://creativecommons.org/licenses/by-nc/2.5/)](images/xkcd-replication.png){width="75%"}
+
+**Theoretical impact.** A piece of evidence has high theoretical impact to the extent that it helps (a) to distinguish between competing scientific theories, or (b) to generate new scientific theories. One exciting case is where the research community has a built a strong consensus around a particular theory, but then a new piece of evidence demonstrates that the theory is fundamentally flawed. An alternative exciting case is when a new theory makes a special and unexpected prediction that is subsequently confirmed by a new piece of evidence. One such example is when Albert Einstein predicted the existence of *gravitational waves* -- ripples in spacetime -- on the basis of his general theory of relativity [@Einstein1918-iw].
+
+indeed to generate new scientific theories.
 
 **Generalisability**. A piece of knowledge is *generalisable* if it applies in a broad range of contexts. In the context of music research, scientists tend to seek out generalisability by focusing less on particular musical pieces or particular musical recordings, and instead focusing more broadly on characterising entire musical styles or entire musical cultures.
 

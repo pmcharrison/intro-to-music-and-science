@@ -12,6 +12,10 @@ description: |
   at the Centre for Music and Science at the University of Cambridge.
 biblio-style: apalike
 csl: chicago-fullnote-bibliography.csl
+output:
+  bookdown::bs4_book:
+    includes:
+      in_header: hypothesis.html
 ---
 
 # Overview
