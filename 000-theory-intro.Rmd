@@ -40,23 +40,13 @@ Scientists rely on evidence for formulating and evaluating their theories. Three
 
 **Theoretical impact.** A piece of evidence has high theoretical impact to the extent that it helps (a) to distinguish between competing scientific theories, or (b) to generate new scientific theories. One exciting case is where the research community has a built a strong consensus around a particular theory, but then a new piece of evidence demonstrates that the theory is fundamentally flawed. An alternative exciting case is when a new theory makes a special and unexpected prediction that is subsequently confirmed by a new piece of evidence. One such example is when Albert Einstein predicted the existence of *gravitational waves* -- ripples in spacetime -- on the basis of his general theory of relativity [@Einstein1918-iw].
 
-indeed to generate new scientific theories.
+## Scientific methodology
 
-**Generalisability**. A piece of knowledge is *generalisable* if it applies in a broad range of contexts. In the context of music research, scientists tend to seek out generalisability by focusing less on particular musical pieces or particular musical recordings, and instead focusing more broadly on characterising entire musical styles or entire musical cultures.
+**Measurement.** Scientific evidence comes primarily from *measurement*. To measure something means to perform an observation according to a standardised procedure that returns a basic piece of data such as a number (e.g. 4.7), a collection of numbers (e.g. [4.7, 2.2, 1.5]), or a category (e.g. 'red'). The purpose of this standardisation is to maximise objectivity, by minimising the subjective role of the experimenter who constructs the results.
 
-**The nature of evidence.** Scientific evidence comes primarily from *measurement*. To measure something means to perform an observation according to a standardised procedure that returns a simple piece of data such as a number (e.g. 4.7), a collection of numbers (e.g. [4.7, 2.2, 1.5]), or a category (e.g. 'red'). The purpose of standardising the measurement procedure and the data representation is to maximise the objectivity of the results. Standardising the measurement procedure minimises the subjective role of the experimenter who constructs the results; standardising the data representation minimises the subjective role of the researcher who interprets the data.
+**Quantitative analysis.** Science relies heavily on *quantitative* analysis techniques. These are analysis techniques that take basic pieces of data (e.g. numbers, categories), and return summaries of this data, ranging from basic descriptive statistics (e.g. "the mean observed value was 5.4") to advanced relational statistics (e.g. "the estimated causal effect of *X* on *Y* is 4.2"). Importantly, these analysis techniques are designed to be *objective*, in that they minimise the subjective role of the experimenter who interprets the results. Instead of relying on intuitions gleaned from examining the data 'manually', these methods rely on mathematical theories of probability and statistics, providing standardised analysis procedures that could be followed by any quantitative researcher.[^theory-intro-1]
 
-**The purpose of evidence.** The scie
-
-**The nature of analysis.**
-
-Methodologies (the scientific method)
-
--   Where the evidence comes from: Focus on measurement as opposed to introspection
-
--   What the evidence is for: testing (and potentially falsifying) theories
-
--   How the analysis is conducted: Focus on quantitative analysis techniques rather than subjective appraisal
+[^theory-intro-1]: In practice, it ends up being rather difficult to eliminate subjective decisions entirely from data analysis. Quantitative analyses do require the researcher to make various decision calls along the way -- what analysis method to apply, what outliers to exclude, what variables to analyse, and whether to transform these variables -- and these decision calls can have material impacts on the final results. The term *p-hacking* is used to describe situations where a researcher (knowingly or unknowingly) exploits this flexibility to find an analysis strategy that preferentially supports their own viewpoint. Several initiatives have become important in recent years for combating this problem, for example *open data* (sharing raw data underlying the analyses), *preregistration* (publicly committing to a particular analysis plan before collecting the data), and *multiverse analysis* (studying the sensitivity of the research's conclusions to different combinations of analysis decisions).
 
 ## Science and music
 
