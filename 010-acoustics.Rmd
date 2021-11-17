@@ -45,7 +45,20 @@ The *amplitude* corresponds to the degree of pressure fluctuation in the sine wa
 
 If we decrease the amplitude to 0.5, the tone sounds quieter than it did before:
 
-![**A sine wave with an amplitude of 0.5.**](images/sine-wave-amplitude=0.5.png){width="500"}
+```{r}
+embed_image_with_audio(
+  image = "images/sine-wave-amplitude=0.5.png",
+  audio = "audio/tone-waveform.wav",
+  width = "500",
+  caption = "A sine wave with an amplitude of 0.5 - test."
+)
+```
+
+![**A sine wave with an amplitude of 0.5.** (ref:test-audio)](images/sine-wave-amplitude=0.5.png){width="500"}
+
+```{r}
+embed_audio("audio/tone-waveform.wav", ref = "(ref:test-audio)")
+```
 
 The frequency parameter determines how many complete wave cycles fit within one second. Frequency has the units 'Hz', so 30 cycles per second is written as 30 Hz, 40 cycles cycles per second is written as 40 Hz, and so on. Note that a complete cycle includes both the 'upper' segment and the 'lower segment' of the curve. For visualisation purposes, I've plotted a 5 Hz wave here, so we can see the number of cycles in a second; in practice, this frequency is below the range of human hearing:
 
