@@ -18,6 +18,10 @@ output:
       in_header: hypothesis.html
 ---
 
+```{r, echo = FALSE, results = FALSE, message = FALSE}
+source("setup.R")
+```
+
 # Overview
 
 This website hosts a collection of draft lecture notes for Music and Science teaching at the [Centre for Music and Science](https://cms.mus.cam.ac.uk/) at the University of Cambridge. I'm populating these incrementally as I work through these first few terms of teaching the new courses.
