@@ -229,7 +229,7 @@ embed_image_with_audio(
   audio = "audio/spectrogram-violin.mp3",
   width = "100%", 
   title = "Spectrogram computed from a recording of a violin.",
-  credit = "megatron, [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/deed.en), via Wikimedia Commons."
+  credit = "megatron, [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/deed.en)"
 )
 ```
 
@@ -237,8 +237,6 @@ It is also possible to construct more dynamic spectrograms in video form. For ex
 
 Have a look at the following video and try to link what you see to what you hear. Note that here, lower frequencies are on the right, and higher frequencies on the left.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/vvr9AMWEU-c" title="Spectrogram for dialup modem" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-## Musical instruments
-
-## Room acoustics
+```{r}
+embed_youtube_video("vvr9AMWEU-c", "Dialup modem handshake sound (spectrogram).", "Scotty H, via YouTube")
+```

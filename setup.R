@@ -57,10 +57,41 @@ embed_image_with_audio <- function(image, audio, width, title, credit = NULL, ..
   embed_audio(audio, ...)
 }
 
+embed_youtube_video <- function(
+  video_id,
+  title,
+  credit = NULL,
+  width = 560,
+  height = 315
+) {
+  sprintf(
+    '<iframe width="560" height="315" src="https://www.youtube.com/embed/%s" title="%s" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
+    video_id,
+    title
+  ) %>% 
+    embed_with_caption(title, credit)
+}
+
+embed_with_caption <- function(
+  html,
+  title,
+  credit = NULL
+) {
+  # To make the formatting work how we want, we put an empty image,
+  # and put the video inside the caption for that image.
+  ref <- UUIDgenerate()
+  embed_image("images/1x1.png", title = title, credit = credit, before_caption = text_reference(ref))
+  
+  cat("\n\n")
+  
+  cat(text_reference(ref))
+  cat(html)
+}
+  
 embed_video <- function(
   video, 
   title,
-  credit,
+  credit = NULL,
   type = "video/mp4", 
   controls = TRUE,
   autoplay = FALSE,
@@ -80,13 +111,6 @@ embed_video <- function(
   R.utils::mkdirs(target_dir)
   file.copy(from = video, to = target_path, overwrite = TRUE)
   
-  # To make the formatting work how we want, we put an empty image,
-  # and put the video inside the caption for that image.
-  ref <- UUIDgenerate()
-  embed_image("images/1x1.png", title = title, credit = credit, before_caption = text_reference(ref))
-  
-  cat("\n\n")
-  
   attributes <- 
     c(
       if (controls) "controls",
@@ -97,10 +121,11 @@ embed_video <- function(
     ) %>% 
     paste(collapse = " ")
   
-  cat(text_reference(ref))
-  cat(sprintf(
+  html <- sprintf(
     "<video %s> <source src='%s' type='%s'> </video>", attributes, video, type
-  ))
+  )
+  
+  embed_with_caption(html, title, credit)
 } 
 # else cat(placeholder)
 # }
