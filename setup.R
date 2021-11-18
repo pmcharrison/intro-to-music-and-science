@@ -29,13 +29,14 @@ embed_audio <- function(
   
 }
 
-embed_image <- function(image, title = NULL, width = NULL, credit = NULL, 
+embed_image <- function(image, title = NULL, width = NULL, info = NULL, credit = NULL, 
                         before_caption = NULL,
                         after_caption = NULL) {
   caption <- 
     c(
       before_caption,
       sprintf("**%s**", title),
+      info,
       if (!is.null(credit)) paste0("Credit: ", credit),
       after_caption
     ) %>% 
@@ -48,9 +49,9 @@ text_reference <- function(ref) {
   sprintf("(ref:%s) ", ref)
 }
 
-embed_image_with_audio <- function(image, audio, width, title, credit = NULL, ...) {
+embed_image_with_audio <- function(image, audio, width, title, info = NULL, credit = NULL, ...) {
   ref <- UUIDgenerate()
-  embed_image(image, title, width, credit, after_caption = text_reference(ref))
+  embed_image(image, title, width, info, credit, after_caption = text_reference(ref))
   cat("\n\n")
   cat(text_reference(ref))
   cat(" ")
@@ -60,27 +61,32 @@ embed_image_with_audio <- function(image, audio, width, title, credit = NULL, ..
 embed_youtube_video <- function(
   video_id,
   title,
+  info = NULL,
   credit = NULL,
+  start_at = 0,
   width = 560,
   height = 315
 ) {
+  if (start_at != round(start_at))  stop("start_at must be an integer")
   sprintf(
-    '<iframe width="560" height="315" src="https://www.youtube.com/embed/%s" title="%s" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
+    '<iframe width="560" height="315" src="https://www.youtube.com/embed/%s?start=%s" style="display: block; margin-bottom: 25px" title="%s" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
     video_id,
+    start_at,
     title
   ) %>% 
-    embed_with_caption(title, credit)
+    embed_with_caption(title, info, credit)
 }
 
 embed_with_caption <- function(
   html,
   title,
+  info = NULL,
   credit = NULL
 ) {
   # To make the formatting work how we want, we put an empty image,
   # and put the video inside the caption for that image.
   ref <- UUIDgenerate()
-  embed_image("images/1x1.png", title = title, credit = credit, before_caption = text_reference(ref))
+  embed_image("images/1x1.png", title = title, info = info, credit = credit, before_caption = text_reference(ref))
   
   cat("\n\n")
   
@@ -91,6 +97,7 @@ embed_with_caption <- function(
 embed_video <- function(
   video, 
   title,
+  info = NULL,
   credit = NULL,
   type = "video/mp4", 
   controls = TRUE,
@@ -125,7 +132,7 @@ embed_video <- function(
     "<video %s> <source src='%s' type='%s'> </video>", attributes, video, type
   )
   
-  embed_with_caption(html, title, credit)
+  embed_with_caption(html, title, info, credit)
 } 
 # else cat(placeholder)
 # }

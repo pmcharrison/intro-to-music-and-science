@@ -1,8 +1,6 @@
----
-keep_md: true
----
+# (PART) The science of music {.unnumbered}
 
-# Sound waves 
+# Foundations of acoustics
 
 ```{r, echo = FALSE, include = FALSE}
 knitr::opts_chunk$set(
@@ -57,6 +55,14 @@ embed_image_with_audio(
 ```
 
 The frequency parameter determines how many complete wave cycles fit within one second. Frequency has the units 'Hz', so 30 cycles per second is written as 30 Hz, 40 cycles cycles per second is written as 40 Hz, and so on. Note that a complete cycle includes both the 'upper' segment and the 'lower segment' of the curve. For visualisation purposes, I've plotted a 5 Hz wave here, so we can see the number of cycles in a second; in practice, this frequency is below the range of human hearing:
+
+```{r}
+embed_image(
+  image = "images/sine-wave-frequency=5.png",
+  width = "500",
+  title = "A sine wave with a frequency of 5 Hz."
+)
+```
 
 We can hear a 120 Hz wave, though:
 
@@ -183,7 +189,7 @@ embed_image_with_audio(
 
 A remarkable theorem called the *Fourier theorem* tells us that every periodic wave can be expressed by adding together a collection of sine waves. These sine waves may each have different amplitudes, frequencies, and phases, but otherwise all have the same shape.
 
-It turns out then that a sawtooth wave can be created by adding together infinitely many pure tones whose frequencies follow an ascending arithmetic progression, for example 200 Hz, 400 Hz, 600 Hz, 800 Hz, and so on.[^acoustics-1] These different pure tones are called the 'harmonics': 200 Hz is called the first harmonic, 400 Hz is called the second harmonic, and so on. Each harmonic is then given a relative amplitude equal to the first harmonic's amplitude divided by the harmonic number, so the second harmonic has an amplitude of a half, the third harmonic has an amplitude of a third, and so on. The resulting wave sounds a bit like a brass instrument.
+It turns out then that a sawtooth wave can be created by adding together infinitely many pure tones whose frequencies follow an ascending arithmetic progression, for example 200 Hz, 400 Hz, 600 Hz, 800 Hz, and so on.[^acoustics-1] These different pure tones are called the 'harmonics': 200 Hz is called the first harmonic, 400 Hz is called the second harmonic, and so on. Each harmonic is then given a relative amplitude equal to the first harmonic's amplitude divided by the harmonic number, so the second harmonic has an amplitude of a half, the third harmonic has an amplitude of a third, and so on.
 
 [^acoustics-1]: Some sources describe this as a reverse sawtooth wave, with a 'true' sawtooth wave being produced by multiplying the wave values by minus one. In practice the two wave types are perceptually similar.
 
@@ -196,7 +202,7 @@ embed_image(
 )
 ```
 
-A square wave is produced like a sawtooth wave, but with one simple change: all the even harmonics are removed. The resulting wave sounds a bit less brassy and more like a clarinet.
+A square wave is produced like a sawtooth wave, but with one simple change: all the even harmonics are removed.
 
 ```{r}
 embed_image(
@@ -207,15 +213,27 @@ embed_image(
 )
 ```
 
-The sawtooth wave and the square wave are both examples of *harmonic complex tones*. A harmonic complex tone is defined as a wave built from combining many pure tones, each of which has a frequency that is a whole-number multiple of a fundamental frequency. This sequence of whole-number multiples is called a harmonic series. Music scientists often use harmonic complex tones as idealised simulations of instrument timbres.
+The sawtooth wave and the square wave are both examples of *harmonic complex tones*. A harmonic complex tone is defined as a wave built from combining many pure tones, each of which has a frequency that is a whole-number multiple of a so-called *fundamental frequency*. This sequence of whole-number multiples is called a *harmonic series*. Music scientists often use harmonic complex tones as idealised simulations of instrument timbres.
 
-This motivates an alternative way of visualising sound waves. Instead of plotting pressure as a function of time (the waveform), we plot amplitude as a function of frequency, producing what we call the *spectrum*. The mathematical process of translating from the waveform to the spectrum is called *Fourier analysis*; it is something that can be accomplished straightforwardly using modern computer software.
+This motivates an alternative way of visualising sound waves. Instead of plotting pressure as a function of time (the waveform), we plot amplitude as a function of frequency, producing what we call the *spectrum*. The mathematical process of translating from the waveform to the spectrum is called *Fourier analysis*; it is something that can be accomplished straightforwardly using modern computer software.
 
 ```{r}
 embed_image(
   "images/waveforms-to-spectra.png",
   width = "100%", 
   title = "Spectral representations for sawtooth (top row) and square (bottom row) waves."
+)
+```
+
+See how both of these spectra are built from a collection of evenly spaced lines, corresponding to integer multiples of the fundamental frequency. We call the upper frequencies *harmonics*; if we had upper frequencies that didn't correspond to integer multiples of the fundamental frequency, we'd call them *partials*.
+
+```{r}
+embed_image_with_audio(
+  "images/harmonic-spectrum.png",
+  audio = "audio/harmonic-spectrum.wav",
+  width = "100%", 
+  title = "Idealised harmonic spectrum.",
+  info = "The sound example begins by playing the full tone, then demonstrates how the tone can be built up by superimposing pure tones one by one.",
 )
 ```
 

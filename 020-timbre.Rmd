@@ -1,0 +1,113 @@
+---
+keep_md: true
+---
+
+# Timbre
+
+```{r, echo = FALSE, include = FALSE}
+knitr::opts_chunk$set(
+  echo = FALSE, results = "asis"
+)
+source("setup.R")
+```
+
+Informally, we can define timbre as the 'tone colour' or 'tone quality' of a sound. It’s what gives a particular musical instrument its individuality. More formally, we can follow the Acoustical Society of America and define timbre as
+
+> "that attribute of auditory sensation which enables a listener to judge that two nonidentical sounds, similarly presented and having the same loudness and pitch, are dissimilar."
+
+A good way of getting a feel for timbre is to listen to the sounds of different musical instruments playing the same pitch, as in the following video. The different sounds are visualised with a spectrogram, which as you'll remember from before describes how the spectral content of a sound develops over time.
+
+```{r}
+embed_youtube_video(
+  "VRAXK4QKJ1Q",
+  title = "Spectrograms for different musical instruments.", credit = "[What Music Really İs
+](https://www.youtube.com/channel/UCgqviysh9n4dbccXlOyWIfQ)", start_at = 24
+)
+
+```
+
+Timbre perception plays an important role in day-to-day auditory perception. Timbre is by definition independent of loudness, so it doesn’t depend much on the distance to the sound source. It's also independent of pitch, meaning that we can recognise the timbre of someone's voice across a wide range of pitches. As a consequence, timbre provides an important cue for identifying different objects from their sounds. 
+
+Timbre also depends a lot on an object’s physical properties. If we hear someone hit an object with a stick, we can use the sound to guess whether the object is hard or soft, whether it's solid or hollow, and so on.
+
+Timbre also plays a crucial role in speech-based communication. When I’m speaking to you, I can raise or lower the pitch of my voice, and I can speak louder or quieter. But the words that I say to you – the vowels and the consonants – are not defined by the pitch or the loudness, but are instead defined by a fast stream of changing timbres. 
+
+Timbre ends up being a very useful cue for making sense of complex auditory environments, when there are many different sound sources at the same time, for example at a cocktail party or at an orchestral concert. The brain uses timbre as a cue to organise sound into discrete auditory streams, where each stream might correspond to a particular speaker in a conversation, or to a different musical part in a piece of polyphonic music.
+
+## Decomposing timbre
+
+Let's now consider how we can break timbre down into meaningful components. A useful way to do this is to split timbre into *temporal* aspects and *spectral* aspects. Temporal aspects describe how the sound changes over time, whereas the spectral aspects describe how the sound’s energy is distributed through the harmonic spectrum. 
+
+### Temporal aspects
+
+As you'll remember from earlier in the course, we can represent sounds as waveforms, describing periodic fluctuations in sound pressure over time. For a pitched musical sound, these fluctuations happen very fast: for example, a sine wave corresponding to middle C will repeat itself approximately 262 times every second. We can call this 'low-level temporal structure'.
+
+```{r}
+embed_image(
+  "images/middle-c-waveform.png", 
+  width = "500px",
+  title = "Sine wave corresponding to middle C (~ 262 Hz)."
+)
+```
+
+In contrast, when we talk about temporal aspects of *timbre* perception, we’re instead interested at temporal dynamics at longer time scales. We’re interested not the specific ups and downs of the waveform, but we’re instead interested in the 'envelope' within which the waveform oscillates. We can see this envelope if we 'zoom out' the visualisation, as follows:
+
+```{r}
+embed_image(
+  "images/temporal-envelope-generic.png", 
+  width = "500px",
+  title = "Example temporal envelope."
+)
+```
+
+If we look at different instrumental sounds at this level of representation, we see quite different envelopes. For example, the harpsichord grows fast, then immediately decays:
+
+```{r}
+embed_image_with_audio(
+  "images/temporal-envelope-harpsichord.png", 
+  audio = "audio/temporal-envelope-harpsichord.wav",
+  width = "500px",
+  title = "Temporal envelope computed from a harpsichord."
+)
+```
+
+Other sounds like the flute or the violin grow slower, and then can sustain for a long time:
+
+```{r}
+embed_image_with_audio(
+  "images/temporal-envelope-flute.png", 
+  audio = "audio/temporal-envelope-flute.wav",
+  width = "500px",
+  title = "Temporal envelope computed from a flute."
+)
+```
+
+```{r}
+embed_image_with_audio(
+  "images/temporal-envelope-violin.png", 
+  audio = "audio/temporal-envelope-violin.wav",
+  width = "500px",
+  title = "Temporal envelope computed from a violin."
+)
+```
+
+The *ADSR model* is an attempt to capture the key components in which these different envelopes vary. It’s a simplification of what we might see in the real world, but the important thing is that it’s a simplification that’s meant to retain the aspects of the envelope that are particularly salient in timbre perception. 
+
+```{r}
+embed_image(
+  "images/adsr-example-envelope.png", 
+  width = "500px",
+  title = "Generic ADSR envelope."
+)
+```
+
+The standard ADSR model splits the envelope into four portions:
+
+1. The *attack* portion is where the envelope rises from zero amplitude to the maximum amplitude. The attack parameter set the *duration* of this portion.
+2. The *decay* portion is where the envelope decays from its maximum amplitude to a lower amplitude, over a time period corresponding to the decay parameter.
+3. The *sustain* portion has the amplitude remain constant, at a level determined by the *sustain* parameter.
+4. The *release* portion has the amplitude decay to zero over a time period specified by the *release* parameter.
+
+
+
+
