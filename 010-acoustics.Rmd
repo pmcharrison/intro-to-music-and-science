@@ -131,6 +131,8 @@ Because sound takes time to travel, the sound wave moves a certain distance in t
 ```{r}
 embed_video(
   "images/wavelength.mov",
+  title = "Wavelength of a travelling wave.",
+  credit = "Tom Walsh, [oPhysics](https://ophysics.com/w6.html), free for non-profit educational purposes.",
   autoplay = TRUE,
   muted = TRUE,
   loop = TRUE,
@@ -188,9 +190,9 @@ It turns out then that a sawtooth wave can be created by adding together infinit
 [^acoustics-1]: Some sources describe this as a reverse sawtooth wave, with a 'true' sawtooth wave being produced by multiplying the wave values by minus one. In practice the two wave types are perceptually similar.
 
 ```{r}
-embed_image_with_audio(
+embed_image(
   "images/sawtooth-wave-fourier.png",
-   audio = "audio/sawtooth-wave.wav",
+   # audio = "audio/sawtooth-wave.wav",
   width = "100%", 
   title = "Fourier decomposition of a sawtooth wave."
 )
@@ -199,9 +201,9 @@ embed_image_with_audio(
 A square wave is produced like a sawtooth wave, but with one simple change: all the even harmonics are removed. The resulting wave sounds a bit less brassy and more like a clarinet.
 
 ```{r}
-embed_image_with_audio(
+embed_image(
   "images/square-wave-fourier.png",
-   audio = "audio/square-wave.wav",
+   # audio = "audio/square-wave.wav",
   width = "100%", 
   title = "Fourier decomposition of a square wave."
 )
@@ -230,6 +232,12 @@ embed_image_with_audio(
   credit = "megatron, [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/deed.en), via Wikimedia Commons."
 )
 ```
+
+It is also possible to construct more dynamic spectrograms in video form. For example, the following video displays a spectrogram for an old-fashioned dial-up modem connecting to the internet. Have a listen, and try to link what you see to what you hear.
+
+Have a look at the following video and try to link what you see to what you hear. Note that here, lower frequencies are on the right, and higher frequencies on the left.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/vvr9AMWEU-c" title="Spectrogram for dialup modem" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Musical instruments
 

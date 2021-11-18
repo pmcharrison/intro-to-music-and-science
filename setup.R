@@ -7,8 +7,7 @@ embed_audio <- function(
   type = "audio/mpeg",
   controls = TRUE,
   allow_download = FALSE,
-  placeholder = "",
-  ref = ""
+  placeholder = ""
 ) {
   if (knitr::is_html_output()) {
     dir <- dirname(audio)
@@ -25,37 +24,43 @@ embed_audio <- function(
     ) %>% 
       paste(collapse = " ")
     
-    cat(sprintf("%4$s <audio %3$s><source src='%1$s' type='%2$s'></audio>", audio, type, attributes, ref))
+    cat(sprintf("<audio %3$s style='display: block; margin-top: 10px'><source src='%1$s' type='%2$s'></audio>", audio, type, attributes))
   } else cat(placeholder)
   
 }
 
-embed_image <- function(image, title = NULL, width = NULL, credit = NULL, caption_ref = NULL) {
-  caption <- sprintf("**%s**", title)
-  if (!is.null(credit)) {
-    caption <- paste0(caption, " ", "Credit: ", credit)
-  }
-  if (!is.null(caption_ref)) {
-    caption <- paste0(caption, " ", text_reference(caption_ref))
-  }
+embed_image <- function(image, title = NULL, width = NULL, credit = NULL, 
+                        before_caption = NULL,
+                        after_caption = NULL) {
+  caption <- 
+    c(
+      before_caption,
+      sprintf("**%s**", title),
+      if (!is.null(credit)) paste0("Credit: ", credit),
+      after_caption
+    ) %>% 
+    paste(collapse = " ")
   width_str <- if (is.null(width)) "" else sprintf("{width='%s'}", width)
   cat(sprintf("![%s](%s)%s", caption, image, width_str))
 }
 
 text_reference <- function(ref) {
-  sprintf("(ref:%s)", ref)
+  sprintf("(ref:%s) ", ref)
 }
 
 embed_image_with_audio <- function(image, audio, width, title, credit = NULL, ...) {
   ref <- UUIDgenerate()
-  embed_image(image, title, width, credit, caption_ref = ref)
+  embed_image(image, title, width, credit, after_caption = text_reference(ref))
   cat("\n\n")
   cat(text_reference(ref))
+  cat(" ")
   embed_audio(audio, ...)
 }
 
 embed_video <- function(
   video, 
+  title,
+  credit,
   type = "video/mp4", 
   controls = TRUE,
   autoplay = FALSE,
@@ -77,7 +82,8 @@ embed_video <- function(
   
   # To make the formatting work how we want, we put an empty image,
   # and put the video inside the caption for that image.
-  embed_image("images/1x1.png")
+  ref <- UUIDgenerate()
+  embed_image("images/1x1.png", title = title, credit = credit, before_caption = text_reference(ref))
   
   cat("\n\n")
   
@@ -91,6 +97,7 @@ embed_video <- function(
     ) %>% 
     paste(collapse = " ")
   
+  cat(text_reference(ref))
   cat(sprintf(
     "<video %s> <source src='%s' type='%s'> </video>", attributes, video, type
   ))
