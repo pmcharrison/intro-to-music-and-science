@@ -2,7 +2,7 @@
 keep_md: true
 ---
 
-# Acoustics
+# Sound waves 
 
 ```{r, echo = FALSE, include = FALSE}
 knitr::opts_chunk$set(
@@ -10,8 +10,6 @@ knitr::opts_chunk$set(
 )
 source("setup.R")
 ```
-
-## Air and sound waves
 
 Air is a mixture of gases, comprising many tiny particles that move around at great speed, constantly bouncing off nearby objects and other gas particles:
 
