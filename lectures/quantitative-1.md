@@ -117,6 +117,10 @@ Reminders:
 
 -   Why does correlation not equal causation?
 
+    -   Direction of causation (musical training and intelligence)
+
+    -   Third variable (e.g. household income)
+
 -   The difference between prediction and explanation, and why causation
     is important for the latter
 
