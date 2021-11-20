@@ -185,4 +185,120 @@ Spectral aspects of timbre concern the amplitudes of these different frequency c
 
 #### Spectral centroid
 
+The spectral centroid describes how much of the spectral energy is concentrated in higher rather than lower harmonics. A high centroid tends to make the sound appear bright and piercing. 
 
+```{r}
+embed_image_with_audio(
+  "images/spectral-centroid-high.svg", 
+  "audio/spectral-centroid-high.wav",
+  width = "400px",
+  title = "Tone with a high spectral centroid."
+)
+```
+
+Conversely, a low centroid makes the sound appear dull.
+
+```{r}
+embed_image_with_audio(
+  "images/spectral-centroid-low.svg", 
+  "audio/spectral-centroid-low.wav",
+  width = "400px",
+  title = "Tone with a low spectral centroid."
+)
+```
+
+#### Spectral irregularity 
+
+Spectral irregularity corresponds to discrepancies in amplitudes between adjacent harmonics. In the following example, adjacent harmonics have relatively similar amplitudes:
+
+```{r}
+embed_image_with_audio(
+  "images/spectral-irregularity-regular.svg", 
+  "audio/spectral-irregularity-regular.wav",
+  width = "400px",
+  title = "Tone with high spectral regularity."
+)
+```
+
+In this example, the adjacent harmonics have relatively irregular amplitudes. The clarinet and the vibraphone are both examples of instruments with high spectral irregularity.
+
+```{r}
+embed_image_with_audio(
+  "images/spectral-irregularity-irregular.svg", 
+  "audio/spectral-irregularity-irregular.wav",
+  width = "400px",
+  title = "Tone with high spectral irregularity."
+)
+```
+
+#### Nasality
+
+A sound tends to be perceived as nasal when it has a lot of energy in the region spanning from 2000 to 5000 Hz. The following is an example of a tone without much energy in this region:
+
+```{r}
+embed_image_with_audio(
+  "images/nasality-none.svg", 
+  "audio/nasality-none.wav",
+  width = "400px",
+  title = "Standard harmonic complex tone."
+)
+```
+
+Now follows a version of the tone where energy has been added in the 2000-5000 Hz region, producing a nasal sound:
+
+```{r}
+embed_image_with_audio(
+  "images/nasality-high.svg", 
+  "audio/nasality-high.wav",
+  width = "400px",
+  title = "Harmonic complex tone with energy added in the 2000-5000 Hz region."
+)
+```
+
+#### Formants
+
+Formants are a particularly interesting aspect of timbre that determine vowel sounds in speech. A formant corresponds to a peak in the acoustic spectrum located somewhere above the fundamental frequency. The first formants are particularly important for determining vowel identity.
+
+The following example has formants at 850 Hz and 1650 Hz, corresponding to an 'a' vowel. 
+
+```{r}
+embed_image_with_audio(
+  "images/formant-a.png", 
+  "audio/formant-a.wav",
+  width = "400px",
+  title = "A tone with formants at 850 Hz and 1650 Hz, corresponding to an 'a' vowel."
+)
+```
+
+The following example has formants at 350 Hz and 650 Hz, corresponding to an 'o' vowel. 
+
+```{r}
+embed_image_with_audio(
+  "images/formant-o.png", 
+  "audio/formant-o.wav",
+  width = "400px",
+  title = "A tone with formants at 350 Hz and 650 Hz, corresponding to an 'o' vowel."
+)
+```
+
+In human vocalisations, the formant frequencies are determined by the resonances of the vocal tract, which the speaker manipulates in large part through changing the shape and position of the tongue:
+
+```{r}
+embed_image(
+  "images/vocal-tract.svg",
+  width = "300px",
+  title = "Schematic illustration of the vocal tract.",
+  credit = "[Tavin](https://commons.wikimedia.org/wiki/File:VocalTract.svg), [CC BY 3.0](https://creativecommons.org/licenses/by/3.0)."
+)
+```
+
+Many different vowel sounds can be produced through such manipulations:
+
+```{r}
+embed_image(
+  "images/formant-frequencies.png",
+  width = "400px",
+  title = "F1 and F2 frequencies for various vowel sounds.",
+  credit = "[Любослов Езыкин](https://commons.wikimedia.org/wiki/File:Average_vowel_formants_F1_F2.png), [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0)."
+)
+```
