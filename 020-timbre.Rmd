@@ -50,7 +50,7 @@ embed_image(
 )
 ```
 
-In contrast, when we talk about temporal aspects of *timbre* perception, we’re instead interested at temporal dynamics at longer time scales. We’re interested not the specific ups and downs of the waveform, but we’re instead interested in the 'envelope' within which the waveform oscillates. We can see this envelope if we 'zoom out' the visualisation, as follows:
+In contrast, when we talk about temporal aspects of *timbre* perception, we’re instead interested at temporal dynamics at longer time scales. We’re interested not the specific ups and downs of the waveform, but we’re instead interested in the 'envelope' within which the waveform oscillates. We can see this envelope if we 'zoom out' the visualisation, as follows (note that the wiggles in waveform are now squashed so close together that they just produce a solid block):
 
 ```{r}
 embed_image(
@@ -108,6 +108,81 @@ The standard ADSR model splits the envelope into four portions:
 3. The *sustain* portion has the amplitude remain constant, at a level determined by the *sustain* parameter.
 4. The *release* portion has the amplitude decay to zero over a time period specified by the *release* parameter.
 
+```{r}
+embed_image(
+  "images/adsr-model-definition.png", 
+  width = "500px",
+  title = "Definition of the ADSR model."
+)
+```
 
+Let's explore how each of these components contribute to making a distinctive timbre. We'll begin with a vanilla harmonic complex tone, one with a constant amplitude and frequency:
+
+```{r}
+embed_image_with_audio(
+  "images/adsr-incremental-1.png", 
+  "audio/adsr-incremental-1.wav",
+  width = "500px",
+  title = "A vanilla harmonic complex tone."
+)
+```
+
+Let's now try adding an *attack* portion to the envelope. First of all, let's try a rather longer attack portion, lasting for half a second. The result already feels more naturalistic than the original tone.
+
+```{r}
+embed_image_with_audio(
+  "images/adsr-incremental-2.png", 
+  "audio/adsr-incremental-2.wav",
+  width = "500px",
+  title = "Setting the attack parameter to 0.5 s."
+)
+```
+
+Now let's make the attack portion very short, and let's add a short decay portion, whereby the amplitude decays to 15% of the original. This combination of short attack and decay portions makes the tone sound somewhat like a plucked string instrument. However, the resemblance to a plucked string is marred by the constant amplitude in the latter part of the tone.
+
+```{r}
+embed_image_with_audio(
+  "images/adsr-incremental-3.png", 
+  "audio/adsr-incremental-3.wav",
+  width = "500px",
+  title = "Setting the attack parameter to 0.01 s, the decay parameter to 0.01 s, and the sustain parameter to 0.15."
+)
+```
+
+In the final version, we therefore add a one-second release portion. This improves the sound a lot, and the resulting tone now sounds pretty close to an electric guitar.
+
+```{r}
+embed_image_with_audio(
+  "images/adsr-incremental-4.png", 
+  "audio/adsr-incremental-4.wav",
+  width = "500px",
+  title = "Setting the release parameter to 1.0 s."
+)
+```
+
+The below app allows you to manipulate the parameters of the ADSR model interactively, and explore the resulting effect on the sound.
+
+```{r}
+cat(readLines("packages/simple-js-synth-2/adsr-demo.html"), sep = "\n")
+```
+
+It's important to recognise that the ADSR model is a big simplification compared to real instrument envelopes. This simplicity has useful benefits, though: it makes the model easy to interpret and easy to control. If we do want to capture more complex dynamics, there are various natural extensions we can make, for example adding non-linear segments or adding periodic amplitude fluctuations.
+
+### Spectral aspects
+
+As you’ll remember from before, when a pitched musical instrument plays a given note, the resulting sound contains many different frequency components, represented visually as vertical lines. Generally speaking, these frequency components will all be integer multiples of a common fundamental frequency.
+
+```{r}
+embed_image_with_audio(
+  "images/harmonic-spectrum.png", 
+  "audio/harmonic-spectrum.wav",
+  width = "500px",
+  title = "Idealised harmonic spectrum."
+)
+```
+
+Spectral aspects of timbre concern the amplitudes of these different frequency components. We're now going to look at a few different ways of describing these spectral aspects.
+
+#### Spectral centroid
 
 
