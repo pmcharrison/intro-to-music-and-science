@@ -45,7 +45,7 @@ Project Home: https://github.com/voidqk/simple-js-synth
   	// }
   
   	var ctx = dest.context; // get the WebAudio context
-  
+   
   	//
   	//   Osc1 ---> Osc1 Gain ---+
   	//                          |
@@ -140,7 +140,7 @@ Project Home: https://github.com/voidqk/simple-js-synth
   		gain.gain.cancelScheduledValues(now);
   		gain.gain.setValueAtTime(v, now);
   		var hitpeak = now + attack;
-  		var hitsus = hitpeak + decay * (1 - sustain);
+  		var hitsus = hitpeak + decay;
   		silent = hitsus + susdecay;
   		gain.gain.linearRampToValueAtTime(1, hitpeak);
   		gain.gain.linearRampToValueAtTime(sustain, hitsus);
@@ -197,117 +197,160 @@ Project Home: https://github.com/voidqk/simple-js-synth
   })();
 </script>
 
-<table>
-	<tbody>
-		<tr style="display: none">
-			<th style="width: 50px" onclick="MM();">Oscillator</th>
-			<th>Type</th>
-			<th>Volume</th>
-			<th style="width: 100px">Tune</th>
-			<td rowspan="11"><pre id="raw"></pre></td>
-		</tr>
-		<tr style="display: none">
-			<td>1</td>
-			<td><select id="osc1type">
-				<option value="sine">sine</option>
-				<option value="square">square</option>
-				<option value="triangle">triangle</option>
-				<option value="sawtooth">sawtooth</option>
-			</select></td>
-			<td>0 <input type="range" min="0" max="50" value="20" id="osc1vol" /> 0.5</td>
-			<td>-12 <input type="range" min="-120" max="120" value="0" id="osc1tune" /> +12</td>
-		</tr>
-		<tr style="display: none">
-			<td>2</td>
-			<td><select id="osc2type">
-				<option value="sine">sine</option>
-				<option value="square" selected="selected">square</option>
-				<option value="triangle">triangle</option>
-				<option value="sawtooth">sawtooth</option>
-			</select></td>
-			<td>0 <input type="range" min="0" max="50" value="10" id="osc2vol" /> 0.5</td>
-			<td>-12 <input width="50px" type="range" min="-120" max="120" value="120" id="osc2tune" /> +12</td>
-		</tr>
-		<tr style="display: none">
-			<td>3</td>
-			<td><select id="osc3type">
-				<option value="sine">sine</option>
-				<option value="square">square</option>
-				<option value="triangle">triangle</option>
-				<option value="sawtooth">sawtooth</option>
-			</select></td>
-			<td>0 <input type="range" min="0" max="50" value="5" id="osc3vol" /> 0.5</td>
-			<td>-12 <input type="range" min="-120" max="120" value="-120" id="osc3tune" /> +12</td>
-		</tr>
-		<tr style="display: none">
-			<th colspan="4" style="border-top: 2px solid #777;">Envelope</th>
-		</tr>
-		<tr>
-			<th>Attack</th>
-			<td colspan="3"> 
-			  <input 
-			    style="width: 200px" type="range" min="0" max="5" step="0.001"
-			    value="0.1" id="attack" 
-			    oninput="document.getElementById('attackDisplay').innerHTML = parseFloat(this.value).toFixed(3)"
-		    /> 
-			  <span id="attackDisplay">0.000</span>
-			</td>
-		</tr>
-		<tr>
-			<th>Decay</th>
-			<td colspan="3">
-			  <input 
-			    style="width: 200px" type="range" min="0" max="5" step="0.001" 
-			    value="0.1" id="decay" 
-			    oninput="document.getElementById('decayDisplay').innerHTML = parseFloat(this.value).toFixed(3)"
-		    />
-			  <span id="decayDisplay">0.000</span>
-		  </td>
-		</tr>
-		<tr>
-			<th>Sustain</th>
-			<td colspan="3"> 
-			  <input 
-			    style="width: 200px" type="range" min="0" max="1" step="0.001" 
-			    value="0.5" id="sustain" 
-			    oninput="document.getElementById('sustainDisplay').innerHTML = parseFloat(this.value).toFixed(3)"
-		    />
-			  <span id="sustainDisplay">0.000</span>
-		  </td>
-		</tr>
-		<tr style="display: none">
-			<th>Sus. Decay</th>
-			<td colspan="3"> 
-			  <input style="width: 200px" type="range" min="0" max="100" value="10" id="susdecay" />
-			  10
-		  </td>
-		</tr>
-		<tr>
-			<th>Release</th>
-			<td colspan="3">
-		    <input 
-		      style="width: 200px" type="range" min="0" max="8" value="3" 
-		      step="0.001" id="release" 
-		      oninput="document.getElementById('releaseDisplay').innerHTML = parseFloat(this.value).toFixed(3)"
-	      /> 
-		    <span id="releaseDisplay">0.000</span>
-	    </td>
-		</tr>
-		<tr>
-			<td colspan="4" style="padding: 0; line-height: 0;">
-			  <canvas id="env" width="1440" height="200" style="width: 500px; height: 100px;"></canvas>
-	    </td>
-		</tr>
-		<tr style="border-top: 2px solid #777; display: none">
-			<th id="cutoff_txt">Cutoff</th>
-			<td><select id="filter">
-				<option value="1">Enable</option>
-				<option value="0">Disable</option>
-			</select></td>
-			<td colspan="2">-12 <input type="range" min="-120" max="480" value="360" id="cutoff" /> +48</td>
-		</tr>
-	</tbody>
-</table>
+<style>
+  .paramDisplay {
+    margin-left: 10px;
+  }
+</style>
+
+<div id="synth-controls">
+  <table style="border: 2px solid black">
+  	<tbody>
+  		<tr style="display: none">
+  			<th style="width: 50px" onclick="MM();">Oscillator</th>
+  			<th>Type</th>
+  			<th>Volume</th>
+  			<th style="width: 100px">Tune</th>
+  			<td rowspan="11"><pre id="raw"></pre></td>
+  		</tr>
+  		<tr style="display: none">
+  			<td>1</td>
+  			<td><select id="osc1type">
+  				<option value="sine">sine</option>
+  				<option value="square">square</option>
+  				<option value="triangle">triangle</option>
+  				<option value="sawtooth">sawtooth</option>
+  			</select></td>
+  			<td>0 <input type="range" min="0" max="50" value="20" id="osc1vol" /> 0.5</td>
+  			<td>-12 <input type="range" min="-120" max="120" value="0" id="osc1tune" /> +12</td>
+  		</tr>
+  		<tr style="display: none">
+  			<td>2</td>
+  			<td><select id="osc2type">
+  				<option value="sine">sine</option>
+  				<option value="square" selected="selected">square</option>
+  				<option value="triangle">triangle</option>
+  				<option value="sawtooth">sawtooth</option>
+  			</select></td>
+  			<td>0 <input type="range" min="0" max="50" value="10" id="osc2vol" /> 0.5</td>
+  			<td>-12 <input width="50px" type="range" min="-120" max="120" value="120" id="osc2tune" /> +12</td>
+  		</tr>
+  		<tr style="display: none">
+  			<td>3</td>
+  			<td><select id="osc3type">
+  				<option value="sine">sine</option>
+  				<option value="square">square</option>
+  				<option value="triangle">triangle</option>
+  				<option value="sawtooth">sawtooth</option>
+  			</select></td>
+  			<td>0 <input type="range" min="0" max="50" value="5" id="osc3vol" /> 0.5</td>
+  			<td>-12 <input type="range" min="-120" max="120" value="-120" id="osc3tune" /> +12</td>
+  		</tr>
+  		<tr style="display: none">
+  			<th colspan="4" style="border-top: 2px solid #777;">Envelope</th>
+  		</tr>
+  		<tr>
+  			<th style="color: #407E22">Attack</th>
+  			<td colspan="3"> 
+  			  <input 
+  			    style="width: 200px" type="range" min="-5" max="1" step="0.001"
+  			    value="0.25" id="attackSlider" 
+  			    oninput="attackListener()"
+  		    /> 
+  			  <span id="attack" class="paramDisplay">0.250</span>
+  			</td>
+  		</tr>
+  		<tr>
+  			<th style="color: #F76602">Decay</th>
+  			<td colspan="3">
+  			  <input
+  			    style="width: 200px" type="range" min="-5" max="1" step="0.001" 
+  			    value="0.25" id="decaySlider" 
+  			    oninput="let raw = parseFloat(this.value); let trans = Math.exp(raw); let display = document.getElementById('decay'); display.value = trans; display.innerHTML = trans.toFixed(3);"
+  		    />
+  			  <span id="decay" class="paramDisplay">0.250</span>
+  		  </td>
+  		</tr>
+  		<tr>
+  			<th style="color: #2008FF">Sustain</th>
+  			<td colspan="3"> 
+  			  <input 
+  			    style="width: 200px" type="range" min="0" max="1" step="0.001" 
+  			    value="0.7" id="sustainSlider" 
+  			    oninput="document.getElementById('sustainDisplay').innerHTML = parseFloat(this.value).toFixed(3)"
+  		    />
+  			  <span id="sustain" class="paramDisplay">0.700</span>
+  		  </td>
+  		</tr>
+  		<tr style="display: none">
+  			<th>Sus. Decay</th>
+  			<td colspan="3"> 
+  			  <input style="width: 200px" type="range" min="0" max="100" value="10" id="susdecay" />
+  			  10
+  		  </td>
+  		</tr>
+  		<tr>
+  			<th style="color: #800380">Release</th>
+  			<td colspan="3">
+  		    <input 
+  		      style="width: 200px" type="range" min="0" max="8" value="1" 
+  		      step="0.001" id="releaseSlider" 
+  		      oninput="document.getElementById('releaseDisplay').innerHTML = parseFloat(this.value).toFixed(3)"
+  	      /> 
+  		    <span id="release" class="paramDisplay">1.000</span>
+  	    </td>
+  		</tr>
+  		<tr>
+  			<td colspan="4" style="padding: 0; line-height: 0;">
+  			  <canvas id="env" width="1440" height="200" style="width: 500px; height: 100px; margin: 10px;"></canvas>
+  	    </td>
+  		</tr>
+  		<tr style="border-top: 2px solid #777; display: none">
+  			<th id="cutoff_txt">Cutoff</th>
+  			<td><select id="filter">
+  				<option value="1">Enable</option>
+  				<option value="0">Disable</option>
+  			</select></td>
+  			<td colspan="2">-12 <input type="range" min="-120" max="480" value="360" id="cutoff" /> +48</td>
+  		</tr>
+  	</tbody>
+  </table>
+</div>
+
+<script>
+  let attackSlider = document.getElementById("attackSlider");
+  let decaySlider = document.getElementById("decaySlider");
+  let sustainSlider = document.getElementById("sustainSlider");
+  let releaseSlider = document.getElementById("releaseSlider");
+  
+  let attackDisplay = document.getElementById("attack");
+  let decayDisplay = document.getElementById("decay");
+  let sustainDisplay = document.getElementById("sustain");
+  let releaseDisplay = document.getElementById("release");
+  
+  let addListener = function(slider, display, logarithmic) {
+    let getVal = function() {
+      let raw = parseFloat(slider.value); 
+      if (logarithmic) {
+        return Math.exp(raw); 
+      } else {
+        return raw;
+      }
+    };
+    let listener = function() {
+	    let val = getVal();
+	    display.value = val; 
+	    display.innerHTML = val.toFixed(3); 
+    };
+    listener();
+    slider.addEventListener("input", listener)
+  }
+  
+  addListener(attackSlider, attackDisplay, true);
+  addListener(decaySlider, decayDisplay, true);
+  addListener(sustainSlider, sustainDisplay, false);
+  addListener(releaseSlider, releaseDisplay, false);
+</script>
 
 <br />
 
@@ -385,8 +428,10 @@ Project Home: https://github.com/voidqk/simple-js-synth
   		var cnv = document.getElementById('env');
   		var ctx = cnv.getContext('2d');
   		var pps = 170; // pixels per second
-  		var attack_x = opts.attack * pps;
-  		var sustain_x = attack_x + (1 - opts.sustain) * opts.decay * pps;
+  		var origin_x = 50;
+  		var attack_x = origin_x + opts.attack * pps;
+  		// var sustain_x = attack_x + (1 - opts.sustain) * opts.decay * pps;
+  		var sustain_x = attack_x + opts.decay * pps;
   		var sustain_y = (1 - opts.sustain) * cnv.height;
   		var endsus_x = sustain_x + 2 * pps;
   		var endsus_y = (1 - opts.sustain * (1 - 2 / Math.max(opts.susdecay, 0.001))) * cnv.height;
@@ -395,19 +440,44 @@ Project Home: https://github.com/voidqk/simple-js-synth
   		ctx.fillRect(0, 0, cnv.width, cnv.height);
   		// ctx.fillStyle = '#eee';
   		ctx.fillRect(endsus_x, 0, cnv.width, cnv.height);
+  		
   		ctx.beginPath();
-  		ctx.moveTo(0, cnv.height);
-  		ctx.lineTo(attack_x, 0);
-  		ctx.lineTo(sustain_x, sustain_y);
-  		ctx.lineTo(endsus_x, endsus_y);
-  		ctx.lineTo(release_x, cnv.height);
-  		ctx.strokeStyle = '#000';
+  		
+  		ctx.strokeStyle = '#407E22';
   		ctx.setLineDash([]);
   		ctx.lineWidth = 4;
+  		
+  		ctx.moveTo(origin_x, cnv.height);
+  		ctx.lineTo(attack_x, 0);
   		ctx.stroke();
+  		
+  		ctx.beginPath();
+  		ctx.strokeStyle = '#F76602';
+  		ctx.fillStyle = '#F76602';
+  		ctx.moveTo(attack_x, 0);
+  		ctx.lineTo(sustain_x, sustain_y);
+  		ctx.stroke();
+  		
+  		ctx.beginPath();
+  		ctx.strokeStyle = '#2008FF';
+  		ctx.setLineDash([10, 10]);
+  		ctx.moveTo(sustain_x, sustain_y);
+  		ctx.lineTo(endsus_x, endsus_y);
+  		ctx.stroke();
+  		
+  		ctx.beginPath();
+  		ctx.setLineDash([]);
+  		ctx.strokeStyle = '#800380';
+  		ctx.moveTo(endsus_x, endsus_y);
+  		ctx.lineTo(release_x, cnv.height);
+  		ctx.stroke();
+  		
+  		/*
   		ctx.beginPath();
   		ctx.moveTo(attack_x, 0);
   		ctx.lineTo(attack_x, cnv.height);
+  		
+  		ctx.strokeStyle = 'red';
   		ctx.moveTo(sustain_x, 0);
   		ctx.lineTo(sustain_x, cnv.height);
   		ctx.moveTo(endsus_x, 0);
@@ -421,6 +491,7 @@ Project Home: https://github.com/voidqk/simple-js-synth
   		ctx.beginPath();
   		// ctx.arc(endsus_x, endsus_y, 10, 0, Math.PI * 2);
   		ctx.stroke();
+  		*/
   	})();
   
   	// destroy all synths currently in the pool
@@ -447,7 +518,7 @@ Project Home: https://github.com/voidqk/simple-js-synth
   // fired when a note is hit, either via the UI, or via MIDI
   function noteHit(freq, vol){
   	for (var i = 0; i < pool.length; i++){
-  		// search the pool of synths that are ready for a new note
+  		// search the pƒool of synths that are ready for a new note
   		if (pool[i].isReady()){
   			// trigger and return the synth
   			pool[i].noteOn(freq, vol);
@@ -482,9 +553,6 @@ Project Home: https://github.com/voidqk/simple-js-synth
   		if (globalbend != 0)
   			mididown[note].bend(globalbend);
   	}
-  	// if the note is in the range of the UI, then color the appropriate div
-  	if (note >= 36 && note < 84)
-  		divs[note - 36].style.background = down ? '#aaf' : '#eef';
   }
   
   // called when MIDI sends a bend message
@@ -536,56 +604,46 @@ Project Home: https://github.com/voidqk/simple-js-synth
   if (navigator.requestMIDIAccess)
   	navigator.requestMIDIAccess().then(midiInit, midiReject);
   
-  // create our 48 divs for the user to click
-  var divs = [];
-  for (var i = 0; i < 48; i++){
-  	if (i == 12 || i == 24 || i == 36)
-  		document.body.appendChild(document.createElement('br'));
-  	(function(div, i){
-  		// create the DIV
-  		divs.push(div);
-  		div.style.display = 'inline-block';
-  		div.style.margin = '1px';
-  		div.style.padding = '15px';
-  		div.style.border = '1px solid #000';
-  		div.style.cursor = 'default';
-  		div.style.backgroundColor = '#eef';
-  		div.appendChild(document.createTextNode(
-  			(['C', 'Db', 'D', 'Eb', 'E', 'F', 'Gb', 'G', 'Ab', 'A', 'Bb', 'B'])[i % 12] +
-  			(Math.floor(i / 12) + 2)));
-  		document.body.appendChild(div);
-  
-  		// hook mouse events to the DIV
-  		function cancel(e){
-  			e.preventDefault();
-  			e.stopPropagation();
-  			return false;
-  		}
-  		function mousedown(e){
-  			// if the mouse is pressed, simulate a MIDI note on
-  			midiHit(36 + i, 100, true);
-  			return cancel(e);
-  		}
-  		function mouseup(e){
-  			// if the mouse is released, simulate a MIDI note off
-  			midiHit(36 + i, 0, false);
-  			return cancel(e);
-  		}
-  		div.addEventListener('mousemove', cancel);
-  		div.addEventListener('mousedown', mousedown);
-  		div.addEventListener('mouseup', mouseup);
-  		div.addEventListener('mouseout', mouseup);
-  		div.addEventListener('touchmove', cancel);
-  		div.addEventListener('touchstart', mousedown);
-  		div.addEventListener('touchend', mouseup);
-  		div.addEventListener('touchleave', mouseup);
-  		div.addEventListener('selectstart', cancel);
-  		div.unselectable = 'on';
-  		div.style.mozUserSelect = 'none';
-  		div.style.webkitUserSelect = 'none';
-  		div.style.userSelect = 'none';
-  	})(document.createElement('div'), i);
-  }
+  var div = document.createElement('div');
+  div.className = "btn btn-primary";
+	div.style.display = 'inline-block';
+	div.style.margin = '1px';
+	div.style.padding = '15px';
+	div.style.border = '1px solid #000';
+	div.style.cursor = 'default';
+	//div.style.backgroundColor = '#eef';
+	div.appendChild(document.createTextNode("Click and hold"));
+	document.getElementById("synth-controls").appendChild(div);
+
+	// hook mouse events to the DIV
+	function cancel(e){
+		e.preventDefault();
+		e.stopPropagation();
+		return false;
+	}
+	function mousedown(e){
+		// if the mouse is pressed, simulate a MIDI note on
+		midiHit(60, 100, true);
+		return cancel(e);
+	}
+	function mouseup(e){
+		// if the mouse is released, simulate a MIDI note off
+		midiHit(60, 0, false);
+		return cancel(e);
+	}
+	div.addEventListener('mousemove', cancel);
+	div.addEventListener('mousedown', mousedown);
+	div.addEventListener('mouseup', mouseup);
+	div.addEventListener('mouseout', mouseup);
+	div.addEventListener('touchmove', cancel);
+	div.addEventListener('touchstart', mousedown);
+	div.addEventListener('touchend', mouseup);
+	div.addEventListener('touchleave', mouseup);
+	div.addEventListener('selectstart', cancel);
+	div.unselectable = 'on';
+	div.style.mozUserSelect = 'none';
+	div.style.webkitUserSelect = 'none';
+	div.style.userSelect = 'none';
   
   function MM(){
   	var i = 0, p = 0, s = 'MMMOM]QMM]\\MLMMMOM]QMM]\\ORlT]ORlT]\\]QOLOLMLMOLpA';
