@@ -284,11 +284,16 @@ embed_image_with_audio(
 In human vocalisations, the formant frequencies are determined by the resonances of the vocal tract, which the speaker manipulates in large part through changing the shape and position of the tongue:
 
 ```{r}
-embed_image(
-  "images/vocal-tract.svg",
-  width = "300px",
-  title = "Schematic illustration of the vocal tract.",
-  credit = "[Tavin](https://commons.wikimedia.org/wiki/File:VocalTract.svg), [CC BY 3.0](https://creativecommons.org/licenses/by/3.0)."
+# embed_image(
+#   "images/vocal-tract.svg",
+#   width = "300px",
+#   title = "Schematic illustration of the vocal tract.",
+#   credit = "[Tavin](https://commons.wikimedia.org/wiki/File:VocalTract.svg), [CC BY 3.0](https://creativecommons.org/licenses/by/3.0)."
+# )
+embed_youtube_video(
+  "jaIquq_4560",
+  title = "Four professional musical theatre performers singing vowels in an MRI scanner.",
+  credit = "[ProfEdwardsSU](https://www.youtube.com/channel/UCHuH3XfVqDbK_O-IzLQIeqA), via [YouTube](https://www.youtube.com/watch?v=jaIquq_4560)."
 )
 ```
 
@@ -302,3 +307,41 @@ embed_image(
   credit = "[Любослов Езыкин](https://commons.wikimedia.org/wiki/File:Average_vowel_formants_F1_F2.png), [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0)."
 )
 ```
+
+The 'vocoder' is a technology that enables musicians to incorporate formants (and other speech sounds) into their musical performances in real time. As the performer vocalises into the microphone, a computer extracts the spectral characteristics of their vocalisation and uses it as the timbre for a more traditional musical instrument, for example a keyboard or a guitar. Here’s a clip of a vocoder being used in a performance by the band Snarky Puppy:
+
+```{r}
+embed_youtube_video(
+  "cHckHVcg7vM",
+  title = "'Sleeper' by Snarky Puppy.",
+  credit = "Estival Jazz Lugano, via [YouTube](https://www.youtube.com/watch?v=cHckHVcg7vM).",
+  start_at = 2 * 60 + 53
+)
+```
+
+The following applet enables you to explore the spectral content of your own voice. Click on the microphone button (far left) to activate the real-time spectrogram, and try making different kinds of sounds with your voice. Can you differentiate between pitched and non-pitched sounds? Can you identify signature markers of different vowel sounds?
+
+<style>
+  #spectrogram-wrapper     {
+      height: 500px;
+      overflow: hidden;
+  }
+
+  #interactive-spectrogram {
+      width: 160% !important;
+      height: 800px !important;
+      -webkit-transform: scale(0.6);
+      transform: scale(0.6);
+      -webkit-transform-origin: 0 0;
+      transform-origin: 0 0;
+  }
+</style>
+
+<div class="figure">
+  <div id="spectrogram-wrapper"><iframe id="interactive-spectrogram" src="spectrogram/index.html"></iframe></div>
+  <p class="caption">
+    <strong>Interactive spectrogram.</strong> 
+    Credit: <a href="https://musiclab.chromeexperiments.com">Chrome Music Lab</a>
+  </p>
+</div>
+

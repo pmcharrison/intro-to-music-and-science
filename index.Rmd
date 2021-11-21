@@ -20,6 +20,12 @@ output:
 
 ```{r, echo = FALSE, results = FALSE, message = FALSE}
 source("setup.R")
+
+R.utils::copyDirectory(
+  "packages/chrome-music-lab/spectrogram/build", 
+  "_book/spectrogram",
+  overwrite = TRUE
+)
 ```
 
 # Overview

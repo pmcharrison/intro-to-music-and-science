@@ -1,0 +1,267 @@
+// Copyright 2016 Google Inc. All Rights Reserved.
+
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+
+//     http://www.apache.org/licenses/LICENSE-2.0
+
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+
+
+@import "util/reset";
+@import "util/animation";
+@import "util/spinner";
+@import "fonts/icons";
+@import url(https://fonts.googleapis.com/css?family=Poppins:400|Roboto:200,300,400,500,400italic,500italic);
+
+$black: #000;
+$buttonColor: #333333;
+$buttonHoverColor: #3BC16F;
+$buttonIconColor: #EEEEEE;
+$buttonContainerBackground: #111;
+
+html{font-size: 62.5%;}
+body,html{
+	width:100%;
+	height:100%;
+	color:$black;
+	font-family: 'Roboto', sans-serif;
+	background-color: #141414;
+}
+
+#iosButton{
+	display:block;
+	position: fixed;
+	z-index: 5000;
+	background-color: #fff;
+	width: 100%;
+	height: 100%;
+	&.hide{
+		display:none;
+	}
+}
+
+.music-box__buttons {
+	position: fixed;
+	bottom: 0;
+	z-index: 100;
+	white-space: nowrap;
+	background-color: $buttonContainerBackground;
+	padding-left: 2rem;
+	padding-top: 1.3rem;
+	padding-bottom: 1.3rem;
+	width: 100%;
+	text-align: center;
+	overflow-x: scroll;
+}
+
+.music-box__buttons__button {
+	background-color: $buttonColor;
+	color: $buttonIconColor;
+
+	width: 9rem;
+	height: 9rem;
+	display: inline-block;
+	border-radius: 30rem;
+	overflow: hidden;
+	box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.1);
+	margin-right: 1.1rem;
+	position: relative;
+	text-align: center;
+	vertical-align: middle;
+	cursor: pointer;
+
+	&.selected  {
+		background-color: $buttonHoverColor;
+	}
+
+	&:active, &:visited {
+		background-color: $buttonColor;
+	}
+	.icon {
+		vertical-align: middle;
+		display:inline-block;
+		font-size: 7rem;
+		line-height: 125%;
+		pointer-events:none;
+	}
+	img {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%,-50%);
+		width: 80%;
+		height: 80%;
+		margin: auto;
+		pointer-events: none;
+		display:none;
+	}
+}
+
+canvas {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: calc(100% - 11.8rem);
+}
+#legend{
+	display:none;
+}
+
+.music-box__tool-tip{
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	color:white;
+	background-color: #fe632d;
+	padding:2rem;
+	z-index: 100;
+	transform: translate(-50%,-50%);
+	font-size: 1.2rem;
+	text-transform: uppercase;
+}
+
+.music-box__modal {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 200;
+	width: 100%;
+	height:100%;
+	background-color: rgba(0,0,0,.8);
+}
+
+@keyframes rotate {
+	from {transform:rotate(0deg);}
+	to {transform:rotate(360deg);}
+}
+
+.music-box__modal__message {
+
+	position:fixed;
+	top: 40%;
+	left: 50%;
+	width: 100%;
+	transform: translate(-50%,-50%);
+	// background-color: #fff;
+	padding: 3rem;
+	border-radius: 0.2rem;
+	// box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+	svg{
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	img{
+		width: 10vw;
+		height: 10vw;
+		transform:rotate(0deg);
+		animation: rotate 0.7s linear infinite;
+	}
+}
+
+.music-box__modal__message__text {
+	color: #fff;
+	font-size: 4rem;
+	font-weight: 200;
+	text-align: center;
+	margin-bottom: 3.5rem;
+	text-transform: capitalize;
+}
+
+.music-box__modal__message__explainer {
+	color: #fff;
+	font-size: 2rem;
+	font-weight: 200;
+	text-align: center;
+	margin-top: 3.5rem;
+}
+
+.music-box__modal__icon {
+	color: #fff;
+	font-size: 7rem;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-46%);
+}
+
+.music-box__modal__record-rings{
+	position: absolute;
+	width: 20rem;
+	height: 20rem;
+	border: 0.1rem solid $buttonHoverColor;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+	border-radius: 30rem;
+	animation-name: sonar-animation;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-out;
+	opacity: 0;
+	 &:nth-child(1){
+		animation-delay:0s
+	}
+	&:nth-child(2){
+		animation-delay:.3s
+	}
+	&:nth-child(3){
+		animation-delay:.6s
+	}
+	&:nth-child(4){
+		animation-delay:.9s
+	}
+	&:nth-child(5){
+		animation-delay:1.2s
+	}
+}
+
+#fileDrop {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.9);
+	opacity: 0;
+	pointer-events: none;
+	z-index: -1;
+	transition: opacity 0.2s;
+
+	&.active {
+		opacity: 1;
+		z-index: 100;
+	}
+
+	&.pointer-events {
+		pointer-events: auto;
+	}
+}
+
+.file-overlay {
+	position: absolute;
+	top: 4rem;
+	left: 4rem;
+	width: calc(100% - 8rem);
+	height: calc(100% - 8rem);
+	border: 1px dashed #fff;
+}
+
+.file-overlay-description {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	color: #fff;
+	transform: translate(-50%,-50%);
+	font-family: 'Poppins', sans-serif;
+	font-weight: 400;
+	font-size: 3.2rem;
+}
