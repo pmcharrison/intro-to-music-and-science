@@ -1,0 +1,83 @@
+//- Copyright 2016 Google Inc. All Rights Reserved.
+
+//- Licensed under the Apache License, Version 2.0 (the "License");
+//- you may not use this file except in compliance with the License.
+//- You may obtain a copy of the License at
+
+//-     http://www.apache.org/licenses/LICENSE-2.0
+
+//- Unless required by applicable law or agreed to in writing, software
+//- distributed under the License is distributed on an "AS IS" BASIS,
+//- WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+//- See the License for the specific language governing permissions and
+//- limitations under the License.
+
+doctype html
+html(lang="en")
+	head
+		meta(charset="utf-8")
+		meta(http-equiv="X-UA-Compatible",content="IE=edge")
+		meta(name="viewport", content="width=device-width, initial-scale=1")
+		link(rel='stylesheet', href='css/screen.css')
+		link(rel='shortcut icon', href='favicon.ico?v=2')
+		title 3D Spectrogram
+	body
+		canvas#spectrogram
+		canvas#legend
+		#iosButton
+		#record.music-box__modal
+			.music-box__modal__message
+				.music-box__modal__record-rings
+				.music-box__modal__record-rings
+
+				.music-box__modal__icon.icon-mic
+
+		#drawAnywhere.music-box__modal
+			.music-box__modal__message
+				//- .music-box__modal__icon.icon-draw
+				.music-box__hand-animation-sprite
+				
+				
+		#loadingSound.music-box__modal
+			.music-box__modal__message
+				#loadingMessage.music-box__modal__message__text Flute
+				<svg class="spinner" width="55px" height="55px" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg"><circle class="circle" fill="none" stroke-width="3" stroke-linecap="round" cx="33" cy="33" r="30"></circle></svg>
+		.music-box__buttons
+			//- ////////////////////////////////////////////////////////////////////////
+			.music-box__buttons__button(data-mic data-name="mic")
+				.icon.icon-mic
+			//- ////////////////////////////////////////////////////////////////////////
+			.music-box__buttons__button(data-draw data-name="draw")
+				.icon.icon-draw
+			//- ////////////////////////////////////////////////////////////////////////
+			.music-box__buttons__button(data-name="Spectrogram_UI_Instrament_Flute" data-src="bin/snd/160210_flute_new_cmajor_scale.mp3")
+				.icon.icon-flute
+			//- ////////////////////////////////////////////////////////////////////////
+			.music-box__buttons__button(data-name="Spectrogram_UI_Instrament_Harp" data-src="bin/snd/160211_spectrogram_harp_new.mp3")
+				.icon.icon-harp
+			//- ////////////////////////////////////////////////////////////////////////
+			.music-box__buttons__button(data-name="Spectrogram_UI_Instrament_Whistling" data-src="bin/snd/160113_whistling.mp3")
+				.icon.icon-guy
+			//- ////////////////////////////////////////////////////////////////////////
+			.music-box__buttons__button(data-name="Spectrogram_UI_Instrament_Trombone" data-src="bin/snd/160113_trombone.mp3")
+				.icon.icon-trombone
+			//- ////////////////////////////////////////////////////////////////////////
+			.music-box__buttons__button(data-name="Spectrogram_UI_Instrament_Drum_Machine" data-src="bin/snd/160113_808_loop.mp3")
+				.icon.icon-808
+			//- ////////////////////////////////////////////////////////////////////////
+			.music-box__buttons__button(data-name="Spectrogram_UI_Instrament_Birds" data-src="bin/snd/160113_birds.mp3")
+				.icon.icon-bird
+			//- ////////////////////////////////////////////////////////////////////////
+			.music-box__buttons__button(data-name="Spectrogram_UI_Instrament_Modem" data-src="bin/snd/160113_modem.mp3")
+				.icon.icon-computer
+			//- ////////////////////////////////////////////////////////////////////////
+			.music-box__buttons__button(data-name="Spectrogram_UI_Instrament_Wine_Glass" data-src="bin/snd/160113_wine_glass.mp3")
+				.icon.icon-wine
+		#fileDrop
+			<div class="file-overlay"><div class="file-overlay-description"></div></div>
+
+		//- Javascripts ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		script(src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js")
+		script(type='text/javascript', src="js/bundle.js")
+		script(type='text/javascript', src="js/app.js")
+		//- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

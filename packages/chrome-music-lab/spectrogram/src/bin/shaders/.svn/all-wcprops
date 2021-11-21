@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/!svn/ver/2053/trunk/samples/audio/shaders
+END
+texture-only.shader
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/!svn/ver/1629/trunk/samples/audio/shaders/texture-only.shader
+END
+sonogram-vertex.shader
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/!svn/ver/1901/trunk/samples/audio/shaders/sonogram-vertex.shader
+END
+frequency-fragment.shader
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/!svn/ver/2053/trunk/samples/audio/shaders/frequency-fragment.shader
+END
+common-vertex.shader
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/!svn/ver/1901/trunk/samples/audio/shaders/common-vertex.shader
+END
+sonogram-fragment.shader
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/2053/trunk/samples/audio/shaders/sonogram-fragment.shader
+END
+waveform-fragment.shader
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/2053/trunk/samples/audio/shaders/waveform-fragment.shader
+END

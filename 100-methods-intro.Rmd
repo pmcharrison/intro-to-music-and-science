@@ -1,4 +1,4 @@
-# (PART) Methods overview {.unnumbered}
+# (PART) Scientific methods {.unnumbered}
 
 # Introduction
 

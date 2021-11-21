@@ -1,0 +1,44 @@
+@keyframes sonar-animation {
+	
+	0% {
+		width: 6rem;
+		height: 6rem;
+		opacity:0;
+	}
+	15%{
+		opacity: 1;
+	}
+	100% {
+		width: 20rem;
+		height: 20rem;
+		opacity:0;
+	}
+}
+
+
+@keyframes sprite {
+	0%{
+		background-position: 0px; 
+	}
+	100% { 
+		background-position: -2010px; 
+	}
+}
+
+
+.music-box__hand-animation-sprite{
+	display:block; 
+	overflow:hidden; 
+	background-repeat: no-repeat;
+	background-image:url(../img/finger_anim.png);
+	width: 201px;
+	height: 201px;
+	background-size: 2211px;
+	animation: sprite .6s steps(10) infinite;
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+
+}
+
