@@ -14,6 +14,9 @@ biblio-style: apalike
 csl: chicago-fullnote-bibliography.csl
 output:
   bookdown::bs4_book:
+    repo: 
+      base: https://github.com/pmcharrison/intro-to-music-and-science
+      branch: main
     includes:
       in_header: hypothesis.html
 ---
