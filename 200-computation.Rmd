@@ -1,0 +1,192 @@
+# Computational cognitive science
+
+## Cognitive science
+
+Cognitive science is a research discipline occupied with understanding the mental underpinnings of intelligent behaviour, or, simply put, *how the mind works*. 
+<!-- The traditional focus is on the human mind, but cognitive science can also include the study of animal intelligence and artificial intelligence. -->
+The discipline is inherently multidisciplinary, being historically envisioned as intersecting with psychology, neuroscience, artificial intelligence, linguistics, anthropology, and philosophy [@Miller2003-ku]. In practice, though, cognitive science mainly manifests as a technically oriented brand of psychology.
+
+The fundamental tenet of cognitive science is that the mind can be understood as a system for processing information. This system is envisaged as comprising two components: (a) a set of *mental representations* used for storing information, and (b) a set of *computational operations* that can be applied to these representations [@Thagard2019-vo]. A given *cognitive model* then summarises the mental representations and computational operations involved in carrying out a particular task.
+
+For example, suppose we wish to describe what happens when someone recognises a familiar pitch sequence. We would start with the information present in the auditory nerve, which is rich and complex, containing lots of spectral and temporal information. Our cognitive model would begin by describing how the brain converts this information into a *pitch* representation; it might use a harmonic template-matching analysis, or perhaps an autocorrelation analysis. In the next step, the model might then describe how the brain infers the melody's *key*; this might be achieved by analysing pitch-class distributions and comparing them to prototypical distributions for different keys, as suggested by Carol Krumhansl [@krumhansl1990cognitive]. The model could then use this derived key to represent the melody as a sequence of scale degrees. The resulting sequence of scale degrees can then be compared to sequences memorised through past music listening experiences; if a sufficiently close match is found, this would trigger 'recognition'.
+
+A fundamental principle in cognitive science is the idea that a given cognitive phenomenon may have *multiple levels of explanation*. For example, on one level, we know that the brain represents information in terms of temporal patterns of neural firings that are highly distributed around the cerebral cortex. This might be called the *neuroscientific* level of explanation. However, we might also know that the brain's short-term memory behaves *as if* it were a finite-capacity store with approximately seven slots, each of which can store a single *chunk* of information [@Miller1956-hy]. We might call this (somewhat confusingly) the *cognitive* level of explanation. Both levels of explanation can be useful in different contexts. The neuroscientific level might be useful when trying to understand the impact of various brain lesions on cognitive function; the cognitive level might be useful when trying to predict a participant's success on different working memory tasks. A famous articulation of this concept of multiple levels of explanation has been given by David Marr [@Marr1982-di].
+
+The term *cognitive model* is typically used to describe a formalised cognitive account of a particular process. The word 'model' is there to emphasise the fact that the model is a simplification of reality. The human brain is immensely complex -- thought to contain over 100 billion neurons [@Herculano-Houzel2009-mu] -- and a given cognitive model will only reach a tiny fraction of this complexity. In the context of modelling, however, simplicity is a virtue; the simpler a model, the easier it is to reason about.
+
+Cognitive models often use terminology borrowed from computer science
+
+The process of *modelling*
+
+The evolution of these representations
+
+The new implications for cognitive scientists
+
+Possibilities for implementation (is this the beginning of a new section?)
+
+The information present in the auditory nerve is rich and complex, containing lots of spectral and temporal information. The brain subsequently converts this information into a *pitch* representation, corresponding to the estimated fundamental frequencies of the hummed tones.
+
+Most cognitive research
+
+*how the mind works*. The focus is traditionally on the human mind, but cognitive scientists also study animal intelligence,
+
+*Cognitive science* is a particular approach to psychology research that seeks to explain human (or animal) behaviour in terms of *information processing*. This approach is based on the idea that the human continually receives information about the outside world via the sensory organs, and continually processes this information in various ways to determine how it should respond.
+
+Cognitive science has two related questions at its core [@Thagard2019-vo] :
+
+The reductionist answer to these questions clearly lies in neuroscience. Information is *represented* in terms of patterns of neural firings distributed through the brain; we know from prior neuroscientific research that the precise nature of these firings varies from individual to individual, and depends on past experiences which continually shape the brain and the way in which its neurons connect to one another. Information is also *manipulated* through neural processes; a particularly important mechanism seems to be the way in which individual neurons integrate incoming information from multiple neurons at their dendrites, and decide on this basis whether to fire themselves or not.
+
+The difficulty with studying information on the neuroscientific basis is the enormous complexity of the underlying representation. The human brain is thought to contain over 100 billion neurons [@Herculano-Houzel2009-mu], which could theoretically fire in any combination. Decoding the meaning of these firing combinations would be an immensely challenging task, even if we could measure them all simultaneously, which is not yet possible with noninvasive techniques.
+
+Cognitive science responds to this issue by claiming that the mind can usefully be approximated, or *modelled*, by a much simpler system that is relatively independent of the underlying biology. For example, suppose we ask the question "How does the mind represent a melody?". The neuroscientist's answer to this question would be in terms of neural firings; while they might not be able to tell you exactly what neurons map to what melodies, they might well be able to tell you approximately where these neurons are located in the brain. In contrast, the cognitive scientist would likely respond in terms of cognitive constructs such as 'scale degrees' and 'rhythmic categories': "the listener hears *do* followed by *so* and then *fa* in an anapaest rhythm".
+
+Both neuroscientific and cognitive approaches have their advantages and disadvantages. The neuroscientific interpretation is clearly closer to the 'true' answer, in a certain sense. Neurons and neural firing patterns are 'real', or at least tangible, in a way that mental representations of scale degrees are not. On the other hand, the dynamics of these processes are so complex that it's hard to know how we could ever come up with a complete yet understandable neuroscientific model of a high-level mental process such as aesthetics. In contrast, cognitive models are expressly designed for the purpose of interpretability. By stripping away details of the biological implementation, the hope is that we can capture the essence of a particular mental process in an interpretable yet predictively powerful way.
+
+## Computational cognitive science
+
+Information processing is like a computer
+
+If we're saying that the human behaves like a computer, then let's build that computer
+
+Neuroscientific research has taught us that
+
+with multiple neurons interacting at synapses
+
+meaning of these firings depends significantly on individual
+
+A fundamental issue in cognitive science is the question '*how does the mind represent information?'*.
+
+A complementary issue is '*how does the mind process information?'*
+
+The reductionist answer to tho
+
+(a) what to remember and (b) how to respond.
+
+The mind receives its information about the outside world via the sensory organs;
+
+cognitive scientists then study
+
+study the way in which the mind retrieves information from the sensory organs and from memory, and how this information is then processed to make decisions about future actions.
+
+The idea is that the mind constantly retrieves information from the sensory organs and from memory, and continually processes this information in order to make decisions about future actions.
+
+information retrieved both from the sensor organs and from memory,
+
+This information is processed on an ongoing basis to make decisions about future actions.
+
+mind processes this information on an ongoing basis to make decisions about future actions.
+
+the mind continually receives information about the external world from its sensory organs, which is processed in various ways in order to convert it into useful knowledge that can be acted upon.
+
+continually analyses this information in order to update its understanding of the environment
+
+analyses this information in various ways to decide how to respond to it.
+
+A piece of information might represent a particular thought or concept, either prompted by external stimulation (e.g. seeing a dog) or generated internally (e.g. daydreaming about dogs).
+
+A fundamental question in cognitive science is that of *representation*.
+
+A complementary question concerns the process by which representations are converted
+
+Cognitive scientists are particularly interested in two questions: (a) how is information *represented* in the brain, and (b) how is information *manipulated* by the brain?
+
+generated internally (e.g. daydreaming) or generated
+
+A cognitive process typically involves multiple stages whereby information is transformed from one representation to another.
+
+Take for example what happens when I hum a tune to you. This information starts out as vibrations in air molecules, which are then captured by the physical apparatus of the ear and transduced to firing patterns in the auditory nerve. The information present in the auditory nerve is rich and complex, containing lots of spectral and temporal information. The brain subsequently converts this information into a *pitch* representation, corresponding to the estimated fundamental frequencies of the hummed tones.
+
+The brain then extracts pitch representations from these firing patterns. The original
+
+someone listens to a familiar musical tune. From a cognitive perspective, we recognise that the peripheral auditory system provides the brain with a fairly
+
+Suppose for example that I hum you a few notes of a musical tune, and you try to recognise it. From a cognitive perspective
+
+Take for example what happens when I hum a musical tune and you recognise it. A cognit
+
+Suppose we are interested in understanding what happens when we recognise a musical tune: the cognitive scientist
+
+Analogy to the computer
+
+the manipulation, analysis, and storage of *information*.
+
+research discipline that seeks to understand the fundamental
+
+a particular approach to psychology research that ...
+
+*Computational cognitive science* is a particular brand of cognitive science research that emphasises...
+
+*Computational cognitive science* is a particular approach to psychology research
+
+# What is it?
+
+Temperley: To call a model "computational" implies, rather, that it is specified in a precise, complete, and rigorous way -- such that it *could* be implemented on a computer.
+
+# Motivations
+
+-   Coding -> hypothesis generation
+-   Precise statements about the theory
+-   Testable predictions (that can be generated fast)
+-   Applications in AI
+
+# Classic strategies
+
+-   Write down our guess of the solution based on intuition
+-   Derive our model piece-by-piece from empirical evidence.
+-   Rational observer - write down our knowledge of the problem, derive the optimal solution either mathematically or with machine-learning
+-   Learning by imitation (machine-learning)
+
+# How to validate a model?
+
+# Classic examples
+
+'How music works'
+
+## In-depth treatment of key-finding
+
+## In-depth treatment of consonance
+
+## In-depth treatment of expectation
+
+## McDermott Lab and pitch perception
+
+## Rohrmeier lab, learning syntax??
+
+## Overview of other classic routes (via Temperley)
+
+# Issues
+
+Marr (1982) - levels of processing
+
+Deep learning and interpretability
+
+Representations - Symbolic vs audio input
+
+Practical algorithms (e.g. Shazaam) vs cognitive models
+
+# Modern engineering examples
+
+## Shazaam and song recognition
+
+## Neural networks and symbolic music generation
+
+## Raw audio generation
+
+# Future issues - aesthetics
+
+-   Pastiche vs novelty
+-   Models of creativity
+-   Berlyne -- intermediate complexity?
+-   Reward prediction error
+-   Schmidhuber and compression
+-   Friston, Koelsch et al - free energy
+-   Unexpected surprise etc
+-   Epistemic foraging, curiosity etc
+
+Note: there can be some overlap with the 1B emotion and aesthetics chapter
+
+# How to get into this world?
+
+## Programming languages
+
+## Datasets
