@@ -35,28 +35,12 @@ Cognitive models are well-suited to implementation as computer programs. They ar
 
 Many cognitive scientists regularly implement their cognitive models as computer programs. There are several reasons why this can be useful. 
 
-something which computers specialise in.
-
-
-and is exactly what computers do. 
-
-This is in part because the underlying information-processing model 
-
-
-The information-processing approach works well here, because 
-
-(why are they easy)
-
-Why would you do this?
+-   Coding -> hypothesis generation
+-   Precise statements about the theory
+-   Testable predictions (that can be generated fast)
+-   Applications in AI
 
 ### Levels of explanation
-
-### The computational metaphor
-
-Cognitive models represent thought in terms of the manipulation of 
-
-
-### Models and levels of explanation
 
 Models are by definition *simplified* accounts of the world. They take a complex phenomenon -- for example emotion recognition -- and try to approximate it using a small number of components. We accept that the model may not be true in an *absolute* sense, but we hope that it will nonetheless help us to understand the world better. This idea is captured in a famous aphorism by the statistician George Box (1919--2013):
 
@@ -66,40 +50,15 @@ Cognitive models are clearly simplified accounts of human intelligence.
 
 In cognitive science it is possible to build cognitive models at different *levels of explanation*. 
 
-### Levels of explanation
+~~~
 
 A fundamental principle in cognitive science is the idea that a given cognitive phenomenon may have *multiple levels of explanation*.
 For example, on one level, we know that the brain represents information in terms of temporal patterns of neural firings that are highly distributed around the cerebral cortex. This might be called the *neuroscientific* level of explanation. However, we might also know that the brain's short-term memory behaves *as if* it were a finite-capacity store with approximately seven slots, each of which can store a single *chunk* of information [@Miller1956-hy]. We might call this the *cognitive* level of explanation. Both levels of explanation can be useful in different contexts. The neuroscientific level might be useful when trying to understand the impact of various brain lesions on cognitive function; the cognitive level might be useful when trying to predict a participant's success on different working memory tasks. A famous articulation of this concept of multiple levels of explanation has been given by David Marr [@Marr1982-di].
 
  <!-- This principle has been given its most famous exposition by the vision scientist David Marr [@Marr1982-di]. Marr distinguished three levels in particular: -->
 
-
-### Strategies for deriving cognitive models
-
-
-
-
 The term *cognitive model* is typically used to describe a formalised cognitive account of a particular process. The word 'model' is there to emphasise the fact that the model is a simplification of reality. The human brain is immensely complex -- thought to contain over 100 billion neurons [@Herculano-Houzel2009-mu] -- and a given cognitive model will only reach a tiny fraction of this complexity. In the context of modelling, however, simplicity is a virtue; the simpler a model, the easier it is to reason about.
 
-Cognitive models often use terminology borrowed from computer science
-
-The process of *modelling*
-
-The evolution of these representations
-
-The new implications for cognitive scientists
-
-Possibilities for implementation (is this the beginning of a new section?)
-
-The information present in the auditory nerve is rich and complex, containing lots of spectral and temporal information. The brain subsequently converts this information into a *pitch* representation, corresponding to the estimated fundamental frequencies of the hummed tones.
-
-Most cognitive research
-
-*how the mind works*. The focus is traditionally on the human mind, but cognitive scientists also study animal intelligence,
-
-*Cognitive science* is a particular approach to psychology research that seeks to explain human (or animal) behaviour in terms of *information processing*. This approach is based on the idea that the human continually receives information about the outside world via the sensory organs, and continually processes this information in various ways to determine how it should respond.
-
-Cognitive science has two related questions at its core [@Thagard2019-vo] :
 
 The reductionist answer to these questions clearly lies in neuroscience. Information is *represented* in terms of patterns of neural firings distributed through the brain; we know from prior neuroscientific research that the precise nature of these firings varies from individual to individual, and depends on past experiences which continually shape the brain and the way in which its neurons connect to one another. Information is also *manipulated* through neural processes; a particularly important mechanism seems to be the way in which individual neurons integrate incoming information from multiple neurons at their dendrites, and decide on this basis whether to fire themselves or not.
 
@@ -109,99 +68,22 @@ Cognitive science responds to this issue by claiming that the mind can usefully 
 
 Both neuroscientific and cognitive approaches have their advantages and disadvantages. The neuroscientific interpretation is clearly closer to the 'true' answer, in a certain sense. Neurons and neural firing patterns are 'real', or at least tangible, in a way that mental representations of scale degrees are not. On the other hand, the dynamics of these processes are so complex that it's hard to know how we could ever come up with a complete yet understandable neuroscientific model of a high-level mental process such as aesthetics. In contrast, cognitive models are expressly designed for the purpose of interpretability. By stripping away details of the biological implementation, the hope is that we can capture the essence of a particular mental process in an interpretable yet predictively powerful way.
 
+### Strategies for deriving cognitive models
+
+-   Write down our guess of the solution based on intuition
+-   Derive our model piece-by-piece from empirical evidence.
+-   Rational observer - write down our knowledge of the problem, derive the optimal solution either mathematically or with machine-learning
+-   Learning by imitation (machine-learning)
+
+
 ## Computational cognitive science
 
-Information processing is like a computer
-
-If we're saying that the human behaves like a computer, then let's build that computer
-
-Neuroscientific research has taught us that
-
-with multiple neurons interacting at synapses
-
-meaning of these firings depends significantly on individual
-
-A fundamental issue in cognitive science is the question '*how does the mind represent information?'*.
-
-A complementary issue is '*how does the mind process information?'*
-
-The reductionist answer to tho
-
-(a) what to remember and (b) how to respond.
-
-The mind receives its information about the outside world via the sensory organs;
-
-cognitive scientists then study
-
-study the way in which the mind retrieves information from the sensory organs and from memory, and how this information is then processed to make decisions about future actions.
-
-The idea is that the mind constantly retrieves information from the sensory organs and from memory, and continually processes this information in order to make decisions about future actions.
-
-information retrieved both from the sensor organs and from memory,
-
-This information is processed on an ongoing basis to make decisions about future actions.
-
-mind processes this information on an ongoing basis to make decisions about future actions.
-
-the mind continually receives information about the external world from its sensory organs, which is processed in various ways in order to convert it into useful knowledge that can be acted upon.
-
-continually analyses this information in order to update its understanding of the environment
-
-analyses this information in various ways to decide how to respond to it.
-
-A piece of information might represent a particular thought or concept, either prompted by external stimulation (e.g. seeing a dog) or generated internally (e.g. daydreaming about dogs).
-
-A fundamental question in cognitive science is that of *representation*.
-
-A complementary question concerns the process by which representations are converted
-
-Cognitive scientists are particularly interested in two questions: (a) how is information *represented* in the brain, and (b) how is information *manipulated* by the brain?
-
-generated internally (e.g. daydreaming) or generated
-
-A cognitive process typically involves multiple stages whereby information is transformed from one representation to another.
-
-Take for example what happens when I hum a tune to you. This information starts out as vibrations in air molecules, which are then captured by the physical apparatus of the ear and transduced to firing patterns in the auditory nerve. The information present in the auditory nerve is rich and complex, containing lots of spectral and temporal information. The brain subsequently converts this information into a *pitch* representation, corresponding to the estimated fundamental frequencies of the hummed tones.
-
-The brain then extracts pitch representations from these firing patterns. The original
-
-someone listens to a familiar musical tune. From a cognitive perspective, we recognise that the peripheral auditory system provides the brain with a fairly
-
-Suppose for example that I hum you a few notes of a musical tune, and you try to recognise it. From a cognitive perspective
-
-Take for example what happens when I hum a musical tune and you recognise it. A cognit
-
-Suppose we are interested in understanding what happens when we recognise a musical tune: the cognitive scientist
-
-Analogy to the computer
-
-the manipulation, analysis, and storage of *information*.
-
-research discipline that seeks to understand the fundamental
-
-a particular approach to psychology research that ...
-
-*Computational cognitive science* is a particular brand of cognitive science research that emphasises...
-
-*Computational cognitive science* is a particular approach to psychology research
 
 # What is it?
 
 Temperley: To call a model "computational" implies, rather, that it is specified in a precise, complete, and rigorous way -- such that it *could* be implemented on a computer.
 
 # Motivations
-
--   Coding -> hypothesis generation
--   Precise statements about the theory
--   Testable predictions (that can be generated fast)
--   Applications in AI
-
-# Classic strategies
-
--   Write down our guess of the solution based on intuition
--   Derive our model piece-by-piece from empirical evidence.
--   Rational observer - write down our knowledge of the problem, derive the optimal solution either mathematically or with machine-learning
--   Learning by imitation (machine-learning)
 
 # How to validate a model?
 
