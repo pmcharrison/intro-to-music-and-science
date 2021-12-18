@@ -2,15 +2,82 @@
 
 ## Cognitive science
 
+### Introduction
+
 Cognitive science is a research discipline occupied with understanding the mental underpinnings of intelligent behaviour, or, simply put, *how the mind works*. 
 <!-- The traditional focus is on the human mind, but cognitive science can also include the study of animal intelligence and artificial intelligence. -->
-The discipline is inherently multidisciplinary, being historically envisioned as intersecting with psychology, neuroscience, artificial intelligence, linguistics, anthropology, and philosophy [@Miller2003-ku]. In practice, though, cognitive science mainly manifests as a technically oriented brand of psychology.
+It is best understood as a branch of psychology, but one that has strong connections with related fields including neuroscience, artificial intelligence, linguistics, anthropology, and philosophy [@Miller2003-ku].
 
-The fundamental tenet of cognitive science is that the mind can be understood as a system for processing information. This system is envisaged as comprising two components: (a) a set of *mental representations* used for storing information, and (b) a set of *computational operations* that can be applied to these representations [@Thagard2019-vo]. A given *cognitive model* then summarises the mental representations and computational operations involved in carrying out a particular task.
+What differentiates cognitive science from the rest of psychology is its belief that the mind is best understood as an *information-processing system*. This system is modelled in terms of two fundamental components: (a) a set of *mental representations* used for storing information, and (b) a set of *mental operations* that can be applied to these representations [@Thagard2019-vo].
 
-For example, suppose we wish to describe what happens when someone recognises a familiar pitch sequence. We would start with the information present in the auditory nerve, which is rich and complex, containing lots of spectral and temporal information. Our cognitive model would begin by describing how the brain converts this information into a *pitch* representation; it might use a harmonic template-matching analysis, or perhaps an autocorrelation analysis. In the next step, the model might then describe how the brain infers the melody's *key*; this might be achieved by analysing pitch-class distributions and comparing them to prototypical distributions for different keys, as suggested by Carol Krumhansl [@krumhansl1990cognitive]. The model could then use this derived key to represent the melody as a sequence of scale degrees. The resulting sequence of scale degrees can then be compared to sequences memorised through past music listening experiences; if a sufficiently close match is found, this would trigger 'recognition'.
+What is a *mental representation*? A mental representation is some kind of mental abstraction that stands for some kind of semantic concept. Mental representations are closely tied to the idea of 'meaning'; in fact, they *are* the way in which meaning is represented in the mind. For example, suppose I ask you to think of a dog. This request might elicit a variety of representations; one representation might be visual, corresponding to a mental image of a familiar dog from childhood; another might be auditory, corresponding to the sound of a dog barking; another might be emotional, reflecting your personal fondness of dogs.
 
-A fundamental principle in cognitive science is the idea that a given cognitive phenomenon may have *multiple levels of explanation*. For example, on one level, we know that the brain represents information in terms of temporal patterns of neural firings that are highly distributed around the cerebral cortex. This might be called the *neuroscientific* level of explanation. However, we might also know that the brain's short-term memory behaves *as if* it were a finite-capacity store with approximately seven slots, each of which can store a single *chunk* of information [@Miller1956-hy]. We might call this (somewhat confusingly) the *cognitive* level of explanation. Both levels of explanation can be useful in different contexts. The neuroscientific level might be useful when trying to understand the impact of various brain lesions on cognitive function; the cognitive level might be useful when trying to predict a participant's success on different working memory tasks. A famous articulation of this concept of multiple levels of explanation has been given by David Marr [@Marr1982-di].
+What is a *mental operation*? A mental operation is some kind of procedure that can be performed on one or more mental representations. For example, a visual representation might afford rotation or scaling operations. A numeric representation might instead afford arithmetic manipulations such as addition and subtraction.
+
+<!-- The discipline is inherently multidisciplinary, being historically envisioned as intersecting with psychology, neuroscience, artificial intelligence, linguistics, anthropology, and philosophy [@Miller2003-ku].  -->
+<!-- Practically speaking, though, cognitive science  -->
+
+<!-- mainly manifests as a technically oriented brand of psychology. -->
+
+<!-- The fundamental tenet of cognitive science is that the mind can be understood as a system for processing information. This system is modelled in terms of two fundamental components: (a) a set of *mental representations* used for storing information, and (b) a set of *computational operations* that can be applied to these representations [@Thagard2019-vo].  -->
+
+### Cognitive models
+
+The basic research paradigm of cognitive science works as follows. We identify a certain *task* that someone might perform, for example catching a ball or solving a crossword puzzle. We then develop a *cognitive model* of the process required for solving this task, comprising a sequence of mental representations and operations that together explain how the human performs the task. This cognitive model is to be tested and validated through experimentation with human participants.
+
+<!-- A given *cognitive model* then summarises the mental representations and computational operations involved in carrying out a particular task. -->
+
+For example, suppose we wish to develop a cognitive model for how humans recognise melodies. We would start with the information present in the auditory nerve, which is rich and complex, containing lots of spectral and temporal information. Our cognitive model would begin by describing how the brain converts this information into a *pitch* representation, perhaps using a harmonic template-matching analysis. In the next step, the model might then describe how the brain infers the melody's *key*; this might be achieved by analysing pitch-class distributions and comparing them to prototypical distributions for different keys, as suggested by Carol Krumhansl [@krumhansl1990cognitive]. The model could then use this derived key to represent the melody as a sequence of scale degrees. The resulting sequence of scale degrees can then be compared to sequences memorised through past music listening experiences; if a sufficiently close match is found, this would trigger 'recognition'.
+
+### Cognition and computation
+
+Cognitive models are well-suited to implementation as computer programs. They are formulated in terms of information processing, and information processing is what computers are built for. Moreover, the principles of mental representations and mental operations map very naturally to analogous software principles of data structures and functions.
+
+Many cognitive scientists regularly implement their cognitive models as computer programs. There are several reasons why this can be useful. 
+
+something which computers specialise in.
+
+
+and is exactly what computers do. 
+
+This is in part because the underlying information-processing model 
+
+
+The information-processing approach works well here, because 
+
+(why are they easy)
+
+Why would you do this?
+
+### Levels of explanation
+
+### The computational metaphor
+
+Cognitive models represent thought in terms of the manipulation of 
+
+
+### Models and levels of explanation
+
+Models are by definition *simplified* accounts of the world. They take a complex phenomenon -- for example emotion recognition -- and try to approximate it using a small number of components. We accept that the model may not be true in an *absolute* sense, but we hope that it will nonetheless help us to understand the world better. This idea is captured in a famous aphorism by the statistician George Box (1919--2013):
+
+> All models are wrong, but some are useful.
+
+Cognitive models are clearly simplified accounts of human intelligence. 
+
+In cognitive science it is possible to build cognitive models at different *levels of explanation*. 
+
+### Levels of explanation
+
+A fundamental principle in cognitive science is the idea that a given cognitive phenomenon may have *multiple levels of explanation*.
+For example, on one level, we know that the brain represents information in terms of temporal patterns of neural firings that are highly distributed around the cerebral cortex. This might be called the *neuroscientific* level of explanation. However, we might also know that the brain's short-term memory behaves *as if* it were a finite-capacity store with approximately seven slots, each of which can store a single *chunk* of information [@Miller1956-hy]. We might call this the *cognitive* level of explanation. Both levels of explanation can be useful in different contexts. The neuroscientific level might be useful when trying to understand the impact of various brain lesions on cognitive function; the cognitive level might be useful when trying to predict a participant's success on different working memory tasks. A famous articulation of this concept of multiple levels of explanation has been given by David Marr [@Marr1982-di].
+
+ <!-- This principle has been given its most famous exposition by the vision scientist David Marr [@Marr1982-di]. Marr distinguished three levels in particular: -->
+
+
+### Strategies for deriving cognitive models
+
+
+
 
 The term *cognitive model* is typically used to describe a formalised cognitive account of a particular process. The word 'model' is there to emphasise the fact that the model is a simplification of reality. The human brain is immensely complex -- thought to contain over 100 billion neurons [@Herculano-Houzel2009-mu] -- and a given cognitive model will only reach a tiny fraction of this complexity. In the context of modelling, however, simplicity is a virtue; the simpler a model, the easier it is to reason about.
 
