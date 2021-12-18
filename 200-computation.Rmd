@@ -4,9 +4,7 @@
 
 ### Introduction
 
-Cognitive science is a research discipline occupied with understanding the mental underpinnings of intelligent behaviour, or, simply put, *how the mind works*. 
-<!-- The traditional focus is on the human mind, but cognitive science can also include the study of animal intelligence and artificial intelligence. -->
-It is best understood as a branch of psychology, but one that has strong connections with related fields including neuroscience, artificial intelligence, linguistics, anthropology, and philosophy [@Miller2003-ku].
+Cognitive science is a research discipline occupied with understanding the mental underpinnings of intelligent behaviour, or, simply put, *how the mind works*. <!-- The traditional focus is on the human mind, but cognitive science can also include the study of animal intelligence and artificial intelligence. --> It is best understood as a branch of psychology, but one that has strong connections with related fields including neuroscience, artificial intelligence, linguistics, anthropology, and philosophy [@Miller2003-ku].
 
 What differentiates cognitive science from the rest of psychology is its belief that the mind is best understood as an *information-processing system*. This system is modelled in terms of two fundamental components: (a) a set of *mental representations* used for storing information, and (b) a set of *mental operations* that can be applied to these representations [@Thagard2019-vo].
 
@@ -15,6 +13,7 @@ What is a *mental representation*? A mental representation is some kind of menta
 What is a *mental operation*? A mental operation is some kind of procedure that can be performed on one or more mental representations. For example, a visual representation might afford rotation or scaling operations. A numeric representation might instead afford arithmetic manipulations such as addition and subtraction.
 
 <!-- The discipline is inherently multidisciplinary, being historically envisioned as intersecting with psychology, neuroscience, artificial intelligence, linguistics, anthropology, and philosophy [@Miller2003-ku].  -->
+
 <!-- Practically speaking, though, cognitive science  -->
 
 <!-- mainly manifests as a technically oriented brand of psychology. -->
@@ -33,11 +32,38 @@ For example, suppose we wish to develop a cognitive model for how humans recogni
 
 Cognitive models are well-suited to implementation as computer programs. They are formulated in terms of information processing, and information processing is what computers are built for. Moreover, the principles of mental representations and mental operations map very naturally to analogous software principles of data structures and functions.
 
-Many cognitive scientists regularly implement their cognitive models as computer programs. There are several reasons why this can be useful. 
+Many cognitive scientists regularly write computer programs as part of their research. There are several good motivations for this:
 
--   Coding -> hypothesis generation
+**Generating hypotheses.** Suppose we are interested in a particular cognitive task, for example emotion recognition. An excellent way to begin to understand the task is to try and write a computer program to perform that same task. If we find that a particular strategy works well, we can then ask ourselves: is it possible that humans also use a similar strategy?
+
+**Addressing woolliness.** When we write about psychological theories with words, it's easy for ambiguities to slip in, making our arguments 'woolly'. In contrast, if we implement our theory as a computer model, we are forced to be completely explicit about what we mean. In the process, we may uncover important unwritten assumptions or logical gaps in our theory that deserve addressing.
+
+**Enhancing testability.** A good scientific theory should be good at predicting observed phenomena. In order to test this, we must generate predictions from the theory in various empirical contexts.
+
+**Supporting objective evaluation.**
+
+**Communicating theories.**
+
+**Generating testable predictions.**
+
+**Creating useful tools.**
+
+-   A tool for getting one's thoughts on paper
+
+-   A tool for spotting hidden assumptions or logical gaps
+
+-   A tool for communication
+
+-   A tool for empiricism (testable predictions)
+
+-   A tool for engineering
+
+-   Coding -\> hypothesis generation
+
 -   Precise statements about the theory
+
 -   Testable predictions (that can be generated fast)
+
 -   Applications in AI
 
 ### Levels of explanation
@@ -46,19 +72,17 @@ Models are by definition *simplified* accounts of the world. They take a complex
 
 > All models are wrong, but some are useful.
 
-Cognitive models are clearly simplified accounts of human intelligence. 
+Cognitive models are clearly simplified accounts of human intelligence.
 
-In cognitive science it is possible to build cognitive models at different *levels of explanation*. 
+In cognitive science it is possible to build cognitive models at different *levels of explanation*.
 
-~~~
+\~\~\~
 
-A fundamental principle in cognitive science is the idea that a given cognitive phenomenon may have *multiple levels of explanation*.
-For example, on one level, we know that the brain represents information in terms of temporal patterns of neural firings that are highly distributed around the cerebral cortex. This might be called the *neuroscientific* level of explanation. However, we might also know that the brain's short-term memory behaves *as if* it were a finite-capacity store with approximately seven slots, each of which can store a single *chunk* of information [@Miller1956-hy]. We might call this the *cognitive* level of explanation. Both levels of explanation can be useful in different contexts. The neuroscientific level might be useful when trying to understand the impact of various brain lesions on cognitive function; the cognitive level might be useful when trying to predict a participant's success on different working memory tasks. A famous articulation of this concept of multiple levels of explanation has been given by David Marr [@Marr1982-di].
+A fundamental principle in cognitive science is the idea that a given cognitive phenomenon may have *multiple levels of explanation*. For example, on one level, we know that the brain represents information in terms of temporal patterns of neural firings that are highly distributed around the cerebral cortex. This might be called the *neuroscientific* level of explanation. However, we might also know that the brain's short-term memory behaves *as if* it were a finite-capacity store with approximately seven slots, each of which can store a single *chunk* of information [@Miller1956-hy]. We might call this the *cognitive* level of explanation. Both levels of explanation can be useful in different contexts. The neuroscientific level might be useful when trying to understand the impact of various brain lesions on cognitive function; the cognitive level might be useful when trying to predict a participant's success on different working memory tasks. A famous articulation of this concept of multiple levels of explanation has been given by David Marr [@Marr1982-di].
 
- <!-- This principle has been given its most famous exposition by the vision scientist David Marr [@Marr1982-di]. Marr distinguished three levels in particular: -->
+<!-- This principle has been given its most famous exposition by the vision scientist David Marr [@Marr1982-di]. Marr distinguished three levels in particular: -->
 
 The term *cognitive model* is typically used to describe a formalised cognitive account of a particular process. The word 'model' is there to emphasise the fact that the model is a simplification of reality. The human brain is immensely complex -- thought to contain over 100 billion neurons [@Herculano-Houzel2009-mu] -- and a given cognitive model will only reach a tiny fraction of this complexity. In the context of modelling, however, simplicity is a virtue; the simpler a model, the easier it is to reason about.
-
 
 The reductionist answer to these questions clearly lies in neuroscience. Information is *represented* in terms of patterns of neural firings distributed through the brain; we know from prior neuroscientific research that the precise nature of these firings varies from individual to individual, and depends on past experiences which continually shape the brain and the way in which its neurons connect to one another. Information is also *manipulated* through neural processes; a particularly important mechanism seems to be the way in which individual neurons integrate incoming information from multiple neurons at their dendrites, and decide on this basis whether to fire themselves or not.
 
@@ -75,17 +99,13 @@ Both neuroscientific and cognitive approaches have their advantages and disadvan
 -   Rational observer - write down our knowledge of the problem, derive the optimal solution either mathematically or with machine-learning
 -   Learning by imitation (machine-learning)
 
+### Strategies for validating cognitive models
 
 ## Computational cognitive science
-
 
 # What is it?
 
 Temperley: To call a model "computational" implies, rather, that it is specified in a precise, complete, and rigorous way -- such that it *could* be implemented on a computer.
-
-# Motivations
-
-# How to validate a model?
 
 # Classic examples
 
