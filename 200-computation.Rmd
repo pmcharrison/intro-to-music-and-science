@@ -28,45 +28,57 @@ The basic research paradigm of cognitive science works as follows. We identify a
 
 For example, suppose we wish to develop a cognitive model for how humans recognise melodies. We would start with the information present in the auditory nerve, which is rich and complex, containing lots of spectral and temporal information. Our cognitive model would begin by describing how the brain converts this information into a *pitch* representation, perhaps using a harmonic template-matching analysis. In the next step, the model might then describe how the brain infers the melody's *key*; this might be achieved by analysing pitch-class distributions and comparing them to prototypical distributions for different keys, as suggested by Carol Krumhansl [@krumhansl1990cognitive]. The model could then use this derived key to represent the melody as a sequence of scale degrees. The resulting sequence of scale degrees can then be compared to sequences memorised through past music listening experiences; if a sufficiently close match is found, this would trigger 'recognition'.
 
-### Cognition and computation
+### Computational cognitive models
 
-Cognitive models are well-suited to implementation as computer programs. They are formulated in terms of information processing, and information processing is what computers are built for. Moreover, the principles of mental representations and mental operations map very naturally to analogous software principles of data structures and functions.
+Cognitive models are well-suited to implementation as computer programs. They are formulated in terms of information processing, and information processing is what computers are built for. Moreover, the principles of mental representations and mental operations map very naturally to analogous software principles of data structures and functions. A cognitive model implemented in this way may be termed a *computational cognitive model.*
 
-Many cognitive scientists regularly write computer programs as part of their research. There are several good motivations for this:
+There are several important motivations for developing computational cognitive models:
 
-**Generating hypotheses.** Suppose we are interested in a particular cognitive task, for example emotion recognition. An excellent way to begin to understand the task is to try and write a computer program to perform that same task. If we find that a particular strategy works well, we can then ask ourselves: is it possible that humans also use a similar strategy?
+**Addressing woolliness.** When we write about psychological theories with words, it's easy for ambiguities to slip in, making our arguments 'woolly'. In contrast, if we implement our theory as a computational model, we are forced to be completely explicit about what we mean. In the process, we may uncover important unwritten assumptions or logical gaps in our theory that deserve addressing.
 
-**Addressing woolliness.** When we write about psychological theories with words, it's easy for ambiguities to slip in, making our arguments 'woolly'. In contrast, if we implement our theory as a computer model, we are forced to be completely explicit about what we mean. In the process, we may uncover important unwritten assumptions or logical gaps in our theory that deserve addressing.
+**Enhancing testability.** A good scientific theory should be good at predicting observed phenomena. In order to test this, we must generate predictions from the theory in various empirical scenarios. When our theory is only specified verbally, it can be difficult to work out just what a theory predicts in a given scenario; conversely, once we've collected empirical data, it can be difficult to work out exactly what these data mean for the theory. Computational modelling addresses these problems. The model directly generates numeric predictions for different empirical scenarios, which can then be related to empirical data using standard statistical methods. In music cognition research, this feature is especially valuable for helping us to run psychological experiments using realistic music rather than basic artificial stimuli.
 
-**Enhancing testability.** A good scientific theory should be good at predicting observed phenomena. In order to test this, we must generate predictions from the theory in various empirical contexts.
-
-**Supporting objective evaluation.**
-
-**Communicating theories.**
-
-**Generating testable predictions.**
-
-**Creating useful tools.**
-
--   A tool for getting one's thoughts on paper
-
--   A tool for spotting hidden assumptions or logical gaps
-
--   A tool for communication
-
--   A tool for empiricism (testable predictions)
-
--   A tool for engineering
-
--   Coding -\> hypothesis generation
-
--   Precise statements about the theory
-
--   Testable predictions (that can be generated fast)
-
--   Applications in AI
+**Creating useful tools.** Suppose we end up producing a computational implementation of a particular cognitive model. The original motivation of producing this computational model may have been to obtain testable predictions for upcoming behavioural experiments. However, as a byproduct we have obtained a piece of software that is capable of solving the particular cognitive task that we are studying. Depending on the cognitive task and the success of the implementation, this can be a useful outcome in itself. For example, suppose that we have implemented a cognitive model for recognising emotion in melodies; we could then use a software implementation of this model for applications such as automated playlist generation.
 
 ### Levels of explanation
+
+A fundamental principle in scientific research is the idea that natural phenomena tend to have multiple levels of explanation. A particular scientist can choose to operate at a particular level of explanation, and develop theories that deal primarily with constructs at that level of explanation. For example, if we wish to study a particular disease, one option would be to study it on the epidemiological level, looking at how the disease propagates through the population; a second option might be to study it on the physiological level, looking at how the disease affects the body; a third option might be to study it on a cellular level, looking at how the disease affects individual cells.
+
+Levels of explanation are typically organised *hierarchically*. Explanatory level is often correlated with the physical scale of the basic elements being reasoned about: for example, epidemiology (high-level) reasons about humans (big), physiology (mid-level) reasons about tissues (small), and cell biology (low-level) reasons about cells (very small).
+
+Philosophically speaking, though, what really defines the ordering between levels is the nature of the explanatory connections between these levels. We can speak of two types of explanatory connections: *mechanistic explanations* and *functional explanations*. Let's consider both in turn.
+
+A *mechanistic explanation* explains a certain process by decomposing it into its underlying mechanisms. Suppose we are interested in understanding why ants respond in a particular way to a particular pheromone. The mechanistic explanation for this phenomenon begins by identifying the biochemical processes by which the ant detects the pheromone in the first place, and continues by following the physiological signalling pathway by which the pheromone has its impact on the ant's behaviour.
+
+A *functional explanation* meanwhile explains a process in terms of the way in which it fulfils a given *function*. Functional explanations are particularly common in biology, because biological structures have by necessity evolved under pressure to satisfy various adaptive functions. A functional explanation for the ant's pheromone response involves understanding the role that the pheromone plays in the context of the ant colony: is the pheromone there to signal food, perhaps, or alternatively to signify danger? What is the role of the individual ant in responding to this information?
+
+Mechanistic and functional explanations move in opposite directions along the hierarchy of explanation. Mechanistic explanations explain higher levels in terms of information from lower levels; functional explanations explain lower levels in terms of information from higher levels. They work together to solidify our understanding of a given phenomenon.
+
+Functional explanations have a particularly special property in that they can be inverted to give mechanistic explanations. Suppose we study why ants react a certain way to a certain pheromone, and obtain a *functional* explanation, namely that they react this way in order that the colony might send large numbers of ants to newly identified food sources. We can then reframe this finding as a *mechanistic* explanation for the phenomenon of colonies sending ants to newly identified food sources. It's worth noting though that the converse is not necessarily true: mechanistic explanations cannot necessarily be inverted to produce functional explanations. For example, we can derive a mechanistic explanation for cloud formation in terms of the physics of water molecules; this does not mean that the physics of water molecules developed *in order to* create clouds.
+
+For example, an epidemiological disease model might make the following assertion: if an infected individual meets an uninfected individual for ten minutes indoors, then they have a 30% probability of passing on the disease. If we want to *explain* this number, we need to resort to a lower level of explanation: we need to talk about how the disease manifests in the body, what kinds of infectious particles are produced, and how are they transmitted from individual to individual.
+
+Mechanistic explanations may be contrasted with *functional explanations*. A functional explanation explains the structure of a system in terms of the way in which it fulfils a function. Functional explanations are common in biology, where we have organisms evolving in order to satisfy various evolutionary functions. For example, if we want to explain why ants respond to certain pheromones in certain ways, we
+
+Functional explanations are most commonly found in biology
+
+, where we have complex systems that have evolved to fulfil certain functions. A functional explanation explains the structure of a system in terms of the way in which it fulfils a certain *function*.
+
+provides a rationale for certain aspects of a particular l
+
+a system in terms
+
+In biological systems we also often see *functional explanations*. These link lower
+
+what are the levels of infectious particles, how they are expelled from the body, and how they are ingested by new individuals.
+
+what are the levels of infectious particles, and how are they expelled from the body.
+
+is the sense in which lower levels provide *mechanistic explanations* for components of higher levels. For example, epidemiological models depend on knowing how likely an individual is to contract a disease after interacting with someone else who already has the disease. The epidemiologist might just have a single number for their model (e.g. 30%). If we want to know *why* that number is 30%, we have to go to the physiological model and ask about how the disease is manifested in body, and what the consequences are for its transmission.
+
+Higher levels of explanation are more abstract than lower levels. They offer explanations that work through reference to simplified or reduced accounts of lower-level processes. For example, an epidemiological model need not necessarily know the time course by which an infection invades different parts of the body, but it does need to know the time course of the individual's infectiousness.
+
+precise organs that an infection inhabits, but it does need to know
 
 Models are by definition *simplified* accounts of the world. They take a complex phenomenon -- for example emotion recognition -- and try to approximate it using a small number of components. We accept that the model may not be true in an *absolute* sense, but we hope that it will nonetheless help us to understand the world better. This idea is captured in a famous aphorism by the statistician George Box (1919--2013):
 
@@ -98,6 +110,8 @@ Both neuroscientific and cognitive approaches have their advantages and disadvan
 -   Derive our model piece-by-piece from empirical evidence.
 -   Rational observer - write down our knowledge of the problem, derive the optimal solution either mathematically or with machine-learning
 -   Learning by imitation (machine-learning)
+
+**Generating hypotheses.** Suppose we are interested in a particular cognitive task, for example emotion recognition. An excellent way to begin to understand the task is to try and write a computer program to perform that same task. If we find that a particular strategy works well, we can then ask ourselves: is it possible that humans also use a similar strategy?
 
 ### Strategies for validating cognitive models
 
