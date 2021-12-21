@@ -1,14 +1,14 @@
-# Computational musicology
+# (PART) Computational musicology {.unnumbered}
+
+# Introduction
 
 Computational musicology is a broad field spanning many different ways of studying music using computational methods. It has developed steadily since early work in the second half of the 20th century, partly due to the increased availability of computing resources, and partly due to the increased prominence of computational theories of cognition in mainstream psychology.
 
 Nowadays most computational musicology research falls into one of three streams. The first is computational music psychology, where researchers develop computer simulations of human listeners as a tool to better understand music psychology. The second is corpus musicology, where researchers \[...\]. The third is music informatics, where researchers develop \[...\].
 
-## Computational music psychology
+# Algorithms
 
-Computational music psychology is a kind of music psychology that relies heavily on computer models. These computer models are special algorithms that simulate certain acoustic, biological, and/or mental processes thought to be involved in particular musical behaviours. Used correctly, they can form an integral part of the scientific process.
-
-### Algorithms
+## What is an algorithm?
 
 An algorithm is a set of instructions that can be carried out by a computer. Here is a simple algorithm for checking whether a number $N$ is prime:[^computation-1]
 
@@ -23,6 +23,8 @@ An algorithm is a set of instructions that can be carried out by a computer. Her
 2.  If we get to the end without $y$ ever being an integer, then we can conclude that $N$ is indeed prime.
 
 For example, suppose we want to check whether 9 is prime. We start by setting $i$ to $2$, and we calculate $y = 9/2 = 4.5$. Looking at $4.5$, we see that it is not an integer, so we move on and set $i$ to $3$. Now $y = 9/3=3$, and $3$ is an integer, so we conclude that $9$ is not prime, and we stop the calculation there.
+
+## Implementing algorithms
 
 The description above is designed for a human reader. If we want our algorithm to be read by a computer, we need to implement it in a programming language. Many different programming languages have been developed over the last few decades. For scientific programming, two stand out in recent years: R and Python. Both can be downloaded for free, and both have many high-quality tutorials available on the Internet.[^computation-2]
 
@@ -90,7 +92,8 @@ is_prime <- function(N) {
     message(paste0("  Let y = ", N, "/", i, " = ", y))
     if (is_integer(y)) {
       message(paste0(
-        "  ", y, " is an integer, so ", i, " divides ", N, ", so ", N, " is not prime."
+        "  ", y, " is an integer, so ", i, " divides ", N, 
+        ", so ", N, " is not prime."
         ))
       return(FALSE)
     } else {
@@ -119,6 +122,62 @@ is_prime(6)
 ```
 
 We can see that the functions are indeed carrying out the logic that we requested.
+
+It's worth noting that we could just as easily have implemented our algorithm in Python. The resulting code looks a little different, but the underlying logic is exactly the same:
+
+```{python}
+def is_prime(N):
+    for i in range(2, N):
+        y = N / i
+        if is_integer(y):
+            return False
+    return True
+  
+def is_integer(x):
+    return x == round(x)
+  
+is_prime(5)
+
+is_prime(6)
+```
+
+## Applications of algorithms
+
+## Exploring programming yourself
+
+You can easily try these code examples out on your own computer. A quick way to try both R and Python examples is via [Google Colaboratory](https://colab.research.google.com/?utm_source=scs-index#scrollTo=-Rh3-Vt9Nev9) (or 'Colab' for short). You will need a Google account to use this. This service allows you to spin up R or Python sessions in your web browser that you can use interactively. Use the following links to create your own sessions:
+
+-   [Create a new Python notebook](https://colab.to/py)
+
+-   [Create a new R notebook](https://colab.to/r)
+
+You can then copy and paste the above code into these notebooks. Use Command-Enter (Mac) or Ctrl-Enter (Windows) to execute code in a given block.
+
+If you are interested in pursuing R/Python in the longer-term, you will probably want to install them on your computer. This will take a little more work, but there is good documentation online.
+
+To install R, you should follow the following two steps:
+
+-   Install the [R software](https://cran.r-project.org/mirrors.html) itself
+
+-   Install [RStudio Desktop](https://www.rstudio.com/products/rstudio/download/#download), an interface for helping you to write R code
+
+There are more options out there for installing and using Python. One simple installation is to use [Anaconda](https://docs.anaconda.com/anaconda/install/index.html), which packages up Python alongside many other commonly used packages. You then need to decide what interface you want to use with Python. An option that's easy to get going with is the Jupyter Notebook, but for more advanced use you will likely want to use IPython (included with Anaconda) or PyCharm (recommended if you want to do web programming one day, e.g. designing online experiments with PsyNet).
+
+# Computational music psychology
+
+Computational music psychology is a kind of music psychology that relies heavily on computer models. These computer models are special algorithms that simulate certain acoustic, biological, and/or mental processes thought to be involved in particular musical behaviours. Used correctly, they can form an integral part of the scientific process.
+
+## Case studies
+
+### The Krumhansl-Kessler key-finding model
+
+### Hutchinson & Knopoff's dissonance model
+
+### Other models
+
+## Modelling traditions
+
+## Modelling and empirical research
 
 The basic methodology of computational music psychology works as follows:
 
