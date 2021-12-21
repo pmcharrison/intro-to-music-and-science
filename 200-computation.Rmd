@@ -1,8 +1,18 @@
-# Computational cognitive science
+# Computational music psychology
 
 ## Cognitive science
 
 ### Introduction
+
+What is cognitive science?
+
+-   Notoriously difficult to define
+
+-   The information-processing hypothesis (Broadbent, 1958, <https://www.google.co.uk/books/edition/Perception_and_Communication/nxIQAQAAMAAJ?hl=en>)
+
+-   Marr's tri-level approach
+
+\~\~\~
 
 Cognitive science is a research discipline occupied with understanding the mental underpinnings of intelligent behaviour, or, simply put, *how the mind works*. <!-- The traditional focus is on the human mind, but cognitive science can also include the study of animal intelligence and artificial intelligence. --> It is best understood as a branch of psychology, but one that has strong connections with related fields including neuroscience, artificial intelligence, linguistics, anthropology, and philosophy [@Miller2003-ku].
 
