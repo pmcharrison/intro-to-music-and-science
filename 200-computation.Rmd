@@ -1,22 +1,182 @@
 # Computational musicology
 
-What is it?
+Computational musicology is a broad field spanning many different ways of studying music using computational methods. It has developed steadily since early work in the second half of the 20th century, partly due to the increased availability of computing resources, and partly due to the increased prominence of computational theories of cognition in mainstream psychology.
 
--   Studying music using computational methods
-
-What forms does it take?
-
--   Science
-
-    -   Modelling listeners (computational music psychology)
-
-    -   Analysing music corpora (corpus studies)
-
--   Engineering
-
-    -   Developing useful tools (music informatics)
+Nowadays most computational musicology research falls into one of three streams. The first is computational music psychology, where researchers develop computer simulations of human listeners as a tool to better understand music psychology. The second is corpus musicology, where researchers \[...\]. The third is music informatics, where researchers develop \[...\].
 
 ## Computational music psychology
+
+Computational music psychology is a kind of music psychology that relies heavily on computer models. These computer models are special algorithms that simulate certain acoustic, biological, and/or mental processes thought to be involved in particular musical behaviours. Used correctly, they can form an integral part of the scientific process.
+
+### Algorithms
+
+An algorithm is a set of instructions that can be carried out by a computer. Here is a simple algorithm for checking whether a number $N$ is prime:[^computation-1]
+
+[^computation-1]: A number $N$ is prime if it cannot be divided exactly by any integers apart from itself and $1$. An integer is a whole number, for example $-1$, $0$, $1$, $2$, and $3$. The number $6$ is *not* prime, because it can be divided by $2$ and by $3$. In contrast, $7$ *is* prime; it cannot be divided by any one of $2$, $3$, $4$, $5$, or $6$.
+
+1.  For each integer $i$ from $2$ to $N - 1$:
+
+    1.  Calculate $y = N/i$
+
+    2.  If $y$ is an integer, then $N$ is not prime. Stop the calculation here.
+
+2.  If we get to the end without $y$ ever being an integer, then we can conclude that $N$ is indeed prime.
+
+For example, suppose we want to check whether 9 is prime. We start by setting $i$ to $2$, and we calculate $y = 9/2 = 4.5$. Looking at $4.5$, we see that it is not an integer, so we move on and set $i$ to $3$. Now $y = 9/3=3$, and $3$ is an integer, so we conclude that $9$ is not prime, and we stop the calculation there.
+
+The description above is designed for a human reader. If we want our algorithm to be read by a computer, we need to implement it in a programming language. Many different programming languages have been developed over the last few decades. For scientific programming, two stand out in recent years: R and Python. Both can be downloaded for free, and both have many high-quality tutorials available on the Internet.[^computation-2]
+
+[^computation-2]: The [Software Carpentry](https://software-carpentry.org/) initiative provides excellent free tutorials for R and Python targeted at scientific researchers. DataCamp provides a particularly strong range of interactive tutorials for R and Python targeted at data scientists. DataCamp is a subscription-based service, but university instructors can (at the time of writing) get free access for their students by signing up to the [DataCamp for Classrooms](https://www.datacamp.com/groups/classrooms) scheme. Cambridge students at the Centre for Music and Science should contact Peter Harrison (pmch2\@cam.ac.uk) for access.
+
+Here is an implementation of our prime number checker written for the R programming language. Take a moment to read it through line by line. If you are new to programming, there will be many new things here. Nonetheless, the syntax is designed to be intuitive, and with some thought you should be able to make a good guess at what is happening at each point.
+
+```{r}
+is_prime <- function(N) {
+  for (i in seq(from = 2, to = N - 1)) {
+    y <- N / i
+    if (is_integer(y)) {
+      return(FALSE)
+    }
+  }
+  TRUE
+}
+
+is_integer <- function(x) {
+  x == round(x)
+}
+```
+
+Our implementation includes two functions: one called `is_prime`, and one called `is_integer`. In mathematics, a function is an algorithm that takes an input (called an argument) and returns an output. In this case, `is_prime` takes a number `N` as an input, and returns `TRUE` if the number is prime, and `FALSE` otherwise. The function `is_integer` meanwhile takes a number `x` as an input, and returns `TRUE` if the number is an integer, and `FALSE` otherwise.
+
+These functions also define certain variables. A variable is a named container for a piece of data. We can use variables to store the results of intermediate computations within our functions. For example, the `is_prime` function defines a variable `y` using the following code:
+
+``` r
+y <- N / i
+```
+
+The token `<-`is used in R to denote variable assignment. It takes the expression on the right-hand side ($N / i$), computes the result, and assigns it to the left-hand side.
+
+Each function contains a series of instructions for the computer to execute. These instructions are expressed as a series of lines of code. Ordinarily these lines are executed one after each other, but in special cases they execute in a more complex order. One such case is the 'for' loop. When in a 'for' loop, we repeat the same passage of code multiple times, each time updating the value of a particular variable within the loop. Take the following simple example:
+
+```{r}
+for (i in seq(from = 1, to = 6)) {
+  message(paste("The current value of i is", i))
+}
+```
+
+Here we have a variable `i`, and we set this variable first to `1` , then to `2` , then to `3` , and so on until we get to `6`.
+
+Our `is_prime` function contained a slightly more complicated 'for' loop, which looked like this:
+
+``` r
+for (i in seq(from = 2, to = N - 1)) {
+  y <- N / i
+  if (is_integer(y)) {
+    return(FALSE)
+  }
+}
+```
+
+Instead of looping from `1` to `6`, we're now looping from `2` to `N - 1`. In each loop, we compute an intermediate variable called `y` . We then check if `y` is an integer. If it is an integer, then we use the `return` keyword to quit the loop as well as its containing function, returning the answer `FALSE`.
+
+Let's define a new version of `is_prime` where we print information about what's happening at each point.
+
+```{r}
+is_prime <- function(N) {
+  message(paste0("Checking whether the number ", N, " is prime..."))
+  for (i in seq(from = 2, to = N - 1)) {
+    message(paste0("Let i = ", i, ":"))
+    y <- N / i
+    message(paste0("  Let y = ", N, "/", i, " = ", y))
+    if (is_integer(y)) {
+      message(paste0(
+        "  ", y, " is an integer, so ", i, " divides ", N, ", so ", N, " is not prime."
+        ))
+      return(FALSE)
+    } else {
+      message(paste0(
+        "  y is not an integer, so ", i, " does not divide ", N, "."
+        ))
+    }
+  }
+  message(paste0(N, " had no divisors so it must be prime."))
+  TRUE
+}
+
+is_integer <- function(x) {
+  x == round(x)
+}
+```
+
+Now we can evaluate it on a few numbers and see what happens.
+
+```{r}
+is_prime(4)
+
+is_prime(5)
+
+is_prime(6)
+```
+
+We can see that the functions are indeed carrying out the logic that we requested.
+
+The basic methodology of computational music psychology works as follows:
+
+1.  **Identify an interesting psychological phenomenon.** For example, we might be interested in studying listeners' perception of emotion in melodies.
+
+2.  **Identify candidate psychological mechanisms for this phenomenon.** These candidate mechanisms will often be derived from previous literature, but they may also be derived from our own intuitions. These candidate mechanisms may or may not be mutually exclusive. In the case of melodic emotion perception, we might hypothesise multiple non-exclusive mechanisms, including the recognition of ascending versus descending contours, major versus minor modes, legato versus staccato articulation, and so on.
+
+3.  **Implement computer models that simulate these mechanisms.** Each computer model will typically be a piece of computer software that takes a musical stimulus as an input and simulates the psychological processing of that stimulus. The output will typically be one or more numbers that capture the outcome of the process. For example, a simple mode recognition algorithm might return 1 for major-key melodies and 0 for minor-key melodies.
+
+4.  **Design an experiment for probing these models.** The experiment could simply comprise a set of musical stimuli to be presented to the participant.
+
+5.  **Generate model predictions.** This will typically involve running the models on each stimulus and recording the models' outputs.
+
+6.  This stimulus set should be designed to systematically probe the different computer models.
+
+The basic paradigm of computational music psychology works as follows:
+
+1.  Identify a particular psychological phenomenon of interest
+
+2.  Compile or develop one or more candidate psychological theories for explaining that phenomenon
+
+3.  Implement these theories as computational models.
+
+4.  Design one or more experimental paradigms for probing these models.
+
+5.  Generate model predictions for these experimental paradigms. If there are multiple models, these experimental paradigms should ideally yield dissociated model predictions. If not, maybe revisit the design.
+
+6.  Compile empirical datasets from human listeners for these experimental paradigms.
+
+7.  Compare the human responses to the model predictions.
+
+    1.  Can compare models
+
+    2.  Can optimise model parameters
+
+Note: sometimes the datasets exist already.
+
+Computational music psychologists work by developing and evaluating computer simulations of mental processes underlying musical behaviours such as music listening, music performance, and music composition. These simulations take as input ... and return as output...
+
+The goal of ordinary music psychology research is to develop empirically grounded theories of the mental processes underlying musical behaviours such as music listening, music performance, and music composition. Typical methods include both behavioural experiments, where participants are instructed to make judgments in response to particular musical stimuli, and neuroscientific experiments, where participants have their brain responses recorded while listening to various musical stimuli.
+
+Computational music psychology incorporates an additional component of computer simulation into this paradigm.
+
+aim to develop effective computer simulations of the mental process
+
+The goal of music psychology research is to understand the mental processes underlying musical behaviours such as music listening, music performance, and music composition. \[...\] \[Typical methods include\]
+
+Computational music psychology is a branch of music psychology that incorporates computer simulations into its workflow. These simulations are intended to represent the biological and psychological processes underpinning a particular
+
+research
+
+has similar goals, but incorporates
+
+What is music psychology?
+
+What is the role of the computer here?
+
+Why would you use a computer here?
 
 ### Motivations
 
@@ -78,7 +238,7 @@ Learning by imitation:
 
 McDermott Lab recent paper
 
-## Corpus studies
+## Corpus musicology
 
 ### Motivation
 
@@ -126,6 +286,8 @@ Audio example
 
 -   Automatic composition
 
+    -   Hiller and Isaacson!
+
 ### The rise of deep learning
 
 ### The role of psychology
@@ -152,13 +314,13 @@ What is cognitive science?
 
 \~\~\~
 
-Cognitive science is a research discipline occupied with understanding the mental underpinnings of intelligent behaviour, or, simply put, *how the mind works*. <!-- The traditional focus is on the human mind, but cognitive science can also include the study of animal intelligence and artificial intelligence. --> It is best understood as a branch of psychology, but one that has strong connections with related fields including neuroscience, artificial intelligence, linguistics, anthropology, and philosophy [@Miller2003-ku].
+Cognitive science is a research discipline occupied with understanding the mental underpinnings of intelligent behaviour, or, simply put, how the mind works. <!-- The traditional focus is on the human mind, but cognitive science can also include the study of animal intelligence and artificial intelligence. --> It is best understood as a branch of psychology, but one that has strong connections with related fields including neuroscience, artificial intelligence, linguistics, anthropology, and philosophy [@Miller2003-ku].
 
-What differentiates cognitive science from the rest of psychology is its belief that the mind is best understood as an *information-processing system*. This system is modelled in terms of two fundamental components: (a) a set of *mental representations* used for storing information, and (b) a set of *mental operations* that can be applied to these representations [@Thagard2019-vo].
+What differentiates cognitive science from the rest of psychology is its belief that the mind is best understood as an information-processing system. This system is modelled in terms of two fundamental components: (a) a set of mental representations used for storing information, and (b) a set of mental operations that can be applied to these representations [@Thagard2019-vo].
 
-What is a *mental representation*? A mental representation is some kind of mental abstraction that stands for some kind of semantic concept. Mental representations are closely tied to the idea of 'meaning'; in fact, they *are* the way in which meaning is represented in the mind. For example, suppose I ask you to think of a dog. This request might elicit a variety of representations; one representation might be visual, corresponding to a mental image of a familiar dog from childhood; another might be auditory, corresponding to the sound of a dog barking; another might be emotional, reflecting your personal fondness of dogs.
+What is a mental representation? A mental representation is some kind of mental abstraction that stands for some kind of semantic concept. Mental representations are closely tied to the idea of 'meaning'; in fact, they are the way in which meaning is represented in the mind. For example, suppose I ask you to think of a dog. This request might elicit a variety of representations; one representation might be visual, corresponding to a mental image of a familiar dog from childhood; another might be auditory, corresponding to the sound of a dog barking; another might be emotional, reflecting your personal fondness of dogs.
 
-What is a *mental operation*? A mental operation is some kind of procedure that can be performed on one or more mental representations. For example, a visual representation might afford rotation or scaling operations. A numeric representation might instead afford arithmetic manipulations such as addition and subtraction.
+What is a mental operation? A mental operation is some kind of procedure that can be performed on one or more mental representations. For example, a visual representation might afford rotation or scaling operations. A numeric representation might instead afford arithmetic manipulations such as addition and subtraction.
 
 <!-- The discipline is inherently multidisciplinary, being historically envisioned as intersecting with psychology, neuroscience, artificial intelligence, linguistics, anthropology, and philosophy [@Miller2003-ku].  -->
 
@@ -170,15 +332,15 @@ What is a *mental operation*? A mental operation is some kind of procedure that 
 
 ### Cognitive models
 
-The basic research paradigm of cognitive science works as follows. We identify a certain *task* that someone might perform, for example catching a ball or solving a crossword puzzle. We then develop a *cognitive model* of the process required for solving this task, comprising a sequence of mental representations and operations that together explain how the human performs the task. This cognitive model is to be tested and validated through experimentation with human participants.
+The basic research paradigm of cognitive science works as follows. We identify a certain task that someone might perform, for example catching a ball or solving a crossword puzzle. We then develop a cognitive model of the process required for solving this task, comprising a sequence of mental representations and operations that together explain how the human performs the task. This cognitive model is to be tested and validated through experimentation with human participants.
 
 <!-- A given *cognitive model* then summarises the mental representations and computational operations involved in carrying out a particular task. -->
 
-For example, suppose we wish to develop a cognitive model for how humans recognise melodies. We would start with the information present in the auditory nerve, which is rich and complex, containing lots of spectral and temporal information. Our cognitive model would begin by describing how the brain converts this information into a *pitch* representation, perhaps using a harmonic template-matching analysis. In the next step, the model might then describe how the brain infers the melody's *key*; this might be achieved by analysing pitch-class distributions and comparing them to prototypical distributions for different keys, as suggested by Carol Krumhansl [@krumhansl1990cognitive]. The model could then use this derived key to represent the melody as a sequence of scale degrees. The resulting sequence of scale degrees can then be compared to sequences memorised through past music listening experiences; if a sufficiently close match is found, this would trigger 'recognition'.
+For example, suppose we wish to develop a cognitive model for how humans recognise melodies. We would start with the information present in the auditory nerve, which is rich and complex, containing lots of spectral and temporal information. Our cognitive model would begin by describing how the brain converts this information into a pitch representation, perhaps using a harmonic template-matching analysis. In the next step, the model might then describe how the brain infers the melody's key; this might be achieved by analysing pitch-class distributions and comparing them to prototypical distributions for different keys, as suggested by Carol Krumhansl [@krumhansl1990cognitive]. The model could then use this derived key to represent the melody as a sequence of scale degrees. The resulting sequence of scale degrees can then be compared to sequences memorised through past music listening experiences; if a sufficiently close match is found, this would trigger 'recognition'.
 
 ### Computational cognitive models
 
-Cognitive models are well-suited to implementation as computer programs. They are formulated in terms of information processing, and information processing is what computers are built for. Moreover, the principles of mental representations and mental operations map very naturally to analogous software principles of data structures and functions. A cognitive model implemented in this way may be termed a *computational cognitive model.*
+Cognitive models are well-suited to implementation as computer programs. They are formulated in terms of information processing, and information processing is what computers are built for. Moreover, the principles of mental representations and mental operations map very naturally to analogous software principles of data structures and functions. A cognitive model implemented in this way may be termed a computational cognitive model.
 
 There are several important motivations for developing computational cognitive models:
 
@@ -192,15 +354,15 @@ There are several important motivations for developing computational cognitive m
 
 A fundamental principle in scientific research is the idea that phenomena can be studied at multiple levels of explanation. Take an infectious disease, for example. We can study this at any one of at least three levels:
 
-1.  The *epidemiological* level, looking at how the disease propagates through the population;
-2.  The *physiological* level, looking at how the disease affects the body;
-3.  The *cellular* level, looking at how the disease affects individual cells.
+1.  The epidemiological level, looking at how the disease propagates through the population;
+2.  The physiological level, looking at how the disease affects the body;
+3.  The cellular level, looking at how the disease affects individual cells.
 
-A given level of explanation is defined by a choice about what *fundamental units* we wish to study. In epidemiology, the fundamental unit is the organism; in cellular biology, the fundamental unity is the cell, and so on.
+A given level of explanation is defined by a choice about what fundamental units we wish to study. In epidemiology, the fundamental unit is the organism; in cellular biology, the fundamental unity is the cell, and so on.
 
-It is conventional to order different levels of explanation according to the *scale* (physical or otherwise)of their fundamental units. In our example above, epidemiology is termed a *high-level* explanation because it studies whole organisms; in contrast, cellular biology is termed a *low-level* explanation because it studies cells, which are considerably smaller than organisms.
+It is conventional to order different levels of explanation according to the scale (physical or otherwise)of their fundamental units. In our example above, epidemiology is termed a high-level explanation because it studies whole organisms; in contrast, cellular biology is termed a low-level explanation because it studies cells, which are considerably smaller than organisms.
 
-We can study the mind at various levels of explanation. One approach is the *cognitive* approach, where our fundamental units correspond to hypothetical mental representations and their associated operations. A complementary approach is the *neuroscientific* approach, where our fundamental units correspond to individual neurons
+We can study the mind at various levels of explanation. One approach is the cognitive approach, where our fundamental units correspond to hypothetical mental representations and their associated operations. A complementary approach is the neuroscientific approach, where our fundamental units correspond to individual neurons
 
 we tend to focus on fairly high levels of explanation, where the fundamental units
 
@@ -216,33 +378,33 @@ invokes a collection of basic elements and a collection of basic processes upon 
 
 A given level of explanation involves a
 
-Here we have ordered the levels from high-level (epidemiological) to low-level (cellular). Levels of explanation are typically organised *hierarchically*. Explanatory level is often correlated with the physical scale of the basic elements being reasoned about: for example, epidemiology (high-level) reasons about humans (big), physiology (mid-level) reasons about tissues (small), and cell biology (low-level) reasons about cells (very small).
+Here we have ordered the levels from high-level (epidemiological) to low-level (cellular). Levels of explanation are typically organised hierarchically. Explanatory level is often correlated with the physical scale of the basic elements being reasoned about: for example, epidemiology (high-level) reasons about humans (big), physiology (mid-level) reasons about tissues (small), and cell biology (low-level) reasons about cells (very small).
 
-Philosophically speaking, though, what really defines the ordering between levels is the nature of the explanatory connections between these levels. We can speak of two types of explanatory connections: *mechanistic explanations* and *functional explanations*. Let's consider both in turn.
+Philosophically speaking, though, what really defines the ordering between levels is the nature of the explanatory connections between these levels. We can speak of two types of explanatory connections: mechanistic explanations and functional explanations. Let's consider both in turn.
 
-A *mechanistic explanation* explains a certain process by decomposing it into its underlying mechanisms. Suppose we are interested in understanding why ants respond in a particular way to a particular pheromone. The mechanistic explanation for this phenomenon begins by identifying the biochemical processes by which the ant detects the pheromone in the first place, and continues by following the physiological signalling pathway by which the pheromone has its impact on the ant's behaviour.
+A mechanistic explanation explains a certain process by decomposing it into its underlying mechanisms. Suppose we are interested in understanding why ants respond in a particular way to a particular pheromone. The mechanistic explanation for this phenomenon begins by identifying the biochemical processes by which the ant detects the pheromone in the first place, and continues by following the physiological signalling pathway by which the pheromone has its impact on the ant's behaviour.
 
-A *functional explanation* meanwhile explains a process in terms of the way in which it fulfils a given *function*. Functional explanations are particularly common in biology, because biological structures have by necessity evolved under pressure to satisfy various adaptive functions. A functional explanation for the ant's pheromone response involves understanding the role that the pheromone plays in the context of the ant colony: is the pheromone there to signal food, perhaps, or alternatively to signify danger? What is the role of the individual ant in responding to this information?
+A functional explanation meanwhile explains a process in terms of the way in which it fulfils a given function. Functional explanations are particularly common in biology, because biological structures have by necessity evolved under pressure to satisfy various adaptive functions. A functional explanation for the ant's pheromone response involves understanding the role that the pheromone plays in the context of the ant colony: is the pheromone there to signal food, perhaps, or alternatively to signify danger? What is the role of the individual ant in responding to this information?
 
 Mechanistic and functional explanations move in opposite directions along the hierarchy of explanation. Mechanistic explanations explain higher levels in terms of information from lower levels; functional explanations explain lower levels in terms of information from higher levels. They work together to solidify our understanding of a given phenomenon.
 
-Functional explanations have a particularly special property in that they can be inverted to give mechanistic explanations. Suppose we study why ants react a certain way to a certain pheromone, and obtain a *functional* explanation, namely that they react this way in order that the colony might send large numbers of ants to newly identified food sources. We can then reframe this finding as a *mechanistic* explanation for the phenomenon of colonies sending ants to newly identified food sources. It's worth noting though that the converse is not necessarily true: mechanistic explanations cannot necessarily be inverted to produce functional explanations. For example, we can derive a mechanistic explanation for cloud formation in terms of the physics of water molecules; this does not mean that the physics of water molecules developed *in order to* create clouds.
+Functional explanations have a particularly special property in that they can be inverted to give mechanistic explanations. Suppose we study why ants react a certain way to a certain pheromone, and obtain a functional explanation, namely that they react this way in order that the colony might send large numbers of ants to newly identified food sources. We can then reframe this finding as a mechanistic explanation for the phenomenon of colonies sending ants to newly identified food sources. It's worth noting though that the converse is not necessarily true: mechanistic explanations cannot necessarily be inverted to produce functional explanations. For example, we can derive a mechanistic explanation for cloud formation in terms of the physics of water molecules; this does not mean that the physics of water molecules developed in order to create clouds.
 
 Like many natural phenomena, cognition has many available levels of explanation.
 
 \~\~\~
 
-A fundamental principle in cognitive science is the idea that a given cognitive phenomenon may have *multiple levels of explanation*. For example, on one level, we know that the brain represents information in terms of temporal patterns of neural firings that are highly distributed around the cerebral cortex. This might be called the *neuroscientific* level of explanation. However, we might also know that the brain's short-term memory behaves *as if* it were a finite-capacity store with approximately seven slots, each of which can store a single *chunk* of information [@Miller1956-hy]. We might call this the *cognitive* level of explanation. Both levels of explanation can be useful in different contexts. The neuroscientific level might be useful when trying to understand the impact of various brain lesions on cognitive function; the cognitive level might be useful when trying to predict a participant's success on different working memory tasks. A famous articulation of this concept of multiple levels of explanation has been given by David Marr [@Marr1982-di].
+A fundamental principle in cognitive science is the idea that a given cognitive phenomenon may have multiple levels of explanation. For example, on one level, we know that the brain represents information in terms of temporal patterns of neural firings that are highly distributed around the cerebral cortex. This might be called the neuroscientific level of explanation. However, we might also know that the brain's short-term memory behaves as if it were a finite-capacity store with approximately seven slots, each of which can store a single chunk of information [@Miller1956-hy]. We might call this the cognitive level of explanation. Both levels of explanation can be useful in different contexts. The neuroscientific level might be useful when trying to understand the impact of various brain lesions on cognitive function; the cognitive level might be useful when trying to predict a participant's success on different working memory tasks. A famous articulation of this concept of multiple levels of explanation has been given by David Marr [@Marr1982-di].
 
 <!-- This principle has been given its most famous exposition by the vision scientist David Marr [@Marr1982-di]. Marr distinguished three levels in particular: -->
 
-The term *cognitive model* is typically used to describe a formalised cognitive account of a particular process. The word 'model' is there to emphasise the fact that the model is a simplification of reality. The human brain is immensely complex -- thought to contain over 100 billion neurons [@Herculano-Houzel2009-mu] -- and a given cognitive model will only reach a tiny fraction of this complexity. In the context of modelling, however, simplicity is a virtue; the simpler a model, the easier it is to reason about.
+The term cognitive model is typically used to describe a formalised cognitive account of a particular process. The word 'model' is there to emphasise the fact that the model is a simplification of reality. The human brain is immensely complex -- thought to contain over 100 billion neurons [@Herculano-Houzel2009-mu] -- and a given cognitive model will only reach a tiny fraction of this complexity. In the context of modelling, however, simplicity is a virtue; the simpler a model, the easier it is to reason about.
 
-The reductionist answer to these questions clearly lies in neuroscience. Information is *represented* in terms of patterns of neural firings distributed through the brain; we know from prior neuroscientific research that the precise nature of these firings varies from individual to individual, and depends on past experiences which continually shape the brain and the way in which its neurons connect to one another. Information is also *manipulated* through neural processes; a particularly important mechanism seems to be the way in which individual neurons integrate incoming information from multiple neurons at their dendrites, and decide on this basis whether to fire themselves or not.
+The reductionist answer to these questions clearly lies in neuroscience. Information is represented in terms of patterns of neural firings distributed through the brain; we know from prior neuroscientific research that the precise nature of these firings varies from individual to individual, and depends on past experiences which continually shape the brain and the way in which its neurons connect to one another. Information is also manipulated through neural processes; a particularly important mechanism seems to be the way in which individual neurons integrate incoming information from multiple neurons at their dendrites, and decide on this basis whether to fire themselves or not.
 
 The difficulty with studying information on the neuroscientific basis is the enormous complexity of the underlying representation. The human brain is thought to contain over 100 billion neurons [@Herculano-Houzel2009-mu], which could theoretically fire in any combination. Decoding the meaning of these firing combinations would be an immensely challenging task, even if we could measure them all simultaneously, which is not yet possible with noninvasive techniques.
 
-Cognitive science responds to this issue by claiming that the mind can usefully be approximated, or *modelled*, by a much simpler system that is relatively independent of the underlying biology. For example, suppose we ask the question "How does the mind represent a melody?". The neuroscientist's answer to this question would be in terms of neural firings; while they might not be able to tell you exactly what neurons map to what melodies, they might well be able to tell you approximately where these neurons are located in the brain. In contrast, the cognitive scientist would likely respond in terms of cognitive constructs such as 'scale degrees' and 'rhythmic categories': "the listener hears *do* followed by *so* and then *fa* in an anapaest rhythm".
+Cognitive science responds to this issue by claiming that the mind can usefully be approximated, or modelled, by a much simpler system that is relatively independent of the underlying biology. For example, suppose we ask the question "How does the mind represent a melody?". The neuroscientist's answer to this question would be in terms of neural firings; while they might not be able to tell you exactly what neurons map to what melodies, they might well be able to tell you approximately where these neurons are located in the brain. In contrast, the cognitive scientist would likely respond in terms of cognitive constructs such as 'scale degrees' and 'rhythmic categories': "the listener hears do followed by so and then fa in an anapaest rhythm".
 
 Both neuroscientific and cognitive approaches have their advantages and disadvantages. The neuroscientific interpretation is clearly closer to the 'true' answer, in a certain sense. Neurons and neural firing patterns are 'real', or at least tangible, in a way that mental representations of scale degrees are not. On the other hand, the dynamics of these processes are so complex that it's hard to know how we could ever come up with a complete yet understandable neuroscientific model of a high-level mental process such as aesthetics. In contrast, cognitive models are expressly designed for the purpose of interpretability. By stripping away details of the biological implementation, the hope is that we can capture the essence of a particular mental process in an interpretable yet predictively powerful way.
 
@@ -261,7 +423,7 @@ Both neuroscientific and cognitive approaches have their advantages and disadvan
 
 # What is it?
 
-Temperley: To call a model "computational" implies, rather, that it is specified in a precise, complete, and rigorous way -- such that it *could* be implemented on a computer.
+Temperley: To call a model "computational" implies, rather, that it is specified in a precise, complete, and rigorous way -- such that it could be implemented on a computer.
 
 # Classic examples
 
