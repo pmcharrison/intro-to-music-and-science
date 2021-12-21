@@ -1,4 +1,142 @@
-# Computational music psychology
+# Computational musicology
+
+What is it?
+
+-   Studying music using computational methods
+
+What forms does it take?
+
+-   Science
+
+    -   Modelling listeners (computational music psychology)
+
+    -   Analysing music corpora (corpus studies)
+
+-   Engineering
+
+    -   Developing useful tools (music informatics)
+
+## Computational music psychology
+
+### Motivations
+
+As discussed already
+
+### Computational metaphor (information processing)
+
+Introduce idea of data structures and algorithms
+
+Relate to cognitive equivalents
+
+### Traditions
+
+-   Symbolic versus connectionist AI
+
+-   Cognitive versus neuro
+
+-   Psychoacoustic
+
+### Audio vs symbolic processing
+
+### Strategies
+
+Intuitive:
+
+-   Just write down what we think happens
+
+Marr:
+
+-   What problem is the mind trying to solve?
+
+-   What algorithm is used to implement that solution?
+
+-   How is that algorithm implemented in the brain?
+
+Rational observer:
+
+-   Derive the optimal solution to a task
+
+-   Compare this to the brain
+
+Bounded rationality:
+
+-   Like rational observer approach, but incorporating processing constraints
+
+Learning by imitation:
+
+-   Machine learning
+
+### Validation
+
+### Case studies
+
+#### Key-finding
+
+#### Consonance
+
+#### Pitch perception
+
+McDermott Lab recent paper
+
+## Corpus studies
+
+### Motivation
+
+What kinds of structures does music manifest?
+
+-   Patterns in the musical score (pitch, rhythm, text, orchestration)
+
+-   Nuances of performance (intonation, timing, timbre, ...)
+
+### Symbolic versus audio
+
+### Case studies
+
+#### Hedges and Rohrmeier paper
+
+Symbolic example
+
+<https://www.researchgate.net/profile/Martin-Rohrmeier/publication/220846592_Exploring_Rameau_and_Beyond_A_Corpus_Study_of_Root_Progression_Theories/links/00b4953bc1374c4284000000/Exploring-Rameau-and-Beyond-A-Corpus-Study-of-Root-Progression-Theories.pdf>
+
+#### Mauch paper
+
+Audio example
+
+## Music informatics
+
+### Areas
+
+-   Music recommendation
+
+-   Source separation
+
+-   Music transcription
+
+-   Music tagging
+
+    -   Genre
+
+    -   Emotion
+
+    -   ...
+
+-   Song identification
+
+-   Timbre synthesis
+
+-   Automatic composition
+
+### The rise of deep learning
+
+### The role of psychology
+
+## Getting started in computational musicology
+
+### Programming languages
+
+### Datasets
+
+\~\~\~
 
 ## Cognitive science
 
