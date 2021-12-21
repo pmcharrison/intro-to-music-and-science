@@ -1,0 +1,23 @@
+# Corpus musicology
+
+## Motivation
+
+What kinds of structures does music manifest?
+
+-   Patterns in the musical score (pitch, rhythm, text, orchestration)
+
+-   Nuances of performance (intonation, timing, timbre, ...)
+
+## Symbolic versus audio
+
+## Case studies
+
+### Hedges and Rohrmeier paper
+
+Symbolic example
+
+<https://www.researchgate.net/profile/Martin-Rohrmeier/publication/220846592_Exploring_Rameau_and_Beyond_A_Corpus_Study_of_Root_Progression_Theories/links/00b4953bc1374c4284000000/Exploring-Rameau-and-Beyond-A-Corpus-Study-of-Root-Progression-Theories.pdf>
+
+### Mauch paper
+
+Audio example

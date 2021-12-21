@@ -1,0 +1,29 @@
+# Music informatics
+
+## Areas
+
+-   Music recommendation
+
+-   Source separation
+
+-   Music transcription
+
+-   Music tagging
+
+    -   Genre
+
+    -   Emotion
+
+    -   ...
+
+-   Song identification
+
+-   Timbre synthesis
+
+-   Automatic composition
+
+    -   Hiller and Isaacson!
+
+## The rise of deep learning
+
+## The role of psychology

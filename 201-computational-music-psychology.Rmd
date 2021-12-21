@@ -1,0 +1,122 @@
+# Computational music psychology
+
+Computational music psychology is a kind of music psychology that relies heavily on computer models. These computer models are special algorithms that simulate certain acoustic, biological, and/or mental processes thought to be involved in particular musical behaviours. Used correctly, they can form an integral part of the scientific process.
+
+## Case studies
+
+### The Krumhansl-Kessler key-finding model
+
+### Hutchinson & Knopoff's dissonance model
+
+### Other models
+
+## Modelling traditions
+
+## Modelling and empirical research
+
+The basic methodology of computational music psychology works as follows:
+
+1.  **Identify an interesting psychological phenomenon.** For example, we might be interested in studying listeners' perception of emotion in melodies.
+
+2.  **Identify candidate psychological mechanisms for this phenomenon.** These candidate mechanisms will often be derived from previous literature, but they may also be derived from our own intuitions. These candidate mechanisms may or may not be mutually exclusive. In the case of melodic emotion perception, we might hypothesise multiple non-exclusive mechanisms, including the recognition of ascending versus descending contours, major versus minor modes, legato versus staccato articulation, and so on.
+
+3.  **Implement computer models that simulate these mechanisms.** Each computer model will typically be a piece of computer software that takes a musical stimulus as an input and simulates the psychological processing of that stimulus. The output will typically be one or more numbers that capture the outcome of the process. For example, a simple mode recognition algorithm might return 1 for major-key melodies and 0 for minor-key melodies.
+
+4.  **Design an experiment for probing these models.** The experiment could simply comprise a set of musical stimuli to be presented to the participant.
+
+5.  **Generate model predictions.** This will typically involve running the models on each stimulus and recording the models' outputs.
+
+6.  This stimulus set should be designed to systematically probe the different computer models.
+
+The basic paradigm of computational music psychology works as follows:
+
+1.  Identify a particular psychological phenomenon of interest
+
+2.  Compile or develop one or more candidate psychological theories for explaining that phenomenon
+
+3.  Implement these theories as computational models.
+
+4.  Design one or more experimental paradigms for probing these models.
+
+5.  Generate model predictions for these experimental paradigms. If there are multiple models, these experimental paradigms should ideally yield dissociated model predictions. If not, maybe revisit the design.
+
+6.  Compile empirical datasets from human listeners for these experimental paradigms.
+
+7.  Compare the human responses to the model predictions.
+
+    1.  Can compare models
+
+    2.  Can optimise model parameters
+
+Note: sometimes the datasets exist already.
+
+Computational music psychologists work by developing and evaluating computer simulations of mental processes underlying musical behaviours such as music listening, music performance, and music composition. These simulations take as input ... and return as output...
+
+The goal of ordinary music psychology research is to develop empirically grounded theories of the mental processes underlying musical behaviours such as music listening, music performance, and music composition. Typical methods include both behavioural experiments, where participants are instructed to make judgments in response to particular musical stimuli, and neuroscientific experiments, where participants have their brain responses recorded while listening to various musical stimuli.
+
+Computational music psychology incorporates an additional component of computer simulation into this paradigm.
+
+aim to develop effective computer simulations of the mental process
+
+The goal of music psychology research is to understand the mental processes underlying musical behaviours such as music listening, music performance, and music composition. \[...\] \[Typical methods include\]
+
+Computational music psychology is a branch of music psychology that incorporates computer simulations into its workflow. These simulations are intended to represent the biological and psychological processes underpinning a particular
+
+research
+
+has similar goals, but incorporates
+
+What is music psychology?
+
+What is the role of the computer here?
+
+Why would you use a computer here?
+
+### Motivations
+
+As discussed already
+
+### Computational metaphor (information processing)
+
+Introduce idea of data structures and algorithms
+
+Relate to cognitive equivalents
+
+### Traditions
+
+-   Symbolic versus connectionist AI
+
+-   Cognitive versus neuro
+
+-   Psychoacoustic
+
+### Audio vs symbolic processing
+
+### Strategies
+
+Intuitive:
+
+-   Just write down what we think happens
+
+Marr:
+
+-   What problem is the mind trying to solve?
+
+-   What algorithm is used to implement that solution?
+
+-   How is that algorithm implemented in the brain?
+
+Rational observer:
+
+-   Derive the optimal solution to a task
+
+-   Compare this to the brain
+
+Bounded rationality:
+
+-   Like rational observer approach, but incorporating processing constraints
+
+Learning by imitation:
+
+-   Machine learning
+
