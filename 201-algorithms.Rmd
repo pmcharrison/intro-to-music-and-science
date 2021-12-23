@@ -1,11 +1,3 @@
-# (PART) Computational musicology {.unnumbered}
-
-# Introduction
-
-Computational musicology is a broad field spanning many different ways of studying music using computational methods. It has developed steadily since early work in the second half of the 20th century, partly due to the increased availability of computing resources, and partly due to the increased prominence of computational theories of cognition in mainstream psychology.
-
-Nowadays most computational musicology research falls into one of three streams. The first is computational music psychology, where researchers develop computer simulations of human listeners as a tool to better understand music psychology. The second is corpus musicology, where researchers \[...\]. The third is music informatics, where researchers develop \[...\].
-
 # Algorithms
 
 ## What is an algorithm?
