@@ -119,6 +119,103 @@ for (tonic in 0:11) {
 
 So, we have now established what the templates look like for the 24 major and minor keys. There remains one question, however: how do we compare the listener's pitch-class distribution to these template distributions? There are various possibilities here [@albrecht2013], but the original Krumhansl-Kessler algorithm uses a standard statistic called the *Pearson correlation*. We don't need to worry about the mathematical details here. The important thing to know is that the Pearson correlation can be interpreted as a measure of *similarity*, and it takes values between -1 (maximally dissimilar) and 1 (maximally similar).
 
+These details are sufficient for specifying the key-finding algorithm. Let's now see this algorithm applied in practice. We'll take the well-known lullaby 'Twinkle, Twinkle, Little Star', which looks like the following in traditional music notation:
+
+![Twinkle, Twinkle, Little Star. Credit: Helix84, [CC BY-SA 3.0](http://creativecommons.org/licenses/by-sa/3.0/), via Wikimedia Commons.](images/twinkle-twinkle.png)
+
+Our first step is to translate this melody into machine-readable notation. We can write it in tabular format, where the first column is the pitch (expressed as a MIDI note), and the second column is the duration (expressed in crotchets, or quarter notes).
+
+```{r}
+twinkle <- tribble(
+  ~ pitch,  ~ duration,
+  60, 1,
+  60, 1,
+  67, 1,
+  67, 1,
+  69, 1,
+  69, 1,
+  67, 2,
+  
+  65, 1,
+  65, 1,
+  64, 1, 
+  64, 1,
+  62, 1,
+  62, 1, 
+  60, 2,
+  
+  67, 1, 
+  67, 1,
+  65, 1,
+  65, 1,
+  64, 1, 
+  64, 1,
+  62, 2,
+  
+  67, 1, 
+  67, 1,
+  65, 1,
+  65, 1,
+  64, 1, 
+  64, 1,
+  62, 2,
+  
+  60, 1,
+  60, 1,
+  67, 1,
+  67, 1,
+  69, 1,
+  69, 1,
+  67, 2,
+  
+  65, 1,
+  65, 1,
+  64, 1, 
+  64, 1,
+  62, 1,
+  62, 1, 
+  60, 2,
+)
+twinkle %>%
+  set_names(c("Pitch", "Duration")) %>%
+  DT::datatable(
+    options = list(
+      searching = FALSE,
+      rowId = FALSE
+    ))
+```
+
+We then compute the relative durations of each pitch class in the melody. To convert pitches to pitch classes we divide by 12 and take the remainder; for example, the pitch 67 is equal to 12 \* 5 + 7, so its pitch class is 7. Applying this logic, and expressing durations as a percentage of the total melody duration, we get the following:
+
+```{r}
+twinkle %>%
+  mutate(
+    pitch_class = factor(pitch %% 12, levels = 0:11)
+  ) %>%
+  group_by(pitch_class, .drop = FALSE) %>%
+  summarise(
+    duration = sum(duration)
+  ) %>%
+  mutate(
+    pitch_class = as.numeric(as.character(pitch_class)),
+    rel_duration = duration / sum(duration)
+  ) %>%
+  ggplot(aes(pitch_class, 100 * rel_duration)) + 
+    geom_line(colour = "dodgerblue3") + 
+    scale_x_continuous(
+      "Pitch class", 
+      breaks = 0:12,
+      sec.axis = sec_axis(
+        trans = identity,
+        breaks = 0:11,
+        labels = pcs
+      )
+    ) + 
+  scale_y_continuous("Relative duration (%)")
+```
+
+Now our task is to compare this profile with all the different reference profiles, to work out which provides the best fit.
+
 ### The Hutchinson-Knopoff dissonance algorithm
 
 We will begin with a couple
