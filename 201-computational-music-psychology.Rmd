@@ -4,7 +4,8 @@
 library(tidyverse)
 library(ggpubr)
 theme_set(theme_pubr())
-knitr::opts_chunk$set(echo = FALSE)
+source("setup.R")
+knitr::opts_chunk$set(echo = FALSE, cache = TRUE)
 
 ```
 
@@ -26,6 +27,8 @@ The literature contains many different computational models of music perception 
 
 ### The Krumhansl-Schmuckler key-finding algorithm
 
+#### Overview
+
 This algorithm is designed to simulate how listeners identify the *key* of a given musical passage. Now, identifying keys is often trivial to someone reading a musical score. Many musical pieces have their key written in their title, for example "Sonata No. 6 in D major, K. 284" or "Symphony No. 9 in D minor, Op. 125". Even if the key is not present in the title, we can typically narrow down the key to one of two options by inspecting the key signature at the beginning of the piece. However, none of this written information is necessarily available to the music *listener*; they must instead somehow identify the key purely from the notes that they hear.
 
 The Krumhansl-Schmuckler algorithm proposes a mechanism for this process. The algorithm can be succinctly summarised as follows:
@@ -37,6 +40,8 @@ The Krumhansl-Schmuckler algorithm proposes a mechanism for this process. The al
 3.  During a musical piece, listeners track the distribution of pitch classes within that piece. The inferred key then corresponds to the key whose pitch-class distribution matches best to the observed distribution.
 
 [^computational-music-psychology-1]: Pitch classes denote sets of pitches separated by whole numbers of octaves. In the Western 12-tone scale, there are exactly 12 pitch classes: C, C\#, D, D\#, E, F, F\#, G, G\#, A, A\#, and B.
+
+#### Implementation details
 
 In order to implement this as a computer model, we need to fill in a few details.
 
@@ -119,9 +124,11 @@ for (tonic in 0:11) {
 
 So, we have now established what the templates look like for the 24 major and minor keys. There remains one question, however: how do we compare the listener's pitch-class distribution to these template distributions? There are various possibilities here [@albrecht2013], but the original Krumhansl-Kessler algorithm uses a standard statistic called the *Pearson correlation*. We don't need to worry about the mathematical details here. The important thing to know is that the Pearson correlation can be interpreted as a measure of *similarity*, and it takes values between -1 (maximally dissimilar) and 1 (maximally similar).
 
-These details are sufficient for specifying the key-finding algorithm. Let's now see this algorithm applied in practice. We'll take the well-known lullaby 'Twinkle, Twinkle, Little Star', which looks like the following in traditional music notation:
+#### Worked example
 
-![Twinkle, Twinkle, Little Star. Credit: Helix84, [CC BY-SA 3.0](http://creativecommons.org/licenses/by-sa/3.0/), via Wikimedia Commons.](images/twinkle-twinkle.png)
+Let's now see this algorithm applied in practice. We'll take the well-known lullaby 'Twinkle, Twinkle, Little Star', which looks like the following in traditional music notation:
+
+![Twinkle, Twinkle, Little Star. Credit: Helix84, [CC BY-SA 3.0](http://creativecommons.org/licenses/by-sa/3.0/), via Wikimedia Commons.](images/twinkle-twinkle.png){width="100%"}
 
 Our first step is to translate this melody into machine-readable notation. We can write it in tabular format, where the first column is the pitch (expressed as a MIDI note), and the second column is the duration (expressed in crotchets, or quarter notes).
 
@@ -187,8 +194,9 @@ twinkle %>%
 
 We then compute the relative durations of each pitch class in the melody. To convert pitches to pitch classes we divide by 12 and take the remainder; for example, the pitch 67 is equal to 12 \* 5 + 7, so its pitch class is 7. Applying this logic, and expressing durations as a percentage of the total melody duration, we get the following:
 
-```{r}
-twinkle %>%
+```{r, out.width = "100%"}
+twinkle_profile <- 
+  twinkle %>%
   mutate(
     pitch_class = factor(pitch %% 12, levels = 0:11)
   ) %>%
@@ -199,7 +207,9 @@ twinkle %>%
   mutate(
     pitch_class = as.numeric(as.character(pitch_class)),
     rel_duration = duration / sum(duration)
-  ) %>%
+  )
+
+twinkle_profile %>%
   ggplot(aes(pitch_class, 100 * rel_duration)) + 
     geom_line(colour = "dodgerblue3") + 
     scale_x_continuous(
@@ -214,7 +224,302 @@ twinkle %>%
   scale_y_continuous("Relative duration (%)")
 ```
 
-Now our task is to compare this profile with all the different reference profiles, to work out which provides the best fit.
+Now our task is to compare this profile with all the different reference profiles, to work out which provides the best fit. The following animation evaluates each reference profile in turn (top panel) and displays the resulting correlation (bottom panel).
+
+```{r, out.width = "100%", animation.hook = "gifski", interval = 1.5, fig.height = 7}
+get_kk_profile <- function(mode, tonic) {
+  ref_profile <- kk_profiles[[mode]]
+  absolute_pitch_classes <- 0:11
+  relative_pitch_classes <- (absolute_pitch_classes - tonic) %% 12
+  ref_profile[1 + relative_pitch_classes]
+}
+
+kk_all_key_profiles <- map_dfr(0:11, function(tonic) {
+  c("Major", "Minor") %>% 
+    set_names(., .) %>% 
+    map_dfr(function(mode) {
+      tibble(
+        tonic = tonic,
+        mode = mode,
+        profile = list(get_kk_profile(mode, tonic))
+      )
+    })
+}) %>%
+  arrange(mode)
+
+kk_correlations <- 
+    kk_all_key_profiles %>% 
+    mutate(
+      correlation = map_dbl(
+        profile,
+        cor, 
+        twinkle_profile$rel_duration
+      ))
+
+.tmp <- pmap(kk_all_key_profiles, function(tonic, mode, profile) {
+  tonic_label <- pcs[tonic + 1]
+  key_label <- paste0(tonic_label, " ", mode)
+  
+  plot_profile <- 
+    bind_rows(
+      twinkle_profile |> 
+        select(pitch_class, rel_duration) |> 
+        mutate(group = "Twinkle twinkle"),
+      tibble(
+        pitch_class = 0:11,
+        rel_duration = profile / sum(profile),
+        group = key_label
+      )
+    ) |> 
+    mutate(
+      group = factor(group, levels = c("Twinkle twinkle", key_label))
+    ) |> 
+    ggplot(aes(pitch_class, rel_duration * 100, colour = group)) +
+    geom_vline(xintercept = tonic, colour = "red", linetype = "dashed") +
+    geom_line() + 
+    scale_x_continuous(
+      "Pitch class", 
+      breaks = 0:12,
+      sec.axis = sec_axis(
+        trans = identity,
+        breaks = 0:11,
+        labels = pcs
+      )
+    ) + 
+    scale_y_continuous("Relative duration (%)") +
+    scale_colour_manual(NULL, values = c("dodgerblue3", "darkgoldenrod1")) +
+    ggtitle(
+      paste0("Key: ", key_label)
+    ) +
+    theme(
+      legend.position = "right",
+      plot.title = element_text(
+        face = "bold"
+      )
+    )
+  
+  plot_all_correlations <- 
+    kk_correlations |> 
+    mutate(selected = (tonic == !!tonic & mode == !!mode)) |> 
+    ggplot(aes(tonic, correlation,
+               colour = mode, 
+               shape = selected,
+               size = selected)) + 
+    geom_point() + 
+    scale_x_continuous(
+      "Tonic", 
+      breaks = 0:12,
+      sec.axis = sec_axis(
+        trans = identity,
+        breaks = 0:11,
+        labels = pcs
+      )
+    ) +
+    scale_y_continuous("Pearson correlation", limits = c(-1, 1)) +
+    scale_shape_manual(values = c(1, 16), guide = "none") + 
+    scale_size_manual(values = c(2, 5), guide = "none") + 
+    scale_colour_manual(NULL, values = c("dodgerblue3", "darkgoldenrod1")) + 
+    theme(
+      legend.position = "right"
+    )
+  egg::ggarrange(
+    plot_profile,
+    plot_all_correlations,
+    ncol = 1
+  ) |> 
+    print()
+})
+
+```
+
+The results can be expressed in a table like the following. You can click on particular column headers to sort by the values in that column.
+
+```{r}
+kk_correlations |> 
+  mutate(
+    tonic = plyr::mapvalues(tonic, from = 0:11, to = pcs),
+    correlation = sprintf("%.2f", correlation)
+  ) |> 
+  select(
+    Tonic = tonic,
+    Mode = mode,
+    Correlation = correlation
+  ) |> 
+  DT::datatable(
+    options = list(
+      searching = FALSE
+    )
+  )
+```
+
+If we sort the 'Correlation' column by descending values, we see the following top three key candidates: C major, F major, and G major. Conversely, if we sort the column by ascending values, we see the following bottom three candidates: F\# major, A minor, and C\# major. So, the algorithm selects C major as the inferred key for the melody, which happily is consistent with what most music theorists would say if they examined the score.
+
+#### Where should the templates come from?
+
+The original Krumhansl-Schmuckler algorithm uses template profiles derived from behavioural experiments using the probe-tone paradigm. The implementation leaves open the question of where exactly these templates come from.
+
+One possibility is that the templates are learned through exposure to particular musical styles. By hearing pieces in particular musical keys, the listener learns that particular keys tend to be associated with particular pitch-class distributions. This learning process is complicated by the fact that the listener has to learn the key profiles without being told what key individual pieces are in. Inspiration for understanding this process can come from the machine-learning field of *unsupervised learning*, which studies algorithms for learning structure from unlabelled data. In particular, several key-finding algorithms have used a technique called *latent Dirichlet allocation* to learn both key labels and key profiles directly from unlabelled musical corpora [@moss2021; @Hu2009].
+
+#### Limitations
+
+The Krumhansl-Schmuckler algorithm has been very influential within the field of music psychology, and many subsequent key-finding algorithms use a similar kind of template-matching process [@albrecht2013; @Bellmann2005; @Sapp2011; @Temperley1999a]. Nonetheless, the algorithm is limited by the fact that it ignores the *order* in which notes are played, despite psychological evidence that note order may indeed matter for listeners' key judgments [@brown1988; @matsunaga2005].
+
+For illustration, consider the following two tone sequences from @matsunaga2005. Both of these sequences use exactly the same pitch classes, just in a different order, and with one of the pitch classes transposed upwards by an octave. The first sequence elicits a very clear tonal centre:
+
+```{r, results = "asis"}
+embed_image_with_audio(
+  image = "images/matsunaga-tonally-clear-1.svg",
+  audio = "audio/matsunaga-tonally-clear.mp3",
+  width = "100%",
+  title = "A tone sequence with very clear tonal implications, from @matsunaga2005."
+)
+```
+
+In contrast, the second tone sequence elicits much more ambiguous tonal centre:
+
+```{r, results = "asis"}
+embed_image_with_audio(
+  image = "images/matsunaga-tonally-ambiguous-1.svg",
+  audio = "audio/matsunaga-tonally-ambiguous.mp3",
+  width = "100%",
+  title = "A tone sequence with ambiguous tonal implications, from @matsunaga2005."
+)
+```
+
+@matsunaga2005 studied these two sequences alongside 58 others with the same pitch classes, and demonstrated that they elicit wide variations in key judgments. This means that the Krumhansl-Schmuckler algorithm cannot be capturing the full story, then.
+
+Consequently, an interesting avenue of future research concerns extending the Krumhansl-Schmuckler algorithm to incorporate sensitivity to tone order. One such solution was trialled by @Toiviainen2003a, based on a dataset of relatedness judgments for pairs of tones in major and minor key contexts [@krumhansl1990cognitive]; however, this version of the algorithm failed to predict listener behaviour better than the original Krumhansl-Schmuckler algorithm. Not long later, @Madsen2007 presented a version of the Krumhansl-Schmuckler algorithm based on distributions of pairs of scale degrees as observed in music corpora, but found only marginal improvements in the algorithm's ability to recover musical keys from annotated music corpora. These failures to improve significantly upon the Krumhansl-Schmuckler algorithm are interesting, and suggest that we still have more to learn about key-finding.
+
+### R implementation
+
+See below for a full implementation of the Krumhansl-Schmuckler algorithm, written for the R programming language. This is provided for interest only, you are not expected to understand it, especially if you have never used R before! However, it is worth spending a while reading through the code line by line to try and get a feel for what is happening at each step. If you are confused about what a particular function does, you can click on its name to see its documentation.
+
+To explore this code further, follow [this link](https://colab.research.google.com/drive/1tFJWKTjXs0qNR3eIXwR-sTsEuUOC1img#scrollTo=08Pjk6Oz9m85) to an online interface that allows you to edit and run the code interactively in your web browser. You will need a (free) Google account to continue; alternatively, Cambridge students can simply sign in using their Cambridge email address.
+
+```{r, echo = TRUE}
+# Load dependencies (packages which
+# provide us with some useful functions).
+library(dplyr)
+library(purrr)
+
+# We write out the Krumhansl-Kessler probe tone profiles.
+# There are two such profiles:
+# one for the major mode and one for the minor mode.
+kk_profiles <- list(
+  Major = c(
+    6.35, 2.23, 3.48, 2.33, 4.38, 4.09, 
+    2.52, 5.19, 2.39, 3.66, 2.29, 2.88
+  ),
+  Minor = c(
+    6.33, 2.68, 3.52, 5.38, 2.60, 3.53,
+    2.54, 4.75, 3.98, 2.69, 3.34, 3.17
+  )
+)
+
+# We define a function for deriving the Krumhansl-Kessler 
+# profile for a given mode and tonic.
+get_kk_profile <- function(mode, tonic) {
+  # We begin by extracting the reference profile for that 
+  # particular mode.
+  ref_profile <- kk_profiles[[mode]]
+  
+  # We want our profile to give the fit ratings for the 
+  # absolute pitch classes 0 to 11.
+  absolute_pitch_classes <- 0:11
+  
+  # To express these pitch classes relative to the provided
+  # tonic, we subtract the tonic and apply the modulo 12
+  # operator (i.e. remainder after division by 12).
+  relative_pitch_classes <- (absolute_pitch_classes - tonic) %% 12
+
+  # This tells us where to look in the reference profile.
+  ref_profile[1 + relative_pitch_classes]
+}
+
+# We now compile a table of all the possible key profiles,
+# produced by rotating the original Krumhansl-Kessler key profiles
+# through all 12 possible tonics.
+
+# This code iterates over the numbers 0 to 11, 
+# setting the tonic first to 0, then to 1, then to 2, 
+# and so on...
+kk_all_key_profiles <- map_dfr(0:11, function(tonic) {
+  # This code iterates over the two modes (major and minor)...
+  c("Major", "Minor") %>% 
+    set_names(., .) %>% 
+    map_dfr(function(mode) {
+      # ... and gets the Krumhansl-Kessler profile for each one.
+      tibble(
+        tonic = tonic,
+        mode = mode,
+        profile = list(get_kk_profile(mode, tonic))
+      )
+    })
+})
+
+kk_all_key_profiles
+
+# Here we define a function that takes a melody as an input
+# and returns the estimated key.
+kk_estimate_key <- function(
+    pitches,  # a vector of pitches for each note in the melody
+    durations # a vector of durations for each note in the melody
+  ) {
+  pc_distribution <- 
+    tibble(pitch = pitches, duration = durations) %>%
+    mutate(
+      # We convert pitches into pitch classes by dividing by 12
+      # and taking the remainder.
+      pitch_class = factor(pitch %% 12, levels = 0:11)
+    ) %>%
+    
+    # We sum the durations for each pich class.
+    group_by(pitch_class, .drop = FALSE) %>%
+    summarise(
+      duration = sum(duration)
+    ) %>%
+    
+    mutate(
+      pitch_class = as.numeric(as.character(pitch_class)),
+      # We normalise each duration by dividing by the total duration
+      # (this is actually not strictly necessary if we are using
+      # standared correlation measures).
+      rel_duration = duration / sum(duration)
+    )
+
+  correlations <- 
+    kk_all_key_profiles %>% 
+    mutate(
+      correlation = map_dbl(
+                  # This function iterates over 
+        profile,  # <-- the template profiles
+        cor,      # <-- computing the Pearson correlation
+        pc_distribution$rel_duration # <-- with the observed durations
+      ))
+  
+  # We choose the profile that maximises the correlation 
+  # with the observed distribution.
+  chosen <- correlations %>% slice(which.max(correlations$correlation))
+  
+  chosen %>%
+    select(tonic, mode, correlation) %>%
+    as.list()
+}
+
+# We can use this function to estimate keys for arbitrary melodies,
+# where each melody is specified as the combination of
+# (a) a list of pitches and 
+# (b) a list of durations.
+kk_estimate_key(
+  pitches =   c(60, 62, 65, 67, 69, 67), 
+  durations = c(1, 0.5, 0.5, 1, 0.5, 0.5)
+)
+
+kk_estimate_key(
+  pitches =   c(60, 63, 65, 67, 68, 67), 
+  durations = c(1, 0.5, 0.5, 1, 0.5, 0.5)
+)
+```
 
 ### The Hutchinson-Knopoff dissonance algorithm
 
@@ -319,42 +624,7 @@ When the problem domain is still not well-understood, models can be used as a to
 ## Case studies
 
 ```{r}
-kk_all_key_profiles <- map_dfr(0:11, function(tonic) {
-  c("Major", "Minor") %>% 
-    set_names(., .) %>% 
-    map_dfr(function(mode) {
-      tibble(
-        tonic = tonic,
-        mode = mode,
-        profile = list(kk_profiles[[mode]][1 + ((tonic:(tonic + 11) %% 12))])
-      )
-    })
-})
 
-kk_estimate_key <- function(pitches) {
-  # Convert the pitches into pitch classes by dividing by 12 and taking the remainder
-  pitch_classes <- factor(pitches %% 12, levels = 0:11)
-  
-  # Count the number of occurrences of each pitch class
-  pitch_class_counts <- as.integer(table(pitch_classes))
-  
-  # Compute the correlation between each reference pitch class profile
-  # and the vector of pitch class counts
-  correlations <- 
-    kk_all_key_profiles %>% 
-    mutate(correlation = map_dbl(profile, cor, pitch_class_counts))
-  
-  # Choose the reference pitch class profile that achieves the highest correlation
-  chosen <- correlations %>% slice(which.max(correlations$correlation))
-  
-  # Return both the full correlation table and the chosen profile
-  list(
-    correlations = correlations,
-    chosen = chosen
-  )
-}
-
-kk_estimate_key(c(60, 62, 65, 67, 68, 67))
 ```
 
 ### Hutchinson & Knopoff's dissonance model
