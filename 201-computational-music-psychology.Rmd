@@ -394,7 +394,7 @@ Consequently, an interesting avenue of future research concerns extending the Kr
 
 See below for a full implementation of the Krumhansl-Schmuckler algorithm, written for the R programming language. This is provided for interest only, you are not expected to understand it, especially if you have never used R before! However, it is worth spending a while reading through the code line by line to try and get a feel for what is happening at each step. If you are confused about what a particular function does, you can click on its name to see its documentation.
 
-To explore this code further, follow [this link](https://colab.research.google.com/drive/1tFJWKTjXs0qNR3eIXwR-sTsEuUOC1img#scrollTo=08Pjk6Oz9m85) to an online interface that allows you to edit and run the code interactively in your web browser. You will need a (free) Google account to continue; alternatively, Cambridge students can simply sign in using their Cambridge email address.
+To explore this code further, you can follow [this link](https://colab.research.google.com/drive/1tFJWKTjXs0qNR3eIXwR-sTsEuUOC1img#scrollTo=08Pjk6Oz9m85) to access an online interface that allows you to edit and run the code interactively in your web browser. You will need a (free) Google account to continue; alternatively, Cambridge students can simply sign in using their Cambridge email address.
 
 ```{r, echo = TRUE}
 # Load dependencies (packages which
@@ -523,7 +523,395 @@ kk_estimate_key(
 
 ### The Hutchinson-Knopoff dissonance algorithm
 
-We will begin with a couple
+#### Overview
+
+The Hutchinson-Knopoff dissonance algorithm attempts to explain how listeners perceive certain chords as dissonant (unpleasant) and others as consonant (pleasant) [@hutchinson1978]. The algorithm is based on the hypothesis that dissonance derives from negatively valenced interactions between the harmonics in a given chord's frequency spectrum. This idea has its roots in the writings of @Helmholtz1875-fm. Though many other consonance/dissonance algorithms have been developed since its original presentation, the Hutchinson-Knopoff algorithm still performs remarkably well when benchmarked against current competitors from the literature [@Harrison2020-gx].
+
+#### Detailed description
+
+The algorithm takes a musical chord as its input. This chord would typically be specified as list of fundamental frequencies for each of its constituent tones; for example, a C dimished triad might be specified by the frequencies 261.6 Hz, 329.6 Hz, and 370.0 Hz.
+
+The first step is to expand each chord tone into its implied harmonics. Each harmonic corresponds to a whole-number multiple of the fundamental frequency, so for example the lowest tone of the triad would contain harmonics at 261.6 Hz, 261.6 \* 2 Hz, 261.6 \* 3 Hz, and so on.
+
+In the absence of further information about the chord, we need to make some assumptions about the amplitudes of the harmonics. In their original paper, Hutchinson and Knopoff propose that the amplitudes could be modelled as following a harmonic series, namely 1, 1/2, 1/3, 1/4, and so on. However, this assumption can easily be replaced with more detailed information about the harmonic amplitudes present in a particular musical timbre.
+
+Expanding the chord tones gives us a frequency spectrum like the following:
+
+```{r, fig.cap = "Frequency spectrum for a closed C diminished triad rooted on middle C (C4). The chord is modelled as containing 10 harmonics per tone, with amplitudes following a harmonic series. The three tones are differentiated by three different colours.", out.width = "100%"}
+expand_harmonics <- function(fundamental_frequencies, n_harmonics = 10) {
+  if (is.null(names(fundamental_frequencies))) {
+    names(fundamental_frequencies) <- seq_along(fundamental_frequencies)
+  }
+  n_tones <- length(fundamental_frequencies)
+  map2_dfr(fundamental_frequencies, names(fundamental_frequencies), function(f0, tone_id) {
+    tibble(
+      tone_id = tone_id,
+      harmonic_number = seq_len(n_harmonics),
+      frequency = f0 * harmonic_number,
+      amplitude = 1 / harmonic_number
+    )
+  })
+}
+
+c(
+  "C4    " = 261.6, 
+  "E4    " = 329.6, 
+  "F#4    " = 370.0
+) %>%
+expand_harmonics() %>%
+  ggplot(aes(colour = factor(tone_id))) + 
+  geom_linerange(aes(x = frequency, ymin = 0, ymax = amplitude)) + 
+  scale_x_continuous("Frequency (Hz)") +
+  scale_y_continuous("Amplitude") +
+  scale_colour_viridis_d("Tones:", end = 0.975) +
+  theme(
+    legend.direction = "horizontal",
+    legend.position = c(0.7, 0.75)
+  )
+  
+```
+
+In the above example, each tone has been expanded into 10 harmonics. Each tone is plotted in a distinct colour, and each harmonic appears as a vertical line with a given frequency and a given amplitude.
+
+The model works by considering pairwise interactions between partials in this spectrum. Each pair of partials contributes something towards the overall dissonance of the chord.
+
+To estimate these pairwise contributions, we iterate over all pairs of partials in the chord. This means first looking at the interaction between partial 1 and partial 2, then at the interaction between partial 1 and partial 3, then at partial 1 and partial 4, and so on. Once we have considered all possible interactions involving partial 1, we then look at the interaction between partial 2 and partial 3, then partial 2 and partial 4, and so on. This process is illustrated in the following animation:
+
+```{r, animation.hook = "gifski", interval = 0.3, out.width = "100%", fig.cap = "Animation illustrating the process of iterating over different pairs of partials (red) in the frequency spectrum."}
+spectrum <- c(
+    "C4    " = 261.6, 
+    "E4    " = 329.6, 
+    "F#4    " = 370.0
+  ) |>
+  expand_harmonics() |> 
+  arrange(frequency) |> 
+  mutate(partial_number = seq_along(frequency))
+n_partials <- nrow(spectrum)
+combinations <- combn(n_partials, 2, simplify = FALSE)
+for (comb in combinations) {
+  p <-
+    spectrum |> 
+    mutate(
+      highlight = seq_along(tone_id) %in% comb
+    ) |> 
+    ggplot(aes(colour = factor(highlight, levels = c("TRUE", "FALSE")))) + 
+    geom_linerange(aes(x = frequency, ymin = 0, ymax = amplitude)) + 
+    scale_x_continuous("Frequency (Hz)") +
+    scale_y_continuous("Amplitude") +
+    scale_colour_manual(values = c("red", "black")) +
+    ggtitle(
+      sprintf("Partials: %s, %s", comb[[1]], comb[[2]])
+    ) +
+    theme(
+      legend.position = "none"
+    )
+  print(p)
+}
+```
+
+Let's suppose we are trying to calculate the dissonance induced by partials 4 and 5. We begin by writing down their frequencies and amplitudes:
+
+```{r}
+spectrum |> 
+  slice(c(4, 5)) |> 
+  select(
+    Partial = partial_number,
+    "Frequency (Hz)" = frequency,
+    Amplitude = amplitude
+  ) |> 
+  knitr::kable()
+```
+
+The elicited dissonance comes from interference between these two partials. The extent to which two partials interfere depends on the *critical bandwidth* for those partials. The critical bandwidth tells us how close two partials have to be before they start interfering with each other. It is typically estimated using psychoacoustic experiments measuring masking effects.[^computational-music-psychology-2]
+
+[^computational-music-psychology-2]: Masking is when a particular sound obscures the perception of another sound. It is analogous to the phenomenon of occlusion in vision perception.
+
+The critical bandwidth is thought to correspond to a certain physical distance on the basilar membrane, estimated to be approximately 1 mm. Tones within a certain physical distance cause overlapping excitation patterns, producing interference effects such as masking and beating.
+
+```{r, include = FALSE}
+frequency <- 200
+cbw <- 1.72 * (frequency ^ 0.65)
+
+frequency <- 10000
+cbw <- 1.72 * (frequency ^ 0.65)
+```
+
+For low frequencies, a given physical distance on the basilar membrane will correspond to a relatively small frequency difference. For example, at 200 Hz, a 1 mm movement corresponds to a frequency change of approximately 50 Hz; in contrast, at 10,000 Hz, a 1 mm movement corresponds to a frequency change of approximately 700 Hz.
+
+Since critical bandwidth depends on physical distance, and since the same physical distance corresponds to higher frequency distances at higher frequencies, we find that critical bandwidth also increases for higher frequencies. @hutchinson1978 model this relationship using the following mathematical expression:
+
+```{=tex}
+\begin{equation}
+\mathrm{critical\ bandwidth}=1.72 \times \mathrm{frequency}^{0.65}
+(\#eq:critical-bandwidth)
+\end{equation}
+```
+where both critical bandwidth and frequency are expressed in Hz. This relationship looks like the following:
+
+```{r critical-bandwidth-frequency, fig.cap = "Critical bandwidth as a function of frequency."}
+df_cbw <- 
+  tibble(
+    frequency = seq(from = 20, to = 20000),
+    midi = 69 + 12 * log2(frequency / 440),
+    log_frequency = log(frequency),
+    cbw_dist_hz = 1.72 * (frequency ^ 0.65),
+    cbw_dist_freq_ratio = (frequency + cbw_dist_hz / 2) / (frequency - cbw_dist_hz / 2),
+    cbw_dist_semitones = 12 * log2(cbw_dist_freq_ratio)
+  )
+
+df_cbw %>%
+  ggplot(aes(frequency, cbw_dist_hz)) + 
+  geom_line() + 
+  scale_x_continuous("Frequency (Hz)") + 
+  scale_y_continuous("Critical bandwidth (Hz)")
+```
+
+It is interesting to express the same relationship using pitch notation instead of frequency notation. If we do so, we get the following curve:
+
+```{r, fig.cap = "Critical bandwidth as a function of pitch.", out.width = "100%"}
+df_cbw %>%
+  filter(frequency < 7000) %>%
+  ggplot(aes(midi, cbw_dist_semitones)) + 
+  geom_line() + 
+  scale_x_continuous(
+    "Pitch",
+    breaks = c(24, 36, 48, 60, 72, 84, 96),
+    labels = c("C1", "C2", "C3", "C4", "C5", "C6", "C7")
+  ) + 
+  scale_y_continuous(
+    "Critical bandwidth (semitones)"
+  )
+```
+
+The relationship appears to be inverted: we see now that, as pitch height increases, the critical band corresponds to *narrower* pitch intervals (as measured in semitones). Why is this? Well, before we were measuring critical bandwidth in terms of absolute frequency differences (measured in Hz), whereas now we are measuring critical bandwidth in terms of pitch intervals, which correspond to frequency *ratios*. While the absolute frequency distance does indeed increase as the base frequency increases, it doesn't decrease as fast as the base frequency. This means that the frequency ratio increases, and hence the pitch interval increases.
+
+This phenomenon has an interesting consequence for dissonance perception. It implies that a particular pitch interval may sound dissonant when played in a lower register, on account of the tones being localised to the same critical band, but may then become consonant when played in a higher register, because the critical bandwidth decreases causing the tones to be localised to separate critical bands. This phenomenon seems to provide a good explanation for voice spacing patterns in common-practice Western tonal music [@huron1992; @harrison2020].
+
+Let us return to the task of modelling the dissonance induced by partials 4 and 5. We begin by estimating the local **critical bandwidth** for these two partials. We do this by taking the average of the two frequencies and feeding it into Equation \@ref(eq:critical-bandwidth) (Figure \@ref(fig:critical-bandwidth-frequency)). In our example, we had frequencies of 532.2 Hz and 659.2 Hz, so our mean frequency is 591.2 Hz. So, our estimated critical bandwidth is
+
+$$
+1.72 \times 591.2 ^ {0.65} = 108.9 \mathrm{\ Hz}.
+$$
+
+Note that instead of using the mathematical equation, we could alternatively have found this number graphically, by taking a zoomed-in version of Figure \@ref(fig:critical-bandwidth-frequency), drawing a vertical line upwards from 591.2 Hz on the horizontal axis, finding its intersection with the plot line, and drawing a horizontal line to the vertical axis:
+
+```{r, fig.cap = "Calculating critical bandwidth from pitch.", out.width = "100%", animation.hook = "gifski", interval = 0.9}
+p <- 
+  df_cbw |> 
+  filter(frequency <= 800) |> 
+  ggplot(aes(frequency, cbw_dist_hz)) + 
+  geom_line() + 
+  scale_x_continuous("Frequency (Hz)") + 
+  scale_y_continuous("Critical bandwidth (Hz)", breaks = seq(from = 0, to = 150, by = 25))
+
+print(p)
+
+p <- p + 
+  geom_vline(xintercept = 591.2, colour = "red", linetype = "dashed") + 
+  geom_point(aes(x, y), data = tibble(x = 591.2, y = 108.9), colour = "red")
+  
+print(p)
+
+p <- p + 
+  geom_hline(yintercept = 108.9, colour = "red", linetype = "dotted")
+
+print(p)
+print(p)
+print(p)
+```
+
+We then express the distance between these two partials in units of critical bandwidth. We achieve this simply by dividing the distance in Hz by the critical bandwidth. This gives us:
+
+$$
+\frac{659.2 - 532.2}{108.9} = 1.17
+$$
+
+We then plug this number (1.17) into an idealised *dissonance curve* that characterises how dissonance varies as a function of the critical bandwidth distance between a pair of pure tones. Hutchinson & Knopoff's dissonance curve looks something like an inverted U, with a peak at 0.25 critical bandwidths:[^computational-music-psychology-3]
+
+[^computational-music-psychology-3]: Hutchinson & Knopoff presented their original curve graphically as an interpolation of results from previous psychoacoustic experiments. Bigand and colleagues (1996) subsequently introduced a parametric approximation that takes the following form:
+
+    $$
+    \left(
+    4y \exp \left( 1 - 4y \right) 
+    \right) ^ 2
+    $$
+
+    We tend to prefer the latter form because it is easy to implement computationally.
+
+```{r, fig.cap = "Idealised dissonance curve from @hutchinson1978, plotted using the parametric version specified by @Bigand1996.", animation.hook = "gifski", interval = 0.9, out.width = "100%"}
+if (FALSE) {
+  # Verifying the maximum is at 0.25
+  optim(0.5, dycon::hutch_g, control = list(fnscale = -1))
+}
+
+p <- 
+  tibble(
+    cbw_dist = seq(from = 0, to = 2, by = 0.01),
+    dissonance = dycon::hutch_g(cbw_dist, cbw_cut_off = 1e6)
+  ) %>%
+  ggplot(aes(cbw_dist, dissonance)) + 
+  geom_line() + 
+  scale_x_continuous("Distance between partials (in critical bandwidths)") + 
+  scale_y_continuous("Dissonance factor")
+
+print(p)
+
+p <- p + 
+  geom_vline(xintercept = 1.17, colour = "red", linetype = "dashed") + 
+  geom_point(aes(x, y), data = tibble(x = 1.17, y = 0.0139), colour = "red")
+  
+print(p)
+
+p <- p + 
+  geom_hline(yintercept = 0.0139, colour = "red", linetype = "dotted")
+
+print(p)
+print(p)
+print(p)
+```
+
+We find that, since the two partials are separated by more than one critical bandwidth, the resulting dissonance factor is rather low (just 0.014).
+
+The final step is to account for amplitude. We do two things here. First, we compute the *product of the amplitudes* for the two partials currently under consideration. Since both partials had amplitudes of 0.5, we get:
+
+$$
+0.5 \times 0.5 = 0.25.
+$$
+
+Second, we compute the *sum of squared amplitudes* over all the partials in the spectrum. Squaring means multiplying a number by itself; for example, two squared (written $2^2$) is four, three squared (written $3^2$) is nine, and so on. We compute the sum of squared amplitudes by first squaring all the amplitudes in the spectrum:
+
+```{r}
+spectrum |> 
+  mutate(
+    squared_amplitude = amplitude ^ 2,
+    frequency = sprintf("%.1f", frequency),
+    amplitude = sprintf("%.2f", amplitude),
+    squared_amplitude = sprintf("%.2f", squared_amplitude)
+  ) |> 
+  select(
+    Frequency = frequency, 
+    Amplitude = amplitude,
+    "Squared amplitude" = squared_amplitude
+  ) |> 
+  DT::datatable(
+  options = list(
+    searching = FALSE,
+    rowId = FALSE
+  ))
+```
+
+then taking their sum:
+
+$$
+1.00 + 1.00 + 1.00 + 0.25 + 0.25 + 0.25 + \ldots = `r sum(spectrum$amplitude ^ 2) |> round(3)`.
+$$
+
+Note that this expression is the same no matter which pair of partials we are considering, so we only need to compute it once for the whole spectrum.
+
+To get the final dissonance contribution of the two partials, we then take the previously computed dissonance factor (0.014), multiply it by the product of the amplitudes (0.25), and divide it by the sum of the squared amplitudes (4.469). This gives us:
+
+$$
+\frac{0.014 \times 0.25}{4.469} = 0.0008 
+$$
+
+Let's think about what role amplitude plays in this procedure. The fact that we multiply by the product of the amplitudes means that the dissonance contribution is *proportional* to the amplitudes of each of the two partials. In other words, if we double the amplitude of either partial, the resulting dissonance contribution will be doubled. Dividing by the sum of the squared amplitudes, meanwhile, has the effect of normalising by the spectrum's overall amplitude. The consequence in particular is that dissonance ends up being independent of the chord's *overall* amplitude; for example, if we double the amplitude of every partial in the spectrum, then the overall dissonance will stay the same. It is only by changing the amplitudes of some partials and not others that the overall dissonance will change.
+
+We repeat this process for every pair of partials in the spectrum. This gives us a table like the following:
+
+```{r}
+tibble(
+  i1 = map_int(combinations, 1),
+  i2 = map_int(combinations, 2),
+  f1 = spectrum$frequency[i1],
+  f2 = spectrum$frequency[i2],
+  a1 = spectrum$amplitude[i1],
+  a2 = spectrum$amplitude[i2],
+  f_mean = (f1 + f2) / 2,
+  cbw = dycon::hutch_cbw(f1, f2),
+  cbw_dist = abs(f2 - f1) / cbw,
+  dissonance_factor = dycon::hutch_dissonance_function(f1, f2),
+  a1_a2 = a1 * a2,
+  sum_sq_amp = sum(spectrum$amplitude ^ 2),
+  dissonance = dissonance_factor * a1_a2 / sum_sq_amp
+) |> 
+  mutate(
+    across(where(is.double), ~ sprintf("%.2f", .))
+  ) |> 
+  select(- i1, -i2) |> 
+  rename(
+    "Frequency 1" = f1,
+    "Frequency 2" = f2,
+    "Amplitude 1" = a1,
+    "Amplitude 2" = a2,
+    "Mean frequency" = f_mean,
+    "Critical bandwidth" = cbw,
+    "Critical bandwidth distance" = cbw_dist,
+    "Dissonance factor" = dissonance_factor,
+    "Product of amplitudes" = a1_a2, 
+    "Sum of squared amplitudes" = sum_sq_amp,
+    "Dissonance" = dissonance
+  ) |> 
+  DT::datatable(
+  options = list(
+    searching = FALSE,
+    rowId = FALSE,
+    columnDefs = list(list(className = 'dt-center', targets = "_all"))
+  ))
+```
+
+, on account of interference within the critical band, but will become consonant when played in a sufficiently high register, because
+
+a given frequency difference in Hz corresponds to
+
+The model supposes that the dissonance induced by a single pair of partials depends on two primary factors: *distance* and *amplitude*.
+
+The amplitude effect works as follows: dissonance is modelled as being *proportional* to the amplitudes of both partials. This means that doubling the amplitude of a particular partial will double the dissonance contribution of that partial. There is additionally a normalising factor which we will describe later.
+
+The distance effect is a modelled as a smooth function that looks something like an inverted U:
+
+Notice the units of the horizontal axis: *critical bandwidths*. Critical bandwidths are closely related to the notion of physical distance within the cochlea. Tones that are separated by less than one critical bandwidth are close enough to interfere physically one another through beating and masking effects. According to this model, peak dissonance occurs when the tones are separated by 0.25 critical bandwidths.
+
+Critical bandwidth varies as a function of pitch height. The following figure plots critical bandwidth in semitones as a function of pitch expressed using letter names (C1, C2, C3), where numbers denote octaves. We can see that, as pitch decreases, critical bandwidth increases. As a consequence, intervals that elicit little dissonance in high registers will end up eliciting high dissonance in low registers.
+
+These factors of amplitude and distance are combined in the following mathematical expression:
+
+$$
+d_{ij}= \frac{A_iA_jg_{ij}}{\sum_k{A_k^2}}
+$$
+
+where:
+
+-   $d_{ij}$ is the dissonance contribution from the interactions between partial $i$ and partial $j$
+
+-   $A_i$ is the amplitude of partial $i$
+
+-   $A_j$ is the amplitude of partial $j$
+
+-   $g_{ij}$ is the dissonance component that depends on the critical bandwidth distance between partials
+
+-   $\sum_k{A_k^2}$ is a normalising factor, corresponding to the sum of the squared amplitudes of all of the partials. This normalising factor ensures that dissonance is independent of the overall amplitude of the chord as a whole.
+
+This mathematical notation may be a little unfamiliar to some of you. There are a couple of mathematical notations to note here. The first is *index notation*, where we write small letters or numbers in subscripts, for example:
+
+$$
+A_i
+$$
+
+The subscript expression ($i$ in the above) is called the index. It is used as a counter to differentiate between multiple versions of an object. For example, in our above model, $A_1$ denotes the amplitude of the first partial, $A_2$ denotes the amplitude of the second partial, and so on.
+
+When we write mathematical expressions using indices, we often write them in *generic* forms. This means that, instead of writing $A_1$ or $A_2$, we write $A_i$, which refers to the $i$th partial.
+
+So, to calculate the dissonance contribution of a pair of pure tones, we must first calculate the critical bandwidth at their mean frequency[^computational-music-psychology-4], then plug this into the dissonance curve. Suppose for e
+
+[^computational-music-psychology-4]: This is the way Hutchinson and Knopoff do it (calculate the mean frequency, then plug it into the critical bandwidth plot); there are however more principled ways that one could do this.
+
+However, we must also take into account the amplitudes of the tones. Hutchinson and Knopoff claim in particular that the dissonance contribution is proportional to the *product* of the two tones' amplitudes [TODO divided by the sum of the ; or just normalising factor?]; in other words, if we double the amplitude of any one of these tones, the overall dissonance contribution will be doubled.
+
+So, we have a procedure for calculating the dissonance contribution of a given pair of pure tones.
+
+The model breaks down the aggregate dissonance of the chord into many
+
+The model supposes that dissonance is an *additive* phenomenon, whereby the aggregate dissonance of the chord comes from adding together the induced
 
 ## What role does modelling play in the scientific method?
 
