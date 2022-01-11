@@ -48,7 +48,7 @@ These functions also define certain variables. A variable is a named container f
 y <- N / i
 ```
 
-The token `<-`is used in R to denote variable assignment. It takes the expression on the right-hand side ($N / i$), computes the result, and assigns it to the left-hand side.
+The token `<-` is used in R to denote variable assignment. It takes the expression on the right-hand side ($N / i$), computes the result, and assigns it to the left-hand side.
 
 Each function contains a series of instructions for the computer to execute. These instructions are expressed as a series of lines of code. Ordinarily these lines are executed one after each other, but in special cases they execute in a more complex order. One such case is the 'for' loop. When in a 'for' loop, we repeat the same passage of code multiple times, each time updating the value of a particular variable within the loop. Take the following simple example:
 

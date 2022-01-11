@@ -31,15 +31,15 @@ Why is precision desirable in a scientific theory?
 
 -   **Precise theories are more empirically testable.** The scientific method relies heavily on conducting experiments to test different theories. To test a theory, we need to generate predictions from the theory, and compare them to what we see in our experiment. In this context, precise theories have a clear advantage: they specify precisely what features need to be measured, and how the resulting information ought to be processed, producing a precise prediction as a result. Even subtle deviations from that prediction can have informative results: for example, Newton's theory failed to predict certain perturbation's in the planet Mercury's orbit that were only eventually resolved by Einstein's theory of general relatively. Imprecise theories are comparatively poorly suited to prediction generation. They rely on concepts that are only loosely defined, and they rely on the the reader filling certain gaps with their own intuitions and assumptions. As a result, the theories do not generate precise predictions, and this makes them hard to falsify, because the same theory is compatible with many different datasets.
 
--   **Precise theories have useful engineering applications.** Once a theory is developed with sufficient precision, we can implement it as a computer program. This computer program can then be used to simulate and reproduce the scientific phenomenon being studied. This can have many useful engineering applications. In the context of aeronautical engineering, simulations of jet engine architectures can help engineers to optimise engine designs without having to run thousands of costly experiments with real engines. In the context of music psychology, simulations of (for example) emotion perception can be used to guide music recommendation systems, helping listeners to retrieve music that matches their mood.
+-   **Precise theories have useful engineering applications.** Once a theory is developed with sufficient precision, we can use it to generate predictions with minimal input from the researcher. This can have many useful engineering applications. In the context of aeronautical engineering, simulations of jet engine architectures can help engineers to optimise engine designs without having to run thousands of costly experiments with real engines. In the context of music psychology, simulations of (for example) emotion perception can be used to guide music recommendation systems, helping listeners to retrieve music that matches their mood.
 
--   more information
+Many of the phenomena we are interested in music psychology (e.g. emotion, expression, aesthetics) are highly complex, relying on many psychological processes that are themselves complex and hard to define. If we did eventually develop a comprehensive and precise theory of musical emotions, we would hardly be able to apply it with a back-of-the-envelope calculation like we could with Newton's theory. However, such calculations become possible once we take advantage of *computational* methods. Computer programs make it possible to construct precise theories that are substantially more complex than Newton's theory, and that require many many calculations for generating predictions. We call this process *computer modelling*.
 
--   scientific testability
+are the natural extension of equations like Newton's; t
 
--   engineering applicability
+There would be far too many processes involved.
 
-If the goal of scientific research is to develop maximally precise
+that they could never be summarised by a theory as simple as Newton's law of gravitation.
 
 ## Engineering and computer models
 
