@@ -908,15 +908,35 @@ We then plug this number (1.17) into an idealised *dissonance curve* that charac
     where $y$ is the critical bandwidth distance. We tend to prefer the latter form because it is easy to implement computationally.
 
 ```{r dissonance-curve, fig.cap = "Idealised dissonance curve from @hutchinson1978, plotted using the parametric version specified by @Bigand1996.", animation.hook = "gifski", interval = 0.9, out.width = "100%"}
-if (FALSE) {
-  # Verifying the maximum is at 0.25
-  optim(0.5, dycon::hutch_g, control = list(fnscale = -1))
+get_cbw <- function(f1, f2) {
+  mean_f <- (f1 + f2) / 2
+  1.72 * (mean_f ^ 0.65)
 }
+
+dissonance_curve <- function(bandwidth_distance) {
+  (4 * bandwidth_distance * exp(1 - 4 * bandwidth_distance)) ^ 2
+}
+
+get_dissonance_factor = function(f1, f2) {
+  abs_freq_diff <- abs(f1 - f2)
+  critical_bandwidth <- get_cbw(f1, f2)
+  bandwidth_distance <- abs_freq_diff / critical_bandwidth
+  dissonance_factor <- dissonance_curve(bandwidth_distance)
+  dissonance_factor
+}
+
+# Verifying the maximum is at 0.25
+stopifnot(
+  all.equal(optim(0.5, dissonance_curve, control = list(fnscale = -1), 
+                  method = "Brent", 
+                  lower = 0, 
+                  upper = 10)$par, 0.25)
+)
 
 p <- 
   tibble(
     cbw_dist = seq(from = 0, to = 2, by = 0.01),
-    dissonance = dycon::hutch_g(cbw_dist, cbw_cut_off = 1e6)
+    dissonance = dissonance_curve(cbw_dist)
   ) %>%
   ggplot(aes(cbw_dist, dissonance)) + 
   geom_line() + 
@@ -988,7 +1008,9 @@ Let's think about what role amplitude plays in this procedure. The fact that we 
 We repeat this process for every pair of partials in the spectrum. This gives us a table like the following:
 
 ```{r}
-dissonance_by_partial_pairs <- 
+get_dissonance_by_partial_pairs <- function(spectrum) {
+  n_partials <- nrow(spectrum)
+  combinations <- combn(n_partials, 2, simplify = FALSE)
   tibble(
     i1 = map_int(combinations, 1),
     i2 = map_int(combinations, 2),
@@ -997,14 +1019,17 @@ dissonance_by_partial_pairs <-
     a1 = spectrum$amplitude[i1],
     a2 = spectrum$amplitude[i2],
     f_mean = (f1 + f2) / 2,
-    cbw = dycon::hutch_cbw(f1, f2),
+    cbw = get_cbw(f1, f2),
     cbw_dist = abs(f2 - f1) / cbw,
-    dissonance_factor = dycon::hutch_dissonance_function(f1, f2),
+    dissonance_factor = get_dissonance_factor(f1, f2),
     a1_a2 = a1 * a2,
     sum_sq_amp = sum(spectrum$amplitude ^ 2),
     dissonance = dissonance_factor * a1_a2 / sum_sq_amp
   )
+}
 
+dissonance_by_partial_pairs <- get_dissonance_by_partial_pairs(spectrum)
+  
 dissonance_by_partial_pairs |> 
   mutate(
     across(where(is.double), ~ sprintf("%.2f", .))
@@ -1045,7 +1070,13 @@ list(
   "C sus4" = c(60, 65, 67),
   "C sus2" = c(60, 62, 67)
 ) %>% 
-  map_dbl(dycon::roughness_hutch) %>% 
+  map_dbl(function(midi) {
+    freq <- 440 * 2 ^ ((midi - 69) / 12)
+    spectrum <- expand_harmonics(freq)
+    get_dissonance_by_partial_pairs(spectrum) %>% 
+      pull(dissonance) %>% 
+      sum()
+  }) %>% 
   tibble(
     label = names(.),
     dissonance = .
