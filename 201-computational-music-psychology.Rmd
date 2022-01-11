@@ -1,3 +1,5 @@
+# (PART) Computational approaches {.unnumbered}
+
 # Computational music psychology
 
 ```{r, include = FALSE}
@@ -15,11 +17,11 @@ Scientific theories take various forms. In physics, theories often take the form
 
 $$
 F = G \frac{m_1 m_2}{r^2}
-$$ where $G$ is the [gravitational constant](https://en.wikipedia.org/wiki/Gravitational_constant).
+$$ where $G$ is the gravitational constant.
 
-In psychology, equations are less common. Instead, psychological theories are often expressed verbally. For example, Juslin's BRECVEMA model \[@juslin2013\] states that emotional responses to music are primarily mediated by eight psychological mechanisms (brain stem reflexes, rhythmic entrainment, evaluative conditioning, contagion, visual imagery, episodic memory, musical expectancy, and aesthetic judgment), and provides verbal accounts of each of these mechanisms. For example, Juslin writes the following about the brain stem reflex [@juslin2013]:
+In psychology, equations are less common. Instead, psychological theories are often expressed verbally. For example, Juslin's BRECVEMA model [@juslin2013] states that emotional responses to music are primarily mediated by eight psychological mechanisms (brain stem reflexes, rhythmic entrainment, evaluative conditioning, contagion, visual imagery, episodic memory, musical expectancy, and aesthetic judgment), and provides verbal accounts of each of these mechanisms. For example, Juslin writes the following about the brain stem reflex [@juslin2013]:
 
-> *Brain stem reflex* refers to a process whereby an emotion is induced by music because one or more fundamental acoustic characteristics of the music are taken by the brain stem to signal a potentially important and urgent event that needs attention [\[39\]](https://www.sciencedirect.com/science/article/pii/S1571064513000638#br0390). In music, this could involve sounds that are sudden, loud, or dissonant, or that feature accelerating patterns. Brain stem reflexes are quick, automatic, and unlearned. A famous example that may evoke a brain stem reflex in a listener given a certain sound level is the kettledrum stroke in Joseph Haydnʼs Symphony No. 94 [\[187, p. 81\]](https://www.sciencedirect.com/science/article/pii/S1571064513000638#br1890). More commonly perhaps, such reactions result from dynamic changes in the music (e.g., a full orchestra or band coming in after a short solo intro). Brain stem reflexes may increase *arousal* and evoke feelings of *surprise* in the listener [\[100\]](https://www.sciencedirect.com/science/article/pii/S1571064513000638#br1000).
+> *Brain stem reflex* refers to a process whereby an emotion is induced by music because one or more fundamental acoustic characteristics of the music are taken by the brain stem to signal a potentially important and urgent event that needs attention. In music, this could involve sounds that are sudden, loud, or dissonant, or that feature accelerating patterns. Brain stem reflexes are quick, automatic, and unlearned. A famous example that may evoke a brain stem reflex in a listener given a certain sound level is the kettledrum stroke in Joseph Haydnʼs Symphony No. 94. More commonly perhaps, such reactions result from dynamic changes in the music (e.g., a full orchestra or band coming in after a short solo intro). Brain stem reflexes may increase *arousal* and evoke feelings of *surprise* in the listener.
 
 This brain-stem component of Juslin's theory is already more complex than Newton's theory. It refers to a variety of musical features (suddenness, loudness, dissonance, acceleration), physiological states (arousal) and subjective experiences (surprise), as opposed to Newton's theory which explains gravity solely in terms of mass ($m_1$, $m_2$) and distance ($r$).
 
@@ -61,7 +63,7 @@ These instructions might be fine for a human, but if we want to give instruction
 
 Here is an implementation of our prime number checker written for the R programming language. Take a moment to read it through line by line. If you are new to programming, there will be many new things here. Nonetheless, the syntax is designed to be intuitive, and with some thought you should be able to make a good guess at what is happening at each point.
 
-```{r}
+```{r, echo = TRUE}
 is_prime <- function(N) {
   for (i in seq(from = 2, to = N - 1)) {
     y <- N / i
@@ -89,7 +91,7 @@ The token `<-` is used in R to denote variable assignment. It takes the expressi
 
 Each function contains a series of instructions for the computer to execute. These instructions are expressed as a series of lines of code. Ordinarily these lines are executed one after each other, but in special cases they execute in a more complex order. One such case is the 'for' loop. When in a 'for' loop, we repeat the same passage of code multiple times, each time updating the value of a particular variable within the loop. Take the following simple example:
 
-```{r}
+```{r, echo = TRUE}
 for (i in seq(from = 1, to = 6)) {
   message(paste("The current value of i is", i))
 }
@@ -112,7 +114,7 @@ Instead of looping from `1` to `6`, we're now looping from `2` to `N - 1`. In ea
 
 Let's define a new version of `is_prime` where we print information about what's happening at each point.
 
-```{r}
+```{r, echo = TRUE}
 is_prime <- function(N) {
   message(paste0("Checking whether the number ", N, " is prime..."))
   for (i in seq(from = 2, to = N - 1)) {
@@ -142,7 +144,7 @@ is_integer <- function(x) {
 
 Now we can evaluate it on a few numbers and see what happens.
 
-```{r}
+```{r, echo = TRUE}
 is_prime(4)
 
 is_prime(5)
@@ -154,7 +156,7 @@ We can see that the functions are indeed carrying out the logic that we requeste
 
 It's worth noting that we could just as easily have implemented our algorithm in Python. The resulting code looks a little different, but the underlying logic is exactly the same:
 
-```{python}
+```{python, echo = TRUE}
 def is_prime(N):
     for i in range(2, N):
         y = N / i
@@ -190,7 +192,7 @@ There are more options out there for installing and using Python. One simple ins
 
 ## What do music psychology models look like?
 
-There are many computational models of music perception and production in the literature (see [@Temperley2013-fg] for a review). A good way to get a feel for computational modelling is to dive deeply into a few examples. Here we will consider two such models in detail: the Krumhansl-Schmuckler key-finding algorithm [@krumhansl1990cognitive], and the Hutchinson-Knopoff dissonance algorithm [@hutchinson1978].
+There are many computational models of music perception and production in the literature (see [@Temperley2013-fg] for a review). A good way to get a feel for computational modelling is to dive deeply into a few examples. Here we will consider two such models in detail: the Krumhansl-Schmuckler key-finding algorithm [@krumhansl1990cognitive], and the Hutchinson-Knopoff dissonance algorithm [@hutchinson1978]. They might appear somewhat complex on first sight, but don't worry, you're not expected to understand all the details straight away!
 
 ### The Krumhansl-Schmuckler key-finding algorithm
 
@@ -529,7 +531,7 @@ One possibility is that the templates are learned through exposure to particular
 
 #### Limitations
 
-The Krumhansl-Schmuckler algorithm has been very influential within the field of music psychology, and many subsequent key-finding algorithms use a similar kind of template-matching process [@albrecht2013; @Bellmann2005; @Sapp2011; @Temperley1999a\]. Nonetheless, the algorithm is limited by the fact that it ignores the *order* in which notes are played, despite psychological evidence that note order may indeed matter for listeners' key judgments \[@brown1988; @matsunaga2005].
+The Krumhansl-Schmuckler algorithm has been very influential within the field of music psychology, and many subsequent key-finding algorithms use a similar kind of template-matching process [@albrecht2013; @Bellmann2005; @Sapp2011; @Temperley1999a]. Nonetheless, the algorithm is limited by the fact that it ignores the *order* in which notes are played, despite psychological evidence that note order may indeed matter for listeners' key judgments [@brown1988; @matsunaga2005].
 
 For illustration, consider the following two tone sequences from @matsunaga2005. Both of these sequences use exactly the same pitch classes, just in a different order, and with one of the pitch classes transposed upwards by an octave. The first sequence elicits a very clear tonal centre:
 
@@ -692,7 +694,7 @@ kk_estimate_key(
 
 #### Overview
 
-The Hutchinson-Knopoff dissonance algorithm attempts to explain how listeners perceive certain chords as dissonant (unpleasant) and others as consonant (pleasant) [@hutchinson1978\]. The algorithm is based on the hypothesis that dissonance derives from negatively valenced interactions between the harmonics in a given chord's frequency spectrum. This idea has its roots in the writings of @Helmholtz1875-fm. Though many other consonance/dissonance algorithms have been developed since its original presentation, the Hutchinson-Knopoff algorithm still performs remarkably well when benchmarked against current competitors from the literature \[@Harrison2020-gx].
+The Hutchinson-Knopoff dissonance algorithm attempts to explain how listeners perceive certain chords as dissonant (unpleasant) and others as consonant (pleasant) [@hutchinson1978]. The algorithm is based on the hypothesis that dissonance derives from negatively valenced interactions between the harmonics in a given chord's frequency spectrum. This idea has its roots in the writings of @Helmholtz1875-fm. Though many other consonance/dissonance algorithms have been developed since its original presentation, the Hutchinson-Knopoff algorithm still performs remarkably well when benchmarked against current competitors from the literature [@Harrison2020-gx].
 
 #### Detailed description
 
@@ -1076,7 +1078,7 @@ It is generally assumed that the dissonance induced by a pair of partials comes 
 
 -   The model assumes that the dissonance factor is determined by the critical bandwidth distance between the partials. However, more recent studies of auditory roughness have shown that the point of maximum roughness (i.e. the peak of the curve) is not found at a fixed critical bandwidth distance, and likewise the point where roughness disappears is not found at a fixed critical bandwidth distance either.
 
-Several models have subsequently developed that address some of these concerns, for example Vassilakis's model [@Vassilakis2001\] and Daniel & Weber's model \[@Daniel1997; @Wang2013]. Curiously, however, these updates seem if anything to make the models *worse* at capturing musical dissonance [@Harrison2020-gx]. More work needs to be done to dig into these discrepancies and understand how consonance may or may not be explained through roughness modelling.
+Several models have subsequently developed that address some of these concerns, for example Vassilakis's model [@Vassilakis2001] and Daniel & Weber's model [@Daniel1997; @Wang2013]. Curiously, however, these updates seem if anything to make the models *worse* at capturing musical dissonance [@Harrison2020-gx]. More work needs to be done to dig into these discrepancies and understand how consonance may or may not be explained through roughness modelling.
 
 #### A note on mathematical notation
 
@@ -1225,218 +1227,34 @@ dissonance_by_partial_pairs
 sum(dissonance_by_partial_pairs$dissonance)
 ```
 
-## What role does modelling play in the scientific method?
+## Modelling philosophies
 
-## Modelling methodologies
+There are many different approaches to computer modelling in the music psychology literature. Every approach has its own advantages and disadvantages. We will now consider a couple of relevant issues in turn.
 
-Computer models are generally used for one of the three following goals: theory development, theory evaluation, and prediction generation.
+### Symbolic versus audio inputs
 
-### Theory development
+Computer models typically take some kind of input and return some kind of output. In the context of music modelling, the input is typically some kind of musical extract, and the output typically represents some kind of subjective response to that extract.
 
-Computer models can help us by filling in missing gaps of existing theories.
+Input musical extracts may be represented in two main ways: in audio format, or in symbolic format.
 
-One useful application of computer models is for filling in missing gaps of theories. For example,
+-   **Audio formats** represent the music as a waveform, and can be stored in common file formats such as `wav` and `mp3`. They carry a lot of raw information about the music and its performance.
 
-Suppose that we have developed a promising but incomplete theory of
+-   **Symbolic formats** represent the music using simplified notation intended to capture the essential structural details of the music. For example, a C major triad might be represented as a collection of MIDI note numbers: $[60, 64, 67]$.
 
-Suppose that we have decided to study a particular psychological phenomenon, and suppose that we have a hypothetical
+There is a sense in which symbolic formats represent latter stages of perceptual processing than audio formats. The audio file represents the sound as it exists in the air; the symbolic file represents concepts such as pitches and chords, which are only derived after a complex series of physical and psychological processes that are carried out both in the ear and in the brain.
 
-that we have a psychological phenomenon that we wish to understand, an
+In theory, audio models can be considerably more powerful than symbolic models. Audio files are typically straightforward to get hold of, both in the context of Western and non-Western musics. In contrast, symbolic music transcriptions are often laborious to put together. Western Classical music works quite well for symbolic analysis, because most pieces already have published musical scores, and these scores can be converted into machine-readable representations with only a moderate amount of effort. However, many other musical styles do not use musical scores by default, and hence creating a symbolic transcription requires transcribing from audio, which is a highly time-consuming and difficult task. Moreover, there is a sense in which audio better approximates the 'true' information that the human receives when they listen to music; in contrast, when we encode a musical piece in symbolic notation, it's easy to end up encoding additional information (e.g. key signatures) or assumptions (e.g. metric hierarchy) that are not directly available to the listener.
 
-have identified a psychological phenomenon that we wish to understand, and we have an incomplete
+In practice, however, audio models have traditionally experienced some difficulties versus symbolic models. Because it is still difficult to simulate the early stages of music perception computationally (e.g. pitch tracking, chord recognition), it is difficult to use audio models to study later or more advanced stages of music perception (e.g. sensitivity to harmonic syntax), because the models get 'stuck' at these early stages. In contrast, it seems possible to make quicker progress here with symbolic models, which can take these early processing stages for granted and begin immediately with modelling higher-level cognition.
 
-This is the part of the research pipeline where we have identified a particular psychological phenomenon that we wish to study
+### Neuroscientific, cognitive, biological, acoustic
 
--   we write down a model that has some missing bits
+We know that psychological processes are ultimately mediated by the neurons in the brain. There are billions of these neurons, and they connect to each other to form networks of extraordinarily complexity. One issue of contention in the psychological literature concerns the following question: to what extent should our computational models focus on modelling individual neurons (the **neuroscientific** approach) versus modelling abstract psychological constructs (the **cognitive** approach)?
 
--   we use data to fill in the missing bits
+There is a sense in which the 'true' answer to how the mind works is ultimately neuroscientific: everything that happens is ultimately happening at a neural level. The main difficulty is that the brain is so hard to read at this level. Knowledge seems to be represented and processed in a very distributed manner, and decoding these dynamics has proved to be very complex, even in the case of very simple organisms. This difficulty of neural decoding is massively compounded once we try to study humans, which mostly rules out many invasive neuroscientific methods for ethical reasons. It's further compounded once we try to study complex high-level processes such as aesthetic appreciation; the more subtle and high-level a phenomenon, the harder it tends to be to find direct neural correlates in the brain.
 
-    -   regression is one way of doing that
+The cognitive approach sidesteps this issue by modelling psychological processes at a higher level of abstraction. Instead of modelling the behaviour of individual neurons, we model the abstract units of information that these neurons are meant to represent, and we model the computational processes that are applied to these units of information. The Krumhansl-Kessler algorithm is an example of a cognitive model; it directly processes collections of pitch classes, and does not worry about how those pitch classes are represented neurally. A useful benefit of the cognitive approach is that its algorithms can often be performed manually by the researcher; this makes them much easier to interpret and to reason about. However, this comes with the sacrifice of knowing that one can only ever gain an approximation to the underlying neuroscientific truth.
 
-    -   parameter optimisation another (this is a generalisation of regression)
+In music psychology we also often see models that have biological or acoustic elements. The Hutchinson-Knopoff is one such example; it derives its predictions by considering the way that chords produce certain kinds of frequency spectra, and the way that the resulting frequency components interfere with one another depending on their respective critical bandwidths, which reflect the underlying biology of the inner ear.
 
-In theory development, we have identified a particular interesting psychological phenomenon, and we are trying to development
-
--   Optimising a memory decay hyperparameter
-
--   Optimising the weights of different features in an emotion model (regression)
-
-    -   Is a regression model really a computational model? yes....?
-
-        -   methods for developing models:
-
-            -   rational analysis
-
-            -   regression
-
--   Comparing roughness and harmonicity models
-
-### Theory evaluation
-
-### Theory development
-
-to support one of three research tasks: theory development, theory evaluation, and prediction
-
-fits into one of three stages of the research pipeline: theory development, theory evaluation, or prediction generation.
-
--   Theory development
-
--   Theory evaluation
-
--   Prediction generation
-
-Computer models have two main applications in psychological research. When the problem domain is not yet well understood, computer models can play an important role in *theory development*, helping researchers to choose between competing explanations of a phenomenon. Once the problem domain becomes well-understood, computer models then become valuable for *prediction generation*, allowing the researcher to predict the outcome of an experiment without actually running it.
-
-### Computer models for theory development
-
-We begin this process by identifying an interesting psychological phenomenon which we wish to study. For example, we might be interested in studying listeners' perception of emotion in melodies.
-
-The next step is to identify a set of candidate psychological mechanisms for the phenomenon. These candidate mechanisms will often be derived from previous literature, but they may also be derived from our own intuitions. These candidate mechanisms may or may not be mutually exclusive. In the case of melodic emotion perception, we might hypothesise multiple non-exclusive mechanisms, including the recognition of ascending versus descending contours, major versus minor modes, legato versus staccato articulation, and so on.
-
-We then proceed by implementing computer models that simulate these mechanisms. Each computer model will typically be a piece of computer software that takes a musical stimulus as an input and simulates the psychological processing of that stimulus. The output will typically be one or more numbers that capture the outcome of the process. For example, a simple mode recognition algorithm might return 1 for major-key melodies and 0 for minor-key melodies.
-
-In the next step, we design an experiment for probing these models.
-
-For example, we might decide to study *key finding*, the process by which a listener identifies the key of a g
-
-1.  **Identify an interesting psychological phenomenon.** For example, we might be interested in studying listeners' perception of emotion in melodies.
-
-2.  **Identify candidate psychological mechanisms for this phenomenon.** These candidate mechanisms will often be derived from previous literature, but they may also be derived from our own intuitions. These candidate mechanisms may or may not be mutually exclusive. In the case of melodic emotion perception, we might hypothesise multiple non-exclusive mechanisms, including the recognition of ascending versus descending contours, major versus minor modes, legato versus staccato articulation, and so on.
-
-3.  **Implement computer models that simulate these mechanisms.** Each computer model will typically be a piece of computer software that takes a musical stimulus as an input and simulates the psychological processing of that stimulus. The output will typically be one or more numbers that capture the outcome of the process. For example, a simple mode recognition algorithm might return 1 for major-key melodies and 0 for minor-key melodies.
-
-4.  **Design an experiment for probing these models.** The experiment could simply comprise a set of musical stimuli to be presented to the participant.
-
-5.  **Generate model predictions.** This will typically involve running the models on each stimulus and recording the models' outputs.
-
-6.  This stimulus set should be designed to systematically probe the different computer models.
-
-Suppose we have identified a problem domain which we want to study, for example *key finding*, the process by which a listener identifies the key of a given musical passage.
-
-### Computer models for prediction generation
-
-complem
-
-Second, they can be used for *prediction generation*
-
-When the problem domain is still not well-understood, models can be used as a tool for *theory*
-
-## Case studies
-
-```{r}
-
-```
-
-### Hutchinson & Knopoff's dissonance model
-
-### Other models
-
-## Modelling traditions
-
-## Modelling and empirical research
-
-The basic methodology of computational music psychology works as follows:
-
-1.  **Identify an interesting psychological phenomenon.** For example, we might be interested in studying listeners' perception of emotion in melodies.
-
-2.  **Identify candidate psychological mechanisms for this phenomenon.** These candidate mechanisms will often be derived from previous literature, but they may also be derived from our own intuitions. These candidate mechanisms may or may not be mutually exclusive. In the case of melodic emotion perception, we might hypothesise multiple non-exclusive mechanisms, including the recognition of ascending versus descending contours, major versus minor modes, legato versus staccato articulation, and so on.
-
-3.  **Implement computer models that simulate these mechanisms.** Each computer model will typically be a piece of computer software that takes a musical stimulus as an input and simulates the psychological processing of that stimulus. The output will typically be one or more numbers that capture the outcome of the process. For example, a simple mode recognition algorithm might return 1 for major-key melodies and 0 for minor-key melodies.
-
-4.  **Design an experiment for probing these models.** The experiment could simply comprise a set of musical stimuli to be presented to the participant.
-
-5.  **Generate model predictions.** This will typically involve running the models on each stimulus and recording the models' outputs.
-
-6.  This stimulus set should be designed to systematically probe the different computer models.
-
-The basic paradigm of computational music psychology works as follows:
-
-1.  Identify a particular psychological phenomenon of interest
-
-2.  Compile or develop one or more candidate psychological theories for explaining that phenomenon
-
-3.  Implement these theories as computational models.
-
-4.  Design one or more experimental paradigms for probing these models.
-
-5.  Generate model predictions for these experimental paradigms. If there are multiple models, these experimental paradigms should ideally yield dissociated model predictions. If not, maybe revisit the design.
-
-6.  Compile empirical datasets from human listeners for these experimental paradigms.
-
-7.  Compare the human responses to the model predictions.
-
-    1.  Can compare models
-
-    2.  Can optimise model parameters
-
-Note: sometimes the datasets exist already.
-
-Computational music psychologists work by developing and evaluating computer simulations of mental processes underlying musical behaviours such as music listening, music performance, and music composition. These simulations take as input ... and return as output...
-
-The goal of ordinary music psychology research is to develop empirically grounded theories of the mental processes underlying musical behaviours such as music listening, music performance, and music composition. Typical methods include both behavioural experiments, where participants are instructed to make judgments in response to particular musical stimuli, and neuroscientific experiments, where participants have their brain responses recorded while listening to various musical stimuli.
-
-Computational music psychology incorporates an additional component of computer simulation into this paradigm.
-
-aim to develop effective computer simulations of the mental process
-
-The goal of music psychology research is to understand the mental processes underlying musical behaviours such as music listening, music performance, and music composition. $$...$$ $$Typical methods include$$
-
-Computational music psychology is a branch of music psychology that incorporates computer simulations into its workflow. These simulations are intended to represent the biological and psychological processes underpinning a particular
-
-research
-
-has similar goals, but incorporates
-
-What is music psychology?
-
-What is the role of the computer here?
-
-Why would you use a computer here?
-
-### Motivations
-
-As discussed already
-
-### Computational metaphor (information processing)
-
-Introduce idea of data structures and algorithms
-
-Relate to cognitive equivalents
-
-### Traditions
-
--   Symbolic versus connectionist AI
-
--   Cognitive versus neuro
-
--   Psychoacoustic
-
-### Audio vs symbolic processing
-
-### Strategies
-
-Intuitive:
-
--   Just write down what we think happens
-
-Marr:
-
--   What problem is the mind trying to solve?
-
--   What algorithm is used to implement that solution?
-
--   How is that algorithm implemented in the brain?
-
-Rational observer:
-
--   Derive the optimal solution to a task
-
--   Compare this to the brain
-
-Bounded rationality:
-
--   Like rational observer approach, but incorporating processing constraints
-
-Learning by imitation:
-
--   Machine learning
+Ultimately a comprehensive account of music psychology will have to incorporate each of these aspects. Computer modelling provides a promising way to unite these aspects together in a precise yet interpretable fashion.
