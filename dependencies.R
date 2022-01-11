@@ -2,3 +2,4 @@
 bslib::nav
 downlit::autolink
 reticulate::array_reshape
+gifski::gifski

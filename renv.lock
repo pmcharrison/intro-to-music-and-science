@@ -464,6 +464,13 @@
       "Repository": "CRAN",
       "Hash": "2e82e829a1c4a6c5d41921c177051e85"
     },
+    "gifski": {
+      "Package": "gifski",
+      "Version": "1.4.3-1",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "73d7566604b51f704a2f33b2efef470c"
+    },
     "glue": {
       "Package": "glue",
       "Version": "1.6.0",
