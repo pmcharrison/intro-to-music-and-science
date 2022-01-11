@@ -33,35 +33,164 @@ Why is precision desirable in a scientific theory?
 
 -   **Precise theories have useful engineering applications.** Once a theory is developed with sufficient precision, we can use it to generate predictions with minimal input from the researcher. This can have many useful engineering applications. In the context of aeronautical engineering, simulations of jet engine architectures can help engineers to optimise engine designs without having to run thousands of costly experiments with real engines. In the context of music psychology, simulations of (for example) emotion perception can be used to guide music recommendation systems, helping listeners to retrieve music that matches their mood.
 
-Many of the phenomena we are interested in music psychology (e.g. emotion, expression, aesthetics) are highly complex, relying on many psychological processes that are themselves complex and hard to define. If we did eventually develop a comprehensive and precise theory of musical emotions, we would hardly be able to apply it with a back-of-the-envelope calculation like we could with Newton's theory. However, such calculations become possible once we take advantage of *computational* methods. Computer programs make it possible to construct precise theories that are substantially more complex than Newton's theory, and that require many many calculations for generating predictions. We call this process *computer modelling*.
+Many of the phenomena we are interested in music psychology (e.g. emotion, expression, aesthetics) are highly complex, relying on many psychological processes that are themselves complex and hard to define. If we did eventually develop a comprehensive and precise theory of musical emotions, we would hardly be able to apply it with a back-of-the-envelope calculation like we could with Newton's theory. Fortunately, modern computers now vastly extend our abilities to perform numeric computations, and this makes it for the first time practical to develop and test precise theories of complex psychological phenomena.
 
-are the natural extension of equations like Newton's; t
+When we develop a psychological theory that is sufficiently precise to be implemented as a computer program, we call it a *computational model*. The process of developing such theories, and implementing their corresponding computer programs, is then called *computational modelling*.
 
-There would be far too many processes involved.
+## What does a computer program look like?
 
-that they could never be summarised by a theory as simple as Newton's law of gravitation.
+Before diving into specific music psychology models, let us spend a little time looking at general principles of computer programming.
 
-## Engineering and computer models
+A computer program is simply a set of instructions that can be carried out by a computer in order to fulfil a certain task. For example, suppose I wish to check whether a given number $N$ is prime.[^computational-music-psychology-1] If I were instructing a human to do this, I would give them some instructions like the following:
 
-Scientific knowledge can be conceptualised as a collection of *theories* about how the world works.
+[^computational-music-psychology-1]: A number $N$ is prime if it cannot be divided exactly by any integers apart from itself and $1$. An integer is a whole number, for example $-1$, $0$, $1$, $2$, and $3$. The number $6$ is *not* prime, because it can be divided by $2$ and by $3$. In contrast, $7$ *is* prime; it cannot be divided by any one of $2$, $3$, $4$, $5$, or $6$.
 
-Scientific theories are explanations about how a particular aspect of the world works.
+1.  For each integer $i$ from $2$ to $N - 1$:
 
-Computational music psychology is a kind of music psychology that relies heavily on computer models. These computer models are special algorithms that simulate certain acoustic, biological, and/or mental processes thought to be involved in particular musical behaviours. Used correctly, they can form an integral part of the scientific process.
+    1.  Calculate $y = N/i$
 
-## Why use computer models?
+    2.  If $y$ is an integer, then $N$ is not prime. Stop the calculation here.
 
-Computer models can bring several important benefits to music psychology:
+2.  If we get to the end without $y$ ever being an integer, then we can conclude that $N$ is indeed prime.
 
-**Addressing woolliness.** When we write about psychological theories with words, it's easy for ambiguities to slip in, making our arguments 'woolly'. In contrast, if we implement our theory as a computational model, we are forced to be completely explicit about what we mean. In the process, we may uncover important unwritten assumptions or logical gaps in our theory that deserve addressing.
+For example, suppose we want to check whether 9 is prime. We start by setting $i$ to $2$, and we calculate $y = 9/2 = 4.5$. Looking at $4.5$, we see that it is not an integer, so we move on and set $i$ to $3$. Now $y = 9/3=3$, and $3$ is an integer, so we conclude that $9$ is not prime, and we stop the calculation there.
 
-**Enhancing testability.** A good scientific theory should be good at predicting observed phenomena. In order to test this, we must generate predictions from the theory in various empirical scenarios. When our theory is only specified verbally, it can be difficult to work out just what a theory predicts in a given scenario; conversely, once we've collected empirical data, it can be difficult to work out exactly what these data mean for the theory. Computational modelling addresses these problems. The model directly generates numeric predictions for different empirical scenarios, which can then be related to empirical data using standard statistical methods. In music psychology research, this feature is especially valuable for helping us to run psychological experiments using realistic music rather than basic artificial stimuli.
+These instructions might be fine for a human, but if we want to give instructions to a computer, we typically need to provide them in a *programming language*. Many different programming languages have been developed over the last few decades. For scientific programming, two stand out in recent years: R and Python. Both can be downloaded for free, and both have many high-quality tutorials available on the Internet.[^computational-music-psychology-2]
 
-**Creating useful tools.** Suppose we end up producing a computational implementation of a particular cognitive model. The original motivation of producing this computational model may have been to obtain testable predictions for upcoming behavioural experiments. However, as a byproduct we have obtained a piece of software that is capable of solving the particular cognitive task that we are studying. Depending on the cognitive task and the success of the implementation, this can be a useful outcome in itself. For example, suppose that we have implemented a cognitive model for recognising emotion in melodies; we could then use a software implementation of this model for applications such as automated playlist generation.
+[^computational-music-psychology-2]: The [Software Carpentry](https://software-carpentry.org/) initiative provides excellent free tutorials for R and Python targeted at scientific researchers. DataCamp provides a particularly strong range of interactive tutorials for R and Python targeted at data scientists. DataCamp is a subscription-based service, but university instructors can (at the time of writing) get free access for their students by signing up to the [DataCamp for Classrooms](https://www.datacamp.com/groups/classrooms) scheme. Cambridge students at the Centre for Music and Science should contact Peter Harrison (pmch2\@cam.ac.uk) for access.
+
+Here is an implementation of our prime number checker written for the R programming language. Take a moment to read it through line by line. If you are new to programming, there will be many new things here. Nonetheless, the syntax is designed to be intuitive, and with some thought you should be able to make a good guess at what is happening at each point.
+
+```{r}
+is_prime <- function(N) {
+  for (i in seq(from = 2, to = N - 1)) {
+    y <- N / i
+    if (is_integer(y)) {
+      return(FALSE)
+    }
+  }
+  TRUE
+}
+
+is_integer <- function(x) {
+  x == round(x)
+}
+```
+
+Our implementation includes two functions: one called `is_prime`, and one called `is_integer`. In mathematics, a function is an algorithm that takes an input (called an argument) and returns an output. In this case, `is_prime` takes a number `N` as an input, and returns `TRUE` if the number is prime, and `FALSE` otherwise. The function `is_integer` meanwhile takes a number `x` as an input, and returns `TRUE` if the number is an integer, and `FALSE` otherwise.
+
+These functions also define certain variables. A variable is a named container for a piece of data. We can use variables to store the results of intermediate computations within our functions. For example, the `is_prime` function defines a variable `y` using the following code:
+
+``` r
+y <- N / i
+```
+
+The token `<-` is used in R to denote variable assignment. It takes the expression on the right-hand side ($N / i$), computes the result, and assigns it to the left-hand side.
+
+Each function contains a series of instructions for the computer to execute. These instructions are expressed as a series of lines of code. Ordinarily these lines are executed one after each other, but in special cases they execute in a more complex order. One such case is the 'for' loop. When in a 'for' loop, we repeat the same passage of code multiple times, each time updating the value of a particular variable within the loop. Take the following simple example:
+
+```{r}
+for (i in seq(from = 1, to = 6)) {
+  message(paste("The current value of i is", i))
+}
+```
+
+Here we have a variable `i`, and we set this variable first to `1` , then to `2` , then to `3` , and so on until we get to `6`.
+
+Our `is_prime` function contained a slightly more complicated 'for' loop, which looked like this:
+
+``` r
+for (i in seq(from = 2, to = N - 1)) {
+  y <- N / i
+  if (is_integer(y)) {
+    return(FALSE)
+  }
+}
+```
+
+Instead of looping from `1` to `6`, we're now looping from `2` to `N - 1`. In each loop, we compute an intermediate variable called `y` . We then check if `y` is an integer. If it is an integer, then we use the `return` keyword to quit the loop as well as its containing function, returning the answer `FALSE`.
+
+Let's define a new version of `is_prime` where we print information about what's happening at each point.
+
+```{r}
+is_prime <- function(N) {
+  message(paste0("Checking whether the number ", N, " is prime..."))
+  for (i in seq(from = 2, to = N - 1)) {
+    message(paste0("Let i = ", i, ":"))
+    y <- N / i
+    message(paste0("  Let y = ", N, "/", i, " = ", y))
+    if (is_integer(y)) {
+      message(paste0(
+        "  ", y, " is an integer, so ", i, " divides ", N, 
+        ", so ", N, " is not prime."
+        ))
+      return(FALSE)
+    } else {
+      message(paste0(
+        "  y is not an integer, so ", i, " does not divide ", N, "."
+        ))
+    }
+  }
+  message(paste0(N, " had no divisors so it must be prime."))
+  TRUE
+}
+
+is_integer <- function(x) {
+  x == round(x)
+}
+```
+
+Now we can evaluate it on a few numbers and see what happens.
+
+```{r}
+is_prime(4)
+
+is_prime(5)
+
+is_prime(6)
+```
+
+We can see that the functions are indeed carrying out the logic that we requested.
+
+It's worth noting that we could just as easily have implemented our algorithm in Python. The resulting code looks a little different, but the underlying logic is exactly the same:
+
+```{python}
+def is_prime(N):
+    for i in range(2, N):
+        y = N / i
+        if is_integer(y):
+            return False
+    return True
+  
+def is_integer(x):
+    return x == round(x)
+  
+is_prime(5)
+
+is_prime(6)
+```
+
+You can easily try these code examples out on your own computer. A quick way to try both R and Python examples is via [Google Colaboratory](https://colab.research.google.com/?utm_source=scs-index#scrollTo=-Rh3-Vt9Nev9) (or 'Colab' for short). You will need a Google account to use this. This service allows you to spin up R or Python sessions in your web browser that you can use interactively. Use the following links to create your own sessions:
+
+-   [Create a new Python notebook](https://colab.to/py)
+
+-   [Create a new R notebook](https://colab.to/r)
+
+You can then copy and paste the above code into these notebooks. Use Command-Enter (Mac) or Ctrl-Enter (Windows) to execute code in a given block.
+
+If you are interested in pursuing R/Python in the longer-term, you will probably want to install them on your computer. This will take a little more work, but there is good documentation online.
+
+To install R, you should follow the following two steps:
+
+-   Install the [R software](https://cran.r-project.org/mirrors.html) itself
+
+-   Install [RStudio Desktop](https://www.rstudio.com/products/rstudio/download/#download), an interface for helping you to write R code
+
+There are more options out there for installing and using Python. One simple installation is to use [Anaconda](https://docs.anaconda.com/anaconda/install/index.html), which packages up Python alongside many other commonly used packages. You then need to decide what interface you want to use with Python. An option that's easy to get going with is the Jupyter Notebook, but for more advanced use you will likely want to use IPython (included with Anaconda) or PyCharm (recommended if you want to do web programming one day, e.g. designing online experiments with PsyNet).
 
 ## What do music psychology models look like?
 
-The literature contains many different computational models of music perception and production (see [@Temperley2013-fg] for a review). We will begin by introducing a couple of particularly prominent such models: the Krumhansl-Schmuckler key-finding algorithm [@krumhansl1990cognitive], and the Hutchinson-Knopoff dissonance algorithm [@hutchinson1978].
+There are many computational models of music perception and production in the literature (see [@Temperley2013-fg] for a review). A good way to get a feel for computational modelling is to dive deeply into a few examples. Here we will consider two such models in detail: the Krumhansl-Schmuckler key-finding algorithm [@krumhansl1990cognitive], and the Hutchinson-Knopoff dissonance algorithm [@hutchinson1978].
 
 ### The Krumhansl-Schmuckler key-finding algorithm
 
@@ -71,13 +200,13 @@ This algorithm is designed to simulate how listeners identify the *key* of a giv
 
 The Krumhansl-Schmuckler algorithm proposes a mechanism for this process. The algorithm can be succinctly summarised as follows:
 
-1.  Different keys use different pitch classes to different degrees.[^computational-music-psychology-1]
+1.  Different keys use different pitch classes to different degrees.[^computational-music-psychology-3]
 
 2.  Listeners possess internal templates that summarise the pitch-class distribution for different musical keys.
 
 3.  During a musical piece, listeners track the distribution of pitch classes within that piece. The inferred key then corresponds to the key whose pitch-class distribution matches best to the observed distribution.
 
-[^computational-music-psychology-1]: Pitch classes denote sets of pitches separated by whole numbers of octaves. In the Western 12-tone scale, there are exactly 12 pitch classes: C, C#, D, D#, E, F, F#, G, G#, A, A#, and B.
+[^computational-music-psychology-3]: Pitch classes denote sets of pitches separated by whole numbers of octaves. In the Western 12-tone scale, there are exactly 12 pitch classes: C, C#, D, D#, E, F, F#, G, G#, A, A#, and B.
 
 #### Implementation details
 
@@ -660,9 +789,9 @@ spectrum |>
   knitr::kable()
 ```
 
-The elicited dissonance comes from interference between these two partials. The extent to which two partials interfere depends on the *critical bandwidth* for those partials. The critical bandwidth tells us how close two partials have to be before they start interfering with each other. It is typically estimated using psychoacoustic experiments measuring masking effects.[^computational-music-psychology-2]
+The elicited dissonance comes from interference between these two partials. The extent to which two partials interfere depends on the *critical bandwidth* for those partials. The critical bandwidth tells us how close two partials have to be before they start interfering with each other. It is typically estimated using psychoacoustic experiments measuring masking effects.[^computational-music-psychology-4]
 
-[^computational-music-psychology-2]: Masking is when a particular sound obscures the perception of another sound. It is analogous to the phenomenon of occlusion in vision perception.
+[^computational-music-psychology-4]: Masking is when a particular sound obscures the perception of another sound. It is analogous to the phenomenon of occlusion in vision perception.
 
 The critical bandwidth is thought to correspond to a certain physical distance on the basilar membrane, estimated to be approximately 1 mm. Tones within a certain physical distance cause overlapping excitation patterns, producing interference effects such as masking and beating.
 
@@ -764,9 +893,9 @@ $$
 \frac{659.2 - 532.2}{108.9} = 1.17
 $$
 
-We then plug this number (1.17) into an idealised *dissonance curve* that characterises how dissonance varies as a function of the critical bandwidth distance between a pair of pure tones. Hutchinson & Knopoff's dissonance curve looks something like an inverted U, with a peak at 0.25 critical bandwidths:[^computational-music-psychology-3]
+We then plug this number (1.17) into an idealised *dissonance curve* that characterises how dissonance varies as a function of the critical bandwidth distance between a pair of pure tones. Hutchinson & Knopoff's dissonance curve looks something like an inverted U, with a peak at 0.25 critical bandwidths:[^computational-music-psychology-5]
 
-[^computational-music-psychology-3]: Hutchinson & Knopoff presented their original curve graphically as an interpolation of results from previous psychoacoustic experiments. Bigand and colleagues (1996) subsequently introduced a parametric approximation that takes the following form:
+[^computational-music-psychology-5]: Hutchinson & Knopoff presented their original curve graphically as an interpolation of results from previous psychoacoustic experiments. Bigand and colleagues (1996) subsequently introduced a parametric approximation that takes the following form:
 
     $$
     \left(
