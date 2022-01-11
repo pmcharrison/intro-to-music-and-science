@@ -25,7 +25,7 @@ In psychology, equations are less common. Instead, psychological theories are of
 
 This brain-stem component of Juslin's theory is already more complex than Newton's theory. It refers to a variety of musical features (suddenness, loudness, dissonance, acceleration), physiological states (arousal) and subjective experiences (surprise), as opposed to Newton's theory which explains gravity solely in terms of mass ($m_1$, $m_2$) and distance ($r$).
 
-On the other hand, Juslin's theory is considerably less precise than Newton's theory. For example, it mentions various musical features that may contribute to the brain-stem reflex (e.g. suddenness, loudness, dissonance) but it does not explain how these features should be computed for a given piece of music, or how these features should be weighted to determine the brain-stem reflex. As it stands, Juslin's theory is unable to predict exactly what kind of brain-stem response should be elicited by a given piece of music. In contrast, Newton's theory is very precise indeed. It tells us exactly what we need to measure about each object (mass, distance), with these attributes having well-established measurement instruments available in the science laboratory (e.g. rulers, mass balances). Moreover, once we have measured these attributes, Newton's theory tells us exactly how to combine them to give a precise numeric prediction of the resulting force.
+On the other hand, Juslin's theory is considerably less *precise* than Newton's theory. For example, it mentions various musical features that may contribute to the brain-stem reflex (e.g. suddenness, loudness, dissonance) but it does not explain how these features should be computed for a given piece of music, or how these features should be weighted to determine the brain-stem reflex. As it stands, Juslin's theory is unable to predict exactly what kind of brain-stem response should be elicited by a given piece of music. In contrast, Newton's theory is very precise indeed. It tells us exactly what we need to measure about each object (mass, distance), with these attributes having well-established measurement instruments available in the science laboratory (e.g. rulers, mass balances). Moreover, once we have measured these attributes, Newton's theory tells us exactly how to combine them to give a precise numeric prediction of the resulting force.
 
 Why is precision desirable in a scientific theory?
 
@@ -1258,7 +1258,7 @@ dissonance_by_partial_pairs
 sum(dissonance_by_partial_pairs$dissonance)
 ```
 
-## Modelling philosophies
+## Modelling approaches
 
 There are many different approaches to computer modelling in the music psychology literature. Every approach has its own advantages and disadvantages. We will now consider a couple of relevant issues in turn.
 
@@ -1278,7 +1278,7 @@ In theory, audio models can be considerably more powerful than symbolic models. 
 
 In practice, however, audio models have traditionally experienced some difficulties versus symbolic models. Because it is still difficult to simulate the early stages of music perception computationally (e.g. pitch tracking, chord recognition), it is difficult to use audio models to study later or more advanced stages of music perception (e.g. sensitivity to harmonic syntax), because the models get 'stuck' at these early stages. In contrast, it seems possible to make quicker progress here with symbolic models, which can take these early processing stages for granted and begin immediately with modelling higher-level cognition.
 
-### Neuroscientific, cognitive, biological, acoustic
+### Neuroscience, cognition, biology, acoustics
 
 We know that psychological processes are ultimately mediated by the neurons in the brain. There are billions of these neurons, and they connect to each other to form networks of extraordinarily complexity. One issue of contention in the psychological literature concerns the following question: to what extent should our computational models focus on modelling individual neurons (the **neuroscientific** approach) versus modelling abstract psychological constructs (the **cognitive** approach)?
 
@@ -1286,6 +1286,6 @@ There is a sense in which the 'true' answer to how the mind works is ultimately 
 
 The cognitive approach sidesteps this issue by modelling psychological processes at a higher level of abstraction. Instead of modelling the behaviour of individual neurons, we model the abstract units of information that these neurons are meant to represent, and we model the computational processes that are applied to these units of information. The Krumhansl-Kessler algorithm is an example of a cognitive model; it directly processes collections of pitch classes, and does not worry about how those pitch classes are represented neurally. A useful benefit of the cognitive approach is that its algorithms can often be performed manually by the researcher; this makes them much easier to interpret and to reason about. However, this comes with the sacrifice of knowing that one can only ever gain an approximation to the underlying neuroscientific truth.
 
-In music psychology we also often see models that have biological or acoustic elements. The Hutchinson-Knopoff is one such example; it derives its predictions by considering the way that chords produce certain kinds of frequency spectra, and the way that the resulting frequency components interfere with one another depending on their respective critical bandwidths, which reflect the underlying biology of the inner ear.
+In music psychology we also often see models that have biological or acoustic elements. The Hutchinson-Knopoff model is one such example; it derives its predictions by considering the way that chords produce certain kinds of frequency spectra, and the way that the resulting frequency components interfere with one another depending on their respective critical bandwidths, which reflect the underlying biology of the inner ear.
 
 Ultimately a comprehensive account of music psychology will have to incorporate each of these aspects. Computer modelling provides a promising way to unite these aspects together in a precise yet interpretable fashion.
