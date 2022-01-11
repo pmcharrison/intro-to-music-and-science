@@ -39,7 +39,7 @@ The Krumhansl-Schmuckler algorithm proposes a mechanism for this process. The al
 
 3.  During a musical piece, listeners track the distribution of pitch classes within that piece. The inferred key then corresponds to the key whose pitch-class distribution matches best to the observed distribution.
 
-[^computational-music-psychology-1]: Pitch classes denote sets of pitches separated by whole numbers of octaves. In the Western 12-tone scale, there are exactly 12 pitch classes: C, C\#, D, D\#, E, F, F\#, G, G\#, A, A\#, and B.
+[^computational-music-psychology-1]: Pitch classes denote sets of pitches separated by whole numbers of octaves. In the Western 12-tone scale, there are exactly 12 pitch classes: C, C#, D, D#, E, F, F#, G, G#, A, A#, and B.
 
 #### Implementation details
 
@@ -79,7 +79,7 @@ In the above figure, pitch classes are expressed as intervals above the tonic, w
 
 Note how the major template exhibits high fit for pitch classes from the major scale (0, 2, 4, 5, 7, 9, 11), and low fit for the other pitch classes (1, 3, 6, 8, 10). Similarly, the minor template exhibits high fit for pitch classes from the minor scale (0, 2, 3, 5, 7, 8) and low fit for the others.
 
-To derive the pitch-class template for a given musical key, we need to replot the horizontal axis in terms of absolute pitch classes rather than intervals above the tonic. To achieve this transformation, we simply take the interval and add it onto the tonic. For example, if we are in F major, then an interval of 0 semitones corresponds to F, an interval of 1 semitone corresponds to F\#, and so on.
+To derive the pitch-class template for a given musical key, we need to replot the horizontal axis in terms of absolute pitch classes rather than intervals above the tonic. To achieve this transformation, we simply take the interval and add it onto the tonic. For example, if we are in F major, then an interval of 0 semitones corresponds to F, an interval of 1 semitone corresponds to F#, and so on.
 
 The following figure illustrates the resulting pitch-class profiles for different tonics, with the tonic marked as a dashed red line. As the tonic moves upwards, the pitch-class profile 'rotates' along with it.
 
@@ -332,7 +332,7 @@ kk_correlations <-
 
 ```
 
-The results can be expressed in a table like the following. You can click on particular column headers to sort by the values in that column.
+The results can be expressed in a table like the following. You can click on particular column headers to sort by the values in that column. 
 
 ```{r}
 kk_correlations |> 
@@ -352,7 +352,7 @@ kk_correlations |>
   )
 ```
 
-If we sort the 'Correlation' column by descending values, we see the following top three key candidates: C major, F major, and G major. Conversely, if we sort the column by ascending values, we see the following bottom three candidates: F\# major, A minor, and C\# major. So, the algorithm selects C major as the inferred key for the melody, which happily is consistent with what most music theorists would say if they examined the score.
+If we sort the 'Correlation' column by descending values, we see the following top three key candidates: C major, F major, and G major. Conversely, if we sort the column by ascending values, we see the following bottom three candidates: F# major, A minor, and C# major. So, the algorithm selects C major as the inferred key for the melody, which happily is consistent with what most music theorists would say if they examined the score.
 
 #### Where should the templates come from?
 
@@ -362,7 +362,7 @@ One possibility is that the templates are learned through exposure to particular
 
 #### Limitations
 
-The Krumhansl-Schmuckler algorithm has been very influential within the field of music psychology, and many subsequent key-finding algorithms use a similar kind of template-matching process [@albrecht2013; @Bellmann2005; @Sapp2011; @Temperley1999a]. Nonetheless, the algorithm is limited by the fact that it ignores the *order* in which notes are played, despite psychological evidence that note order may indeed matter for listeners' key judgments [@brown1988; @matsunaga2005].
+The Krumhansl-Schmuckler algorithm has been very influential within the field of music psychology, and many subsequent key-finding algorithms use a similar kind of template-matching process [@albrecht2013; @Bellmann2005; @Sapp2011; @Temperley1999a\]. Nonetheless, the algorithm is limited by the fact that it ignores the *order* in which notes are played, despite psychological evidence that note order may indeed matter for listeners' key judgments [@brown1988; @matsunaga2005].
 
 For illustration, consider the following two tone sequences from @matsunaga2005. Both of these sequences use exactly the same pitch classes, just in a different order, and with one of the pitch classes transposed upwards by an octave. The first sequence elicits a very clear tonal centre:
 
@@ -525,11 +525,11 @@ kk_estimate_key(
 
 #### Overview
 
-The Hutchinson-Knopoff dissonance algorithm attempts to explain how listeners perceive certain chords as dissonant (unpleasant) and others as consonant (pleasant) [@hutchinson1978]. The algorithm is based on the hypothesis that dissonance derives from negatively valenced interactions between the harmonics in a given chord's frequency spectrum. This idea has its roots in the writings of @Helmholtz1875-fm. Though many other consonance/dissonance algorithms have been developed since its original presentation, the Hutchinson-Knopoff algorithm still performs remarkably well when benchmarked against current competitors from the literature [@Harrison2020-gx].
+The Hutchinson-Knopoff dissonance algorithm attempts to explain how listeners perceive certain chords as dissonant (unpleasant) and others as consonant (pleasant) [@hutchinson1978\]. The algorithm is based on the hypothesis that dissonance derives from negatively valenced interactions between the harmonics in a given chord's frequency spectrum. This idea has its roots in the writings of @Helmholtz1875-fm. Though many other consonance/dissonance algorithms have been developed since its original presentation, the Hutchinson-Knopoff algorithm still performs remarkably well when benchmarked against current competitors from the literature [@Harrison2020-gx].
 
 #### Detailed description
 
-The algorithm takes a musical chord as its input. This chord would typically be specified as list of fundamental frequencies for each of its constituent tones; for example, a C dimished triad might be specified by the frequencies 261.6 Hz, 329.6 Hz, and 370.0 Hz.
+The algorithm takes a musical chord as its input. This chord would typically be specified as list of fundamental frequencies for each of its constituent tones; for example, a C diminished triad might be specified by the frequencies 261.6 Hz, 311.1 Hz, and 370.0 Hz.
 
 The first step is to expand each chord tone into its implied harmonics. Each harmonic corresponds to a whole-number multiple of the fundamental frequency, so for example the lowest tone of the triad would contain harmonics at 261.6 Hz, 261.6 \* 2 Hz, 261.6 \* 3 Hz, and so on.
 
@@ -538,7 +538,7 @@ In the absence of further information about the chord, we need to make some assu
 Expanding the chord tones gives us a frequency spectrum like the following:
 
 ```{r, fig.cap = "Frequency spectrum for a closed C diminished triad rooted on middle C (C4). The chord is modelled as containing 10 harmonics per tone, with amplitudes following a harmonic series. The three tones are differentiated by three different colours.", out.width = "100%"}
-expand_harmonics <- function(fundamental_frequencies, n_harmonics = 10) {
+expand_harmonics <- function(fundamental_frequencies, n_harmonics = 11) {
   if (is.null(names(fundamental_frequencies))) {
     names(fundamental_frequencies) <- seq_along(fundamental_frequencies)
   }
@@ -553,12 +553,15 @@ expand_harmonics <- function(fundamental_frequencies, n_harmonics = 10) {
   })
 }
 
-c(
-  "C4    " = 261.6, 
-  "E4    " = 329.6, 
-  "F#4    " = 370.0
-) %>%
-expand_harmonics() %>%
+pitches <- 
+  c(
+    "C4    " = 261.6, 
+    "Eb4    " = 311.1, 
+    "F#4    " = 370.0
+  )
+
+pitches %>% 
+  expand_harmonics() %>%
   ggplot(aes(colour = factor(tone_id))) + 
   geom_linerange(aes(x = frequency, ymin = 0, ymax = amplitude)) + 
   scale_x_continuous("Frequency (Hz)") +
@@ -571,18 +574,15 @@ expand_harmonics() %>%
   
 ```
 
-In the above example, each tone has been expanded into 10 harmonics. Each tone is plotted in a distinct colour, and each harmonic appears as a vertical line with a given frequency and a given amplitude.
+In the above example, each tone has been expanded into 11 harmonics. Each tone is plotted in a distinct colour, and each harmonic appears as a vertical line with a given frequency and a given amplitude.
 
 The model works by considering pairwise interactions between partials in this spectrum. Each pair of partials contributes something towards the overall dissonance of the chord.
 
 To estimate these pairwise contributions, we iterate over all pairs of partials in the chord. This means first looking at the interaction between partial 1 and partial 2, then at the interaction between partial 1 and partial 3, then at partial 1 and partial 4, and so on. Once we have considered all possible interactions involving partial 1, we then look at the interaction between partial 2 and partial 3, then partial 2 and partial 4, and so on. This process is illustrated in the following animation:
 
 ```{r, animation.hook = "gifski", interval = 0.3, out.width = "100%", fig.cap = "Animation illustrating the process of iterating over different pairs of partials (red) in the frequency spectrum."}
-spectrum <- c(
-    "C4    " = 261.6, 
-    "E4    " = 329.6, 
-    "F#4    " = 370.0
-  ) |>
+spectrum <-
+  pitches %>% 
   expand_harmonics() |> 
   arrange(frequency) |> 
   mutate(partial_number = seq_along(frequency))
@@ -738,7 +738,7 @@ We then plug this number (1.17) into an idealised *dissonance curve* that charac
 
     We tend to prefer the latter form because it is easy to implement computationally.
 
-```{r, fig.cap = "Idealised dissonance curve from @hutchinson1978, plotted using the parametric version specified by @Bigand1996.", animation.hook = "gifski", interval = 0.9, out.width = "100%"}
+```{r dissonance-curve, fig.cap = "Idealised dissonance curve from @hutchinson1978, plotted using the parametric version specified by @Bigand1996.", animation.hook = "gifski", interval = 0.9, out.width = "100%"}
 if (FALSE) {
   # Verifying the maximum is at 0.25
   optim(0.5, dycon::hutch_g, control = list(fnscale = -1))
@@ -819,21 +819,24 @@ Let's think about what role amplitude plays in this procedure. The fact that we 
 We repeat this process for every pair of partials in the spectrum. This gives us a table like the following:
 
 ```{r}
-tibble(
-  i1 = map_int(combinations, 1),
-  i2 = map_int(combinations, 2),
-  f1 = spectrum$frequency[i1],
-  f2 = spectrum$frequency[i2],
-  a1 = spectrum$amplitude[i1],
-  a2 = spectrum$amplitude[i2],
-  f_mean = (f1 + f2) / 2,
-  cbw = dycon::hutch_cbw(f1, f2),
-  cbw_dist = abs(f2 - f1) / cbw,
-  dissonance_factor = dycon::hutch_dissonance_function(f1, f2),
-  a1_a2 = a1 * a2,
-  sum_sq_amp = sum(spectrum$amplitude ^ 2),
-  dissonance = dissonance_factor * a1_a2 / sum_sq_amp
-) |> 
+dissonance_by_partial_pairs <- 
+  tibble(
+    i1 = map_int(combinations, 1),
+    i2 = map_int(combinations, 2),
+    f1 = spectrum$frequency[i1],
+    f2 = spectrum$frequency[i2],
+    a1 = spectrum$amplitude[i1],
+    a2 = spectrum$amplitude[i2],
+    f_mean = (f1 + f2) / 2,
+    cbw = dycon::hutch_cbw(f1, f2),
+    cbw_dist = abs(f2 - f1) / cbw,
+    dissonance_factor = dycon::hutch_dissonance_function(f1, f2),
+    a1_a2 = a1 * a2,
+    sum_sq_amp = sum(spectrum$amplitude ^ 2),
+    dissonance = dissonance_factor * a1_a2 / sum_sq_amp
+  )
+
+dissonance_by_partial_pairs |> 
   mutate(
     across(where(is.double), ~ sprintf("%.2f", .))
   ) |> 
@@ -849,15 +852,62 @@ tibble(
     "Dissonance factor" = dissonance_factor,
     "Product of amplitudes" = a1_a2, 
     "Sum of squared amplitudes" = sum_sq_amp,
-    "Dissonance" = dissonance
+    "Dissonance contribution" = dissonance
   ) |> 
   DT::datatable(
   options = list(
     searching = FALSE,
     rowId = FALSE,
+    scrollX = TRUE,
     columnDefs = list(list(className = 'dt-center', targets = "_all"))
   ))
 ```
+
+We compute the chord's final dissonance by summing all the 'dissonance contribution' values in the far right column. Many of these values are near-zero, because they relate to partials that are far away from each other. However, if we sum them all together, we get the following value: `r dissonance_by_partial_pairs$dissonance %>% sum() %>% sprintf("%.3f", .)`
+
+Let's now repeat the same approach and analyse several chords.
+
+```{r, out.width = "100%", fig.cap("Hutchinson & Knopoff model outputs for various prototypical triads from Western music. Each chord is played in closed form and rooted on middle C.")}
+list(
+  "C major" = c(60, 64, 67),
+  "C minor" = c(60, 63, 67),
+  "C diminished" = c(60, 63, 66),
+  "C augmented" = c(60, 64, 68),
+  "C sus4" = c(60, 65, 67),
+  "C sus2" = c(60, 62, 67)
+) %>% 
+  map_dbl(dycon::roughness_hutch) %>% 
+  tibble(
+    label = names(.),
+    dissonance = .
+  ) %>% 
+  arrange(dissonance) %>% 
+  mutate(
+    label = factor(label, levels = label)
+  ) %>% 
+  ggplot(aes(label, dissonance, fill = dissonance)) + 
+  geom_bar(stat = "identity", colour = "black") + 
+  scale_x_discrete(NULL) + 
+  scale_y_continuous("Dissonance") + 
+  scale_fill_gradient(low = "lightgrey", high = "darkgrey") + 
+  theme(
+    legend.position = "none"
+  )
+```
+
+We see that, of all these common triad types built on the same root, the major triad (C major) has the lowest dissonance, followed by the minor triad (C minor). In contrast, we see high levels of dissonance from chords such as C diminished and C sus2. This ability of Hutchinson and Knopoff's model to reproduce well-known dissonance categorisations from Western music theory has been used as positive evidence for the model and its underlying theory of dissonance perception.
+
+#### Limitations
+
+This model is conceptually fairly simple, yet performs rather well at recovering dissonance judgments from Western listeners [@Harrison2020-gx]. Nonetheless, there are several important limitations that are worth noting.
+
+It is generally assumed that the dissonance induced by a pair of partials comes from resulting beating effects (though see @Harrison2020-gx for a discussion of this assumption). The magnitude of this beating effect is modelled using the dissonance curve plotted in 
+
+Several limitations of this model have been noted over recent decades.
+
+#### A note on mathematical notation
+
+
 
 , on account of interference within the critical band, but will become consonant when played in a sufficiently high register, because
 
@@ -905,7 +955,7 @@ So, to calculate the dissonance contribution of a pair of pure tones, we must fi
 
 [^computational-music-psychology-4]: This is the way Hutchinson and Knopoff do it (calculate the mean frequency, then plug it into the critical bandwidth plot); there are however more principled ways that one could do this.
 
-However, we must also take into account the amplitudes of the tones. Hutchinson and Knopoff claim in particular that the dissonance contribution is proportional to the *product* of the two tones' amplitudes [TODO divided by the sum of the ; or just normalising factor?]; in other words, if we double the amplitude of any one of these tones, the overall dissonance contribution will be doubled.
+However, we must also take into account the amplitudes of the tones. Hutchinson and Knopoff claim in particular that the dissonance contribution is proportional to the *product* of the two tones' amplitudes \[TODO divided by the sum of the ; or just normalising factor?\]; in other words, if we double the amplitude of any one of these tones, the overall dissonance contribution will be doubled.
 
 So, we have a procedure for calculating the dissonance contribution of a given pair of pure tones.
 
