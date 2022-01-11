@@ -332,7 +332,7 @@ kk_correlations <-
 
 ```
 
-The results can be expressed in a table like the following. You can click on particular column headers to sort by the values in that column. 
+The results can be expressed in a table like the following. You can click on particular column headers to sort by the values in that column.
 
 ```{r}
 kk_correlations |> 
@@ -362,7 +362,7 @@ One possibility is that the templates are learned through exposure to particular
 
 #### Limitations
 
-The Krumhansl-Schmuckler algorithm has been very influential within the field of music psychology, and many subsequent key-finding algorithms use a similar kind of template-matching process [@albrecht2013; @Bellmann2005; @Sapp2011; @Temperley1999a\]. Nonetheless, the algorithm is limited by the fact that it ignores the *order* in which notes are played, despite psychological evidence that note order may indeed matter for listeners' key judgments [@brown1988; @matsunaga2005].
+The Krumhansl-Schmuckler algorithm has been very influential within the field of music psychology, and many subsequent key-finding algorithms use a similar kind of template-matching process \[@albrecht2013; @Bellmann2005; @Sapp2011; @Temperley1999a\]. Nonetheless, the algorithm is limited by the fact that it ignores the *order* in which notes are played, despite psychological evidence that note order may indeed matter for listeners' key judgments [@brown1988; @matsunaga2005].
 
 For illustration, consider the following two tone sequences from @matsunaga2005. Both of these sequences use exactly the same pitch classes, just in a different order, and with one of the pitch classes transposed upwards by an octave. The first sequence elicits a very clear tonal centre:
 
@@ -525,7 +525,7 @@ kk_estimate_key(
 
 #### Overview
 
-The Hutchinson-Knopoff dissonance algorithm attempts to explain how listeners perceive certain chords as dissonant (unpleasant) and others as consonant (pleasant) [@hutchinson1978\]. The algorithm is based on the hypothesis that dissonance derives from negatively valenced interactions between the harmonics in a given chord's frequency spectrum. This idea has its roots in the writings of @Helmholtz1875-fm. Though many other consonance/dissonance algorithms have been developed since its original presentation, the Hutchinson-Knopoff algorithm still performs remarkably well when benchmarked against current competitors from the literature [@Harrison2020-gx].
+The Hutchinson-Knopoff dissonance algorithm attempts to explain how listeners perceive certain chords as dissonant (unpleasant) and others as consonant (pleasant) \[@hutchinson1978\]. The algorithm is based on the hypothesis that dissonance derives from negatively valenced interactions between the harmonics in a given chord's frequency spectrum. This idea has its roots in the writings of @Helmholtz1875-fm. Though many other consonance/dissonance algorithms have been developed since its original presentation, the Hutchinson-Knopoff algorithm still performs remarkably well when benchmarked against current competitors from the literature [@Harrison2020-gx].
 
 #### Detailed description
 
@@ -901,35 +901,25 @@ We see that, of all these common triad types built on the same root, the major t
 
 This model is conceptually fairly simple, yet performs rather well at recovering dissonance judgments from Western listeners [@Harrison2020-gx]. Nonetheless, there are several important limitations that are worth noting.
 
-It is generally assumed that the dissonance induced by a pair of partials comes from resulting beating effects (though see @Harrison2020-gx for a discussion of this assumption). The magnitude of this beating effect is modelled using the dissonance curve plotted in 
+It is generally assumed that the dissonance induced by a pair of partials comes from resulting beating effects, which induce a negatively experienced percept of roughness (though see @Harrison2020-gx for a discussion of this assumption). The magnitude of this roughness percept is modelled using the curve plotted in Figure \@ref(fig:dissonance-curve). However, there are several senses in which this model may not be a fully accurate model of roughness perception, for example:
 
-Several limitations of this model have been noted over recent decades.
+-   The model ignores phase differences between the partials, yet phase difference is known to contribute to roughness \[@mathes1947\]. (This may not matter as long as the model is only applied to natural sounds, where two sound sources rarely manifest reliable phase differences).
+
+-   The model assumes that roughness is proportional to the product of the amplitudes in each pair of partials. This reflects the intuition that greater amplitudes will elicit greater beating. However, the precise mathematical relationship between partial amplitude and beating amplitude is more complex than this [@Vassilakis2001].
+
+-   The model assumes that the dissonance factor is determined by the critical bandwidth distance between the partials. However, more recent studies of auditory roughness have shown that the point of maximum roughness (i.e. the peak of the curve) is not found at a fixed critical bandwidth distance, and likewise the point where roughness disappears is not found at a fixed critical bandwidth distance either.
+
+Several models have subsequently developed that address some of these concerns, for example Vassilakis's model \[@Vassilakis2001\] and Daniel & Weber's model \[@Daniel1997; @Wang2013\]. Curiously, however, these updates seem if anything to make the models *worse* at capturing musical dissonance [@Harrison2020-gx]. More work needs to be done to dig into these discrepancies and understand how consonance may or may not be explained through roughness modelling.
 
 #### A note on mathematical notation
 
-
-
-, on account of interference within the critical band, but will become consonant when played in a sufficiently high register, because
-
-a given frequency difference in Hz corresponds to
-
-The model supposes that the dissonance induced by a single pair of partials depends on two primary factors: *distance* and *amplitude*.
-
-The amplitude effect works as follows: dissonance is modelled as being *proportional* to the amplitudes of both partials. This means that doubling the amplitude of a particular partial will double the dissonance contribution of that partial. There is additionally a normalising factor which we will describe later.
-
-The distance effect is a modelled as a smooth function that looks something like an inverted U:
-
-Notice the units of the horizontal axis: *critical bandwidths*. Critical bandwidths are closely related to the notion of physical distance within the cochlea. Tones that are separated by less than one critical bandwidth are close enough to interfere physically one another through beating and masking effects. According to this model, peak dissonance occurs when the tones are separated by 0.25 critical bandwidths.
-
-Critical bandwidth varies as a function of pitch height. The following figure plots critical bandwidth in semitones as a function of pitch expressed using letter names (C1, C2, C3), where numbers denote octaves. We can see that, as pitch decreases, critical bandwidth increases. As a consequence, intervals that elicit little dissonance in high registers will end up eliciting high dissonance in low registers.
-
-These factors of amplitude and distance are combined in the following mathematical expression:
+If you read papers about computational models, you will often see mathematical expressions like the following:
 
 $$
 d_{ij}= \frac{A_iA_jg_{ij}}{\sum_k{A_k^2}}
 $$
 
-where:
+This particular expression is taken from Hutchinson & Knopoff's model, and concerns the dissonance contribution of a pair of partials. The variables in the expression are defined in the text as follows:
 
 -   $d_{ij}$ is the dissonance contribution from the interactions between partial $i$ and partial $j$
 
@@ -941,7 +931,7 @@ where:
 
 -   $\sum_k{A_k^2}$ is a normalising factor, corresponding to the sum of the squared amplitudes of all of the partials. This normalising factor ensures that dissonance is independent of the overall amplitude of the chord as a whole.
 
-This mathematical notation may be a little unfamiliar to some of you. There are a couple of mathematical notations to note here. The first is *index notation*, where we write small letters or numbers in subscripts, for example:
+There are a few notation conventions to note here. The first is *index notation*, where we write small letters or numbers in subscripts, for example:
 
 $$
 A_i
@@ -949,19 +939,27 @@ $$
 
 The subscript expression ($i$ in the above) is called the index. It is used as a counter to differentiate between multiple versions of an object. For example, in our above model, $A_1$ denotes the amplitude of the first partial, $A_2$ denotes the amplitude of the second partial, and so on.
 
-When we write mathematical expressions using indices, we often write them in *generic* forms. This means that, instead of writing $A_1$ or $A_2$, we write $A_i$, which refers to the $i$th partial.
+When we write mathematical expressions using indices, we often write them in *generic* forms. This means that, instead of writing $A_1$ or $A_2$, we write $A_i$, which refers to the $i$th partial. When we write an equation containing indices like $i$ and $j$, the implication is generally that the equation holds true for all reasonable values of $i$ and $j$, where 'reasonable' typically means 'is a positive integer'.
 
-So, to calculate the dissonance contribution of a pair of pure tones, we must first calculate the critical bandwidth at their mean frequency[^computational-music-psychology-4], then plug this into the dissonance curve. Suppose for e
+A second thing to note is *summation notation*. In the above, we had one example of summation notation:
 
-[^computational-music-psychology-4]: This is the way Hutchinson and Knopoff do it (calculate the mean frequency, then plug it into the critical bandwidth plot); there are however more principled ways that one could do this.
+$$
+\sum_k{A_k^2}
+$$
 
-However, we must also take into account the amplitudes of the tones. Hutchinson and Knopoff claim in particular that the dissonance contribution is proportional to the *product* of the two tones' amplitudes \[TODO divided by the sum of the ; or just normalising factor?\]; in other words, if we double the amplitude of any one of these tones, the overall dissonance contribution will be doubled.
+The big sigma ($\Sigma$) denotes 'sum'. The letter beneath it tells us what we are summing over; in this case we are summing over all possible values of $k$. By default, we assume that $k$ starts at 1, and we count upwards to higher numbers of $k$. So, we could write out this sum as follows:
 
-So, we have a procedure for calculating the dissonance contribution of a given pair of pure tones.
+$$
+\sum_k{A_k^2} = A_1^2 + A_2^2 + A_3^2 + \ldots
+$$
 
-The model breaks down the aggregate dissonance of the chord into many
+In this version we did not specify explicitly what the starting point for $k$ was, or what its ending point was; this was left up to common sense. If we want to be explicit, we can use notation like the following:
 
-The model supposes that dissonance is an *additive* phenomenon, whereby the aggregate dissonance of the chord comes from adding together the induced
+$$
+\sum_{k=1}^{5}{A_k^2} = A_1^2 + A_2^2 + A_3^2 + A_4^2 + A_5^2
+$$
+
+By writing $k=1$ at the bottom of the sum we are instructing the reader to begin the sum with $k=1$; by writing $5$ at the top of the sum we are instructing the reader to finish the sum with $k=5$.
 
 ## What role does modelling play in the scientific method?
 
