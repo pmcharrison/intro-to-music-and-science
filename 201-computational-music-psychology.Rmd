@@ -9,6 +9,44 @@ knitr::opts_chunk$set(echo = FALSE, cache = TRUE)
 
 ```
 
+## Science and computational models
+
+Scientific theories take various forms. In physics, theories often take the form of equations. For example, Newton's theory of gravitation may be summarised by the following equation, which describes the force $F$ experienced by two objects with masses $m_1$ and $m_2$ separated by a distance of $r$:
+
+$$
+F = G \frac{m_1 m_2}{r^2}
+$$ where $G$ is the [gravitational constant](https://en.wikipedia.org/wiki/Gravitational_constant).
+
+In psychology, equations are less common. Instead, psychological theories are often expressed verbally. For example, Juslin's BRECVEMA model \[@juslin2013\] states that emotional responses to music are primarily mediated by eight psychological mechanisms (brain stem reflexes, rhythmic entrainment, evaluative conditioning, contagion, visual imagery, episodic memory, musical expectancy, and aesthetic judgment), and provides verbal accounts of each of these mechanisms. For example, Juslin writes the following about the brain stem reflex [@juslin2013]:
+
+> *Brain stem reflex* refers to a process whereby an emotion is induced by music because one or more fundamental acoustic characteristics of the music are taken by the brain stem to signal a potentially important and urgent event that needs attention [\[39\]](https://www.sciencedirect.com/science/article/pii/S1571064513000638#br0390). In music, this could involve sounds that are sudden, loud, or dissonant, or that feature accelerating patterns. Brain stem reflexes are quick, automatic, and unlearned. A famous example that may evoke a brain stem reflex in a listener given a certain sound level is the kettledrum stroke in Joseph Haydnʼs Symphony No. 94 [\[187, p. 81\]](https://www.sciencedirect.com/science/article/pii/S1571064513000638#br1890). More commonly perhaps, such reactions result from dynamic changes in the music (e.g., a full orchestra or band coming in after a short solo intro). Brain stem reflexes may increase *arousal* and evoke feelings of *surprise* in the listener [\[100\]](https://www.sciencedirect.com/science/article/pii/S1571064513000638#br1000).
+
+This brain-stem component of Juslin's theory is already more complex than Newton's theory. It refers to a variety of musical features (suddenness, loudness, dissonance, acceleration), physiological states (arousal) and subjective experiences (surprise), as opposed to Newton's theory which explains gravity solely in terms of mass ($m_1$, $m_2$) and distance ($r$).
+
+On the other hand, Juslin's theory is considerably less precise than Newton's theory. For example, it mentions various musical features that may contribute to the brain-stem reflex (e.g. suddenness, loudness, dissonance) but it does not explain how these features should be computed for a given piece of music, or how these features should be weighted to determine the brain-stem reflex. As it stands, Juslin's theory is unable to predict exactly what kind of brain-stem response should be elicited by a given piece of music. In contrast, Newton's theory is very precise indeed. It tells us exactly what we need to measure about each object (mass, distance), with these attributes having well-established measurement instruments available in the science laboratory (e.g. rulers, mass balances). Moreover, once we have measured these attributes, Newton's theory tells us exactly how to combine them to give a precise numeric prediction of the resulting force.
+
+Why is precision desirable in a scientific theory?
+
+-   **Precise theories carry more information than imprecise theories.** Compare Newton's full gravitational theory ($F = G \frac{m_1 m_2}{r^2}$) to the following imprecise verbal version: "Gravitational force increases (a) as the mass of the two objects increase and (b) as the distance between the two objects decreases". All information in the imprecise version is contained within the precise version, but the imprecise version is missing detail about the nature of the mass and distance relationships.
+
+-   **Precise theories are more empirically testable.** The scientific method relies heavily on conducting experiments to test different theories. To test a theory, we need to generate predictions from the theory, and compare them to what we see in our experiment. In this context, precise theories have a clear advantage: they specify precisely what features need to be measured, and how the resulting information ought to be processed, producing a precise prediction as a result. Even subtle deviations from that prediction can have informative results: for example, Newton's theory failed to predict certain perturbation's in the planet Mercury's orbit that were only eventually resolved by Einstein's theory of general relatively. Imprecise theories are comparatively poorly suited to prediction generation. They rely on concepts that are only loosely defined, and they rely on the the reader filling certain gaps with their own intuitions and assumptions. As a result, the theories do not generate precise predictions, and this makes them hard to falsify, because the same theory is compatible with many different datasets.
+
+-   **Precise theories have useful engineering applications.** Once a theory is developed with sufficient precision, we can implement it as a computer program. This computer program can then be used to simulate and reproduce the scientific phenomenon being studied. This can have many useful engineering applications. In the context of aeronautical engineering, simulations of jet engine architectures can help engineers to optimise engine designs without having to run thousands of costly experiments with real engines. In the context of music psychology, simulations of (for example) emotion perception can be used to guide music recommendation systems, helping listeners to retrieve music that matches their mood.
+
+-   more information
+
+-   scientific testability
+
+-   engineering applicability
+
+If the goal of scientific research is to develop maximally precise
+
+## Engineering and computer models
+
+Scientific knowledge can be conceptualised as a collection of *theories* about how the world works.
+
+Scientific theories are explanations about how a particular aspect of the world works.
+
 Computational music psychology is a kind of music psychology that relies heavily on computer models. These computer models are special algorithms that simulate certain acoustic, biological, and/or mental processes thought to be involved in particular musical behaviours. Used correctly, they can form an integral part of the scientific process.
 
 ## Why use computer models?
@@ -362,7 +400,7 @@ One possibility is that the templates are learned through exposure to particular
 
 #### Limitations
 
-The Krumhansl-Schmuckler algorithm has been very influential within the field of music psychology, and many subsequent key-finding algorithms use a similar kind of template-matching process \[@albrecht2013; @Bellmann2005; @Sapp2011; @Temperley1999a\]. Nonetheless, the algorithm is limited by the fact that it ignores the *order* in which notes are played, despite psychological evidence that note order may indeed matter for listeners' key judgments [@brown1988; @matsunaga2005].
+The Krumhansl-Schmuckler algorithm has been very influential within the field of music psychology, and many subsequent key-finding algorithms use a similar kind of template-matching process [@albrecht2013; @Bellmann2005; @Sapp2011; @Temperley1999a\]. Nonetheless, the algorithm is limited by the fact that it ignores the *order* in which notes are played, despite psychological evidence that note order may indeed matter for listeners' key judgments \[@brown1988; @matsunaga2005].
 
 For illustration, consider the following two tone sequences from @matsunaga2005. Both of these sequences use exactly the same pitch classes, just in a different order, and with one of the pitch classes transposed upwards by an octave. The first sequence elicits a very clear tonal centre:
 
@@ -525,7 +563,7 @@ kk_estimate_key(
 
 #### Overview
 
-The Hutchinson-Knopoff dissonance algorithm attempts to explain how listeners perceive certain chords as dissonant (unpleasant) and others as consonant (pleasant) \[@hutchinson1978\]. The algorithm is based on the hypothesis that dissonance derives from negatively valenced interactions between the harmonics in a given chord's frequency spectrum. This idea has its roots in the writings of @Helmholtz1875-fm. Though many other consonance/dissonance algorithms have been developed since its original presentation, the Hutchinson-Knopoff algorithm still performs remarkably well when benchmarked against current competitors from the literature [@Harrison2020-gx].
+The Hutchinson-Knopoff dissonance algorithm attempts to explain how listeners perceive certain chords as dissonant (unpleasant) and others as consonant (pleasant) [@hutchinson1978\]. The algorithm is based on the hypothesis that dissonance derives from negatively valenced interactions between the harmonics in a given chord's frequency spectrum. This idea has its roots in the writings of @Helmholtz1875-fm. Though many other consonance/dissonance algorithms have been developed since its original presentation, the Hutchinson-Knopoff algorithm still performs remarkably well when benchmarked against current competitors from the literature \[@Harrison2020-gx].
 
 #### Detailed description
 
@@ -648,7 +686,7 @@ Since critical bandwidth depends on physical distance, and since the same physic
 ```
 where both critical bandwidth and frequency are expressed in Hz. This relationship looks like the following:
 
-```{r critical-bandwidth-frequency, fig.cap = "Critical bandwidth as a function of frequency."}
+```{r critical-bandwidth-frequency, fig.cap = "Critical bandwidth as a function of frequency.", out.width = "100%"}
 df_cbw <- 
   tibble(
     frequency = seq(from = 20, to = 20000),
@@ -736,7 +774,7 @@ We then plug this number (1.17) into an idealised *dissonance curve* that charac
     \right) ^ 2
     $$
 
-    We tend to prefer the latter form because it is easy to implement computationally.
+    where $y$ is the critical bandwidth distance. We tend to prefer the latter form because it is easy to implement computationally.
 
 ```{r dissonance-curve, fig.cap = "Idealised dissonance curve from @hutchinson1978, plotted using the parametric version specified by @Bigand1996.", animation.hook = "gifski", interval = 0.9, out.width = "100%"}
 if (FALSE) {
@@ -867,7 +905,7 @@ We compute the chord's final dissonance by summing all the 'dissonance contribut
 
 Let's now repeat the same approach and analyse several chords.
 
-```{r, out.width = "100%", fig.cap("Hutchinson & Knopoff model outputs for various prototypical triads from Western music. Each chord is played in closed form and rooted on middle C.")}
+```{r, out.width = "100%", fig.cap = "Hutchinson & Knopoff model outputs for various prototypical triads from Western music. Each chord is played in closed form and rooted on middle C."}
 list(
   "C major" = c(60, 64, 67),
   "C minor" = c(60, 63, 67),
@@ -903,13 +941,13 @@ This model is conceptually fairly simple, yet performs rather well at recovering
 
 It is generally assumed that the dissonance induced by a pair of partials comes from resulting beating effects, which induce a negatively experienced percept of roughness (though see @Harrison2020-gx for a discussion of this assumption). The magnitude of this roughness percept is modelled using the curve plotted in Figure \@ref(fig:dissonance-curve). However, there are several senses in which this model may not be a fully accurate model of roughness perception, for example:
 
--   The model ignores phase differences between the partials, yet phase difference is known to contribute to roughness \[@mathes1947\]. (This may not matter as long as the model is only applied to natural sounds, where two sound sources rarely manifest reliable phase differences).
+-   The model ignores phase differences between the partials, yet phase difference is known to contribute to roughness [@mathes1947]. (This may not matter as long as the model is only applied to natural sounds, where two sound sources rarely manifest reliable phase differences).
 
 -   The model assumes that roughness is proportional to the product of the amplitudes in each pair of partials. This reflects the intuition that greater amplitudes will elicit greater beating. However, the precise mathematical relationship between partial amplitude and beating amplitude is more complex than this [@Vassilakis2001].
 
 -   The model assumes that the dissonance factor is determined by the critical bandwidth distance between the partials. However, more recent studies of auditory roughness have shown that the point of maximum roughness (i.e. the peak of the curve) is not found at a fixed critical bandwidth distance, and likewise the point where roughness disappears is not found at a fixed critical bandwidth distance either.
 
-Several models have subsequently developed that address some of these concerns, for example Vassilakis's model \[@Vassilakis2001\] and Daniel & Weber's model \[@Daniel1997; @Wang2013\]. Curiously, however, these updates seem if anything to make the models *worse* at capturing musical dissonance [@Harrison2020-gx]. More work needs to be done to dig into these discrepancies and understand how consonance may or may not be explained through roughness modelling.
+Several models have subsequently developed that address some of these concerns, for example Vassilakis's model [@Vassilakis2001\] and Daniel & Weber's model \[@Daniel1997; @Wang2013]. Curiously, however, these updates seem if anything to make the models *worse* at capturing musical dissonance [@Harrison2020-gx]. More work needs to be done to dig into these discrepancies and understand how consonance may or may not be explained through roughness modelling.
 
 #### A note on mathematical notation
 
@@ -960,6 +998,103 @@ $$
 $$
 
 By writing $k=1$ at the bottom of the sum we are instructing the reader to begin the sum with $k=1$; by writing $5$ at the top of the sum we are instructing the reader to finish the sum with $k=5$.
+
+#### R implementation
+
+As before, here is a full implementation of Hutchison & Knopoff's model written in the R programming language. You can try out this code in the linked [Google Colab notebook](https://colab.research.google.com/drive/1677LRzW8g_8NfxncQULVgWr2V3Coj0iD?usp=sharing), and experiment with inputting different chords, changing the numbers of harmonics, changing the pitch height, etcetera.
+
+```{r, echo = TRUE, eval = FALSE}
+library(tidyverse)
+
+# We input our chord pitches here, expressed directly as frequencies.
+# To identify the required frequencies for your chord you may wish 
+# to refer to the following table: 
+# https://musicinformationretrieval.com/midi_conversion_table.html.
+
+pitches <- 
+  c(
+    "C4    " = 261.6, 
+    "Eb4   " = 311.1, 
+    "F#4   " = 370.0
+  )
+
+# This function expands each tone into its implied harmonics.
+expand_harmonics <- function(fundamental_frequencies, n_harmonics = 11) {
+  if (is.null(names(fundamental_frequencies))) {
+    names(fundamental_frequencies) <- seq_along(fundamental_frequencies)
+  }
+  n_tones <- length(fundamental_frequencies)
+  map2_dfr(
+    fundamental_frequencies, 
+    names(fundamental_frequencies), 
+    function(f0, tone_id) {
+      tibble(
+        tone_id = tone_id,
+        harmonic_number = seq_len(n_harmonics),
+        frequency = f0 * harmonic_number,
+        amplitude = 1 / harmonic_number
+      )
+    }
+  )
+}
+
+spectrum <-
+  pitches %>% 
+  expand_harmonics() %>%
+  arrange(frequency)
+
+spectrum %>% 
+  ggplot(aes(colour = factor(tone_id))) + 
+  geom_linerange(aes(x = frequency, ymin = 0, ymax = amplitude)) + 
+  scale_x_continuous("Frequency (Hz)") +
+  scale_y_continuous("Amplitude") +
+  scale_colour_viridis_d("Tones:", end = 0.975) +
+  theme(
+    legend.direction = "horizontal",
+    legend.position = c(0.7, 0.75)
+  )
+
+n_partials <- nrow(spectrum)
+
+combinations <- combn(n_partials, 2, simplify = FALSE)
+
+get_cbw <- function(f1, f2) {
+  mean_f <- (f1 + f2) / 2
+  1.72 * (mean_f ^ 0.65)
+}
+
+dissonance_curve <- function(bandwidth_distance) {
+  (4 * bandwidth_distance * exp(1 - 4 * bandwidth_distance)) ^ 2
+}
+
+get_dissonance_factor = function(f1, f2) {
+  abs_freq_diff <- abs(f1 - f2)
+  critical_bandwidth <- get_cbw(f1, f2)
+  bandwidth_distance <- abs_freq_diff / critical_bandwidth
+  dissonance_factor <- dissonance_curve(bandwidth_distance)
+  dissonance_factor
+}
+
+dissonance_by_partial_pairs <- 
+  tibble(
+    i1 = map_int(combinations, 1),
+    i2 = map_int(combinations, 2),
+    f1 = spectrum$frequency[i1],
+    f2 = spectrum$frequency[i2],
+    a1 = spectrum$amplitude[i1],
+    a2 = spectrum$amplitude[i2],
+    f_mean = (f1 + f2) / 2,
+    cbw = get_cbw(f1, f2),
+    cbw_dist = abs(f2 - f1) / cbw,
+    dissonance_factor = get_dissonance_factor(f1, f2),
+    a1_a2 = a1 * a2,
+    sum_sq_amp = sum(spectrum$amplitude ^ 2),
+    dissonance = dissonance_factor * a1_a2 / sum_sq_amp
+  )
+dissonance_by_partial_pairs
+
+sum(dissonance_by_partial_pairs$dissonance)
+```
 
 ## What role does modelling play in the scientific method?
 
