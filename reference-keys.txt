@@ -91,6 +91,6 @@ detailed-description
 limitations-2
 a-note-on-mathematical-notation
 r-implementation-1
-modelling-philosophies
+modelling-approaches
 symbolic-versus-audio-inputs
-neuroscientific-cognitive-biological-acoustic
+neuroscience-cognition-biology-acoustics
