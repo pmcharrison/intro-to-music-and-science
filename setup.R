@@ -2,6 +2,8 @@ library(glue)
 library(uuid)
 library(magrittr)
 
+knitr::opts_chunk$set(out.width = "100%")
+
 embed_audio <- function(
   audio, 
   type = "audio/mpeg",

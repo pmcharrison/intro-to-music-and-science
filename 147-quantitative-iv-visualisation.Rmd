@@ -1,0 +1,66 @@
+# Data visualisation
+
+```{r, echo = FALSE, include = FALSE}
+knitr::opts_chunk$set(
+  out.width = "100%",
+  echo = TRUE
+)
+library(tidyverse)
+set.seed(1)
+```
+
+Graphics are a powerful way to gain insights into empirical data. Done appropriately, they distil down the most important trends within a dataset in a manner that can be grasped intuitively by readers even with minimal scientific knowledge.
+
+This chapter will introduce a variety of common graphing strategies and plot types. A familiarity with these different methods will be very helpful both for reading scientific papers and for writing up one's own research projects.
+
+Graphs can be produced by many different software packages. Most of the graphs in this chapter are produced using R, a programming language used by many scientists for their statistical analyses. R is free, and you can download it [here](https://www.r-project.org/). Most people do not use R directly, but instead use RStudio, a so-called integrated development environment (IDE) that facilitates common programming tasks. You can download RStudio for free [here](https://www.rstudio.com/products/rstudio/download/). However, a quick and easy way to try out the R code provided in this chapter is to use Google Colab notebooks, which provide easy access to an R environment via your web browser. By default Google Colab notebooks run a different programming language called Python, but you can start up an R notebook via [this link](https://colab.to/r) (you may need a Google account).
+
+This chapter contains various self-contained code examples. For example, the following example plots a histogram:
+
+```{r}
+hist(rnorm(50))
+```
+
+To try this code in your own coding environment (be that RStudio or Google Colab), simply press the copy-paste symbol in the top right of the code block, and then paste the code into your coding interface. If you then execute it (usually by pressing Enter or CMD/Ctrl + Enter, depending on your interface), you should replicate the figure from the textbook. Note that some pieces of code may depend on datasets or packages loaded in code blocks further up the page; you will need to copy those code blocks into your interface too in order for your code to work.
+
+**Note**: knowledge of the R programming language is **not** necessary for the Cambridge Tripos music and science courses. These code examples are provided primarily for interest's sake, though students conducting their own Music and Science dissertation projects may find them useful. For a short yet effective introduction to R for scientific programming, please refer to the free R tutorials provided by the [Software Carpentry project](https://software-carpentry.org/lessons/). For a longer interactive introduction to R for data science, consider registering for DataCamp. DataCamp is a subscription-based service, but university instructors can (at the time of writing) get free access for their students by signing up to the [DataCamp for Classrooms](https://www.datacamp.com/groups/classrooms) scheme. Cambridge students at the Centre for Music and Science should contact Peter Harrison (pmch2\@cam.ac.uk) for access.
+
+## Plotting one variable
+
+The simplest graphs plot only one variable at a time. If we are only plotting one variable, this typically means we want to plot that variable's *distribution*, which summarises the kinds of values that a variable takes within a dataset.
+
+The available plot types depend on whether we are plotting a *continuous* variable or a *categorical* variable (see Section \@ref(scientific-variables)).
+
+### Categorical variable
+
+A dataset containing just one categorical variable might look something like this:
+
+```{r}
+library(tidyverse)
+
+fave_animals <- tibble(
+  "Favourite animal" = sample(
+    c("Dogs", "Cats", "Fish"),
+    size = 50,
+    replace = TRUE
+  )
+)
+fave_animals %>% 
+  head %>% 
+  knitr::kable()
+```
+
+Distributions of single categorical variables are usually plotted with bar charts, or, less commonly, with pie charts.
+
+#### Bar charts
+
+```{r}
+
+  
+```
+
+#### Pie charts
+
+##\#
+
+## Plotting two variables
