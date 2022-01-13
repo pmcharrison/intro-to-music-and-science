@@ -726,7 +726,7 @@ pitches <-
   c(
     "C4    " = 261.6, 
     "Eb4    " = 311.1, 
-    "F#4    " = 370.0
+    "Gb4    " = 370.0
   )
 
 pitches %>% 
@@ -1177,7 +1177,7 @@ pitches <-
   c(
     "C4    " = 261.6, 
     "Eb4   " = 311.1, 
-    "F#4   " = 370.0
+    "Gb4   " = 370.0
   )
 
 # This function expands each tone into its implied harmonics.
