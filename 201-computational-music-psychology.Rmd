@@ -1057,7 +1057,7 @@ dissonance_by_partial_pairs |>
   ))
 ```
 
-We compute the chord's final dissonance by summing all the 'dissonance contribution' values in the far right column. Many of these values are near-zero, because they relate to partials that are far away from each other. However, if we sum them all together, we get the following value: `r dissonance_by_partial_pairs$dissonance %>% sum() %>% sprintf("%.3f", .)`
+We compute the chord's final dissonance by summing all the 'dissonance contribution' values in the far right column. Many of these values are near-zero, because they relate to partials that are far away from each other. However, if we sum them all together, we get the following value: `r dissonance_by_partial_pairs$dissonance %>% sum() %>% sprintf("%.3f", .)`.
 
 Let's now repeat the same approach and analyse several chords.
 
