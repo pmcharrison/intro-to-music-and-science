@@ -5,7 +5,6 @@ knitr::opts_chunk$set(
   out.width = "100%",
   echo = TRUE
 )
-library(tidyverse)
 set.seed(1)
 ```
 
@@ -23,7 +22,16 @@ hist(rnorm(50))
 
 To try this code in your own coding environment (be that RStudio or Google Colab), simply press the copy-paste symbol in the top right of the code block, and then paste the code into your coding interface. If you then execute it (usually by pressing Enter or CMD/Ctrl + Enter, depending on your interface), you should replicate the figure from the textbook. Note that some pieces of code may depend on datasets or packages loaded in code blocks further up the page; you will need to copy those code blocks into your interface too in order for your code to work.
 
-**Note**: knowledge of the R programming language is **not** necessary for the Cambridge Tripos music and science courses. These code examples are provided primarily for interest's sake, though students conducting their own Music and Science dissertation projects may find them useful. For a short yet effective introduction to R for scientific programming, please refer to the free R tutorials provided by the [Software Carpentry project](https://software-carpentry.org/lessons/). For a longer interactive introduction to R for data science, consider registering for DataCamp. DataCamp is a subscription-based service, but university instructors can (at the time of writing) get free access for their students by signing up to the [DataCamp for Classrooms](https://www.datacamp.com/groups/classrooms) scheme. Cambridge students at the Centre for Music and Science should contact Peter Harrison (pmch2\@cam.ac.uk) for access.
+**Note 1**: knowledge of the R programming language is **not** necessary for the Cambridge Tripos music and science courses. These code examples are provided primarily for interest's sake, though students conducting their own Music and Science dissertation projects may find them useful. For a short yet effective introduction to R for scientific programming, please refer to the free R tutorials provided by the [Software Carpentry project](https://software-carpentry.org/lessons/). For a longer interactive introduction to R for data science, consider registering for DataCamp. DataCamp is a subscription-based service, but university instructors can (at the time of writing) get free access for their students by signing up to the [DataCamp for Classrooms](https://www.datacamp.com/groups/classrooms) scheme. Cambridge students at the Centre for Music and Science should contact Peter Harrison (pmch2\@cam.ac.uk) for access.
+
+**Note 2**: Most of these examples use the `ggplot2` package. This package is an extension of the R programming language that provides a special syntax for constructing plots. This syntax is very powerful and supports lots of customisation. However, this power comes with the downside of a certain amount of starting complexity. It is also possible to create plots using 'base' R, that is, R's built-in functions. Base R plots are typically simpler to start out, but only offer limited customisation opportunities. Here we focus on `ggplot2` because it is ultimately the tool one would want to use to create plots for journal publications.
+
+Here is some generic setup code that we will use to prepare our subsequent figures:
+
+```{r}
+library(tidyverse)
+theme_set(theme_classic())
+```
 
 ## Plotting one variable
 
@@ -31,36 +39,268 @@ The simplest graphs plot only one variable at a time. If we are only plotting on
 
 The available plot types depend on whether we are plotting a *continuous* variable or a *categorical* variable (see Section \@ref(scientific-variables)).
 
-### Categorical variable
+### Categorical variables
 
 A dataset containing just one categorical variable might look something like this:
 
 ```{r}
-library(tidyverse)
-
 fave_animals <- tibble(
-  "Favourite animal" = sample(
+  "favourite_animal" = sample(
     c("Dogs", "Cats", "Fish"),
     size = 50,
-    replace = TRUE
+    replace = TRUE, 
+    prob = c(2, 1, 0.3)
   )
 )
 fave_animals %>% 
-  head %>% 
-  knitr::kable()
+  DT::datatable(
+    options = list(
+      searching = FALSE,
+      rowId = FALSE
+    )
+  )
 ```
 
 Distributions of single categorical variables are usually plotted with bar charts, or, less commonly, with pie charts.
 
 #### Bar charts
 
-```{r}
+Like most graphs, bar charts have two axes. Each axis is a reference line running along the margins of the graph that helps us to interpret the values within the graph. Typically one of these axes runs horizontally, and is called the *horizontal axis* (or 'x-axis'); the other then runs vertically, and is called the *vertical axis* (or 'y-axis). These axes have several *ticks* along their lengths; these ticks identify how different positions in the plot correspond to different variables or variable values.
 
-  
+Bar charts will generally have one column for each level of the categorical variable. The height of the column corresponds to the number of occurrences of each level (the 'count'). In this dataset we had `r n_cats <- sum(fave_animals$favourite_animal == "Cats"); n_cats` cats, so the height of the 'Cats' column is `r n_cats`.
+
+```{r}
+fave_animals %>% 
+  ggplot(aes(x = favourite_animal)) + 
+  geom_bar() +
+  scale_x_discrete("Favourite animal") + 
+  scale_y_continuous("Count")
 ```
 
 #### Pie charts
 
-##\#
+Pie charts are often seen in business applications, but they have a bad reputation among scientists. To quote from the R documentation for the `pie` function:
+
+> Pie charts are a very bad way of displaying information. The eye is good at judging linear measures and bad at judging relative areas. A bar chart or dot chart is a preferable way of displaying this type of data.
+
+> Cleveland (1985), page 264: “Data that can be shown by pie charts always can be shown by a dot chart. This means that judgements of position along a common scale can be made instead of the less accurate angle judgements.” This statement is based on the empirical investigations of Cleveland and McGill as well as investigations by perceptual psychologists.
+
+Nonetheless, we might as well show how to make one.
+
+```{r}
+counts <- table(fave_animals)
+pie(counts)  
+```
+
+
+### Continuous variables
+
+Let's now consider plotting a single *continuous* variable. A dataset containing a single continuous variable might look like this:
+
+```{r}
+tree_heights <- tibble(height = rnorm(30, mean = 15, sd = 7))
+
+tree_heights %>% DT::datatable(
+  options = list(
+    searching = FALSE,
+    rowId = FALSE
+  )
+)
+```
+
+Four kinds of plots are common for plotting distributions of continuous variables: *histograms*, *kernel density plots*, and *dot plots*.
+
+#### Histograms
+
+A histogram is like a version of a bar plot but for continuous variables. Here's a histogram for our tree height data:
+
+```{r}
+tree_heights %>% 
+  ggplot(aes(x = height)) + 
+  geom_histogram(binwidth = 5, fill = "lightblue", colour = "black") +
+  scale_x_continuous("Height (m)", breaks = seq(from = 0, to = 30, by = 5)) + 
+  scale_y_continuous("Count", breaks = seq(from = 0, to = 10, by = 2)) 
+```
+
+We can see that the histogram corresponds to a number of bars. Each bar has an associated count, just like the bar plot. Where do these counts come from? They are produced by first *binning* the continuous variable into categories based on each number's value. In the above example, each bin is 5 m wide; the first bin contains numbers between -2.5 and 2.5, the second bin contains numbers between 2.5 and 7.5, and so on. We then count the number of values that fall into each bin, and use these counts as the bin heights.
+
+The appropriate bin width depends on the amount of the data. Narrow bins give us more precision, but if we don't have enough data, most bins don't get any values, and the histogram fails to visualise the distribution well:
+
+```{r}
+tree_heights %>% 
+  ggplot(aes(x = height)) + 
+  geom_histogram(binwidth = 0.1, fill = "lightblue", colour = "black") +
+  scale_x_continuous("Height (m)", breaks = seq(from = 0, to = 30, by = 5)) + 
+  scale_y_continuous("Count", breaks = seq(from = 0, to = 10, by = 2)) 
+```
+
+Likewise, if our bins are too wide, we lose a lot of precision:
+
+```{r}
+tree_heights %>% 
+  ggplot(aes(x = height)) + 
+  geom_histogram(binwidth = 20, fill = "lightblue", colour = "black") +
+  scale_x_continuous("Height (m)") + 
+  scale_y_continuous("Count") 
+```
+#### Kernel density plots
+
+A limitation of the histogram is the way that count values jump at bin boundaries, which suggests a discontinuity to the data that may not actually be present. Kernel density plots address this issue by producing what is in essence a smoothed version of a histogram. A kernel density plot for our tree heights looks like this:
+
+```{r}
+tree_heights %>% 
+  ggplot(aes(x = height)) + 
+  geom_density(fill = "lightblue") +
+  scale_x_continuous("Height (m)", breaks = seq(from = 0, to = 30, by = 5)) +
+  scale_y_continuous("Density")
+```
+
+Now that we no longer have bins, it is no longer meaningful to put counts on the vertical axis. Instead we have 'density'. The idea here is as follows: you get counts by multiplying distances on the horizontal axis by counts on the vertical axis (mathematically, this is formalised as the process called *integration*). So, for example, if the density plot had a density of 2.5 over the range 15-20 m, we would know that there are approximately $2.5 \times (20 - 15) = 12.5$ trees with a height between 15 and 20.
+
+Similar to histograms, it is possible to change the precision of the density estimator, with familiar trade-offs between precision and sparsity. This is achieved by changing the *bandwidth* parameter, which is analogous to the bin width in the histogram. Here is a the same density plot with a small bandwidth parameter:
+
+```{r}
+tree_heights %>% 
+  ggplot(aes(x = height)) + 
+  geom_density(fill = "lightblue", bw = 0.25) +
+  scale_x_continuous("Height (m)", breaks = seq(from = 0, to = 30, by = 5)) +
+  scale_y_continuous("Density")
+```
+
+And the same plot with a high bandwidth parameter:
+
+```{r}
+tree_heights %>% 
+  ggplot(aes(x = height)) + 
+  geom_density(fill = "lightblue", bw = 10) +
+  scale_x_continuous("Height (m)", breaks = seq(from = 0, to = 30, by = 5)) +
+  scale_y_continuous("Density")
+```
+
+#### Dotplots
+
+The definition of density can be quite difficult to understand for naive readers. This problem can be improved by overlaying the density plot with a dotplot. Dotplots illustrate each observation with an explicit 'dot'. This helps the reader understand the relationship between individual observations and the estimated density.
+
+```{r}
+tree_heights %>% 
+  ggplot(aes(x = height)) + 
+  geom_density(fill = "lightblue") +
+  geom_dotplot(method = "histodot") +
+  scale_x_continuous("Height (m)", breaks = seq(from = 0, to = 30, by = 5)) + 
+  scale_y_continuous("Density", limits = c(0, 0.07)) 
+```
 
 ## Plotting two variables
+
+### Two continuous variables
+
+A dataset with two continuous variables might look something like this:
+
+```{r}
+cars <- mtcars %>% select(wt, mpg) %>% as_tibble()
+cars %>% DT::datatable(
+    options = list(
+      searching = FALSE,
+      rowId = FALSE
+    )
+  )
+```
+
+#### Scatter plots
+
+The standard way of plotting two continuous variables together is the *scatter plot*. A scatter plot for our car dataset would look something like this:
+
+```{r}
+cars %>% 
+  ggplot(aes(x = wt, y = mpg)) +
+  geom_point()
+```
+
+Here each observation (i.e. each row in the dataset) is represented by a single point. The values of the two variables define the horizontal and vertical positions of these points.
+
+Often these points will demonstrate some kind of systematic trend. We can illustrate this trend to the reader by adding a *trend line*, which will be computed automatically using some statistical procedure like *linear regression* (we'll discuss this in a subsequent chapter).
+
+```{r}
+cars %>% 
+  ggplot(aes(x = wt, y = mpg)) +
+  geom_smooth(method = "lm", formula = "y ~ x") +
+  geom_point() 
+```
+
+#### Line plots
+
+In some situations it makes sense to connect the points with lines. This often happens when we have time as one of our variables. In this case it is often aesthetically preferable to hide the points and just show the lines. The result is called a *line plot*.
+
+```{r}
+temp_over_time <- tibble(
+  year = as.numeric(time(nhtemp)),
+  temperature = as.numeric(nhtemp)
+)
+  
+temp_over_time %>% DT::datatable(
+  options = list(
+    searching = FALSE,
+    rowId = FALSE
+  )
+)
+```
+
+```{r}
+temp_over_time %>% 
+  ggplot(aes(x = year, y = temperature)) +
+  geom_line()
+```
+
+#### Kernel density plot
+
+If we try to plot a scatter plot with a huge number of observations, it'll soon become hard to read. 
+
+```{r}
+big_dataset <- tibble(
+  x = rnorm(n = 1e4),
+  y = x + rnorm(n = 1e4)
+)
+  
+big_dataset %>% 
+  ggplot(aes(x = x, y = y)) + 
+  geom_point()
+```
+```{r}
+big_dataset %>% 
+  ggplot(aes(x = x, y = y)) + 
+  geom_point(alpha = 0.1)
+```
+This works quite well. An alternative though is to avoid plotting individual points at all, and instead create a two-dimensional density plot.
+
+```{r}
+big_dataset %>% 
+  ggplot(aes(x = x, y = y)) + 
+  stat_density_2d(
+    aes(fill = ..density..), 
+    geom = "raster", 
+    contour = FALSE, 
+    interpolate = TRUE
+  ) +
+  scale_fill_continuous("Density") +
+  theme(
+    legend.position = "right"
+  )
+```
+
+### One categorical variable, one continuous variable
+
+
+
+
+#### Boxplots 
+
+Boxplots are more common in older papers.
+
+
+```{r}
+tree_heights %>% 
+  ggplot(aes(x = "A", y = height)) + 
+  geom_boxplot()
+  # scale_x_continuous("Height (m)", breaks = seq(from = 0, to = 30, by = 5)) + 
+  # scale_y_continuous("Density", limits = c(0, 0.07)) 
+```
