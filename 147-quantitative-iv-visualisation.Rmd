@@ -8,11 +8,11 @@ knitr::opts_chunk$set(
 set.seed(1)
 ```
 
-Graphics are a powerful way to gain insights into empirical data. Done appropriately, they distil down the most important trends within a dataset in a manner that can be grasped intuitively by readers even with minimal scientific knowledge.
+Plots are a powerful way to gain insights into empirical data. Done appropriately, they distil down the most important trends within a dataset in a manner that can be grasped intuitively by readers even with minimal scientific knowledge.
 
-This chapter will introduce a variety of common graphing strategies and plot types. A familiarity with these different methods will be very helpful both for reading scientific papers and for writing up one's own research projects.
+This chapter will introduce a variety of common plotting strategies. A familiarity with these different methods will be very helpful both for reading scientific papers and for writing up one's own research projects.
 
-Graphs can be produced by many different software packages. Most of the graphs in this chapter are produced using R, a programming language used by many scientists for their statistical analyses. R is free, and you can download it [here](https://www.r-project.org/). Most people do not use R directly, but instead use RStudio, a so-called integrated development environment (IDE) that facilitates common programming tasks. You can download RStudio for free [here](https://www.rstudio.com/products/rstudio/download/). However, a quick and easy way to try out the R code provided in this chapter is to use Google Colab notebooks, which provide easy access to an R environment via your web browser. By default Google Colab notebooks run a different programming language called Python, but you can start up an R notebook via [this link](https://colab.to/r) (you may need a Google account).
+Plots can be produced by many different software packages. Most of the plots in this chapter are produced using R, a programming language used by many scientists for their statistical analyses. R is free, and you can download it [here](https://www.r-project.org/). Most people do not use R directly, but instead use RStudio, a so-called integrated development environment (IDE) that facilitates common programming tasks. You can download RStudio for free [here](https://www.rstudio.com/products/rstudio/download/). However, a quick and easy way to try out the R code provided in this chapter is to use Google Colab notebooks, which provide easy access to an R environment via your web browser. By default Google Colab notebooks run a different programming language called Python, but you can start up an R notebook via [this link](https://colab.to/r) (you may need a Google account).
 
 This chapter contains various self-contained code examples. For example, the following example plots a histogram:
 
@@ -108,7 +108,7 @@ tree_heights %>% DT::datatable(
 )
 ```
 
-Four kinds of plots are common for plotting distributions of continuous variables: *histograms*, *kernel density plots*, and *dot plots*.
+Five kinds of plots are common for plotting distributions of continuous variables: *histograms*, *kernel density plots*, *dot plots*, and *box-and-whisker* plots. They all do more or less the same, but are constructed somewhat differently.
 
 #### Histograms
 
@@ -143,6 +143,7 @@ tree_heights %>%
   scale_x_continuous("Height (m)") + 
   scale_y_continuous("Count") 
 ```
+
 #### Kernel density plots
 
 A limitation of the histogram is the way that count values jump at bin boundaries, which suggests a discontinuity to the data that may not actually be present. Kernel density plots address this issue by producing what is in essence a smoothed version of a histogram. A kernel density plot for our tree heights looks like this:
@@ -189,6 +190,34 @@ tree_heights %>%
   scale_x_continuous("Height (m)", breaks = seq(from = 0, to = 30, by = 5)) + 
   scale_y_continuous("Density", limits = c(0, 0.07)) 
 ```
+
+#### Box-and-whisker plots 
+
+Box-and-whisker plots (often abbreviated to 'box plots') are more common in older papers, probably because they are easier to compute and draw by hand. A box plot for tree heights looks like the following:
+
+```{r}
+boxplot(tree_heights, ylab = "Height (m)")
+```
+
+The box plot illustrates the data distribution in terms of several basic statistics:
+
+- The maximum (plotted at the top of the top 'whisker')
+- The minimum (plotted at the bottom of the bottom 'whisker')
+- The median (a thick line in the middle of the box)
+- The first and third quartiles (corresponding to the boundaries of the box)
+
+We will discuss these quantities in a subsequent chapter. The important thing for now is to appreciate that they characterise the centre and the spread of the observed values.
+
+Sometimes you will see boxplots with points lying outside the whiskers:
+
+```{r}
+tree_heights$height %>% 
+  as.numeric() %>% 
+  c(40) %>% 
+boxplot(ylab = "Height (m)")
+```
+
+These points correspond to *outliers*. An outlier is a point that falls far outside the main distribution. If we take the length of the box (which is known mathematically as the *interquartile range*), multiply it by 1.5, and stack it on top and bottom of the box, this gives us the area outside of which points will be classified as outliers.
 
 ## Plotting two variables
 
@@ -270,6 +299,7 @@ big_dataset %>%
   ggplot(aes(x = x, y = y)) + 
   geom_point(alpha = 0.1)
 ```
+
 This works quite well. An alternative though is to avoid plotting individual points at all, and instead create a two-dimensional density plot.
 
 ```{r}
@@ -289,18 +319,113 @@ big_dataset %>%
 
 ### One categorical variable, one continuous variable
 
-
-
-
-#### Boxplots 
-
-Boxplots are more common in older papers.
-
+When we plot a categorical variable against a continuous variable, we typically take our techniques from plotting one-dimensional continuous variables, and apply them repeatedly for the different levels of the categorical variable. Consider the following dataset, for example:
 
 ```{r}
-tree_heights %>% 
-  ggplot(aes(x = "A", y = height)) + 
-  geom_boxplot()
-  # scale_x_continuous("Height (m)", breaks = seq(from = 0, to = 30, by = 5)) + 
-  # scale_y_continuous("Density", limits = c(0, 0.07)) 
+flower_data <- 
+  iris %>% select(species = Species, petal_length = Petal.Length)
+
+flower_data %>% 
+  DT::datatable(
+    options = list(
+      searching = FALSE,
+      rowId = FALSE
+    )
+  )
 ```
+
+We can start by plotting this data using multiple box plots:
+
+```{r}
+flower_data %>% 
+  ggplot(aes(x = species, y = petal_length, fill = species)) + 
+  geom_boxplot() +
+  scale_x_discrete(NULL) + 
+  scale_y_continuous("Petal length") +
+  theme(legend.position = "none")
+```
+
+We can also plot multiple kernel density plots. There are several ways of doing this. One is to place the kernel density plots on top of each other:
+
+```{r}
+flower_data %>% 
+  ggplot(aes(x = petal_length, fill = species)) +
+  geom_density(alpha = 0.7) +
+  scale_x_discrete("Petal length") + 
+  scale_y_continuous("Density") +
+  scale_fill_discrete("Species") +
+  theme(legend.position = "right")
+
+```
+
+Or in separate rows:
+
+```{r}
+flower_data %>% 
+  ggplot(aes(x = petal_length, fill = species)) +
+  geom_density(alpha = 0.7) +
+  scale_x_discrete("Petal length") + 
+  scale_y_continuous("Density") +
+  scale_fill_discrete("Species") +
+  facet_wrap(~ species, ncol = 1) +
+  theme(legend.position = "none")
+```
+Or as a so-called *violin plot*:
+
+```{r}
+flower_data %>% 
+  ggplot(aes(x = species, y = petal_length, fill = species)) +
+  geom_violin(alpha = 0.7) +
+  scale_x_discrete(NULL) +
+  scale_y_continuous("Petal length") +
+  scale_fill_discrete("Species") +
+  theme(legend.position = "none")
+```
+
+The appropriate choice will depend on the number of variables, their distribution, and the statistical relationships you are trying to highlight in the data.
+
+## Plotting more than two variables
+
+It is possible to plot additional variables in the same figure by manipulating the *aesthetics* and the *faceting*.
+
+In the context of plotting, aesthetics correspond to particular features of graphical elements. For example, we might manipulate the size, shape, and colour of a point. We might map the size to a continuous variable, and the shape and colour to categorical variables. This way we can add more dimensions of variation to a two-dimensional scatter plot.
+
+```{r}
+mtcars %>% 
+  mutate(am = factor(am)) %>% 
+  ggplot(aes(x = wt, y = mpg, size = cyl, colour = am)) +
+  geom_point() + 
+  scale_colour_discrete(breaks = c(0, 1)) +
+  theme(legend.position = "right")
+```
+Facets meanwhile correspond to the different panels of a plot. Different facets can correspond to different levels of a categorical variable, or even different *combinations* of levels of a categorical variable. For example, I could have plotted the graph above with a different facet for each value of `am`:
+
+```{r}
+mtcars %>% 
+  mutate(am = recode_factor(am, "0" = "am = 0", "1" = "am = 1")) %>% 
+  ggplot(aes(x = wt, y = mpg, size = cyl, colour = am)) +
+  geom_point() + 
+  scale_colour_discrete(breaks = c(0, 1)) +
+  facet_wrap(~ am) +
+  theme(legend.position = "right")
+```
+
+Even though colour is in theory redundant here, it can be nice to keep it anyway to differentiate different facets.
+
+More complex figures can facet by multiple variables at the same time, producing a grid of facets...
+
+```{r}
+mtcars %>% 
+  mutate(
+    am = recode_factor(am, "0" = "am = 0", "1" = "am = 1"),
+    vs = recode_factor(vs, "0" = "vs = 0", "1" = "vs = 1")
+  ) %>% 
+  ggplot(aes(x = wt, y = mpg, size = cyl, colour = am, shape = vs)) +
+  geom_point() + 
+  scale_colour_discrete(breaks = c(0, 1)) +
+  scale_shape_discrete(guide = "none") +
+  facet_grid(vs ~ am) +
+  theme(legend.position = "right")
+```
+
+If we do this well, we can fit a lot of pertinent information into a figure. Beware, though -- if we do it poorly, we can confuse the reader a lot!
