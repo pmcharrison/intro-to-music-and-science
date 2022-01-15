@@ -1,0 +1,10 @@
+# Descriptive statistics
+
+```{r, echo = FALSE, include = FALSE}
+knitr::opts_chunk$set(
+  out.width = "100%",
+  echo = TRUE
+)
+set.seed(1)
+```
+

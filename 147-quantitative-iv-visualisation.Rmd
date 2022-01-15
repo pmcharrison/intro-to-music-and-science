@@ -28,7 +28,7 @@ To try this code in your own coding environment (be that RStudio or Google Colab
 
 Here is some generic setup code that we will use to prepare our subsequent figures:
 
-```{r}
+```{r, include = FALSE}
 library(tidyverse)
 theme_set(theme_classic())
 ```
