@@ -3,8 +3,267 @@
 ```{r, echo = FALSE, include = FALSE}
 knitr::opts_chunk$set(
   out.width = "100%",
-  echo = TRUE
+  echo = FALSE
 )
 set.seed(1)
+library(tidyverse)
+theme_set(theme_classic())
 ```
 
+*Descriptive statistics* are numbers that summarise key aspects of a given dataset. These statistics often form integral parts of particular visualisations (Chapter \@ref(data-visualisation)); for example, the median and interquartile range are two important statistics in box-and-whisker plots. In this chapter we will discuss various kinds of descriptive statistics and their applications.
+
+## Single variables
+
+In the following we will consider the task of summarising the `distance` variable in the following dataset:
+
+```{r}
+distances <- tibble(
+  distance = (rnorm(1000, mean = 15, sd = 7)) ^ 2 
+)
+
+distances %>% DT::datatable(
+  options = list(
+    searching = FALSE,
+    rowId = FALSE
+  )
+)
+```
+
+Here is a histogram illustrating the variable's distribution (see Chapter \@ref(data-visualisation) for an introduction to histograms):
+
+```{r}
+p_hist <- 
+  distances %>% 
+  ggplot(aes(x = distance)) + 
+  geom_histogram(bins = 20, fill = "white", colour = "grey50") +
+  scale_x_continuous("Distance (m)") + 
+  scale_y_continuous("Count") 
+p_hist
+```
+
+We will now consider various descriptive statistics that can be computed for this variable.
+
+### Centrality
+
+'Centrality' statistics describe the location of a dataset's centre. There are three classic centrality statistics: the *mean* (also known as the 'average'), the *median*, and the *mode*.
+
+#### Mean
+
+We compute the mean of $N$ datapoints by summing them together and dividing by $N$. In mathematical notation, we can write the following:
+
+$$
+\textrm{mean}(x_1, x_2, \ldots, x_N) = 
+\frac{x_1 + x_2 + \ldots + x_N}{N} = 
+\frac{1}{N}\sum_{i=1}^N{x_i}
+$$
+
+For example, the mean of 6.47, 2.32, and 1.57 is
+
+$$
+\frac{6.47 + 2.32 + 1.57}{3} = 3.453
+$$
+
+Let's compute the mean of our dataset of distances, and plot it on our histogram.
+
+```{r}
+mean_val <- mean(distances$distance)
+median_val <- median(distances$distance)
+pct_25_val <- quantile(distances$distance, probs = c(0.25))
+pct_75_val <- quantile(distances$distance, probs = c(0.75))
+
+annotations <- tribble(
+  ~ x,         ~ y,   ~ label,  ~ colour,
+  mean_val,    100,    "mean",   "red", 
+  median_val,  100,    "median", "blue",
+  pct_25_val,  100,    "25th percentile", "purple",
+  pct_75_val,  100,    "75th percentile", "purple",
+)
+
+stat_lines <- function(which_stats) {
+  geom_vline(
+    aes(xintercept = x, colour = colour),
+    data = annotations %>% filter(label %in% which_stats)
+  )
+}
+
+stat_labels <- function(which_stats) {
+   ggrepel::geom_label_repel(
+    mapping = aes(x, y, label = label, colour = colour), 
+    data = annotations %>% filter(label %in% which_stats)
+  )
+}
+
+p_hist_mean <-
+  p_hist + 
+  stat_lines(c("mean")) +
+  stat_labels(c("mean")) +
+  scale_colour_identity(NULL)
+
+p_hist_mean_median <-
+  p_hist + 
+  stat_lines(c("mean", "median")) +
+  stat_labels(c("mean", "median")) +
+  scale_colour_identity(NULL)
+
+p_hist_pct_25_75 <-
+    p_hist + 
+  stat_lines(c("25th percentile", "75th percentile")) +
+  stat_labels(c("25th percentile", "75th percentile")) +
+  scale_colour_identity(NULL)
+
+p_hist_mean
+```
+
+We can compute the mean in R with code like the following:
+
+```{r, echo = TRUE}
+x <- c(5, 3, 2, 4, 3)
+mean(x)
+```
+
+#### Median
+
+The median is computed as follows: we rank the data points in numeric order, and then take the middle data point. For example, suppose that we want to compute the median of the following numbers:
+
+$$
+5, 2.5, 8.3, 7, 1.2
+$$
+
+We first arrange them in ascending order:
+
+$$
+1.2, 2.5, 5, 7, 8.3
+$$
+
+We then select the middle number:
+
+$$
+1.2, 2.5, \mathbf{5}, 7, 8.3
+$$
+
+So, our median will be 5.
+
+If we have an odd number of values, there will be exactly one number in the middle. If we have an even number of values, there will be exactly two numbers in the middle. In this case, we take the two middle values and average them to get the median.
+
+Let's add the median to our histogram:
+
+```{r}
+p_hist_mean_median
+```
+
+In this example the median is significantly smaller than the median. This is commonly the case with *skewed* distribution. Skewed distributions can often be found in socioeconomic studies; for example, income distributions tend to have the majority of incomes bunched towards the bottom of the distribution, contrasting with a smaller number of much higher incomes towards the top of the distribution. This yields the paradoxical situation that the 'average' person earns less than the average income.
+
+We can compute the median in R with code like the following:
+
+```{r, echo = TRUE}
+x <- c(5, 3, 2, 4, 3)
+median(x)
+```
+
+#### Mode
+
+The *mode* is only properly defined for variables that can only take a finite number of values. It is defined as the value that is observed most often in the dataset. For example, suppose we record the following dataset tabulating the number of cars owned by different families:
+
+```{r}
+num_cars <- 
+  tibble(
+    num_cars = sample(
+      0:3, 
+      size = 100,
+      prob = c(0.5, 1.5, 1.1, 0.2),
+      replace = TRUE)
+  )
+
+num_cars %>% DT::datatable(
+  options = list(
+    searching = FALSE,
+    rowId = FALSE
+  )
+)
+```
+
+We can plot the counts of each number in a bar plot:
+
+```{r}
+num_cars %>%
+  ggplot(aes(x = factor(num_cars, levels = 0:3))) + 
+  geom_bar() + 
+  scale_x_discrete("Number of cars") + 
+  scale_y_continuous("Count")
+```
+
+The mode then corresponds to the highest bar, 1.
+
+#### Which centrality statistic should I report?
+
+In most practical contexts we tend to report the mean. We occasionally report the median if we believe that the dataset is highly skewed or contains many outliers. 
+
+### Spread
+
+Alongside centrality, it is useful to characterise the *spread* of our dataset. There are various relevant statistics here, including the range, standard deviation, and interquartile range.
+
+#### Range
+
+The range simply corresponds to the difference between the highest and the lowest values observed in the dataset. Suppose we have the following dataset:
+
+$$
+5, 3, 2, 4, 3
+$$
+The minimum value is 2, and the maximum value is 5, so the range is 3.
+
+The range is often described as an unreliable statistic because it is highly sensitive to outliers, that is, rare extreme values in the distribution. The following two statistics are however less sensitive to such outliers.
+
+#### Standard deviation
+
+The standard deviation can be informally understood as the average distance of each observation from the mean. We can compute it in R using code like the following:
+
+```{r, echo = TRUE}
+x <- c(5, 3, 2, 4, 3)
+sd(x)
+```
+
+The mathematical definition of standard deviation has some subtleties, though.
+
+1.  The 'average' here is computed by taking the 'root mean square' (i.e., taking the distances from the mean, squaring them, adding them, then taking the square root).
+
+2.  By default, we compute what is called the 'sample standard deviation', which has a built-in adjustment factor to account for uncertainty in the mean. The result is that the definition of standard deviation has $n-1$ in the denominator (the lower part of the fraction) rather than $n$.
+
+The mathematical definition of the standard deviation is then:
+
+$$
+s = \sqrt{\frac{\sum_{i=1}^{N}(x_i - \bar{x}) ^ 2}{N-1}}
+$$
+
+If you are unfamiliar with this kind of mathematical notation, you may wish to have a look at Section \@ref(a-note-on-mathematical-notation). Don't worry too much, though: this mathematical definition is **not** required for the Cambridge undergraduate courses, and you are unlikely to need to worry about it in most situations.
+
+#### Interquartile range
+
+The interquartile range is another measure of spread. It is based on the concept of *percentiles*. The *x*-th percentile of a given dataset is the value below which *x*% of the sample falls. For example, the 25th percentile is the value below which 25% of the sample falls. We can compute percentiles in R with code like the following:
+
+```{r, echo = TRUE}
+x <- c(3, 6, 4, 3, 2, 2, 2, 3, 5, 6, 4, 5, 4, 3, 2, 5)
+quantile(x, probs = c(0.25, 0.5, 0.75))
+```
+
+The interquartile range is based on the 25th and 75th percentile:
+
+```{r}
+p_hist_pct_25_75
+```
+
+We compute the interquartile range as the difference between the 25th percentile and the 75th percentile. In this case, the interquartile range would be `r IQR(distances$distance)`.
+
+In R, we can compute the interquartile range using the `IQR` function:
+
+```{r, echo = TRUE}
+x <- c(3, 6, 4, 3, 2, 2, 2, 3, 5, 6, 4, 5, 4, 3, 2, 5)
+IQR(x)
+```
+
+#### Which spread statistic should I report?
+
+In most practical contexts we tend to report the standard deviation. It is often useful to report the range as well. It is quite rare to report the interquartile range, but we sometimes report it if we believe that the dataset is highly skewed or contains many outliers.
+
+## Pairs of variables
+
+Visualisations are great, but often we must describe data in terms of concrete numbers. In particular, *descriptive statistics* usefully summarise

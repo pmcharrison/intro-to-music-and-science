@@ -1129,7 +1129,7 @@ This particular expression is taken from Hutchinson & Knopoff's model, and conce
 
 -   $g_{ij}$ is the dissonance component that depends on the critical bandwidth distance between partials
 
--   $\sum_k{A_k^2}$ is a normalising factor, corresponding to the sum of the squared amplitudes of all of the partials. This normalising factor ensures that dissonance is independent of the overall amplitude of the chord as a whole.
+-   $\sum_k{A_k^2}$ is a normalising factor.
 
 There are a few notation conventions to note here. The first is *index notation*, where we write small letters or numbers in subscripts, for example:
 
