@@ -21,11 +21,15 @@ distances <- tibble(
   distance = (rnorm(1000, mean = 15, sd = 7)) ^ 2 
 )
 
-distances %>% DT::datatable(
-  options = list(
-    searching = FALSE,
-    rowId = FALSE
-  )
+distances %>% 
+  mutate(
+    distance = sprintf("%.2f", distance)
+  ) %>% 
+  DT::datatable(
+    options = list(
+      searching = FALSE,
+      rowId = FALSE
+    )
 )
 ```
 
@@ -63,7 +67,7 @@ $$
 \frac{6.47 + 2.32 + 1.57}{3} = 3.453
 $$
 
-Let's compute the mean of our dataset of distances, and plot it on our histogram.
+Let's compute the mean of our larger dataset and plot it on our histogram.
 
 ```{r}
 mean_val <- mean(distances$distance)
@@ -151,7 +155,7 @@ Let's add the median to our histogram:
 p_hist_mean_median
 ```
 
-In this example the median is significantly smaller than the median. This is commonly the case with *skewed* distribution. Skewed distributions can often be found in socioeconomic studies; for example, income distributions tend to have the majority of incomes bunched towards the bottom of the distribution, contrasting with a smaller number of much higher incomes towards the top of the distribution. This yields the paradoxical situation that the 'average' person earns less than the average income.
+In this example the median is significantly smaller than the median. This is commonly the case with *skewed* distributions. Skewed distributions can often be found in socioeconomic studies; for example, income distributions tend to have the majority of incomes bunched towards the bottom of the distribution, contrasting with a smaller number of much higher incomes towards the top of the distribution. This yields the paradoxical situation that the 'average' person earns less than the average income.
 
 We can compute the median in R with code like the following:
 
@@ -196,7 +200,7 @@ The mode then corresponds to the highest bar, 1.
 
 #### Which centrality statistic should I report?
 
-In most practical contexts we tend to report the mean. We occasionally report the median if we believe that the dataset is highly skewed or contains many outliers. 
+In most practical contexts we tend to report the mean. We occasionally report the median if we believe that the dataset is highly skewed or contains many outliers.
 
 ### Spread
 
@@ -208,8 +212,7 @@ The range simply corresponds to the difference between the highest and the lowes
 
 $$
 5, 3, 2, 4, 3
-$$
-The minimum value is 2, and the maximum value is 5, so the range is 3.
+$$ The minimum value is 2, and the maximum value is 5, so the range is 3.
 
 The range is often described as an unreliable statistic because it is highly sensitive to outliers, that is, rare extreme values in the distribution. The following two statistics are however less sensitive to such outliers.
 
@@ -233,6 +236,8 @@ The mathematical definition of the standard deviation is then:
 $$
 s = \sqrt{\frac{\sum_{i=1}^{N}(x_i - \bar{x}) ^ 2}{N-1}}
 $$
+
+Here $x_i$ refers to the $i$th value in the dataset, and $\bar{x}$ refers to the mean value in the dataset. The sigma notation ()
 
 If you are unfamiliar with this kind of mathematical notation, you may wish to have a look at Section \@ref(a-note-on-mathematical-notation). Don't worry too much, though: this mathematical definition is **not** required for the Cambridge undergraduate courses, and you are unlikely to need to worry about it in most situations.
 
@@ -266,4 +271,158 @@ In most practical contexts we tend to report the standard deviation. It is often
 
 ## Pairs of variables
 
-Visualisations are great, but often we must describe data in terms of concrete numbers. In particular, *descriptive statistics* usefully summarise
+### Pairs of continuous variables
+
+Often we want to understand how certain pairs of variables relate to each other. In Chapter \@ref(data-visualisation) we learned various techniques for plotting such relationships. For example, we saw that pairs of continuous variables can be visualised using a scatter plot:
+
+```{r}
+mtcars %>% 
+  ggplot(aes(x = wt, y = mpg)) +
+  geom_point()
+```
+
+A key descriptive statistic in this context (two continuous variables) is the *correlation coefficient*. The correlation coefficient is a way of quantifying the strength of the relationship between two variables.
+
+A correlation of 1 means a perfect positive correlation, where the relationship between the two variables is perfectly summarised by a straight line with a positive (i.e. ascending) gradient:
+
+```{r}
+get_dataset_with_corr <- function(r, n = 50, mu = c(0, 0)) {
+  cov <- matrix(c(1, r, r, 1), ncol = 2)
+  df <- MASS::mvrnorm(n, mu, cov, empirical = TRUE)
+  tibble(x = df[, 1], y = df[, 2])
+}
+plot_scatter_with_corr <- function(r, n = 50, mu = c(0, 0)) {
+  get_dataset_with_corr(r, n, mu) %>% 
+    ggplot(aes(x, y)) +
+    geom_point()
+}
+
+plot_scatter_with_corr(1) 
+```
+
+A correlation of -1 also means that the relationship is perfectly summarised by a straight line, but one with negative gradient:
+
+```{r}
+plot_scatter_with_corr(-1) 
+```
+
+These cases may be contrasted with a correlation of 0, which corresponds to the absence of a relationship:
+
+```{r}
+plot_scatter_with_corr(0) 
+```
+
+Intermediate numbers between these values then correspond to noisy relationships. In a noisy relationship, one variable gives some information about the other variable, but not enough to perfectly predict it. Here we have an example of a correlation of 0.7:
+
+```{r}
+plot_scatter_with_corr(0.7) 
+```
+
+Here is a correlation of -0.4:
+
+```{r}
+plot_scatter_with_corr(-0.4) 
+```
+
+There are different types of correlation coefficients out there. The most common is the *Pearson correlation coefficient*, which is what we've been plotting just now. This is the default used by most statistical software. In R, you can compute the Pearson correlation coefficient as follows:
+
+```{r, echo = TRUE}
+x <- c(3, 6, 4, 3, 6, 5, 4, 8, 6)
+y <- c(0, 2, 3, 2, 3, 4, 7, 4, 5)
+cor(x, y)
+```
+
+#### Outliers
+
+A troublesome thing about the Pearson correlation coefficient is that it is rather sensitive to outliers (i.e. extreme data values). This will be illustrated with an example. Suppose we start with a dataset where the correlation coefficient is 0:
+
+```{r}
+df <- get_dataset_with_corr(0)
+
+df %>% 
+  ggplot(aes(x, y)) + 
+  geom_point()
+```
+
+```{r, echo = TRUE}
+cor(x, y)
+```
+
+Now let's add one outlier to this dataset, with a large x value and a large y value.
+
+```{r}
+df2 <- bind_rows(
+  df,
+  tibble(x = 10, y = 10)
+)
+
+df2 %>% 
+  ggplot(aes(x, y)) + 
+  geom_point()
+```
+
+If we compute the correlation between these two variables, we find that it has now increased to a rather large number, despite the fact that the original dataset had no correlation at all:
+
+```{r, echo = TRUE}
+cor(df2$x, df2$y)
+```
+
+There are fortunately other types of correlation coefficient that are *robust* to these kinds of issues. These are called *non-parametric* correlation coefficients (this contrasts with the Pearson coefficient, which is a *parametric* coefficient). Two such coefficients are particularly popular: the *Spearman* and the *Kendall* correlation coefficients. These coefficients both also give numbers between -1 and 1. They are, however, much less sensitive to outliers. Let's see what they return for our dataset:
+
+```{r, echo = TRUE}
+cor(df2$x, df2$y, method = "spearman")
+
+cor(df2$x, df2$y, method = "kendall")
+```
+
+All else aside, many statisticians prefer the Pearson correlation coefficient because it has certain useful statistical properties. However, it is a good idea to use a non-parametric coefficient if one is worried about outliers.
+
+#### Linearity
+
+#### It is important to note that correlation coefficients only look for *increasing* or *decreasing* relationships. They do not look for more complex shapes. For example, the following curve illustrates a situation where $y$ is perfectly predicted from $x$, yet the correlation coefficient is 0:
+
+```{r, echo = FALSE}
+df <- 
+  tibble(
+    x = seq(from = - 3, to = 3, by = 0.1),
+    y = poly(x, degree = 3)[, 3]
+  )
+df %>% 
+  ggplot(aes(x, y)) + 
+  geom_point()
+```
+
+```{r, echo = TRUE}
+cor(df$x, df$y) %>% round(3)
+```
+
+The Pearson correlation coefficient is particularly picky in that it looks specifically for *straight* lines (in statistics lingo: *linear relationships*). So, the following curve has a Pearson correlation coefficient less than 1:
+
+```{r}
+df <- 
+  tibble(
+    x = seq(from = 0, to = 3, by = 0.1),
+    y = exp(x)
+  )
+df %>% 
+  ggplot(aes(x, y)) + 
+  geom_point()
+```
+
+```{r, echo = TRUE}
+cor(df$x, df$y) %>% round(3)
+```
+
+In contrast, the nonparametric correlation coefficients only look for *monotonic* (i.e. always increasing or always decreasing) relationships. This means they return 1 for the above plot.
+
+```{r, echo = TRUE}
+cor(df$x, df$y, method = "spearman") %>% round(3)
+
+cor(df$x, df$y, method = "kendall") %>% round(3)
+```
+
+This is because nonparametric statistics only look at the *order* of points, not their precise values.
+
+### Pairs of other variable types
+
+For some reason it is uncommon to provide descriptive statistics for pairs of other variable types (e.g. categorical with categorical, or categorical with discrete). We will therefore not discuss such statistics here.
