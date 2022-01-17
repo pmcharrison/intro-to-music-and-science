@@ -379,7 +379,7 @@ All else aside, many statisticians prefer the Pearson correlation coefficient be
 
 #### Linearity
 
-#### It is important to note that correlation coefficients only look for *increasing* or *decreasing* relationships. They do not look for more complex shapes. For example, the following curve illustrates a situation where $y$ is perfectly predicted from $x$, yet the correlation coefficient is 0:
+It is important to note that correlation coefficients only look for *increasing* or *decreasing* relationships. They do not look for more complex shapes. For example, the following curve illustrates a situation where $y$ is perfectly predicted from $x$, yet the correlation coefficient is 0:
 
 ```{r, echo = FALSE}
 df <- 
