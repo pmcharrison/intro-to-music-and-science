@@ -706,8 +706,8 @@ In the absence of further information about the chord, we need to make some assu
 
 Expanding the chord tones gives us a frequency spectrum like the following:
 
-```{r, fig.cap = "Frequency spectrum for a closed C diminished triad rooted on middle C (C4). The chord is modelled as containing 10 harmonics per tone, with amplitudes following a harmonic series. The three tones are differentiated by three different colours.", out.width = "100%"}
-expand_harmonics <- function(fundamental_frequencies, n_harmonics = 11) {
+```{r, fig.cap = "Frequency spectrum for a closed C diminished triad rooted on middle C (C4). The chord is modelled as containing 6 harmonics per tone, with amplitudes following a harmonic series. The three tones are differentiated by three different colours.", out.width = "100%"}
+expand_harmonics <- function(fundamental_frequencies, n_harmonics = 6) {
   if (is.null(names(fundamental_frequencies))) {
     names(fundamental_frequencies) <- seq_along(fundamental_frequencies)
   }
@@ -743,7 +743,7 @@ pitches %>%
   
 ```
 
-In the above example, each tone has been expanded into 11 harmonics. Each tone is plotted in a distinct colour, and each harmonic appears as a vertical line with a given frequency and a given amplitude.
+In the above example, each tone has been expanded into 6 harmonics; in a serious analysis we might consider 11 or more harmonics. Each tone is plotted in a distinct colour, and each harmonic appears as a vertical line with a given frequency and a given amplitude.
 
 The model works by considering pairwise interactions between partials in this spectrum. Each pair of partials contributes something towards the overall dissonance of the chord.
 
@@ -992,15 +992,15 @@ spectrum |>
 then taking their sum:
 
 $$
-1.00 + 1.00 + 1.00 + 0.25 + 0.25 + 0.25 + \ldots = `r sum(spectrum$amplitude ^ 2) |> round(3)`.
+1.00 + 1.00 + 1.00 + 0.25 + 0.25 + 0.25 + \ldots = `r s_sq_amp <- sum(spectrum$amplitude ^ 2); round(s_sq_amp, 3)`.
 $$
 
 Note that this expression is the same no matter which pair of partials we are considering, so we only need to compute it once for the whole spectrum.
 
-To get the final dissonance contribution of the two partials, we then take the previously computed dissonance factor (0.014), multiply it by the product of the amplitudes (0.25), and divide it by the sum of the squared amplitudes (4.469). This gives us:
+To get the final dissonance contribution of the two partials, we then take the previously computed dissonance factor (0.014), multiply it by the product of the amplitudes (0.25), and divide it by the sum of the squared amplitudes (`r round(s_sq_amp, 3)`). This gives us:
 
 $$
-\frac{0.014 \times 0.25}{4.469} = 0.0008 
+\frac{0.014 \times 0.25}{`r round(s_sq_amp, 3)`} = `r (0.014 * 0.25 / s_sq_amp) %>% sprintf("%.5f", .)` 
 $$
 
 Let's think about what role amplitude plays in this procedure. The fact that we multiply by the product of the amplitudes means that the dissonance contribution is *proportional* to the amplitudes of each of the two partials. In other words, if we double the amplitude of either partial, the resulting dissonance contribution will be doubled. Dividing by the sum of the squared amplitudes, meanwhile, has the effect of normalising by the spectrum's overall amplitude. The consequence in particular is that dissonance ends up being independent of the chord's *overall* amplitude; for example, if we double the amplitude of every partial in the spectrum, then the overall dissonance will stay the same. It is only by changing the amplitudes of some partials and not others that the overall dissonance will change.
