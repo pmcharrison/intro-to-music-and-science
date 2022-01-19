@@ -1,3 +1,17 @@
 # (WIP) Inferential statistics
 
+## What are inferential statistics?
+
+Many scientific questions can be formulated in terms of one or more *populations* which we want to understand. These could be populations of humans; for example, we might wish to understand the extent to which socioeconomic status predicts educational outcomes in the general population of schoolchildren. In the context of corpus analyses, these could be populations of music compositions; for example, we might study the extent to which parallel fifths occur in Baroque compositions versus Renaissance compositions.
+
+A given scientific experiment can rarely work with an entire population at once. It is impractical for most scientists to collect educational outcomes for all schoolchildren in the world; likewise, it would be a nigh impossible task to compile digital encodings of all Baroque and Renaissance compositions in existence.
+
+Instead, scientists normally work with *samples*. Samples are smaller datasets that are drawn from a particular population. The hope is that the sample is representative of the larger population, and that we can learn something from the sample that can be generalised to an insight about the population as a whole.
+
+*Inferential statistics* are a special family of statistics that are designed to help us with this generalisation task. They are intended to help us to understand when certain conclusions can be conclusively drawn from a given dataset, and when other conclusions cannot be drawn with any confidence.
+
+## Sample size
+
+<!-- Moreover, scientists are often interested in a more abstract conception of populations, one which is not limited to the entities that exist at the present moment, but one that also includes entities that could plausibly exist. For example, a music theorist might conceptualise the population of Bach chorale harmonisations as including not only the chorale harmonisations that Bach actually wrote, but also the chorale harmonisations that he might have written had he had the chance.  -->
+
 *Work in progress*
