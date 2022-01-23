@@ -1,4 +1,4 @@
-# (WIP) Inferential statistics
+# Inferential statistics
 
 ```{r, echo = FALSE, include = FALSE}
 knitr::opts_chunk$set(
@@ -471,4 +471,38 @@ An *interaction effect* is when the effect of one predictor depends on the value
 
 Linear regression assumes that all the marginal effects are straight lines. However, it is possible to generalise regression to incorporate nonlinear (wiggly) marginal effects, using techniques such as *polynomial regression* and *generalised additive modelling*. We will not discuss these techniques here but they are conceptually similar to linear regression models aside from their ability to capture nonlinearities.
 
-## Null hypothesis testing
+## Null hypothesis significance testing
+
+*Null hypothesis significance testing* is a particular approach to inferential statistics that dominated psychological research for much of the 20th century, and is still very prevalent today. Many modern statisticians however now have deep reservations about this approach, arguing that it does not answer the questions that most scientists actually want to answer, and that it encourages dangerous statistical misconceptions among the researchers that use it. These issues notwithstanding, the great majority of existing literature use these or related techniques, and so it is important to understand them even if one prefers not to use them oneself.
+
+The basic principle in null hypothesis testing is that we use our data to falsify a *null hypothesis* that claims that our dataset is statistically homogeneous. For example, suppose that we are examining differences in means between two experimental conditions, 'A' and 'B'. The null hypothesis is that these two conditions have the same population means. If our data falsify this hypothesis, then we can be confident that some difference exists between the means.
+
+Null hypothesis significance testing relies particularly on the notion of the *p-value*. The p-value is a special statistic with a subtle meaning that many researchers misremember. It can be defined as follows:
+
+> The p-value is the probability that an effect equally extreme or more extreme than the present effect would have been observed were the null hypothesis to be true.
+
+Suppose for example that we observed a difference of 3.2 IQ points between our conditions 'A' and 'B'. The p-value would then tell us the probability that we'd observe an IQ difference of 3.2 or greater in the hypothetical world where 'A' and 'B' had the same population means.
+
+Small p-values constitute stronger evidence against the null hypothesis. For example, $p = .001$ means that we'd only see such a strong effect 1 out of 1000 times if the null hypothesis were true. This is very unlikely, suggesting that we must seriously consider the alternative: that a population difference does exist between the conditions. 
+
+It is conventional to use fixed thresholds for interpreting p-values, in particular the threshold $p = .05$. If the p-value is less than .05, it is conventional to say that the effect is *statistically significant*. In this case, we are 'permitted' to say that we observed an effect in the data:
+
+> Members of the intervention group exhibited statistically significant improvements in IQ scores ($p = .02$).
+
+In contrast, when the p-value is greater than .05, the effect does not reach statistical significance, and we are not allowed to claim that we saw an effect.
+
+> Members of the intervention exhibited no statistically significant improvement in IQ scores over the control group ($p = .25$).
+
+In certain kinds of analyses (for example so-called *post-hoc tests*) this thresholding process is nuanced by the use of so-called *familywise error correction*, intended to control the level of false positives in a given analysis. We need not worry about the details of this here.
+
+Null hypothesis significance testing is associated with a range of different statistical methods in the literature designed to work with different kinds of experiment designs. Examples include: 
+
+- t-tests
+- ANOVAs
+- Wilcoxon tests
+- Friedman tests
+- Kruskal-Wallace tests
+
+Though the details of these methods vary, they all try to address a similar question: do the different experimental conditions have different population parameters, or do they have the same population parameters. You will generally see them reported with p-values, which you can interpret according to the definition provided above.
+
+The use of null hypothesis significance testing in psychology is increasingly controversial. Arguably the biggest issue is that it works by trying to disprove a straw-man hypothesis. In psychology, almost any variable is correlated to some degree with almost any other variable, and almost any intervention will have *some kind* of effect if you look closely enough. It is not interesting to know whether the effect is absolutely zero or not, because we know that there will almost always be some effect. Rather, we want to know *how big* the effect is, and in what direction it lies. The p-value tells us nothing about this. This is why we strongly encourage the readers of the present text to focus on reporting confidence intervals in their analyses, and to design their studies around measuring the size of effects rather than testing whether effects exist in the first place.
