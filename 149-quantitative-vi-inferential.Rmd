@@ -115,7 +115,7 @@ map_dfr(sds, function(sigma) {
   )
 ```
 
-Much of inferential statistics can then be reduced to variants of the following logical process. We suppose that our population of interest can be modelled by some probability distribution, for example the normal distribution (which happens to resemble many real-world distributions strikingly well). We then try to *infer* the values of this distribution's parameters, for example its mean and standard deviation, based on the data we observe. 
+Much of inferential statistics can then be reduced to variants of the following logical process. We suppose that our population of interest can be modelled by some probability distribution, for example the normal distribution (which happens to resemble many real-world distributions strikingly well). We then try to *infer* the values of this distribution's parameters, for example its mean and standard deviation, based on the data we observe.
 
 ## Sample size and uncertainty
 
@@ -123,16 +123,128 @@ The size of our sample is crucial for determining our ability to infer the value
 
 For illustration, let's suppose we are trying to use data to infer the mean of a normal distribution whose true value is 1.5. In the first case, we'll plot the results from 5 experiments, each of which estimate the mean based on just 10 observations:
 
-```{r}
+```{r, fig.height = 12}
 n_datasets <- 5
+true_mean <- 1.5
+n_obs <- 10
 
-map_dfr(1:n_datasets)
+set.seed(2)
+datasets <- 
+  map_dfr(1:n_datasets, function(i) {
+    tibble(
+      dataset = i, 
+      data = rnorm(n_obs, true_mean)
+    )
+  })
+
+means <- datasets %>% group_by(dataset) %>% summarise(mean = mean(data))
+
+datasets %>% 
+  ggplot(aes(data)) + 
+  geom_histogram(bins = 20, colour = "black", fill = "lightblue") +
+  geom_vline(aes(xintercept = mean), data = means, colour = "red", linetype = "dashed") + 
+  scale_x_continuous("x") +
+  facet_wrap(~ dataset, ncol = 1)
 ```
 
+These estimates of the mean are rather noisy, with a standard deviation of `r sd(means$mean) %>% sprintf("%.3f", .)`. We call this value the *standard error*; it tells us how unreliable our mean estimates are.
+
+Now consider an analogous set of experiments, each with 1000 observations:
+
+```{r, fig.height = 12}
+n_datasets <- 5
+true_mean <- 1.5
+n_obs <- 1000
+
+set.seed(2)
+datasets <- 
+  map_dfr(1:n_datasets, function(i) {
+    tibble(
+      dataset = i, 
+      data = rnorm(n_obs, true_mean)
+    )
+  })
+
+means <- datasets %>% group_by(dataset) %>% summarise(mean = mean(data))
+
+datasets %>% 
+  ggplot(aes(data)) + 
+  geom_histogram(bins = 20, colour = "black", fill = "lightblue") +
+  geom_vline(aes(xintercept = mean), data = means, colour = "red", linetype = "dashed") + 
+  scale_x_continuous("x") +
+  facet_wrap(~ dataset, ncol = 1)
+```
+
+Now the standard deviation of our means (our standard error) is `r sd(means$mean) %>% sprintf("%.3f", .)`, more-or-less a tenth of the original standard error. In other words, increasing our dataset size by a factor of 100 has made our estimates about 10 times more precise. There is a mathematical theorem called the *Central Limit Theorem* that formalises and generalises this observation, showing that in general if you multiply your sample size by $N$, then your standard error will decrease by a factor of $\sqrt{N}$.
+
+The main takeaway message here is that increasing sample size reduces uncertainty. This is why sample size is considered a very important aspect of scientific studies; without sufficient sample sizes, we cannot rely on any of our conclusions.
+
+## Estimating uncertainty
+
+In the example above we estimated our uncertainty in our mean estimations by repeating the same experiment five times and computing the standard deviation of the means. This is not a very practical approach in real-life experiments, because if we had five identical datasets we'd probably want to compute one mean over all datasets (hence achieving a higher effective sample size) rather than computing means over 20% of the dataset at a time. In this case we wouldn't be able to take our same approach of computing the standard deviation of the means, because we'd only have one mean.
+
+Fortunately statisticians have developed various techniques that allow us to have our cake and eat it: to generate standard errors for our estimates while analysing the whole dataset at once. These techniques are mostly straightforward with standard statistical software.
+
+In the simple case where we are computing the mean of a dataset, it turns out that the standard error of this mean can be estimated by taking the standard deviation and dividing it by the square root of the sample size. This is a useful corollary of the Central Limit Theorem mentioned above.
+
+Here is an example of computing the standard error of the mean in R:
+
+```{r, echo = TRUE}
+data <- c(5, 7, 3, 4, 5, 6, 2, 3, 4)
+
+sd <- sd(data)
+sd
+
+N <- length(data)
+N 
+
+se <- sd / sqrt(N)
+se
+
+```
+
+In more complex data analysis methods, such as linear regression (see Section \@ref(linear-regression)), most statistical software will return standard errors automatically, based again on various mathematical theorems.
+
+A more general and powerful approach to computing standard errors is to use a technique called *bootstrapping*. Bootstrapping works by simulating thousands of artificial datasets and measuring the distribution of the relevant statistic in these simulations. We will not describe the details here, but it is worth being aware that the technique exists.
+
+## Representing uncertainty
+
+It is good practice to provide uncertainty estimates when reporting inferential statistics (e.g. means) in a scientific report. For example, we might report the mean of a dataset as follows:
+
+> The mean reaction time among the musicians was 700 ms (*SD =* 633ms, *SE* = 76 ms).
+
+Here we have provided both the standard deviation (abbreviated as *SD*), which tells our reader about the spread of our data, and the standard error (abbreviated as *SE*), which tells our reader about the reliability of our mean estimate.
+
+Often scientists will report something called a *confidence interval* instead of the standard error. A confidence interval provides a range of plausible values for a given statistic. Most commonly, scientists will report a 95% confidence interval; the idea behind a 95% confidence interval is that, if we repeated the same experiment infinitely many times, 95% of those repeats should give a mean within that confidence interval. As a rule of thumb, the confidence interval will typically correspond to the mean plus or minus 1.96 standard errors. So, if I have mean of 4.5 and a standard error of 1.5, then my 95% confidence interval will be [`r 4.5 - 1.96 * 1.5`, `r 4.5 + 1.96 * 1.5`]. Confidence intervals can be computed automatically by most statistical software packages.
+
+The general philosophy in scientific data analysis is to be conservative about interpreting the values of parameters. In particular, we try only to commit to statements that would only be true no matter what value we chose within the confidence interval. For example, suppose we had the following analysis:
+
+> The musical intervention had a mean effect of 1.5 IQ points (95% confidence interval: [-0.2, 3.2]).
+
+In this case, we would generally *not* conclude that the musical intervention had a positive effect, even though the mean effect was indeed positive; this is because the 95% confidence interval still contains zero, so it is still plausible that the intervention had no effect.
+
+It is conventional to represent uncertainty in plots using *error bars*. Here is an example of a plot containing error bars:
+
+```{r, fig.cap = "Means for three conditions in a fictional dataset. The error bars denote 95% confidence intervals."}
+data <- tribble(
+  ~ x, ~ y, ~ ymin, ~ ymax,
+  "A", 1.5, 1.1, 1.9,
+  "B", 0.5, 0.3, 0.7,
+  "C", 3.2, 2.9, 3.5
+)
+data %>% 
+  ggplot(aes(x, y, ymin = ymin, ymax = ymax)) + 
+  geom_bar(stat = "identity", colour = "black", fill = "lightblue") + 
+  geom_errorbar(width = 0.1) + 
+  scale_x_discrete("Group") + 
+  scale_y_continuous("Value")
+```
+
+When including error bars in a plot, researchers have a choice of three kinds of uncertainty statistics: confidence intervals, standard errors, or standard deviations. When plotting a confidence interval, the two tails of the error bar correspond to the lower and higher bounds of the confidence interval respectively. When plotting a standard error, the lower tail corresponds to the mean minus one standard error, and the upper tail corresponds to the mean plus one standard error; an analogous approach is taken for plotting the standard deviation, as in the example above.
+
+The choice of uncertainty statistic to include in a plot is primarily up to the researcher. It is essential, however, to specify clearly in the plot description which kind of statistic has been included.
 
 <!-- Moreover, scientists are often interested in a more abstract conception of populations, one which is not limited to the entities that exist at the present moment, but one that also includes entities that could plausibly exist. For example, a music theorist might conceptualise the population of Bach chorale harmonisations as including not only the chorale harmonisations that Bach actually wrote, but also the chorale harmonisations that he might have written had he had the chance.  -->
-
--   Confidence intervals
 
 ## Linear regression
 
