@@ -246,6 +246,229 @@ The choice of uncertainty statistic to include in a plot is primarily up to the 
 
 <!-- Moreover, scientists are often interested in a more abstract conception of populations, one which is not limited to the entities that exist at the present moment, but one that also includes entities that could plausibly exist. For example, a music theorist might conceptualise the population of Bach chorale harmonisations as including not only the chorale harmonisations that Bach actually wrote, but also the chorale harmonisations that he might have written had he had the chance.  -->
 
+## Uncertainty and repeated measures
+
+A primary goal of experiment design is to reduce uncertainty. One way of reducing uncertainty is to take advantage of *repeated-measures* analyses. These analyses make intelligent use of repeated-measurement structure in the data to reduce uncertainty in parameters of interest.
+
+Let's consider a simple worked example. Suppose we have the following dataset, of IQ scores before and after a musical intervention: 
+
+```{r}
+#| fig.cap = "A fictional dataset of IQ scores before and after a musical intervention. The red rectangles denote 95% confidence intervals of the means."
+n_students <- 100
+
+iq_scores <- tibble(
+  Student = 1:n_students,
+  "Pre-test IQ" = rnorm(n_students, mean = 110, sd = 15),
+  "Post-test IQ" = `Pre-test IQ` + rnorm(n_students, mean = 3, sd = 3)
+)
+
+iq_scores %>% 
+  mutate_all(round) %>% 
+  DT::datatable(
+    options = list(
+      searching = FALSE,
+      rowId = FALSE
+    ))
+
+iq_scores_long <- 
+  iq_scores %>% 
+  pivot_longer(cols = c("Pre-test IQ", "Post-test IQ"), 
+               names_to = "timepoint", 
+               values_to = "iq") %>% 
+  mutate(
+    timepoint = factor(timepoint, levels = c(
+      "Pre-test IQ", "Post-test IQ"
+    ))
+  )
+
+iq_between_ci <-
+  iq_scores_long %>% 
+  group_by(timepoint) %>% 
+  summarise(
+    mean = mean(iq),
+    n = length(iq),
+    sd = sd(iq),
+    se = sd / sqrt(n),
+    lower_95 = mean - 1.96 * se,
+    upper_95 = mean + 1.96 * se
+  )
+
+iq_scores_long %>% 
+  ggplot(aes(iq)) +
+  geom_rect(aes(xmin = lower_95, xmax = upper_95, ymin = -Inf, ymax = Inf),
+            inherit.aes = FALSE,
+            data = iq_between_ci,
+            fill = "red", colour = "red", alpha = 0.25) +
+  geom_histogram(colour = "black", fill = "lightblue", bins = 30) + 
+  scale_x_continuous("IQ") +
+  scale_y_continuous("Count") +
+  facet_wrap(~ timepoint, ncol = 1)
+
+```
+
+Here the 95% confidence intervals of the means (plotted with red rectangles) overlap for the two datasets, so we can't infer that there is any meaningful effect of the musical intervention on IQ scores.
+
+However, suppose we construct a new analysis that better takes into account the repeated-measures structure of the data. In particular, suppose we compute a new variable, corresponding to the difference between pre-test and post-test IQ:
+
+```{r}
+iq_scores_diff <- 
+  iq_scores %>% 
+  mutate(
+    "IQ change" =  `Post-test IQ` - `Pre-test IQ`
+  )
+
+iq_scores_diff %>% 
+  mutate_all(round) %>% 
+  DT::datatable(
+    options = list(
+      searching = FALSE,
+      rowId = FALSE
+    ))
+```
+
+Then we can plot this new variable with a histogram:
+
+```{r}
+#| fig.cap = "The same fictional dataset, but plotting changes in IQ scores. The red rectangle denotes the 95% confidence interval of the mean."
+
+diff_stats <- tibble(
+  n = nrow(iq_scores_diff),
+  mean = mean(iq_scores_diff$`IQ change`),
+  sd = sd(iq_scores_diff$`IQ change`),
+  se = sd / sqrt(n),
+  lower_95 = mean - 1.96 * se,
+  upper_95 = mean + 1.96 * se
+)
+
+iq_scores_diff %>%
+  ggplot(aes(`IQ change`)) +
+  geom_rect(aes(xmin = lower_95, xmax = upper_95, ymin = -Inf, ymax = Inf),
+          inherit.aes = FALSE,
+          data = diff_stats,
+          fill = "red", colour = "red", alpha = 0.25) +
+  geom_histogram(colour = "black", fill = "lightblue", bins = 30) 
+```
+
+Now we see that the 95% confidence interval for the change in IQs is [`r diff_stats$lower_95 %>% sprintf("%.1f", .)`, `r diff_stats$upper_95 %>% sprintf("%.1f", .)`], which does not include zero. So, we can conclude that the musical intervention *did* indeed induce a statistically reliable increase in IQ scores.
+
+Why did we gain so much precision in the latter analysis? In the original analysis, much of the noise in the data came from individual differences in student IQs, which dwarfed the small changes induced by the musical intervention. However, the latter analysis controlled for this variation by subtracting the pre-test IQ from the post-test IQ, producing a dataset that isolated *changes* in IQ. This gives us a much more reliable analysis of the effect of IQ.
+
+Many repeated-measures analyses can be formulated using differencing analyses like the one above. More complex repeated-measures structures sometimes need more complex analysis methods, however. There is a general family of analyses called *mixed-effect* analyses which are particularly well-suited to such problems; we will not consider these methods here, but it's useful to know that they exist.
+
 ## Linear regression
+
+In science we often see variables that depend on multiple contributing factors, and we want to quantify the relevant *causal contributions* of each underlying factor. Linear regression is a technique designed to achieve exactly this. 
+
+Let's consider the following example: we wish to understand how house prices depend both on floorspace and on number of rooms. Suppose we collect the following dataset of house prices:
+
+```{r}
+n_houses <- 200
+
+house_dataset <- 
+  tibble(
+    floorspace = runif(n_houses, min = 50, max = 200) %>% round(),
+    rooms = round(1 + (floorspace - 50) / 27 + rnorm(n_houses, sd = 0.5)) %>% pmax(1),
+    price = round(5e5 * floorspace / 150 + rnorm(n_houses, sd = 8e4), -2)
+  )
+
+house_dataset %>% 
+  mutate(
+    price = formatC(price, digits = 0, big.mark = ",", format = "f"),
+  ) %>% 
+  DT::datatable(
+    options = list(
+      searching = FALSE,
+      rowId = FALSE
+    ))
+```
+
+Let's start out by computing pairwise correlations between the two predictor variables and price (the *outcome variable*):
+
+```{r}
+house_dataset %>% 
+  ggplot(aes(rooms, price)) + 
+  geom_point(alpha = 0.25) + 
+  scale_x_continuous("Number of rooms") + 
+  scale_y_continuous("Price")
+
+house_dataset %>% 
+  ggplot(aes(floorspace, price)) + 
+  geom_point(alpha = 0.5) + 
+  scale_x_continuous("Floor space") + 
+  scale_y_continuous("Price")
+```
+
+In both cases, we see strong positive correlations: houses with more rooms tend to be priced higher, and houses with more floor space tend to be priced higher.
+
+Let's now look at the same data through the lens of linear regression. The primary purpose of linear regression is to estimate *marginal effects*. Marginal effects tell us how the outcome variable would change if we adjusted one predictor while holding all the others constant.
+
+We begin by fitting the regression model:
+
+```{r, echo = TRUE}
+# Fitting the regression model
+mod <- lm(price ~ rooms + floorspace, data = house_dataset)
+```
+
+We then plot the marginal effect for floorspace. As before, we see a positive association: increasing floorspace causes the price to increase.
+
+```{r, echo = TRUE, message = FALSE}
+#| fig.cap = "Marginal effect of floorspace on house price in a fictional dataset (95% confidence interval)."
+
+# Plotting marginal effects requires the ggeffects package,
+# you can install this with the following command:
+#
+# install.packages("ggeffects")
+
+(ggeffects::ggpredict(mod, terms = "floorspace") %>% plot()) + 
+  scale_x_continuous("Floorspace") + 
+  scale_y_continuous("Price") +
+  ggtitle(NULL) +
+  theme_classic()
+```
+
+Now let's plot the marginal effect of room number:
+
+```{r, echo = TRUE, message = FALSE}
+#| fig.cap = "Marginal effect of room number on house price in a fictional dataset (95% confidence interval)."
+(ggeffects::ggpredict(mod, terms = "rooms") %>% plot()) + 
+  scale_x_continuous("Number of rooms") + 
+  scale_y_continuous("Price") +
+  ggtitle(NULL) +
+  theme_classic() 
+```
+Interestingly, the previous association between number of rooms and house price is *not* replicated. The overall trend is decreasing (more rooms yields a lower price), but there is a wide confidence interval and the marginal effect might well be zero.
+
+What do we conclude from this? It seems that the real driver of house prices is floorspace, not the number of rooms. Houses with larger floorspace tend to contain more rooms, but having more rooms doesn't make them more valuable *per se*. Linear regression is a valuable tool in situations such as this, where we have multiple variables relating in a complex fashion, and we wish to estimate their causal effects on each other.
+
+### Linear regression and categorical variables
+
+The example above illustrated linear regression with continuous predictor variables. However, it is also perfectly possible to perform linear regression with categorical predictor variables. In this case the marginal effect plot looks like a bar plot instead of a line plot.
+
+### Generating predictions from regression models
+
+We have discussed how regression models can be used for explaining relationships between variables. However, they can also be used for generating predictions for new data points. For example, I can use the regression model from above to predict the price of a house with a floorspace of 125 square metres and 5 rooms:
+
+```{r, echo = TRUE}
+predict(mod, newdata = tibble(rooms = 5, floorspace = 125)) %>% 
+  as.numeric()
+```
+
+The `equatiomatic` package in R provides a useful tool for extracting the equation used to generate these predictions:
+
+```{r, echo = TRUE, results = "asis"}
+# install.packages("equatiomatic")
+
+equatiomatic::extract_eq(mod, use_coefs = TRUE)
+```
+
+If you wanted you could use this equation to generate your predictions manually.
+
+### Interactions
+
+An *interaction effect* is when the effect of one predictor depends on the value of another predictor. Interaction effects are easiest to conceptualise when one of the variables is continuous and one is categorical with $N$ levels. In this case, the interaction effect works by estimating $N$ versions of the continuous variable's marginal effect, one for each of the $N$ levels of the categorical variable. However, interactions can in general occur between all kinds of predictor variables.
+
+### Nonlinear regression
+
+Linear regression assumes that all the marginal effects are straight lines. However, it is possible to generalise regression to incorporate nonlinear (wiggly) marginal effects, using techniques such as *polynomial regression* and *generalised additive modelling*. We will not discuss these techniques here but they are conceptually similar to linear regression models aside from their ability to capture nonlinearities.
 
 ## Null hypothesis testing
