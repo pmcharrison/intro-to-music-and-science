@@ -35,7 +35,6 @@ spectral-centroid
 spectral-irregularity
 nasality
 formants
-section
 wip-pitch
 wip-consonance
 wip-music-across-the-world
