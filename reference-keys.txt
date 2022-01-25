@@ -24,6 +24,10 @@ music-theory
 music-engineering
 foundations-of-acoustics
 timbre
+psychological-methods-for-studying-timbre
+free-text-methods
+semantic-rating-scales
+similarity-judgments
 decomposing-timbre
 temporal-aspects
 spectral-aspects
@@ -31,6 +35,7 @@ spectral-centroid
 spectral-irregularity
 nasality
 formants
+section
 wip-pitch
 wip-consonance
 wip-music-across-the-world
