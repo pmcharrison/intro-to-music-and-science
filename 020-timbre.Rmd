@@ -398,4 +398,3 @@ The following applet enables you to explore the spectral content of your own voi
 </p>
 :::
 
-## 
