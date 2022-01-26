@@ -1,6 +1,201 @@
 # (WIP) Emotion
 
-<!-- <!-- Can we include some music therapy here? --> -->
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  echo = FALSE,
+  out.width = "100%"
+)
+library(tidyverse)
+```
+
+## (WIP) Introduction to emotion and music
+
+## (WIP) Modelling emotion
+
+```{r, echo = FALSE}
+DiagrammeR::grViz("
+digraph boxes_and_circles {
+
+  graph [overlap = true, fontsize = 10, layout = dot, rankdir = LR]
+
+  
+  # L1 nodes
+  node [shape = box, fixedsize = true,
+        width = 2.2]
+  
+  Happy
+  Amazed
+  Dazzled
+  Allured 
+  Moved 
+  
+  Inspired
+  FeelTranscendence [ label = 'Feeling of transcendence' ]
+  Spirituality [label = 'Feeling of spirituality']
+  Thrills
+  
+  Love [ label = 'In love' ]
+  Affectionate
+  Sensual
+  Tender
+  Soft [ label = 'Softened-up' ]
+  
+  Sentimental
+  Dreamy
+  Nostalgic
+  Melancholic
+  
+  Calm
+  Relaxed
+  Serene
+  Soothed
+  Meditative
+  
+  Energetic
+  Triumphant
+  Fiery
+  Strong
+  Heroic
+  
+  Stimulated
+  Joyful
+  Animated
+  Dancing
+  Amused
+  
+  Agitated
+  Nervous
+  Tense
+  Impatient
+  Irritated
+  
+  Sad
+  Sorrowful
+
+  # L2 nodes
+
+  node [shape = ellipse,
+        fixedsize = true,
+        width = 2.5, 
+        height = 1,
+        fontsize=23] 
+  Wonder
+  Transcendence
+  Tenderness
+  Nostalgia
+  Peacefulness
+  Power
+  JoyfulActivation [label = 'Joyful activation' ]
+  Tension
+  Sadness
+  
+  # L3 nodes
+  
+    node [shape = circle,
+        fixedsize = true,
+        width = 2.5, 
+        fontsize=30] 
+  
+  Sublimity
+  Vitality
+  Unease
+
+  
+  edge [ dir = back ]
+  
+  # L1 edges
+  
+  Happy->Wonder [ label = 1.00 ]
+  Amazed->Wonder [label = 0.95 ]
+  Dazzled->Wonder [label = 0.84 ]
+  Allured->Wonder [label = 0.86 ]
+  Moved->Wonder [label = 0.75 ]
+  
+  Inspired->Transcendence [ label = 1.00 ]
+  FeelTranscendence->Transcendence [ label = 0.92 ]
+  Spirituality->Transcendence [ label = 0.90 ]
+  Thrills->Transcendence [ label = 0.65 ]
+  
+  Love->Tenderness [ label = 1.00 ]
+  Affectionate->Tenderness [ label = 0.97 ]
+  Sensual->Tenderness [ label = 0.98 ]
+  Tender->Tenderness [ label = 0.97 ]
+  Soft->Tenderness [ label = 0.74 ]
+  
+  Sentimental->Nostalgia [ label = 1.00 ]
+  Dreamy->Nostalgia [ label = 0.77 ]
+  Nostalgic->Nostalgia [label = 0.64 ]
+  Melancholic->Nostalgia [label = 0.52 ]
+  
+  Calm->Peacefulness [ label = 1.00]
+  Relaxed->Peacefulness [ label = 0.96 ]
+  Serene->Peacefulness [ label = 0.94 ]
+  Soothed->Peacefulness [ label = 0.90 ]
+  Meditative->Peacefulness [ label = 0.58 ]
+  
+  Energetic->Power [ label = 1.00]
+  Triumphant->Power [ label = 0.76 ]
+  Fiery->Power [ label = 0.72 ]
+  Strong->Power [ label = 0.70 ]
+  Heroic->Power [ label = 0.56 ]
+  
+  Stimulated->JoyfulActivation [ label = 1.00 ]
+  Joyful->JoyfulActivation [ label = 0.99 ]
+  Animated->JoyfulActivation [ label = 0.95 ]
+  Dancing->JoyfulActivation [ label = 0.72 ]
+  Amused->JoyfulActivation [ label = 0.56 ]
+  
+  Agitated->Tension [ label = 1.00 ]
+  Nervous->Tension [ label = 0.85 ]
+  Tense->Tension [ label = 0.63 ]
+  Impatient->Tension [ label = 0.49 ]
+  Irritated->Tension [ label = 0.39 ]
+  
+  Sad->Sadness [ label = 1.00 ]
+  Sorrowful->Sadness [ label = 0.82 ]
+  
+  # L2 edges
+  Wonder->Sublimity [ label = 1.00 ]
+  Transcendence->Sublimity [ label = 0.66 ]
+  Tenderness->Sublimity [ label = 0.75 ]
+  Nostalgia->Sublimity [ label = 0.89 ]
+  Peacefulness->Sublimity [ label = 0.65 ]
+  
+  Power->Vitality [ label = 1.00 ]
+  JoyfulActivation->Vitality [ label = 0.95 ]
+  
+  Tension->Unease [ label = 1.00 ]
+  Sadness->Unease [ label = 0.27 ]
+  
+}
+") %>% DiagrammeRsvg::export_svg () %>% charToRaw %>% rsvg::rsvg_svg("images/GEMS.svg")
+
+knitr::include_graphics("images/GEMS.svg")
+```
+
+## Measuring emotional responses
+
+This section introduces various ways that we can measure emotional responses in the context of psychological experiments. Broadly speaking, we can organise these measurement techniques into three primary categories: self-report measures, physiological measures, and neural measures.
+
+### Self-report
+
+The idea behind self-report measures is simply to ask the participant about their emotional experiences. This relies on the fact that, at least in Western society, most adult participants have fairly sophisticated vocabularies for describing their emotional experiences.
+
+There are many ways in which we could ask someone about their emotional experiences, in more or less structured ways. A particularly common approach though is to use rating scales; here we simply ask people to describe an emotional experience by rating it according to various criteria, for example 'joyfulness' or 'anger'. These numbers can then be aggregated to provide a quantitative summary of the participant's emotional responses.
+
+There are various kinds of rating scales we could use here. One prominent option is the Geneva Emotional Music Scale, or 'GEMS' (Zentner et al., 2008), which we discuss in Section \@ref(wip-modelling-emotion). 
+
+The GEMS takes many different emotion terms (on the left hand side here), and clusters them together into a three-level hierarchy. The scale was constructed in a data-driven way: the emotion terms are terms that frequently occur when people describe music-induced emotional experiences, and the higher-level clusters (or 'factors') describe how these different emotion terms tend to co-occur with each other.
+
+We can use the GEMS to make questionnaires for quantifying certain kinds of core emotional responses to music. For example, suppose I want to quantify the tension that someone experiences when they listen to a particular piece of music. The GEMS tells me that a good way to do that is to give the participant rating scales for five adjectives: agitated, nervous, tense, impatient, and irritated. I get the participant to rate their experience on these five adjectives. I then combine their results, for example by averaging, and this gives me an overall 'tension' score. Similarly, the GEMS tells me that I could compute scores for a general 'unease' factor by first computing scores for 'tension' and 'sadness', and then combining them.
+
+\
+
+## (WIP) Mechanisms for inducing musical emotion
+
+<!-- <!-- Can we include some music therapy here? -->
+
+-->
 
 <!-- Credit: Internet Archive Book Images, no restrictions, via Wikimedia Commons -->
 
