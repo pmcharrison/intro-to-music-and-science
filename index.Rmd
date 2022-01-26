@@ -11,7 +11,7 @@ description: |
   This is a collection of draft lecture notes for Music and Science teaching 
   at the Centre for Music and Science at the University of Cambridge.
 biblio-style: apalike
-csl: chicago-fullnote-bibliography.csl
+csl: apa.csl
 output:
   bookdown::bs4_book:
     repo: 

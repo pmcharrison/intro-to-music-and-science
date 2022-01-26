@@ -110,7 +110,7 @@ If we put these two dimensions together, we get the so-called circumplex model o
 
 The idea then is that an individual's emotional state at a particular point in time can be represented in terms of their locations on these two dimensions of arousal and valence.
 
--   Imagine a footballer who just scored a goal, and is performing a victory celebration: we'd expect them to be experiencing **high arousal** and **positive valence**. 
+-   Imagine a footballer who just scored a goal, and is performing a victory celebration: we'd expect them to be experiencing **high arousal** and **positive valence**.
 
 -   If I'm running to catch a train, I'm probably in a state of **high arousal** but **negative valence**. The arousal helps me to run faster, whereas the low valence discourages me from cutting it so fine next time.
 
@@ -168,7 +168,7 @@ We're now going to move from Ekman's basic emotions model onto emotion models th
 
 #### Geneva Musical Emotions Scale (GEMS)
 
-The Geneva Emotional Music Scale (GEMS) was introduced by Zentner and colleagues[@Zentner2008-mv]. Compared to the 'basic emotions' model discussed earlier, the GEMS has a much more inclusive definition of emotions. Instead of working under strict definitions of what features are needed to make something an emotion, the authors instead compiled a very broad set of terms from the literature and from other sources, and used a data-driven approach to work out which terms were most relevant for musical applications.
+The Geneva Emotional Music Scale (GEMS) was introduced by @Zentner2008-mv. Compared to the 'basic emotions' model discussed earlier, the GEMS has a much more inclusive definition of emotions. Instead of working under strict definitions of what features are needed to make something an emotion, the authors instead compiled a very broad set of terms from the literature and from other sources, and used a data-driven approach to work out which terms were most relevant for musical applications.
 
 The way this worked is that the authors conducted a series of experiments based on self-report questionnaires, designed to probe how people experience emotions in musical contexts. These experiments were centred on two main questions. First, what emotions are most commonly induced by musical experiences? Secondly, what emotions tend to co-occur with each other in these musical experiences?
 
@@ -347,7 +347,7 @@ The analysis approach of the GEMS identifies certain 'factors' corresponding to 
 
 *Aesthetic emotions* concern the perception of beauty in a wider context: not just music, but also artworks, landscapes, architecture, and so on.
 
-Menninghaus and colleagues [@menninghaus2019] have presented a detailed case for the notion of aesthetic emotions. Their conceptualisation organises aesthetic emotions into two main classes.
+@menninghaus2019 have presented a detailed case for the notion of aesthetic emotions. Their conceptualisation organises aesthetic emotions into two main classes.
 
 The first class corresponds to aesthetic versions of 'ordinary' emotions. These emotions correspond to an 'ordinary' emotion, such as joy, amusement, or nostalgia, or surprise, that an aesthetic object can induce in us.
 
@@ -367,9 +367,9 @@ This leads us onto an important open question in the literature: do we really ne
 
 ### Conclusions
 
-Emotion is something of a paradoxical topic to study psychologically. On the one hand, as humans we are all intuitively aware of what it means to experience emotions, in a way that arguably can never be expressed fully in words. This can make a lot of this topic feel trivial, in a certain way. On the other hand, when we dig deeper, we realise that there are some very deep issues here that deserve careful examination. 
+Emotion is something of a paradoxical topic to study psychologically. On the one hand, as humans we are all intuitively aware of what it means to experience emotions, in a way that arguably can never be expressed fully in words. This can make a lot of this topic feel trivial, in a certain way. On the other hand, when we dig deeper, we realise that there are some very deep issues here that deserve careful examination.
 
-The models we talked about today -- dimensional and categorical models -- can help us to structure these investigations. We talked about two particular examples of dimensional models: the two-dimensional circumplex model, and the three-dimensional PAD model. We then talked about three categorical approaches to emotion: Ekman's basic emotions theory, the GEMS musical emotions model, and the aesthetic emotions model of Menninghaus and colleagues. They make for quite interesting comparisons. We're still waiting though for a proper combined model that convincingly accounts for all of these phenomena together.
+The models we talked about today -- dimensional and categorical models -- can help us to structure these investigations. We talked about two particular examples of dimensional models: the two-dimensional circumplex model, and the three-dimensional PAD model. We then talked about three categorical approaches to emotion: the basic emotions theory [@ekman1999], the GEMS musical emotions model [@Zentner2008-mv], and the aesthetic emotions model of @menninghaus2019. They make for quite interesting comparisons. We're still waiting though for a proper combined model that convincingly accounts for all of these phenomena together.
 
 ## Measuring emotional responses
 
@@ -381,7 +381,7 @@ The idea behind self-report measures is simply to ask the participant about thei
 
 There are many ways in which we could ask someone about their emotional experiences, in more or less structured ways. A particularly common approach though is to use rating scales; here we simply ask people to describe an emotional experience by rating it according to various criteria, for example 'joyfulness' or 'anger'. These numbers can then be aggregated to provide a quantitative summary of the participant's emotional responses.
 
-There are various kinds of rating scales we could use here. One prominent option is the Geneva Emotional Music Scale, or 'GEMS' (Zentner et al., 2008), which we discuss in Section \@ref(wip-modelling-emotion).
+There are various kinds of rating scales we could use here. One prominent option is the Geneva Emotional Music Scale, or 'GEMS' (Zentner et al., 2008), which we discuss in Section \@ref(modelling-emotion).
 
 The GEMS takes many different emotion terms (on the left hand side here), and clusters them together into a three-level hierarchy. The scale was constructed in a data-driven way: the emotion terms are terms that frequently occur when people describe music-induced emotional experiences, and the higher-level clusters (or 'factors') describe how these different emotion terms tend to co-occur with each other.
 
@@ -477,29 +477,29 @@ Here we covered three different approaches to measuring emotions that could be a
 
 This section is about different mechanisms by which music seems to induce emotions. We're going to focus on a particularly influential theoretical model by Juslin, called the **'BRECVEM'** model. This model is described in a 2008 paper in Behavioral and Brain Sciences by Juslin and Västfjäll [@juslin2008]. This is a really good paper to read if you have the time. As well as providing a detailed and well-organised exposition of the model, the paper also includes a large number of commentaries by various other researchers in the field. This gives you an insight into various complementary perspectives on the topic, and can really help you to develop your own personal opinion about the ideas.
 
-A few years later, Juslin wrote a paper that extends the BRECVEM model to add an additional component, concerning aesthetic judgments [@juslin2013] (Juslin, 2013). The result is then called the BRECVEMA model. It's this particular version of the model that we'll focus on today. I'd still recommend keeping the original BRECVEM paper as a primary reference though, because it contains particularly detailed expositions of the first seven components of the model.
+A few years later, Juslin wrote a paper that extends the BRECVEM model to add an additional component, concerning aesthetic judgments [@juslin2013]. The result is then called the BRECVEMA model. It's this particular version of the model that we'll focus on today. I'd still recommend keeping the original BRECVEM paper as a primary reference though, because it contains particularly detailed expositions of the first seven components of the model.
 
 There are eight components of the full BRECVEMA model: brain stem reflex, rhythmic entrainment, evaluative conditioning, emotional contagion, visual imagery, episodic memory, musical expectancy, and aesthetic judgment. Let's consider each in turn.
 
 ### Brain stem reflex
 
-The *brain stem* is one of the oldest parts of the brain, evolutionarily speaking. It has important responsibilities in regulating cardiac and respiratory function. The brain stem reflex is a hardwired attention response that reflects early stages of auditory processing; it's triggered by sounds that are 'surprising' in terms of basic auditory features. Most commonly this means a sudden and loud sound, especially if this sound feels 'sharp' or 'accelerating'. It's important to respond quickly to these kinds of sounds because they can reflect some kind of immediate threat. Depending on the context, the brain stem reflex can be experienced either as unpleasant or exciting, and is correspondingly linked to arousal. 
+The *brain stem* is one of the oldest parts of the brain, evolutionarily speaking. It has important responsibilities in regulating cardiac and respiratory function. The brain stem reflex is a hardwired attention response that reflects early stages of auditory processing; it's triggered by sounds that are 'surprising' in terms of basic auditory features. Most commonly this means a sudden and loud sound, especially if this sound feels 'sharp' or 'accelerating'. It's important to respond quickly to these kinds of sounds because they can reflect some kind of immediate threat. Depending on the context, the brain stem reflex can be experienced either as unpleasant or exciting, and is correspondingly linked to arousal.
 
 ### Rhythmic entrainment
 
-Rhythmic entrainment is something of an umbrella term that captures many different modes of entrainment, or synchronisation. It could mean perceptual entrainment, the kind that happens naturally and automatically simply by listening to rhythmic music. It could mean motor entrainment, where you might tap along or dance to the beat. It could be physiological entrainment, where your breathing might synchronise with the music. It could be social entrainment, where you synchronise your movements with several others in your group, perhaps by dancing. 
+Rhythmic entrainment is something of an umbrella term that captures many different modes of entrainment, or synchronisation. It could mean perceptual entrainment, the kind that happens naturally and automatically simply by listening to rhythmic music. It could mean motor entrainment, where you might tap along or dance to the beat. It could be physiological entrainment, where your breathing might synchronise with the music. It could be social entrainment, where you synchronise your movements with several others in your group, perhaps by dancing.
 
 These processes of entrainment can have various implications. Rhythmic entrainment often ends up increasing arousal levels and causing pleasure. Entrainment also seems to evoke feelings of connectedness and emotional bonding; this is particularly true when the entrainment occurs in a group context, and involves multiple individuals synchronising with each other.
 
 ### Evaluative conditioning
 
-Evaluative conditioning describes an effect whereby repeatedly pairing a piece of music with a given emotion ends up causing a listener to automatically associate that music with the emotion in the future. Importantly, this association doesn't require conscious awareness: the music can make you happy as a result of the association, but you don't know why you're happy. An example could be listening to a particular piece of music that you always used to play when you met your best friend. 
+Evaluative conditioning describes an effect whereby repeatedly pairing a piece of music with a given emotion ends up causing a listener to automatically associate that music with the emotion in the future. Importantly, this association doesn't require conscious awareness: the music can make you happy as a result of the association, but you don't know why you're happy. An example could be listening to a particular piece of music that you always used to play when you met your best friend.
 
 ### Emotional contagion
 
-Emotional contagion depends on the fact that listeners will automatically recognise certain features in the music that are similar to markers of emotion in speech (e.g. Juslin & Laukka, 2003). For example, if I'm feeling miserable, my speech is likely to be slower, with lower pitch variability, and drooping contour; if I'm feeling excited, my speech is likely to be faster, with higher pitch variability, and potentially a rising contour. 
+Emotional contagion depends on the fact that listeners will automatically recognise certain features in the music that are similar to markers of emotion in speech [e.g. @juslin2003a]. For example, if I'm feeling miserable, my speech is likely to be slower, with lower pitch variability, and drooping contour; if I'm feeling excited, my speech is likely to be faster, with higher pitch variability, and potentially a rising contour.
 
-Juslin (2001) describes an interesting idea, termed 'super-expressive voice theory', stating that music's power of emotional contagion comes not just from the fact that music emulates the expressive capacities of the human voice, but from the fact that it far exceeds them, in terms of the potential manipulations of speed, intensity, and timbre. So, music is accessing the parts of the brain originally intended for interpreting speech expression, and sending them into overdrive.
+@Juslin2001a describes an interesting idea, termed 'super-expressive voice theory', stating that music's power of emotional contagion comes not just from the fact that music emulates the expressive capacities of the human voice, but from the fact that it far exceeds them, in terms of the potential manipulations of speed, intensity, and timbre. So, music is accessing the parts of the brain originally intended for interpreting speech expression, and sending them into overdrive.
 
 ### Visual imagery
 
