@@ -250,10 +250,10 @@ Here each observation (i.e. each row in the dataset) is represented by a single 
 Often these points will demonstrate some kind of systematic trend. We can illustrate this trend to the reader by adding a *trend line*, which will be computed automatically using some statistical procedure like *linear regression* (we'll discuss this in a subsequent chapter).
 
 ```{r}
-# cars %>% 
-#   ggplot(aes(x = wt, y = mpg)) +
-#   geom_smooth(method = "lm", formula = "y ~ x") +
-#   geom_point() 
+cars %>%
+  ggplot(aes(x = wt, y = mpg)) +
+  geom_smooth(method = "lm", formula = "y ~ x", se = FALSE) +
+  geom_point()
 ```
 
 #### Line plots
