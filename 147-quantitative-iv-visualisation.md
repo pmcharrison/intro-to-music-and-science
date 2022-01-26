@@ -300,11 +300,13 @@ Often these points will demonstrate some kind of systematic trend. We can illust
 
 
 ```r
-# cars %>% 
-#   ggplot(aes(x = wt, y = mpg)) +
-#   geom_smooth(method = "lm", formula = "y ~ x") +
-#   geom_point() 
+cars %>%
+  ggplot(aes(x = wt, y = mpg)) +
+  geom_smooth(method = "lm", formula = "y ~ x", se = FALSE) +
+  geom_point()
 ```
+
+<img src="147-quantitative-iv-visualisation_files/figure-html/unnamed-chunk-19-1.png" width="100%" />
 
 #### Line plots
 
