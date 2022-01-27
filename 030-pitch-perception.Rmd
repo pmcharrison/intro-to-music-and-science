@@ -4,10 +4,11 @@
 knitr::opts_chunk$set(
   echo = FALSE, results = "asis"
 )
+library(tidyverse)
 source("setup.R")
 ```
 
-In \@ref(foundations-of-acoustics) we saw various forms of idealised waves: the sine wave, the sawtooth wave, and the square wave. These waves all differ in shape, but they share a key property: they are all *periodic*. By periodic, we mean that the wave repeats itself at a regular time interval. This periodicity turns out to be integral to pitch perception.
+In Section \@ref(foundations-of-acoustics) we saw various forms of idealised waves: the sine wave, the sawtooth wave, and the square wave. These waves all differ in shape, but they share a key property: they are all *periodic*. By periodic, we mean that the wave repeats itself at a regular time interval. This periodicity turns out to be integral to pitch perception.
 
 ```{r}
 embed_image_with_audio(
@@ -151,13 +152,84 @@ Western listeners tend not to hear pitch in *absolute* terms; even highly traine
 
 Psychologically speaking, we describe pitch interval as the *perceptual correlates* of frequency ratio. For example, the octave corresponds to a 2:1 frequency ratio; if we take concert A (A4, 440 Hz), and double the frequency (880 Hz), this gives us the A one octave above (A5).
 
-It has long been established that, at least in the context of Western listeners, certain pitch intervals tend to sound more pleasant (or harmonious) than others, especially when the two pitches are played at the same time. ... These intervals play a particularly important role ... we will discuss more...
+Music theorists have long been aware that, at least for Western listeners, certain pitch intervals seem to sound more pleasant (or harmonious) than others. This differentiation in pleasantness seems particularly strong when the two pitches are played simultaneously to produce *chords*. Intervals and chords that sound particularly pleasant are called *consonant*, and those that sound particularly unpleasant are called *dissonant*.
 
-Western music theory identifies the following intervals.... they have associated frequency ratios...
+The consonance of an interval is deeply linked to its constituent frequency ratio. In particular, music theorists long ago established the following interesting observation: consonant intervals tend to have frequency ratios that can be approximated by a ratio of two small integers, for example 2:1, 3:2, 4:3, and so on. Such ratios are called *simple integer ratios.* We will discuss this phenomenon in more detail in Section \@ref(wip-consonance).
 
-TABLE
+Many intervals in Western music theory can be approximated by simple integer ratios such as these. Intervals with particularly simple integer ratios tend to be perceived as more consonant. The following table lists some examples with integer-ratio approximations as proposed by the Greek mathematician Ptolemy:
 
-The concept of pitch interval allows us to define the concept of transposition....
+| Interval       | Frequency ratio | Classification |
+|----------------|-----------------|----------------|
+| Unison         | 1:1             | Consonant      |
+| Major second   | 9:8             | Dissonant      |
+| Major third    | 5:4             | Consonant      |
+| Perfect fourth | 4:3             | Consonant      |
+| Perfect fifth  | 3:2             | Consonant      |
+| Major sixth    | 5:3             | Consonant      |
+| Major seventh  | 15:8            | Dissonant      |
+| Octave         | 2:1             | Consonant      |
+
+: Integer-ratio approximations for musical intervals, from Ptolemy's intense diatonic scale.
+
+This phenomenon of relative pitch has important implications for how we understand the concept of melody. On the one hand, any particular performance of a melody will be defined by a particular sequence of absolute pitches: for example, I might play the first phrase of 'Old MacDonald' starting on a concert A, giving me the following frequencies:
+
+```{r}
+old_mcd_440 <- c(440, 440, 440, 330, 367, 367, 330)
+
+print_freq_seq <- function(x) paste(x, "Hz") %>% paste(collapse = ", ")
+
+old_mcd_330 <- old_mcd_440 * 330 / 440
+
+cat("> ", print_freq_seq(old_mcd_440))
+```
+
+```{r}
+embed_melody <- function(freq, path) {
+  freq %>% 
+      map(~ hrep::fr_chord(c(., . * 2))) %>% 
+      hrep::vec("fr_chord") %>% 
+      hrep::save_wav_sox(
+        file = path, 
+        timbre = "sine", 
+        chord_length = 0.5, 
+        spectrum_gain = -3, 
+        volume = 0.5
+      )
+  embed_audio(
+    audio = path
+  )
+}
+
+embed_melody(
+  old_mcd_440,
+  "audio/old-macdonald-440.wav"
+)
+```
+
+However, I could equally well play the same melody starting on a different frequency, say 330 Hz:
+
+```{r}
+cat("> ", print_freq_seq(old_mcd_330))
+
+embed_melody(
+  old_mcd_330,
+  "audio/old-macdonald-330.wav"
+)
+```
+
+Here we have changed all the frequencies of the melody by the same fixed ratio: 330/440. This changes the starting note but keeps all the intervals the same. We call this manipulation *transposition*.
+
+For most Western listeners, melodies preserve their identities under transposition. So, it's clear that the underlying cognitive representations of these melodies are not absolute frequencies. What else might they be?
+
+One option is that listeners represent the melodies as intervals between successive notes. In that case, we could represent the melody as follows:
+
+> Unison; Unison; Descending perfect fourth; Ascending major second; Unison; Descending major second
+
+Alternatively, listeners might represent the intervals as intervals from the tonic, which here would be the first note of the melody, giving us something like this:
+
+> Unison; Unison; Perfect fourth below; Minor third below; Minor third below; Perfect fourth below
+
+It is not entirely clear yet what exact cognitive representation listeners use; the real answer seems to be complex and task-dependent [see e.g. @dowling1978]. Nonetheless, it seems fair to say that some kind of intervallic representation must be involved, at least for Western listeners.
 
 ## Scales
 
