@@ -19,6 +19,8 @@ We see air pressure changing over time scales of hours and days due to changing 
 
 Sound, meanwhile, corresponds to variation in air pressure over much shorter time periods. These are the kinds of vibrations produced when a bow moves along a violin string, when air resonates in a flute, or when a mallet hits a drum.
 
+![**Slow-motion violin string.** Credit: [SriVrushank](https://commons.wikimedia.org/wiki/File:String_Vibration.gif), [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0)](images/violin-string.gif "Slow-motion violin string"){width="409"}
+
 The simplest form of sound is the *pure tone*. A pure tone corresponds to a very special mathematical object, the sine wave. Here's what a sine wave looks like:
 
 ![Waveform for a pure tone (200 Hz).](images/sine-wave-pure-tone.png){width="522"}\
