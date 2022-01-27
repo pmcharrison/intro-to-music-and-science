@@ -311,7 +311,7 @@ Here we covered three different approaches to measuring emotions that could be a
 
 ## Mechanisms for inducing musical emotion
 
-This section is about different mechanisms by which music seems to induce emotions. We're going to focus on a particularly influential theoretical model by Juslin, called the **'BRECVEM'** model. This model is described in a 2008 paper in Behavioral and Brain Sciences by Juslin and Västfjäll [@juslin2008]. This is a really good paper to read if you have the time. As well as providing a detailed and well-organised exposition of the model, the paper also includes a large number of commentaries by various other researchers in the field. This gives you an insight into various complementary perspectives on the topic, and can really help you to develop your own personal opinion about the ideas.
+This section is about different mechanisms by which music seems to induce emotions. We're going to focus on a particularly influential theoretical model by Juslin, called the **'BRECVEM'** model. This model is described in a 2008 paper in Behavioral and Brain Sciences by @juslin2008. This is a really good paper to read if you have the time. As well as providing a detailed and well-organised exposition of the model, the paper also includes a large number of commentaries by various other researchers in the field. This gives you an insight into various complementary perspectives on the topic, and can really help you to develop your own personal opinion about the ideas.
 
 A few years later, Juslin wrote a paper that extends the BRECVEM model to add an additional component, concerning aesthetic judgments [@juslin2013]. The result is then called the BRECVEMA model. It's this particular version of the model that we'll focus on today. I'd still recommend keeping the original BRECVEM paper as a primary reference though, because it contains particularly detailed expositions of the first seven components of the model.
 
@@ -335,7 +335,7 @@ Evaluative conditioning describes an effect whereby repeatedly pairing a piece o
 
 Emotional contagion depends on the fact that listeners will automatically recognise certain features in the music that are similar to markers of emotion in speech [e.g. @juslin2003a]. For example, if I'm feeling miserable, my speech is likely to be slower, with lower pitch variability, and drooping contour; if I'm feeling excited, my speech is likely to be faster, with higher pitch variability, and potentially a rising contour.
 
-@Juslin2001a describes an interesting idea, termed 'super-expressive voice theory', stating that music's power of emotional contagion comes not just from the fact that music emulates the expressive capacities of the human voice, but from the fact that it far exceeds them, in terms of the potential manipulations of speed, intensity, and timbre. So, music is accessing the parts of the brain originally intended for interpreting speech expression, and sending them into overdrive.
+@juslin2001a describes an interesting idea, termed 'super-expressive voice theory', stating that music's power of emotional contagion comes not just from the fact that music emulates the expressive capacities of the human voice, but from the fact that it far exceeds them, in terms of the potential manipulations of speed, intensity, and timbre. So, music is accessing the parts of the brain originally intended for interpreting speech expression, and sending them into overdrive.
 
 ### Visual imagery
 
