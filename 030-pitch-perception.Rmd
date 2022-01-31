@@ -289,143 +289,31 @@ tibble(
 
 ```
 
-| Scientific pitch notation | MIDI note | Frequency (Hz) | Notes |
-|---------------------------|-----------|----------------|-------|
-| C3                        |           |                |       |
-| C#3                       |           |                |       |
-| D3                        |           |                |       |
-| D#3                       |           |                |       |
-| E3                        |           |                |       |
-| F3                        |           |                |       |
-| F#3                       |           |                |       |
-| G3                        |           |                |       |
-| G#3                       |           |                |       |
-| A3                        |           |                |       |
-| A#3                       |           |                |       |
-| B3                        |           |                |       |
-| C4                        |           |                |       |
-| C#4                       |           |                |       |
-|                           |           |                |       |
-|                           |           |                |       |
-|                           |           |                |       |
-|                           |           |                |       |
-|                           |           |                |       |
-|                           |           |                |       |
-|                           |           |                |       |
-|                           |           |                |       |
-|                           |           |                |       |
-|                           |           |                |       |
+One useful thing about MIDI notation is that we can compute an intervallic representation of a melody simply by subtracting successive note numbers, which gives us the number of semitones between each note number. Another useful thing is that we can transpose a melody by simply adding or subtracting a fixed number to all notes.
 
-: caption
+## Pitch-class notation
 
-## Scales
+Western music, and indeed many musical styles across the world, has an important notion of *octave equivalence.* Octave equivalence means that pitches separated by octaves (i.e. 2:1 frequency relationships) share some kind of underlying identity, which can be termed *chroma* [@Bachem1950-eb]. In Western music theory we use the term *pitch class* to denote collections of pitches separated by octaves. We can label pitch classes with their corresponding letter names (e.g. C, C#, D, D#, ...), or alternatively we can label them with numbers, where by convention C is written as 0, C# is written as 1. A full table can be found below:
 
-A scale defines a collection of pitches from which a musical passage is created. In Western music we are particularly familiar with the major and minor scales, but many more scales can be identified both within Western and non-Western musical traditions.
-
-Most known scales embody a concept called *octave equivalence*. Octave equivalence means that pitches separated by octaves (i.e. 2:1 frequency relationships) share some kind of underlying identity, which can be termed *chroma* [@Bachem1950-eb]. In Western music theory we use the term *pitch class* to denote collections of pitches separated by octaves. We can label pitch classes with their corresponding letter names (e.g. C, C#, D, D#, ...), or alternatively we can label them with numbers, where by convention C is written as 0, C# is written as 1. A full table can be found below:
-
-| Letter name | Integer |
-|-------------|---------|
-| C           | 0       |
-| C#          | 1       |
-| D           | 2       |
-| D#          | 3       |
-| E           | 4       |
-| F           | 5       |
-| F#          | 6       |
-| G           | 7       |
-| G#          | 8       |
-| A           | 9       |
-| A#          | 10      |
-| B           | 11      |
+| Letter name | Number |
+|-------------|--------|
+| C           | 0      |
+| C#          | 1      |
+| D           | 2      |
+| D#          | 3      |
+| E           | 4      |
+| F           | 5      |
+| F#          | 6      |
+| G           | 7      |
+| G#          | 8      |
+| A           | 9      |
+| A#          | 10     |
+| B           | 11     |
 
 : Western pitch classes and their corresponding integer labels.
 
-A scale can then be defined as a collection of pitch classes. For example, the D major scale would be defined by the following pitch classes:
-
-> D, E, F#, G, A, B, C#
-
-It is possible to generalise the definition of transposition to include pitch classes. In the context of pitches, transposing meant multiplying
-
-Scales can be transposed
-
-A scale is a collection of notes which...
-
-Most scales embody octave invariance.... chroma/pitch height/shepard ... but see bohlen-pierce scale...
-
-A useful property of a scale is to support transposition. This is used a lot in Western music.
-
-The best way of supporting transposition is if we know that we can take the interval between any two notes in the scale and play that same interval starting on any other note in that scale...
-
-An effective way of achieving this is through equal-tempered scales. An equal-tempered scale is where...
-
-Westerners now use the 12-tone musical scale. The semitone is then ...
-
-## Scale degrees
-
-Pitch intervals play an important role in musical *scales*. A musical scale is a collection of pitches that
-
-The psychological salience of pitch interval has deep consequences for musical scale construction.
-
-The basic unit of the Western chromatic scale is the *semitone*. There are 12 semitones in the octave. If we assume that all these semitones are the same size (this is the *equal-temperament assumption*), then the semitone must correspond to the frequency ratio $1 : 2 ^ \frac{1}{12}$. Here $2 ^ \frac{1}{12}$ is the twelfth root of 2, a number which when multiplied by itself 12 times produces the number 2; expressed in decimals, this is approximately 1.059.
-
-relatively likely to recognise that the two frequencies are related by a 3:2 ratio, corresponding to a perfect fifth.
-
-The notion of *pitch interval* is exceptionally important in Western music, and in most known musical styles across the world. Pitch intervals are the perceptual correlate of frequency ratios. For example, the octave corresponds to a 2:1 frequency ratio; if we take concert A (A4, 440 Hz), and double the frequency (880 Hz), this gives us the A one octave above (A5).
-
-## Frequencies and note numbers
-
-So, how exactly do these frequencies relate to the keys we see on the piano keyboard?
+Mathematically, we can compute pitch class numbers from MIDI pitches by calculating the remainder when we divide the MIDI pitch by 12. For example, suppose we want to calculate the pitch class of MIDI pitch 62. We divide by 12; $12 \times 5 = 60$, so we have 2 left over, meaning that our pitch class is 2. We express this using mathematical notation as follows:
 
 $$
-\textrm{Pitch interval (octaves)} = \log_2\left(\frac{f_2}{f_1}\right)
+\textrm{pitch class} = \textrm{MIDI pitch} \mod 12
 $$
-
-$$
-\textrm{Pitch interval (semitones)} = 12 \log_2\left(\frac{f_2}{f_1}\right)
-$$
-
-$$
-\textrm{MIDI note} &=
-  \textrm{ref. MIDI note } 
-  + \textrm{pitch interval (semitones)}
-$$
-
-$$
-\textrm{MIDI note number} = 
-69 + 12 \log_2 \left( \frac{\textrm{frequency}}{440} \right)
-$$
-
-explain the mapping, give the equation.
-
-## Relative pitch
-
-Western listeners tend not to hear pitch in *absolute* terms; even highly trained musicians will struggle to name a given note played without additional contextual information. Instead, most Western listeners tend to hear pitch in *relative* terms, specifically in terms of the recognition of particular *frequency ratios*. For example, if a listener is played a pair of tones corresponding to the frequencies 555 Hz and 833 Hz respectively, they are unlikely to realise that the two tones correspond to a C# and a G#, but they are relatively likely to recognise that the two frequencies are related by a 3:2 ratio, corresponding to a perfect fifth.
-
-Particular frequency ratios correspond to particular intervals from Western music theory. For example, the frequency ratio 2:1 corresponds to an octave.
-
-Several such frequency ratios are listed in the table below:
-
-| Interval | Col2 | Col3 |
-|----------|------|------|
-|          |      |      |
-|          |      |      |
-|          |      |      |
-
-: Caption
-
-Frequency ratios
-
-perceptual identity transposition
-
-## Pitch chroma
-
-octave invariance
-
-Western listeners seem to interpret pitch in terms of at least two essential properties: *height* and *chroma*. Let's consider each in term.
-
-### Pitch height
-
-Pitch height describes the sense in which musical pitches seem to be ordered from 'low' to high'. High pitches correspond to high frequencies, and low pitches correspond to low frequencies. Psychoacousticians have performed various studies to try and quantif
-
-### Pitch chroma
