@@ -46,7 +46,9 @@ emotion-1
 mood
 feeling
 affect
-expression-perception-induction
+perceived-versus-felt-affect
+perception-and-expression
+feeling-and-induction
 modelling-emotion
 dimensional-models
 categorical-models

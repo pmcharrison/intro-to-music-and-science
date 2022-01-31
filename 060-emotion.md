@@ -60,15 +60,21 @@ We can define 'feeling' as "the subjective experience of an emotion or mood". In
 
 We can then define 'affect' as an umbrella term that encompasses emotions, moods, and feelings. This is a useful term to use when we don't want to commit to one of these finer categories.
 
-#### Expression, perception, induction
+#### Perceived versus felt affect
 
-There are various things that we can do with affects. We can *express* them, we can *perceive* them, and we can *induce* them.
+The distinction between *perceived* and *felt* affect is a recurring one in the music emotion literature. We will discuss both terms now.
 
-When we say that someone 'expresses' an affect, we mean that they are creating a signal for the affect that could theoretically be recognised by someone else. This signal could either be automatic and subconscious (like many facial expressions), or it could be conscious and intentional, for example crafting a melody in order to capture a particular emotion. 
+##### Perception and expression
 
-When we say that someone 'perceives' an affect, we mean that they are recognising a potential signal for an affect. This could mean listening to someone's voice, and inferring that they are angry; it could also mean listening to a piece of music, and hearing it as 'sad'. It doesn't matter whether the recognised affect actually exists in the mind of the original speaker, or in the music itself: the important thing is the listener's interpretation of that signal.
+When we say that someone 'perceives' an affect, we mean that they are recognising a potential signal for that affect. This signal could be embodied in all kinds of ways, for example in the prosody of a speech utterance, or in the tonal structure of a melody. For example, most Western listeners will perceive 'Old MacDonald' as being a happy melody.
 
-When we say that something 'induces' an affect, we mean that it causes someone to experience an affect. This is by definition primarily an involuntary process, although in practice the listener may have some control over their response to the stimulus. An example would be if hearing a child cry made me sad, or if hearing a piece of music made me happy. Experiencing an affect is generally harder to achieve than simply perceiving an effect. It's easy to play someone some music and have them identify it as sad, but it's much harder to induce an actual feeling of sadness using this music.
+The creative counterpart of perception is expression. When we say that someone 'expresses' an affect, we mean that they are creating a signal for the affect that could in theory be perceived by someone else.
+
+##### Feeling and induction
+
+When we say that someone 'feels' an affect, we mean that they actually experience that affect. Feeling an affect is considered to be a stronger process than simply perceiving an effect. For example, I might hear a minor-mode melody and recognise that it is expressing sadness, but I may not experience that sadness myself in any concrete way. Feeling an affect might be just an experiential phenomenon, but it might also include behavioural and physiological components.
+
+The creative counterpart of feeling is induction. When we say that a stimulus 'induces' an affect, we mean that the stimulus causes the participant to feel that effect. Induction is a stronger process than expression.
 
 ## Modelling emotion
 
