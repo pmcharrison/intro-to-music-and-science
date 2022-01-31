@@ -4,9 +4,9 @@
 
 In Section \@ref(foundations-of-acoustics) we saw various forms of idealised waves: the sine wave, the sawtooth wave, and the square wave. These waves all differ in shape, but they share a key property: they are all *periodic*. By periodic, we mean that the wave repeats itself at a regular time interval. This periodicity turns out to be integral to pitch perception.
 
-![**An example sine wave.** (ref:685b37d9-741e-4820-b93a-8bbe30ff576b) ](images/sine-wave-frequency=240.png){width='400px'}
+![**An example sine wave.** (ref:0af8f420-199b-4906-ab4b-b3ee38e6c524) ](images/sine-wave-frequency=240.png){width='400px'}
 
-(ref:685b37d9-741e-4820-b93a-8bbe30ff576b)  <audio controls controlsList='nodownload' style='display: block; margin-top: 10px'><source src='audio/tone-frequency=240.wav' type='audio/mpeg'></audio>
+(ref:0af8f420-199b-4906-ab4b-b3ee38e6c524)  <audio controls controlsList='nodownload' style='display: block; margin-top: 10px'><source src='audio/tone-frequency=240.wav' type='audio/mpeg'></audio>
 
 We also covered the notion of 'frequency'. Frequency tells us the repetition rate of a periodic waveform, and is expressed in units of Hz. A frequency of 5 Hz means that the waveform repeats at a rate of 5 times per second.
 
@@ -76,7 +76,7 @@ Psychologically speaking, we describe pitch interval as the *perceptual correlat
 
 Music theorists have long been aware that, at least for Western listeners, certain pitch intervals seem to sound more pleasant (or harmonious) than others. This differentiation in pleasantness seems particularly strong when the two pitches are played simultaneously to produce *chords*. Intervals and chords that sound particularly pleasant are called *consonant*, and those that sound particularly unpleasant are called *dissonant*.
 
-The consonance of an interval is deeply linked to its constituent frequency ratio. In particular, music theorists long ago established the following interesting observation: consonant intervals tend to have frequency ratios that can be approximated by a ratio of two small integers, for example 2:1, 3:2, 4:3, and so on. Such ratios are called *simple integer ratios.* We will discuss this phenomenon in more detail in Section \@ref(wip-consonance).
+The consonance of an interval is deeply linked to its constituent frequency ratio. In particular, music theorists long ago established the following interesting observation: consonant intervals tend to have frequency ratios that can be approximated by a ratio of two small integers, for example 2:1, 3:2, 4:3, and so on. Such ratios are called *simple integer ratios.* We will discuss this phenomenon in more detail in Section \@ref(consonance).
 
 Many intervals in Western music theory can be approximated by simple integer ratios such as these. Intervals with particularly simple integer ratios tend to be perceived as more consonant. The following table lists some examples with integer-ratio approximations as proposed by the Greek mathematician Ptolemy:
 

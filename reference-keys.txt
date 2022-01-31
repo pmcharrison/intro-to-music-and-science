@@ -44,7 +44,16 @@ temporal-theory
 pitch-intervals
 pitch-notation
 pitch-class-notation
-wip-consonance
+consonance
+theories-of-consonance
+periodicity-and-harmonicity
+interference-between-partials
+cultural-familiarity
+disentangling-consonance-theories
+cultural-groups
+individual-differences-in-consonance-perception
+tone-spectra
+regression-modelling
 wip-music-across-the-world
 emotion
 introduction-to-emotion-and-music

@@ -12,6 +12,7 @@ description: |
   at the Centre for Music and Science at the University of Cambridge.
 biblio-style: apalike
 csl: apa.csl
+link-citations: true
 output:
   bookdown::bs4_book:
     repo: 

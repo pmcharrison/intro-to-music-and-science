@@ -55,7 +55,7 @@
 <li><a class="" href="foundations-of-acoustics.html"><span class="header-section-number">8</span> Foundations of acoustics</a></li>
 <li><a class="" href="timbre.html"><span class="header-section-number">9</span> Timbre</a></li>
 <li><a class="" href="pitch.html"><span class="header-section-number">10</span> Pitch</a></li>
-<li><a class="" href="wip-consonance.html"><span class="header-section-number">11</span> (WIP) Consonance</a></li>
+<li><a class="" href="consonance.html"><span class="header-section-number">11</span> Consonance</a></li>
 <li><a class="" href="wip-music-across-the-world.html"><span class="header-section-number">12</span> (WIP) Music across the world</a></li>
 <li><a class="" href="emotion.html"><span class="header-section-number">13</span> Emotion</a></li>
 <li class="book-part">Scientific methods</li>
@@ -302,7 +302,7 @@
 </tr>
 </tbody>
 </table></div>
-<p>Behavioural variables also come up in studies of everyday musical behaviours. For example, a recent paper <span class="citation">(Park et al., 2019)</span> studied global music listening patterns as collected through the music streaming service Spotify, and identified how people in different countries listen to different kinds of music at different times of day. A dataset from such a study might look like this:</p>
+<p>Behavioural variables also come up in studies of everyday musical behaviours. For example, a recent paper <span class="citation">(Park et al., <a href="references.html#ref-Park2019-kb" role="doc-biblioref">2019</a>)</span> studied global music listening patterns as collected through the music streaming service Spotify, and identified how people in different countries listen to different kinds of music at different times of day. A dataset from such a study might look like this:</p>
 <div class="inline-table"><table class="table table-sm">
 <colgroup>
 <col width="22%">
@@ -378,7 +378,7 @@
 </ol>
 <p>The idea is that each person’s personality can be summarised (to some extent) as a collection of five scores, one for each of these five dimensions.</p>
 <p>How do we measure these different dimensions? It’s hardly as if we can take out a ruler and measure the size of different areas of the brain corresponding to these different personality traits. Even if we had a spare magnetic resonance imaging (MRI) scanner lying around with which to measure individual brain anatomy, the mapping between brain dimensions and psychological traits tends to be rather too complicated for such a procedure to be practical in most situations.</p>
-<p>Instead, like many latent traits, we tend to assess personality using <em>questionnaires</em>. A questionnaire is simply a collection of standardised questions that we administer to a participant. Many question formats are possible, but in quantitative studies it’s particularly common to administer questionnaires with numeric responses. For example, when assessing someone’s personality, we might ask them the following question, sourced from the Ten Item Personality Inventory (TIPI) <span class="citation">(Gosling et al., 2003)</span>:</p>
+<p>Instead, like many latent traits, we tend to assess personality using <em>questionnaires</em>. A questionnaire is simply a collection of standardised questions that we administer to a participant. Many question formats are possible, but in quantitative studies it’s particularly common to administer questionnaires with numeric responses. For example, when assessing someone’s personality, we might ask them the following question, sourced from the Ten Item Personality Inventory (TIPI) <span class="citation">(Gosling et al., <a href="references.html#ref-Gosling2003-bt" role="doc-biblioref">2003</a>)</span>:</p>
 <blockquote>
 <p><em>Please indicate the extent to which you agree with the following statement.</em></p>
 <p>I see myself as: sympathetic, warm.</p>
@@ -605,9 +605,9 @@
 </table></div>
 <p>Here we’ve ended up with three computational features in our fictional dataset:</p>
 <ul>
-<li><p>‘Est. tonic’ tells us the tonic as estimated by the key-finding algorithm. It starts off thinking that the melody is in F (with the first note being the dominant), but once it hears the third note it decides that the melody is in C after all. A well-known such algorithm is the <em>Krumhansl-Kessler key-finding algorithm</em> <span class="citation">(Krumhansl, 1990)</span>.</p></li>
+<li><p>‘Est. tonic’ tells us the tonic as estimated by the key-finding algorithm. It starts off thinking that the melody is in F (with the first note being the dominant), but once it hears the third note it decides that the melody is in C after all. A well-known such algorithm is the <em>Krumhansl-Kessler key-finding algorithm</em> <span class="citation">(Krumhansl, <a href="references.html#ref-krumhansl1990cognitive" role="doc-biblioref">1990</a>)</span>.</p></li>
 <li><p>‘Est. mode’ tells us the estimated mode; in our case it believes that the melody is in the major mode throughout.</p></li>
-<li><p>‘Probability’ tells us how likely the melodic expectation algorithm believes the current note to be, taking into account what happened so far in the melody. Prominent examples of melodic expectation algorithms are Temperley’s melodic expectation algorithm <span class="citation">(Temperley, 2008)</span> and Pearce’s Information Dynamics Of Music (IDyOM) model <span class="citation">(Pearce, 2005)</span>.</p></li>
+<li><p>‘Probability’ tells us how likely the melodic expectation algorithm believes the current note to be, taking into account what happened so far in the melody. Prominent examples of melodic expectation algorithms are Temperley’s melodic expectation algorithm <span class="citation">(Temperley, <a href="references.html#ref-Temperley2008-tj" role="doc-biblioref">2008</a>)</span> and Pearce’s Information Dynamics Of Music (IDyOM) model <span class="citation">(Pearce, <a href="references.html#ref-Pearce2005-bm" role="doc-biblioref">2005</a>)</span>.</p></li>
 </ul>
 </div>
 <div id="audio-approaches" class="section level4">
@@ -740,7 +740,7 @@
 <span class="header-section-number">18.5.2</span> Validity<a class="anchor" aria-label="anchor" href="#validity"><i class="fas fa-link"></i></a>
 </h3>
 <p>A measurement procedure’s <em>validity</em> may be defined as the extent to which the procedure truly measures what it’s meant to measure. Validity is much harder to establish than reliability, because it requires deep engagement with the psychological processes surrounding a measurement.</p>
-<p>Validity issues are particularly salient for latent traits, for example personality and intelligence. In this context researchers often use the more specific term <em>construct validity</em> <span class="citation">(Cronbach &amp; Meehl, 1955)</span>. The issue here is that we are talking about latent constructs that are impossible to measure and very difficult to introspect effectively about. It is possible to create standardised instruments for measuring these constructs, for example IQ tests or personality tests, but it is very easy for certain biases or confounds to find their way into these instruments. For example, the self-report component of the Goldsmiths Musical Sophistication Index (Gold-MSI) assesses the participant’s singing abilities by asking them how much they agree with the following statements:</p>
+<p>Validity issues are particularly salient for latent traits, for example personality and intelligence. In this context researchers often use the more specific term <em>construct validity</em> <span class="citation">(Cronbach &amp; Meehl, <a href="references.html#ref-Cronbach1955-ep" role="doc-biblioref">1955</a>)</span>. The issue here is that we are talking about latent constructs that are impossible to measure and very difficult to introspect effectively about. It is possible to create standardised instruments for measuring these constructs, for example IQ tests or personality tests, but it is very easy for certain biases or confounds to find their way into these instruments. For example, the self-report component of the Goldsmiths Musical Sophistication Index (Gold-MSI) assesses the participant’s singing abilities by asking them how much they agree with the following statements:</p>
 <ul>
 <li><p>If somebody starts singing a song I don’t know, I can usually join in.</p></li>
 <li><p>I can sing or play music from memory.</p></li>
