@@ -13,6 +13,8 @@ fig:dissonance-curve
 fig:unnamed-chunk-25
 overview
 undergraduate-courses
+how-to-approach-the-courses
+advice-on-essay-writing
 copyright
 science
 theories
@@ -36,7 +38,12 @@ spectral-centroid
 spectral-irregularity
 nasality
 formants
-wip-pitch
+pitch
+spectral-theory
+temporal-theory
+pitch-intervals
+pitch-notation
+pitch-class-notation
 wip-consonance
 wip-music-across-the-world
 emotion
