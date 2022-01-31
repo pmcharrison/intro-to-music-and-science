@@ -158,7 +158,8 @@ Moreover, one can find several musical cultures across the world that seem to ac
 embed_video(
   # also hosted at https://s3-eu-west-1.amazonaws.com/media.pmcharrison.com/music/cross-cultural-consonance/GangaLive.mp4
   "images/GangaLive.mp4",
-  title = "A performance by a group of Bosnian Ganga singers. Credit: Pantelis N. Vassilakis, http://acousticslab.org/RECA220/",
+  title = "A performance by a group of Bosnian Ganga singers.",
+  credit = "Pantelis N. Vassilakis, http://acousticslab.org/RECA220/",
   width = "100%"
 )
 ```
