@@ -148,7 +148,7 @@ embed_image(
 
 ## Pitch intervals
 
-Western listeners tend not to hear pitch in *absolute* terms; even highly trained musicians will struggle to name a given note played without additional contextual information. Instead, most Western listeners tend to hear pitch in *relative* terms, specifically in terms of the recognition of particular *frequency ratios*. For example, if a listener is played a pair of tones corresponding to the frequencies 555 Hz and 833 Hz respectively, they are unlikely to realise that the two tones correspond to a C\# and a G\#, but they might well recognise that the tones are separated by a perfect fifth.
+Western listeners tend not to hear pitch in *absolute* terms; even highly trained musicians will struggle to name a given note played without additional contextual information. Instead, most Western listeners tend to hear pitch in *relative* terms, specifically in terms of the recognition of particular *frequency ratios*. For example, if a listener is played a pair of tones corresponding to the frequencies 555 Hz and 833 Hz respectively, they are unlikely to realise that the two tones correspond to a C# and a G#, but they might well recognise that the tones are separated by a perfect fifth.
 
 Psychologically speaking, we describe pitch interval as the *perceptual correlates* of frequency ratio. For example, the octave corresponds to a 2:1 frequency ratio; if we take concert A (A4, 440 Hz), and double the frequency (880 Hz), this gives us the A one octave above (A5).
 
@@ -233,34 +233,117 @@ It is not entirely clear yet what exact cognitive representation listeners use; 
 
 ## Pitch notation
 
-The pitch notation systems used in Western music reflect this primal role of pitch intervals in music perception.
+The pitch notation systems used in Western music reflect this primal role of pitch intervals in music perception. We split the continuous space of all possible musical pitches into a grid, where the basic unit in this grid is a fixed pitch interval, the *semitone*. The defining feature of the semitone is that it corresponds to a 12-fold division of the octave.
+
+The piano keyboard provides a physical instantiation of this grid. Each successive key on the piano keyboard corresponds to one semitone above the previous key; moving from left to right takes us from low pitches to high pitches. Western music notation provides another instantiation of this grid, where instead low pitches are situated at the bottom of the stave and high pitches are situated at the top of the stave.
+
+![Piano keyboard and musical stave. Credit: Artur Jan Fijałkowski, [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5)](images/piano-keyboard-with-notes.svg){width="100%"}
+
+It is useful to have standardised names for each of these notes. It is worth mentioning two main naming systems: *scientific pitch* *notation* and *MIDI pitch notation.* Scientific pitch notation assigns each pitch a letter, an optional accidental, and a number that designates the octave, following the scheme below:
+
+![The octave numbering scheme used by scientific pitch notation. Credit: AlwaysAngry, [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0)](images/piano-octave-numbers.svg)
+
+MIDI pitch notation assigns each note on the piano keyboard a single number, where successive integers correspond to successive semitones. For example, middle C would conventionally be 60, and concert A would be 69 (note that unfortunately there are some places have different conventions here, with middle C for example being given the number 48).
+
+Historically speaking, different semitones would typically have slightly different sizes. The precise sizes of semitones would depend on the current tuning system. Nowadays, most of Western music uses twelve-tone equal temperament, where each semitone has exactly the same size. Unless otherwise specified, MIDI pitch notation is assumed to operate under this equal-temperament scheme too. This means we can have a simple mathematical formula that converts from MIDI pitch to frequency:
+
+$$
+\textrm{frequency} = 440 \times 2 ^ {(\textrm{MIDI} - 69) / 12}
+$$
+
+This formula works as follows: we are counting the number of semitones between our MIDI pitch and concert A, we're dividing this by 12 to get the number of octaves, we're expressing this as a power of 2 to get the frequency ratio, and we're multiplying it by 440 (the frequency of concert A) to get the absolute frequency.
+
+We can equivalently derive an inverse formula for computing the MIDI pitch for a given frequency:
+
+$$
+\textrm{MIDI pitch} = 
+69 + 12 \log_2 \left( \frac{\textrm{frequency}}{440} \right)
+$$
+
+The following table illustrates these different notation systems for two octaves either side of middle C:
+
+```{r}
+midi_to_sci <- function(midi) {
+  names <- c('C', 'C#', 'D', 'D#', 'E', 'F', 'F#', 'G', 'G#', 'A', 'A#', 'B')
+  pc <- midi %% 12
+  pc_name <- names[pc + 1]
+  octave <- floor(midi / 12) - 1
+  paste(pc_name, octave, sep = "")
+}
+
+midi_to_freq <- function(midi) {
+  440 * (2 ^ ((midi - 69) / 12))
+}
+
+tibble(
+  "MIDI note" = 48:72,
+  "Scientific pitch notation" = midi_to_sci(`MIDI note`),
+  "Frequency (Hz)" = midi_to_freq(`MIDI note`) %>% sprintf("%.2f", .),
+  "Also known as" = case_when(
+    `MIDI note` == 60 ~ "Middle C",
+    `MIDI note` == 69 ~ "Concert A",
+    TRUE ~ ""
+  )
+) %>% 
+  knitr::kable(align = "cccc")
+
+```
+
+| Scientific pitch notation | MIDI note | Frequency (Hz) | Notes |
+|---------------------------|-----------|----------------|-------|
+| C3                        |           |                |       |
+| C#3                       |           |                |       |
+| D3                        |           |                |       |
+| D#3                       |           |                |       |
+| E3                        |           |                |       |
+| F3                        |           |                |       |
+| F#3                       |           |                |       |
+| G3                        |           |                |       |
+| G#3                       |           |                |       |
+| A3                        |           |                |       |
+| A#3                       |           |                |       |
+| B3                        |           |                |       |
+| C4                        |           |                |       |
+| C#4                       |           |                |       |
+|                           |           |                |       |
+|                           |           |                |       |
+|                           |           |                |       |
+|                           |           |                |       |
+|                           |           |                |       |
+|                           |           |                |       |
+|                           |           |                |       |
+|                           |           |                |       |
+|                           |           |                |       |
+|                           |           |                |       |
+
+: caption
 
 ## Scales
 
 A scale defines a collection of pitches from which a musical passage is created. In Western music we are particularly familiar with the major and minor scales, but many more scales can be identified both within Western and non-Western musical traditions.
 
-Most known scales embody a concept called *octave equivalence*. Octave equivalence means that pitches separated by octaves (i.e. 2:1 frequency relationships) share some kind of underlying identity, which can be termed *chroma* [@Bachem1950-eb]. In Western music theory we use the term *pitch class* to denote collections of pitches separated by octaves. We can label pitch classes with their corresponding letter names (e.g. C, C\#, D, D\#, ...), or alternatively we can label them with numbers, where by convention C is written as 0, C\# is written as 1. A full table can be found below:
+Most known scales embody a concept called *octave equivalence*. Octave equivalence means that pitches separated by octaves (i.e. 2:1 frequency relationships) share some kind of underlying identity, which can be termed *chroma* [@Bachem1950-eb]. In Western music theory we use the term *pitch class* to denote collections of pitches separated by octaves. We can label pitch classes with their corresponding letter names (e.g. C, C#, D, D#, ...), or alternatively we can label them with numbers, where by convention C is written as 0, C# is written as 1. A full table can be found below:
 
 | Letter name | Integer |
 |-------------|---------|
 | C           | 0       |
-| C\#         | 1       |
+| C#          | 1       |
 | D           | 2       |
-| D\#         | 3       |
+| D#          | 3       |
 | E           | 4       |
 | F           | 5       |
-| F\#         | 6       |
+| F#          | 6       |
 | G           | 7       |
-| G\#         | 8       |
+| G#          | 8       |
 | A           | 9       |
-| A\#         | 10      |
+| A#          | 10      |
 | B           | 11      |
 
 : Western pitch classes and their corresponding integer labels.
 
 A scale can then be defined as a collection of pitch classes. For example, the D major scale would be defined by the following pitch classes:
 
-> D, E, F\#, G, A, B, C\#
+> D, E, F#, G, A, B, C#
 
 It is possible to generalise the definition of transposition to include pitch classes. In the context of pitches, transposing meant multiplying
 
@@ -317,7 +400,7 @@ explain the mapping, give the equation.
 
 ## Relative pitch
 
-Western listeners tend not to hear pitch in *absolute* terms; even highly trained musicians will struggle to name a given note played without additional contextual information. Instead, most Western listeners tend to hear pitch in *relative* terms, specifically in terms of the recognition of particular *frequency ratios*. For example, if a listener is played a pair of tones corresponding to the frequencies 555 Hz and 833 Hz respectively, they are unlikely to realise that the two tones correspond to a C\# and a G\#, but they are relatively likely to recognise that the two frequencies are related by a 3:2 ratio, corresponding to a perfect fifth.
+Western listeners tend not to hear pitch in *absolute* terms; even highly trained musicians will struggle to name a given note played without additional contextual information. Instead, most Western listeners tend to hear pitch in *relative* terms, specifically in terms of the recognition of particular *frequency ratios*. For example, if a listener is played a pair of tones corresponding to the frequencies 555 Hz and 833 Hz respectively, they are unlikely to realise that the two tones correspond to a C# and a G#, but they are relatively likely to recognise that the two frequencies are related by a 3:2 ratio, corresponding to a perfect fifth.
 
 Particular frequency ratios correspond to particular intervals from Western music theory. For example, the frequency ratio 2:1 corresponds to an octave.
 
