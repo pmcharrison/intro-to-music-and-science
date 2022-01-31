@@ -1,6 +1,6 @@
 # Consonance
 
-```{r}
+```{r, echo = FALSE}
 source("setup.R")
 
 knitr::opts_chunk$set(
