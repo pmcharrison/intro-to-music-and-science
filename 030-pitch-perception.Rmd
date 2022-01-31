@@ -148,7 +148,7 @@ embed_image(
 
 ## Pitch intervals
 
-Western listeners tend not to hear pitch in *absolute* terms; even highly trained musicians will struggle to name a given note played without additional contextual information. Instead, most Western listeners tend to hear pitch in *relative* terms, specifically in terms of the recognition of particular *frequency ratios*. For example, if a listener is played a pair of tones corresponding to the frequencies 555 Hz and 833 Hz respectively, they are unlikely to realise that the two tones correspond to a C# and a G#, but they might well recognise that the tones are separated by a perfect fifth.
+Western listeners tend not to hear pitch in *absolute* terms; even highly trained musicians will struggle to name a given note played without additional contextual information. Instead, most Western listeners tend to hear pitch in *relative* terms, specifically in terms of the recognition of particular *frequency ratios*. For example, if a listener is played a pair of tones corresponding to the frequencies 555 Hz and 833 Hz respectively, they are unlikely to realise that the two tones correspond to a C\# and a G\#, but they might well recognise that the tones are separated by a perfect fifth.
 
 Psychologically speaking, we describe pitch interval as the *perceptual correlates* of frequency ratio. For example, the octave corresponds to a 2:1 frequency ratio; if we take concert A (A4, 440 Hz), and double the frequency (880 Hz), this gives us the A one octave above (A5).
 
@@ -231,32 +231,38 @@ Alternatively, listeners might represent the intervals as intervals from the ton
 
 It is not entirely clear yet what exact cognitive representation listeners use; the real answer seems to be complex and task-dependent [see e.g. @dowling1978]. Nonetheless, it seems fair to say that some kind of intervallic representation must be involved, at least for Western listeners.
 
+## Pitch notation
+
+The pitch notation systems used in Western music reflect this primal role of pitch intervals in music perception.
+
 ## Scales
 
 A scale defines a collection of pitches from which a musical passage is created. In Western music we are particularly familiar with the major and minor scales, but many more scales can be identified both within Western and non-Western musical traditions.
 
-Most known scales embody a concept called *octave equivalence*. Octave equivalence means that pitches separated by octaves (i.e. 2:1 frequency relationships) share some kind of underlying identity, which can be termed *chroma* \[@Bachem1950-eb\]. In Western music theory we use the term *pitch class* to denote collections of pitches separated by octaves. We can label pitch classes with their corresponding letter names (e.g. C, C#, D, D#, ...), or alternatively we can label them with numbers, where by convention C is written as 0, C# is written as 1. A full table can be found below:
+Most known scales embody a concept called *octave equivalence*. Octave equivalence means that pitches separated by octaves (i.e. 2:1 frequency relationships) share some kind of underlying identity, which can be termed *chroma* [@Bachem1950-eb]. In Western music theory we use the term *pitch class* to denote collections of pitches separated by octaves. We can label pitch classes with their corresponding letter names (e.g. C, C\#, D, D\#, ...), or alternatively we can label them with numbers, where by convention C is written as 0, C\# is written as 1. A full table can be found below:
 
 | Letter name | Integer |
 |-------------|---------|
 | C           | 0       |
-| C#          | 1       |
+| C\#         | 1       |
 | D           | 2       |
-| D#          | 3       |
+| D\#         | 3       |
 | E           | 4       |
 | F           | 5       |
-| F#          | 6       |
+| F\#         | 6       |
 | G           | 7       |
-| G#          | 8       |
+| G\#         | 8       |
 | A           | 9       |
-| A#          | 10      |
+| A\#         | 10      |
 | B           | 11      |
 
 : Western pitch classes and their corresponding integer labels.
 
 A scale can then be defined as a collection of pitch classes. For example, the D major scale would be defined by the following pitch classes:
 
-> D, E, F#, G, A, B, C#
+> D, E, F\#, G, A, B, C\#
+
+It is possible to generalise the definition of transposition to include pitch classes. In the context of pitches, transposing meant multiplying
 
 Scales can be transposed
 
@@ -311,7 +317,7 @@ explain the mapping, give the equation.
 
 ## Relative pitch
 
-Western listeners tend not to hear pitch in *absolute* terms; even highly trained musicians will struggle to name a given note played without additional contextual information. Instead, most Western listeners tend to hear pitch in *relative* terms, specifically in terms of the recognition of particular *frequency ratios*. For example, if a listener is played a pair of tones corresponding to the frequencies 555 Hz and 833 Hz respectively, they are unlikely to realise that the two tones correspond to a C# and a G#, but they are relatively likely to recognise that the two frequencies are related by a 3:2 ratio, corresponding to a perfect fifth.
+Western listeners tend not to hear pitch in *absolute* terms; even highly trained musicians will struggle to name a given note played without additional contextual information. Instead, most Western listeners tend to hear pitch in *relative* terms, specifically in terms of the recognition of particular *frequency ratios*. For example, if a listener is played a pair of tones corresponding to the frequencies 555 Hz and 833 Hz respectively, they are unlikely to realise that the two tones correspond to a C\# and a G\#, but they are relatively likely to recognise that the two frequencies are related by a 3:2 ratio, corresponding to a perfect fifth.
 
 Particular frequency ratios correspond to particular intervals from Western music theory. For example, the frequency ratio 2:1 corresponds to an octave.
 
