@@ -154,7 +154,7 @@ Psychologically speaking, we describe pitch interval as the *perceptual correlat
 
 Music theorists have long been aware that, at least for Western listeners, certain pitch intervals seem to sound more pleasant (or harmonious) than others. This differentiation in pleasantness seems particularly strong when the two pitches are played simultaneously to produce *chords*. Intervals and chords that sound particularly pleasant are called *consonant*, and those that sound particularly unpleasant are called *dissonant*.
 
-The consonance of an interval is deeply linked to its constituent frequency ratio. In particular, music theorists long ago established the following interesting observation: consonant intervals tend to have frequency ratios that can be approximated by a ratio of two small integers, for example 2:1, 3:2, 4:3, and so on. Such ratios are called *simple integer ratios.* We will discuss this phenomenon in more detail in Section \@ref(wip-consonance).
+The consonance of an interval is deeply linked to its constituent frequency ratio. In particular, music theorists long ago established the following interesting observation: consonant intervals tend to have frequency ratios that can be approximated by a ratio of two small integers, for example 2:1, 3:2, 4:3, and so on. Such ratios are called *simple integer ratios.* We will discuss this phenomenon in more detail in Section \@ref(consonance).
 
 Many intervals in Western music theory can be approximated by simple integer ratios such as these. Intervals with particularly simple integer ratios tend to be perceived as more consonant. The following table lists some examples with integer-ratio approximations as proposed by the Greek mathematician Ptolemy:
 
