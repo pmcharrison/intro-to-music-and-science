@@ -217,10 +217,9 @@ The definition of density can be quite difficult to understand for naive readers
 tree_heights %>% 
   ggplot(aes(x = height)) + 
   geom_density(fill = "lightblue") +
-  geom_dotplot(method = "histodot") +
+  geom_dotplot(method = "histodot", binwidth = 0.8) +
   scale_x_continuous("Height (m)", breaks = seq(from = 0, to = 30, by = 5)) + 
   scale_y_continuous("Density", limits = c(0, 0.07)) 
-#> Bin width defaults to 1/30 of the range of the data. Pick better value with `binwidth`.
 ```
 
 <img src="147-quantitative-iv-visualisation_files/figure-html/unnamed-chunk-14-1.png" width="100%" />

@@ -241,10 +241,9 @@
 <code class="sourceCode R"><span class="va">tree_heights</span> <span class="op">%&gt;%</span> 
   <span class="fu">ggplot</span><span class="op">(</span><span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">height</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span> 
   <span class="fu">geom_density</span><span class="op">(</span>fill <span class="op">=</span> <span class="st">"lightblue"</span><span class="op">)</span> <span class="op">+</span>
-  <span class="fu">geom_dotplot</span><span class="op">(</span>method <span class="op">=</span> <span class="st">"histodot"</span><span class="op">)</span> <span class="op">+</span>
+  <span class="fu">geom_dotplot</span><span class="op">(</span>method <span class="op">=</span> <span class="st">"histodot"</span>, binwidth <span class="op">=</span> <span class="fl">0.8</span><span class="op">)</span> <span class="op">+</span>
   <span class="fu">scale_x_continuous</span><span class="op">(</span><span class="st">"Height (m)"</span>, breaks <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/seq.html">seq</a></span><span class="op">(</span>from <span class="op">=</span> <span class="fl">0</span>, to <span class="op">=</span> <span class="fl">30</span>, by <span class="op">=</span> <span class="fl">5</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span> 
-  <span class="fu">scale_y_continuous</span><span class="op">(</span><span class="st">"Density"</span>, limits <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fl">0.07</span><span class="op">)</span><span class="op">)</span> 
-<span class="co">#&gt; Bin width defaults to 1/30 of the range of the data. Pick better value with `binwidth`.</span></code></pre></div>
+  <span class="fu">scale_y_continuous</span><span class="op">(</span><span class="st">"Density"</span>, limits <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fl">0.07</span><span class="op">)</span><span class="op">)</span> </code></pre></div>
 <div class="inline-figure"><img src="147-quantitative-iv-visualisation_files/figure-html/unnamed-chunk-14-1.png" width="100%"></div>
 </div>
 <div id="box-and-whisker-plots" class="section level4">
@@ -512,7 +511,7 @@ Facets meanwhile correspond to the different panels of a plot. Different facets 
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Music and Science</strong>" was written by Peter M. C. Harrison. It was last built on 2022-01-31.</p>
+    <p>"<strong>Music and Science</strong>" was written by Peter M. C. Harrison. It was last built on 2022-02-07.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">
