@@ -4,6 +4,11 @@ library(magrittr)
 
 knitr::opts_chunk$set(out.width = "100%")
 
+if (curl::has_internet() && (interactive() || !exists("downloaded_paperpile_bib"))) {
+  curl::curl_download("https://paperpile.com/eb/ExZhPTapyS", "paperpile.bib")
+  downloaded_paperpile_bib <- TRUE
+}
+
 embed_audio <- function(
   audio, 
   type = "audio/mpeg",
@@ -106,19 +111,22 @@ embed_video <- function(
   autoplay = FALSE,
   muted = FALSE,
   loop = FALSE,
-  width = NULL
+  width = NULL,
+  external_host = FALSE
 ) {
   if (autoplay && !muted) {
     stop("Autoplay only works if muted is TRUE")
   }
   # if (knitr::is_html_output()) {
-  dir <- dirname(video)
-  file <- basename(video)
-  target_dir <- file.path("_book", dir)
-  target_path <- file.path(target_dir, file)
-  
-  R.utils::mkdirs(target_dir)
-  file.copy(from = video, to = target_path, overwrite = TRUE)
+  if (!external_host) {
+    dir <- dirname(video)
+    file <- basename(video)
+    target_dir <- file.path("_book", dir)
+    target_path <- file.path(target_dir, file)
+    
+    R.utils::mkdirs(target_dir)
+    file.copy(from = video, to = target_path, overwrite = TRUE)
+  }
   
   attributes <- 
     c(
