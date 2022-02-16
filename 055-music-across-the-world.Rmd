@@ -1,0 +1,14 @@
+# Music across the world
+
+```{r, echo = FALSE, include = FALSE}
+knitr::opts_chunk$set(
+  echo = FALSE, results = "asis"
+)
+source("setup.R")
+```
+
+## Musical functions
+
+## Musical features
+
+## Music cognition
