@@ -7,8 +7,20 @@ knitr::opts_chunk$set(
 source("setup.R")
 ```
 
-## Musical functions
+It has long been understood that music can be found in diverse cultures across the world. A recent ethnographic survey of 315 societies across the world found music to be present in every case [@Mehr2019-wg]. This widespread prevalence of music speaks already to its notional evolutionary function: if music is indeed an indispensable part of human society, this suggests that it has some important utility across human cultures that may have a long evolutionary history.
 
-## Musical features
+An important question then arises: how does this music-making vary across the world? One way of studying this question is to 'zoom in' on individual societies and study them using *ethnomusicological* methods. Traditionally an ethnomusicologist will spend years embedding themselves within a given musical culture to learn about it as an insider, paying attention both to the structural features of the music and the cultural and social roles it plays within the society. The result is typically a highly detailed understanding of a particular musical culture, developed primarily 'on its own terms', without necessarily referring to other musical cultures around the world.
+
+An alternative approach that has ebbed and flowed in popularity over the decades is *comparative musicology*. Comparative musicology seeks to establish a *comparative* understanding of different musical cultures, looking both at the sense in which they are similar and the sense in which they are different. It is a more scientifically oriented approach, in that it seeks to represent musical pieces and cultures as data points that can be compared quantitatively to one another.
+
+Comparative musicology saw initial popularity from the late 1800s, with researchers such as Erich von Hornbostel (1877-1935). Relevant studies included investigations of scale systems and instrument usage across the world. Unfortunately, this early work ended up manifesting certain characteristics which are generally disapproved of today, for example an 'evolutionist' way of thinking that considered Western art music to be the ultimate end-goal of musical style development, and that considered other musical styles to be 'primitive' in various ways. These philosophical and interpretative issues are part of the reason why ethnomusicology approaches largely displaced comparative musicology for most of the 20th century.
+
+Recent years have seen something of a resurgence of interest in the comparative musicology approach. @Brown2013-lz present a strong argument for setting cross-cultural comparisons at the heart of musicology and music psychology, placing particular emphasis on the desirability of studying *musical universals*, features of music which reliably occur across many musical cultures. @Savage2015-rp present a systematic quantitative analysis of the occurrence of different musical features across a set of globally sampled music recordings. @Mehr2019-wg present a systematic quantitative analysis of ethnographic accounts of music performance from all over the world, focusing in particular on the social contexts in which music manifests in these cultures. Psychological studies have investigated the cross-cultural perception of diverse musical dimensions including pitch [@Jacoby2019-ew], consonance [@McDermott2016-sf], and rhythm [@Jacoby2021-xp]. Together, this work is giving us an increasingly complete picture of the diverse ways in which music manifests across the world, allowing us to explore interesting questions about the genetic and cultural processes underlying music's evolution.
+
+## Cultural contexts
+
+
+
+## Structural features
 
 ## Music cognition
