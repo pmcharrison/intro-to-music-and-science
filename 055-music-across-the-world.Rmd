@@ -49,8 +49,39 @@ Further to this analysis of individual features, @Savage2015-rp also studied the
 > -   Percussion instruments
 > -   Syllabic singing
 
-It is not hard to understand why the above features might be promoted in the context of dancing and group performance: each feature looks like it should be useful for encouraging inter-individual rhythmic entrainment. However, it is less obvious why some of the other musical features might become universal, for example discrete pitches or nonequidistant scales. We will revisit this question in Chapter \@ref(origins-of-melodic-structures).
+It is not hard to understand why the above features might be promoted in the context of dancing and group performance: each feature looks like it should be useful for encouraging inter-individual rhythmic entrainment. However, it is less obvious why some of the other musical features might become universal, for example discrete pitches or nonequidistant scales. We will revisit these questions in Chapter \@ref(origins-of-melodic-structures).
+
+It should be noted that the concept of musical universals remain controversial. @Mehr2019-wg conducted a survey of 940 music scholars examining their perspective on this topic. Self-identified ethnomusicologists were particularly sceptical of the concept, with their free-text responses including the following:
+
+> "I'm not sure precisely what the angle is here, but the question of musical universals has largely been settled by ethnomusicology--in short, there are very, very few of them. ... "
+
+> "You cannot be serious. Universals? I understand and appreciate your project (really, human musicking is my intellectual jam). But you cannot suggest that scales are universal. You cannot suggest that tonality is universal. And why pitch organization? Because that's how European music culture thinks. ..."
+
+> "The idea that music is universally understood is a long discounted theory. This line of questioning is condescending to 'people around the world'."
+
+> "A study of universals would negate the rich diversity of the world's cultures. We are different, no matter how many similarities we may share. The value we must find lives in the in between spaces."
+
+> "I fear that this undertaking, spearheaded by the paragon of colonialist expeditions (harvard grad students) risks recapitulating the efforts of comparative musicologists a century ago. Why identify universalities if not to compare and categorize? ..."
+
+> "The idea that there is such a thing as musical universals (let alone that it should be studied) is deeply ethnocentric and Eurocentric. This idea reinforces 19th century European colonial ideology. There is no place for this type of antiquated and prejudiced thinking in a global 21st century education system marked by international and cultural diversity."
+
+> "I prefer not to approach music in a universal way. Every culture perceives facts and music in a different way depending on their cultural background. Thus, I think that only people with similar cultural backgrounds could - or may - understand the music as well as the musical and non- musical behaviors of the people under research. "
+
+> "The problem with the questions about whether this or that use of music is universal or not is that human societies are so many and so various! ..."
+
+> "You are using the term 'music' in a very biased Western way. Frankly, I don't know what you mean by the term. You are treating it as a natural, objective thing that exists. ..."
+
+They make important points, especially concerning the dangers of imposing an overly Western perspective on music studies. Nonetheless, there are many modern musicologists who now think that these statements go too far, and that we should not give up on the goal of developing a comparative understanding of the world's musics. It seems worthwhile to work towards a comparative musicology that acknowledges and rectifies the problematic cultural imperialism found in early work.
 
 ## Cultural contexts
+
+An important principle in ethnomusicology is that we should pay serious attention to the social and cultural contexts within which music is produced. These sociocultural elements have most commonly been studied from qualitative perspectives such as ethnography, where the researcher spends a significant amount of time immersed in the relevant culture documenting events that they observe. This approach delivers very rich data with many personal insights. However, by itself it does not contribute directly to a comparative understanding of the world's musics, because no single researcher would have enough time to immerse themselves in a sufficient number of cultures to produce a proper global understanding of the world's musics.
+
+The paper by @Mehr2019-wg addresses this problem by taking a large amount of ethnographic writings indexed in the [*eHRAF World Cultures Database*](https://ehrafworldcultures.yale.edu/ehrafe/), identifying passages related to vocal music, and constructing a large set of variables summarising key features of the writings, including both variables concerning the music itself (e.g. the sex of the singer, the presence of instruments) and variables concerning its behavioural context (e.g. the song appears to be part of a ceremony, or the song is associated with war). The authors then construct various quantitative analyses that compare these variables across different musical cultures.
+
+
+...
+
+The authors additionally conduct a limited...
 
 ## Music cognition
