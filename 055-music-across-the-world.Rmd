@@ -7,6 +7,10 @@ knitr::opts_chunk$set(
 source("setup.R")
 ```
 
+<!-- How to define music? From Savage et al. (2015): -->
+
+<!-- " It should be noted that the editors of the Encyclopedia did not adopt a formal definition of music in choosing their selections. We thus assume that they followed the common practice in ethnomusicology of defining music as “humanly organized sound” (48) other than speech, with the distinction between speech and music being left to each culture’s emic (insider, subjective) conceptions, rather than being defined objectively by outsiders. Thus, our analyses suggest that there is no absolutely universal and objective definition of music, but that Lomax and Grauer’s definition may offer a useful working def- inition to distinguish music from speech." -->
+
 It has long been understood that music can be found in diverse cultures across the world. A recent ethnographic survey of 315 societies across the world found music to be present in every case [@Mehr2019-wg]. This widespread prevalence of music speaks already to its notional evolutionary function: if music is indeed an indispensable part of human society, this suggests that it has some important utility across human cultures that may have a long evolutionary history.
 
 An important question then arises: how does this music-making vary across the world? One way of studying this question is to 'zoom in' on individual societies and study them using *ethnomusicological* methods. Traditionally an ethnomusicologist will spend years embedding themselves within a given musical culture to learn about it as an insider, paying attention both to the structural features of the music and the cultural and social roles it plays within the society. The result is typically a highly detailed understanding of a particular musical culture, developed primarily 'on its own terms', without necessarily referring to other musical cultures around the world.
@@ -17,10 +21,36 @@ Comparative musicology saw initial popularity from the late 1800s, with research
 
 Recent years have seen something of a resurgence of interest in the comparative musicology approach. @Brown2013-lz present a strong argument for setting cross-cultural comparisons at the heart of musicology and music psychology, placing particular emphasis on the desirability of studying *musical universals*, features of music which reliably occur across many musical cultures. @Savage2015-rp present a systematic quantitative analysis of the occurrence of different musical features across a set of globally sampled music recordings. @Mehr2019-wg present a systematic quantitative analysis of ethnographic accounts of music performance from all over the world, focusing in particular on the social contexts in which music manifests in these cultures. Psychological studies have investigated the cross-cultural perception of diverse musical dimensions including pitch [@Jacoby2019-ew], consonance [@McDermott2016-sf], and rhythm [@Jacoby2021-xp]. Together, this work is giving us an increasingly complete picture of the diverse ways in which music manifests across the world, allowing us to explore interesting questions about the genetic and cultural processes underlying music's evolution.
 
+## Structural features of music
+
+Music researchers have written for many decades about cross-cultural differences in musical styles, and have theorised in particular about the idea of *musical universals*, musical features which might reliably occur across many musical cultures. However, little progress was made on this question in the 20th century, with ethnomusicologists tending to avoid this topic and the baggage it brought from traditional comparative musicology.
+
+@Savage2015-rp revisited this question of musical universals with a modern quantitative perspective. They analysed a collection of 304 recordings from the *Garland Encyclopedia of World Music*, a dataset comprising recordings from a variety of sources from all over the world, including both field recordings of traditional indigenous music and studio recordings of nontraditional music. The researchers listened to each recording and coded them in terms of 32 musical features covering various aspects of pitch, rhythm, form, instrumentation, performance style, and social context. These features are strongly inspired by the arguments of @Brown2013-lz.
+
+When examining the recurrence of particular features across different cultures, it's important to account for the notion of cultural relatedness. If we see the same musical feature recur many times in cultures that are completely unrelated to each other, this implies that there is some kind of latent evolutionary pressure that encourages the development of that feature. However, if the same musical feature recurs many times in cultures that are close neighbours, the evidence for a latent evolutionary pressure is weaker: it could simply be that the feature developed once by chance in a historical parent culture, and the child cultures just inherited it. @Savage2015-rp therefore use so-called *phylogenetic comparative methods* to adjust for cultural relatedness in their analyses. Their primary analyses operationalise cultural relatedness using data on the historical relatedness of different languages (*language phylogenies*), but they also present supplementary analyses that instead operationalise cultural relatedness using geographic information.
+
+An important question in the the interpretation of the results concerns the definition of 'musical universal'. A strict definition of musical universal would mean that the feature is found in every piece of music, no matter its origin. @Savage2015-rp take a weaker definition of musical universal, defining it as a feature that occurs at least 50% of the time. Such features can be termed *statistical universals*.
+
+The paper identifies a collection of statistical universals spanning different musical domains. The authors summarise them as follows:
+
+> -   **Pitch**: Music tends to use discrete pitches (1) to form nonequidistant scales (2) containing seven or fewer scale degrees per octave (3). Music also tends to use descending or arched melodic contours (4) composed of small intervals (5) of less than 750 cents (i.e., a perfect fifth or smaller).
+> -   **Rhythm**: Music tends to use an isochronous beat (6) organized according to metrical hierarchies (7) based on multiples of two or three beats (8)---especially multiples of two beats (9). This beat tends to be used to construct motivic patterns (10) based on fewer than five durational values (11).
+> -   **Form**: Music tends to consist of short phrases (12) less than 9 s long.
+> -   **Instrumentation**: Music tends to use both the voice (13) and (nonvocal) instruments (14), often together in the form of accompanied vocal song.
+> -   **Performance style**: Music tends to use the chest voice (i.e., modal register) (15) to sing words (16), rather than vocables (nonlexical syllables).
+> -   **Social context**: Music tends to be performed predominantly in groups (17) and by males (18). The bias toward male performance is true of singing, but even more so of instrumental performance.
+
+Further to this analysis of individual features, @Savage2015-rp also studied the sense in which certain features tend to occur together. In particular, they find a collection of statistically associated features that seem to recur in the context of group performance and dance:
+
+> -   Isochronous beat
+> -   Motivic patterns
+> -   Few durational values
+> -   Phrase repetition
+> -   Percussion instruments
+> -   Syllabic singing
+
+It is not hard to understand why the above features might be promoted in the context of dancing and group performance: each feature looks like it should be useful for encouraging inter-individual rhythmic entrainment. However, it is less obvious why some of the other musical features might become universal, for example discrete pitches or nonequidistant scales. We will revisit this question in Chapter \@ref(origins-of-melodic-structures).
+
 ## Cultural contexts
-
-
-
-## Structural features
 
 ## Music cognition

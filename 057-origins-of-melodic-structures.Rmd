@@ -1,0 +1,9 @@
+## Origins of melodic structures
+
+```{r, echo = FALSE, include = FALSE}
+knitr::opts_chunk$set(
+  echo = FALSE, results = "asis"
+)
+source("setup.R")
+```
+
