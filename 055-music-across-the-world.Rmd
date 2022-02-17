@@ -87,7 +87,7 @@ It should be noted that the concept of musical universals remain controversial. 
 
 They make important points, especially concerning the dangers of imposing an overly Western perspective on music studies. Nonetheless, there are many modern musicologists who now think that these statements go too far, and that we should not give up on the goal of developing a comparative understanding of the world's musics. It seems worthwhile to work towards a comparative musicology that acknowledges and rectifies the problematic cultural imperialism found in early work.
 
-## Cultural contexts
+## Cultural contexts of music-making
 
 An important principle in ethnomusicology is that we should pay serious attention to the social and cultural contexts within which music is produced. These sociocultural elements have most commonly been studied from qualitative perspectives such as ethnography, where the researcher spends a significant amount of time immersed in the relevant culture documenting events that they observe. This approach delivers very rich data with many personal insights. However, by itself it does not contribute directly to a comparative understanding of the world's musics, because no single researcher would have enough time to immerse themselves in a sufficient number of cultures to produce a proper global understanding of the world's musics.
 
@@ -166,7 +166,31 @@ On this basis, @Ammirante2015-mn concluded that composers should prefer placing 
 
 ### Memory constraints
 
-TODO
+Musical structure manifests as patterns of sound that spread over a variety of time intervals, including both small-scale patterns (e.g. the fluctuation of pitch in a violin's vibrato), mid-scale patterns (e.g. the organisation of notes into melodic phrases), and large-scale patterns (e.g. the arrangement of movements in a symphony). Understanding these different aspects of musical structure requires the ability to hold the relevant musical materials in memory, so that they can make the relevant comparisons and inferences to identify the underlying patterns and structures. To the extent that musicians want their music to be appreciated by the listener, they therefore must operate within the listener's memory constraints. These memory constraints are also important at the point of music production, especially in music traditions that rely heavily on oral transmission; if a melody is too complex to memorise, then it is unlikely to be reproduced effectively by the next performer.
+
+We are still learning how musical memory works and how it may relate to the development of musical styles. Nonetheless, we can still set out a few plausible ways in which this might work.
+
+#### Categorical memory representations
+
+Many psychological percepts are derived from essentially continuous physical spaces. For example, pitch is derived from frequency, and frequency is a continuous numeric quantity; likewise, vowel sounds can be expressed in terms of formant frequencies, which again correspond to continuous numeric quantities. However, humans have a strong tendency to remember these percepts not as continuous values, but rather as categorical values. For example, when we hear a melody, we might remember it as a series of scale degrees; likewise, when we hear a spoken sentence, we might remember the words that are spoken rather than the exact acoustic parameters of the utterance. This is not to say that the more continuous parameters are completely absent from memory; we know that people do develop detailed memory representations for such phenomena, especially on repeated listenings. Nonetheless, it does seem that categorical representations have a very important role in melody.
+
+In musical styles across the world, we do seem to see that musical elements are used in a manner that supports categorical memory representations, with these musical elements being drawn from finite vocabularies of pitches (e.g. the scale degrees within a melody) or rhythms (e.g. simple integer duration ratios). It seems plausible that this strategy helps people to remember musical stimuli, which is important both for their ability to appreciate the music as a listener, and for the ability of performers to recreate the music from memory.
+
+#### Repetition
+
+Humans have an excellent capacity to detect repeated patterns, even if the underlying elements are themselves unfamiliar. For example, if we hear a sequence of sounds, we might remember them as 'Three times Sound A, then Sound B, then two more repetitions of Sound A'. Following this logic, we can expect music to be easier to remember if it regularly reuses its own constituent elements. This reuse can take place at various levels of structure; it might mean reusing different notes within a scale, or reusing the same motif multiple times, or repeating whole sections spanning multiple bars. This phenomenon could explain why music across the world tends to manifest various kinds of repetitive structure.
+
+#### Contour perception
+
+The *contour* of a melody may be defined as its overall shape, paying particular attention to the general direction of travel (e.g. upwards versus downwards) and the location of direction changes, and paying less attention to the melody's precise pitch content. Behavioural research has shown that contour has a privileged role in melodic memory, particularly in contexts where the listener must remember a novel melody over a short time period [@Dowling1978-ga]. Correspondingly, to maximise a musical extract's memorability, it's important that the music's motivic repetitions should preserve contour, but not necessarily exact pitch intervals. This is something we see very clearly in common-practice Western music, where motives often recur with their shape preserved but their precise intervallic structure altered.
+
+#### Nonequidistant scales
+
+An equidistant scale is a scale where every adjacent note is separated by the same interval. Examples of equidistant scales include the 12-tone chromatic scale and the whole-tone scale. Conversely, nonequidistant scales are scales where the intervals between adjacent notes vary. Nonequidistant scales have been noted several times as a candidate musical universal, including in the recent paper by @Savage2015-rp.
+
+Why might musical styles across the world tend to converge on nonequidistant scales, when equidistant scales are conceptually simpler? One possibility is that nonequidistant scales make music easier to remember. In particular, it has been noted that nonequidistant scales allow different notes to have distinct, individualised relationships with the other notes in the scale, in contrast to equidistant scales, where the scale is fully symmetric and hence every note is conceptually identical [@Balzano1982-za]. This individualisation may make pitch sequences easier to remember.
+
+To my knowledge, there is no research yet that directly tests whether nonequidistant scales make melodies easier to remember. However, a recent study by @Pelofi2021-jf demonstrates something related: that listeners are better able to learn musical 'grammars' (i.e. artificial musical styles) if these grammars are drawn from nonequidistant rather than equidistant scales. There's more work to be done in this area.
 
 ### Bounded tessituras
 
@@ -260,10 +284,6 @@ These demonstrations are provocative, but they come with some caveats. One issue
 
 This section introduced several phenomena that might shape melodic structures in musical styles. In the context of vocal constraints, we focused particularly on the way in which the lungs run out of breath during an utterance, and the implications that this might have for musical pitch [@Huron1996-lv]. We also considered the way in which lower registers are generally easier to sing in than higher registers, meaning that composers are more likely to place pitch skips in the former rather than the latter [@Ammirante2015-mn]. Following @Watt1924-xc, we discussed how bounded tessituras might provide an explanation for Narmour's registral direction principle. In the context of speech patterns, we focused particularly on the relationship between speech rhythms and musical rhythms, and discussed a study that addresses this relationship from the perspective of fiddle music and different English dialects [@McGowan2011-sv]. Lastly, we discussed how the inharmonic scales of the Balinese gamelan might be explained in terms of the tone spectra of its instruments [@Sethares2005-ko].
 
-In many of these cases, the stylistic bias comes originally not from the mind of the listener, but from some kind of physical constraint, for example the nature of sound production in the human voice, the bounded tessitura of a musical instrument, or the spectral content of a musical tone. Once composers start producing music that reflects this bias, though, listeners will become familiar with this kind of music, and internalise its patterns through statistical learning. These internalised patterns can then shape phenomena such as musical expectation, even in contexts where the original physical biases have been removed. So, the biases begin as something physical and external to the listener's mind, but eventually they end up being psychological and internal to the mind. 
+In many of these cases, the stylistic bias comes originally not from the mind of the listener, but from some kind of physical constraint, for example the nature of sound production in the human voice, the bounded tessitura of a musical instrument, or the spectral content of a musical tone. Once composers start producing music that reflects this bias, though, listeners will become familiar with this kind of music, and internalise its patterns through statistical learning. These internalised patterns can then shape phenomena such as musical expectation, even in contexts where the original physical biases have been removed. So, the biases begin as something physical and external to the listener's mind, but eventually they end up being psychological and internal to the mind.
 
 An interesting trend in recent work is to explore these questions of stylistic evolution in laboratory experiments [e.g. @Ravignani2016-om; @Shanahan2019-ia]. Many of these studies rely on the transmission chain method, where a participant learns to perform a particular musical extract, and then plays it for the next participant, who then learns it off them and performs for the next participant, and so on. This method can be used to simulate the effects of oral transmission on musical styles. It's quite difficult to get these kinds of studies right, but they offer a nice contrasting perspective to corpus analyses of pre-existing music.
-
-## Music cognition
-
-TODO
