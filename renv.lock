@@ -128,13 +128,6 @@
       "Repository": "CRAN",
       "Hash": "2042cd9759cc89a453c4aefef0ce9aae"
     },
-    "V8": {
-      "Package": "V8",
-      "Version": "4.0.0",
-      "Source": "Repository",
-      "Repository": "CRAN",
-      "Hash": "916996b97ed2c882b0e748b79c75a0ec"
-    },
     "abcR": {
       "Package": "abcR",
       "Version": "0.0.0.9007",
