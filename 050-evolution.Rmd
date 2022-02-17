@@ -1,4 +1,4 @@
-# Evolution of musicality
+# Evolution
 
 ```{r, echo = FALSE, include = FALSE}
 knitr::opts_chunk$set(
@@ -9,7 +9,7 @@ source("setup.R")
 
 This chapter explores the different biological ingredients that make humans predisposed to create and appreciate music, and why these biological ingredients developed in the first place.
 
-When we talk about this problem, it's useful to make a distinction between two related words: **'music'** and **'musicality'**. We discussed the definition of 'music' in the previous section -- essentially, we define music as sound that we listen to in a specifically 'musical' way, where we attend to particular acoustic properties of the sound such as pitch and rhythm. We then define 'musicality' as the capacity to engage with music in a meaningful way. When studying the evolutionary origins of music, we are not so interested in the highly refined forms of musicality we might find in the conservatoire; we're more interested in broader aspects of musicality that are shared by musicians and nonmusicians alike, such as the ability to perceive the beat in a piece of music, or to sing along with a familiar tune.
+<!-- When we talk about this problem, it's useful to make a distinction between two related words: **'music'** and **'musicality'**. We discussed the definition of 'music' in the previous section -- essentially, we define music as sound that we listen to in a specifically 'musical' way, where we attend to particular acoustic properties of the sound such as pitch and rhythm. We then define 'musicality' as the capacity to engage with music in a meaningful way. When studying the evolutionary origins of music, we are not so interested in the highly refined forms of musicality we might find in the conservatoire; we're more interested in broader aspects of musicality that are shared by musicians and nonmusicians alike, such as the ability to perceive the beat in a piece of music, or to sing along with a familiar tune. -->
 
 We are going to approach these topics from the perspective of **evolutionary biology**. Evolution describes the way in which inherited characteristics of a population of organisms change over time in response to natural selection. Natural selection describes how individuals with different inherited characteristics differ in their propensity to survive and reproduce. A beneficial characteristic may originally come about through a chance genetic mutation: if this beneficial characteristic helps the organism to survive and reproduce, then the characteristic will be spread to more organisms in the next generation, whose survival and reproduction chances can in turn be helped by this characteristic. The theory of evolution is essential for answering 'why' questions in biology: it helps us to understand the reason why particular biological traits developed in the first place.
 
@@ -111,7 +111,7 @@ These limitations suggest that we should entertain the possibility that music do
 
 @Darwin1871-rg promoted the hypothesis that human musicality was shaped by **sexual selection**, similar to the evolution of birdsong. He claimed that early humans competed to attract mates by virtue of their musical performances, producing a selection bias towards improved musical skills, and hence promoting the evolution of musicality. This hypothesis has some surface plausibility, but is now considered to be problematic [e.g. @Mehr2020-zk]. The key issue is that sexual selection tends to create sexual dimorphism, where the relevant trait is amplified most in the sex that invests least in reproduction. This is why male birds tend to have more flamboyant plumage, for example. In contrast, we don't see strong sexual dimorphism in human musicality.
 
-### Inducing social bonding
+### Social bonding
 
 A second hypothesis is that music's significant evolutionary function was **inducing social bonding** [e.g. @Savage2020-mb]. Various scientific studies have confirmed that music-making seems to be an effective way of enhancing social bonding within a group. It's obvious that social bonding has positive adaptive implications: it helps to form stable communities of individuals that can help each other to hunt for food and deter predators. Now, we should ask why we need music to promote social-bonding in the first place; if social bonding is so useful, why didn't we simply evolve a propensity for social bonding that didn't depend on time-consuming music-making?
 
