@@ -23,9 +23,11 @@ Recent years have seen something of a resurgence of interest in the comparative 
 
 ## Structural features of music
 
-Music researchers have written for many decades about cross-cultural differences in musical styles, and have theorised in particular about the idea of *musical universals*, musical features which might reliably occur across many musical cultures. However, little progress was made on this question in the 20th century, with ethnomusicologists tending to avoid this topic and the baggage it brought from traditional comparative musicology.
+Music researchers have written for many decades about cross-cultural differences in musical styles, and have theorised in particular about the idea of *musical universals*, musical features which might reliably occur across many musical cultures. However, little progress was made on this question in the 20th century, with ethnomusicologists tending to avoid this topic and the baggage it brought from traditional comparative musicology. In this section we will discuss a couple of recent articles that revisit this question of musical universals, bringing a quantitative perspective that simultaneously compares many cultures across the world.
 
-@Savage2015-rp revisited this question of musical universals with a modern quantitative perspective. They analysed a collection of 304 recordings from the *Garland Encyclopedia of World Music*, a dataset comprising recordings from a variety of sources from all over the world, including both field recordings of traditional indigenous music and studio recordings of nontraditional music. The researchers listened to each recording and coded them in terms of 32 musical features covering various aspects of pitch, rhythm, form, instrumentation, performance style, and social context. These features are strongly inspired by the arguments of @Brown2013-lz.
+### Savage et al. (2015)
+
+@Savage2015-rp analyses a collection of 304 recordings from the *Garland Encyclopedia of World Music*, a dataset comprising recordings from a variety of sources from all over the world, including both field recordings of traditional indigenous music and studio recordings of nontraditional music. The researchers listened to each recording and coded them in terms of 32 musical features covering various aspects of pitch, rhythm, form, instrumentation, performance style, and social context. These features are strongly inspired by the arguments of @Brown2013-lz.
 
 When examining the recurrence of particular features across different cultures, it's important to account for the notion of cultural relatedness. If we see the same musical feature recur many times in cultures that are completely unrelated to each other, this implies that there is some kind of latent evolutionary pressure that encourages the development of that feature. However, if the same musical feature recurs many times in cultures that are close neighbours, the evidence for a latent evolutionary pressure is weaker: it could simply be that the feature developed once by chance in a historical parent culture, and the child cultures just inherited it. @Savage2015-rp therefore use so-called *phylogenetic comparative methods* to adjust for cultural relatedness in their analyses. Their primary analyses operationalise cultural relatedness using data on the historical relatedness of different languages (*language phylogenies*), but they also present supplementary analyses that instead operationalise cultural relatedness using geographic information.
 
@@ -51,6 +53,18 @@ Further to this analysis of individual features, @Savage2015-rp also studied the
 
 It is not hard to understand why the above features might be promoted in the context of dancing and group performance: each feature looks like it should be useful for encouraging inter-individual rhythmic entrainment. However, it is less obvious why some of the other musical features might become universal, for example discrete pitches or nonequidistant scales. We will revisit these questions in Chapter \@ref(origins-of-melodic-structures).
 
+### Mehr et al. (2019)
+
+More recently, a paper by @Mehr2019-wg includes a significant section on candidate musical universals. This follows a detailed analysis of the behavioural contexts of music around the world. This behavioural part of the paper is very impressive in its scope and quantitative execution; in contrast, unfortunately, the subsequent musical universals section feels a little disappointing, both for its lack of detail and for the Western-centric nature of its methods.
+
+One proposed universal is tonality, specifically the notion that songs tend to be built around a particular tonal centre. This hypothesis is reasonable, but the analysis involves (a) having Western music theorists annotate tonal centres for the melodies, and (b) running the Krumhansl-Kessler keyfinding algorithm on the melodies, an algorithm which is trained on behavioural data from Western listeners. In both cases, one might expect the derived keys to be shaped significantly by the cultural expectations of Western listeners. A better approach to this question would define tonality in a much more culturally neutral way.
+
+A second proposed universal is that melodies vary along two dimensions of complexity: one of which is melodic complexity, and the other of which is rhythmic complexity. These two dimensions are extracted through another principal component analysis. Again, the hypothesis seems reasonable, but the support from the data is relatively weak: the two components only explain 13.1% and 10.8% of the variance respectively. In other words, these two dimensions are only explaining a small part of the way in which melodic structure varies across the world.
+
+A third proposed universal is that the prevalence of different melodic and rhythmic bigrams is distributed according to a so-called *power law*. Traditionally speaking, a bigram is a pair of elements from a given alphabet, for example 'AB' or 'CA'. The authors actually do not analyse bigrams in the conventional sense, which confuses things a little bit. Instead, they just look at frequency distributions for (a) melodic pitch intervals and (b) rhythmic ratios between successive notes. Curiously, the authors do not tabulate separate distributions for different cultures, but instead calculate an overall distribution of intervals and ratios across all the musical cultures in their sample. They find that certain intervals are particularly common cross-culturally (unison, major second, and minor third), and likewise certain rhythmic ratios (1:1, 2:1, and 3:1) are particularly common cross-culturally. Moreover, they show that, when ranking the full set of observed intervals/ratios, the distribution of their relative frequencies is well-approximated by a curve of a particular shape corresponding to a *power law*. Power-law shapes have previously been observed in many contexts, including music, language, and painting, but it would be interesting to see that this phenomenon replicates in different musical cultures. Unfortunately, the present analysis does not quite show this, because it doesn't compute separate distributions for individual cultures. However, it is arguably interesting nonetheless to know that we get a power-law distribution if we look at all the cultures jointly. It should be noted though that these distributions are filtered through the transcriptions of expert Western musicians, and may inherit some biases from them. In particular, the process of representing melodies on the Western 12-tone scale arguably forces the musicians to impose Western biases on their transcriptions; likewise, the rhythmic notation forces the musicians to express rhythms in terms of the integer-ratio rhythmic categories used in Western music theory. Future work ought to find ways to reduce these biases, perhaps by representing pitch and rhythm in a culturally neutral continuous space.
+
+### Controversies
+
 It should be noted that the concept of musical universals remain controversial. @Mehr2019-wg conducted a survey of 940 music scholars examining their perspective on this topic. Self-identified ethnomusicologists were particularly sceptical of the concept, with their free-text responses including the following:
 
 > "I'm not sure precisely what the angle is here, but the question of musical universals has largely been settled by ethnomusicology--in short, there are very, very few of them. ... "
@@ -73,8 +87,6 @@ It should be noted that the concept of musical universals remain controversial. 
 
 They make important points, especially concerning the dangers of imposing an overly Western perspective on music studies. Nonetheless, there are many modern musicologists who now think that these statements go too far, and that we should not give up on the goal of developing a comparative understanding of the world's musics. It seems worthwhile to work towards a comparative musicology that acknowledges and rectifies the problematic cultural imperialism found in early work.
 
-More recently, a paper by @Mehr2019-wg includes a significant section on candidate musical universals.
-
 ## Cultural contexts
 
 An important principle in ethnomusicology is that we should pay serious attention to the social and cultural contexts within which music is produced. These sociocultural elements have most commonly been studied from qualitative perspectives such as ethnography, where the researcher spends a significant amount of time immersed in the relevant culture documenting events that they observe. This approach delivers very rich data with many personal insights. However, by itself it does not contribute directly to a comparative understanding of the world's musics, because no single researcher would have enough time to immerse themselves in a sufficient number of cultures to produce a proper global understanding of the world's musics.
@@ -85,9 +97,9 @@ Quantitative analyses can quickly becoming overwhelming when they report many di
 
 The Bayesian principal component analysis returns three main dimensions that together summarise much of the variation in behavioural context for the different songs in the NHS Ethnography. The authors describe these three dimensions as follows:
 
-> - **Formality**: "Excerpts high along this dimension describe ceremonial events involving adults, large audiences, and instruments; excerpts low on it describe informal events with small audiences and children."
-> - **Arousal**: "Excerpts high along this dimension describe lively events with many singers, large audiences, and dancing; excerpts low on it describe calmer events involving fewer people and less overt affect, such as people singing to themselves."
-> - **Religiosity**: "Passages high along this dimension describe shamanic ceremonies, possession, and funerary songs; passages low on it describe communal events without spiritual content, such as community celebrations."
+> -   **Formality**: "Excerpts high along this dimension describe ceremonial events involving adults, large audiences, and instruments; excerpts low on it describe informal events with small audiences and children."
+> -   **Arousal**: "Excerpts high along this dimension describe lively events with many singers, large audiences, and dancing; excerpts low on it describe calmer events involving fewer people and less overt affect, such as people singing to themselves."
+> -   **Religiosity**: "Passages high along this dimension describe shamanic ceremonies, possession, and funerary songs; passages low on it describe communal events without spiritual content, such as community celebrations."
 
 One might hypothesise that music plays different roles in different cultures: for example, one culture might predominantly use music in a formal religious context, whereas other cultures might predominantly use music in an informal nonreligious context. The quantitative analyses show that there is indeed some cross-cultural variation along these lines. However, the takeaway message from the analyses is actually that there tends to be much more variation within a given culture than between different cultures. In other words, most cultures tend to exhibit multiple modes of music-making that explore different levels of formality, arousal, and religiosity; if we average over these different modes, we find that most cultures actually sit in a middleground for these three different variables.
 
@@ -95,13 +107,13 @@ In a subsequent analysis, the authors take a more granular approach to understan
 
 They find indeed that, across different cultures, music tends to be associated in certain contexts above others. Many such contexts are listed in their Table 1, though some are more statistically prevalent than others. There seem to be particularly strong effects for the following contexts:
 
-- Dance
-- Healing
-- Religious activity, rituals
-- Mourning, death, funerals
-- Processions, spectacles, nuptials
-- Play, games, childhood activities
-- Love
+-   Dance
+-   Healing
+-   Religious activity, rituals
+-   Mourning, death, funerals
+-   Processions, spectacles, nuptials
+-   Play, games, childhood activities
+-   Love
 
 The second part of the paper focuses on a secondary dataset of cross-cultural music recordings sampled to represent four different song categories chosen in previous work: dance songs, healing songs, love songs, and lullabies. This dataset is termed the *NHS Discography*.
 
@@ -109,17 +121,11 @@ In a first experiment, the authors demonstrate that Western (or at least Western
 
 In a series of follow-up analyses, the authors explore what musical features might be responsible for distinguishing these different song functions. They find a variety of patterns here, including the following:
 
-- Dance and healing songs tend to have more differentiated accents than lullabies;
-- Dance songs tend to have fast tempos;
-- Love songs tend to have high variability in interval sizes;
-- Healing songs tend to have lots of stepwise motion.
+-   Dance and healing songs tend to have more differentiated accents than lullabies;
+-   Dance songs tend to have fast tempos;
+-   Love songs tend to have high variability in interval sizes;
+-   Healing songs tend to have lots of stepwise motion.
 
-In the final part of their paper, the authors explore the question of musical features that might be cross-culturally universal independent of the particular behavioural context. This section feels relatively weak compared to the rest of the paper; it lacks the detail of @Savage2015-rp, and some of the analysis approaches feel rather
-
-One proposed universal is tonality, specifically the notion that songs tend to be built around a particular tonal centre. This hypothesis is reasonable, but the analysis involves (a) having Western music theorists annotate tonal centres for the melodies, and (b) running the Krumhansl-Kessler keyfinding algorithm on the melodies, an algorithm which is trained on behavioural data from Western listeners. In both cases, one might expect the derived keys to be shaped significantly by the cultural expectations of Western listeners. A better approach to this question would define tonality in a much more culturally neutral way.
-
-A second proposed universal is that melodies vary along two dimensions of complexity: one of which is melodic complexity, and the other of which is rhythmic complexity. These two dimensions are extracted through another principal component analysis. Again, the hypothesis seems reasonable, but the support from the data is relatively weak: the two components only explain 13.1% and 10.8% of the variance respectively. In other words, these two dimensions are only explaining a small part of the way in which melodic structure varies across the world.
-
-A third proposed universal is that the prevalence of different melodic and rhythmic bigrams is distributed according to a so-called *power law*. Traditionally speaking, a bigram is a pair of elements from a given alphabet, for example 'AB' or 'CA'. The authors actually do not analyse bigrams in the conventional sense, which confuses things a little bit. Instead, they just look at frequency distributions for (a) melodic pitch intervals and (b) rhythmic ratios between successive notes. Curiously, the authors do not tabulate separate distributions for different cultures, but instead calculate an overall distribution of intervals and ratios across all the musical cultures in their sample. They find that certain intervals are particularly common cross-culturally (unison, major second, and minor third), and likewise certain rhythmic ratios (1:1, 2:1, and 3:1) are particularly common cross-culturally. Moreover, they show that, when ranking the full set of observed intervals/ratios, the distribution of their relative frequencies is well-approximated by a curve of a particular shape corresponding to a *power law*. Power-law shapes have previously been observed in many contexts, including music, language, and painting, but it would be interesting to see that this phenomenon replicates in different musical cultures. Unfortunately, the present analysis does not quite show this, because it doesn't compute separate distributions for individual cultures. However, it is arguably interesting nonetheless to know that we get a power-law distribution if we look at all the cultures jointly. It should be noted though that these distributions are filtered through the transcriptions of expert Western musicians, and may inherit some biases from them. In particular, the process of representing melodies on the Western 12-tone scale arguably forces the musicians to impose Western biases on their transcriptions; likewise, the rhythmic notation forces the musicians to express rhythms in terms of the integer-ratio rhythmic categories used in Western music theory. Future work ought to find ways to reduce these biases, perhaps by representing pitch and rhythm in a culturally neutral continuous space.
+The final part of the paper corresponds to candidate musical universals that are indepedent of particular behavioural contexts. See Section \@ref(structural-features-of-music) for a discussion of this section.
 
 ## Music cognition
