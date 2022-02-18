@@ -12,7 +12,7 @@ We will structure our discussion around two particularly important research ques
 
 1.  Where did our musical capacities (our 'musicality') come from?
 
-2.  Why might musicality have become evolutionarily valuable?
+2.  What are music's adaptive functions?
 
 ## Where did our musicality come from?
 
@@ -40,11 +40,11 @@ Let's go through a few examples.
 
 The video below shows a well-known dancing cockatoo called Snowball [@patel2009]. Snowball likes to dance to the musical beat, displaying abilities that strongly imply a sophisticated capacity for beat perception. Alongside cockatoos, beat perception abilities have also been demonstrated in budgerigars and sea lions, and there are ongoing research programmes seeking to identify more species capable of beat perception. Importantly, these species seem not to have evolved beat perception in one common evolutionary event; instead, beat perception seems to have convergently evolved multiple times in multiple species, not obviously in the context of music-making.
 
-![(ref:e42c9488-0932-48ae-a7c0-5f67d058ca4c)  **Snowball the parrot dancing to music.** Credit: @patel2009](images/1x1.png)
+![(ref:949dc557-e150-4190-b53b-7ab2618676ff)  **Snowball the parrot dancing to music.** Credit: @patel2009](images/1x1.png)
 
-(ref:e42c9488-0932-48ae-a7c0-5f67d058ca4c) <video controls width=100%> <source src='https://s3-eu-west-1.amazonaws.com/media.pmcharrison.com/music/animals/snowball.mp4' type='video/mp4'> </video>
+(ref:949dc557-e150-4190-b53b-7ab2618676ff) <video controls width=100%> <source src='https://s3-eu-west-1.amazonaws.com/media.pmcharrison.com/music/animals/snowball.mp4' type='video/mp4'> </video>
 
-@patel2014 proposed that beat perception abilities come as a consequence of evolving 'vocal-learning' abilities. Vocal learning means learning to produce complex vocal signals from auditory experience and sensory feedback. Vocal-learning abilities are only present in a small range of animal species (parrots, songbirds, hummingbirds, elephants, seals, and bats), and seems to require specialised neural circuitry coupling motor regions to auditory regions. Patel and Iversen's hypothesis is that beat perception comes 'for free' as a consequence of developing this neural circuitry. In later work, @Patel2021-vu has nuanced this view, arguing that the human capacity for entrainment was further finessed through selection pressures specific to music (see Section \@ref(why-might-musicality-have-become-evolutionarily-valuable). Various scientists are currently trying to explore these hypotheses by investigating whether other vocal learners, for example seals and bats, possess latent beat perception abilities.
+@patel2014 proposed that beat perception abilities come as a consequence of evolving 'vocal-learning' abilities. Vocal learning means learning to produce complex vocal signals from auditory experience and sensory feedback. Vocal-learning abilities are only present in a small range of animal species (parrots, songbirds, hummingbirds, elephants, seals, and bats), and seems to require specialised neural circuitry coupling motor regions to auditory regions. Patel and Iversen's hypothesis is that beat perception comes 'for free' as a consequence of developing this neural circuitry. In later work, @Patel2021-vu has nuanced this view, arguing that the human capacity for entrainment was further finessed through selection pressures specific to music (see Section \@ref(what-are-musics-adaptive-functions). Various scientists are currently trying to explore these hypotheses by investigating whether other vocal learners, for example seals and bats, possess latent beat perception abilities.
 
 ### Emotion perception
 
@@ -66,23 +66,21 @@ So, returning to our original question of 'why did our musical capacities develo
 
 Does this mean that musicality has never shaped evolution in in its own way? Not necessarily. It is possible that musicality originally evolved for non-musical reasons, but subsequently became evolutionarily valuable in its own right, and hence was finessed by further evolutionary processes [@Patel2021-vu; @Savage2020-mb]. The question is then, why might musicality have become evolutionarily valuable? This is the topic of the next section.
 
-## Why might musicality have become evolutionarily valuable?
+## What are music's adaptive functions?
 
 ### The 'auditory cheesecake hypothesis'
 
-Before considering possible evolutionary functions of music, it is important to consider the alternative: what if music does not possess any evolutionary value? If this were the case, why would humans bother investing so much time and energy into music in the first place?
-
 One possibility is that music conveys no survival or reproductive benefits, but rather tickles pleasure centres in the brain that originally evolved for other reasons. An analogy would be various recreational drugs. This hypothesis was most famously articulated by Stephen Pinker, who wrote "I suspect that music is auditory cheesecake, an exquisite confection crafted to tickle the sensitive spots of at least six of our mental faculties" [@Pinker1997-gh].
 
-Let's explore the auditory cheesecake hypothesis a little further. What mental faculties is music tickling, and why is tickling these faculties pleasurable? Now, it's important to be clear that this is still an important open question in music psychology. I'm going to outline a few ideas that have been explored to varying degrees in the literature, and I encourage you to introspect and think about how well these ideas explain your musical experiences. Note that these ideas are not mutually exclusive -- it's perfectly possible that multiple such mechanisms operate simultaneously, perhaps manifesting to different degrees in different musical styles.
+What pre-existing mental faculties could music be tickling, and why would tickling these faculties be pleasurable? We will consider a couple of possibilities now.
 
-### Information processing
+#### Information processing
 
 Music perception can be formulated as an information processing problem. Sound arrives in a very complex form, and the brain's job is to process and understand this complex information. It needs to group different harmonics together into tones, and group multiple tones into melodies and chords; it needs to relate the pitches and rhythm it hears to prior cultural knowledge about tonality and metre; it needs to keep track of local thematic information, modulations, and emotional cues. One proposition is that music elicits pleasure precisely because of how it stimulates this complex information processing system.
 
 How exactly would this information processing become rewarding? We don't really know yet, though there are various hypotheses in the literature. One hypothesis is that rewards are released when the brain makes predictions for future events, and these predictions turn out to be correct. A second hypothesis is that rewards are released when the incoming information is initially complex, but the brain successfully compresses it into a small representation, perhaps by noticing certain repeating patterns or by relating the music to prior cultural knowledge. A third hypothesis is that rewards are released when the brain feels that is successfully learning new information. Many of these ideas have some kind of intuitive rationalisation in terms of evolutionary adaptation, but there has been little progress in demonstrating that these ideas explain much of musical pleasure in practice.
 
-### Emotion processing
+#### Emotion processing
 
 Another potential aspect of musical pleasure concerns music's ability to communicate various emotions. It's clear to all of us that music can indeed communicate a wide variety of emotions, ranging from ecstasy to tragedy. It's not surprising that listening to happy music should elicit pleasure; what's more surprising though is that listening to sad music can elicit just as much pleasure. Why is this? We will outline various possibilities here; see @Eerola2018-rk for an in-depth review.
 
@@ -90,7 +88,7 @@ One possibility suggested by recent work is that listening to emotional music is
 
 Other work has suggested that this imagined compassionate relationship may alternatively operate in the reverse direction. In particular, it is suggested that to sad listeners sad music will represent a virtual person with congruent emotions, and the existence of this virtual person will have a comforting and consoling effect [@Lee2013-cn]. This may be termed the *social surrogacy* hypothesis. Another related possibility is that sad music distracts the sad listener from their own emotions, and this distraction ultimately improves the listener's mood [@Drake2012-gw].
 
-### Problems with the 'cheesecake' hypothesis
+#### Problems with the 'cheesecake' hypothesis
 
 Above we explored a couple of ways in which the auditory cheesecake hypothesis could work in practice, with music eliciting pleasure despite not having any intrinsic adaptive function. We should now acknowledge two limitations of the hypothesis.
 
@@ -118,9 +116,9 @@ A third hypothesis is that music-making evolved as a credible signal [e.g. @Mehr
 
 Along these lines, we might suppose that performing a large-scale piece of collaborative music or dance acts as a credible signal of a group's strength, size, and cooperation ability. A well-known example is the [Maori "Haka" dance](https://www.youtube.com/watch?v=BI851yJUQQw), which is traditionally associated with the battle preparations of Maori warriors, and is often performed by New Zealand sports teams before international matches. Note that, like the social-bonding hypothesis, the credible-signaling hypothesis also provides a reasonable explanation of musical 'groove'.
 
-![(ref:587a2b5e-0ab5-4437-a66c-8bc9e45a81cd)  **A Maori 'Haka' dance.**](images/1x1.png)
+![(ref:ec3e020b-c35d-48aa-ab4b-a4dbdbd9e413)  **A Maori 'Haka' dance.**](images/1x1.png)
 
-(ref:587a2b5e-0ab5-4437-a66c-8bc9e45a81cd) <iframe width="560" height="315" src="https://www.youtube.com/embed/BI851yJUQQw?start=0" style="display: block; margin-bottom: 25px" title="A Maori 'Haka' dance." frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+(ref:ec3e020b-c35d-48aa-ab4b-a4dbdbd9e413) <iframe width="560" height="315" src="https://www.youtube.com/embed/BI851yJUQQw?start=0" style="display: block; margin-bottom: 25px" title="A Maori 'Haka' dance." frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 A second potential form of credible signalling concerns parental attention. The idea is that singing to a child is a credible signal that you're paying attention to them, because it's guaranteeing that you're somewhere in close proximity to the child, and you can't be using your voice for other things (such as talking).
 

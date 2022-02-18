@@ -62,7 +62,7 @@ emotion-perception
 auditory-scene-analysis
 musical-syntax
 conclusion
-why-might-musicality-have-become-evolutionarily-valuable
+what-are-musics-adaptive-functions
 the-auditory-cheesecake-hypothesis
 information-processing
 emotion-processing
