@@ -1,7 +1,0 @@
-# (WIP) Music across the world
-
-*Work in progress*
-
-<!-- Brown, S., & Jordania, J. (2013). Universals in the world’s musics. Psychology of Music, 41(2), 229-248. -->
-
-<!-- include some evolution stuff -->
