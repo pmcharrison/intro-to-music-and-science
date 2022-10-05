@@ -292,6 +292,12 @@ Figure 24.5: Marginal effect of room number on house price in a fictional datase
 </h3>
 <p>Linear regression assumes that all the marginal effects are straight lines. However, it is possible to generalise regression to incorporate nonlinear (wiggly) marginal effects, using techniques such as <em>polynomial regression</em> and <em>generalised additive modelling</em>. We will not discuss these techniques here but they are conceptually similar to linear regression models aside from their ability to capture nonlinearities.</p>
 </div>
+<div id="choosing-appropriate-control-variables" class="section level3">
+<h3>
+<span class="header-section-number">24.7.5</span> Choosing appropriate control variables<a class="anchor" aria-label="anchor" href="#choosing-appropriate-control-variables"><i class="fas fa-link"></i></a>
+</h3>
+<p>Regression is often used to make causal inferences about particular domains. Many researchers are familiar with the idea that incorporating additional variables within a regression model, often termed ‘control variables’, can be an effective way to extract better causal inferences from observational data. However, it is less appreciated that incorporating inappropriate control variables can in fact <em>increase</em> inferential biases. It is worth doing some further reading about this topic if you are planning on such analyses in your own work, see for example <span class="citation">Wysocki et al. (<a href="references.html#ref-Wysocki2022-lu" role="doc-biblioref">2022</a>)</span>.</p>
+</div>
 </div>
 <div id="null-hypothesis-significance-testing" class="section level2">
 <h2>
@@ -349,6 +355,7 @@ Figure 24.5: Marginal effect of room number on house price in a fictional datase
 <li><a class="nav-link" href="#generating-predictions-from-regression-models"><span class="header-section-number">24.7.2</span> Generating predictions from regression models</a></li>
 <li><a class="nav-link" href="#interactions"><span class="header-section-number">24.7.3</span> Interactions</a></li>
 <li><a class="nav-link" href="#nonlinear-regression"><span class="header-section-number">24.7.4</span> Nonlinear regression</a></li>
+<li><a class="nav-link" href="#choosing-appropriate-control-variables"><span class="header-section-number">24.7.5</span> Choosing appropriate control variables</a></li>
 </ul>
 </li>
 <li><a class="nav-link" href="#null-hypothesis-significance-testing"><span class="header-section-number">24.8</span> Null hypothesis significance testing</a></li>
@@ -369,7 +376,7 @@ Figure 24.5: Marginal effect of room number on house price in a fictional datase
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Music and Science</strong>" was written by Peter M. C. Harrison. It was last built on 2022-02-18.</p>
+    <p>"<strong>Music and Science</strong>" was written by Peter M. C. Harrison. It was last built on 2022-10-05.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

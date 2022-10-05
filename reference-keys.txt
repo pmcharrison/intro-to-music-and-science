@@ -226,6 +226,7 @@ linear-regression-and-categorical-variables
 generating-predictions-from-regression-models
 interactions
 nonlinear-regression
+choosing-appropriate-control-variables
 null-hypothesis-significance-testing
 computational-music-psychology
 science-and-computational-models
