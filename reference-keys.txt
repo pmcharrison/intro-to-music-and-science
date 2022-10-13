@@ -149,6 +149,17 @@ what-makes-a-good-research-question
 the-role-of-literature-reviews
 further-reading
 quantitativequalitative
+ethics
+guiding-principles
+what-this-means-in-practice
+good-versus-harm
+fairness-in-interventional-research
+privacy
+informed-consent
+during-the-experiment
+debriefing
+institutional-ethics-approval
+reporting-in-publications
 variables
 introduction-1
 scientific-variables
