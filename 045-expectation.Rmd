@@ -1,0 +1,274 @@
+# Expectation
+
+```{r, echo = FALSE}
+source("setup.R")
+
+knitr::opts_chunk$set(
+  echo = FALSE, results = "asis"
+)
+```
+
+## Introduction
+
+Survival depends on the ability to predict the future. Good prediction allows organisms to make sure that they're in the right place at the right time, perhaps to avoid a predator, catch some prey, or avoid an incoming collision. As a result, humans and many other animals have developed sophisticated cognitive abilities for generating effective predictions.
+
+Music listening seems to activate some of these prediction abilities. The idea is that, during a piece of music, the listener is constantly trying to predict what will happen next. These predictions take into account both the listener's prior experience with the musical style, as well as the specific events that have happened so far in the musical piece.
+
+When reading literature about musical predictions, you'll often see them referred to as musical 'expectations'. There's not much practical difference between these terms, but 'expectation' has ended up being the most common term in the musical literature, so it's generally useful to stick with that. To the extent that there is a difference, it concerns whether you are focusing on the listener or the music. 'Predict' is a term that requires you to be talking about the listener: "the listener predicts that the next chord will be a tonic triad". 'Expect' can be applied to either the listener or to the music: "the listener expects a tonic triad", or "the dominant chord creates an expectation for the tonic triad".
+
+Suppose we are partway through a melody and we are trying to predict what note is going to come next. Broadly speaking, two kinds of outcomes are possible: (a) our prediction is fulfilled, and we see the note that we were expecting to see; (b) our prediction is violated, and we see a different note to what we were expecting.
+
+```{r}
+embed_image(
+  image = "expectation/melody-unknown.png",
+  width = "100%",
+  title = "Illustration of a melody with unknown continuation."
+)
+```
+
+In the natural environment, accurate prediction can be a matter of life and death. An incorrect prediction could mean being caught and killed by a predator, or missing a rare opportunity to find food. It seems reasonable then that incorrect predictions should be accompanied with some kind of emotional 'shock', or at least a 'frisson', to alert the organism that something has gone and potentially to discourage it from making similar mistakes in the future.
+
+We seem to see these kinds of effects in music listening too. If I play a musical context that clearly implies a certain continuation, and then violate that implication, this gives the listener a certain kind of shock that can snap them out of a comfortable state.
+
+When used appropriately, these prediction violations don't have to be experienced negatively; they can instead make the piece more interesting, and introduce rewarding trajectories of tension and relaxation. Prokofiev is a composer who makes very explicit use of these prediction violations, which musicologists often describe tongue-in-cheek as 'wrong notes'. In [Peter's theme from Peter and the Wolf](https://youtu.be/1BRp_zeLYr4), the first two bars are harmonically very predictable, simply outlining the tonic triad. The theme then jumps without warning to the flat submediant, giving the listener a strong prediction violation.
+
+```{r}
+embed_youtube_video(
+  "1BRp_zeLYr4", 
+  "Prokofiev 'Peter and the Wolf', opening.", 
+  "Paul Barton, free for non-commercial use.", 
+  width = "100%",
+  start_at = 10
+)
+```
+
+Prokofiev ends up repeating the same unusual harmonic progression many times -- four times over the course of the movement. The more we hear it, the less surprising it sounds: our short-term experience starts to override our long-term stylistic knowledge. It never manages to override it completely, though. Intuitively, it feels like part of our brain keeps on trying to generate predictions based on long-term stylistic knowledge rather than short-term experience, and keeps being surprised as a result. This is probably for the best -- if knowing a piece meant that you stopped hearing it with respect to your stylistic knowledge, then it might become rather difficult to get much out of repeated listenings.
+
+We typically use the words 'schematic' and 'veridical' to differentiate these two kinds of expectations. Schematic predictions are predictions that derive from long-term experience with a given musical style. Veridical predictions are predictions that derive from specific experience with particular musical elements. This could mean hearing the exact same piece before, but it could also mean recognising a theme that we already heard from earlier in the piece.
+
+It's possible to rationalise these different expectations from the perspective of music theory. We can talk about how certain chord progressions are prototypical, or 'expected', in the context of Western music, and we can point to how certain musical passages violate these expectations. It's important to remember though that one doesn't need formal training in music theory to experience these expectation violations: music theory just helps put words to them.
+
+We can think about listeners generating expectations for various kinds of musical features. The music psychology literature has focused on several in particular:
+
+**Temporal expectation.** Almost every musical style has some kind of temporal organisation. A given music performance will typically contain many individual musical notes, and the timing of these notes is organised in some kind of structured way. We know from earlier in the course that listeners can develop expectations for when these notes will occur, based on their ability to detect periodic structure in the sound, and their ability to recognise prototypical rhythmic structures from their musical style. They can also develop expectations for when the beat is going to arrive, which is very helpful for coordinating physical movements such as tapping and dancing.
+
+**Melodic expectation.** Melody also occurs in almost every musical style across the world. There's a long tradition of music theory and music psychology work that tries to explain how a particular melodic context generates expectations for what note is going to come next.
+
+**Harmonic expectation.** In the context of Western music, listeners also develop strong expectations for harmonic progressions. Suppose I have a context sequence of chords looking like this:
+
+```{r}
+embed_image(
+  image = "expectation/chord-sequence.png",
+  width = "100%",
+  title = "Illustration of a chord sequence with unknown continuation."
+)
+```
+
+Western music listeners will have an automatic idea of what chords should be expected next. For example, if I continue the progression with a D flat major chord, it sounds very unexpected, but if I continue it with a C major chord, it sounds very expected.
+
+## Expectation and probability
+
+Probability is basically the mathematician's way of dealing with uncertainty. Even if we can't be sure about what is going to happen in the future, we can put certain numbers on the probabilities of different outcomes, and this can help us to make the best decision about what to do next.
+
+A particularly important concept is that of 'conditional probability'. Conditional probabilities tell us about the probability that an event will occur given a set of contextual conditions. If we call the event we're waiting for 'X' and the contextual conditions 'Y', then we write the conditional probability of "X given Y' using the following notation:
+
+$$
+P(X \vert Y)
+$$
+
+Here the "P" refers to probability", and the vertical bar means 'given', or 'conditioned on'.
+
+An example of a conditional probability would be if I asked you, "What is the probability that it rains today, given that it rained yesterday and the day before?" You might tell me that the probability is 75%, meaning that on average, 75% of days that follow two rainy days are also rainy themselves. In the context of card games, another example might be if I asked "What is the probability that a blackjack player goes 'bust' if they ask for another card from the dealer, given that they've already been dealt a Jack of Spades and a 5 of Diamonds?" In the context of music, I could similarly ask "What is the probability that I see a C major chord, given that I've just seen a D minor chord followed by a G major chord?"
+
+So, we've seen some examples of conditional probabilities. How do we actually define these probabilities? There are different ways to define probability out there, but perhaps the most fundamental is the 'frequentist' approach. The frequentist approach takes a so-called 'long-run' approach to defining probabilities. The probability of X given Y is defined as the result of the following procedure: run infinitely many experiments where Y is known to be the case, and calculate the proportion of times that X occurs in practice. This will give us a number between 0 and 1, which we term the 'probability of X given Y'.
+
+Of course, in practice we can't run infinitely many experiments. However, if we run a sufficiently large number of experiments, we know that our results should approximate the true probabilities fairly closely.
+
+Corpus analyses often end up being exercises in estimating probabilities. For example, we might be interested in the question "Did Baroque composers use plagal cadences more commonly than Classical composers?" We can approach this question by sampling a large number of cadences from Baroque and Classical composers, and calculating the proportion of these cadences that are plagal. Using our notation from before, we can then calculate "What's the probability that a cadence will be plagal, if I know already that it's written by a Baroque composer?", and likewise for Classical composers.
+
+$$
+\begin{align}
+P (\textrm{cadence is plagal } \vert \textrm{ Baroque composer}) &= \ ? \\
+P (\textrm{cadence is plagal } \vert \textrm{ Classical composer}) &= \ ?
+\end{align}
+$$
+
+When we're talking about musical expectations, we are typically interested in a particular kind of conditional probability, calculated at a particular point in the musical piece. We suppose the listener is hearing the piece in real time, and is trying (for example) to predict what the next note in the melody is going to be. Let's call the pitch of the next note X, and let's use Y to denote the portion of the piece that the listener has heard already. The listener is then trying to estimate the conditional probability of X given Y, for different possible pitches X. In this particular example, the listener might think that an F is particularly likely, with a probability of .28. They might also think G and D are reasonably plausible, taking probabilities of .22 each. The remaining possibilities each receive lower probabilities. We call this collection of different probabilities a 'conditional probability distribution'.
+
+```{r}
+embed_image(
+  image = "expectation/conditional-probability-distribution.png",
+  width = "100%",
+  title = "Schematic illustration of a conditional probability distribution."
+)
+```
+
+At this point it's important to distinguish two kinds of probabilities: *objective* probabilities and *subjective* probabilities. Objective probabilities correspond to the true probabilities of musical events as manifested in music corpora; we can estimate them using corpus analyses. Subjective probabilities corresponded to the imagined probabilities for musical events in the mind of the listener. These subjective probabilities will be determined by the listener's musical experience, and any internal biases that they hold.
+
+A *rational* or *ideal* observer will try and maximise the accuracy of their subjective probabilities, given access to their available information. So, we can imagine that, as a listener grows more and more familiar with a musical style, their subjective probabilities are likely to approach closer and closer to that style's objective probabilities.
+
+There's a problem here, though. A given listener will only have listened to a certain amount of music in their lives, and so they don't have access to an infinite amount of information. But music is like chess -- it only takes a few steps for you to end up with a context Y that has never occurred in your past experience. Even with the simple melody above, I doubt that any readers have heard this precise melody outside of this class. So, how can we compute the conditional probability of X given Y, if we've never seen Y before?
+
+The way we solve this problem is with the following observation: "Good prediction is about knowing what to ignore". The full melodic context is too much information to cope with: we need to discard some of this information to make the problem tractable.
+
+A very radical approach would be to forget about all details of the preceding melody, and just remember what key we're in. If we know that the key is F major, we can guess even with limited musical experience that the next note is quite likely to be an F, or perhaps an A or a C, or any other member of the F major scale. In contrast, we can be fairly confident that we won't see an F sharp, or a C sharp, and so on. We know this because we can look at many pieces in the key of F major, and count how often different pitches occur.
+
+Arguably we've thrown away too much information if we just look at the key. So, we might additionally choose to remember the last note of the melodic context. This is quite useful here: the last note is an E, which is the leading note in F major. We don't need to look at all that many melodies to realise that the leading note typically resolves upwards by a semitone to land on the tonic.
+
+We can extend this information further by including the penultimate note in the context, which in this case is a D. This is also quite informative: the rising movement from the D to the E introduces some inertia (i.e. momentum) which provides further reason to suspect that the next note will be an F.
+
+Of course, we can repeat this process further and further, taking into account more and more context. In this example we're now looking at the last three notes of the melodic context. If we look much further than three notes in the past, we'll struggle to find enough precedents in our music corpora.
+
+One thing that becomes particularly apparent when modelling listeners is the importance of recent information. If we have to choose two notes to remember when trying to predict the next note, the last two notes are the best ones to choose. We can see this mathematically if we analyse the statistical structure of music corpora. We can also interpret in terms of the listeners' cognitive constraints: listeners don't have enough memory space to remember the whole history of the musical piece, and in practice most listeners can only recall the last few seconds with much reliability.
+
+I want to conclude by talking about a few practical applications of probabilistic music modelling. By probabilistic music modelling, I mean developing a computer program that learns to express a musical style effectively in terms of conditional probability distributions.
+
+One of the most compelling practical applications of probabilistic music modelling is in *automatic music generation*. Here we get the computer to create a piece by sampling one note at a time according to the conditional probability distributions that it's learned from processing music corpora. This work has a history dating back to the 1950s, but a lot of progress has been made in the last few years, including some significant contributions from Google's Magenta group. In this audio example, we hear Google's "Music Transformer" model extemporise a continuation for the opening of Debussy's composition "Clair de Lune". Note that here the model is generating a full performance, not just a musical score.
+
+```{r}
+embed_audio("https://s3-eu-west-1.amazonaws.com/media.pmcharrison.com/music/magenta/clair_de_lune_continuation.mp3")
+```
+
+These generative models can be applied in quite varied ways. Here the same model is used to generate a harmonisation for "Row, row, row your boat".
+
+```{r}
+embed_audio("https://s3-eu-west-1.amazonaws.com/media.pmcharrison.com/music/magenta/row_row_accompaniment.mp3")
+```
+
+Another application of these models is in *automatic music classification*. Suppose we discover a manuscript for an unknown composition in some library archives, and we want to work out whether the composition was written by J. S. Bach or by one of his contemporaries. Probabilistic models give us a principled way to investigate these kinds of authorship questions. We construct probabilistic models for the different candidate composers, trained on music written by these composers, and then we quantify how well these models manage to predict the new piece of interest. High predictive accuracy means that the piece is particularly consistent with the style of that particular composer. So, we can use these probabilistic models to make educated guesses about authorship.
+
+*Automatic music transcription* is another important application of these probabilistic models. The goal in automatic music transcription is to develop software that accurately transcribes some kind of score from an audio recording. This is a difficult task, especially when many parts are playing at the same time. Probabilistic models are helpful for increasing the accuracy of transcription models, because they provide an error-correction function: if the transcription algorithm produces an output that seems very stylistically unlikely, then the probabilistic model can encourage the transcription algorithm to find a more plausible solution.
+
+## Measuring musical expectations
+
+In this section we will cover various ways of measuring musical expectations: rating paradigms, singing paradigms, priming paradigms, and electroencephalography paradigms.
+
+### Rating
+
+The first and best-established method for assessing musical expectations is the rating experiment. The method is simple: we just ask the participant to give a numeric rating for a particular musical event in a particular musical context. The precise instructions for this rating differ between studies, but most commonly we just ask the participant to evaluate the 'fit', or perhaps the 'expectedness', of the particular event.
+
+The most famous version of this rating method is described in an important paper by @krumhansl1982. This paper focuses specifically on pitch in the context of Western tonality. They call their approach the 'probe-tone' paradigm: 'probe' because they are probing the listener's expectations, and 'tone' because they're probing expectations for tones.
+
+In each trial of the probe-tone paradigm, the participant is first played a context stimulus. In this example, the context stimulus is a C major chord. A few moments later, the participant is played a probe tone. This tone is chosen from a selection of possibilities covering the chromatic scale. The participant is then asked, "How well does the probe tone fit with the context?", and has to respond on a 7-point rating scale. Here's an example trial with a C as the probe tone; most Western participants would say that the probe tone fits pretty well.
+
+```{r}
+embed_image_with_audio(
+  image = "expectation/probe-tone-major-chord-1.svg",
+  audio = "expectation/probe-tone-major-chord.mp3",
+  width = "50%",
+  title = "Tonic probe tone after a major triad."
+)
+```
+
+\
+In this example, C sharp is the probe tone. Most Westerners would say that this tone fits less well.
+
+```{r}
+embed_image_with_audio(
+  image = "expectation/probe-tone-major-chord-2-1.svg",
+  audio = "expectation/probe-tone-major-chord-2.mp3",
+  width = "50%",
+  title = "Raised tonic probe tone after a major triad."
+)
+```
+
+@krumhansl1982 studied a variety of tonal contexts in their experiment, in addition to simple tonic triads. Some trials used a diatonic scale; other trials used short cadences, like the IV-V-I cadence or the ii-V-I cadence.
+
+```{r}
+embed_image(
+  image = "expectation/probe-tone-tonal-contexts.png",
+  width = "100%",
+  title = "Tonal contexts used in @krumhansl1982."
+)
+```
+
+After collecting data for many trials like this, the authors computed mean fit ratings for the different pitch classes in the chromatic scale. This graph plots the results for context sequences in C major. We can see that there's a lot of variation in the graph: some pitch classes receive much higher ratings than others. We see the highest ratings for the members of the tonic triad: C, E, and G. We see the lowest ratings for pitch classes outside the C major scale: C#, D#, F#, G#, and A#. It seems reasonable to interpret this figure as an approximation of the participant's conditional probability distribution over the different candidates for the probe tone: highly rated tones correspond to tones with high subjective probability.
+
+```{r}
+embed_image(
+  image = "expectation/krumhansl-kessler-major.svg",
+  width = "70%",
+  title = "Major-key tone profile derived by @krumhansl1982."
+)
+```
+
+The authors also performed an analogous set of experiments using minor context sequences. As you'd expect, a different profile emerges, reflecting the change of key. Now E has very low fit, but E flat has high fit. Likewise, A no longer has a high fit, but A flat does. These changes straightforwardly reflect the differences between the major and minor scales.
+
+```{r}
+embed_image(
+  image = "expectation/krumhansl-kessler-minor.svg",
+  width = "70%",
+  title = "Major-key tone profile derived by @krumhansl1982."
+)
+```
+
+It's clear that this rating paradigm has the advantage of delivering easy to interpret results. It's also fairly efficient -- we don't need that many participants to deliver useful data. However, it arguably does have an important disadvantage, which is that the participants' responses are filtered through conscious decision-making, when the participant decides what number to give on the rating scale. We don't have to make those kinds of decisions when we listen to music normally, and it could be that this process provides results that don't completely reflect normal music listening.
+
+### Singing
+
+Singing tasks are another way to probe melodic expectations [e.g. @Fogel2015; @Morgan2019]. Here we play the participant a context melody, and we ask them to sing a continuation to that melody. The idea is that participants are more likely to sing 'expected' continuations, that is, continuations with high subjective probability.
+
+This task is very intuitive. It's also very efficient: there's no need to probe every tone in the scale, because the participant simply sings the most expected tone straight away. However, the task does have some obvious disadvantages. One is that the task is still potentially biased by conscious decision-making, similar to the rating task. A second is that it relies on the participant's singing ability: participants who are poor singers won't be able to perform the task properly. A third is that the results are influenced by production biases. For example, if a singer tends to sing flat, then this will make their expectations appear 'flat' compared to how they might look in a perceptual task. Lastly, the method relies on transcribing what note was sung by the participant, which can be a time-consuming process to do manually, and a tricky one to automate.
+
+### Priming
+
+Another important approach in the field is the 'priming' paradigm. This paradigm was inspired by previous work in the field of psycholinguistics.
+
+Here's an example of how the priming approach can be used to assess harmonic expectation, taken from a study by @Tillmann2006. In each trial, we play a chord sequence to the participant, and tell them to make a perceptual judgment about a particular chord in the sequence, called the 'target'. In this case the chord of interest is the final chord in the sequence, and the participant is being asked to say whether this final chord is played by a piano or by a harp.
+
+```{r}
+embed_image_with_audio(
+  image = "expectation/tillmann-2006-congruent-harp-1.svg",
+  audio = "expectation/tillmann-2006-congruent-harp.mp3",
+  width = "100%",
+  title = "Excerpt from @Tillmann2006 with a related target and a harp final chord."
+)
+```
+
+In different trials we manipulate the chords used in the stimulus. In the previous example, the target would have been categorised as 'related': it's the tonic chord, and hence highly expected given the context. In the next example, the target is the subdominant chord, and is hence categorised as 'less related' to the context.
+
+```{r}
+embed_image_with_audio(
+  image = "expectation/tillmann-2006-less-related-harp-1.svg",
+  audio = "expectation/tillmann-2006-less-related-harp.mp3",
+  width = "100%",
+  title = "Excerpt from @Tillmann2006 with a less-related target and a harp final chord."
+)
+```
+
+The theory behind the priming task is as follows. When the target is more expected, this makes the chord easier to process, which then speeds up the participant's decision. Conversely, when the target is less expected, this slows down the processing, causing longer reaction times. So, we can measure how expected a chord is by studying the length of its reaction times. The main appeal of this priming paradigm is that it bypasses the conscious processing that we saw in the rating task and the singing task. We can call it an 'implicit' measure of expectation: the participant generally has no awareness of what is happening. However, this implicit nature is at the same time a disadvantage. It's difficult to be certain that the results of this paradigm really are telling us about expectation. Our main evidence that priming measures expectation is that expected events tend to deliver shorter reaction times than unexpected events, but when we start using priming as a way of measuring expectation, this logic becomes circular.
+
+### Electroencephalography
+
+EEG is a neuroimaging technique that has proved particularly useful for studying musical expectations. The reason is that EEG has a particularly high time resolution compared to many other neuroimaging techniques, which allows us to study the time course of the brain\'s responses to musical events at a very granular level.
+
+Participants in EEG studies wear caps containing many different electrodes which are placed into contact with the scalp. The EEG device records small changes in voltage on the scalp. These voltage changes are linked to the firing of neurons on the edges of the brain. 
+
+An important thing to know about EEG data is that it tends to be very noisy. Of course, even when the participant isn\'t actively doing anything, their brain is constantly at work, and this produces constant fluctuations in the EEG signal. When we conduct EEG experiments, we want to find a way of minimising this kind of random noise, and amplify the part of the EEG signal that corresponds to a particular experimental intervention, for example playing a melody. This task can be seen as a problem of maximising the \'signal-to-noise ratio\'.
+
+The event-related potential (ERP) technique is a classic way to maximise this signal-to-noise ratio. Here we suppose that we\'re interested in measuring the characteristic EEG response to a particular stimulus, for example an unexpected note in a melody, or the resolution of a 4-3 suspension. We collect EEG data for many trials like this, and average the results. The averaging makes the random noise component disappear away towards zero, leaving us with an event-related potential like the one plotted here. On the x-axis, we have the time after the stimulus (in milliseconds); on the y-axis, we have the instantaneous potential, corresponding to the voltage measured at a particular scalp electrode. We find that ERPs typically contain various peaks or troughs, which we call *components*. If we\'re lucky, we can identify individual components with particular aspects of cognitive processing. Typically the earlier components will correspond to more primitive sensory processing, whereas the later components will correspond to higher-level cognitive processing. 
+
+```{r}
+embed_image(
+  image = "expectation/erp.svg",
+  width = "50%",
+  title = "Schematic illustration of an ERP.",
+  credit = "[ChomsVector: Mononomic](https://commons.wikimedia.org/wiki/File:ComponentsofERP.svg), [CC BY-SA 3.0](http://creativecommons.org/licenses/by-sa/3.0/), via Wikimedia Commons"
+)
+```
+
+Neuroscientists have identified various kinds of ERPs in response to musical stimuli. One example is the Early Right Anterior Negativity, or ERAN, originally identified by @Koelsch2000. For copyright reasons we don't have an image of an ERAN to show for you here, but we recommend looking at Figure 1C in @Koelsch2009-yd for a reference; you can see an ERAN in that plot as a peak in the red curve at about 250 ms. We typically see the ERAN as a response to syntactically unexpected chords in chord sequences: chords that violate the listener\'s cultural expectations for what chords should come next.
+
+The ERAN is \'early\' because it happens relatively early in the time course. The term \'right\' refers to the way in which the ERAN is typically localised to the right hemisphere of the brain (though some studies haven\'t reproduced this effect). The term \'anterior\' refers to the way in which the ERAN is typically localised forward in the brain. The term \'negativity\' refers to the way in which the ERAN peaks with negative voltage (note how on ERP diagrams, high points correspond to negative numbers, not positive numbers; you can see this from the labelling of the y axis).  
+
+In theory, we can use ERPs like the ERAN to track musical expectation in melodies or chord sequences. In the case of chord sequences, seeing an ERAN would tell us that the chord was syntactically unexpected. An absence of an ERAN would tell us that the chord was relatively expected. 
+
+The great advantage of this approach is its directness. Our psychological data is no longer filtered through distracting behavioural paradigms, such as rating or discrimination tasks. We are leaving our participants to experience music in a relatively undisturbed way, close to how they might ordinarily listen to music. This must surely increase the validity of the results. What\'s more, the task can give us some insight into the neural dynamics of expectation. We can directly observe how long it takes the brain to process different kinds of violations, without having to wait for the participant to initiate any physical movements. The data can also give us some insights into which regions of the brain are involved in generating and monitoring expectations.
+
+There are some important disadvantages to this approach, though. The first is the noisy nature of the measurement process. On an individual trial, random fluctuations in brain activity make it difficult to discern anything useful in the EEG signal. To get interpretable results, the experimenter must conduct many trials and average over them. To get enough trials, experimenters often end up repeating the same stimulus multiple times, but this can be problematic because repetition will change the participants\' expectations. 
+
+A second problem concerns what we might call *measurement validity*. How can we be sure that an ERP such as the ERAN is really measuring expectation? Sure, several experiments have found ERANs occurring in the context of syntactically unexpected chords, but it is difficult (or perhaps even impossible) to be sure that the ERAN is truly a \'pure\' marker of expectation violation. This measurement validity question crops up again and again in different aspects of cognitive neuroscience.
+
+### Summary
+
+We covered four different empirical approaches for assessing musical expectations: rating tasks, singing tasks, priming tasks, and electroencephalography (or EEG). The first two of these are *explicit* tasks, in that we tell the participant explicitly to judge expectedness, or to produce expected continuations to melodies. The second two are *implicit* tasks, in that the participant receives no explicit instructions to evaluate expectedness. We saw how implicit tasks bring appealing benefits in terms of avoiding conscious evaluation processes that may not be relevant to naturalistic music listening. At the same time, these implicit tasks raise important issues of measurement validity. In practice, it\'s difficult to get far with any single paradigm: a proper account of musical expectation ought to reconcile and explain measurements from several of these different paradigms.

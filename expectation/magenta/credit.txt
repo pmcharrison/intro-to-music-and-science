@@ -1,0 +1,12 @@
+# Generating Piano Music with Transformer
+
+https://magenta.tensorflow.org/piano-transformer
+
+- Generated continuation for the opening of Debussy's "Clair de lune"
+- Generated accompaniment for "Row, Row, Row Your Boat" melody
+
+Previously, we introduced Music Transformer, an autoregressive model capable of generating expressive piano performances with long-term structure. We are now releasing an interactive Colab notebook so that you can control such a model in a few different ways, or just generate new performances from scratch.
+
+For our dataset, we started with public YouTube videos that had a license allowing for their use. We then used an AudioSet-based model to identify pieces that contained only piano music. This resulted in hundreds of thousands of videos. In order to train Transformer models, we needed that content to be in a symbolic, MIDI-like form. So we extracted the audio and processed it using our Onsets and Frames automatic music transcription model. This resulted in over 10,000 hours of symbolic piano music that we then used to train the models.
+
+We trained unconditioned and melody-conditioned Transformer models and made the resulting checkpoints and the code necessary to use it available as a Colab notebook. The models used in the Colab were trained on an exciting data source: piano recordings on YouTube transcribed using Onsets and Frames. We trained each Transformer model on hundreds of thousands of piano recordings, with a total length of over 10,000 hours. As described in the Wave2Midi2Wave approach, using such transcriptions allows us to train symbolic music models on a representation that carries the expressive performance characteristics from the original recordings.
