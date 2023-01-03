@@ -347,7 +347,7 @@ Emotional contagion depends on the fact that listeners will automatically recogn
 
 This part of the model is based on the notion that music can (in certain listeners) conjure up certain visual images, such as beautiful landscapes. This effect depends on metaphorical, cross-modal associations, for example between ascending melodies and upward movement, or between rich textures and rich colours. The listener can then experience emotions that are a consequence of these visual images.
 
-## Episodic memory
+### Episodic memory
 
 This effect is sometimes termed the "Darling, they are playing our tune" effect. It occurs when a listener has paired a particular musical piece with a particular personally significant memory, perhaps a particular event like a wedding or a Christmas party. Unlike the evaluative conditioning mechanism we discussed earlier, episodic memory by definition involves conscious recollection of the associated event. Historically speaking, music theorists haven't seen episodic memory as being particularly musically relevant, but survey data indicates that episodic memory is a very frequent source of music emotion induction in practice.
 
