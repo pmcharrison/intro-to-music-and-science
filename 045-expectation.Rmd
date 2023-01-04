@@ -272,3 +272,155 @@ A second problem concerns what we might call *measurement validity*. How can we 
 ### Summary
 
 We covered four different empirical approaches for assessing musical expectations: rating tasks, singing tasks, priming tasks, and electroencephalography (or EEG). The first two of these are *explicit* tasks, in that we tell the participant explicitly to judge expectedness, or to produce expected continuations to melodies. The second two are *implicit* tasks, in that the participant receives no explicit instructions to evaluate expectedness. We saw how implicit tasks bring appealing benefits in terms of avoiding conscious evaluation processes that may not be relevant to naturalistic music listening. At the same time, these implicit tasks raise important issues of measurement validity. In practice, it\'s difficult to get far with any single paradigm: a proper account of musical expectation ought to reconcile and explain measurements from several of these different paradigms.
+
+## Modelling melodic expectation
+
+From a psychological perspective, models help us to formalise complex theories in a way that helps us to test them in scientific experiments. From a practical perspective, good models of music perception can also have interesting applications, for example in automatic music composition.
+
+In this section we\'re going to talk about three main classes of melodic expectation models: music-theoretic models, psychoacoustic models, and statistical-learning models. 
+
+### Music-theoretic models
+
+These models were created by expert music theorists who set about the goal of expressing their personal understanding of music and music perception in a formal way. 
+
+The classic model in this tradition is Narmour\'s Implication-Realisation model, which Narmour introduced in a couple of books published in the early 1990s [@Narmour1990-gv; @Narmour1992-ka]. The work is heavily influenced by earlier work by the philosopher Leonard Meyer. The main goal of Narmour\'s model is to explain how the arrangement of the notes in a melody combine to generate certain expectations in the listener, which Narmour calls *implications*.
+
+Narmour\'s model proposes that melodic expectation can be understood in terms of two independent perceptual systems: a *bottom-up* system and a *top-down* system. The bottom-up system corresponds to innate and fundamental processes of auditory perception, which are by definition shared across all listeners irrespective of their culture. The top-down system then reflects knowledge that the listener learns through exposure to music in a particular style, with this exposure depending on the listener\'s cultural background.
+
+Here\'s how Narmour puts it: \"The top-down system is flexible, variable and empirically driven... In contrast, the bottom-up mode constitutes an automatic, unconscious, preprogrammed, \'brute\' system\".
+
+Narmour\'s writings have a reputation for being rather lengthy and dense. The psychological community has ended up relying heavily on several subsequent papers that summarise Narmour\'s work in some way. @Cross1995-ar and @Thompson1996-pk both wrote useful reviews of Narmour\'s books that summarise the work from a critical perspective. Krumhansl produced an influential collection of papers [e.g. @Krumhansl1995-yz] showing how Narmour\'s model could be applied in psychological experiments.
+
+Most empirical studies, including Krumhansl\'s, have focused primarily on the bottom-up component of Narmour\'s model. This is presumably because this is the most clearly specified part of the model, and the part that should generalise best to different musical styles and musical listeners.
+
+This bottom-up system is typically summarised in terms of five basic principles: *proximity*, *registral direction*, *intervallic difference*, *registral return*, and *closure*.
+
+The **proximity** principle is the simplest of them all. This states that listeners will generally expect small intervals. We encountered a similar principle earlier in the context of voice leading.
+
+```{r}
+embed_image(
+  image = "expectation/narmour-small-intervals.png",
+  width = "100%",
+  title = "Example melody built from small intervals (illustrating Narmour's proximity principle).",
+)
+```
+
+The remaining principles are specific to particular melodic contexts. In particular, we consider a melodic context of two notes, forming what we call an *implicative interval*. This interval generates implications, or expectations, for what interval is going to come next. The interval that actually comes along is called the *realised interval*. This interval can either fulfil or deny the listeners expectations.
+
+```{r}
+embed_image(
+  image = "expectation/narmour-implication-realisation.png",
+  width = "70%",
+  title = "Implicative versus realised intervals."
+)
+```
+
+The **registral direction** principle states that small intervals generate an implication that the next interval will continue in the same direction. Conversely, the principle also states that large intervals generate an implication that the next interval will reverse direction.
+
+The **intervallic difference** principle also makes a distinction between small and large implicative intervals. It states that a small implicative interval will create an expectation for another similarly sized interval, whereas a large implicative interval will create an expectation for a contrasting smaller interval.
+
+The **registral return** principle differs from the others in that it describes the relation between the *first* note of the implicative interval and the *second* note of the realised interval. It states that, all else aside, listeners will expect the latter note to be close in pitch to the former note. Note that this principle can end up working contrary to the intervallic difference principle, which states that large intervals should be followed by small intervals.
+
+```{r}
+embed_image(
+  image = "expectation/narmour-registral-return.png",
+  width = "70%",
+  title = "Illustration of Narmour's registral return principle."
+)
+```
+
+The **closure** principle is different in its own way: it\'s meant to determine the completion of melodic phrases. Narmour states that the impression of closure can be created by various different features. One feature is when the melody exhibits a change of direction. Another feature is when a large interval is followed by a small interval. Narmour also describes various other closure features, to do with rhythm and tonality, which we will not consider here. 
+
+Narmour\'s model was mainly motivated by music analysis and introspection. It prompted a series of empirical studies investigating whether the principles actually held true for the average listener.
+
+A series of these studies have investigated how well Narmour\'s principles held in **Western** listeners [e.g. @Krumhansl1995-yz; @Schellenberg1996-hz; @Pearce2006-hk]. Generally speaking, the conclusions are rather positive: most of the time, most of the rules end up being supported. In any individual study, the researchers might not necessarily find evidence for all of Narmour\'s rules, but when we look over multiple studies, we see that most of the rules end up being pretty well supported. 
+
+An important part of Narmour\'s theory is the claim that these bottom-up principles are innate. If so, we should see these principles manifesting across **different musical cultures**. There are not that many studies in the literature testing this question, unfortunately: I\'m only aware of three. These three studies investigate three non-Western participant groups: Chinese participants [@Schellenberg1996-hz], participants from the Sami people, who are an indigenous people from the Scandinavian peninsula [@Krumhansl2000-nj; @Eerola2009-ug], and finally South African traditional healers [@Eerola2009-ug]. The general message from these studies is that these populations do differ in terms of their melodic expectations, but these expectations nonetheless share a common basis in Narmour\'s bottom-up principles. In other words, Narmour\'s bottom-up model does seem to generalise fairly well cross-culturally. However, we\'d need to test many more populations before making a firm conclusion about this. For more discussion about melodic structures cross-culturally, see the 'Music across the world' chapter.
+
+There are a few other music-theoretic expectation models in the literature. @Margulis2005-sd describes a model of melodic expectation that includes various relatively high-level principles that link expectation to tension. This model has been surprisingly underexplored in subsequent work. The \'Tonal Pitch Space\' model of @Lerdahl1988-hi is not specifically about melodies or about expectation, but it describes Western tonality in a cognitively informed way that can be used to predict the relative stability of different notes in a melody, and their tendencies to resolve in particular directions.
+
+These music-theoretic modelling approaches have two main disadvantages. The first is that their rules are speculative: they are generally grounded in the theorist\'s intuition, and are not necessarily supported by objective psychological data. The second disadvantage is a consequence of the first: since the models are grounded in the theorists\' intuitions, and since the theorists are typically grounded in Western music theory, then the models are likely to be Western-centric in nature. 
+
+Given this context, it\'s particularly impressive how well Narmour\'s implication-realisation model seems to generalise, both across different Western listeners, but even across musical cultures. It\'s a testament to how far one can get with speculative methods.
+
+### Psychoacoustic models
+
+Psychoacoustic models come from a very different perspective. They try to explain melodic expectation in terms of basic properties of sound, and the way that sound is processed by the ear and the brain. 
+
+Various kinds of psychoacoustic models have been used to try and understand melody perception. Here we\'re going to focus on one such model, from @Milne2011-iv. Milne has used this model to explain various aspects of tonal perception that others have often assumed to be cultural in origin. 
+
+The fundamental idea behind Milne\'s model is that listeners expect successive sounds to have high spectral similarity. We can imagine that this is motivated by real-world auditory perception, where sound spectra will typically stay relatively consistent over time. This isn\'t a new idea: @Parncutt1989-sm and @Leman2000-ky have also presented similar theories. Here we\'re going to focus on Milne\'s model because it takes a particularly simple form, yet works rather well in practice. 
+
+The main function of the model itself is to compute the spectral similarity of a pair of sounds. If we know this spectral similarity, then we can try and predict the expectedness of a given chord progression. The computation process involves two steps. First, the model computes a perceptual spectrum for each sound, intended to represent how the sound appears to the listener. Second, the model computes the similarity between the two perceptual spectra, to arrive at the overall perceived spectral similarity.
+
+The first step, simulating perceptual spectra, involves making certain assumptions. Some of these assumptions are acoustic and some are psychological. The main acoustic assumption is that every note is a harmonic complex tone. It\'s easy to modify this assumption though when studying different kinds of timbres, for example inharmonic timbres. One psychological assumption is \'octave equivalence\': this means that pitches are perceived as equivalent if they are separated by a whole number of octaves. This assumption of octave equivalence seems to hold across many different musical cultures [though certain cultures, such as the Tsimane\', seem not to hold to this; @Jacoby2019-ew]. The second psychological assumption is that pitch perception has finite acuity: in other words, listeners can\'t perceive pitch with unlimited accuracy, but instead perceive pitches with some kind of window of uncertainty.
+
+Simulating the perceptual spectrum involves several steps:
+
+1.  Expand the notes into **harmonic spectra**.
+
+2.  Apply the **octave invariance** principle. This is done by converting all the pitches in the spectrum into *pitch classes*. Pitch classes are based on the idea of \'octave equivalence\' -- if two notes are separated by a whole number of octaves, they are given the same pitch class. When we compute the pitch-class spectrum, all the different Cs end up being collapsed to the same spectral component, all the different Gs end up collapsed to the same spectral component, and so on. The resulting spectral components have amplitudes corresponding to the sums of their contributing components. 
+
+3.  **Smooth** the spectrum to account for the limited acuity of pitch perception. As a result, instead of very precise peaks at pitch classes of \'0\' or \'7\', we get smoother bumps.
+
+The following diagram illustrates the results for an input note of C:
+
+```{r}
+embed_image(
+  image = "expectation/pitch-images-60.svg",
+  width = "100%",
+  title = "Simulating a perceptual spectrum for the MIDI note 60, after @Milne2011-iv. The simulation process goes from top to bottom."
+)
+```
+
+The following diagram illustrates the results for an input C major triad:
+
+```{r}
+embed_image(
+  image = "expectation/pitch-images-60-64-67.svg",
+  width = "100%",
+  title = "Simulating a perceptual spectrum for a C major triad, after @Milne2011-iv. The simulation process goes from top to bottom."
+)
+```
+
+So, we now know how the model computes perceptual spectra for different sounds. In order to predict expectation, we now need to compute the similarity between different perceptual spectra.
+
+Let\'s apply the model in the context of Krumhansl & Kessler\'s famous probe-tone experiments [@krumhansl1982], which we discussed earlier. Here the participant is played a particular tonal context, for example C major triad, and then asked to rate the expectedness of different \'probe tones\' that come after. In this example, we\'re going to consider a probe tone of \'C\'. 
+
+To apply Milne\'s model to these contexts, we first compute perceptual representations for the tonal context and the probe tone, and then we compute the similarity of these perceptual representations. Here the perceptual representation for the C major triad is plotted in grey, and the representation for the C probe tone is plotted in red. We see that these two spectra are rather well aligned: both of these spectra have large peaks at C, E, and G. For the triad, these peaks come mainly from the fundamental frequencies of each chord tone. For the probe tone, these peaks come from particular harmonics within the complex tone.
+
+```{r}
+embed_image(
+  image = "expectation/milne--probe-tone-major-chord-0-combined.png",
+  width = "100%",
+  title = "Perceptual spectra for a C major triad combined with a C probe tone."
+)
+```
+
+If we quantify the similarity between these spectra mathematically, we get rather a high value, .70. So, the model correctly predicts that a C should be relatively expected in the context of a C major triad -- no surprises there!
+
+Let\'s now see what happens if we try a probe tone of C#. If we look at the graph, we see now that the spectrum for the C# (in red) no longer aligns well at all with the spectrum for the C (in grey). Correspondingly, when we compute the similarity between the spectra, we get a rather low value of .01. So, the model predicts that C# is going to be relatively unexpected in the context of C major.
+
+```{r}
+embed_image(
+  image = "expectation/milne--probe-tone-major-chord-1-combined.png",
+  width = "100%",
+  title = "Perceptual spectra for a C major triad combined with a C# probe tone."
+)
+```
+
+We can repeat this process for all the different pitch classes in the octave, and we get the results plotted in red. We can compare these curves against the participant ratings collected in Krumhansl & Kessler\'s [-@krumhansl1982] probe-tone study, plotted here in blue. If we do this, we see an impressively close correlation.
+
+```{r}
+embed_image(
+  image = "expectation/milne--krumhansler-kessler.png",
+  width = "100%",
+  title = "Comparison of the Krumhansl-Kessler [-@krumhansl1982] probe-tone data with the predictions of Milne's spectral similarity model [@Milne2011-iv]."
+)
+```
+
+I mentioned before that @Milne2011-iv weren\'t the first to come up with this spectral similarity idea. We can find rather similar ideas implemented as computational models in work by @Parncutt1989-sm and @Leman2000-ky. These former models are more sophisticated in various ways, taking into account more complex psychological phenomena such as masking and pitch-perception mechanisms. Interestingly, though, this added complexity doesn\'t seem to result in any greater predictive power -- in fact, the present evidence suggests that the models actually perform worse than Milne et al.\'s simple model [@Milne2015-os]. So, we won\'t consider them further here.
+
+A very appealing aspect of these psychoacoustic models is that they can suggest deep explanations for the ultimate origins of stylistic rules. For example, Milne et al.\'s model is showing that the relative expectedness of different pitch classes within a given tonal context might well be explained by the harmonic spectra of these tones, rather than any particular cultural learning. On the other hand, these models are limited in terms of what they can hope to explain. Fundamentally, only so much can be explained by acoustics and basic biology -- to explain more nuanced and culturally dependent aspects of melodic expectation, we need models that are capable of learning.
+
+\
