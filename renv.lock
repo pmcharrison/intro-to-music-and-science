@@ -1,6 +1,6 @@
 {
   "R": {
-    "Version": "4.1.1",
+    "Version": "4.2.1",
     "Repositories": [
       {
         "Name": "CRAN",
@@ -127,6 +127,13 @@
       "Source": "Repository",
       "Repository": "CRAN",
       "Hash": "2042cd9759cc89a453c4aefef0ce9aae"
+    },
+    "V8": {
+      "Package": "V8",
+      "Version": "4.2.2",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "ebee37dadb0a8f5086663825d2c33076"
     },
     "abcR": {
       "Package": "abcR",
@@ -627,8 +634,8 @@
       "Package": "hrep",
       "Version": "0.15.0",
       "Source": "GitHub",
-      "Remotes": "pmcharrison/abcR",
       "RemoteType": "github",
+      "Remotes": "pmcharrison/abcR",
       "RemoteHost": "api.github.com",
       "RemoteRepo": "hrep",
       "RemoteUsername": "pmcharrison",
@@ -1139,6 +1146,19 @@
       "Source": "Repository",
       "Repository": "CRAN",
       "Hash": "dfd843ee98246cf932823acf613b05dd"
+    },
+    "specdec": {
+      "Package": "specdec",
+      "Version": "0.0.0.9002",
+      "Source": "GitHub",
+      "RemoteType": "github",
+      "RemoteHost": "api.github.com",
+      "RemoteUsername": "pmcharrison",
+      "RemoteRepo": "specdec",
+      "RemoteRef": "master",
+      "RemoteSha": "b79f11d800fa14e7ad6ab9a9b287130b82f765f0",
+      "Remotes": "pmcharrison/hrep",
+      "Hash": "0c84f3eff1add44561a36814095ab6d1"
     },
     "stringi": {
       "Package": "stringi",
