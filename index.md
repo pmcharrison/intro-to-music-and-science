@@ -1,7 +1,7 @@
 ---
 title: "Music and Science"
 author: "Peter M. C. Harrison"
-date: "2023-01-03"
+date: "2023-01-04"
 site: bookdown::bookdown_site
 documentclass: book
 bibliography: [book.bib, paperpile.bib, packages.bib]
@@ -18,8 +18,6 @@ output:
     repo: 
       base: https://github.com/pmcharrison/intro-to-music-and-science
       branch: main
-    includes:
-      in_header: hypothesis.html
 ---
 
 

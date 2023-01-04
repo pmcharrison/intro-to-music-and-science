@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Chapter 12 Expectation | Music and Science</title>
+<meta name="author" content="Peter M. C. Harrison">
+<meta name="description" content="12.1 Introduction Survival depends on the ability to predict the future. Good prediction allows organisms to make sure that they’re in the right place at the right time, perhaps to avoid a...">
+<meta name="generator" content="bookdown 0.24 with bs4_book()">
+<meta property="og:title" content="Chapter 12 Expectation | Music and Science">
+<meta property="og:type" content="book">
+<meta property="og:description" content="12.1 Introduction Survival depends on the ability to predict the future. Good prediction allows organisms to make sure that they’re in the right place at the right time, perhaps to avoid a...">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Chapter 12 Expectation | Music and Science">
+<meta name="twitter:description" content="12.1 Introduction Survival depends on the ability to predict the future. Good prediction allows organisms to make sure that they’re in the right place at the right time, perhaps to avoid a...">
+<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.3.1/transition.js"></script><script src="libs/bs3compat-0.3.1/tabs.js"></script><script src="libs/bs3compat-0.3.1/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script><script src="libs/htmlwidgets-1.5.4/htmlwidgets.js"></script><link href="libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet">
+<script src="libs/datatables-binding-0.20/datatables.js"></script><link href="libs/dt-core-1.11.3/css/jquery.dataTables.min.css" rel="stylesheet">
+<link href="libs/dt-core-1.11.3/css/jquery.dataTables.extra.css" rel="stylesheet">
+<script src="libs/dt-core-1.11.3/js/jquery.dataTables.min.js"></script><link href="libs/crosstalk-1.2.0/css/crosstalk.min.css" rel="stylesheet">
+<script src="libs/crosstalk-1.2.0/js/crosstalk.min.js"></script><!-- It makes little sense to put CSS in an HTML file instead of a 
+  CSS file, but this seems to be the only way I could get BS4 book to
+  recognise it !--><style>
+    .csl-entry {
+      margin-bottom: 15px;
+      padding-left: 30px;
+      text-indent: -30px;
+    }
+  </style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><link rel="stylesheet" href="bs4_style.css">
+</head>
+<body data-spy="scroll" data-target="#toc">
+
+<div class="container-fluid">
+<div class="row">
+  <header class="col-sm-12 col-lg-3 sidebar sidebar-book"><a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+
+    <div class="d-flex align-items-start justify-content-between">
+      <h1>
+        <a href="index.html" title="">Music and Science</a>
+      </h1>
+      <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
+    </div>
+
+    <div id="main-nav" class="collapse-lg">
+      <form role="search">
+        <input id="search" class="form-control" type="search" placeholder="Search" aria-label="Search">
+</form>
+
+      <nav aria-label="Table of contents"><h2>Table of contents</h2>
+        <ul class="book-toc list-unstyled">
+<li><a class="" href="index.html"><span class="header-section-number">1</span> Overview</a></li>
+<li><a class="" href="undergraduate-courses.html"><span class="header-section-number">2</span> Undergraduate courses</a></li>
+<li><a class="" href="how-to-approach-the-courses.html"><span class="header-section-number">3</span> How to approach the courses</a></li>
+<li><a class="" href="advice-on-essay-writing.html"><span class="header-section-number">4</span> Advice on essay writing</a></li>
+<li><a class="" href="copyright.html"><span class="header-section-number">5</span> Copyright</a></li>
+<li class="book-part">What is science?</li>
+<li><a class="" href="science.html"><span class="header-section-number">6</span> Science</a></li>
+<li><a class="" href="science-and-music.html"><span class="header-section-number">7</span> Science and music</a></li>
+<li class="book-part">The science of music</li>
+<li><a class="" href="foundations-of-acoustics.html"><span class="header-section-number">8</span> Foundations of acoustics</a></li>
+<li><a class="" href="timbre.html"><span class="header-section-number">9</span> Timbre</a></li>
+<li><a class="" href="pitch.html"><span class="header-section-number">10</span> Pitch</a></li>
+<li><a class="" href="consonance.html"><span class="header-section-number">11</span> Consonance</a></li>
+<li><a class="active" href="expectation.html"><span class="header-section-number">12</span> Expectation</a></li>
+<li><a class="" href="evolution.html"><span class="header-section-number">13</span> Evolution</a></li>
+<li><a class="" href="music-across-the-world.html"><span class="header-section-number">14</span> Music across the world</a></li>
+<li><a class="" href="emotion.html"><span class="header-section-number">15</span> Emotion</a></li>
+<li class="book-part">Scientific methods</li>
+<li><a class="" href="introduction-1.html"><span class="header-section-number">16</span> Introduction</a></li>
+<li><a class="" href="research-topics.html"><span class="header-section-number">17</span> Research topics</a></li>
+<li><a class="" href="research-questions.html"><span class="header-section-number">18</span> Research questions</a></li>
+<li><a class="" href="quantitativequalitative.html"><span class="header-section-number">19</span> Quantitative/qualitative</a></li>
+<li><a class="" href="ethics.html"><span class="header-section-number">20</span> Ethics</a></li>
+<li class="book-part">Quantitative methods</li>
+<li><a class="" href="variables.html"><span class="header-section-number">21</span> Variables</a></li>
+<li><a class="" href="causality.html"><span class="header-section-number">22</span> Causality</a></li>
+<li><a class="" href="generalisability.html"><span class="header-section-number">23</span> Generalisability</a></li>
+<li><a class="" href="data-visualisation.html"><span class="header-section-number">24</span> Data visualisation</a></li>
+<li><a class="" href="descriptive-statistics.html"><span class="header-section-number">25</span> Descriptive statistics</a></li>
+<li><a class="" href="inferential-statistics.html"><span class="header-section-number">26</span> Inferential statistics</a></li>
+<li class="book-part">Computational approaches</li>
+<li><a class="" href="computational-music-psychology.html"><span class="header-section-number">27</span> Computational music psychology</a></li>
+<li><a class="" href="references.html">References</a></li>
+</ul>
+
+        <div class="book-extra">
+          <p><a id="book-repo" href="https://github.com/pmcharrison/intro-to-music-and-science">View book source <i class="fab fa-github"></i></a></p>
+        </div>
+      </nav>
+</div>
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="expectation" class="section level1">
+<h1>
+<span class="header-section-number">12</span> Expectation<a class="anchor" aria-label="anchor" href="#expectation"><i class="fas fa-link"></i></a>
+</h1>
+<div id="introduction" class="section level2">
+<h2>
+<span class="header-section-number">12.1</span> Introduction<a class="anchor" aria-label="anchor" href="#introduction"><i class="fas fa-link"></i></a>
+</h2>
+<p>Survival depends on the ability to predict the future. Good prediction allows organisms to make sure that they’re in the right place at the right time, perhaps to avoid a predator, catch some prey, or avoid an incoming collision. As a result, humans and many other animals have developed sophisticated cognitive abilities for generating effective predictions.</p>
+<p>Music listening seems to activate some of these prediction abilities. The idea is that, during a piece of music, the listener is constantly trying to predict what will happen next. These predictions take into account both the listener’s prior experience with the musical style, as well as the specific events that have happened so far in the musical piece.</p>
+<p>When reading literature about musical predictions, you’ll often see them referred to as musical ‘expectations’. There’s not much practical difference between these terms, but ‘expectation’ has ended up being the most common term in the musical literature, so it’s generally useful to stick with that. To the extent that there is a difference, it concerns whether you are focusing on the listener or the music. ‘Predict’ is a term that requires you to be talking about the listener: “the listener predicts that the next chord will be a tonic triad”. ‘Expect’ can be applied to either the listener or to the music: “the listener expects a tonic triad”, or “the dominant chord creates an expectation for the tonic triad”.</p>
+<p>Suppose we are partway through a melody and we are trying to predict what note is going to come next. Broadly speaking, two kinds of outcomes are possible: (a) our prediction is fulfilled, and we see the note that we were expecting to see; (b) our prediction is violated, and we see a different note to what we were expecting.</p>
+<div class="figure">
+<img src="expectation/melody-unknown.png" style="width:100.0%" alt=""><p class="caption"><strong>Illustration of a melody with unknown continuation.</strong></p>
+</div>
+<p>In the natural environment, accurate prediction can be a matter of life and death. An incorrect prediction could mean being caught and killed by a predator, or missing a rare opportunity to find food. It seems reasonable then that incorrect predictions should be accompanied with some kind of emotional ‘shock’, or at least a ‘frisson’, to alert the organism that something has gone and potentially to discourage it from making similar mistakes in the future.</p>
+<p>We seem to see these kinds of effects in music listening too. If I play a musical context that clearly implies a certain continuation, and then violate that implication, this gives the listener a certain kind of shock that can snap them out of a comfortable state.</p>
+<p>When used appropriately, these prediction violations don’t have to be experienced negatively; they can instead make the piece more interesting, and introduce rewarding trajectories of tension and relaxation. Prokofiev is a composer who makes very explicit use of these prediction violations, which musicologists often describe tongue-in-cheek as ‘wrong notes’. In Peter’s theme from Peter and the Wolf, the first two bars are harmonically very predictable, simply outlining the tonic triad. The theme then jumps without warning to the flat submediant, giving the listener a strong prediction violation.</p>
+<div class="figure">
+<img src="images/1x1.png" alt=""><p class="caption"><iframe width="560" height="315" src="https://www.youtube.com/embed/1BRp_zeLYr4?start=10" style="display: block; margin-bottom: 25px" title="Prokofiev 'Peter and the Wolf', opening." frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> <strong>Prokofiev ‘Peter and the Wolf’, opening.</strong> Paul Barton, free for non-commercial use.</p>
+</div>
+
+<p>Prokofiev ends up repeating the same unusual harmonic progression many times – four times over the course of the movement. The more we hear it, the less surprising it sounds: our short-term experience starts to override our long-term stylistic knowledge. It never manages to override it completely, though. Intuitively, it feels like part of our brain keeps on trying to generate predictions based on long-term stylistic knowledge rather than short-term experience, and keeps being surprised as a result. This is probably for the best – if knowing a piece meant that you stopped hearing it with respect to your stylistic knowledge, then it might become rather difficult to get much out of repeated listenings.</p>
+<p>We typically use the words ‘schematic’ and ‘veridical’ to differentiate these two kinds of expectations. Schematic predictions are predictions that derive from long-term experience with a given musical style. Veridical predictions are predictions that derive from specific experience with particular musical elements. This could mean hearing the exact same piece before, but it could also mean recognising a theme that we already heard from earlier in the piece.</p>
+<p>It’s possible to rationalise these different expectations from the perspective of music theory. We can talk about how certain chord progressions are prototypical, or ‘expected’, in the context of Western music, and we can point to how certain musical passages violate these expectations. It’s important to remember though that one doesn’t need formal training in music theory to experience these expectation violations: music theory just helps put words to them.</p>
+<p>We can think about listeners generating expectations for various kinds of musical features. The music psychology literature has focused on several in particular:</p>
+<p><strong>Temporal expectation.</strong> Almost every musical style has some kind of temporal organisation. A given music performance will typically contain many individual musical notes, and the timing of these notes is organised in some kind of structured way. We know from earlier in the course that listeners can develop expectations for when these notes will occur, based on their ability to detect periodic structure in the sound, and their ability to recognise prototypical rhythmic structures from their musical style. They can also develop expectations for when the beat is going to arrive, which is very helpful for coordinating physical movements such as tapping and dancing.</p>
+<p><strong>Melodic expectation.</strong> Melody also occurs in almost every musical style across the world. There’s a long tradition of music theory and music psychology work that tries to explain how a particular melodic context generates expectations for what note is going to come next.</p>
+<p><strong>Harmonic expectation.</strong> In the context of Western music, listeners also develop strong expectations for harmonic progressions. Suppose I have a context sequence of chords looking like this:</p>
+<div class="figure">
+<img src="expectation/chord-sequence.png" style="width:100.0%" alt=""><p class="caption"><strong>Illustration of a chord sequence with unknown continuation.</strong></p>
+</div>
+<p>Western music listeners will have an automatic idea of what chords should be expected next. For example, if I continue the progression with a D flat major chord, it sounds very unexpected, but if I continue it with a C major chord, it sounds very expected.</p>
+</div>
+<div id="expectation-and-probability" class="section level2">
+<h2>
+<span class="header-section-number">12.2</span> Expectation and probability<a class="anchor" aria-label="anchor" href="#expectation-and-probability"><i class="fas fa-link"></i></a>
+</h2>
+<p>Probability is the mathematician’s way of dealing with uncertainty. Even if we can’t be sure about what is going to happen in the future, we can put certain numbers on the probabilities of different outcomes, and this can help us to make the best decision about what to do next.</p>
+<p>A particularly important concept is that of ‘conditional probability’. Conditional probabilities tell us about the probability that an event will occur given a set of contextual conditions. If we call the event we’re waiting for ‘X’ and the contextual conditions ‘Y’, then we write the conditional probability of "X given Y’ using the following notation:</p>
+<p><span class="math display">\[
+P(X \vert Y)
+\]</span></p>
+<p>Here the “P” refers to probability", and the vertical bar means ‘given’, or ‘conditioned on’.</p>
+<p>An example of a conditional probability would be if I asked you, “What is the probability that it rains today, given that it rained yesterday and the day before?” You might tell me that the probability is 75%, meaning that on average, 75% of days that follow two rainy days are also rainy themselves. In the context of card games, another example might be if I asked “What is the probability that a blackjack player goes ‘bust’ if they ask for another card from the dealer, given that they’ve already been dealt a Jack of Spades and a 5 of Diamonds?” In the context of music, I could similarly ask “What is the probability that I see a C major chord, given that I’ve just seen a D minor chord followed by a G major chord?”</p>
+<p>So, we’ve seen some examples of conditional probabilities. How do we actually define these probabilities? There are different ways to define probability out there, but perhaps the most fundamental is the ‘frequentist’ approach. The frequentist approach takes a so-called ‘long-run’ approach to defining probabilities. The probability of X given Y is defined as the result of the following procedure: run infinitely many experiments where Y is known to be the case, and calculate the proportion of times that X occurs in practice. This will give us a number between 0 and 1, which we term the ‘probability of X given Y’.</p>
+<p>Of course, in practice we can’t run infinitely many experiments. However, if we run a sufficiently large number of experiments, we know that our results should approximate the true probabilities fairly closely.</p>
+<p>Corpus analyses often end up being exercises in estimating probabilities. For example, we might be interested in the question “Did Baroque composers use plagal cadences more commonly than Classical composers?” We can approach this question by sampling a large number of cadences from Baroque and Classical composers, and calculating the proportion of these cadences that are plagal. Using our notation from before, we can then calculate “What’s the probability that a cadence will be plagal, if I know already that it’s written by a Baroque composer?”, and likewise for Classical composers.</p>
+<p><span class="math display">\[
+\begin{align}
+P (\textrm{cadence is plagal } \vert \textrm{ Baroque composer}) &amp;= \ ? \\
+P (\textrm{cadence is plagal } \vert \textrm{ Classical composer}) &amp;= \ ?
+\end{align}
+\]</span></p>
+<p>When we’re talking about musical expectations, we are typically interested in a particular kind of conditional probability, calculated at a particular point in the musical piece. We suppose the listener is hearing the piece in real time, and is trying (for example) to predict what the next note in the melody is going to be. Let’s call the pitch of the next note X, and let’s use Y to denote the portion of the piece that the listener has heard already. The listener is then trying to estimate the conditional probability of X given Y, for different possible pitches X. In this particular example, the listener might think that an F is particularly likely, with a probability of .28. They might also think G and D are reasonably plausible, taking probabilities of .22 each. The remaining possibilities each receive lower probabilities. We call this collection of different probabilities a ‘conditional probability distribution’.</p>
+<div class="figure">
+<img src="expectation/conditional-probability-distribution.png" style="width:100.0%" alt=""><p class="caption"><strong>Schematic illustration of a conditional probability distribution.</strong></p>
+</div>
+<p>At this point it’s important to distinguish two kinds of probabilities: <em>objective</em> probabilities and <em>subjective</em> probabilities. Objective probabilities correspond to the true probabilities of musical events as manifested in music corpora; we can estimate them using corpus analyses. Subjective probabilities corresponded to the imagined probabilities for musical events in the mind of the listener. These subjective probabilities will be determined by the listener’s musical experience, and any internal biases that they hold.</p>
+<p>A <em>rational</em> or <em>ideal</em> observer will try and maximise the accuracy of their subjective probabilities, given access to their available information. So, we can imagine that, as a listener grows more and more familiar with a musical style, their subjective probabilities are likely to approach closer and closer to that style’s objective probabilities.</p>
+<p>There’s a problem here, though. A given listener will only have listened to a certain amount of music in their lives, and so they don’t have access to an infinite amount of information. But music is like chess – it only takes a few steps for you to end up with a context Y that has never occurred in your past experience. Even with the simple melody above, I doubt that any readers have heard this precise melody outside of this class. So, how can we compute the conditional probability of X given Y, if we’ve never seen Y before?</p>
+<p>The way we solve this problem is with the following observation: “Good prediction is about knowing what to ignore”. The full melodic context is too much information to cope with: we need to discard some of this information to make the problem tractable.</p>
+<p>A very radical approach would be to forget about all details of the preceding melody, and just remember what key we’re in. If we know that the key is F major, we can guess even with limited musical experience that the next note is quite likely to be an F, or perhaps an A or a C, or any other member of the F major scale. In contrast, we can be fairly confident that we won’t see an F sharp, or a C sharp, and so on. We know this because we can look at many pieces in the key of F major, and count how often different pitches occur.</p>
+<p>Arguably we’ve thrown away too much information if we just look at the key. So, we might additionally choose to remember the last note of the melodic context. This is quite useful here: the last note is an E, which is the leading note in F major. We don’t need to look at all that many melodies to realise that the leading note typically resolves upwards by a semitone to land on the tonic.</p>
+<p>We can extend this information further by including the penultimate note in the context, which in this case is a D. This is also quite informative: the rising movement from the D to the E introduces some inertia (i.e. momentum) which provides further reason to suspect that the next note will be an F.</p>
+<p>Of course, we can repeat this process further and further, taking into account more and more context. In this example we’re now looking at the last three notes of the melodic context. If we look much further than three notes in the past, we’ll struggle to find enough precedents in our music corpora.</p>
+<p>One thing that becomes particularly apparent when modelling listeners is the importance of recent information. If we have to choose two notes to remember when trying to predict the next note, the last two notes are the best ones to choose. We can see this mathematically if we analyse the statistical structure of music corpora. We can also interpret in terms of the listeners’ cognitive constraints: listeners don’t have enough memory space to remember the whole history of the musical piece, and in practice most listeners can only recall the last few seconds with much reliability.</p>
+<p>I want to conclude by talking about a few practical applications of probabilistic music modelling. By probabilistic music modelling, I mean developing a computer program that learns to express a musical style effectively in terms of conditional probability distributions.</p>
+<p>One of the most compelling practical applications of probabilistic music modelling is in <em>automatic music generation</em>. Here we get the computer to create a piece by sampling one note at a time according to the conditional probability distributions that it’s learned from processing music corpora. This work has a history dating back to the 1950s, but a lot of progress has been made in the last few years, including some significant contributions from Google’s Magenta group. In this audio example, we hear Google’s “Music Transformer” model extemporise a continuation for the opening of Debussy’s composition “Clair de Lune”. Note that here the model is generating a full performance, not just a musical score.</p>
+<audio controls controlslist="nodownload" style="display: block; margin-top: 10px"><source src="https://s3-eu-west-1.amazonaws.com/media.pmcharrison.com/music/magenta/clair_de_lune_continuation.mp3" type="audio/mpeg"></source></audio><p>These generative models can be applied in quite varied ways. Here the same model is used to generate a harmonisation for “Row, row, row your boat”.</p>
+<audio controls controlslist="nodownload" style="display: block; margin-top: 10px"><source src="https://s3-eu-west-1.amazonaws.com/media.pmcharrison.com/music/magenta/row_row_accompaniment.mp3" type="audio/mpeg"></source></audio><p>Another application of these models is in <em>automatic music classification</em>. Suppose we discover a manuscript for an unknown composition in some library archives, and we want to work out whether the composition was written by J. S. Bach or by one of his contemporaries. Probabilistic models give us a principled way to investigate these kinds of authorship questions. We construct probabilistic models for the different candidate composers, trained on music written by these composers, and then we quantify how well these models manage to predict the new piece of interest. High predictive accuracy means that the piece is particularly consistent with the style of that particular composer. So, we can use these probabilistic models to make educated guesses about authorship.</p>
+<p><em>Automatic music transcription</em> is another important application of these probabilistic models. The goal in automatic music transcription is to develop software that accurately transcribes some kind of score from an audio recording. This is a difficult task, especially when many parts are playing at the same time. Probabilistic models are helpful for increasing the accuracy of transcription models, because they provide an error-correction function: if the transcription algorithm produces an output that seems very stylistically unlikely, then the probabilistic model can encourage the transcription algorithm to find a more plausible solution.</p>
+</div>
+<div id="measuring-musical-expectations" class="section level2">
+<h2>
+<span class="header-section-number">12.3</span> Measuring musical expectations<a class="anchor" aria-label="anchor" href="#measuring-musical-expectations"><i class="fas fa-link"></i></a>
+</h2>
+<p>In this section we will cover various ways of measuring musical expectations: rating paradigms, singing paradigms, priming paradigms, and electroencephalography paradigms.</p>
+<div id="rating" class="section level3">
+<h3>
+<span class="header-section-number">12.3.1</span> Rating<a class="anchor" aria-label="anchor" href="#rating"><i class="fas fa-link"></i></a>
+</h3>
+<p>The first and best-established method for assessing musical expectations is the rating experiment. The method is simple: we just ask the participant to give a numeric rating for a particular musical event in a particular musical context. The precise instructions for this rating differ between studies, but most commonly we just ask the participant to evaluate the ‘fit’, or perhaps the ‘expectedness’, of the particular event.</p>
+<p>The most famous version of this rating method is described in an important paper by <span class="citation">Krumhansl &amp; Kessler (<a href="#ref-krumhansl1982" role="doc-biblioref">1982</a>)</span>. This paper focuses specifically on pitch in the context of Western tonality. They call their approach the ‘probe-tone’ paradigm: ‘probe’ because they are probing the listener’s expectations, and ‘tone’ because they’re probing expectations for tones.</p>
+<p>In each trial of the probe-tone paradigm, the participant is first played a context stimulus. In this example, the context stimulus is a C major chord. A few moments later, the participant is played a probe tone. This tone is chosen from a selection of possibilities covering the chromatic scale. The participant is then asked, “How well does the probe tone fit with the context?”, and has to respond on a 7-point rating scale. Here’s an example trial with a C as the probe tone; most Western participants would say that the probe tone fits pretty well.</p>
+<div class="figure">
+<img src="expectation/probe-tone-major-chord-1.svg" style="width:50.0%" alt=""><p class="caption"><strong>Tonic probe tone after a major triad.</strong> <audio controls controlslist="nodownload" style="display: block; margin-top: 10px"><source src="expectation/probe-tone-major-chord.mp3" type="audio/mpeg"></source></audio></p>
+</div>
+
+<p><br>
+In this example, C sharp is the probe tone. Most Westerners would say that this tone fits less well.</p>
+<div class="figure">
+<img src="expectation/probe-tone-major-chord-2-1.svg" style="width:50.0%" alt=""><p class="caption"><strong>Raised tonic probe tone after a major triad.</strong> <audio controls controlslist="nodownload" style="display: block; margin-top: 10px"><source src="expectation/probe-tone-major-chord-2.mp3" type="audio/mpeg"></source></audio></p>
+</div>
+
+<p><span class="citation">Krumhansl &amp; Kessler (<a href="#ref-krumhansl1982" role="doc-biblioref">1982</a>)</span> studied a variety of tonal contexts in their experiment, in addition to simple tonic triads. Some trials used a diatonic scale; other trials used short cadences, like the IV-V-I cadence or the ii-V-I cadence.</p>
+<div class="figure">
+<img src="expectation/probe-tone-tonal-contexts.png" style="width:100.0%" alt=""><p class="caption"><strong>Tonal contexts used in <span class="citation">Krumhansl &amp; Kessler (<a href="#ref-krumhansl1982" role="doc-biblioref">1982</a>)</span>.</strong></p>
+</div>
+<p>After collecting data for many trials like this, the authors computed mean fit ratings for the different pitch classes in the chromatic scale. This graph plots the results for context sequences in C major. We can see that there’s a lot of variation in the graph: some pitch classes receive much higher ratings than others. We see the highest ratings for the members of the tonic triad: C, E, and G. We see the lowest ratings for pitch classes outside the C major scale: C#, D#, F#, G#, and A#. It seems reasonable to interpret this figure as an approximation of the participant’s conditional probability distribution over the different candidates for the probe tone: highly rated tones correspond to tones with high subjective probability.</p>
+<div class="figure">
+<img src="expectation/krumhansl-kessler-major.svg" style="width:70.0%" alt=""><p class="caption"><strong>Major-key tone profile derived by <span class="citation">Krumhansl &amp; Kessler (<a href="#ref-krumhansl1982" role="doc-biblioref">1982</a>)</span>.</strong></p>
+</div>
+<p>The authors also performed an analogous set of experiments using minor context sequences. As you’d expect, a different profile emerges, reflecting the change of key. Now E has very low fit, but E flat has high fit. Likewise, A no longer has a high fit, but A flat does. These changes straightforwardly reflect the differences between the major and minor scales.</p>
+<div class="figure">
+<img src="expectation/krumhansl-kessler-minor.svg" style="width:70.0%" alt=""><p class="caption"><strong>Major-key tone profile derived by <span class="citation">Krumhansl &amp; Kessler (<a href="#ref-krumhansl1982" role="doc-biblioref">1982</a>)</span>.</strong></p>
+</div>
+<p>It’s clear that this rating paradigm has the advantage of delivering easy to interpret results. It’s also fairly efficient – we don’t need that many participants to deliver useful data. However, it arguably does have an important disadvantage, which is that the participants’ responses are filtered through conscious decision-making, when the participant decides what number to give on the rating scale. We don’t have to make those kinds of decisions when we listen to music normally, and it could be that this process provides results that don’t completely reflect normal music listening.</p>
+</div>
+<div id="singing" class="section level3">
+<h3>
+<span class="header-section-number">12.3.2</span> Singing<a class="anchor" aria-label="anchor" href="#singing"><i class="fas fa-link"></i></a>
+</h3>
+<p>Singing tasks are another way to probe melodic expectations <span class="citation">(e.g. Fogel et al., <a href="#ref-Fogel2015" role="doc-biblioref">2015</a>; Morgan et al., <a href="#ref-Morgan2019" role="doc-biblioref">2019</a>)</span>. Here we play the participant a context melody, and we ask them to sing a continuation to that melody. The idea is that participants are more likely to sing ‘expected’ continuations, that is, continuations with high subjective probability.</p>
+<p>This task is very intuitive. It’s also very efficient: there’s no need to probe every tone in the scale, because the participant simply sings the most expected tone straight away. However, the task does have some obvious disadvantages. One is that the task is still potentially biased by conscious decision-making, similar to the rating task. A second is that it relies on the participant’s singing ability: participants who are poor singers won’t be able to perform the task properly. A third is that the results are influenced by production biases. For example, if a singer tends to sing flat, then this will make their expectations appear ‘flat’ compared to how they might look in a perceptual task. Lastly, the method relies on transcribing what note was sung by the participant, which can be a time-consuming process to do manually, and a tricky one to automate.</p>
+</div>
+<div id="priming" class="section level3">
+<h3>
+<span class="header-section-number">12.3.3</span> Priming<a class="anchor" aria-label="anchor" href="#priming"><i class="fas fa-link"></i></a>
+</h3>
+<p>Another important approach in the field is the ‘priming’ paradigm. This paradigm was inspired by previous work in the field of psycholinguistics.</p>
+<p>Here’s an example of how the priming approach can be used to assess harmonic expectation, taken from a study by <span class="citation">Tillmann et al. (<a href="#ref-Tillmann2006" role="doc-biblioref">2006</a>)</span>. In each trial, we play a chord sequence to the participant, and tell them to make a perceptual judgment about a particular chord in the sequence, called the ‘target’. In this case the chord of interest is the final chord in the sequence, and the participant is being asked to say whether this final chord is played by a piano or by a harp.</p>
+<div class="figure">
+<img src="expectation/tillmann-2006-congruent-harp-1.svg" style="width:100.0%" alt=""><p class="caption"><strong>Excerpt from <span class="citation">Tillmann et al. (<a href="#ref-Tillmann2006" role="doc-biblioref">2006</a>)</span> with a related target and a harp final chord.</strong> <audio controls controlslist="nodownload" style="display: block; margin-top: 10px"><source src="expectation/tillmann-2006-congruent-harp.mp3" type="audio/mpeg"></source></audio></p>
+</div>
+
+<p>In different trials we manipulate the chords used in the stimulus. In the previous example, the target would have been categorised as ‘related’: it’s the tonic chord, and hence highly expected given the context. In the next example, the target is the subdominant chord, and is hence categorised as ‘less related’ to the context.</p>
+<div class="figure">
+<img src="expectation/tillmann-2006-less-related-harp-1.svg" style="width:100.0%" alt=""><p class="caption"><strong>Excerpt from <span class="citation">Tillmann et al. (<a href="#ref-Tillmann2006" role="doc-biblioref">2006</a>)</span> with a less-related target and a harp final chord.</strong> <audio controls controlslist="nodownload" style="display: block; margin-top: 10px"><source src="expectation/tillmann-2006-less-related-harp.mp3" type="audio/mpeg"></source></audio></p>
+</div>
+
+<p>The theory behind the priming task is as follows. When the target is more expected, this makes the chord easier to process, which then speeds up the participant’s decision. Conversely, when the target is less expected, this slows down the processing, causing longer reaction times. So, we can measure how expected a chord is by studying the length of its reaction times. The main appeal of this priming paradigm is that it bypasses the conscious processing that we saw in the rating task and the singing task. We can call it an ‘implicit’ measure of expectation: the participant generally has no awareness of what is happening. However, this implicit nature is at the same time a disadvantage. It’s difficult to be certain that the results of this paradigm really are telling us about expectation. Our main evidence that priming measures expectation is that expected events tend to deliver shorter reaction times than unexpected events, but when we start using priming as a way of measuring expectation, this logic becomes circular.</p>
+</div>
+<div id="electroencephalography" class="section level3">
+<h3>
+<span class="header-section-number">12.3.4</span> Electroencephalography<a class="anchor" aria-label="anchor" href="#electroencephalography"><i class="fas fa-link"></i></a>
+</h3>
+<p>EEG is a neuroimaging technique that has proved particularly useful for studying musical expectations. The reason is that EEG has a particularly high time resolution compared to many other neuroimaging techniques, which allows us to study the time course of the brain’s responses to musical events at a very granular level.</p>
+<p>Participants in EEG studies wear caps containing many different electrodes which are placed into contact with the scalp. The EEG device records small changes in voltage on the scalp. These voltage changes are linked to the firing of neurons on the edges of the brain. </p>
+<p>An important thing to know about EEG data is that it tends to be very noisy. Of course, even when the participant isn’t actively doing anything, their brain is constantly at work, and this produces constant fluctuations in the EEG signal. When we conduct EEG experiments, we want to find a way of minimising this kind of random noise, and amplify the part of the EEG signal that corresponds to a particular experimental intervention, for example playing a melody. This task can be seen as a problem of maximising the ‘signal-to-noise ratio’.</p>
+<p>The event-related potential (ERP) technique is a classic way to maximise this signal-to-noise ratio. Here we suppose that we’re interested in measuring the characteristic EEG response to a particular stimulus, for example an unexpected note in a melody, or the resolution of a 4-3 suspension. We collect EEG data for many trials like this, and average the results. The averaging makes the random noise component disappear away towards zero, leaving us with an event-related potential like the one plotted here. On the x-axis, we have the time after the stimulus (in milliseconds); on the y-axis, we have the instantaneous potential, corresponding to the voltage measured at a particular scalp electrode. We find that ERPs typically contain various peaks or troughs, which we call <em>components</em>. If we’re lucky, we can identify individual components with particular aspects of cognitive processing. Typically the earlier components will correspond to more primitive sensory processing, whereas the later components will correspond to higher-level cognitive processing. </p>
+<div class="figure">
+<img src="expectation/erp.svg" style="width:50.0%" alt=""><p class="caption"><strong>Schematic illustration of an ERP.</strong> Credit: <a href="https://commons.wikimedia.org/wiki/File:ComponentsofERP.svg">ChomsVector: Mononomic</a>, <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>, via Wikimedia Commons</p>
+</div>
+<p>Neuroscientists have identified various kinds of ERPs in response to musical stimuli. One example is the Early Right Anterior Negativity, or ERAN, originally identified by <span class="citation">Koelsch et al. (<a href="#ref-Koelsch2000" role="doc-biblioref">2000</a>)</span>. For copyright reasons we don’t have an image of an ERAN to show for you here, but we recommend looking at Figure 1C in <span class="citation">Koelsch (<a href="#ref-Koelsch2009-yd" role="doc-biblioref">2009</a>)</span> for a reference; you can see an ERAN in that plot as a peak in the red curve at about 250 ms. We typically see the ERAN as a response to syntactically unexpected chords in chord sequences: chords that violate the listener’s cultural expectations for what chords should come next.</p>
+<p>The ERAN is ‘early’ because it happens relatively early in the time course. The term ‘right’ refers to the way in which the ERAN is typically localised to the right hemisphere of the brain (though some studies haven’t reproduced this effect). The term ‘anterior’ refers to the way in which the ERAN is typically localised forward in the brain. The term ‘negativity’ refers to the way in which the ERAN peaks with negative voltage (note how on ERP diagrams, high points correspond to negative numbers, not positive numbers; you can see this from the labelling of the y axis).  </p>
+<p>In theory, we can use ERPs like the ERAN to track musical expectation in melodies or chord sequences. In the case of chord sequences, seeing an ERAN would tell us that the chord was syntactically unexpected. An absence of an ERAN would tell us that the chord was relatively expected. </p>
+<p>The great advantage of this approach is its directness. Our psychological data is no longer filtered through distracting behavioural paradigms, such as rating or discrimination tasks. We are leaving our participants to experience music in a relatively undisturbed way, close to how they might ordinarily listen to music. This must surely increase the validity of the results. What’s more, the task can give us some insight into the neural dynamics of expectation. We can directly observe how long it takes the brain to process different kinds of violations, without having to wait for the participant to initiate any physical movements. The data can also give us some insights into which regions of the brain are involved in generating and monitoring expectations.</p>
+<p>There are some important disadvantages to this approach, though. The first is the noisy nature of the measurement process. On an individual trial, random fluctuations in brain activity make it difficult to discern anything useful in the EEG signal. To get interpretable results, the experimenter must conduct many trials and average over them. To get enough trials, experimenters often end up repeating the same stimulus multiple times, but this can be problematic because repetition will change the participants’ expectations. </p>
+<p>A second problem concerns what we might call <em>measurement validity</em>. How can we be sure that an ERP such as the ERAN is really measuring expectation? Sure, several experiments have found ERANs occurring in the context of syntactically unexpected chords, but it is difficult (or perhaps even impossible) to be sure that the ERAN is truly a ‘pure’ marker of expectation violation. This measurement validity question crops up again and again in different aspects of cognitive neuroscience.</p>
+</div>
+<div id="summary" class="section level3">
+<h3>
+<span class="header-section-number">12.3.5</span> Summary<a class="anchor" aria-label="anchor" href="#summary"><i class="fas fa-link"></i></a>
+</h3>
+<p>We covered four different empirical approaches for assessing musical expectations: rating tasks, singing tasks, priming tasks, and electroencephalography (or EEG). The first two of these are <em>explicit</em> tasks, in that we tell the participant explicitly to judge expectedness, or to produce expected continuations to melodies. The second two are <em>implicit</em> tasks, in that the participant receives no explicit instructions to evaluate expectedness. We saw how implicit tasks bring appealing benefits in terms of avoiding conscious evaluation processes that may not be relevant to naturalistic music listening. At the same time, these implicit tasks raise important issues of measurement validity. In practice, it’s difficult to get far with any single paradigm: a proper account of musical expectation ought to reconcile and explain measurements from several of these different paradigms.</p>
+</div>
+</div>
+<div id="modelling-melodic-expectation" class="section level2">
+<h2>
+<span class="header-section-number">12.4</span> Modelling melodic expectation<a class="anchor" aria-label="anchor" href="#modelling-melodic-expectation"><i class="fas fa-link"></i></a>
+</h2>
+<p>From a psychological perspective, models help us to formalise complex theories in a way that helps us to test them in scientific experiments. From a practical perspective, good models of music perception can also have interesting applications, for example in automatic music composition.</p>
+<p>In this section we’re going to talk about three main classes of melodic expectation models: music-theoretic models, psychoacoustic models, and statistical-learning models. </p>
+<div id="music-theoretic-models" class="section level3">
+<h3>
+<span class="header-section-number">12.4.1</span> Music-theoretic models<a class="anchor" aria-label="anchor" href="#music-theoretic-models"><i class="fas fa-link"></i></a>
+</h3>
+<p>These models were created by expert music theorists who set about the goal of expressing their personal understanding of music and music perception in a formal way. </p>
+<p>The classic model in this tradition is Narmour’s Implication-Realisation model, which Narmour introduced in a couple of books published in the early 1990s <span class="citation">(Narmour, <a href="#ref-Narmour1990-gv" role="doc-biblioref">1990</a>, <a href="#ref-Narmour1992-ka" role="doc-biblioref">1992</a>)</span>. The work is heavily influenced by earlier work by the philosopher Leonard Meyer. The main goal of Narmour’s model is to explain how the arrangement of the notes in a melody combine to generate certain expectations in the listener, which Narmour calls <em>implications</em>.</p>
+<p>Narmour’s model proposes that melodic expectation can be understood in terms of two independent perceptual systems: a <em>bottom-up</em> system and a <em>top-down</em> system. The bottom-up system corresponds to innate and fundamental processes of auditory perception, which are by definition shared across all listeners irrespective of their culture. The top-down system then reflects knowledge that the listener learns through exposure to music in a particular style, with this exposure depending on the listener’s cultural background.</p>
+<p>Here’s how Narmour puts it: “The top-down system is flexible, variable and empirically driven… In contrast, the bottom-up mode constitutes an automatic, unconscious, preprogrammed, ‘brute’ system”.</p>
+<p>Narmour’s writings have a reputation for being rather lengthy and dense. The psychological community has ended up relying heavily on several subsequent papers that summarise Narmour’s work in some way. <span class="citation">Cross (<a href="#ref-Cross1995-ar" role="doc-biblioref">1995</a>)</span> and <span class="citation">Thompson (<a href="#ref-Thompson1996-pk" role="doc-biblioref">1996</a>)</span> both wrote useful reviews of Narmour’s books that summarise the work from a critical perspective. Krumhansl produced an influential collection of papers <span class="citation">(e.g. Krumhansl, <a href="#ref-Krumhansl1995-yz" role="doc-biblioref">1995</a>)</span> showing how Narmour’s model could be applied in psychological experiments.</p>
+<p>Most empirical studies, including Krumhansl’s, have focused primarily on the bottom-up component of Narmour’s model. This is presumably because this is the most clearly specified part of the model, and the part that should generalise best to different musical styles and musical listeners.</p>
+<p>This bottom-up system is typically summarised in terms of five basic principles: <em>proximity</em>, <em>registral direction</em>, <em>intervallic difference</em>, <em>registral return</em>, and <em>closure</em>.</p>
+<p>The <strong>proximity</strong> principle is the simplest of them all. This states that listeners will generally expect small intervals. We encountered a similar principle earlier in the context of voice leading.</p>
+<div class="figure">
+<img src="expectation/narmour-small-intervals.png" style="width:100.0%" alt=""><p class="caption"><strong>Example melody built from small intervals (illustrating Narmour’s proximity principle).</strong></p>
+</div>
+<p>The remaining principles are specific to particular melodic contexts. In particular, we consider a melodic context of two notes, forming what we call an <em>implicative interval</em>. This interval generates implications, or expectations, for what interval is going to come next. The interval that actually comes along is called the <em>realised interval</em>. This interval can either fulfil or deny the listeners expectations.</p>
+<div class="figure">
+<img src="expectation/narmour-implication-realisation.png" style="width:70.0%" alt=""><p class="caption"><strong>Implicative versus realised intervals.</strong></p>
+</div>
+<p>The <strong>registral direction</strong> principle states that small intervals generate an implication that the next interval will continue in the same direction. Conversely, the principle also states that large intervals generate an implication that the next interval will reverse direction.</p>
+<p>The <strong>intervallic difference</strong> principle also makes a distinction between small and large implicative intervals. It states that a small implicative interval will create an expectation for another similarly sized interval, whereas a large implicative interval will create an expectation for a contrasting smaller interval.</p>
+<p>The <strong>registral return</strong> principle differs from the others in that it describes the relation between the <em>first</em> note of the implicative interval and the <em>second</em> note of the realised interval. It states that, all else aside, listeners will expect the latter note to be close in pitch to the former note. Note that this principle can end up working contrary to the intervallic difference principle, which states that large intervals should be followed by small intervals.</p>
+<div class="figure">
+<img src="expectation/narmour-registral-return.png" style="width:70.0%" alt=""><p class="caption"><strong>Illustration of Narmour’s registral return principle.</strong></p>
+</div>
+<p>The <strong>closure</strong> principle is different in its own way: it’s meant to determine the completion of melodic phrases. Narmour states that the impression of closure can be created by various different features. One feature is when the melody exhibits a change of direction. Another feature is when a large interval is followed by a small interval. Narmour also describes various other closure features, to do with rhythm and tonality, which we will not consider here. </p>
+<p>Narmour’s model was mainly motivated by music analysis and introspection. It prompted a series of empirical studies investigating whether the principles actually held true for the average listener.</p>
+<p>A series of these studies have investigated how well Narmour’s principles held in <strong>Western</strong> listeners <span class="citation">(e.g. Krumhansl, <a href="#ref-Krumhansl1995-yz" role="doc-biblioref">1995</a>; Pearce &amp; Wiggins, <a href="#ref-Pearce2006-hk" role="doc-biblioref">2006</a>; Schellenberg, <a href="#ref-Schellenberg1996-hz" role="doc-biblioref">1996</a>)</span>. Generally speaking, the conclusions are rather positive: most of the time, most of the rules end up being supported. In any individual study, the researchers might not necessarily find evidence for all of Narmour’s rules, but when we look over multiple studies, we see that most of the rules end up being pretty well supported. </p>
+<p>An important part of Narmour’s theory is the claim that these bottom-up principles are innate. If so, we should see these principles manifesting across <strong>different musical cultures</strong>. There are not that many studies in the literature testing this question, unfortunately: I’m only aware of three. These three studies investigate three non-Western participant groups: Chinese participants <span class="citation">(Schellenberg, <a href="#ref-Schellenberg1996-hz" role="doc-biblioref">1996</a>)</span>, participants from the Sami people, who are an indigenous people from the Scandinavian peninsula <span class="citation">(Eerola et al., <a href="#ref-Eerola2009-ug" role="doc-biblioref">2009</a>; Krumhansl et al., <a href="#ref-Krumhansl2000-nj" role="doc-biblioref">2000</a>)</span>, and finally South African traditional healers <span class="citation">(Eerola et al., <a href="#ref-Eerola2009-ug" role="doc-biblioref">2009</a>)</span>. The general message from these studies is that these populations do differ in terms of their melodic expectations, but these expectations nonetheless share a common basis in Narmour’s bottom-up principles. In other words, Narmour’s bottom-up model does seem to generalise fairly well cross-culturally. However, we’d need to test many more populations before making a firm conclusion about this. For more discussion about melodic structures cross-culturally, see the ‘Music across the world’ chapter.</p>
+<p>There are a few other music-theoretic expectation models in the literature. <span class="citation">Margulis (<a href="#ref-Margulis2005-sd" role="doc-biblioref">2005</a>)</span> describes a model of melodic expectation that includes various relatively high-level principles that link expectation to tension. This model has been surprisingly underexplored in subsequent work. The ‘Tonal Pitch Space’ model of <span class="citation">Lerdahl (<a href="#ref-Lerdahl1988-hi" role="doc-biblioref">1988</a>)</span> is not specifically about melodies or about expectation, but it describes Western tonality in a cognitively informed way that can be used to predict the relative stability of different notes in a melody, and their tendencies to resolve in particular directions.</p>
+<p>These music-theoretic modelling approaches have two main disadvantages. The first is that their rules are speculative: they are generally grounded in the theorist’s intuition, and are not necessarily supported by objective psychological data. The second disadvantage is a consequence of the first: since the models are grounded in the theorists’ intuitions, and since the theorists are typically grounded in Western music theory, then the models are likely to be Western-centric in nature. </p>
+<p>Given this context, it’s particularly impressive how well Narmour’s implication-realisation model seems to generalise, both across different Western listeners, but even across musical cultures. It’s a testament to how far one can get with speculative methods.</p>
+</div>
+<div id="psychoacoustic-models" class="section level3">
+<h3>
+<span class="header-section-number">12.4.2</span> Psychoacoustic models<a class="anchor" aria-label="anchor" href="#psychoacoustic-models"><i class="fas fa-link"></i></a>
+</h3>
+<p>Psychoacoustic models come from a very different perspective. They try to explain melodic expectation in terms of basic properties of sound, and the way that sound is processed by the ear and the brain. </p>
+<p>Various kinds of psychoacoustic models have been used to try and understand melody perception. Here we’re going to focus on one such model, from <span class="citation">Milne et al. (<a href="#ref-Milne2011-iv" role="doc-biblioref">2011</a>)</span>. Milne has used this model to explain various aspects of tonal perception that others have often assumed to be cultural in origin. </p>
+<p>The fundamental idea behind Milne’s model is that listeners expect successive sounds to have high spectral similarity. We can imagine that this is motivated by real-world auditory perception, where sound spectra will typically stay relatively consistent over time. This isn’t a new idea: <span class="citation">Parncutt (<a href="#ref-Parncutt1989-sm" role="doc-biblioref">1989</a>)</span> and <span class="citation">Leman (<a href="#ref-Leman2000-ky" role="doc-biblioref">2000</a>)</span> have also presented similar theories. Here we’re going to focus on Milne’s model because it takes a particularly simple form, yet works rather well in practice. </p>
+<p>The main function of the model itself is to compute the spectral similarity of a pair of sounds. If we know this spectral similarity, then we can try and predict the expectedness of a given chord progression. The computation process involves two steps. First, the model computes a perceptual spectrum for each sound, intended to represent how the sound appears to the listener. Second, the model computes the similarity between the two perceptual spectra, to arrive at the overall perceived spectral similarity.</p>
+<p>The first step, simulating perceptual spectra, involves making certain assumptions. Some of these assumptions are acoustic and some are psychological. The main acoustic assumption is that every note is a harmonic complex tone. It’s easy to modify this assumption though when studying different kinds of timbres, for example inharmonic timbres. One psychological assumption is ‘octave equivalence’: this means that pitches are perceived as equivalent if they are separated by a whole number of octaves. This assumption of octave equivalence seems to hold across many different musical cultures <span class="citation">(though certain cultures, such as the Tsimane’, seem not to hold to this; Jacoby et al., <a href="#ref-Jacoby2019-ew" role="doc-biblioref">2019</a>)</span>. The second psychological assumption is that pitch perception has finite acuity: in other words, listeners can’t perceive pitch with unlimited accuracy, but instead perceive pitches with some kind of window of uncertainty.</p>
+<p>Simulating the perceptual spectrum involves several steps:</p>
+<ol style="list-style-type: decimal">
+<li><p>Expand the notes into <strong>harmonic spectra</strong>.</p></li>
+<li><p>Apply the <strong>octave invariance</strong> principle. This is done by converting all the pitches in the spectrum into <em>pitch classes</em>. Pitch classes are based on the idea of ‘octave equivalence’ – if two notes are separated by a whole number of octaves, they are given the same pitch class. When we compute the pitch-class spectrum, all the different Cs end up being collapsed to the same spectral component, all the different Gs end up collapsed to the same spectral component, and so on. The resulting spectral components have amplitudes corresponding to the sums of their contributing components. </p></li>
+<li><p><strong>Smooth</strong> the spectrum to account for the limited acuity of pitch perception. As a result, instead of very precise peaks at pitch classes of ‘0’ or ‘7’, we get smoother bumps.</p></li>
+</ol>
+<p>The following diagram illustrates the results for an input note of C:</p>
+<div class="figure">
+<img src="expectation/pitch-images-60.svg" style="width:100.0%" alt=""><p class="caption"><strong>Simulating a perceptual spectrum for the MIDI note 60, after <span class="citation">Milne et al. (<a href="#ref-Milne2011-iv" role="doc-biblioref">2011</a>)</span>. The simulation process goes from top to bottom.</strong></p>
+</div>
+<p>The following diagram illustrates the results for an input C major triad:</p>
+<div class="figure">
+<img src="expectation/pitch-images-60-64-67.svg" style="width:100.0%" alt=""><p class="caption"><strong>Simulating a perceptual spectrum for a C major triad, after <span class="citation">Milne et al. (<a href="#ref-Milne2011-iv" role="doc-biblioref">2011</a>)</span>. The simulation process goes from top to bottom.</strong></p>
+</div>
+<p>So, we now know how the model computes perceptual spectra for different sounds. In order to predict expectation, we now need to compute the similarity between different perceptual spectra.</p>
+<p>Let’s apply the model in the context of Krumhansl &amp; Kessler’s famous probe-tone experiments <span class="citation">(Krumhansl &amp; Kessler, <a href="#ref-krumhansl1982" role="doc-biblioref">1982</a>)</span>, which we discussed earlier. Here the participant is played a particular tonal context, for example C major triad, and then asked to rate the expectedness of different ‘probe tones’ that come after. In this example, we’re going to consider a probe tone of ‘C’. </p>
+<p>To apply Milne’s model to these contexts, we first compute perceptual representations for the tonal context and the probe tone, and then we compute the similarity of these perceptual representations. Here the perceptual representation for the C major triad is plotted in grey, and the representation for the C probe tone is plotted in red. We see that these two spectra are rather well aligned: both of these spectra have large peaks at C, E, and G. For the triad, these peaks come mainly from the fundamental frequencies of each chord tone. For the probe tone, these peaks come from particular harmonics within the complex tone.</p>
+<div class="figure">
+<img src="expectation/milne--probe-tone-major-chord-0-combined.png" style="width:100.0%" alt=""><p class="caption"><strong>Perceptual spectra for a C major triad combined with a C probe tone.</strong></p>
+</div>
+<p>If we quantify the similarity between these spectra mathematically, we get rather a high value, .70. So, the model correctly predicts that a C should be relatively expected in the context of a C major triad – no surprises there!</p>
+<p>Let’s now see what happens if we try a probe tone of C#. If we look at the graph, we see now that the spectrum for the C# (in red) no longer aligns well at all with the spectrum for the C (in grey). Correspondingly, when we compute the similarity between the spectra, we get a rather low value of .01. So, the model predicts that C# is going to be relatively unexpected in the context of C major.</p>
+<div class="figure">
+<img src="expectation/milne--probe-tone-major-chord-1-combined.png" style="width:100.0%" alt=""><p class="caption"><strong>Perceptual spectra for a C major triad combined with a C# probe tone.</strong></p>
+</div>
+<p>We can repeat this process for all the different pitch classes in the octave, and we get the results plotted in red. We can compare these curves against the participant ratings collected in Krumhansl &amp; Kessler’s <span class="citation">(<a href="#ref-krumhansl1982" role="doc-biblioref">1982</a>)</span> probe-tone study, plotted here in blue. If we do this, we see an impressively close correlation.</p>
+<div class="figure">
+<img src="expectation/milne--krumhansler-kessler.png" style="width:100.0%" alt=""><p class="caption"><strong>Comparison of the Krumhansl-Kessler <span class="citation">(<a href="#ref-krumhansl1982" role="doc-biblioref">1982</a>)</span> probe-tone data with the predictions of Milne’s spectral similarity model <span class="citation">(Milne et al., <a href="#ref-Milne2011-iv" role="doc-biblioref">2011</a>)</span>.</strong></p>
+</div>
+<p>I mentioned before that <span class="citation">Milne et al. (<a href="#ref-Milne2011-iv" role="doc-biblioref">2011</a>)</span> weren’t the first to come up with this spectral similarity idea. We can find rather similar ideas implemented as computational models in work by <span class="citation">Parncutt (<a href="#ref-Parncutt1989-sm" role="doc-biblioref">1989</a>)</span> and <span class="citation">Leman (<a href="#ref-Leman2000-ky" role="doc-biblioref">2000</a>)</span>. These former models are more sophisticated in various ways, taking into account more complex psychological phenomena such as masking and pitch-perception mechanisms. Interestingly, though, this added complexity doesn’t seem to result in any greater predictive power – in fact, the present evidence suggests that the models actually perform worse than Milne et al.’s simple model <span class="citation">(Milne et al., <a href="#ref-Milne2015-os" role="doc-biblioref">2015</a>)</span>. So, we won’t consider them further here.</p>
+<p>A very appealing aspect of these psychoacoustic models is that they can suggest deep explanations for the ultimate origins of stylistic rules. For example, Milne et al.’s model is showing that the relative expectedness of different pitch classes within a given tonal context might well be explained by the harmonic spectra of these tones, rather than any particular cultural learning. On the other hand, these models are limited in terms of what they can hope to explain. Fundamentally, only so much can be explained by acoustics and basic biology – to explain more nuanced and culturally dependent aspects of melodic expectation, we need models that are capable of learning.</p>
+</div>
+<div id="statistical-learning-models" class="section level3">
+<h3>
+<span class="header-section-number">12.4.3</span> Statistical-learning models<a class="anchor" aria-label="anchor" href="#statistical-learning-models"><i class="fas fa-link"></i></a>
+</h3>
+<p>Statistical-learning models simulate processes of <em>enculturation</em> over a listener’s lifespan. Through exposure to lots of music from a particular musical style, the listener acquires an intuition for what kinds of melodic patterns are common and which are uncommon. This intuition then drives their reactions to new, unfamiliar melodies.</p>
+<p>We’re going to focus on a particular statistical-learning model from the literature called the Information Dynamics Of Music model, or IDyOM for short <span class="citation">Pearce (<a href="#ref-Pearce2005-bm" role="doc-biblioref">2005</a>)</span>. </p>
+<p>We talked already in a previous section about the idea of understanding expectation in terms of conditional probabilities. Here we suppose that the listener has just heard a particular melodic context, and is trying to predict what note is going to come next. The expectedness of a particular continuation is operationalised probabilistically as the conditional probability of observing that note given the previous context. </p>
+<div class="figure">
+<img src="expectation/melody-unknown.png" style="width:100.0%" alt=""><p class="caption"><strong>Illustration of a melody with unknown continuation.</strong></p>
+</div>
+<p>The idea behind statistical-learning expectation models is that they simulate how listeners might learn conditional probabilities through experience. To do this, the listener needs to keep track of particular melodic contexts, and chart how often they tend to continue in a certain way.</p>
+<p>Let’s imagine how this would work in practice. Suppose we’re interested in predicting the next note in the melody from before. The last two notes of the context were a D and an E. Let’s imagine that the listener has heard this context 180 times before, with various different continuations, illustrated on the left of the screen. In this context, the listener heard a G 40 times, an F 50 times, an E 15 times, a D 40 times, and a C 35 times. Following basic mathematical principles, the listener can use this information to estimate the probability of seeing an F as the number of times they saw an F in this particular context (50 times) divided by the number of times they saw this context in total (180 times). This gives a value of .28, or 28%. We can repeat this process over all the different possible continuations to get the full conditional probability distribution. This is basically how IDyOM works.</p>
+<div class="figure">
+<img src="expectation/probability-continuations.png" style="width:100.0%" alt=""><p class="caption"><strong>Calculating the probability of a melody’s continuation through reference to prior observations.</strong></p>
+</div>
+<p>IDyOM does have some special features though, which set it apart from simpler models in the literature. I’m going to outline briefly three of these special features today: viewpoints, variable-order Markov modelling, and long-term and short-term memory.</p>
+<div id="viewpoints" class="section level4">
+<h4>
+<span class="header-section-number">12.4.3.1</span> Viewpoints<a class="anchor" aria-label="anchor" href="#viewpoints"><i class="fas fa-link"></i></a>
+</h4>
+<p>The idea about viewpoints is that there’s many different ways of looking at a particular melody:</p>
+<ul>
+<li><p>We could consider the <strong>pitches</strong> themselves, perhaps expressed on a MIDI scale. </p></li>
+<li><p>We could consider the <strong>contour</strong> pattern, which describes whether each note goes up or down compared to its predecessor. In the below diagram I’ve marked ascending intervals with ‘+’ symbols and descending intervals with ‘-’ symbols. </p></li>
+<li><p>We could consider an <strong>intervallic</strong> representation, where each note is represented as a signed number of semitones from the previous note. For example, the first interval in this melody is an ascending major third, corresponding to four semitones, so we write a 4 under the second note of the melody. The second interval is an ascending minor third, so we write a 3 under the third melody note, and so on. </p></li>
+<li><p>We could consider a <strong>scale degree</strong> representation, where each note is represented relative to the local tonic. Here the first few notes outline the major triad, so we write 1, 3, and 5 underneath them, as we would do in Roman numeral analyses.</p></li>
+</ul>
+<div class="figure">
+<img src="expectation/multiple-viewpoints.png" style="width:100.0%" alt=""><p class="caption"><strong>Multiple-viewpoint representation of a melody.</strong></p>
+</div>
+<p>Each of these different representation schemes is called a ‘viewpoint’. The idea is that IDyOM learns statistical regularities in each of these different viewpoints through its simulated enculturation process. This is intended to simulate the way in which listeners also hear music in terms of these different viewpoints. Often these viewpoints help the model to learn quicker, and generalise better to new contexts: for example, the interval and the scale degree representations are both invariant under transposition (i.e. pitch shift), which mean that if the listener learns a particular pattern in a particular melody, they can generalise that knowledge to melodies in different keys.</p>
+</div>
+<div id="variable-order-markov-modelling" class="section level4">
+<h4>
+<span class="header-section-number">12.4.3.2</span> Variable-order Markov modelling<a class="anchor" aria-label="anchor" href="#variable-order-markov-modelling"><i class="fas fa-link"></i></a>
+</h4>
+<p>This feature concerns the kinds of statistical regularities that the model is able to learn. </p>
+<p>Let’s begin by defining a 1st-order Markov model. A 1st-order Markov model makes its predictions by solely looking at the previous element in the sequence. If we’re looking at the pitch viewpoint, this means looking only at the previous pitch; if we’re looking at the interval viewpoint, that means looking only at the previous interval, and so on. This sounds like a big sacrifice, and in a sense it is – you’re discarding information that could be useful in predicting the next note. On the other hand, there’s an important advantage, which is that discarding this information helps to make the learning process more tractable, because there’s only a limited number of possible contexts to learn.</p>
+<div class="figure">
+<img src="expectation/multiple-viewpoint-context-1.png" style="width:50.0%" alt=""><p class="caption"><strong>Predicting from a 1st-order Markov model.</strong></p>
+</div>
+<p>A 2nd-order Markov model is like the 1st-order model, except it now takes into account the two previous elements in the sequence. This makes the model more specific to particular contexts, potentially increasing its predictive power.</p>
+<div class="figure">
+<img src="expectation/multiple-viewpoint-context-2.png" style="width:50.0%" alt=""><p class="caption"><strong>Predicting from a 2nd-order Markov model.</strong></p>
+</div>
+<p>As you might expect by now, a 3rd-order Markov model then takes into account the preceding three elements. This improves its potential predictive power still further, at the cost of having to learn many more different contexts.</p>
+<div class="figure">
+<img src="expectation/multiple-viewpoint-context-3.png" style="width:50.0%" alt=""><p class="caption"><strong>Predicting from a 3rd-order Markov model.</strong></p>
+</div>
+<p>So, each kind of Markov model comes with its own advantages and disadvantages. IDyOM is a variable-order Markov model, which means that it switches between different orders of Markov models depending on the situation. When it has lots of data available, it’ll prefer higher-order Markov models, because they can take advantage of additional information present in the longer context. When not much data is available, it’ll prefer lower-order Markov models, which don’t require so much data. This seems to reflect how listeners are able to function well in both unfamiliar and familiar musical contexts.</p>
+</div>
+<div id="long-term-and-short-term-memory" class="section level4">
+<h4>
+<span class="header-section-number">12.4.3.3</span> Long-term and short-term memory<a class="anchor" aria-label="anchor" href="#long-term-and-short-term-memory"><i class="fas fa-link"></i></a>
+</h4>
+<p>The final feature concerns IDyOM’s <em>long-term</em> and <em>short-term</em> memory modules. The long-term module is pretrained on a large corpus of melodies, with the intention of simulating the enculturation that occurs over a listener’s lifetime. The short-term memory module begins each melody with a blank slate, and solely learns statistics from this melody. This allows the model to learn particular patterns in the melody, for example motifs, that might be used to generate better predictions in the future. It seems that both these kinds of memory are useful for predicting listener responses.</p>
+</div>
+<div id="example-practical-application" class="section level4">
+<h4>
+<span class="header-section-number">12.4.3.4</span> Example practical application<a class="anchor" aria-label="anchor" href="#example-practical-application"><i class="fas fa-link"></i></a>
+</h4>
+<p>Let’s see how we might apply IDyOM in practice. Here’s an excerpt from a Bach chorale melody, with model outputs from IDyOM compared to human listeners. In particular, this graph is plotting the ‘surprise’ experienced by IDyOM and by the human listeners at each point in the melody. We can see that surprise varies somewhat over the course of the melody. If we look at note position 14, for example, we see that both the model and the listeners have very low surprise – in other words, they were both very confident that the G was going to occur. If we look at the melody itself, we can sympathise with this prediction: the G is the obvious end of a descending scale, and it produces an obvious cadence onto the tonic.</p>
+<pre><code>#&gt; ── Attaching packages ─────────────────── tidyverse 1.3.1 ──
+#&gt; ✔ ggplot2 3.3.5     ✔ purrr   0.3.4
+#&gt; ✔ tibble  3.1.6     ✔ dplyr   1.0.7
+#&gt; ✔ tidyr   1.1.4     ✔ stringr 1.4.0
+#&gt; ✔ readr   2.1.1     ✔ forcats 0.5.1
+#&gt; ── Conflicts ────────────────────── tidyverse_conflicts() ──
+#&gt; ✖ tidyr::extract()   masks magrittr::extract()
+#&gt; ✖ dplyr::filter()    masks stats::filter()
+#&gt; ✖ dplyr::lag()       masks stats::lag()
+#&gt; ✖ purrr::set_names() masks magrittr::set_names()
+#&gt; Warning: Package `magick` is required to draw images. Image
+#&gt; not drawn.</code></pre>
+<div class="figure">
+<img src="expectation/idyom-dynamic-predictions-combined.svg" style="width:100.0%" alt=""><p class="caption"><strong>Modelling listener surprise through the course of a melody <span class="citation">(data from Pearce, <a href="#ref-Pearce2018-pw" role="doc-biblioref">2018</a>)</span>.</strong></p>
+</div>
+<p>Looking at note position 23, we see that both the model and the listeners have very <em>high</em> surprise. We can see why this happens when we look at the melody: there's a big leap of an ascending minor seventh, which is rather unexpected in a melodic context. </p>
+<p>After this point, though, the melody becomes rather predictable again, producing a descending scale back to the tonic.</p>
+<p>IDyOM has been successfully applied to quite a few psychological contexts. It's been demonstrated to predict listener <strong>expectation</strong> fairly well in a variety of tasks, ranging from rating to priming to EEG. It's been shown to predict <strong>emotional responses</strong>, at least to a certain degree: high levels of surprise are associated with increased arousal and negative emotional valence (we'll talk more about arousal and valence next week). The model seems to predict the <strong>memorability</strong> of sequences: more predictable sequences are easier to remember. It's also been shown to predict <strong>phrase boundary perception</strong>, to some degree: high surprise acts as a cue for initiating a new phrase. </p>
+<p>Note position 23 is an example of high surprise at a phrase boundary. The high surprise tells us that the transition between the low F sharp and the high E would be relatively unlikely as part of a normal melodic phrase – this suggests that the transition potentially occurs over a phrase boundary.</p>
+<p>The big advantage of IDyOM as a model of melodic expectation is that it can predict listener expectations rather accurately. So far it seems to outperform all the competitor models in the literature. </p>
+<p>One disadvantage is that it can be difficult to interpret what the model has learned. IDyOM ends up learning a vast number of conditional probabilities, and it's difficult for the researcher to interpret those probabilities manually. A second disadvantage is that IDyOM doesn't differentiate between aspects of expectation that might be learned from a musical style and those that have non-musical origins. For example, IDyOM quickly learns that small intervals are more common than large intervals, and hence treats large intervals as relatively unexpected. It could be true that listeners learn this fact from music listening, but it's also possible that listeners learn this expectation from listening to speech, or even are born with an innate expectation for small intervals.</p>
+</div>
+</div>
+<div id="recap-and-future-directions" class="section level3">
+<h3>
+<span class="header-section-number">12.4.4</span> Recap and future directions<a class="anchor" aria-label="anchor" href="#recap-and-future-directions"><i class="fas fa-link"></i></a>
+</h3>
+<p>We considered three kinds of melodic expectation models: music-theoretic models, psychoacoustic models, and statistical models. Our example music-theoretic model was Narmour's Implication-Realization model <span class="citation">(Narmour, <a href="#ref-Narmour1990-gv" role="doc-biblioref">1990</a>, <a href="#ref-Narmour1992-ka" role="doc-biblioref">1992</a>)</span>; we focused particularly on five rules that make up the 'bottom-up' component of this model. Our example psychoacoustic model came from <span class="citation">Milne et al. (<a href="#ref-Milne2011-iv" role="doc-biblioref">2011</a>)</span>; this model predicts expectation in terms of the spectral similarity between different musical sounds. Lastly, our example statistical-learning model was IDyOM <span class="citation">(Pearce, <a href="#ref-Pearce2005-bm" role="doc-biblioref">2005</a>)</span>, a fairly sophisticated model that incorporates various special features to help it better predict melodic expectation in listeners.</p>
+<p>Current work has been generalising these ideas in various ways. One line of research follows Milne et al.'s psychoacoustic work, exploring how psychoacoustic models of expectation can help us to understand how listeners can perceive tonality in microtonal tuning systems <span class="citation">(Hearne, <a href="#ref-Hearne2020-hk" role="doc-biblioref">2020</a>)</span>. Other lines of work are taking the statistical learning approach and applying it to different musical domains, such as harmony <span class="citation">(Harrison, <a href="#ref-Harrison2020-si" role="doc-biblioref">2020</a>)</span> and rhythm <span class="citation">(Weij et al., <a href="#ref-Van_der_Weij2017-iv" role="doc-biblioref">2017</a>)</span>. The ultimate goal is to build a complete picture of how listeners generate musical expectations for all kinds of musical stimuli.</p>
+
+</div>
+</div>
+</div>
+<h3>References</h3>
+<div id="refs" class="references">
+<div id="ref-Cross1995-ar">
+<p>Cross, I. (1995). Review of “the analysis and cognition of melodic complexity: The implication-realization model”. <em>Narmour</em>, <em>12</em>(4), 486–509.</p>
+</div>
+<div id="ref-Eerola2009-ug">
+<p>Eerola, T., Louhivuori, J., &amp; Lebaka, E. (2009). Expectancy in sami yoiks revisited: The role of data-driven and schema-driven knowledge in the formation of melodic expectations. <em>Musicae Scientiae: The Journal of the European Society for the Cognitive Sciences of Music</em>, <em>13</em>(2), 231–272.</p>
+</div>
+<div id="ref-Fogel2015">
+<p>Fogel, A. R., Rosenberg, J. C., Lehman, F. M., Kuperberg, G. R., &amp; Patel, A. D. (2015). Studying musical and linguistic prediction in comparable ways: The melodic cloze probability method. <em>Frontiers in Psychology</em>, <em>6</em>, 1718. <a href="https://doi.org/10.3389/fpsyg.2015.01718">https://doi.org/10.3389/fpsyg.2015.01718</a></p>
+</div>
+<div id="ref-Harrison2020-si">
+<p>Harrison, P. M. C. (2020). <em>Modelling the perception and composition of western musical harmony</em> [PhD thesis]. Queen Mary University of London.</p>
+</div>
+<div id="ref-Hearne2020-hk">
+<p>Hearne, L. M. (2020). <em>The cognition of harmonic tonality in microtonal scales</em> [PhD thesis]. Western Sydney University.</p>
+</div>
+<div id="ref-Jacoby2019-ew">
+<p>Jacoby, N., Undurraga, E. A., McPherson, M. J., Valdés, J., Ossandón, T., &amp; McDermott, J. H. (2019). Universal and non-universal features of musical pitch perception revealed by singing. <em>Current Biology: CB</em>, <em>29</em>(19), 3229–3243.e12. <a href="https://doi.org/10.1016/j.cub.2019.08.020">https://doi.org/10.1016/j.cub.2019.08.020</a></p>
+</div>
+<div id="ref-Koelsch2009-yd">
+<p>Koelsch, S. (2009). Neural substrates of processing syntax and semantics in music. In <em>Music that works</em> (pp. 143–153). Springer-Verlag.</p>
+</div>
+<div id="ref-Koelsch2000">
+<p>Koelsch, S., Gunter, T., Friederici, A. D., &amp; Schröger, E. (2000). Brain indices of music processing: “Nonmusicians” are musical. <em>Journal of Cognitive Neuroscience</em>, <em>12</em>(3), 520–541.</p>
+</div>
+<div id="ref-krumhansl1982">
+<p>Krumhansl, C., &amp; Kessler, E. (1982). Tracing the dynamic changes in perceived tonal organization in a spatial representation of musical keys. <em>Psychological Review</em>, <em>89</em>(4), 334–368. <a href="https://doi.org/10.1037/0033-295x.89.4.334">https://doi.org/10.1037/0033-295x.89.4.334</a></p>
+</div>
+<div id="ref-Krumhansl1995-yz">
+<p>Krumhansl, C. L. (1995). Music psychology and music theory: Problems and prospects. <em>Music Theory Spectrum</em>, <em>17</em>(1), 53–80.</p>
+</div>
+<div id="ref-Krumhansl2000-nj">
+<p>Krumhansl, C. L., Toivanen, P., Eerola, T., Toiviainen, P., Järvinen, T., &amp; Louhivuori, J. (2000). Cross-cultural music cognition: Cognitive methodology applied to north sami yoiks. <em>Cognition</em>, <em>76</em>(1), 13–58. <a href="https://doi.org/10.1016/s0010-0277(00)00068-8">https://doi.org/10.1016/s0010-0277(00)00068-8</a></p>
+</div>
+<div id="ref-Leman2000-ky">
+<p>Leman, M. (2000). An auditory model of the role of short-term memory in probe-tone ratings. <em>Music Perception</em>, <em>17</em>(4), 481–509.</p>
+</div>
+<div id="ref-Lerdahl1988-hi">
+<p>Lerdahl, F. (1988). Tonal pitch space. <em>Music Perception</em>, <em>5</em>(3), 315–349. <a href="https://doi.org/10.2307/40285402">https://doi.org/10.2307/40285402</a></p>
+</div>
+<div id="ref-Margulis2005-sd">
+<p>Margulis, E. H. (2005). A model of melodic expectation. <em>Music Perception</em>, <em>22</em>(4), 663–714.</p>
+</div>
+<div id="ref-Milne2015-os">
+<p>Milne, A. J., Laney, R., &amp; Sharp, D. (2015). A spectral pitch class model of the probe tone data and scalic tonality. <em>Music Perception</em>, <em>32</em>(4), 364–393. <a href="https://doi.org/10.1525/MP.2015.32.4.364">https://doi.org/10.1525/MP.2015.32.4.364</a></p>
+</div>
+<div id="ref-Milne2011-iv">
+<p>Milne, A. J., Sethares, W. A., Laney, R., &amp; Sharp, D. B. (2011). Modelling the similarity of pitch collections with expectation tensors. <em>Journal of Mathematics &amp; Music. Mathematical and Computational Approaches to Music Theory, Analysis, Composition and Performance</em>, <em>5</em>(1), 1–20. <a href="https://doi.org/10.1080/17459737.2011.573678">https://doi.org/10.1080/17459737.2011.573678</a></p>
+</div>
+<div id="ref-Morgan2019">
+<p>Morgan, E., Fogel, A., Nair, A., &amp; Patel, A. D. (2019). Statistical learning and gestalt-like principles predict melodic expectations. <em>Cognition</em>, <em>189</em>, 23–34. <a href="https://doi.org/10.1016/j.cognition.2018.12.015">https://doi.org/10.1016/j.cognition.2018.12.015</a></p>
+</div>
+<div id="ref-Narmour1990-gv">
+<p>Narmour, E. (1990). <em>The analysis and cognition of basic melodic structures: The implication-realization model</em>. University of Chicago Press.</p>
+</div>
+<div id="ref-Narmour1992-ka">
+<p>Narmour, E. (1992). <em>The analysis and cognition of melodic complexity: The implication-realization model</em>. University of Chicago Press.</p>
+</div>
+<div id="ref-Parncutt1989-sm">
+<p>Parncutt, R. (1989). <em>Harmony: A psychoacoustical approach</em>. Springer-Verlag.</p>
+</div>
+<div id="ref-Pearce2005-bm">
+<p>Pearce, M. T. (2005). <em>The construction and evaluation of statistical models of melodic structure in music perception and composition</em> [PhD thesis]. City University, London.</p>
+</div>
+<div id="ref-Pearce2018-pw">
+<p>Pearce, M. T. (2018). Statistical learning and probabilistic prediction in music cognition: Mechanisms of stylistic enculturation. <em>Annals of the New York Academy of Sciences</em>, <em>1423</em>(1), 378–395.</p>
+</div>
+<div id="ref-Pearce2006-hk">
+<p>Pearce, M. T., &amp; Wiggins, G. A. (2006). Expectation in melody: The influence of context and learning. <em>Music Perception</em>, <em>23</em>(5), 377–405. <a href="https://doi.org/10.1525/mp.2006.23.5.377">https://doi.org/10.1525/mp.2006.23.5.377</a></p>
+</div>
+<div id="ref-Schellenberg1996-hz">
+<p>Schellenberg, E. G. (1996). Expectancy in melody: Tests of the implication-realization model. <em>Cognition</em>, <em>58</em>(1), 75–125. <a href="https://doi.org/10.1016/0010-0277(95)00665-6">https://doi.org/10.1016/0010-0277(95)00665-6</a></p>
+</div>
+<div id="ref-Thompson1996-pk">
+<p>Thompson, W. F. (1996). Eugene narmour: The analysis and cognition of basic musical structures (1990) and the analysis and cognition of melodic complexity (1992): A review and empirical assessment. <em>Journal of the American Musicological Society</em>, <em>49</em>(1), 127–145.</p>
+</div>
+<div id="ref-Tillmann2006">
+<p>Tillmann, B., Koelsch, S., Escoffier, N., Bigand, E., Lalitte, P., Friederici, A. D., &amp; Cramon, D. Y. von. (2006). Cognitive priming in sung and instrumental music: Activation of inferior frontal cortex. <em>Neuroimage</em>, <em>31</em>(4), 1771–1782. <a href="https://doi.org/10.1016/j.neuroimage.2006.02.028">https://doi.org/10.1016/j.neuroimage.2006.02.028</a></p>
+</div>
+<div id="ref-Van_der_Weij2017-iv">
+<p>Weij, B. van der, Pearce, M. T., &amp; Honing, H. (2017). A probabilistic model of meter perception: Simulating enculturation. <em>Frontiers in Psychology</em>, <em>8</em>. <a href="https://doi.org/10.3389/fpsyg.2017.00824">https://doi.org/10.3389/fpsyg.2017.00824</a></p>
+</div>
+</div>
+  <div class="chapter-nav">
+<div class="prev"><a href="consonance.html"><span class="header-section-number">11</span> Consonance</a></div>
+<div class="next"><a href="evolution.html"><span class="header-section-number">13</span> Evolution</a></div>
+</div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
+    <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
+      <ul class="nav navbar-nav">
+<li><a class="nav-link" href="#expectation"><span class="header-section-number">12</span> Expectation</a></li>
+<li><a class="nav-link" href="#introduction"><span class="header-section-number">12.1</span> Introduction</a></li>
+<li><a class="nav-link" href="#expectation-and-probability"><span class="header-section-number">12.2</span> Expectation and probability</a></li>
+<li>
+<a class="nav-link" href="#measuring-musical-expectations"><span class="header-section-number">12.3</span> Measuring musical expectations</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#rating"><span class="header-section-number">12.3.1</span> Rating</a></li>
+<li><a class="nav-link" href="#singing"><span class="header-section-number">12.3.2</span> Singing</a></li>
+<li><a class="nav-link" href="#priming"><span class="header-section-number">12.3.3</span> Priming</a></li>
+<li><a class="nav-link" href="#electroencephalography"><span class="header-section-number">12.3.4</span> Electroencephalography</a></li>
+<li><a class="nav-link" href="#summary"><span class="header-section-number">12.3.5</span> Summary</a></li>
+</ul>
+</li>
+<li>
+<a class="nav-link" href="#modelling-melodic-expectation"><span class="header-section-number">12.4</span> Modelling melodic expectation</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#music-theoretic-models"><span class="header-section-number">12.4.1</span> Music-theoretic models</a></li>
+<li><a class="nav-link" href="#psychoacoustic-models"><span class="header-section-number">12.4.2</span> Psychoacoustic models</a></li>
+<li><a class="nav-link" href="#statistical-learning-models"><span class="header-section-number">12.4.3</span> Statistical-learning models</a></li>
+<li><a class="nav-link" href="#recap-and-future-directions"><span class="header-section-number">12.4.4</span> Recap and future directions</a></li>
+</ul>
+</li>
+</ul>
+
+      <div class="book-extra">
+        <ul class="list-unstyled">
+<li><a id="book-source" href="https://github.com/pmcharrison/intro-to-music-and-science/blob/main/045-expectation.Rmd">View source <i class="fab fa-github"></i></a></li>
+          <li><a id="book-edit" href="https://github.com/pmcharrison/intro-to-music-and-science/edit/main/045-expectation.Rmd">Edit this page <i class="fab fa-github"></i></a></li>
+        </ul>
+</div>
+    </nav>
+</div>
+
+</div>
+</div> <!-- .container -->
+
+<footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>"<strong>Music and Science</strong>" was written by Peter M. C. Harrison. It was last built on 2023-01-04.</p>
+  </div>
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>This book was built by the <a class="text-light" href="https://bookdown.org">bookdown</a> R package.</p>
+  </div>
+
+</div></div>
+</footer><!-- dynamically load mathjax for compatibility with self-contained --><script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script><script type="text/x-mathjax-config">const popovers = document.querySelectorAll('a.footnote-ref[data-toggle="popover"]');
+for (let popover of popovers) {
+  const div = document.createElement('div');
+  div.setAttribute('style', 'position: absolute; top: 0, left:0; width:0, height:0, overflow: hidden; visibility: hidden;');
+  div.innerHTML = popover.getAttribute('data-content');
+
+  var has_math = div.querySelector("span.math");
+  if (has_math) {
+    document.body.appendChild(div);
+    MathJax.Hub.Queue(["Typeset", MathJax.Hub, div]);
+    MathJax.Hub.Queue(function() {
+      popover.setAttribute('data-content', div.innerHTML);
+      document.body.removeChild(div);
+    })
+  }
+}
+</script>
+</body>
+</html>
