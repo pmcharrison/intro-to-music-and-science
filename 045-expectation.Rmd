@@ -427,6 +427,9 @@ I mentioned before that @Milne2011-iv weren't the first to come up with this spe
 
 A very appealing aspect of these psychoacoustic models is that they can suggest deep explanations for the ultimate origins of stylistic rules. For example, Milne et al.'s model is showing that the relative expectedness of different pitch classes within a given tonal context might well be explained by the harmonic spectra of these tones, rather than any particular cultural learning. On the other hand, these models are limited in terms of what they can hope to explain. Fundamentally, only so much can be explained by acoustics and basic biology -- to explain more nuanced and culturally dependent aspects of melodic expectation, we need models that are capable of learning.
 
+Note: You can try out Milne's model on your own chords using
+this [Colab Notebook](https://colab.research.google.com/drive/1gazS3VH2y4gr0MrgjXFQBHsR-4NBgm78).
+
 ### Statistical-learning models
 
 Statistical-learning models simulate processes of *enculturation* over a listener's lifespan. Through exposure to lots of music from a particular musical style, the listener acquires an intuition for what kinds of melodic patterns are common and which are uncommon. This intuition then drives their reactions to new, unfamiliar melodies.
