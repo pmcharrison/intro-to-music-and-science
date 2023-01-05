@@ -142,7 +142,7 @@
 <p>Fortunately statisticians have developed various techniques that allow us to have our cake and eat it: to generate standard errors for our estimates while analysing the whole dataset at once. These techniques are mostly straightforward with standard statistical software.</p>
 <p>In the simple case where we are computing the mean of a dataset, it turns out that the standard error of this mean can be estimated by taking the standard deviation and dividing it by the square root of the sample size. This is a useful corollary of the Central Limit Theorem mentioned above.</p>
 <p>Here is an example of computing the standard error of the mean in R:</p>
-<div class="sourceCode" id="cb44"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb43"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">data</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">5</span>, <span class="fl">7</span>, <span class="fl">3</span>, <span class="fl">4</span>, <span class="fl">5</span>, <span class="fl">6</span>, <span class="fl">2</span>, <span class="fl">3</span>, <span class="fl">4</span><span class="op">)</span>
 
 <span class="va">sd</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/sd.html">sd</a></span><span class="op">(</span><span class="va">data</span><span class="op">)</span>
@@ -230,11 +230,11 @@ Figure 26.3: The same fictional dataset, but plotting changes in IQ scores. The 
 <p>In both cases, we see strong positive correlations: houses with more rooms tend to be priced higher, and houses with more floor space tend to be priced higher.</p>
 <p>Let’s now look at the same data through the lens of linear regression. The primary purpose of linear regression is to estimate <em>marginal effects</em>. Marginal effects tell us how the outcome variable would change if we adjusted one predictor while holding all the others constant.</p>
 <p>We begin by fitting the regression model:</p>
-<div class="sourceCode" id="cb45"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb44"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># Fitting the regression model</span>
 <span class="va">mod</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/lm.html">lm</a></span><span class="op">(</span><span class="va">price</span> <span class="op">~</span> <span class="va">rooms</span> <span class="op">+</span> <span class="va">floorspace</span>, data <span class="op">=</span> <span class="va">house_dataset</span><span class="op">)</span></code></pre></div>
 <p>We then plot the marginal effect for floorspace. As before, we see a positive association: increasing floorspace causes the price to increase.</p>
-<div class="sourceCode" id="cb46"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb45"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># Plotting marginal effects requires the ggeffects package,</span>
 <span class="co"># you can install this with the following command:</span>
 <span class="co">#</span>
@@ -252,7 +252,7 @@ Figure 26.4: Marginal effect of floorspace on house price in a fictional dataset
 </p>
 </div>
 <p>Now let’s plot the marginal effect of room number:</p>
-<div class="sourceCode" id="cb47"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb46"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="op">(</span><span class="fu">ggeffects</span><span class="fu">::</span><span class="fu"><a href="https://strengejacke.github.io/ggeffects/reference/ggpredict.html">ggpredict</a></span><span class="op">(</span><span class="va">mod</span>, terms <span class="op">=</span> <span class="st">"rooms"</span><span class="op">)</span> <span class="op">%&gt;%</span> <span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html">plot</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span> 
   <span class="fu">scale_x_continuous</span><span class="op">(</span><span class="st">"Number of rooms"</span><span class="op">)</span> <span class="op">+</span> 
   <span class="fu">scale_y_continuous</span><span class="op">(</span><span class="st">"Price"</span><span class="op">)</span> <span class="op">+</span>
@@ -277,12 +277,12 @@ Figure 26.5: Marginal effect of room number on house price in a fictional datase
 <span class="header-section-number">26.7.2</span> Generating predictions from regression models<a class="anchor" aria-label="anchor" href="#generating-predictions-from-regression-models"><i class="fas fa-link"></i></a>
 </h3>
 <p>We have discussed how regression models can be used for explaining relationships between variables. However, they can also be used for generating predictions for new data points. For example, I can use the regression model from above to predict the price of a house with a floorspace of 125 square metres and 5 rooms:</p>
-<div class="sourceCode" id="cb48"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb47"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/stats/predict.html">predict</a></span><span class="op">(</span><span class="va">mod</span>, newdata <span class="op">=</span> <span class="fu">tibble</span><span class="op">(</span>rooms <span class="op">=</span> <span class="fl">5</span>, floorspace <span class="op">=</span> <span class="fl">125</span><span class="op">)</span><span class="op">)</span> <span class="op">%&gt;%</span> 
   <span class="fu"><a href="https://rdrr.io/r/base/numeric.html">as.numeric</a></span><span class="op">(</span><span class="op">)</span>
 <span class="co">#&gt; [1] 391290</span></code></pre></div>
 <p>The <code>equatiomatic</code> package in R provides a useful tool for extracting the equation used to generate these predictions:</p>
-<div class="sourceCode" id="cb49"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb48"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># install.packages("equatiomatic")</span>
 
 <span class="fu">equatiomatic</span><span class="fu">::</span><span class="fu"><a href="https://datalorax.github.io/equatiomatic/reference/extract_eq.html">extract_eq</a></span><span class="op">(</span><span class="va">mod</span>, use_coefs <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></code></pre></div>
@@ -393,7 +393,7 @@ Figure 26.5: Marginal effect of room number on house price in a fictional datase
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Music and Science</strong>" was written by Peter M. C. Harrison. It was last built on 2023-01-04.</p>
+    <p>"<strong>Music and Science</strong>" was written by Peter M. C. Harrison. It was last built on 2023-01-05.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">
