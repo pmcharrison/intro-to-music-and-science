@@ -1,7 +1,11 @@
 # Expectation
 
-```{r, echo = FALSE}
+```{r, echo = FALSE, include = FALSE}
 source("setup.R")
+
+library(tidyverse)
+library(ggpubr)
+theme_set(theme_pubr())
 
 knitr::opts_chunk$set(
   echo = FALSE, results = "asis"
