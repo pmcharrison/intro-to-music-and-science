@@ -246,11 +246,11 @@ The theory behind the priming task is as follows. When the target is more expect
 
 EEG is a neuroimaging technique that has proved particularly useful for studying musical expectations. The reason is that EEG has a particularly high time resolution compared to many other neuroimaging techniques, which allows us to study the time course of the brain's responses to musical events at a very granular level.
 
-Participants in EEG studies wear caps containing many different electrodes which are placed into contact with the scalp. The EEG device records small changes in voltage on the scalp. These voltage changes are linked to the firing of neurons on the edges of the brain. 
+Participants in EEG studies wear caps containing many different electrodes which are placed into contact with the scalp. The EEG device records small changes in voltage on the scalp. These voltage changes are linked to the firing of neurons on the edges of the brain.
 
 An important thing to know about EEG data is that it tends to be very noisy. Of course, even when the participant isn't actively doing anything, their brain is constantly at work, and this produces constant fluctuations in the EEG signal. When we conduct EEG experiments, we want to find a way of minimising this kind of random noise, and amplify the part of the EEG signal that corresponds to a particular experimental intervention, for example playing a melody. This task can be seen as a problem of maximising the 'signal-to-noise ratio'.
 
-The event-related potential (ERP) technique is a classic way to maximise this signal-to-noise ratio. Here we suppose that we're interested in measuring the characteristic EEG response to a particular stimulus, for example an unexpected note in a melody, or the resolution of a 4-3 suspension. We collect EEG data for many trials like this, and average the results. The averaging makes the random noise component disappear away towards zero, leaving us with an event-related potential like the one plotted here. On the x-axis, we have the time after the stimulus (in milliseconds); on the y-axis, we have the instantaneous potential, corresponding to the voltage measured at a particular scalp electrode. We find that ERPs typically contain various peaks or troughs, which we call *components*. If we're lucky, we can identify individual components with particular aspects of cognitive processing. Typically the earlier components will correspond to more primitive sensory processing, whereas the later components will correspond to higher-level cognitive processing. 
+The event-related potential (ERP) technique is a classic way to maximise this signal-to-noise ratio. Here we suppose that we're interested in measuring the characteristic EEG response to a particular stimulus, for example an unexpected note in a melody, or the resolution of a 4-3 suspension. We collect EEG data for many trials like this, and average the results. The averaging makes the random noise component disappear away towards zero, leaving us with an event-related potential like the one plotted here. On the x-axis, we have the time after the stimulus (in milliseconds); on the y-axis, we have the instantaneous potential, corresponding to the voltage measured at a particular scalp electrode. We find that ERPs typically contain various peaks or troughs, which we call *components*. If we're lucky, we can identify individual components with particular aspects of cognitive processing. Typically the earlier components will correspond to more primitive sensory processing, whereas the later components will correspond to higher-level cognitive processing.
 
 ```{r}
 embed_image(
@@ -263,13 +263,13 @@ embed_image(
 
 Neuroscientists have identified various kinds of ERPs in response to musical stimuli. One example is the Early Right Anterior Negativity, or ERAN, originally identified by @Koelsch2000. For copyright reasons we don't have an image of an ERAN to show for you here, but we recommend looking at Figure 1C in @Koelsch2009-yd for a reference; you can see an ERAN in that plot as a peak in the red curve at about 250 ms. We typically see the ERAN as a response to syntactically unexpected chords in chord sequences: chords that violate the listener's cultural expectations for what chords should come next.
 
-The ERAN is 'early' because it happens relatively early in the time course. The term 'right' refers to the way in which the ERAN is typically localised to the right hemisphere of the brain (though some studies haven't reproduced this effect). The term 'anterior' refers to the way in which the ERAN is typically localised forward in the brain. The term 'negativity' refers to the way in which the ERAN peaks with negative voltage (note how on ERP diagrams, high points correspond to negative numbers, not positive numbers; you can see this from the labelling of the y axis).  
+The ERAN is 'early' because it happens relatively early in the time course. The term 'right' refers to the way in which the ERAN is typically localised to the right hemisphere of the brain (though some studies haven't reproduced this effect). The term 'anterior' refers to the way in which the ERAN is typically localised forward in the brain. The term 'negativity' refers to the way in which the ERAN peaks with negative voltage (note how on ERP diagrams, high points correspond to negative numbers, not positive numbers; you can see this from the labelling of the y axis).
 
-In theory, we can use ERPs like the ERAN to track musical expectation in melodies or chord sequences. In the case of chord sequences, seeing an ERAN would tell us that the chord was syntactically unexpected. An absence of an ERAN would tell us that the chord was relatively expected. 
+In theory, we can use ERPs like the ERAN to track musical expectation in melodies or chord sequences. In the case of chord sequences, seeing an ERAN would tell us that the chord was syntactically unexpected. An absence of an ERAN would tell us that the chord was relatively expected.
 
 The great advantage of this approach is its directness. Our psychological data is no longer filtered through distracting behavioural paradigms, such as rating or discrimination tasks. We are leaving our participants to experience music in a relatively undisturbed way, close to how they might ordinarily listen to music. This must surely increase the validity of the results. What's more, the task can give us some insight into the neural dynamics of expectation. We can directly observe how long it takes the brain to process different kinds of violations, without having to wait for the participant to initiate any physical movements. The data can also give us some insights into which regions of the brain are involved in generating and monitoring expectations.
 
-There are some important disadvantages to this approach, though. The first is the noisy nature of the measurement process. On an individual trial, random fluctuations in brain activity make it difficult to discern anything useful in the EEG signal. To get interpretable results, the experimenter must conduct many trials and average over them. To get enough trials, experimenters often end up repeating the same stimulus multiple times, but this can be problematic because repetition will change the participants' expectations. 
+There are some important disadvantages to this approach, though. The first is the noisy nature of the measurement process. On an individual trial, random fluctuations in brain activity make it difficult to discern anything useful in the EEG signal. To get interpretable results, the experimenter must conduct many trials and average over them. To get enough trials, experimenters often end up repeating the same stimulus multiple times, but this can be problematic because repetition will change the participants' expectations.
 
 A second problem concerns what we might call *measurement validity*. How can we be sure that an ERP such as the ERAN is really measuring expectation? Sure, several experiments have found ERANs occurring in the context of syntactically unexpected chords, but it is difficult (or perhaps even impossible) to be sure that the ERAN is truly a 'pure' marker of expectation violation. This measurement validity question crops up again and again in different aspects of cognitive neuroscience.
 
@@ -281,11 +281,11 @@ We covered four different empirical approaches for assessing musical expectation
 
 From a psychological perspective, models help us to formalise complex theories in a way that helps us to test them in scientific experiments. From a practical perspective, good models of music perception can also have interesting applications, for example in automatic music composition.
 
-In this section we're going to talk about three main classes of melodic expectation models: music-theoretic models, psychoacoustic models, and statistical-learning models. 
+In this section we're going to talk about three main classes of melodic expectation models: music-theoretic models, psychoacoustic models, and statistical-learning models.
 
 ### Music-theoretic models
 
-These models were created by expert music theorists who set about the goal of expressing their personal understanding of music and music perception in a formal way. 
+These models were created by expert music theorists who set about the goal of expressing their personal understanding of music and music perception in a formal way.
 
 The classic model in this tradition is Narmour's Implication-Realisation model, which Narmour introduced in a couple of books published in the early 1990s [@Narmour1990-gv; @Narmour1992-ka]. The work is heavily influenced by earlier work by the philosopher Leonard Meyer. The main goal of Narmour's model is to explain how the arrangement of the notes in a melody combine to generate certain expectations in the listener, which Narmour calls *implications*.
 
@@ -333,27 +333,27 @@ embed_image(
 )
 ```
 
-The **closure** principle is different in its own way: it's meant to determine the completion of melodic phrases. Narmour states that the impression of closure can be created by various different features. One feature is when the melody exhibits a change of direction. Another feature is when a large interval is followed by a small interval. Narmour also describes various other closure features, to do with rhythm and tonality, which we will not consider here. 
+The **closure** principle is different in its own way: it's meant to determine the completion of melodic phrases. Narmour states that the impression of closure can be created by various different features. One feature is when the melody exhibits a change of direction. Another feature is when a large interval is followed by a small interval. Narmour also describes various other closure features, to do with rhythm and tonality, which we will not consider here.
 
 Narmour's model was mainly motivated by music analysis and introspection. It prompted a series of empirical studies investigating whether the principles actually held true for the average listener.
 
-A series of these studies have investigated how well Narmour's principles held in **Western** listeners [e.g. @Krumhansl1995-yz; @Schellenberg1996-hz; @Pearce2006-hk]. Generally speaking, the conclusions are rather positive: most of the time, most of the rules end up being supported. In any individual study, the researchers might not necessarily find evidence for all of Narmour's rules, but when we look over multiple studies, we see that most of the rules end up being pretty well supported. 
+A series of these studies have investigated how well Narmour's principles held in **Western** listeners [e.g. @Krumhansl1995-yz; @Schellenberg1996-hz; @Pearce2006-hk]. Generally speaking, the conclusions are rather positive: most of the time, most of the rules end up being supported. In any individual study, the researchers might not necessarily find evidence for all of Narmour's rules, but when we look over multiple studies, we see that most of the rules end up being pretty well supported.
 
 An important part of Narmour's theory is the claim that these bottom-up principles are innate. If so, we should see these principles manifesting across **different musical cultures**. There are not that many studies in the literature testing this question, unfortunately: I'm only aware of three. These three studies investigate three non-Western participant groups: Chinese participants [@Schellenberg1996-hz], participants from the Sami people, who are an indigenous people from the Scandinavian peninsula [@Krumhansl2000-nj; @Eerola2009-ug], and finally South African traditional healers [@Eerola2009-ug]. The general message from these studies is that these populations do differ in terms of their melodic expectations, but these expectations nonetheless share a common basis in Narmour's bottom-up principles. In other words, Narmour's bottom-up model does seem to generalise fairly well cross-culturally. However, we'd need to test many more populations before making a firm conclusion about this. For more discussion about melodic structures cross-culturally, see the 'Music across the world' chapter.
 
 There are a few other music-theoretic expectation models in the literature. @Margulis2005-sd describes a model of melodic expectation that includes various relatively high-level principles that link expectation to tension. This model has been surprisingly underexplored in subsequent work. The 'Tonal Pitch Space' model of @Lerdahl1988-hi is not specifically about melodies or about expectation, but it describes Western tonality in a cognitively informed way that can be used to predict the relative stability of different notes in a melody, and their tendencies to resolve in particular directions.
 
-These music-theoretic modelling approaches have two main disadvantages. The first is that their rules are speculative: they are generally grounded in the theorist's intuition, and are not necessarily supported by objective psychological data. The second disadvantage is a consequence of the first: since the models are grounded in the theorists' intuitions, and since the theorists are typically grounded in Western music theory, then the models are likely to be Western-centric in nature. 
+These music-theoretic modelling approaches have two main disadvantages. The first is that their rules are speculative: they are generally grounded in the theorist's intuition, and are not necessarily supported by objective psychological data. The second disadvantage is a consequence of the first: since the models are grounded in the theorists' intuitions, and since the theorists are typically grounded in Western music theory, then the models are likely to be Western-centric in nature.
 
 Given this context, it's particularly impressive how well Narmour's implication-realisation model seems to generalise, both across different Western listeners, but even across musical cultures. It's a testament to how far one can get with speculative methods.
 
 ### Psychoacoustic models
 
-Psychoacoustic models come from a very different perspective. They try to explain melodic expectation in terms of basic properties of sound, and the way that sound is processed by the ear and the brain. 
+Psychoacoustic models come from a very different perspective. They try to explain melodic expectation in terms of basic properties of sound, and the way that sound is processed by the ear and the brain.
 
-Various kinds of psychoacoustic models have been used to try and understand melody perception. Here we're going to focus on one such model, from @Milne2011-iv. Milne has used this model to explain various aspects of tonal perception that others have often assumed to be cultural in origin. 
+Various kinds of psychoacoustic models have been used to try and understand melody perception. Here we're going to focus on one such model, from @Milne2011-iv. Milne has used this model to explain various aspects of tonal perception that others have often assumed to be cultural in origin.
 
-The fundamental idea behind Milne's model is that listeners expect successive sounds to have high spectral similarity. We can imagine that this is motivated by real-world auditory perception, where sound spectra will typically stay relatively consistent over time. This isn't a new idea: @Parncutt1989-sm and @Leman2000-ky have also presented similar theories. Here we're going to focus on Milne's model because it takes a particularly simple form, yet works rather well in practice. 
+The fundamental idea behind Milne's model is that listeners expect successive sounds to have high spectral similarity. We can imagine that this is motivated by real-world auditory perception, where sound spectra will typically stay relatively consistent over time. This isn't a new idea: @Parncutt1989-sm and @Leman2000-ky have also presented similar theories. Here we're going to focus on Milne's model because it takes a particularly simple form, yet works rather well in practice.
 
 The main function of the model itself is to compute the spectral similarity of a pair of sounds. If we know this spectral similarity, then we can try and predict the expectedness of a given chord progression. The computation process involves two steps. First, the model computes a perceptual spectrum for each sound, intended to represent how the sound appears to the listener. Second, the model computes the similarity between the two perceptual spectra, to arrive at the overall perceived spectral similarity.
 
@@ -363,7 +363,7 @@ Simulating the perceptual spectrum involves several steps:
 
 1.  Expand the notes into **harmonic spectra**.
 
-2.  Apply the **octave invariance** principle. This is done by converting all the pitches in the spectrum into *pitch classes*. Pitch classes are based on the idea of 'octave equivalence' -- if two notes are separated by a whole number of octaves, they are given the same pitch class. When we compute the pitch-class spectrum, all the different Cs end up being collapsed to the same spectral component, all the different Gs end up collapsed to the same spectral component, and so on. The resulting spectral components have amplitudes corresponding to the sums of their contributing components. 
+2.  Apply the **octave invariance** principle. This is done by converting all the pitches in the spectrum into *pitch classes*. Pitch classes are based on the idea of 'octave equivalence' -- if two notes are separated by a whole number of octaves, they are given the same pitch class. When we compute the pitch-class spectrum, all the different Cs end up being collapsed to the same spectral component, all the different Gs end up collapsed to the same spectral component, and so on. The resulting spectral components have amplitudes corresponding to the sums of their contributing components.
 
 3.  **Smooth** the spectrum to account for the limited acuity of pitch perception. As a result, instead of very precise peaks at pitch classes of '0' or '7', we get smoother bumps.
 
@@ -389,7 +389,7 @@ embed_image(
 
 So, we now know how the model computes perceptual spectra for different sounds. In order to predict expectation, we now need to compute the similarity between different perceptual spectra.
 
-Let's apply the model in the context of Krumhansl & Kessler's famous probe-tone experiments [@krumhansl1982], which we discussed earlier. Here the participant is played a particular tonal context, for example C major triad, and then asked to rate the expectedness of different 'probe tones' that come after. In this example, we're going to consider a probe tone of 'C'. 
+Let's apply the model in the context of Krumhansl & Kessler's famous probe-tone experiments [@krumhansl1982], which we discussed earlier. Here the participant is played a particular tonal context, for example C major triad, and then asked to rate the expectedness of different 'probe tones' that come after. In this example, we're going to consider a probe tone of 'C'.
 
 To apply Milne's model to these contexts, we first compute perceptual representations for the tonal context and the probe tone, and then we compute the similarity of these perceptual representations. Here the perceptual representation for the C major triad is plotted in grey, and the representation for the C probe tone is plotted in red. We see that these two spectra are rather well aligned: both of these spectra have large peaks at C, E, and G. For the triad, these peaks come mainly from the fundamental frequencies of each chord tone. For the probe tone, these peaks come from particular harmonics within the complex tone.
 
@@ -431,9 +431,9 @@ A very appealing aspect of these psychoacoustic models is that they can suggest 
 
 Statistical-learning models simulate processes of *enculturation* over a listener's lifespan. Through exposure to lots of music from a particular musical style, the listener acquires an intuition for what kinds of melodic patterns are common and which are uncommon. This intuition then drives their reactions to new, unfamiliar melodies.
 
-We're going to focus on a particular statistical-learning model from the literature called the Information Dynamics Of Music model, or IDyOM for short @Pearce2005-bm. 
+We're going to focus on a particular statistical-learning model from the literature called the Information Dynamics Of Music model, or IDyOM for short @Pearce2005-bm.
 
-We talked already in a previous section about the idea of understanding expectation in terms of conditional probabilities. Here we suppose that the listener has just heard a particular melodic context, and is trying to predict what note is going to come next. The expectedness of a particular continuation is operationalised probabilistically as the conditional probability of observing that note given the previous context. 
+We talked already in a previous section about the idea of understanding expectation in terms of conditional probabilities. Here we suppose that the listener has just heard a particular melodic context, and is trying to predict what note is going to come next. The expectedness of a particular continuation is operationalised probabilistically as the conditional probability of observing that note given the previous context.
 
 ```{r}
 embed_image(
@@ -461,11 +461,11 @@ IDyOM does have some special features though, which set it apart from simpler mo
 
 The idea about viewpoints is that there's many different ways of looking at a particular melody:
 
--   We could consider the **pitches** themselves, perhaps expressed on a MIDI scale. 
+-   We could consider the **pitches** themselves, perhaps expressed on a MIDI scale.
 
--   We could consider the **contour** pattern, which describes whether each note goes up or down compared to its predecessor. In the below diagram I've marked ascending intervals with '+' symbols and descending intervals with '-' symbols. 
+-   We could consider the **contour** pattern, which describes whether each note goes up or down compared to its predecessor. In the below diagram I've marked ascending intervals with '+' symbols and descending intervals with '-' symbols.
 
--   We could consider an **intervallic** representation, where each note is represented as a signed number of semitones from the previous note. For example, the first interval in this melody is an ascending major third, corresponding to four semitones, so we write a 4 under the second note of the melody. The second interval is an ascending minor third, so we write a 3 under the third melody note, and so on. 
+-   We could consider an **intervallic** representation, where each note is represented as a signed number of semitones from the previous note. For example, the first interval in this melody is an ascending major third, corresponding to four semitones, so we write a 4 under the second note of the melody. The second interval is an ascending minor third, so we write a 3 under the third melody note, and so on.
 
 -   We could consider a **scale degree** representation, where each note is represented relative to the local tonic. Here the first few notes outline the major triad, so we write 1, 3, and 5 underneath them, as we would do in Roman numeral analyses.
 
@@ -481,7 +481,7 @@ Each of these different representation schemes is called a 'viewpoint'. The idea
 
 #### Variable-order Markov modelling
 
-This feature concerns the kinds of statistical regularities that the model is able to learn. 
+This feature concerns the kinds of statistical regularities that the model is able to learn.
 
 Let's begin by defining a 1st-order Markov model. A 1st-order Markov model makes its predictions by solely looking at the previous element in the sequence. If we're looking at the pitch viewpoint, this means looking only at the previous pitch; if we're looking at the interval viewpoint, that means looking only at the previous interval, and so on. This sounds like a big sacrifice, and in a sense it is -- you're discarding information that could be useful in predicting the next note. On the other hand, there's an important advantage, which is that discarding this information helps to make the learning process more tractable, because there's only a limited number of possible contexts to learn.
 
@@ -568,15 +568,15 @@ embed_image(
 )
 ```
 
-Looking at note position 23, we see that both the model and the listeners have very *high* surprise. We can see why this happens when we look at the melody: there\'s a big leap of an ascending minor seventh, which is rather unexpected in a melodic context. 
+Looking at note position 23, we see that both the model and the listeners have very *high* surprise. We can see why this happens when we look at the melody: there\'s a big leap of an ascending minor seventh, which is rather unexpected in a melodic context.
 
 After this point, though, the melody becomes rather predictable again, producing a descending scale back to the tonic.
 
-IDyOM has been successfully applied to quite a few psychological contexts. It\'s been demonstrated to predict listener **expectation** fairly well in a variety of tasks, ranging from rating to priming to EEG. It\'s been shown to predict **emotional responses**, at least to a certain degree: high levels of surprise are associated with increased arousal and negative emotional valence (we\'ll talk more about arousal and valence next week). The model seems to predict the **memorability** of sequences: more predictable sequences are easier to remember. It\'s also been shown to predict **phrase boundary perception**, to some degree: high surprise acts as a cue for initiating a new phrase. 
+IDyOM has been successfully applied to quite a few psychological contexts. It\'s been demonstrated to predict listener **expectation** fairly well in a variety of tasks, ranging from rating to priming to EEG. It\'s been shown to predict **emotional responses**, at least to a certain degree: high levels of surprise are associated with increased arousal and negative emotional valence (we\'ll talk more about arousal and valence next week). The model seems to predict the **memorability** of sequences: more predictable sequences are easier to remember. It\'s also been shown to predict **phrase boundary perception**, to some degree: high surprise acts as a cue for initiating a new phrase.
 
 Note position 23 is an example of high surprise at a phrase boundary. The high surprise tells us that the transition between the low F sharp and the high E would be relatively unlikely as part of a normal melodic phrase -- this suggests that the transition potentially occurs over a phrase boundary.
 
-The big advantage of IDyOM as a model of melodic expectation is that it can predict listener expectations rather accurately. So far it seems to outperform all the competitor models in the literature. 
+The big advantage of IDyOM as a model of melodic expectation is that it can predict listener expectations rather accurately. So far it seems to outperform all the competitor models in the literature.
 
 One disadvantage is that it can be difficult to interpret what the model has learned. IDyOM ends up learning a vast number of conditional probabilities, and it\'s difficult for the researcher to interpret those probabilities manually. A second disadvantage is that IDyOM doesn\'t differentiate between aspects of expectation that might be learned from a musical style and those that have non-musical origins. For example, IDyOM quickly learns that small intervals are more common than large intervals, and hence treats large intervals as relatively unexpected. It could be true that listeners learn this fact from music listening, but it\'s also possible that listeners learn this expectation from listening to speech, or even are born with an innate expectation for small intervals.
 
