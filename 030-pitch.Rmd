@@ -80,7 +80,35 @@ embed_image(
 
 Specifically, the base of the basilar membrane resonates at high frequencies, but as we move from the base to the apex, the resonant frequencies become lower and lower. As a result, when sound enters the cochlea, its different spectral components are translated into resonances at different locations along the basilar membrane. This spatial localisation of frequency components is called *tonotopy*. These different locations have their own connections to nerve cells, which communicate the resonances towards the brain, with these resonances already separated by spectral frequency.
 
-The tonotopic nature of the basilar membrane is often described using the metaphor of *auditory filters*. In sound engineering, a filter is an object that selectively retains a subset of the frequencies in a frequency spectrum. For example, a low-pass filter only retains low frequencies, whereas a high-pass filter only retains high frequencies. When people talk about auditory filters in the context of the basilar membrane, they are talking about the way in which particular regions of the basilar membrane behaves somewhat like individual auditory filters. Specifically, a given region of the basilar membrane will only retain frequencies that are close to that region's characteristic frequency. The width of this filter is termed the 'critical band'.
+**The mechanics of resonance**. It took a while for scientists to work out how exactly the ear might resonate in response to pitches. Two theories were particularly prominent, historically speaking: Helmholtz's *sympathetic resonance* theory [@Helmholtz1875-fm], and von Békésy's *travelling wave* theory [@Von_Bekesy1960-oh]. According to Helmholtz's theory, the ear contains many separate resonant elements, each tuned to a distinct characteristic frequency, similar to the strings in a piano. Incoming sound would then cause particular elements to resonate according to the sound's spectral frequencies (Panel A in the figure below). According to von Békésy, sound vibrations instead induce a wave to travel down the length of the basilar membrane, analogous to what happens when you hold a rope at one end and flick it (Panel B; see also [this link](https://isle.hanover.edu/Ch10AuditorySystem/Ch10TravellingWave.html) for an interactive demo). Given appropriate mechanical construction, such a travelling wave should end up stimulating different parts of the membrane according to the different spectral frequencies. von Békésy's theory is now considered validated by an set of painstaking dissection experiments that won him the 1961 Nobel Prize in Physiology or Medicine, but some people do still think Helmholtz's original theory has some mileage; see @Bell2004-wo for more history and discussion.
+
+```{r}
+embed_image(
+  "images/resonance-and-travelling-waves.png",
+  title = "Schematic illustration of two theories of aural resonance.",
+  info = "**A:** Helmholtz's *sympathetic resonance* theory [@Helmholtz1875-fm]. **B:** von Békésy's travelling wave theory [@Von_Bekesy1960-oh].",
+  width = "100%",
+  credit = "@Bell2004-wo, [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)."
+)
+```
+
+**Auditory filters**. Both Helmholtz's and von Békésy's theories predict that different parts of the basilar membrane will oscillate in response to different spectral components. A given location of the basilar membrane will, in practice, respond to a range of spectral frequencies centred on a particular *characteristic frequency*; put another way, it behaves like an *auditory filter*, filtering the frequency spectrum to include only a small range of frequencies. This frequency range is termed the *critical band*, and its width is termed the *critical bandwidth*, or sometimes the *equivalent rectangular bandwidth* (ERB). Critical bandwidth is closely linked to the perceptual sensitivity of the basilar membrane; when two tones fall within the same critical band, they both excite the same auditory filter, causing interference effects including masking (where one tone makes another tone sound quieter) and beating (i.e. fluctuations in sound amplitude). Critical bandwidth varies according to several factors; for example, louder sounds elicit a larger critical bandwidth, presumably because the increased energy spreads over a wide region of the basilar membrane. If we express critical bandwidths in musical semitones, we find average values of 2-4 semitones for ordinary musical registers, and we find that the number of semitones in the critical band *increases* for lower pitches, meaning that a given musical interval sounds 'muddy' and unclear if we play it low on the piano (or another instrument).
+
+```{r}
+embed_image(
+  "images/band-pass-filter.svg",
+  title = "An idealised band-pass filter, used to model an auditory filter.",
+  info = "$F_C$ is the characteristic frequency, and $F_1$ and $F_2$ correspond to the extrema of the critical band.",
+  width = "90%",
+  credit = "[Public domain.](https://en.wikipedia.org/wiki/File:Band-pass_filter.svg)"
+)
+```
+
+**Inner hair cells.**
+
+**Outer hair cells.**
+
+The tonotopic nature of the basilar membrane is often described using the
 
 As discussed previously, a complex tone has many spectral components. How would the brain merge these all together to form a coherent percept of pitch? It's thought that the brain uses a *template-matching process*, where the template corresponds to a set of equally spaced harmonics, each corresponding to integer multiples of a common fundamental frequency, with amplitude decreasing as harmonic number increases. This template could either be innate or learned through experience.
 
