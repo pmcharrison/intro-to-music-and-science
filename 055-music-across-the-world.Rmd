@@ -159,7 +159,7 @@ One of the most obvious features cross-culturally is that melodies tend to conta
 Of course, there are always counter-examples to these kinds of rules. Yodelling is an example, where we see big pitch leaps as the singer jumps rapidly between chest voice and falsetto. Experienced yodellers can create impressive pseudo-polyphonic lines as a result.
 
 ```{r}
-embed_youtube_video("vQhqikWnQCU", width = "100%", title = "Yodelling.", info = "'Auf und auf voll lebenslust', sung by Franzl Lang.")
+embed_youtube_video("8_UnANdDqJc", width = "100%", title = "Yodelling.", info = "'Auf und auf voll lebenslust', sung by Franzl Lang.")
 ```
 
 #### Declination
