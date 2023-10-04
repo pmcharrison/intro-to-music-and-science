@@ -4,9 +4,9 @@
 
 In Section \@ref(foundations-of-acoustics) we saw various forms of idealised waves: the sine wave, the sawtooth wave, and the square wave. These waves all differ in shape, but they share a key property: they are all *periodic*. By periodic, we mean that the wave repeats itself at a regular time interval. This periodicity turns out to be integral to pitch perception.
 
-![**An example sine wave.** (ref:237a31fb-c80b-4979-b42a-52a0f3bc8bb5) ](images/sine-wave-frequency=240.png){width='400px'}
+![**An example sine wave.** (ref:c26c7907-dcdc-4d7a-951c-35161cc4e22e) ](images/sine-wave-frequency=240.png){width='400px'}
 
-(ref:237a31fb-c80b-4979-b42a-52a0f3bc8bb5)  <audio controls controlsList='nodownload' style='display: block; margin-top: 10px'><source src='audio/tone-frequency=240.wav' type='audio/mpeg'></audio>
+(ref:c26c7907-dcdc-4d7a-951c-35161cc4e22e)  <audio controls controlsList='nodownload' style='display: block; margin-top: 10px'><source src='audio/tone-frequency=240.wav' type='audio/mpeg'></audio>
 
 We also covered the notion of 'frequency'. Frequency tells us the repetition rate of a periodic waveform, and is expressed in units of Hz. A frequency of 5 Hz means that the waveform repeats at a rate of 5 times per second.
 
@@ -127,11 +127,103 @@ This phenomenon of relative pitch has important implications for how we understa
 
 >  440 Hz, 440 Hz, 440 Hz, 330 Hz, 367 Hz, 367 Hz, 330 Hz
 
+
+```
+#> Warning in system(.): error in running command
+
+#> Warning in system(.): error in running command
+
+#> Warning in system(.): error in running command
+
+#> Warning in system(.): error in running command
+
+#> Warning in system(.): error in running command
+
+#> Warning in system(.): error in running command
+
+#> Warning in system(.): error in running command
+#> Warning in system(cmd): error in running command
+#> Warning in file.remove(files): cannot remove file '/var/
+#> folders/31/38tl5xdn61qc0dssglmz4y_m0000gn/T//RtmpLMlvWS/
+#> chord-1-4143653198d7.wav', reason 'No such file or
+#> directory'
+#> Warning in file.remove(files): cannot remove file '/var/
+#> folders/31/38tl5xdn61qc0dssglmz4y_m0000gn/T//RtmpLMlvWS/
+#> chord-2-41431b297f28.wav', reason 'No such file or
+#> directory'
+#> Warning in file.remove(files): cannot remove file '/var/
+#> folders/31/38tl5xdn61qc0dssglmz4y_m0000gn/T//RtmpLMlvWS/
+#> chord-3-4143415b2906.wav', reason 'No such file or
+#> directory'
+#> Warning in file.remove(files): cannot remove file '/var/
+#> folders/31/38tl5xdn61qc0dssglmz4y_m0000gn/T//RtmpLMlvWS/
+#> chord-4-414347e26a6f.wav', reason 'No such file or
+#> directory'
+#> Warning in file.remove(files): cannot remove file '/var/
+#> folders/31/38tl5xdn61qc0dssglmz4y_m0000gn/T//RtmpLMlvWS/
+#> chord-5-414361b9c247.wav', reason 'No such file or
+#> directory'
+#> Warning in file.remove(files): cannot remove file '/var/
+#> folders/31/38tl5xdn61qc0dssglmz4y_m0000gn/T//RtmpLMlvWS/
+#> chord-6-41436a81f570.wav', reason 'No such file or
+#> directory'
+#> Warning in file.remove(files): cannot remove file '/var/
+#> folders/31/38tl5xdn61qc0dssglmz4y_m0000gn/T//RtmpLMlvWS/
+#> chord-7-41437a18c2b0.wav', reason 'No such file or
+#> directory'
+```
+
 <audio controls controlsList='nodownload' style='display: block; margin-top: 10px'><source src='audio/old-macdonald-440.wav' type='audio/mpeg'></audio>
 
 However, I could equally well play the same melody starting on a different frequency, say 330 Hz:
 
 >  330 Hz, 330 Hz, 330 Hz, 247.5 Hz, 275.25 Hz, 275.25 Hz, 247.5 Hz 
+
+```
+#> Warning in system(.): error in running command
+
+#> Warning in system(.): error in running command
+
+#> Warning in system(.): error in running command
+
+#> Warning in system(.): error in running command
+
+#> Warning in system(.): error in running command
+
+#> Warning in system(.): error in running command
+
+#> Warning in system(.): error in running command
+#> Warning in system(cmd): error in running command
+#> Warning in file.remove(files): cannot remove file '/var/
+#> folders/31/38tl5xdn61qc0dssglmz4y_m0000gn/T//RtmpLMlvWS/
+#> chord-1-41435c9a99a4.wav', reason 'No such file or
+#> directory'
+#> Warning in file.remove(files): cannot remove file '/var/
+#> folders/31/38tl5xdn61qc0dssglmz4y_m0000gn/T//RtmpLMlvWS/
+#> chord-2-414329dd0d7b.wav', reason 'No such file or
+#> directory'
+#> Warning in file.remove(files): cannot remove file '/var/
+#> folders/31/38tl5xdn61qc0dssglmz4y_m0000gn/T//RtmpLMlvWS/
+#> chord-3-41436fa01bb5.wav', reason 'No such file or
+#> directory'
+#> Warning in file.remove(files): cannot remove file '/var/
+#> folders/31/38tl5xdn61qc0dssglmz4y_m0000gn/T//RtmpLMlvWS/
+#> chord-4-4143787b4153.wav', reason 'No such file or
+#> directory'
+#> Warning in file.remove(files): cannot remove file '/var/
+#> folders/31/38tl5xdn61qc0dssglmz4y_m0000gn/T//RtmpLMlvWS/
+#> chord-5-414363fdedf0.wav', reason 'No such file or
+#> directory'
+#> Warning in file.remove(files): cannot remove file '/var/
+#> folders/31/38tl5xdn61qc0dssglmz4y_m0000gn/T//RtmpLMlvWS/
+#> chord-6-414334105ad9.wav', reason 'No such file or
+#> directory'
+#> Warning in file.remove(files): cannot remove file '/var/
+#> folders/31/38tl5xdn61qc0dssglmz4y_m0000gn/T//RtmpLMlvWS/
+#> chord-7-41431dbc7743.wav', reason 'No such file or
+#> directory'
+```
+
 <audio controls controlsList='nodownload' style='display: block; margin-top: 10px'><source src='audio/old-macdonald-330.wav' type='audio/mpeg'></audio>
 
 Here we have changed all the frequencies of the melody by the same fixed ratio: 330/440. This changes the starting note but keeps all the intervals the same. We call this manipulation *transposition*.

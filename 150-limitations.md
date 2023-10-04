@@ -1,0 +1,203 @@
+# Appraising limitations
+
+
+
+## Introduction
+
+No study is perfect. There are many ways in which a given study can fail
+to deliver the final word in a given research topic, ranging from 
+methodology to analysis to interpretation. 
+It's essential to be able to appraise a study's limitations when reading the 
+literature, because it helps one to know how confident to be in the study's 
+findings.
+It's also essential to be able to appraise the potential limitations of a
+during the planning stages; this helps us to make better decisions about 
+experiment design, and it helps us to develop realistic expectations of what 
+the study will deliver once it is conducted.
+
+### Learning about limitations
+
+You can learn a certain amount about a published study's limitations by reading the 
+paper's 'Discussion' section. It is good practice for Discussion sections
+to include a substantive discussion of the study's potential limitations.
+Of course, the original authors will typically have some incentive to present
+their paper in a good light, so they may not be comprehensive in their 
+self-criticisms, but nonetheless this is a good place to start.
+
+Review articles, and to a certain degree textbook chapters, are another good 
+place to look for insight into a study's limitations. Such articles will 
+have a broader view of the field and will typically provide some kind of 
+comparative perspective on the different methodologies available to that field.
+However, not all such articles have the space to really dive into the details
+of individual articles.
+
+The best resource for understanding a study's limitations comes when you can 
+find a published commentary on that study. Only a minority of papers end up
+receiving published commentaries, but when they do exist they can be very 
+useful. These commentaries tend to be published by different authors from the 
+original study, and tend to manifest alternative viewpoints to the original 
+authors. Some journals (e.g. 'Behavioral and Brain Sciences' and 
+'Empirical Musicology Review') actively solicit commentaries and publish them
+alongside the original published article. Some journals (e.g. eLife, PeerJ)
+publish original peer reviews alongside published articles, serving a similar
+purpose.
+
+Another great way to develop an appreciation of studies' limitations is to 
+attend research presentations and journal clubs. When authors present work
+at scientific conferences or at university seminars, they typically have a 
+Q&A session afterwards where the attendees will typically debate the
+implications and limitations of the presented work. This is a good opportunity
+to see how the research community responds to a given work. Of course, such 
+Q&A sessions are typically constrained by politeness, and audience members 
+may not feel comfortable in voicing their full criticisms. Journal clubs 
+are a nicely complementary venue; in a journal club the members discuss a 
+given paper in the absence of the original author, giving them freedom to 
+deliver honest verdicts without worrying too much about being polite.
+Have a look for such sessions in your own university: for example, the 
+Centre for Music and Science at Cambridge runs a regular public seminar series
+(https://cms.mus.cam.ac.uk/cms-seminars)
+as well as an internal journal club.
+
+## Kinds of limitations
+
+### Methodological mistake
+
+Methodological mistakes are, in many people's eyes, the most serious kind 
+of study limitation. Many kinds of methodological mistakes are possible,
+both before, during, and after the data collection itself. The best way to avoid
+them is to be very careful in the design and conduct of your study, making sure
+you familiarise yourself properly with the methods are using and making sure
+you properly follow any available instructions.
+
+One kind of methodological mistake corresponds to selecting the wrong
+experimental measure. For example, suppose the experimenter wants to measure pain before
+and after a 10-minute experimental intervention, but uses a pain questionnaire
+that is grounded in questions about events that happened in the preceding 7 
+days. Such a questionnaire clearly cannot detect a meaningful change in pain
+levels over a 10-minute interval; another questionnaire should be used that
+focuses on present pain levels.
+
+Another kind of methodological mistake corresponds to implementing the
+experimental measure wrongly. Suppose the experimenter administers a personality
+questionnaire where scores are derived by tallying responses to multiple
+questions, but forgets to reverse score the items that are meant to be 
+reverse scored. This will introduce a lot of noise into the study's results
+and likely make the personality measure ineffective.
+
+Another kind of methodological mistake corresponds to analysing the data wrongly.
+Data analysis is hard, and as the data analysis technique becomes more complex
+there are more potential pitfalls. One classic mistake is to neglect dependencies
+within a given dataset, for example by treating each data point within a time series
+as statistically independent (e.g. by putting these raw data points into a 
+t-test or an ANOVA) and not telling the analysis method that these data points
+come from the same experimental trial and hence are likely to be correlated. 
+A related mistake is to collect many trials from the same participant and 
+put them straight into the statistical model without telling the model that
+these trials come from the same participant. Another common statistical mistake is
+to over-interpret a 'statistically significant' result that is driven by a single
+'outlier' data point.
+
+It can be quite hard to find methodological mistakes in published papers.
+Peer review is meant to capture methodological mistakes where possible, and 
+so hopefully most published papers are free from such errors.
+Of course, peer review can never be 100% reliable, and sometimes errors do 
+sneak through.
+
+### Interpretation mistake
+
+A related issue is to misinterpret the outcomes of a study's analyses.
+It is possible to perform all your data collection rigorously, 
+and do all the appropriate statistical tests, but then interpret the results 
+of these tests wrongly.
+
+The most classic interpretation mistake we see in the literature,
+and indeed in popular news coverage of research articles, 
+is to mistake correlation for causation. 
+To say two variables are correlated is to say that high values of one 
+tend to go hand in hand with high values of the other;
+for example, studies have shown that consumption of Mediterranean foods
+is correlated with life expectancy.
+It's tempting to take such a correlation as proof that consuming Mediterranean
+foods *causes* longer life expectancy.
+However, observing such a correlation does not prove causality. 
+It could be that there is a third variable that causes both outcomes;
+perhaps living in the Mediterranean causes people to experience other improved
+lifestyle factors (e.g. more sunlight, more outdoor activity) that are 
+responsible for the increased lifespan.
+In order to 'prove' causality here, one would have to dig deeper, most commonly
+by conducting a randomised controlled trial.
+
+### Low generality
+
+The statistics that we conduct when we analyse quantitative data give us some
+kind of probabilistic guarantee about the population of participants and 
+(depending on the analysis) the population of stimuli 
+that we used in our experiment: in particular,
+they tell us that we can have a certain degree of confidence that our 
+experimental results should replicate if we were to repeat the experiment 
+using new participants and new stimuli 
+*sampled from the same population as the original participants and stimuli*.
+However, they can't tell us how representative those populations of
+participants and stimuli are of the 'real world' that we care about.
+For example, perhaps we only tested undergraduate music students from our 
+home university, or perhaps we only tested a collection of Mozart sonatas.
+We must think carefully about how much we can generalise from research findings
+from these populations.
+
+### Low statistical power
+
+The term 'statistical power' refers to the capacity of a research design
+to produce statistically precise results. It typically relates directly 
+to the number of participants and the number of stimuli used in a study.
+If we only test a few participants, and we observe an effect in a given
+direction, it can be hard to tell whether that effect really means something
+or whether it just reflects random variation between participants.
+Likewise, if we only test a small number of stimuli it can be difficult to
+distinguish our effects from random variation between stimuli.
+
+Once we've collected a real dataset we can use standard statistical analysis
+techniques to work out how precise our statistical inferences can be. 
+In particular, you will see researchers using concepts such as confidence 
+intervals and *p*-values to clarify the reliability of their findings.
+
+If we're still in the stage of planning the research, we can't compute
+confidence intervals and *p*-values directly. The most rigorous way to
+estimate our statistical power *a priori* is instead to perform a 
+*power analysis*. You can find power analysis calculators online for a variety
+of experimental designs; a common choice is 
+[G*Power](https://www.psychologie.hhu.de/arbeitsgruppen/allgemeine-psychologie-und-arbeitspsychologie/gpower).
+The power analysis will typically be framed in terms of calculating the number 
+of participants required to identify an effect of a given size with a given 
+reliability, but it's also possible to conduct power analyses that operate 
+in terms of the desired confidence interval size.
+This approach is quite technical, but another useful approach is simply to 
+read prior papers in the area and see what the standard expectation is
+for sample size. In practice, of course, the desire for greater statistical
+power must be balanced with the feasibility of collecting extra data, 
+and in some cases the data are so hard to collect that the sample sizes 
+must be quite small.
+
+### Low validity
+
+Most psychological experiments involve some kinds of 'measures'. These measures
+are used to operationalise certain psychological constructs: for example,
+we might use an IQ test to operationalise general intelligence, or the 
+Ten Item Personality Inventory to operationalise personality. It is always
+worth considering how 'valid' these operationalisations are: how well does
+the measure capture the concept that we are trying to measure? It might be that
+a measure is valid in some contexts but not others; for example some personality
+inventories work in terms of describing events from day-to-day life such as 
+attending parties, but if you come from a culture where the lifestyle is very
+different then the questionnaire might not be a valid way to capture your 
+personality.
+
+## Appraising and acknowledging limitations
+
+All studies have their limitations. Limitations rarely have to sink a given 
+research project; there is almost always something that can be learned from 
+the data. It's essential however to give an honest appraisal and acknowledgement
+of these limitations when you write up your research. This applies both at the 
+planning stage (i.e. research proposals) and at the write-up stage
+(i.e. research articles). A good, clear statement of limitations will help
+the readers understand what they can and cannot read into your research,
+and it'll help researchers understand how they can build on it in future work.

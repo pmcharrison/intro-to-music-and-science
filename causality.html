@@ -14,22 +14,22 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Chapter 22 Causality | Music and Science">
 <meta name="twitter:description" content="22.1 Correlation and causation When two variables correlate significantly with each other, this is a sign that there is some kind of underlying causal connection. However, we must be very careful...">
-<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/header-attrs-2.11/header-attrs.js"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
 <script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.3.1/transition.js"></script><script src="libs/bs3compat-0.3.1/tabs.js"></script><script src="libs/bs3compat-0.3.1/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
-<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script><script src="libs/htmlwidgets-1.5.4/htmlwidgets.js"></script><link href="libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet">
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="libs/htmlwidgets-1.5.4/htmlwidgets.js"></script><link href="libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet">
 <script src="libs/datatables-binding-0.20/datatables.js"></script><link href="libs/dt-core-1.11.3/css/jquery.dataTables.min.css" rel="stylesheet">
 <link href="libs/dt-core-1.11.3/css/jquery.dataTables.extra.css" rel="stylesheet">
 <script src="libs/dt-core-1.11.3/js/jquery.dataTables.min.js"></script><link href="libs/crosstalk-1.2.0/css/crosstalk.min.css" rel="stylesheet">
 <script src="libs/crosstalk-1.2.0/js/crosstalk.min.js"></script><!-- It makes little sense to put CSS in an HTML file instead of a 
-  CSS file, but this seems to be the only way I could get BS4 book to
-  recognise it !--><style>
-    .csl-entry {
-      margin-bottom: 15px;
-      padding-left: 30px;
-      text-indent: -30px;
-    }
-  </style>
+    CSS file, but this seems to be the only way I could get BS4 book to
+    recognise it !--><style>
+      .csl-entry {
+        margin-bottom: 15px;
+        padding-left: 30px;
+        text-indent: -30px;
+      }
+    </style>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><link rel="stylesheet" href="bs4_style.css">
 </head>
 <body data-spy="scroll" data-target="#toc">
@@ -82,8 +82,9 @@
 <li><a class="" href="data-visualisation.html"><span class="header-section-number">24</span> Data visualisation</a></li>
 <li><a class="" href="descriptive-statistics.html"><span class="header-section-number">25</span> Descriptive statistics</a></li>
 <li><a class="" href="inferential-statistics.html"><span class="header-section-number">26</span> Inferential statistics</a></li>
+<li><a class="" href="appraising-limitations.html"><span class="header-section-number">27</span> Appraising limitations</a></li>
 <li class="book-part">Computational approaches</li>
-<li><a class="" href="computational-music-psychology.html"><span class="header-section-number">27</span> Computational music psychology</a></li>
+<li><a class="" href="computational-music-psychology.html"><span class="header-section-number">28</span> Computational music psychology</a></li>
 <li><a class="" href="references.html">References</a></li>
 </ul>
 
@@ -92,33 +93,33 @@
         </div>
       </nav>
 </div>
-  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="causality" class="section level1">
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="causality" class="section level1" number="22">
 <h1>
 <span class="header-section-number">22</span> Causality<a class="anchor" aria-label="anchor" href="#causality"><i class="fas fa-link"></i></a>
 </h1>
-<div id="correlation-and-causation" class="section level2">
+<div id="correlation-and-causation" class="section level2" number="22.1">
 <h2>
 <span class="header-section-number">22.1</span> Correlation and causation<a class="anchor" aria-label="anchor" href="#correlation-and-causation"><i class="fas fa-link"></i></a>
 </h2>
 <p>When two variables correlate significantly with each other, this is a sign that there is some kind of underlying <em>causal</em> connection. However, we must be very careful about how we identify the nature of that causal connection.</p>
-<p>A classic example from the music psychology is the association between musical training and intelligence. Many studies have noted that, on average, individuals with greater levels of musical training tend to have higher levels of general intelligence, as measured for example by IQ tests <span class="citation">(Santos-Luiz et al., <a href="#ref-Dos_Santos-Luiz2016-st" role="doc-biblioref">2016</a>; Schellenberg, <a href="#ref-Schellenberg2011-yo" role="doc-biblioref">2011</a><a href="#ref-Schellenberg2011-yo" role="doc-biblioref">a</a>, <a href="#ref-Glenn_Schellenberg2011-nq" role="doc-biblioref">2011</a><a href="#ref-Glenn_Schellenberg2011-nq" role="doc-biblioref">b</a>)</span>.</p>
-<p>A popular explanation for this association is that musical training <em>causes</em> an individual to develop greater cognitive skills <span class="citation">(Gardiner et al., <a href="#ref-Gardiner1996-gh" role="doc-biblioref">1996</a>; Hetland, <a href="#ref-Hetland2000-tr" role="doc-biblioref">2000</a>; Moreno &amp; Bidelman, <a href="#ref-Moreno2014-dx" role="doc-biblioref">2014</a>; Rauscher, <a href="#ref-Rauscher2002-wg" role="doc-biblioref">2002</a>)</span>. After all, playing music is a complex intellectual activity that loads on basic cognitive capacities such as attention, memory, and hand-eye coordination. If these cognitive capacities are anything like muscles, then training them should enhance them, with positive consequences for general intelligence.</p>
+<p>A classic example from the music psychology is the association between musical training and intelligence. Many studies have noted that, on average, individuals with greater levels of musical training tend to have higher levels of general intelligence, as measured for example by IQ tests <span class="citation">(<a href="#ref-Glenn_Schellenberg2011-nq" role="doc-biblioref">Glenn Schellenberg, 2011</a>; <a href="#ref-Dos_Santos-Luiz2016-st" role="doc-biblioref">Santos-Luiz et al., 2016</a>; <a href="#ref-Schellenberg2011-yo" role="doc-biblioref">Schellenberg, 2011</a>)</span>.</p>
+<p>A popular explanation for this association is that musical training <em>causes</em> an individual to develop greater cognitive skills <span class="citation">(<a href="#ref-Gardiner1996-gh" role="doc-biblioref">Gardiner et al., 1996</a>; <a href="#ref-Hetland2000-tr" role="doc-biblioref">Hetland, 2000</a>; <a href="#ref-Moreno2014-dx" role="doc-biblioref">Moreno &amp; Bidelman, 2014</a>; <a href="#ref-Rauscher2002-wg" role="doc-biblioref">Rauscher, 2002</a>)</span>. After all, playing music is a complex intellectual activity that loads on basic cognitive capacities such as attention, memory, and hand-eye coordination. If these cognitive capacities are anything like muscles, then training them should enhance them, with positive consequences for general intelligence.</p>
 <p>An alternative explanation is that high intelligence predisposes individuals to persist with musical training. One way this could happen is if intelligent people tend to be more successful in the early stages of music learning, which encourages them to continue with the training process.</p>
 <p>A third potential explanation is that neither musical training nor general intelligence causally affect each other, and instead there is some unnoticed third variable that drives both of them. For example, we know that different children grow up with different levels of household income. Perhaps having higher household income has two relevant effects here: (a) it makes the family more likely to pay for music lessons, and (b) it makes the family invest more money in the child’s academic education, increasing their performance on intelligence tests as a result.</p>
 <p>These kinds of causal dilemmas are common whenever a scientist works with an <em>observational</em> dataset. An observational dataset is a dataset collected solely by observing and measuring a given phenomenon. There are various statistical techniques out there (e.g. regression modelling, causal modelling) that can be helpful for interrogating such datasets, but all rely on certain assumptions, and it is difficult to get a definitive answer out of them. It seems strange to imagine nowadays, but it took decades for health organisations to be convinced that smoking had a causal effect on lung cancer incidence, despite the correlation between smoking and lung cancer being established long prior.</p>
 </div>
-<div id="experimental-manipulations" class="section level2">
+<div id="experimental-manipulations" class="section level2" number="22.2">
 <h2>
 <span class="header-section-number">22.2</span> Experimental manipulations<a class="anchor" aria-label="anchor" href="#experimental-manipulations"><i class="fas fa-link"></i></a>
 </h2>
 <p>In practice, the scientist’s most powerful tool for solving these kinds of causal problems tends to be <em>manipulation</em>. What happens here is that the scientist actively manipulates Variable A, and observes whether Variable B changes in response. If Variable B does change, then we have strong evidence that Variable A causally influences Variable B. If not, then we must think again.</p>
-<div id="independent-and-dependent-variables" class="section level3">
+<div id="independent-and-dependent-variables" class="section level3" number="22.2.1">
 <h3>
 <span class="header-section-number">22.2.1</span> Independent and dependent variables<a class="anchor" aria-label="anchor" href="#independent-and-dependent-variables"><i class="fas fa-link"></i></a>
 </h3>
 <p>When conducting an experiment with a manipulation, it is conventional to classify the variables into two categories: <em>independent</em> and <em>dependent</em> variables. Independent variables are variables that the experimenter manipulates (Variable A in the example above). Dependent variables are variables that the experimenter measures without manipulating them directly (Variable B in the example above).</p>
 </div>
-<div id="repeated-measures-and-between-groups-designs" class="section level3">
+<div id="repeated-measures-and-between-groups-designs" class="section level3" number="22.2.2">
 <h3>
 <span class="header-section-number">22.2.2</span> Repeated measures and between-groups designs<a class="anchor" aria-label="anchor" href="#repeated-measures-and-between-groups-designs"><i class="fas fa-link"></i></a>
 </h3>
@@ -134,14 +135,14 @@
 <p>In practice, repeated-measures designs tend to be considerably more powerful than between-groups designs. This is because repeated-measures are very good at accounting for individual differences between participants; even if one participant tends to score particularly low or particularly high on a dependent variable, this idiosyncrasy should apply equally across the different levels of the independent variable, so it can be controlled for when analysing the data. In contrast, in a between-groups design it is much harder to separate individual differences from the effects of the experimental manipulations; as a consequence, such designs can require many times more participants to achieve the same statistical reliability (see <a href="https://daniellakens.blogspot.com/2016/11/why-waithin-subject-designs-require-less.html">this blog post</a> for an analysis). So, where possible, it is advisable to try and formulate studies as repeated-measures rather than between-groups designs.</p>
 <p>One disadvantage of repeated-measures designs, though, is that they can be susceptible to <em>carry-over</em> <em>effects</em>. A carry-over effect is one where the identity of preceding conditions influences scores in the current condition. For example, suppose we are studying the effect of physical exercise on music listening, and we have three values of the independent variable: running, walking, and sitting. The effects of physical exercise on heart rate and body temperature can be fairly long-lasting. If we have the participant run for five minutes, then sit for five minutes, then walk for five minutes, their heart rate in the ‘sit’ condition is likely to be inflated by the fact that they were running in the previous condition. It’s essential therefore in repeated-measures designs to ensure that the order of conditions is <em>balanced</em> between participants, rather than being the same for all participants. One way of achieving this is simply to randomise the order of conditions across participants. There also exist more sophisticated ways of achieving this, for example <em>Latin square designs</em>, which ensure that the order of conditions is <em>perfectly</em> balanced between participants, rather than just being balanced on average. These only become important for very small participant groups, and we won’t consider them here.</p>
 </div>
-<div id="case-study-schellenberg-2004" class="section level3">
+<div id="case-study-schellenberg-2004" class="section level3" number="22.2.3">
 <h3>
 <span class="header-section-number">22.2.3</span> Case study: Schellenberg (2004)<a class="anchor" aria-label="anchor" href="#case-study-schellenberg-2004"><i class="fas fa-link"></i></a>
 </h3>
 <p><span class="citation">Schellenberg (<a href="#ref-Schellenberg2004-zh" role="doc-biblioref">2004</a>)</span> addressed the aforementioned question of whether musical training causes improvements in general intelligence. The study used a sample group of 144 six-year-old children in a between-groups design. The children were randomly assigned to one of four types of 36-week extracurricular classes: keyboard lessons, voice lessons, drama lessons, or no lessons. The researchers administered a battery of cognitive tests to the children before and after the training period. On average, children in all groups increased in IQ over the time period, as would be expected due to maturation and education. However, children who took music lessons experienced a greater increase in IQ (~ 7 points), as compared to children in the drama or no lessons conditions (~ 4 points). The researchers concluded that musical training does indeed improve general intelligence (though note that this conclusion is controversial! see <span class="citation">Sala &amp; Gobet (<a href="#ref-Sala2020-hw" role="doc-biblioref">2020</a>)</span> for a recent meta-analysis disputing this and related studies).</p>
 </div>
 </div>
-<div id="conclusions-5" class="section level2">
+<div id="conclusions-5" class="section level2" number="22.3">
 <h2>
 <span class="header-section-number">22.3</span> Conclusions<a class="anchor" aria-label="anchor" href="#conclusions-5"><i class="fas fa-link"></i></a>
 </h2>
@@ -150,33 +151,33 @@
 </div>
 </div>
 <h3>References</h3>
-<div id="refs" class="references">
-<div id="ref-Gardiner1996-gh">
-<p>Gardiner, M. F., Fox, A., Knowles, F., &amp; Jeffrey, D. (1996). Learning improved by arts training. <em>Nature</em>, <em>381</em>(6580), 284. <a href="https://doi.org/10.1038/381284a0">https://doi.org/10.1038/381284a0</a></p>
+<div id="refs" class="references csl-bib-body hanging-indent" line-spacing="2">
+<div id="ref-Gardiner1996-gh" class="csl-entry">
+Gardiner, M. F., Fox, A., Knowles, F., &amp; Jeffrey, D. (1996). Learning improved by arts training. <em>Nature</em>, <em>381</em>(6580), 284. <a href="https://doi.org/10.1038/381284a0">https://doi.org/10.1038/381284a0</a>
 </div>
-<div id="ref-Hetland2000-tr">
-<p>Hetland, L. (2000). Learning to make music enhances spatial reasoning. <em>Journal of Aesthetic Education</em>, <em>34</em>(3/4), 179–238. <a href="https://doi.org/10.2307/3333643">https://doi.org/10.2307/3333643</a></p>
+<div id="ref-Glenn_Schellenberg2011-nq" class="csl-entry">
+Glenn Schellenberg, E. (2011). Music lessons, emotional intelligence, and <span>IQ</span>. <em>Music Perception</em>, <em>29</em>(2), 185–194. <a href="https://doi.org/10.1525/mp.2011.29.2.185">https://doi.org/10.1525/mp.2011.29.2.185</a>
 </div>
-<div id="ref-Moreno2014-dx">
-<p>Moreno, S., &amp; Bidelman, G. M. (2014). Examining neural plasticity and cognitive benefit through the unique lens of musical training. <em>Hearing Research</em>, <em>308</em>, 84–97. <a href="https://doi.org/10.1016/j.heares.2013.09.012">https://doi.org/10.1016/j.heares.2013.09.012</a></p>
+<div id="ref-Hetland2000-tr" class="csl-entry">
+Hetland, L. (2000). Learning to make music enhances spatial reasoning. <em>Journal of Aesthetic Education</em>, <em>34</em>(3/4), 179–238. <a href="https://doi.org/10.2307/3333643">https://doi.org/10.2307/3333643</a>
 </div>
-<div id="ref-Rauscher2002-wg">
-<p>Rauscher, F. H. (2002). Mozart and the mind: Factual and fictional effects of musical enrichment. In J. Aronson (Ed.), <em>Improving academic achievement</em> (pp. 267–278). Academic Press. <a href="https://doi.org/10.1016/B978-012064455-1/50016-6">https://doi.org/10.1016/B978-012064455-1/50016-6</a></p>
+<div id="ref-Moreno2014-dx" class="csl-entry">
+Moreno, S., &amp; Bidelman, G. M. (2014). Examining neural plasticity and cognitive benefit through the unique lens of musical training. <em>Hearing Research</em>, <em>308</em>, 84–97. <a href="https://doi.org/10.1016/j.heares.2013.09.012">https://doi.org/10.1016/j.heares.2013.09.012</a>
 </div>
-<div id="ref-Sala2020-hw">
-<p>Sala, G., &amp; Gobet, F. (2020). Cognitive and academic benefits of music training with children: A multilevel meta-analysis. <em>Memory &amp; Cognition</em>, <em>48</em>(8), 1429–1441. <a href="https://doi.org/10.3758/s13421-020-01060-2">https://doi.org/10.3758/s13421-020-01060-2</a></p>
+<div id="ref-Rauscher2002-wg" class="csl-entry">
+Rauscher, F. H. (2002). Mozart and the mind: Factual and fictional effects of musical enrichment. In J. Aronson (Ed.), <em>Improving academic achievement</em> (pp. 267–278). Academic Press. <a href="https://doi.org/10.1016/B978-012064455-1/50016-6">https://doi.org/10.1016/B978-012064455-1/50016-6</a>
 </div>
-<div id="ref-Dos_Santos-Luiz2016-st">
-<p>Santos-Luiz, C. dos, Mónico, L. S. M., Almeida, L. S., &amp; Coimbra, D. (2016). Exploring the long-term associations between adolescents’ music training and academic achievement. <em>Music Scientiae</em>, <em>20</em>(4), 512–527.</p>
+<div id="ref-Sala2020-hw" class="csl-entry">
+Sala, G., &amp; Gobet, F. (2020). Cognitive and academic benefits of music training with children: A multilevel meta-analysis. <em>Memory &amp; Cognition</em>, <em>48</em>(8), 1429–1441. <a href="https://doi.org/10.3758/s13421-020-01060-2">https://doi.org/10.3758/s13421-020-01060-2</a>
 </div>
-<div id="ref-Schellenberg2004-zh">
-<p>Schellenberg, E. G. (2004). Music lessons enhance IQ. <em>Psychological Science</em>, <em>15</em>(8), 511–514. <a href="https://doi.org/10.1111/j.0956-7976.2004.00711.x">https://doi.org/10.1111/j.0956-7976.2004.00711.x</a></p>
+<div id="ref-Dos_Santos-Luiz2016-st" class="csl-entry">
+Santos-Luiz, C. dos, Mónico, L. S. M., Almeida, L. S., &amp; Coimbra, D. (2016). Exploring the long-term associations between adolescents’ music training and academic achievement. <em>Musicae Scientiae: The Journal of the European Society for the Cognitive Sciences of Music</em>, <em>20</em>(4), 512–527. <a href="https://doi.org/10.1177/1029864915623613">https://doi.org/10.1177/1029864915623613</a>
 </div>
-<div id="ref-Schellenberg2011-yo">
-<p>Schellenberg, E. G. (2011a). Examining the association between music lessons and intelligence. <em>British Journal of Psychology</em>, <em>102</em>(3), 283–302. <a href="https://doi.org/10.1111/j.2044-8295.2010.02000.x">https://doi.org/10.1111/j.2044-8295.2010.02000.x</a></p>
+<div id="ref-Schellenberg2004-zh" class="csl-entry">
+Schellenberg, E. G. (2004). Music lessons enhance <span>IQ</span>. <em>Psychological Science</em>, <em>15</em>(8), 511–514. <a href="https://doi.org/10.1111/j.0956-7976.2004.00711.x">https://doi.org/10.1111/j.0956-7976.2004.00711.x</a>
 </div>
-<div id="ref-Glenn_Schellenberg2011-nq">
-<p>Schellenberg, E. G. (2011b). Music lessons, emotional intelligence, and IQ. <em>Music Perception</em>, <em>29</em>(2), 185–194. <a href="https://doi.org/10.1525/mp.2011.29.2.185">https://doi.org/10.1525/mp.2011.29.2.185</a></p>
+<div id="ref-Schellenberg2011-yo" class="csl-entry">
+Schellenberg, E. G. (2011). Examining the association between music lessons and intelligence. <em>British Journal of Psychology</em>, <em>102</em>(3), 283–302. <a href="https://doi.org/10.1111/j.2044-8295.2010.02000.x">https://doi.org/10.1111/j.2044-8295.2010.02000.x</a>
 </div>
 </div>
   <div class="chapter-nav">
@@ -212,7 +213,7 @@
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Music and Science</strong>" was written by Peter M. C. Harrison. It was last built on 2023-03-13.</p>
+    <p>"<strong>Music and Science</strong>" was written by Peter M. C. Harrison. It was last built on 2023-10-04.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

@@ -1,7 +1,7 @@
 ---
 title: "Music and Science"
 author: "Peter M. C. Harrison"
-date: "2023-03-13"
+date: "2023-10-04"
 site: bookdown::bookdown_site
 documentclass: book
 bibliography: [book.bib, paperpile.bib, packages.bib]

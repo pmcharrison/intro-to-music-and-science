@@ -40,9 +40,9 @@ The *amplitude* corresponds to the degree of pressure fluctuation in the sine wa
 
 If we decrease the amplitude to 0.5, the tone sounds quieter than it did before:
 
-![**A sine wave with an amplitude of 0.5.** (ref:577bf745-9308-435b-8627-054c2ad788c7) ](images/sine-wave-amplitude=0.5.png){width='500'}
+![**A sine wave with an amplitude of 0.5.** (ref:11d43b20-bfc8-4a51-b0dd-e30b528f0822) ](images/sine-wave-amplitude=0.5.png){width='500'}
 
-(ref:577bf745-9308-435b-8627-054c2ad788c7)  <audio controls controlsList='nodownload' style='display: block; margin-top: 10px'><source src='audio/tone-waveform.wav' type='audio/mpeg'></audio>
+(ref:11d43b20-bfc8-4a51-b0dd-e30b528f0822)  <audio controls controlsList='nodownload' style='display: block; margin-top: 10px'><source src='audio/tone-waveform.wav' type='audio/mpeg'></audio>
 
 The frequency parameter determines how many complete wave cycles fit within one second. Frequency has the units 'Hz', so 30 cycles per second is written as 30 Hz, 40 cycles cycles per second is written as 40 Hz, and so on. Note that a complete cycle includes both the 'upper' segment and the 'lower segment' of the curve. For visualisation purposes, I've plotted a 5 Hz wave here, so we can see the number of cycles in a second; in practice, this frequency is below the range of human hearing:
 
@@ -50,21 +50,21 @@ The frequency parameter determines how many complete wave cycles fit within one 
 
 We can hear a 120 Hz wave, though:
 
-![**A sine wave with a frequency of 120 Hz.** (ref:77a1aeda-131f-4902-9d70-b7b843be17c4) ](images/sine-wave-frequency=120.png){width='500'}
+![**A sine wave with a frequency of 120 Hz.** (ref:ab8793a9-202b-4e40-8379-d3ba7556411a) ](images/sine-wave-frequency=120.png){width='500'}
 
-(ref:77a1aeda-131f-4902-9d70-b7b843be17c4)  <audio controls controlsList='nodownload' style='display: block; margin-top: 10px'><source src='audio/tone-frequency=120.wav' type='audio/mpeg'></audio>
+(ref:ab8793a9-202b-4e40-8379-d3ba7556411a)  <audio controls controlsList='nodownload' style='display: block; margin-top: 10px'><source src='audio/tone-frequency=120.wav' type='audio/mpeg'></audio>
 
 If we double the frequency, it sounds an octave higher:
 
-![**A sine wave with a frequency of 240 Hz.** (ref:9ddc627a-005f-4710-8e0e-6a324058cad1) ](images/sine-wave-frequency=240.png){width='500'}
+![**A sine wave with a frequency of 240 Hz.** (ref:9e10fab7-87d2-4cbb-b6f2-30ed451c2731) ](images/sine-wave-frequency=240.png){width='500'}
 
-(ref:9ddc627a-005f-4710-8e0e-6a324058cad1)  <audio controls controlsList='nodownload' style='display: block; margin-top: 10px'><source src='audio/tone-frequency=240.wav' type='audio/mpeg'></audio>
+(ref:9e10fab7-87d2-4cbb-b6f2-30ed451c2731)  <audio controls controlsList='nodownload' style='display: block; margin-top: 10px'><source src='audio/tone-frequency=240.wav' type='audio/mpeg'></audio>
 
 If we multiply the frequency by another 1.5, it sounds an additional perfect fifth higher:
 
-![**A sine wave with a frequency of 360 Hz.** (ref:f2de8947-6f4b-45be-8a76-5cff15750dd2) ](images/sine-wave-frequency=360.png){width='500'}
+![**A sine wave with a frequency of 360 Hz.** (ref:1b1f753f-baba-40ea-b341-71c05c9217da) ](images/sine-wave-frequency=360.png){width='500'}
 
-(ref:f2de8947-6f4b-45be-8a76-5cff15750dd2)  <audio controls controlsList='nodownload' style='display: block; margin-top: 10px'><source src='audio/tone-frequency=360.wav' type='audio/mpeg'></audio>
+(ref:1b1f753f-baba-40ea-b341-71c05c9217da)  <audio controls controlsList='nodownload' style='display: block; margin-top: 10px'><source src='audio/tone-frequency=360.wav' type='audio/mpeg'></audio>
 
 Later in this course we will discuss the relationship between frequency and pitch in more detail.
 
@@ -101,9 +101,9 @@ So, if you know the frequency, phase, and amplitude, then you can calculate the 
 
 Because sound takes time to travel, the sound wave moves a certain distance in the time that the sound source takes to emit one complete cycle. This distance is called the wavelength. If we could take a snapshot of a sound wave travelling through the air, you would see this wavelength as the distance between the peaks of the sound wave.
 
-![(ref:8c0d9c88-31fd-4d42-bba1-bb7ed949f6a2)  **Wavelength of a travelling wave.** Credit: Tom Walsh, [oPhysics](https://ophysics.com/w6.html), free for non-profit educational purposes.](images/1x1.png)
+![(ref:8d65be84-e7eb-44c2-b67e-0ba443cca4ec)  **Wavelength of a travelling wave.** Credit: Tom Walsh, [oPhysics](https://ophysics.com/w6.html), free for non-profit educational purposes.](images/1x1.png)
 
-(ref:8c0d9c88-31fd-4d42-bba1-bb7ed949f6a2) <video autoplay muted loop width=800px> <source src='images/wavelength.mov' type='video/mp4'> </video>
+(ref:8d65be84-e7eb-44c2-b67e-0ba443cca4ec) <video autoplay muted loop width=800px> <source src='images/wavelength.mov' type='video/mp4'> </video>
 
 Our second formula tells us how to compute this wavelength. It takes the following form:
 
@@ -131,15 +131,15 @@ So far we have just discussed the sine wave, which is just a particular kind of 
 
 Here's a sawtooth wave, which has very sharp corners:
 
-![**Sawtooth wave.** (ref:b9982c0e-c4b0-49c8-b063-bca82633742d) ](images/sawtooth-wave.png){width='400px'}
+![**Sawtooth wave.** (ref:25fe7fa2-a68a-4a4d-ad79-07547fb47113) ](images/sawtooth-wave.png){width='400px'}
 
-(ref:b9982c0e-c4b0-49c8-b063-bca82633742d)  <audio controls controlsList='nodownload' style='display: block; margin-top: 10px'><source src='audio/sawtooth-wave.wav' type='audio/mpeg'></audio>
+(ref:25fe7fa2-a68a-4a4d-ad79-07547fb47113)  <audio controls controlsList='nodownload' style='display: block; margin-top: 10px'><source src='audio/sawtooth-wave.wav' type='audio/mpeg'></audio>
 
 Here's a square wave, which has rectangular corners:
 
-![**Square wave.** (ref:5011cbfc-a1ae-4670-8e08-1b6496dd4514) ](images/square-wave.png){width='400px'}
+![**Square wave.** (ref:0892aaa9-408f-470b-a73e-7eb6c8b168a0) ](images/square-wave.png){width='400px'}
 
-(ref:5011cbfc-a1ae-4670-8e08-1b6496dd4514)  <audio controls controlsList='nodownload' style='display: block; margin-top: 10px'><source src='audio/square-wave.wav' type='audio/mpeg'></audio>
+(ref:0892aaa9-408f-470b-a73e-7eb6c8b168a0)  <audio controls controlsList='nodownload' style='display: block; margin-top: 10px'><source src='audio/square-wave.wav' type='audio/mpeg'></audio>
 
 A remarkable theorem called the *Fourier theorem* tells us that every periodic wave can be expressed by adding together a collection of sine waves. These sine waves may each have different amplitudes, frequencies, and phases, but otherwise all have the same shape.
 
@@ -161,20 +161,20 @@ This motivates an alternative way of visualising sound waves. Instead of plottin
 
 See how both of these spectra are built from a collection of evenly spaced lines, corresponding to integer multiples of the fundamental frequency. We call the upper frequencies *harmonics*; if we had upper frequencies that didn't correspond to integer multiples of the fundamental frequency, we'd call them *partials*.
 
-![**Idealised harmonic spectrum.** The sound example begins by playing the full tone, then demonstrates how the tone can be built up by superimposing pure tones one by one. (ref:6168c9c5-8c26-45fe-8d4c-5ad8b0e21de8) ](images/harmonic-spectrum.png){width='100%'}
+![**Idealised harmonic spectrum.** The sound example begins by playing the full tone, then demonstrates how the tone can be built up by superimposing pure tones one by one. (ref:20903eed-68e3-4c4d-8fef-da6e8e8e79fc) ](images/harmonic-spectrum.png){width='100%'}
 
-(ref:6168c9c5-8c26-45fe-8d4c-5ad8b0e21de8)  <audio controls controlsList='nodownload' style='display: block; margin-top: 10px'><source src='audio/harmonic-spectrum.wav' type='audio/mpeg'></audio>
+(ref:20903eed-68e3-4c4d-8fef-da6e8e8e79fc)  <audio controls controlsList='nodownload' style='display: block; margin-top: 10px'><source src='audio/harmonic-spectrum.wav' type='audio/mpeg'></audio>
 
 In the real world, a sound's spectrum will typically change through time. We can plot this behaviour using a spectrogram. Here the horizontal axis corresponds to time, the vertical axis corresponds to frequency, and the colour corresponds to amplitude. Here the spectrogram is computed from a recording of a violin; you can see its very evenly spaced harmonics, manifested as parallel horizontal lines.
 
-![**Spectrogram computed from a recording of a violin.** Credit: megatron, [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/deed.en) (ref:bd455dd3-9440-44b2-9a3c-46d63945c6f2) ](images/spectrogram.png){width='100%'}
+![**Spectrogram computed from a recording of a violin.** Credit: megatron, [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/deed.en) (ref:7c5e427d-417d-44ed-b481-62c0b9462d50) ](images/spectrogram.png){width='100%'}
 
-(ref:bd455dd3-9440-44b2-9a3c-46d63945c6f2)  <audio controls controlsList='nodownload' style='display: block; margin-top: 10px'><source src='audio/spectrogram-violin.mp3' type='audio/mpeg'></audio>
+(ref:7c5e427d-417d-44ed-b481-62c0b9462d50)  <audio controls controlsList='nodownload' style='display: block; margin-top: 10px'><source src='audio/spectrogram-violin.mp3' type='audio/mpeg'></audio>
 
 It is also possible to construct more dynamic spectrograms in video form. For example, the following video displays a spectrogram for an old-fashioned dial-up modem connecting to the internet. Have a listen, and try to link what you see to what you hear.
 
 Have a look at the following video and try to link what you see to what you hear. Note that here, lower frequencies are on the right, and higher frequencies on the left.
 
-![(ref:f67f9ec7-ca9c-4231-a1c4-dace88287f71)  **Dialup modem handshake sound (spectrogram).** Scotty H, via YouTube](images/1x1.png)
+![(ref:a5bcc930-fe8e-4812-953d-8aa4fe2e75e2)  **Dialup modem handshake sound (spectrogram).** Scotty H, via YouTube](images/1x1.png)
 
-(ref:f67f9ec7-ca9c-4231-a1c4-dace88287f71) <iframe width="560" height="315" src="https://www.youtube.com/embed/vvr9AMWEU-c?start=0" style="display: block; margin-bottom: 25px" title="Dialup modem handshake sound (spectrogram)." frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+(ref:a5bcc930-fe8e-4812-953d-8aa4fe2e75e2) <iframe width="560" height="315" src="https://www.youtube.com/embed/vvr9AMWEU-c?start=0" style="display: block; margin-bottom: 25px" title="Dialup modem handshake sound (spectrogram)." frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

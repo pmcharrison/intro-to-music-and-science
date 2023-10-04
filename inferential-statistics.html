@@ -14,22 +14,22 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Chapter 26 Inferential statistics | Music and Science">
 <meta name="twitter:description" content="26.1 What are inferential statistics? Many scientific questions can be formulated in terms of one or more populations which we want to understand. These could be populations of humans; for...">
-<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/header-attrs-2.11/header-attrs.js"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
 <script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.3.1/transition.js"></script><script src="libs/bs3compat-0.3.1/tabs.js"></script><script src="libs/bs3compat-0.3.1/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
-<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script><script src="libs/htmlwidgets-1.5.4/htmlwidgets.js"></script><link href="libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet">
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="libs/htmlwidgets-1.5.4/htmlwidgets.js"></script><link href="libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet">
 <script src="libs/datatables-binding-0.20/datatables.js"></script><link href="libs/dt-core-1.11.3/css/jquery.dataTables.min.css" rel="stylesheet">
 <link href="libs/dt-core-1.11.3/css/jquery.dataTables.extra.css" rel="stylesheet">
 <script src="libs/dt-core-1.11.3/js/jquery.dataTables.min.js"></script><link href="libs/crosstalk-1.2.0/css/crosstalk.min.css" rel="stylesheet">
 <script src="libs/crosstalk-1.2.0/js/crosstalk.min.js"></script><!-- It makes little sense to put CSS in an HTML file instead of a 
-  CSS file, but this seems to be the only way I could get BS4 book to
-  recognise it !--><style>
-    .csl-entry {
-      margin-bottom: 15px;
-      padding-left: 30px;
-      text-indent: -30px;
-    }
-  </style>
+    CSS file, but this seems to be the only way I could get BS4 book to
+    recognise it !--><style>
+      .csl-entry {
+        margin-bottom: 15px;
+        padding-left: 30px;
+        text-indent: -30px;
+      }
+    </style>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><link rel="stylesheet" href="bs4_style.css">
 </head>
 <body data-spy="scroll" data-target="#toc">
@@ -82,8 +82,9 @@
 <li><a class="" href="data-visualisation.html"><span class="header-section-number">24</span> Data visualisation</a></li>
 <li><a class="" href="descriptive-statistics.html"><span class="header-section-number">25</span> Descriptive statistics</a></li>
 <li><a class="active" href="inferential-statistics.html"><span class="header-section-number">26</span> Inferential statistics</a></li>
+<li><a class="" href="appraising-limitations.html"><span class="header-section-number">27</span> Appraising limitations</a></li>
 <li class="book-part">Computational approaches</li>
-<li><a class="" href="computational-music-psychology.html"><span class="header-section-number">27</span> Computational music psychology</a></li>
+<li><a class="" href="computational-music-psychology.html"><span class="header-section-number">28</span> Computational music psychology</a></li>
 <li><a class="" href="references.html">References</a></li>
 </ul>
 
@@ -92,11 +93,11 @@
         </div>
       </nav>
 </div>
-  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="inferential-statistics" class="section level1">
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="inferential-statistics" class="section level1" number="26">
 <h1>
 <span class="header-section-number">26</span> Inferential statistics<a class="anchor" aria-label="anchor" href="#inferential-statistics"><i class="fas fa-link"></i></a>
 </h1>
-<div id="what-are-inferential-statistics" class="section level2">
+<div id="what-are-inferential-statistics" class="section level2" number="26.1">
 <h2>
 <span class="header-section-number">26.1</span> What are inferential statistics?<a class="anchor" aria-label="anchor" href="#what-are-inferential-statistics"><i class="fas fa-link"></i></a>
 </h2>
@@ -105,7 +106,7 @@
 <p>Instead, scientists normally work with <em>samples</em>. Samples are smaller datasets that are drawn from a particular population. The hope is that the sample is representative of the larger population, and that we can learn something from the sample that can be generalised to an insight about the population as a whole.</p>
 <p><em>Inferential statistics</em> are a special family of statistics that are designed to help us with this generalisation task. They are intended to help us to understand when certain conclusions can be conclusively drawn from a given dataset, and when other conclusions cannot be drawn with any confidence.</p>
 </div>
-<div id="distributions" class="section level2">
+<div id="distributions" class="section level2" number="26.2">
 <h2>
 <span class="header-section-number">26.2</span> Distributions<a class="anchor" aria-label="anchor" href="#distributions"><i class="fas fa-link"></i></a>
 </h2>
@@ -117,11 +118,11 @@
 <p>The normal distribution is defined by two parameters: its <em>mean</em> and its <em>standard deviation</em>. We encountered both of these concepts earlier in Chapter <a href="descriptive-statistics.html#descriptive-statistics">25</a>. The normal distributions above each have a mean of 0 and a standard deviation of 1.</p>
 <p>The mean controls the location of the normal distribution. Here are some examples of normal distributions with different means:</p>
 <div class="inline-figure"><img src="149-quantitative-vi-inferential_files/figure-html/unnamed-chunk-4-1.png" width="100%"></div>
-<p>The standard deviation (often abbreviated to ’SD") controls the spread of the normal distribution. Here are some examples with different standard deviations:</p>
+<p>The standard deviation (often abbreviated to ’SD”) controls the spread of the normal distribution. Here are some examples with different standard deviations:</p>
 <div class="inline-figure"><img src="149-quantitative-vi-inferential_files/figure-html/unnamed-chunk-5-1.png" width="100%"></div>
 <p>Much of inferential statistics can then be reduced to variants of the following logical process. We suppose that our population of interest can be modelled by some probability distribution, for example the normal distribution (which happens to resemble many real-world distributions strikingly well). We then try to <em>infer</em> the values of this distribution’s parameters, for example its mean and standard deviation, based on the data we observe.</p>
 </div>
-<div id="sample-size-and-uncertainty" class="section level2">
+<div id="sample-size-and-uncertainty" class="section level2" number="26.3">
 <h2>
 <span class="header-section-number">26.3</span> Sample size and uncertainty<a class="anchor" aria-label="anchor" href="#sample-size-and-uncertainty"><i class="fas fa-link"></i></a>
 </h2>
@@ -134,7 +135,7 @@
 <p>Now the standard deviation of our means (our standard error) is 0.023, more-or-less a tenth of the original standard error. In other words, increasing our dataset size by a factor of 100 has made our estimates about 10 times more precise. There is a mathematical theorem called the <em>Central Limit Theorem</em> that formalises and generalises this observation, showing that in general if you multiply your sample size by <span class="math inline">\(N\)</span>, then your standard error will decrease by a factor of <span class="math inline">\(\sqrt{N}\)</span>.</p>
 <p>The main takeaway message here is that increasing sample size reduces uncertainty. This is why sample size is considered a very important aspect of scientific studies; without sufficient sample sizes, we cannot rely on any of our conclusions.</p>
 </div>
-<div id="estimating-uncertainty" class="section level2">
+<div id="estimating-uncertainty" class="section level2" number="26.4">
 <h2>
 <span class="header-section-number">26.4</span> Estimating uncertainty<a class="anchor" aria-label="anchor" href="#estimating-uncertainty"><i class="fas fa-link"></i></a>
 </h2>
@@ -142,7 +143,7 @@
 <p>Fortunately statisticians have developed various techniques that allow us to have our cake and eat it: to generate standard errors for our estimates while analysing the whole dataset at once. These techniques are mostly straightforward with standard statistical software.</p>
 <p>In the simple case where we are computing the mean of a dataset, it turns out that the standard error of this mean can be estimated by taking the standard deviation and dividing it by the square root of the sample size. This is a useful corollary of the Central Limit Theorem mentioned above.</p>
 <p>Here is an example of computing the standard error of the mean in R:</p>
-<div class="sourceCode" id="cb43"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb46"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">data</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">5</span>, <span class="fl">7</span>, <span class="fl">3</span>, <span class="fl">4</span>, <span class="fl">5</span>, <span class="fl">6</span>, <span class="fl">2</span>, <span class="fl">3</span>, <span class="fl">4</span><span class="op">)</span>
 
 <span class="va">sd</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/sd.html">sd</a></span><span class="op">(</span><span class="va">data</span><span class="op">)</span>
@@ -159,7 +160,7 @@
 <p>In more complex data analysis methods, such as linear regression (see Section <a href="inferential-statistics.html#linear-regression">26.7</a>), most statistical software will return standard errors automatically, based again on various mathematical theorems.</p>
 <p>A more general and powerful approach to computing standard errors is to use a technique called <em>bootstrapping</em>. Bootstrapping works by simulating thousands of artificial datasets and measuring the distribution of the relevant statistic in these simulations. We will not describe the details here, but it is worth being aware that the technique exists.</p>
 </div>
-<div id="representing-uncertainty" class="section level2">
+<div id="representing-uncertainty" class="section level2" number="26.5">
 <h2>
 <span class="header-section-number">26.5</span> Representing uncertainty<a class="anchor" aria-label="anchor" href="#representing-uncertainty"><i class="fas fa-link"></i></a>
 </h2>
@@ -185,7 +186,7 @@ Figure 26.1: Means for three conditions in a fictional dataset. The error bars d
 <p>The choice of uncertainty statistic to include in a plot is primarily up to the researcher. It is essential, however, to specify clearly in the plot description which kind of statistic has been included.</p>
 <!-- Moreover, scientists are often interested in a more abstract conception of populations, one which is not limited to the entities that exist at the present moment, but one that also includes entities that could plausibly exist. For example, a music theorist might conceptualise the population of Bach chorale harmonisations as including not only the chorale harmonisations that Bach actually wrote, but also the chorale harmonisations that he might have written had he had the chance.  -->
 </div>
-<div id="uncertainty-and-repeated-measures" class="section level2">
+<div id="uncertainty-and-repeated-measures" class="section level2" number="26.6">
 <h2>
 <span class="header-section-number">26.6</span> Uncertainty and repeated measures<a class="anchor" aria-label="anchor" href="#uncertainty-and-repeated-measures"><i class="fas fa-link"></i></a>
 </h2>
@@ -218,7 +219,7 @@ Figure 26.3: The same fictional dataset, but plotting changes in IQ scores. The 
 <p>Why did we gain so much precision in the latter analysis? In the original analysis, much of the noise in the data came from individual differences in student IQs, which dwarfed the small changes induced by the musical intervention. However, the latter analysis controlled for this variation by subtracting the pre-test IQ from the post-test IQ, producing a dataset that isolated <em>changes</em> in IQ. This gives us a much more reliable analysis of the effect of IQ.</p>
 <p>Many repeated-measures analyses can be formulated using differencing analyses like the one above. More complex repeated-measures structures sometimes need more complex analysis methods, however. There is a general family of analyses called <em>mixed-effect</em> analyses which are particularly well-suited to such problems; we will not consider these methods here, but it’s useful to know that they exist.</p>
 </div>
-<div id="linear-regression" class="section level2">
+<div id="linear-regression" class="section level2" number="26.7">
 <h2>
 <span class="header-section-number">26.7</span> Linear regression<a class="anchor" aria-label="anchor" href="#linear-regression"><i class="fas fa-link"></i></a>
 </h2>
@@ -230,11 +231,11 @@ Figure 26.3: The same fictional dataset, but plotting changes in IQ scores. The 
 <p>In both cases, we see strong positive correlations: houses with more rooms tend to be priced higher, and houses with more floor space tend to be priced higher.</p>
 <p>Let’s now look at the same data through the lens of linear regression. The primary purpose of linear regression is to estimate <em>marginal effects</em>. Marginal effects tell us how the outcome variable would change if we adjusted one predictor while holding all the others constant.</p>
 <p>We begin by fitting the regression model:</p>
-<div class="sourceCode" id="cb44"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb47"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># Fitting the regression model</span>
 <span class="va">mod</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/lm.html">lm</a></span><span class="op">(</span><span class="va">price</span> <span class="op">~</span> <span class="va">rooms</span> <span class="op">+</span> <span class="va">floorspace</span>, data <span class="op">=</span> <span class="va">house_dataset</span><span class="op">)</span></code></pre></div>
 <p>We then plot the marginal effect for floorspace. As before, we see a positive association: increasing floorspace causes the price to increase.</p>
-<div class="sourceCode" id="cb45"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb48"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># Plotting marginal effects requires the ggeffects package,</span>
 <span class="co"># you can install this with the following command:</span>
 <span class="co">#</span>
@@ -252,7 +253,7 @@ Figure 26.4: Marginal effect of floorspace on house price in a fictional dataset
 </p>
 </div>
 <p>Now let’s plot the marginal effect of room number:</p>
-<div class="sourceCode" id="cb46"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb49"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="op">(</span><span class="fu">ggeffects</span><span class="fu">::</span><span class="fu"><a href="https://strengejacke.github.io/ggeffects/reference/ggpredict.html">ggpredict</a></span><span class="op">(</span><span class="va">mod</span>, terms <span class="op">=</span> <span class="st">"rooms"</span><span class="op">)</span> <span class="op">%&gt;%</span> <span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html">plot</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span> 
   <span class="fu">scale_x_continuous</span><span class="op">(</span><span class="st">"Number of rooms"</span><span class="op">)</span> <span class="op">+</span> 
   <span class="fu">scale_y_continuous</span><span class="op">(</span><span class="st">"Price"</span><span class="op">)</span> <span class="op">+</span>
@@ -266,23 +267,23 @@ Figure 26.5: Marginal effect of room number on house price in a fictional datase
 </div>
 <p>Interestingly, the previous association between number of rooms and house price is <em>not</em> replicated. The overall trend is decreasing (more rooms yields a lower price), but there is a wide confidence interval and the marginal effect might well be zero.</p>
 <p>What do we conclude from this? It seems that the real driver of house prices is floorspace, not the number of rooms. Houses with larger floorspace tend to contain more rooms, but having more rooms doesn’t make them more valuable <em>per se</em>. Linear regression is a valuable tool in situations such as this, where we have multiple variables relating in a complex fashion, and we wish to estimate their causal effects on each other.</p>
-<div id="linear-regression-and-categorical-variables" class="section level3">
+<div id="linear-regression-and-categorical-variables" class="section level3" number="26.7.1">
 <h3>
 <span class="header-section-number">26.7.1</span> Linear regression and categorical variables<a class="anchor" aria-label="anchor" href="#linear-regression-and-categorical-variables"><i class="fas fa-link"></i></a>
 </h3>
 <p>The example above illustrated linear regression with continuous predictor variables. However, it is also perfectly possible to perform linear regression with categorical predictor variables. In this case the marginal effect plot looks like a bar plot instead of a line plot.</p>
 </div>
-<div id="generating-predictions-from-regression-models" class="section level3">
+<div id="generating-predictions-from-regression-models" class="section level3" number="26.7.2">
 <h3>
 <span class="header-section-number">26.7.2</span> Generating predictions from regression models<a class="anchor" aria-label="anchor" href="#generating-predictions-from-regression-models"><i class="fas fa-link"></i></a>
 </h3>
 <p>We have discussed how regression models can be used for explaining relationships between variables. However, they can also be used for generating predictions for new data points. For example, I can use the regression model from above to predict the price of a house with a floorspace of 125 square metres and 5 rooms:</p>
-<div class="sourceCode" id="cb47"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb50"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/stats/predict.html">predict</a></span><span class="op">(</span><span class="va">mod</span>, newdata <span class="op">=</span> <span class="fu">tibble</span><span class="op">(</span>rooms <span class="op">=</span> <span class="fl">5</span>, floorspace <span class="op">=</span> <span class="fl">125</span><span class="op">)</span><span class="op">)</span> <span class="op">%&gt;%</span> 
   <span class="fu"><a href="https://rdrr.io/r/base/numeric.html">as.numeric</a></span><span class="op">(</span><span class="op">)</span>
 <span class="co">#&gt; [1] 391290</span></code></pre></div>
 <p>The <code>equatiomatic</code> package in R provides a useful tool for extracting the equation used to generate these predictions:</p>
-<div class="sourceCode" id="cb48"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb51"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># install.packages("equatiomatic")</span>
 
 <span class="fu">equatiomatic</span><span class="fu">::</span><span class="fu"><a href="https://datalorax.github.io/equatiomatic/reference/extract_eq.html">extract_eq</a></span><span class="op">(</span><span class="va">mod</span>, use_coefs <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></code></pre></div>
@@ -291,26 +292,26 @@ Figure 26.5: Marginal effect of room number on house price in a fictional datase
 \]</span></p>
 <p>If you wanted you could use this equation to generate your predictions manually.</p>
 </div>
-<div id="interactions" class="section level3">
+<div id="interactions" class="section level3" number="26.7.3">
 <h3>
 <span class="header-section-number">26.7.3</span> Interactions<a class="anchor" aria-label="anchor" href="#interactions"><i class="fas fa-link"></i></a>
 </h3>
 <p>An <em>interaction effect</em> is when the effect of one predictor depends on the value of another predictor. Interaction effects are easiest to conceptualise when one of the variables is continuous and one is categorical with <span class="math inline">\(N\)</span> levels. In this case, the interaction effect works by estimating <span class="math inline">\(N\)</span> versions of the continuous variable’s marginal effect, one for each of the <span class="math inline">\(N\)</span> levels of the categorical variable. However, interactions can in general occur between all kinds of predictor variables.</p>
 </div>
-<div id="nonlinear-regression" class="section level3">
+<div id="nonlinear-regression" class="section level3" number="26.7.4">
 <h3>
 <span class="header-section-number">26.7.4</span> Nonlinear regression<a class="anchor" aria-label="anchor" href="#nonlinear-regression"><i class="fas fa-link"></i></a>
 </h3>
 <p>Linear regression assumes that all the marginal effects are straight lines. However, it is possible to generalise regression to incorporate nonlinear (wiggly) marginal effects, using techniques such as <em>polynomial regression</em> and <em>generalised additive modelling</em>. We will not discuss these techniques here but they are conceptually similar to linear regression models aside from their ability to capture nonlinearities.</p>
 </div>
-<div id="choosing-appropriate-control-variables" class="section level3">
+<div id="choosing-appropriate-control-variables" class="section level3" number="26.7.5">
 <h3>
 <span class="header-section-number">26.7.5</span> Choosing appropriate control variables<a class="anchor" aria-label="anchor" href="#choosing-appropriate-control-variables"><i class="fas fa-link"></i></a>
 </h3>
 <p>Regression is often used to make causal inferences about particular domains. Many researchers are familiar with the idea that incorporating additional variables within a regression model, often termed ‘control variables’, can be an effective way to extract better causal inferences from observational data. However, it is less appreciated that incorporating inappropriate control variables can in fact <em>increase</em> inferential biases. It is worth doing some further reading about this topic if you are planning on such analyses in your own work, see for example <span class="citation">Wysocki et al. (<a href="#ref-Wysocki2022-lu" role="doc-biblioref">2022</a>)</span>.</p>
 </div>
 </div>
-<div id="null-hypothesis-significance-testing" class="section level2">
+<div id="null-hypothesis-significance-testing" class="section level2" number="26.8">
 <h2>
 <span class="header-section-number">26.8</span> Null hypothesis significance testing<a class="anchor" aria-label="anchor" href="#null-hypothesis-significance-testing"><i class="fas fa-link"></i></a>
 </h2>
@@ -344,18 +345,15 @@ Figure 26.5: Marginal effect of room number on house price in a fictional datase
 
 </div>
 </div>
-
-
-
 <h3>References</h3>
-<div id="refs" class="references">
-<div id="ref-Wysocki2022-lu">
-<p>Wysocki, A. C., Lawson, K. M., &amp; Rhemtulla, M. (2022). Statistical control requires causal justification. <em>Advances in Methods and Practices in Psychological Science</em>, <em>5</em>(2), 25152459221095823. <a href="https://doi.org/10.1177/25152459221095823">https://doi.org/10.1177/25152459221095823</a></p>
+<div id="refs" class="references csl-bib-body hanging-indent" line-spacing="2">
+<div id="ref-Wysocki2022-lu" class="csl-entry">
+Wysocki, A. C., Lawson, K. M., &amp; Rhemtulla, M. (2022). Statistical control requires causal justification. <em>Advances in Methods and Practices in Psychological Science</em>, <em>5</em>(2), 25152459221095823. <a href="https://doi.org/10.1177/25152459221095823">https://doi.org/10.1177/25152459221095823</a>
 </div>
 </div>
   <div class="chapter-nav">
 <div class="prev"><a href="descriptive-statistics.html"><span class="header-section-number">25</span> Descriptive statistics</a></div>
-<div class="next"><a href="computational-music-psychology.html"><span class="header-section-number">27</span> Computational music psychology</a></div>
+<div class="next"><a href="appraising-limitations.html"><span class="header-section-number">27</span> Appraising limitations</a></div>
 </div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
     <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
       <ul class="nav navbar-nav">
@@ -393,7 +391,7 @@ Figure 26.5: Marginal effect of room number on house price in a fictional datase
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Music and Science</strong>" was written by Peter M. C. Harrison. It was last built on 2023-03-13.</p>
+    <p>"<strong>Music and Science</strong>" was written by Peter M. C. Harrison. It was last built on 2023-10-04.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">
