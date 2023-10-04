@@ -1515,6 +1515,13 @@
       ],
       "Hash": "1ebfdc8a3cfe8fe19184f5481972b092"
     },
+    "magick": {
+      "Package": "magick",
+      "Version": "2.7.3",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "56fbad418aa50939ed8c3028126af8d7"
+    },
     "magrittr": {
       "Package": "magrittr",
       "Version": "2.0.1",
@@ -2242,6 +2249,19 @@
       ],
       "Hash": "dfd843ee98246cf932823acf613b05dd"
     },
+    "specdec": {
+      "Package": "specdec",
+      "Version": "0.0.0.9002",
+      "Source": "GitHub",
+      "RemoteType": "github",
+      "RemoteHost": "api.github.com",
+      "RemoteUsername": "pmcharrison",
+      "RemoteRepo": "specdec",
+      "RemoteRef": "master",
+      "RemoteSha": "b79f11d800fa14e7ad6ab9a9b287130b82f765f0",
+      "Remotes": "pmcharrison/hrep",
+      "Hash": "0c84f3eff1add44561a36814095ab6d1"
+    },
     "stringi": {
       "Package": "stringi",
       "Version": "1.7.4",
@@ -2268,12 +2288,26 @@
       ],
       "Hash": "0759e6b6c0957edb1311028a49a35e76"
     },
+    "svglite": {
+      "Package": "svglite",
+      "Version": "2.1.0",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "68dfdf211af6aa4e5f050f064f64d401"
+    },
     "sys": {
       "Package": "sys",
       "Version": "3.4",
       "Source": "Repository",
       "Repository": "CRAN",
       "Hash": "b227d13e29222b4574486cfcbde077fa"
+    },
+    "systemfonts": {
+      "Package": "systemfonts",
+      "Version": "1.0.4",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "90b28393209827327de889f49935140a"
     },
     "tibble": {
       "Package": "tibble",

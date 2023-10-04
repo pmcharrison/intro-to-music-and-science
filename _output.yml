@@ -1,8 +1,11 @@
 bookdown::bs4_book:
   css: bs4_style.css
+  split_bib: yes
   theme:
     primary: "#096B72"
   repo: https://github.com/pmcharrison/intro-to-music-and-science
+  includes:
+    in_header: [css.html]
 bookdown::pdf_book:
   includes:
     in_header: preamble.tex

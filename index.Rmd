@@ -18,8 +18,6 @@ output:
     repo: 
       base: https://github.com/pmcharrison/intro-to-music-and-science
       branch: main
-    includes:
-      in_header: hypothesis.html
 ---
 
 ```{r, echo = FALSE, results = FALSE, message = FALSE}

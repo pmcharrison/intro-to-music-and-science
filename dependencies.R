@@ -3,3 +3,5 @@ bslib::nav
 downlit::autolink
 reticulate::array_reshape
 gifski::gifski
+magick::image_read
+svglite::svglite

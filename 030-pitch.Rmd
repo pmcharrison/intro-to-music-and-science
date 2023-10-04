@@ -80,9 +80,77 @@ embed_image(
 
 Specifically, the base of the basilar membrane resonates at high frequencies, but as we move from the base to the apex, the resonant frequencies become lower and lower. As a result, when sound enters the cochlea, its different spectral components are translated into resonances at different locations along the basilar membrane. This spatial localisation of frequency components is called *tonotopy*. These different locations have their own connections to nerve cells, which communicate the resonances towards the brain, with these resonances already separated by spectral frequency.
 
-The tonotopic nature of the basilar membrane is often described using the metaphor of *auditory filters*. In sound engineering, a filter is an object that selectively retains a subset of the frequencies in a frequency spectrum. For example, a low-pass filter only retains low frequencies, whereas a high-pass filter only retains high frequencies. When people talk about auditory filters in the context of the basilar membrane, they are talking about the way in which particular regions of the basilar membrane behaves somewhat like individual auditory filters. Specifically, a given region of the basilar membrane will only retain frequencies that are close to that region's characteristic frequency. The width of this filter is termed the 'critical band'.
+**Helmholtz's *sympathetic resonance* theory**. Helmholtz knew about the capacity of the ear to separate sounds by frequencies. He suggested that the ear contains many separate resonant elements, each tuned to a distinct characteristic frequency, similar to the strings in a piano. Incoming sound would then cause particular elements to resonate according to the sound's spectral frequencies (Panel B in the figure below).
 
-As discussed previously, a complex tone has many spectral components. How would the brain merge these all together to form a coherent percept of pitch? It's thought that the brain uses a *template-matching process*, where the template corresponds to a set of equally spaced harmonics, each corresponding to integer multiples of a common fundamental frequency, with amplitude decreasing as harmonic number increases. This template could either be innate or learned through experience.
+```{r}
+embed_image(
+  "images/resonance-and-travelling-waves.png",
+  title = "Schematic illustration of two theories of aural resonance.",
+  info = "**A:** von Békésy's travelling wave theory [@Von_Bekesy1960-oh]. **B:** Helmholtz's *sympathetic resonance* theory [@Helmholtz1875-fm].",
+  width = "100%",
+  credit = "@Bell2004-wo, [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)."
+)
+```
+
+Nowadays most people think that Helmholtz was partly right. We do think that the ear's frequency dispersion capacity comes from the fact that different parts of the basilar membrane have different resonant frequencies. However, we no longer believe that the basilar membrane contains discrete resonators; rather, the basilar membrane's physical properties gradually change as we progress from its base (thick, stiff) to its apex (thin, flexible), and this causes different locations to have different resonant frequencies.
+
+**Travelling waves.** The biophysicist von Békésy conducted a famous series of experiments from the 1940s to the 1960s where he dissected the inner ears of cadavers and used strobe photography to measure their vibrations in response to sounds. He verified that the basilar membrane indeed disperses different frequencies to different physical locations, and showed moreover that the membrane's resonances correspond to a *travelling wave*, specifically a wave that travels down the length of the basilar membrane, analogous to what happens when you hold a rope at one end and flick it (Panel A in the figure above; see also [this link](https://isle.hanover.edu/Ch10AuditorySystem/Ch10TravellingWave.html) for an interactive demo). This work ultimately won von Békésy the 1961 Nobel Prize in Physiology or Medicine. There is nonetheless still uncertainty about the precise physical mechanisms at play here, and debates about the extent to which Helmholtz's and von Békésy's theories characterise frequency dispersion in the cochlea; see @Bell2004-wo and @Babbs2011-eg for some recent discussions.
+
+**Auditory filters**. A given location of the basilar membrane will, in practice, respond to a range of spectral frequencies centred on a particular *characteristic frequency*; put another way, it behaves like an *auditory filter*, filtering the frequency spectrum to include only a small range of frequencies. This frequency range is termed the *critical band*, and its width is termed the *critical bandwidth*, or sometimes the *equivalent rectangular bandwidth* (ERB). Critical bandwidth is closely linked to the perceptual sensitivity of the basilar membrane; when two tones fall within the same critical band, they both excite the same auditory filter, causing interference effects including masking (where one tone makes another tone sound quieter) and beating (i.e. fluctuations in sound amplitude). Critical bandwidth varies according to several factors; for example, louder sounds elicit a larger critical bandwidth, presumably because the increased energy spreads over a wide region of the basilar membrane. If we express critical bandwidths in musical semitones, we find average values of 2-4 semitones for ordinary musical registers, and we find that the number of semitones in the critical band *increases* for lower pitches, meaning that a given musical interval sounds 'muddy' and unclear if we play it low on the piano (or another instrument).
+
+```{r}
+embed_image(
+  "images/band-pass-filter.svg",
+  title = "An idealised band-pass filter, used to model an auditory filter.",
+  info = "$F_C$ is the characteristic frequency, and $F_1$ and $F_2$ correspond to the extrema of the critical band.",
+  width = "90%",
+  credit = "[Public domain.](https://en.wikipedia.org/wiki/File:Band-pass_filter.svg)"
+)
+```
+
+**Inner hair cells.** We have established that different parts of the basilar membrane oscillate in response to different spectral components. How does the ear measure those oscillations? If we look closely under a high-powered microscope, we find bundles of hairs sticking out of the basilar membrane. These tiny hairs are called *stereocilia*. They come in bundles (termed *hair bundles*), and are attached to *hair cells*. They look something like this:
+
+```{r}
+embed_image(
+  "images/stereocilia-of-frog-inner-ear.jpg",
+  title = "High-resolution micrograph of stereocilia in a frog's inner ear.",
+  width = "100%",
+  credit = "Bechara Kachar, [public domain.](https://commons.wikimedia.org/wiki/File:Stereocilia_of_frog_inner_ear.01.jpg)"
+)
+```
+
+```{r}
+embed_image(
+  "images/hair-cells-wellcome-collection.jpg",
+  title = "Scanning electron microscope images of stereocilia.",
+  info = "Top left: an outer hair cell from a guinea pig cochlea. Bottom left: an inner hair cell from a guinea pig cochlea. Right: a terrapin hair cell.",
+  width = "100%",
+  credit = "David Furness, [CC BY-NC 4.0.](https://creativecommons.org/licenses/by-nc/4.0)"
+)
+```
+
+Humans have two main types of hair cells: *inner hair cells* and *outer hair cells*. The inner hair cells are responsible for sensing oscillations in the basilar membrane.
+
+The stereocilia of the inner hair cells project into the fluid-filled centre of the cochlea, termed the *cochlear duct*. When the inner hair cell vibrates, the stereocilia try to move along with it, but they drag against the cochlear fluid (*endolymph*).[^030-pitch-1] This causes the stereocilia to *shear*, i.e. to move away from their resting perpendicular position.
+
+[^030-pitch-1]: Recent research suggests that the stereocilia may also be connected by filamentous structures to the overlaying *tectorial membrane*, which would also exert similar resistance to movement [@Hakizimana2021-wt].
+
+The tips of the stereocilia are connected by tiny filaments called *tip links*. When the stereocilia shear, this applies tension to the tip links, and causes *ion channels* to open, allowing positively charged *ions* (especially potassium, $K^+$) to flow into the cell. This triggers the release of *neurotransmitters*, which in term cause the *auditory nerve* to fire.
+
+```{r}
+embed_image(
+  "images/hair-cell-transduction.svg",
+  title = "Mechanotransduction in an inner hair cell.",
+  width = "60%",
+  credit = "Thomas Haslwanter, [CC BY-SA 3.0.](https://creativecommons.org/licenses/by-sa/3.0/deed.en)"
+)
+```
+
+**The auditory nerve.** The auditory nerve is responsible for communication between the ear and the brain. It comprises a bundle of approximately 30,000 nerve fibres, most of which innervate inner hair cells, and the rest of which innervate outer hair cells. Different nerve fibres connect to different inner hair cells, each with their own characteristic frequencies; the auditory nerve therefore inherits the tonotopy of the basilar membrane, with different nerve fibres responding to different characteristic frequencies.
+
+**Outer hair cells.** The travelling wave mechanism identified by von Békésy appeared, on the face of it, to have two important limitations. The first is that a given spectral component would excite such a large portion of the basilar membrane that position information would only provide a very imprecise cue for spectral frequency. The second is that loud sounds would produce such immensely larger vibrations than quiet sounds that the latter would be very hard to detect. Recent decades of research indicate that the outer hair cells (found only in mammals) play a special role in counteracting these effects: they sharpen the physical response of the basilar membrane, meaning that spectral components excite a much smaller area, and they amplify the response to quiet sounds. The physical mechanisms of this sharpening and amplification are still being studied, but it is thought that they depend on the outer hair cells' *electromobility*, namely their ability to change length in response to electrical stimulation. See @Dallos2008-lk for a recent discussion.
+
+**Deriving pitch from auditory nerve firings.** As discussed previously, a complex tone has many spectral components. According to the above process, these spectral components excite different regions of the basilar membrane, stimulating different inner hair cells, and causing different nerve fibres in the auditory nerve to fire. The brain can thereby access its own spectral representation of the incoming sound: the spectral components simply correspond to the different excited nerve fibres. But how would the brain merge these all together to form a coherent percept of pitch? According to the *spectral* theory of pitch perception, the brain uses a *template-matching process*, where the template corresponds to a set of equally spaced harmonics, each corresponding to integer multiples of a common fundamental frequency, with amplitude decreasing as harmonic number increases. This template could either be innate or learned through experience.
 
 ```{r}
 embed_image(
@@ -98,7 +166,7 @@ This spectral theory of pitch perception is sometimes referred to as 'place theo
 
 ## Temporal theory
 
-The temporal theory of pitch perception still relies on the mechanisms of the inner ear for translating air vibrations into neural impulses. However, it posits that pitch perception does not depend so much on transmitting the locations where the basilar membrane resonates, but rather depends on the temporal structure of the nerve impulses that are elicited by this resonance. In particular, the firing patterns of the nerve cells are known to entrain to the periodic motion of the basilar membrane, in what is called *phase locking*.
+Like the spectral theory, the temporal theory of pitch perception still relies on the mechanisms of the inner ear for translating air vibrations into neural impulses. However, it posits that pitch perception does not depend so much on transmitting the locations where the basilar membrane resonates, but rather depends on the temporal structure of the nerve impulses that are elicited by this resonance. In particular, the firing patterns of the nerve cells are known to entrain to the periodic motion of the basilar membrane, in what is called *phase locking*.
 
 ```{r}
 embed_image(

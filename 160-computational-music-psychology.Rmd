@@ -174,9 +174,9 @@ is_prime(6)
 
 You can easily try these code examples out on your own computer. A quick way to try both R and Python examples is via [Google Colaboratory](https://colab.research.google.com/?utm_source=scs-index#scrollTo=-Rh3-Vt9Nev9) (or 'Colab' for short). You will need a Google account to use this. This service allows you to spin up R or Python sessions in your web browser that you can use interactively. Use the following links to create your own sessions:
 
--   [Create a new Python notebook](https://colab.to/py)
+-   [Create a new Python notebook](https://colab.research.google.com/notebook#create=true)
 
--   [Create a new R notebook](https://colab.to/r)
+-   [Create a new R notebook](https://colab.research.google.com/notebook#create=true&language=r)
 
 You can then copy and paste the above code into these notebooks. Use Command-Enter (Mac) or Ctrl-Enter (Windows) to execute code in a given block.
 

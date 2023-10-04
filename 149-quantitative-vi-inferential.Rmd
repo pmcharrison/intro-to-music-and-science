@@ -471,6 +471,10 @@ An *interaction effect* is when the effect of one predictor depends on the value
 
 Linear regression assumes that all the marginal effects are straight lines. However, it is possible to generalise regression to incorporate nonlinear (wiggly) marginal effects, using techniques such as *polynomial regression* and *generalised additive modelling*. We will not discuss these techniques here but they are conceptually similar to linear regression models aside from their ability to capture nonlinearities.
 
+### Choosing appropriate control variables
+
+Regression is often used to make causal inferences about particular domains. Many researchers are familiar with the idea that incorporating additional variables within a regression model, often termed 'control variables', can be an effective way to extract better causal inferences from observational data. However, it is less appreciated that incorporating inappropriate control variables can in fact *increase* inferential biases. It is worth doing some further reading about this topic if you are planning on such analyses in your own work, see for example @Wysocki2022-lu.
+
 ## Null hypothesis significance testing
 
 *Null hypothesis significance testing* is a particular approach to inferential statistics that dominated psychological research for much of the 20th century, and is still very prevalent today. Many modern statisticians however now have deep reservations about this approach, arguing that it does not answer the questions that most scientists actually want to answer, and that it encourages dangerous statistical misconceptions among the researchers that use it. These issues notwithstanding, the great majority of existing literature use these or related techniques, and so it is important to understand them even if one prefers not to use them oneself.
