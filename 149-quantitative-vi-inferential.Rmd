@@ -209,7 +209,7 @@ A more general and powerful approach to computing standard errors is to use a te
 
 ## Representing uncertainty
 
-It is good practice to provide uncertainty estimates when reporting inferential statistics (e.g. means) in a scientific report. For example, we might report the mean of a dataset as follows:
+It is good practice to provide uncertainty estimates when reporting statistics (e.g. means) in a scientific report. For example, we might report the mean of a dataset as follows:
 
 > The mean reaction time among the musicians was 700 ms (*SD =* 633ms, *SE* = 76 ms).
 
