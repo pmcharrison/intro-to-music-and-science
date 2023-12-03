@@ -3,7 +3,7 @@ library(hrep)
 library(specdec)
 library(ggplot2)
 
-theme_set(theme_classic())
+source("plot_theme.R")
 
 a <- 76 %>% 
   pi_chord() %>% 

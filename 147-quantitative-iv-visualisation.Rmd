@@ -30,7 +30,7 @@ Here is some generic setup code that we will use to prepare our subsequent figur
 
 ```{r, include = FALSE}
 library(tidyverse)
-theme_set(theme_classic())
+source("plot_theme.R")
 ```
 
 ## Plotting one variable

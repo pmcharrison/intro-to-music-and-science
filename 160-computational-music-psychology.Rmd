@@ -4,7 +4,7 @@
 
 ```{r, include = FALSE}
 library(tidyverse)
-theme_set(theme_classic())
+source("plot_theme.R")
 source("setup.R")
 knitr::opts_chunk$set(echo = FALSE, cache = TRUE)
 

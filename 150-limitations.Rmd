@@ -7,7 +7,7 @@ knitr::opts_chunk$set(
 )
 set.seed(1)
 library(tidyverse)
-theme_set(theme_classic())
+source("plot_theme.R")
 ```
 
 ## Introduction

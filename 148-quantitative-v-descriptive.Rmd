@@ -7,7 +7,7 @@ knitr::opts_chunk$set(
 )
 set.seed(1)
 library(tidyverse)
-theme_set(theme_classic())
+source("plot_theme.R")
 ```
 
 *Descriptive statistics* are numbers that summarise key aspects of a given dataset. These statistics often form integral parts of particular visualisations (Chapter \@ref(data-visualisation)); for example, the median and interquartile range are two important statistics in box-and-whisker plots. In this chapter we will discuss various kinds of descriptive statistics and their applications.
