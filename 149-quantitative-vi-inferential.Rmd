@@ -453,15 +453,20 @@ predict(mod, newdata = tibble(rooms = 5, floorspace = 125)) %>%
   as.numeric()
 ```
 
-The `equatiomatic` package in R provides a useful tool for extracting the equation used to generate these predictions:
+To compute these predictions manually, we need to have a look at the fitted
+model coefficients:
 
-```{r, echo = TRUE, results = "asis"}
-# install.packages("equatiomatic")
-
-equatiomatic::extract_eq(mod, use_coefs = TRUE)
+```{r, echo = TRUE}
+mod
 ```
 
-If you wanted you could use this equation to generate your predictions manually.
+We take each coefficient and multiply it by the value of the corresponding
+predictor, then add everything together, also adding the 'intercept'
+coefficient. So in this example:
+
+$$
+\operatorname{\widehat{price}} = -10397 - (13201 \times \operatorname{rooms}) + (3742 \times \operatorname{floorspace})
+$$
 
 ### Interactions
 

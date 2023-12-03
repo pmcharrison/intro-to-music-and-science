@@ -1,8 +1,7 @@
 library(tidyverse)
-library(ggpubr)
 library(hrep)
 
-theme_set(theme_pubr())
+theme_set(theme_classic())
 
 get_profile <- function(input) {
   read_delim(input, delim = "\t", 

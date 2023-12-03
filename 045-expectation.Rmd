@@ -4,8 +4,7 @@
 source("setup.R")
 
 library(tidyverse)
-library(ggpubr)
-theme_set(theme_pubr())
+theme_set(theme_classic())
 
 knitr::opts_chunk$set(
   echo = FALSE, results = "asis"
@@ -528,9 +527,8 @@ Let's see how we might apply IDyOM in practice. Here's an excerpt from a Bach ch
 
 ```{r}
 library(tidyverse)
-library(ggpubr)
 
-theme_set(theme_pubr())
+theme_set(theme_classic())
 
 chorale <- 
   cowplot::ggdraw() +

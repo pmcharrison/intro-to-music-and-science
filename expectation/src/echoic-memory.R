@@ -2,9 +2,8 @@ library(hrep)
 
 library(specdec)
 library(ggplot2)
-library(ggpubr)
 
-theme_set(theme_pubr())
+theme_set(theme_classic())
 
 a <- 76 %>% 
   pi_chord() %>% 
