@@ -7,7 +7,7 @@
 <title>Chapter 21 Variables | Music and Science</title>
 <meta name="author" content="Peter M. C. Harrison">
 <meta name="description" content="21.1 Introduction Quantitative methods, at their core, are all about characterising two things: distributions of variables; relationships between variables. These relationships can be summarised...">
-<meta name="generator" content="bookdown 0.35 with bs4_book()">
+<meta name="generator" content="bookdown 0.37 with bs4_book()">
 <meta property="og:title" content="Chapter 21 Variables | Music and Science">
 <meta property="og:type" content="book">
 <meta property="og:description" content="21.1 Introduction Quantitative methods, at their core, are all about characterising two things: distributions of variables; relationships between variables. These relationships can be summarised...">
@@ -16,45 +16,23 @@
 <meta name="twitter:description" content="21.1 Introduction Quantitative methods, at their core, are all about characterising two things: distributions of variables; relationships between variables. These relationships can be summarised...">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
-<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.4.2/transition.js"></script><script src="libs/bs3compat-0.4.2/tabs.js"></script><script src="libs/bs3compat-0.4.2/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
-<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="libs/htmlwidgets-1.6.2/htmlwidgets.js"></script><link href="libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet">
-<script src="libs/datatables-binding-0.29/datatables.js"></script><link href="libs/dt-core-1.13.4/css/jquery.dataTables.min.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.6.1/transition.js"></script><script src="libs/bs3compat-0.6.1/tabs.js"></script><script src="libs/bs3compat-0.6.1/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script><script src="libs/htmlwidgets-1.6.3/htmlwidgets.js"></script><link href="libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet">
+<script src="libs/datatables-binding-0.30/datatables.js"></script><link href="libs/dt-core-1.13.4/css/jquery.dataTables.min.css" rel="stylesheet">
 <link href="libs/dt-core-1.13.4/css/jquery.dataTables.extra.css" rel="stylesheet">
-<script src="libs/dt-core-1.13.4/js/jquery.dataTables.min.js"></script><link href="libs/crosstalk-1.2.0/css/crosstalk.min.css" rel="stylesheet">
-<script src="libs/crosstalk-1.2.0/js/crosstalk.min.js"></script><!-- It makes little sense to put CSS in an HTML file instead of a 
-    CSS file, but this seems to be the only way I could get BS4 book to
-    recognise it !--><style>
-      .csl-entry {
-        margin-bottom: 15px;
-        padding-left: 30px;
-        text-indent: -30px;
-      }
-    </style>
+<script src="libs/dt-core-1.13.4/js/jquery.dataTables.min.js"></script><link href="libs/crosstalk-1.2.1/css/crosstalk.min.css" rel="stylesheet">
+<script src="libs/crosstalk-1.2.1/js/crosstalk.min.js"></script><!-- It makes little sense to put CSS in an HTML file instead of a 
+  CSS file, but this seems to be the only way I could get BS4 book to
+  recognise it !--><style>
+    .csl-entry {
+      margin-bottom: 15px;
+      padding-left: 30px;
+      text-indent: -30px;
+    }
+  </style>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
     
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-  </style>
-<style type="text/css">
-    /* Used with Pandoc 2.11+ new --citeproc when CSL is used */
-    div.csl-bib-body { }
-    div.csl-entry {
-      clear: both;
-        }
-    .hanging div.csl-entry {
-      margin-left:2em;
-      text-indent:-2em;
-    }
-    div.csl-left-margin {
-      min-width:2em;
-      float:left;
-    }
-    div.csl-right-inline {
-      margin-left:2em;
-      padding-left:1em;
-    }
-    div.csl-indent {
-      margin-left: 2em;
-    }
   </style>
 <link rel="stylesheet" href="bs4_style.css">
 </head>
@@ -119,11 +97,11 @@
         </div>
       </nav>
 </div>
-  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="variables" class="section level1" number="21">
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="variables" class="section level1">
 <h1>
 <span class="header-section-number">21</span> Variables<a class="anchor" aria-label="anchor" href="#variables"><i class="fas fa-link"></i></a>
 </h1>
-<div id="introduction-2" class="section level2" number="21.1">
+<div id="introduction-2" class="section level2">
 <h2>
 <span class="header-section-number">21.1</span> Introduction<a class="anchor" aria-label="anchor" href="#introduction-2"><i class="fas fa-link"></i></a>
 </h2>
@@ -138,7 +116,7 @@
 <div class="inline-figure"><img src="140-quantitative-i-defining-variables_files/figure-html/unnamed-chunk-3-1.png" width="672"></div>
 <p>It feels very natural to speak about car engines in these numeric constructs such as miles per gallon and horsepower, and to quantify relationships between them using data plots. In contrast, it is less obvious how to construct equivalent numeric constructs for human psychology, where many of the relevant concepts (e.g. personality, attention, consciousness) are hard to define and even harder to measure. This task of defining appropriate variables is one of the key challenges of psychology research, and it’s the focus of the present chapter.</p>
 </div>
-<div id="scientific-variables" class="section level2" number="21.2">
+<div id="scientific-variables" class="section level2">
 <h2>
 <span class="header-section-number">21.2</span> Scientific variables<a class="anchor" aria-label="anchor" href="#scientific-variables"><i class="fas fa-link"></i></a>
 </h2>
@@ -179,7 +157,7 @@
 </li>
 </ul>
 </div>
-<div id="psychological-variables" class="section level2" number="21.3">
+<div id="psychological-variables" class="section level2">
 <h2>
 <span class="header-section-number">21.3</span> Psychological variables<a class="anchor" aria-label="anchor" href="#psychological-variables"><i class="fas fa-link"></i></a>
 </h2>
@@ -193,7 +171,7 @@
 <li>Demographics;</li>
 </ol>
 <p>Let’s discuss each of these in turn.</p>
-<div id="manipulations" class="section level3" number="21.3.1">
+<div id="manipulations" class="section level3">
 <h3>
 <span class="header-section-number">21.3.1</span> Manipulations<a class="anchor" aria-label="anchor" href="#manipulations"><i class="fas fa-link"></i></a>
 </h3>
@@ -301,7 +279,7 @@
 </tbody>
 </table></div>
 </div>
-<div id="physical-behaviours" class="section level3" number="21.3.2">
+<div id="physical-behaviours" class="section level3">
 <h3>
 <span class="header-section-number">21.3.2</span> Physical behaviours<a class="anchor" aria-label="anchor" href="#physical-behaviours"><i class="fas fa-link"></i></a>
 </h3>
@@ -341,7 +319,7 @@
 </tr>
 </tbody>
 </table></div>
-<p>Behavioural variables also come up in studies of everyday musical behaviours. For example, a recent paper <span class="citation">(<a href="#ref-Park2019-kb" role="doc-biblioref">Park et al., 2019</a>)</span> studied global music listening patterns as collected through the music streaming service Spotify, and identified how people in different countries listen to different kinds of music at different times of day. A dataset from such a study might look like this:</p>
+<p>Behavioural variables also come up in studies of everyday musical behaviours. For example, a recent paper <span class="citation">(Park et al., <a href="#ref-Park2019-kb" role="doc-biblioref">2019</a>)</span> studied global music listening patterns as collected through the music streaming service Spotify, and identified how people in different countries listen to different kinds of music at different times of day. A dataset from such a study might look like this:</p>
 <div class="inline-table"><table class="table table-sm">
 <colgroup>
 <col width="22%">
@@ -385,7 +363,7 @@
 <p>Here the behavioural variable would be the musical track that the individual chose to listen to. Of course, we can get pedantic here about the extent to which an individual actively chooses to listen to a specific musical track: for example, if they’ve selected ‘Shuffle’ then Spotify will be choosing the next song for them, albeit from a limited selection. But the general point is clear, that this dataset reflects to some extent real-world decisions that the individual is making about what music to listen to.</p>
 <p>Music psychology experiments are often particularly interested in quantifying listeners’ <em>subjective</em> experiences when they listen to music: for example, the sense in which a listener finds certain sounds beautiful, or happy, or moving. Though it is difficult (impossible?) to measure subjective experiences directly, it is perfectly possible to ask the participant to describe these subjective experiences. For example, if we were interested in subjective beauty, we might ask the participant to rate the stimulus for beauty on a scale from 1 to 4, where 1 means ‘not at all beautiful’ and 4 means ‘very beautiful’.</p>
 </div>
-<div id="neural-responses" class="section level3" number="21.3.3">
+<div id="neural-responses" class="section level3">
 <h3>
 <span class="header-section-number">21.3.3</span> Neural responses<a class="anchor" aria-label="anchor" href="#neural-responses"><i class="fas fa-link"></i></a>
 </h3>
@@ -396,13 +374,13 @@
 <li><p><em>Functional magnetic resonance imaging</em> (fMRI) measures changes in blood flow through the brain. This is useful because (as it turns out) blood flow is a reliable marker of neural activity; when a particular brain region is experiencing high neural activity, blood flow to that region will increase so as to provide more oxygen for respiration. fMRI has much better localisation capacity than EEG or MEG; however, its temporal sensitivity is much lower than either method, producing data on the granularity of seconds rather than milliseconds.</p></li>
 </ul>
 </div>
-<div id="physiology" class="section level3" number="21.3.4">
+<div id="physiology" class="section level3">
 <h3>
 <span class="header-section-number">21.3.4</span> Physiology<a class="anchor" aria-label="anchor" href="#physiology"><i class="fas fa-link"></i></a>
 </h3>
 <p>Psychological processes also affect the body in systematic and measurable ways. These are termed <em>physiological</em> effects. In musical contexts, physiological effects are most commonly associated with emotional responses. For example, in cases of high emotional arousal, participants tend to exhibit faster heart rates and respiration rates, as well as high skin temperature and perspiration. These can be measured using standardised laboratory equipment as discussed in the Emotion chapter.</p>
 </div>
-<div id="latent-traits" class="section level3" number="21.3.5">
+<div id="latent-traits" class="section level3">
 <h3>
 <span class="header-section-number">21.3.5</span> Latent traits<a class="anchor" aria-label="anchor" href="#latent-traits"><i class="fas fa-link"></i></a>
 </h3>
@@ -417,7 +395,7 @@
 </ol>
 <p>The idea is that each person’s personality can be summarised (to some extent) as a collection of five scores, one for each of these five dimensions.</p>
 <p>How do we measure these different dimensions? It’s hardly as if we can take out a ruler and measure the size of different areas of the brain corresponding to these different personality traits. Even if we had a spare magnetic resonance imaging (MRI) scanner lying around with which to measure individual brain anatomy, the mapping between brain dimensions and psychological traits tends to be rather too complicated for such a procedure to be practical in most situations.</p>
-<p>Instead, like many latent traits, we tend to assess personality using <em>questionnaires</em>. A questionnaire is simply a collection of standardised questions that we administer to a participant. Many question formats are possible, but in quantitative studies it’s particularly common to administer questionnaires with numeric responses. For example, when assessing someone’s personality, we might ask them the following question, sourced from the Ten Item Personality Inventory (TIPI) <span class="citation">(<a href="#ref-Gosling2003-bt" role="doc-biblioref">Gosling et al., 2003</a>)</span>:</p>
+<p>Instead, like many latent traits, we tend to assess personality using <em>questionnaires</em>. A questionnaire is simply a collection of standardised questions that we administer to a participant. Many question formats are possible, but in quantitative studies it’s particularly common to administer questionnaires with numeric responses. For example, when assessing someone’s personality, we might ask them the following question, sourced from the Ten Item Personality Inventory (TIPI) <span class="citation">(Gosling et al., <a href="#ref-Gosling2003-bt" role="doc-biblioref">2003</a>)</span>:</p>
 <blockquote>
 <p><em>Please indicate the extent to which you agree with the following statement.</em></p>
 <p>I see myself as: sympathetic, warm.</p>
@@ -440,7 +418,7 @@
 </blockquote>
 <p>This second question is what we call a <em>reverse-scored</em> question. When we analyse data from reverse-scored questions, we interpret high numbers as a low numbers and low numbers as high numbers. In this case, participants who responded ‘Disagree strongly’ would receive a score of 1, whereas participants who responded ‘Agree strongly’ would receive a score of 7. The necessity to reverse-score the question comes from the nature of the words being used: while ‘sympathetic’ and ‘warm’ are near-synonyms of ‘agreeable’, ‘critical’ and ‘quarrelsome’ are near-antonyms (i.e. opposites). To get an overall agreeableness score, we could then simply average the numeric results from the first and second (reverse-scored) agreeableness questions. For example, if I wrote ‘Agree moderately’ to the question ‘I see myself as sympathetic, warm’, and ‘Disagree strongly’ to the question ‘I see myself as critical, quarrelsome’, I’d get an agreeableness score of <code>(6 + 1) / 2 = 3.5</code>.</p>
 </div>
-<div id="demographics" class="section level3" number="21.3.6">
+<div id="demographics" class="section level3">
 <h3>
 <span class="header-section-number">21.3.6</span> Demographics<a class="anchor" aria-label="anchor" href="#demographics"><i class="fas fa-link"></i></a>
 </h3>
@@ -456,7 +434,7 @@
 <p>Of these, age, gender, and country of residence are considered particularly essential for psychological studies; it is difficult to publish a paper that omits this information.</p>
 </div>
 </div>
-<div id="musical-variables" class="section level2" number="21.4">
+<div id="musical-variables" class="section level2">
 <h2>
 <span class="header-section-number">21.4</span> Musical variables<a class="anchor" aria-label="anchor" href="#musical-variables"><i class="fas fa-link"></i></a>
 </h2>
@@ -466,7 +444,7 @@
 <li>Computational features</li>
 <li>Other metadata</li>
 </ol>
-<div id="human-annotations" class="section level3" number="21.4.1">
+<div id="human-annotations" class="section level3">
 <h3>
 <span class="header-section-number">21.4.1</span> Human annotations<a class="anchor" aria-label="anchor" href="#human-annotations"><i class="fas fa-link"></i></a>
 </h3>
@@ -501,14 +479,14 @@
 </tbody>
 </table></div>
 </div>
-<div id="computational-features" class="section level3" number="21.4.2">
+<div id="computational-features" class="section level3">
 <h3>
 <span class="header-section-number">21.4.2</span> Computational features<a class="anchor" aria-label="anchor" href="#computational-features"><i class="fas fa-link"></i></a>
 </h3>
 <p>It is also possible to generate useful variables by running musical extracts through computer algorithms. Variables extracted in such a way are typically called <em>features</em>.</p>
 <p>There are many such algorithms out there, designed to perform all kinds of tasks. Particularly relevant are algorithms designed explicitly for the purpose of psychological modelling.</p>
 <p>These computer algorithms can be differentiated in terms of the kind of data that they ingest. Some take so-called <em>symbolic</em> data, whereas others take <em>audio</em> data.</p>
-<div id="symbolic-approaches" class="section level4" number="21.4.2.1">
+<div id="symbolic-approaches" class="section level4">
 <h4>
 <span class="header-section-number">21.4.2.1</span> Symbolic approaches<a class="anchor" aria-label="anchor" href="#symbolic-approaches"><i class="fas fa-link"></i></a>
 </h4>
@@ -567,15 +545,6 @@
 </table></div>
 <p>We then might feed this data into a collection of symbolic algorithms in order to extract some useful features for our experiment. For a simple example, suppose we run two algorithms: a key-finding algorithm and a melodic expectation algorithm. Let’s further agree that we run both in a sliding-window fashion, such that the algorithm at timepoint 1 only sees data from timepoints 0 and 1, and so on.</p>
 <div class="inline-table"><table class="table table-sm">
-<colgroup>
-<col width="13%">
-<col width="10%">
-<col width="8%">
-<col width="14%">
-<col width="17%">
-<col width="16%">
-<col width="19%">
-</colgroup>
 <thead><tr class="header">
 <th>Note ID</th>
 <th>Pitch</th>
@@ -653,12 +622,12 @@
 </table></div>
 <p>Here we’ve ended up with three computational features in our fictional dataset:</p>
 <ul>
-<li><p>‘Est. tonic’ tells us the tonic as estimated by the key-finding algorithm. It starts off thinking that the melody is in F (with the first note being the dominant), but once it hears the third note it decides that the melody is in C after all. A well-known such algorithm is the <em>Krumhansl-Kessler key-finding algorithm</em> <span class="citation">(<a href="#ref-krumhansl1990cognitive" role="doc-biblioref">Krumhansl, 1990</a>)</span>.</p></li>
+<li><p>‘Est. tonic’ tells us the tonic as estimated by the key-finding algorithm. It starts off thinking that the melody is in F (with the first note being the dominant), but once it hears the third note it decides that the melody is in C after all. A well-known such algorithm is the <em>Krumhansl-Kessler key-finding algorithm</em> <span class="citation">(Krumhansl, <a href="#ref-krumhansl1990cognitive" role="doc-biblioref">1990</a>)</span>.</p></li>
 <li><p>‘Est. mode’ tells us the estimated mode; in our case it believes that the melody is in the major mode throughout.</p></li>
-<li><p>‘Probability’ tells us how likely the melodic expectation algorithm believes the current note to be, taking into account what happened so far in the melody. Prominent examples of melodic expectation algorithms are Temperley’s melodic expectation algorithm <span class="citation">(<a href="#ref-Temperley2008-tj" role="doc-biblioref">Temperley, 2008</a>)</span> and Pearce’s Information Dynamics Of Music (IDyOM) model <span class="citation">(<a href="#ref-Pearce2005-bm" role="doc-biblioref">Pearce, 2005</a>)</span>.</p></li>
+<li><p>‘Probability’ tells us how likely the melodic expectation algorithm believes the current note to be, taking into account what happened so far in the melody. Prominent examples of melodic expectation algorithms are Temperley’s melodic expectation algorithm <span class="citation">(Temperley, <a href="#ref-Temperley2008-tj" role="doc-biblioref">2008</a>)</span> and Pearce’s Information Dynamics Of Music (IDyOM) model <span class="citation">(Pearce, <a href="#ref-Pearce2005-bm" role="doc-biblioref">2005</a>)</span>.</p></li>
 </ul>
 </div>
-<div id="audio-approaches" class="section level4" number="21.4.2.2">
+<div id="audio-approaches" class="section level4">
 <h4>
 <span class="header-section-number">21.4.2.2</span> Audio approaches<a class="anchor" aria-label="anchor" href="#audio-approaches"><i class="fas fa-link"></i></a>
 </h4>
@@ -761,20 +730,20 @@
 </ul>
 </div>
 </div>
-<div id="other-metadata" class="section level3" number="21.4.3">
+<div id="other-metadata" class="section level3">
 <h3>
 <span class="header-section-number">21.4.3</span> Other metadata<a class="anchor" aria-label="anchor" href="#other-metadata"><i class="fas fa-link"></i></a>
 </h3>
 <p>When using pre-existing pieces (e.g. classical music compositions) one can often source many other musical variables based on the music’s metadata. One might for example include the music genre, the composer, the date of composition, the number of record sales, and so on.</p>
 </div>
 </div>
-<div id="limitations" class="section level2" number="21.5">
+<div id="limitations" class="section level2">
 <h2>
 <span class="header-section-number">21.5</span> Limitations<a class="anchor" aria-label="anchor" href="#limitations"><i class="fas fa-link"></i></a>
 </h2>
 <p>When we define scientific variables, we are in most cases trying to <em>operationalise</em> some fundamental concept of interest. For example, we might be interested in learning about the subjective pleasantness of musical chords, and we operationalise this concept by asking a collection of participants to rate the pleasantness of particular musical chords on a scale of 1 to 7. Operationalisation is invaluable to psychology, because without it we can’t measure most of the things we care about. However, it’s also very dangerous, because an improper operationalisation can cause us to draw highly misleading conclusions from our experiments. It’s therefore essential to maintain a critical perspective on variable definitions at all times, both when conducting one’s own studies and when reading other studies in the literature.</p>
 <p>There are two main features that contribute to the quality of an operationalisation: <em>reliability</em> and <em>validity</em>. Let’s consider each in turn.</p>
-<div id="reliability" class="section level3" number="21.5.1">
+<div id="reliability" class="section level3">
 <h3>
 <span class="header-section-number">21.5.1</span> Reliability<a class="anchor" aria-label="anchor" href="#reliability"><i class="fas fa-link"></i></a>
 </h3>
@@ -783,12 +752,12 @@
 <p>Some of our psychological variables have very high reliability. For example, if we ask a UK participant to report their age in a demographic questionnaire, they are likely to give a very reliable answer as long as they are not incentivised to lie. Others have relatively low reliability; for example, many neuroimaging modalities have intrinsically low reliability, in large part because the brain is always doing many other things in addition to processing the current experimental stimulus.</p>
 <p>Reliability is necessary but not sufficient for an operationalisation to be effective. What if we measure an adult’s extraversion by counting how many friends they had in primary school? This measure will be highly <em>reliable</em> in the sense that this number is not going to change now that the adult has left school, so we’re always going to get the same answer no matter how many times we ask the question. On the other hand, this question is clearly not a particularly ‘good’ measure of extraversion, because there are many other factors that can contribute to the size of someone’s friendship group, for example whether they were home-schooled or not. This brings us to the following notion of <em>validity</em>.</p>
 </div>
-<div id="validity" class="section level3" number="21.5.2">
+<div id="validity" class="section level3">
 <h3>
 <span class="header-section-number">21.5.2</span> Validity<a class="anchor" aria-label="anchor" href="#validity"><i class="fas fa-link"></i></a>
 </h3>
 <p>A measurement procedure’s <em>validity</em> may be defined as the extent to which the procedure truly measures what it’s meant to measure. Validity is much harder to establish than reliability, because it requires deep engagement with the psychological processes surrounding a measurement.</p>
-<p>Validity issues are particularly salient for latent traits, for example personality and intelligence. In this context researchers often use the more specific term <em>construct validity</em> <span class="citation">(<a href="#ref-Cronbach1955-ep" role="doc-biblioref">Cronbach &amp; Meehl, 1955</a>)</span>. The issue here is that we are talking about latent constructs that are impossible to measure and very difficult to introspect effectively about. It is possible to create standardised instruments for measuring these constructs, for example IQ tests or personality tests, but it is very easy for certain biases or confounds to find their way into these instruments. For example, the self-report component of the Goldsmiths Musical Sophistication Index (Gold-MSI) assesses the participant’s singing abilities by asking them how much they agree with the following statements:</p>
+<p>Validity issues are particularly salient for latent traits, for example personality and intelligence. In this context researchers often use the more specific term <em>construct validity</em> <span class="citation">(Cronbach &amp; Meehl, <a href="#ref-Cronbach1955-ep" role="doc-biblioref">1955</a>)</span>. The issue here is that we are talking about latent constructs that are impossible to measure and very difficult to introspect effectively about. It is possible to create standardised instruments for measuring these constructs, for example IQ tests or personality tests, but it is very easy for certain biases or confounds to find their way into these instruments. For example, the self-report component of the Goldsmiths Musical Sophistication Index (Gold-MSI) assesses the participant’s singing abilities by asking them how much they agree with the following statements:</p>
 <ul>
 <li><p>If somebody starts singing a song I don’t know, I can usually join in.</p></li>
 <li><p>I can sing or play music from memory.</p></li>
@@ -803,7 +772,7 @@
 <p>Validity is something important to consider and discuss both in the study planning stage and in the study write-up stage. In the planning stage, one should carefully consider the operationalisations being adopted, and try to design them such as to maximise validity. Of course, it is never possible to achieve perfection here. In the write-up stage, it is therefore important to be explicit and open about the potential validity limitations of the present work, and to explain how these should or should not affect the conclusions being made. It is always acceptable to point to ways in which future work could or should address these limitations.</p>
 </div>
 </div>
-<div id="summary-1" class="section level2" number="21.6">
+<div id="summary-1" class="section level2">
 <h2>
 <span class="header-section-number">21.6</span> Summary<a class="anchor" aria-label="anchor" href="#summary-1"><i class="fas fa-link"></i></a>
 </h2>
@@ -828,24 +797,24 @@
 </div>
 </div>
 <h3>References</h3>
-<div id="refs" class="references csl-bib-body hanging-indent" line-spacing="2">
-<div id="ref-Cronbach1955-ep" class="csl-entry">
-Cronbach, L. J., &amp; Meehl, P. E. (1955). Construct validity in psychological tests. <em>Psychological Bulletin</em>, <em>52</em>(4), 281–302. <a href="https://doi.org/10.1037/h0040957">https://doi.org/10.1037/h0040957</a>
+<div id="refs" class="references">
+<div id="ref-Cronbach1955-ep">
+<p>Cronbach, L. J., &amp; Meehl, P. E. (1955). Construct validity in psychological tests. <em>Psychol. Bull.</em>, <em>52</em>(4), 281–302.</p>
 </div>
-<div id="ref-Gosling2003-bt" class="csl-entry">
-Gosling, S. D., Rentfrow, P. J., &amp; Swann, W. B. (2003). A very brief measure of the <span>Big-Five</span> personality domains. <em>Journal of Research in Personality</em>, <em>37</em>(6), 504–528. <a href="https://doi.org/10.1016/S0092-6566(03)00046-1">https://doi.org/10.1016/S0092-6566(03)00046-1</a>
+<div id="ref-Gosling2003-bt">
+<p>Gosling, S. D., Rentfrow, P. J., &amp; Swann, W. B. (2003). A very brief measure of the Big-Five personality domains. <em>J. Res. Pers.</em>, <em>37</em>(6), 504–528.</p>
 </div>
-<div id="ref-krumhansl1990cognitive" class="csl-entry">
-Krumhansl, C. L. (1990). Cognitive foundations of musical pitch. <em>Oxford Psychology Series</em>.
+<div id="ref-krumhansl1990cognitive">
+<p>Krumhansl, C. L. (1990). Cognitive foundations of musical pitch. <em>Oxford Psychology Series</em>.</p>
 </div>
-<div id="ref-Park2019-kb" class="csl-entry">
-Park, M., Thom, J., Mennicken, S., Cramer, H., &amp; Macy, M. (2019). Global music streaming data reveal diurnal and seasonal patterns of affective preference. <em>Nature Human Behaviour</em>, <em>3</em>(3), 230–236. <a href="https://doi.org/10.1038/s41562-018-0508-z">https://doi.org/10.1038/s41562-018-0508-z</a>
+<div id="ref-Park2019-kb">
+<p>Park, M., Thom, J., Mennicken, S., Cramer, H., &amp; Macy, M. (2019). Global music streaming data reveal diurnal and seasonal patterns of affective preference. <em>Nat Hum Behav</em>, <em>3</em>(3), 230–236.</p>
 </div>
-<div id="ref-Pearce2005-bm" class="csl-entry">
-Pearce, M. T. (2005). <em>The construction and evaluation of statistical models of melodic structure in music perception and composition</em> [PhD thesis]. City University, London.
+<div id="ref-Pearce2005-bm">
+<p>Pearce, M. T. (2005). <em>The construction and evaluation of statistical models of melodic structure in music perception and composition</em> [PhD thesis]. City University, London.</p>
 </div>
-<div id="ref-Temperley2008-tj" class="csl-entry">
-Temperley, D. (2008). A probabilistic model of melody perception. <em>Cognitive Science</em>, <em>32</em>(2), 418–444. <a href="https://doi.org/10.1080/03640210701864089">https://doi.org/10.1080/03640210701864089</a>
+<div id="ref-Temperley2008-tj">
+<p>Temperley, D. (2008). A probabilistic model of melody perception. <em>Cogn. Sci.</em>, <em>32</em>(2), 418–444.</p>
 </div>
 </div>
   <div class="chapter-nav">
@@ -898,7 +867,7 @@ Temperley, D. (2008). A probabilistic model of melody perception. <em>Cognitive 
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Music and Science</strong>" was written by Peter M. C. Harrison. It was last built on 2023-10-04.</p>
+    <p>"<strong>Music and Science</strong>" was written by Peter M. C. Harrison. It was last built on 2023-12-03.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">
