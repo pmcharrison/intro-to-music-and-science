@@ -14,15 +14,20 @@ Suppose we are partway through a melody and we are trying to predict what note i
 
 ![**Illustration of a melody with unknown continuation.**](expectation/melody-unknown.png){width='100%'}
 
+<br>
+
 In the natural environment, accurate prediction can be a matter of life and death. An incorrect prediction could mean being caught and killed by a predator, or missing a rare opportunity to find food. It seems reasonable then that incorrect predictions should be accompanied with some kind of emotional 'shock', or at least a 'frisson', to alert the organism that something has gone and potentially to discourage it from making similar mistakes in the future.
 
 We seem to see these kinds of effects in music listening too. If I play a musical context that clearly implies a certain continuation, and then violate that implication, this gives the listener a certain kind of shock that can snap them out of a comfortable state.
 
 When used appropriately, these prediction violations don't have to be experienced negatively; they can instead make the piece more interesting, and introduce rewarding trajectories of tension and relaxation. Prokofiev is a composer who makes very explicit use of these prediction violations, which musicologists often describe tongue-in-cheek as 'wrong notes'. In Peter's theme from Peter and the Wolf, the first two bars are harmonically very predictable, simply outlining the tonic triad. The theme then jumps without warning to the flat submediant, giving the listener a strong prediction violation.
 
-![(ref:c2939860-afd8-4124-b4c0-78b73ca8d7ab)  **Prokofiev 'Peter and the Wolf', opening.** Paul Barton, free for non-commercial use.](images/1x1.png)
+![(ref:8c60faaa-9568-465b-8a14-4fd99307933b)  **Prokofiev 'Peter and the Wolf', opening.** Paul Barton, free for non-commercial use.](images/1x1.png)
 
-(ref:c2939860-afd8-4124-b4c0-78b73ca8d7ab) <iframe width="560" height="315" src="https://www.youtube.com/embed/1BRp_zeLYr4?start=10" style="display: block; margin-bottom: 25px" title="Prokofiev 'Peter and the Wolf', opening." frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<br>
+
+
+(ref:8c60faaa-9568-465b-8a14-4fd99307933b) <iframe width="560" height="315" src="https://www.youtube.com/embed/1BRp_zeLYr4?start=10" style="display: block; margin-bottom: 25px" title="Prokofiev 'Peter and the Wolf', opening." frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 Prokofiev ends up repeating the same unusual harmonic progression many times -- four times over the course of the movement. The more we hear it, the less surprising it sounds: our short-term experience starts to override our long-term stylistic knowledge. It never manages to override it completely, though. Intuitively, it feels like part of our brain keeps on trying to generate predictions based on long-term stylistic knowledge rather than short-term experience, and keeps being surprised as a result. This is probably for the best -- if knowing a piece meant that you stopped hearing it with respect to your stylistic knowledge, then it might become rather difficult to get much out of repeated listenings.
 
@@ -39,6 +44,8 @@ We can think about listeners generating expectations for various kinds of musica
 **Harmonic expectation.** In the context of Western music, listeners also develop strong expectations for harmonic progressions. Suppose I have a context sequence of chords looking like this:
 
 ![**Illustration of a chord sequence with unknown continuation.**](expectation/chord-sequence.png){width='100%'}
+
+<br>
 
 Western music listeners will have an automatic idea of what chords should be expected next. For example, if I continue the progression with a D flat major chord, it sounds very unexpected, but if I continue it with a C major chord, it sounds very expected.
 
@@ -72,6 +79,8 @@ $$
 When we're talking about musical expectations, we are typically interested in a particular kind of conditional probability, calculated at a particular point in the musical piece. We suppose the listener is hearing the piece in real time, and is trying (for example) to predict what the next note in the melody is going to be. Let's call the pitch of the next note X, and let's use Y to denote the portion of the piece that the listener has heard already. The listener is then trying to estimate the conditional probability of X given Y, for different possible pitches X. In this particular example, the listener might think that an F is particularly likely, with a probability of .28. They might also think G and D are reasonably plausible, taking probabilities of .22 each. The remaining possibilities each receive lower probabilities. We call this collection of different probabilities a 'conditional probability distribution'.
 
 ![**Schematic illustration of a conditional probability distribution.**](expectation/conditional-probability-distribution.png){width='100%'}
+
+<br>
 
 At this point it's important to distinguish two kinds of probabilities: *objective* probabilities and *subjective* probabilities. Objective probabilities correspond to the true probabilities of musical events as manifested in music corpora; we can estimate them using corpus analyses. Subjective probabilities corresponded to the imagined probabilities for musical events in the mind of the listener. These subjective probabilities will be determined by the listener's musical experience, and any internal biases that they hold.
 
@@ -117,28 +126,40 @@ The most famous version of this rating method is described in an important paper
 
 In each trial of the probe-tone paradigm, the participant is first played a context stimulus. In this example, the context stimulus is a C major chord. A few moments later, the participant is played a probe tone. This tone is chosen from a selection of possibilities covering the chromatic scale. The participant is then asked, "How well does the probe tone fit with the context?", and has to respond on a 7-point rating scale. Here's an example trial with a C as the probe tone; most Western participants would say that the probe tone fits pretty well.
 
-![**Tonic probe tone after a major triad.** (ref:4f18f42c-80cf-4fcd-b58d-6991bdfdf433) ](expectation/probe-tone-major-chord-1.svg){width='50%'}
+![**Tonic probe tone after a major triad.** (ref:6d49ab27-23b8-41aa-be20-3d0125ed5323) ](expectation/probe-tone-major-chord-1.svg){width='50%'}
 
-(ref:4f18f42c-80cf-4fcd-b58d-6991bdfdf433)  <audio controls controlsList='nodownload' style='display: block; margin-top: 10px'><source src='expectation/probe-tone-major-chord.mp3' type='audio/mpeg'></audio>
+<br>
+
+
+(ref:6d49ab27-23b8-41aa-be20-3d0125ed5323)  <audio controls controlsList='nodownload' style='display: block; margin-top: 10px'><source src='expectation/probe-tone-major-chord.mp3' type='audio/mpeg'></audio>
 
 \
 In this example, C sharp is the probe tone. Most Westerners would say that this tone fits less well.
 
-![**Raised tonic probe tone after a major triad.** (ref:e7a2f25d-ad08-4359-9b3c-d52586810469) ](expectation/probe-tone-major-chord-2-1.svg){width='50%'}
+![**Raised tonic probe tone after a major triad.** (ref:0f545b52-f738-4acc-ad88-57748e8224f6) ](expectation/probe-tone-major-chord-2-1.svg){width='50%'}
 
-(ref:e7a2f25d-ad08-4359-9b3c-d52586810469)  <audio controls controlsList='nodownload' style='display: block; margin-top: 10px'><source src='expectation/probe-tone-major-chord-2.mp3' type='audio/mpeg'></audio>
+<br>
+
+
+(ref:0f545b52-f738-4acc-ad88-57748e8224f6)  <audio controls controlsList='nodownload' style='display: block; margin-top: 10px'><source src='expectation/probe-tone-major-chord-2.mp3' type='audio/mpeg'></audio>
 
 @krumhansl1982 studied a variety of tonal contexts in their experiment, in addition to simple tonic triads. Some trials used a diatonic scale; other trials used short cadences, like the IV-V-I cadence or the ii-V-I cadence.
 
 ![**Tonal contexts used in @krumhansl1982.**](expectation/probe-tone-tonal-contexts.png){width='100%'}
 
+<br>
+
 After collecting data for many trials like this, the authors computed mean fit ratings for the different pitch classes in the chromatic scale. This graph plots the results for context sequences in C major. We can see that there's a lot of variation in the graph: some pitch classes receive much higher ratings than others. We see the highest ratings for the members of the tonic triad: C, E, and G. We see the lowest ratings for pitch classes outside the C major scale: C#, D#, F#, G#, and A#. It seems reasonable to interpret this figure as an approximation of the participant's conditional probability distribution over the different candidates for the probe tone: highly rated tones correspond to tones with high subjective probability.
 
 ![**Major-key tone profile derived by @krumhansl1982.**](expectation/krumhansl-kessler-major.svg){width='70%'}
 
+<br>
+
 The authors also performed an analogous set of experiments using minor context sequences. As you'd expect, a different profile emerges, reflecting the change of key. Now E has very low fit, but E flat has high fit. Likewise, A no longer has a high fit, but A flat does. These changes straightforwardly reflect the differences between the major and minor scales.
 
 ![**Major-key tone profile derived by @krumhansl1982.**](expectation/krumhansl-kessler-minor.svg){width='70%'}
+
+<br>
 
 It's clear that this rating paradigm has the advantage of delivering easy to interpret results. It's also fairly efficient -- we don't need that many participants to deliver useful data. However, it arguably does have an important disadvantage, which is that the participants' responses are filtered through conscious decision-making, when the participant decides what number to give on the rating scale. We don't have to make those kinds of decisions when we listen to music normally, and it could be that this process provides results that don't completely reflect normal music listening.
 
@@ -154,15 +175,21 @@ Another important approach in the field is the 'priming' paradigm. This paradigm
 
 Here's an example of how the priming approach can be used to assess harmonic expectation, taken from a study by @Tillmann2006. In each trial, we play a chord sequence to the participant, and tell them to make a perceptual judgment about a particular chord in the sequence, called the 'target'. In this case the chord of interest is the final chord in the sequence, and the participant is being asked to say whether this final chord is played by a piano or by a harp.
 
-![**Excerpt from @Tillmann2006 with a related target and a harp final chord.** (ref:b33de643-5e5a-48fa-a5b9-31085b1776ee) ](expectation/tillmann-2006-congruent-harp-1.svg){width='100%'}
+![**Excerpt from @Tillmann2006 with a related target and a harp final chord.** (ref:f8974d45-eb2c-4f0c-b023-61eda17ba6b3) ](expectation/tillmann-2006-congruent-harp-1.svg){width='100%'}
 
-(ref:b33de643-5e5a-48fa-a5b9-31085b1776ee)  <audio controls controlsList='nodownload' style='display: block; margin-top: 10px'><source src='expectation/tillmann-2006-congruent-harp.mp3' type='audio/mpeg'></audio>
+<br>
+
+
+(ref:f8974d45-eb2c-4f0c-b023-61eda17ba6b3)  <audio controls controlsList='nodownload' style='display: block; margin-top: 10px'><source src='expectation/tillmann-2006-congruent-harp.mp3' type='audio/mpeg'></audio>
 
 In different trials we manipulate the chords used in the stimulus. In the previous example, the target would have been categorised as 'related': it's the tonic chord, and hence highly expected given the context. In the next example, the target is the subdominant chord, and is hence categorised as 'less related' to the context.
 
-![**Excerpt from @Tillmann2006 with a less-related target and a harp final chord.** (ref:1473d3f2-6801-4372-9f25-2c1aa6a66943) ](expectation/tillmann-2006-less-related-harp-1.svg){width='100%'}
+![**Excerpt from @Tillmann2006 with a less-related target and a harp final chord.** (ref:70883d0b-0a72-454f-8119-f401239ff8c8) ](expectation/tillmann-2006-less-related-harp-1.svg){width='100%'}
 
-(ref:1473d3f2-6801-4372-9f25-2c1aa6a66943)  <audio controls controlsList='nodownload' style='display: block; margin-top: 10px'><source src='expectation/tillmann-2006-less-related-harp.mp3' type='audio/mpeg'></audio>
+<br>
+
+
+(ref:70883d0b-0a72-454f-8119-f401239ff8c8)  <audio controls controlsList='nodownload' style='display: block; margin-top: 10px'><source src='expectation/tillmann-2006-less-related-harp.mp3' type='audio/mpeg'></audio>
 
 The theory behind the priming task is as follows. When the target is more expected, this makes the chord easier to process, which then speeds up the participant's decision. Conversely, when the target is less expected, this slows down the processing, causing longer reaction times. So, we can measure how expected a chord is by studying the length of its reaction times. The main appeal of this priming paradigm is that it bypasses the conscious processing that we saw in the rating task and the singing task. We can call it an 'implicit' measure of expectation: the participant generally has no awareness of what is happening. However, this implicit nature is at the same time a disadvantage. It's difficult to be certain that the results of this paradigm really are telling us about expectation. Our main evidence that priming measures expectation is that expected events tend to deliver shorter reaction times than unexpected events, but when we start using priming as a way of measuring expectation, this logic becomes circular.
 
@@ -177,6 +204,8 @@ An important thing to know about EEG data is that it tends to be very noisy. Of 
 The event-related potential (ERP) technique is a classic way to maximise this signal-to-noise ratio. Here we suppose that we're interested in measuring the characteristic EEG response to a particular stimulus, for example an unexpected note in a melody, or the resolution of a 4-3 suspension. We collect EEG data for many trials like this, and average the results. The averaging makes the random noise component disappear away towards zero, leaving us with an event-related potential like the one plotted here. On the x-axis, we have the time after the stimulus (in milliseconds); on the y-axis, we have the instantaneous potential, corresponding to the voltage measured at a particular scalp electrode. We find that ERPs typically contain various peaks or troughs, which we call *components*. If we're lucky, we can identify individual components with particular aspects of cognitive processing. Typically the earlier components will correspond to more primitive sensory processing, whereas the later components will correspond to higher-level cognitive processing.
 
 ![**Schematic illustration of an ERP.** Credit: [ChomsVector: Mononomic](https://commons.wikimedia.org/wiki/File:ComponentsofERP.svg), [CC BY-SA 3.0](http://creativecommons.org/licenses/by-sa/3.0/), via Wikimedia Commons](expectation/erp.svg){width='50%'}
+
+<br>
 
 Neuroscientists have identified various kinds of ERPs in response to musical stimuli. One example is the Early Right Anterior Negativity, or ERAN, originally identified by @Koelsch2000. For copyright reasons we don't have an image of an ERAN to show for you here, but we recommend looking at Figure 1C in @Koelsch2009-yd for a reference; you can see an ERAN in that plot as a peak in the red curve at about 250 ms. We typically see the ERAN as a response to syntactically unexpected chords in chord sequences: chords that violate the listener's cultural expectations for what chords should come next.
 
@@ -220,9 +249,13 @@ The **proximity** principle is the simplest of them all. This states that listen
 
 ![**Example melody built from small intervals (illustrating Narmour's proximity principle).**](expectation/narmour-small-intervals.png){width='100%'}
 
+<br>
+
 The remaining principles are specific to particular melodic contexts. In particular, we consider a melodic context of two notes, forming what we call an *implicative interval*. This interval generates implications, or expectations, for what interval is going to come next. The interval that actually comes along is called the *realised interval*. This interval can either fulfil or deny the listeners expectations.
 
 ![**Implicative versus realised intervals.**](expectation/narmour-implication-realisation.png){width='70%'}
+
+<br>
 
 The **registral direction** principle states that small intervals generate an implication that the next interval will continue in the same direction. Conversely, the principle also states that large intervals generate an implication that the next interval will reverse direction.
 
@@ -231,6 +264,8 @@ The **intervallic difference** principle also makes a distinction between small 
 The **registral return** principle differs from the others in that it describes the relation between the *first* note of the implicative interval and the *second* note of the realised interval. It states that, all else aside, listeners will expect the latter note to be close in pitch to the former note. Note that this principle can end up working contrary to the intervallic difference principle, which states that large intervals should be followed by small intervals.
 
 ![**Illustration of Narmour's registral return principle.**](expectation/narmour-registral-return.png){width='70%'}
+
+<br>
 
 The **closure** principle is different in its own way: it's meant to determine the completion of melodic phrases. Narmour states that the impression of closure can be created by various different features. One feature is when the melody exhibits a change of direction. Another feature is when a large interval is followed by a small interval. Narmour also describes various other closure features, to do with rhythm and tonality, which we will not consider here.
 
@@ -270,9 +305,13 @@ The following diagram illustrates the results for an input note of C:
 
 ![**Simulating a perceptual spectrum for the MIDI note 60, after @Milne2011-iv. The simulation process goes from top to bottom.**](expectation/pitch-images-60.svg){width='100%'}
 
+<br>
+
 The following diagram illustrates the results for an input C major triad:
 
 ![**Simulating a perceptual spectrum for a C major triad, after @Milne2011-iv. The simulation process goes from top to bottom.**](expectation/pitch-images-60-64-67.svg){width='100%'}
+
+<br>
 
 So, we now know how the model computes perceptual spectra for different sounds. In order to predict expectation, we now need to compute the similarity between different perceptual spectra.
 
@@ -282,15 +321,21 @@ To apply Milne's model to these contexts, we first compute perceptual representa
 
 ![**Perceptual spectra for a C major triad combined with a C probe tone.**](expectation/milne--probe-tone-major-chord-0-combined.png){width='100%'}
 
+<br>
+
 If we quantify the similarity between these spectra mathematically, we get rather a high value, .70. So, the model correctly predicts that a C should be relatively expected in the context of a C major triad -- no surprises there!
 
 Let's now see what happens if we try a probe tone of C#. If we look at the graph, we see now that the spectrum for the C# (in red) no longer aligns well at all with the spectrum for the C (in grey). Correspondingly, when we compute the similarity between the spectra, we get a rather low value of .01. So, the model predicts that C# is going to be relatively unexpected in the context of C major.
 
 ![**Perceptual spectra for a C major triad combined with a C# probe tone.**](expectation/milne--probe-tone-major-chord-1-combined.png){width='100%'}
 
+<br>
+
 We can repeat this process for all the different pitch classes in the octave, and we get the results plotted in red. We can compare these curves against the participant ratings collected in Krumhansl & Kessler's [-@krumhansl1982] probe-tone study, plotted here in blue. If we do this, we see an impressively close correlation.
 
 ![**Comparison of the Krumhansl-Kessler [-@krumhansl1982] probe-tone data with the predictions of Milne's spectral similarity model [@Milne2011-iv].**](expectation/milne--krumhansler-kessler.png){width='100%'}
+
+<br>
 
 I mentioned before that @Milne2011-iv weren't the first to come up with this spectral similarity idea. We can find rather similar ideas implemented as computational models in work by @Parncutt1989-sm and @Leman2000-ky. These former models are more sophisticated in various ways, taking into account more complex psychological phenomena such as masking and pitch-perception mechanisms. Interestingly, though, this added complexity doesn't seem to result in any greater predictive power -- in fact, the present evidence suggests that the models actually perform worse than Milne et al.'s simple model [@Milne2015-os]. So, we won't consider them further here.
 
@@ -309,11 +354,15 @@ We talked already in a previous section about the idea of understanding expectat
 
 ![**Illustration of a melody with unknown continuation.**](expectation/melody-unknown.png){width='100%'}
 
+<br>
+
 The idea behind statistical-learning expectation models is that they simulate how listeners might learn conditional probabilities through experience. To do this, the listener needs to keep track of particular melodic contexts, and chart how often they tend to continue in a certain way.
 
 Let's imagine how this would work in practice. Suppose we're interested in predicting the next note in the melody from before. The last two notes of the context were a D and an E. Let's imagine that the listener has heard this context 180 times before, with various different continuations, illustrated on the left of the screen. In this context, the listener heard a G 40 times, an F 50 times, an E 15 times, a D 40 times, and a C 35 times. Following basic mathematical principles, the listener can use this information to estimate the probability of seeing an F as the number of times they saw an F in this particular context (50 times) divided by the number of times they saw this context in total (180 times). This gives a value of .28, or 28%. We can repeat this process over all the different possible continuations to get the full conditional probability distribution. This is basically how IDyOM works.
 
 ![**Calculating the probability of a melody's continuation through reference to prior observations.**](expectation/probability-continuations.png){width='100%'}
+
+<br>
 
 IDyOM does have some special features though, which set it apart from simpler models in the literature. I'm going to outline briefly three of these special features today: viewpoints, variable-order Markov modelling, and long-term and short-term memory.
 
@@ -331,6 +380,8 @@ The idea about viewpoints is that there's many different ways of looking at a pa
 
 ![**Multiple-viewpoint representation of a melody.**](expectation/multiple-viewpoints.png){width='100%'}
 
+<br>
+
 Each of these different representation schemes is called a 'viewpoint'. The idea is that IDyOM learns statistical regularities in each of these different viewpoints through its simulated enculturation process. This is intended to simulate the way in which listeners also hear music in terms of these different viewpoints. Often these viewpoints help the model to learn quicker, and generalise better to new contexts: for example, the interval and the scale degree representations are both invariant under transposition (i.e. pitch shift), which mean that if the listener learns a particular pattern in a particular melody, they can generalise that knowledge to melodies in different keys.
 
 #### Variable-order Markov modelling
@@ -341,13 +392,19 @@ Let's begin by defining a 1st-order Markov model. A 1st-order Markov model makes
 
 ![**Predicting from a 1st-order Markov model.**](expectation/multiple-viewpoint-context-1.png){width='50%'}
 
+<br>
+
 A 2nd-order Markov model is like the 1st-order model, except it now takes into account the two previous elements in the sequence. This makes the model more specific to particular contexts, potentially increasing its predictive power.
 
 ![**Predicting from a 2nd-order Markov model.**](expectation/multiple-viewpoint-context-2.png){width='50%'}
 
+<br>
+
 As you might expect by now, a 3rd-order Markov model then takes into account the preceding three elements. This improves its potential predictive power still further, at the cost of having to learn many more different contexts.
 
 ![**Predicting from a 3rd-order Markov model.**](expectation/multiple-viewpoint-context-3.png){width='50%'}
+
+<br>
 
 So, each kind of Markov model comes with its own advantages and disadvantages. IDyOM is a variable-order Markov model, which means that it switches between different orders of Markov models depending on the situation. When it has lots of data available, it'll prefer higher-order Markov models, because they can take advantage of additional information present in the longer context. When not much data is available, it'll prefer lower-order Markov models, which don't require so much data. This seems to reflect how listeners are able to function well in both unfamiliar and familiar musical contexts.
 
@@ -360,6 +417,8 @@ The final feature concerns IDyOM's *long-term* and *short-term* memory modules. 
 Let's see how we might apply IDyOM in practice. Here's an excerpt from a Bach chorale melody, with model outputs from IDyOM compared to human listeners. In particular, this graph is plotting the 'surprise' experienced by IDyOM and by the human listeners at each point in the melody. We can see that surprise varies somewhat over the course of the melody. If we look at note position 14, for example, we see that both the model and the listeners have very low surprise -- in other words, they were both very confident that the G was going to occur. If we look at the melody itself, we can sympathise with this prediction: the G is the obvious end of a descending scale, and it produces an obvious cadence onto the tonic.
 
 ![**Modelling listener surprise through the course of a melody [data from @Pearce2018-pw].**](expectation/idyom-dynamic-predictions-combined.svg){width='100%'}
+
+<br>
 
 Looking at note position 23, we see that both the model and the listeners have very *high* surprise. We can see why this happens when we look at the melody: there\'s a big leap of an ascending minor seventh, which is rather unexpected in a melodic context.
 

@@ -126,6 +126,7 @@ categorical-models
 dimensional-versus-categorical-models
 aesthetic-and-musical-emotions
 geneva-musical-emotions-scale-gems
+cowans-13-dimension-model-of-musical-feelings
 aesthetic-emotions
 conclusions-1
 measuring-emotional-responses

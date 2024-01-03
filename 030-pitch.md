@@ -4,19 +4,26 @@
 
 In Section \@ref(foundations-of-acoustics) we saw various forms of idealised waves: the sine wave, the sawtooth wave, and the square wave. These waves all differ in shape, but they share a key property: they are all *periodic*. By periodic, we mean that the wave repeats itself at a regular time interval. This periodicity turns out to be integral to pitch perception.
 
-![**An example sine wave.** (ref:1c094190-3ec2-49e4-96bb-7efe6588f80f) ](images/sine-wave-frequency=240.png){width='400px'}
+![**An example sine wave.** (ref:19de585b-c643-49cb-84f0-e993681b640a) ](images/sine-wave-frequency=240.png){width='400px'}
 
-(ref:1c094190-3ec2-49e4-96bb-7efe6588f80f)  <audio controls controlsList='nodownload' style='display: block; margin-top: 10px'><source src='audio/tone-frequency=240.wav' type='audio/mpeg'></audio>
+<br>
+
+
+(ref:19de585b-c643-49cb-84f0-e993681b640a)  <audio controls controlsList='nodownload' style='display: block; margin-top: 10px'><source src='audio/tone-frequency=240.wav' type='audio/mpeg'></audio>
 
 We also covered the notion of 'frequency'. Frequency tells us the repetition rate of a periodic waveform, and is expressed in units of Hz. A frequency of 5 Hz means that the waveform repeats at a rate of 5 times per second.
 
 ![**A sine wave with a frequency of 5 Hz.**](images/sine-wave-frequency=5.png){width='400px'}
+
+<br>
 
 While frequency is a concrete, observable property in the outside world, pitch is something relatively intangible, present only in the mind. We define 'pitch' as the perceptual correlate of frequency; essentially, we are saying that "pitch is that perceptual quality of sound that derives from the underlying sound wave's frequency". 
 
 As discussed in \@ref(foundations-of-acoustics), we can represent a given sound either in a *temporal* representation or in a *spectral* representation. In the temporal representation, we study the waveform, which tells us how pressure changes over time. In the spectral representation, we instead decompose the waveform into its constituent sine waves, and we study the frequencies and amplitudes of these sine waves. The process of converting from a temporal to a spectral representation is achieved using the mathematical technique of Fourier transformation.\
 
 ![**Converting from temporal representations to spectral representations.**](images/waveforms-to-spectra.png){width='100%'}
+
+<br>
 
 The two main theories for human pitch perception correspond to these two different ways of representing sounds. We call these theories the *spectral* and *temporal* theories of pitch perception respectively.
 
@@ -26,19 +33,27 @@ According to the spectral theory, pitch perception depends fundamentally on a sp
 
 ![**The location of the inner ear (black rectangle).** Credit: [Blausen.com staff](https://commons.wikimedia.org/wiki/File:Blausen_0329_EarAnatomy_InternalEar.png), [CC BY 3.0](https://creativecommons.org/licenses/by/3.0).](images/inner-ear-location.png){width='100%'}
 
+<br>
+
 The inner ear contains various structures involved in both sound perception and in orientation perception. The spectral analysis process occurs specifically in the *cochlea*, this coiled structure at the end of the inner ear.
 
 ![**The location of the cochlea.** Credit: [Henry Vandyke Carter](https://commons.wikimedia.org/wiki/File:Gray920.png), public domain.](images/inner-ear-and-cochlea.png){width='100%'}
 
+<br>
+
 It is easier to understand the cochlea if we imagine uncoiling it, as in the following diagram. The most important part of this diagram is the *basilar membrane*, a long structure that spans the length of the cochlea. At the base, the basilar membrane is thick and stiff, but at its apex, it is thin and mobile. As a result, the basilar membrane has different resonant properties along its length.
 
 ![**Schematic illustration of the basilar membrane.** Credit: [Kern A, Heid C, Steeb W-H, Stoop N, Stoop R, derivative work by Mike.lifeguard](https://commons.wikimedia.org/wiki/File:Schematic_uncoiled_cochlea.svg), [CC BY 2.5](https://creativecommons.org/licenses/by/2.5).](images/basilar-membrane.png){width='100%'}
+
+<br>
 
 Specifically, the base of the basilar membrane resonates at high frequencies, but as we move from the base to the apex, the resonant frequencies become lower and lower. As a result, when sound enters the cochlea, its different spectral components are translated into resonances at different locations along the basilar membrane. This spatial localisation of frequency components is called *tonotopy*. These different locations have their own connections to nerve cells, which communicate the resonances towards the brain, with these resonances already separated by spectral frequency.
 
 **Helmholtz's *sympathetic resonance* theory**. Helmholtz knew about the capacity of the ear to separate sounds by frequencies. He suggested that the ear contains many separate resonant elements, each tuned to a distinct characteristic frequency, similar to the strings in a piano. Incoming sound would then cause particular elements to resonate according to the sound's spectral frequencies (Panel B in the figure below).
 
 ![**Schematic illustration of two theories of aural resonance.** **A:** von Békésy's travelling wave theory [@Von_Bekesy1960-oh]. **B:** Helmholtz's *sympathetic resonance* theory [@Helmholtz1875-fm]. Credit: @Bell2004-wo, [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).](images/resonance-and-travelling-waves.png){width='100%'}
+
+<br>
 
 Nowadays most people think that Helmholtz was partly right. We do think that the ear's frequency dispersion capacity comes from the fact that different parts of the basilar membrane have different resonant frequencies. However, we no longer believe that the basilar membrane contains discrete resonators; rather, the basilar membrane's physical properties gradually change as we progress from its base (thick, stiff) to its apex (thin, flexible), and this causes different locations to have different resonant frequencies.
 
@@ -48,11 +63,17 @@ Nowadays most people think that Helmholtz was partly right. We do think that the
 
 ![**An idealised band-pass filter, used to model an auditory filter.** $F_C$ is the characteristic frequency, and $F_1$ and $F_2$ correspond to the extrema of the critical band. Credit: [Public domain.](https://en.wikipedia.org/wiki/File:Band-pass_filter.svg)](images/band-pass-filter.svg){width='90%'}
 
+<br>
+
 **Inner hair cells.** We have established that different parts of the basilar membrane oscillate in response to different spectral components. How does the ear measure those oscillations? If we look closely under a high-powered microscope, we find bundles of hairs sticking out of the basilar membrane. These tiny hairs are called *stereocilia*. They come in bundles (termed *hair bundles*), and are attached to *hair cells*. They look something like this:
 
 ![**High-resolution micrograph of stereocilia in a frog's inner ear.** Credit: Bechara Kachar, [public domain.](https://commons.wikimedia.org/wiki/File:Stereocilia_of_frog_inner_ear.01.jpg)](images/stereocilia-of-frog-inner-ear.jpg){width='100%'}
 
+<br>
+
 ![**Scanning electron microscope images of stereocilia.** Top left: an outer hair cell from a guinea pig cochlea. Bottom left: an inner hair cell from a guinea pig cochlea. Right: a terrapin hair cell. Credit: David Furness, [CC BY-NC 4.0.](https://creativecommons.org/licenses/by-nc/4.0)](images/hair-cells-wellcome-collection.jpg){width='100%'}
+
+<br>
 
 Humans have two main types of hair cells: *inner hair cells* and *outer hair cells*. The inner hair cells are responsible for sensing oscillations in the basilar membrane.
 
@@ -64,6 +85,8 @@ The tips of the stereocilia are connected by tiny filaments called *tip links*. 
 
 ![**Mechanotransduction in an inner hair cell.** Credit: Thomas Haslwanter, [CC BY-SA 3.0.](https://creativecommons.org/licenses/by-sa/3.0/deed.en)](images/hair-cell-transduction.svg){width='60%'}
 
+<br>
+
 **The auditory nerve.** The auditory nerve is responsible for communication between the ear and the brain. It comprises a bundle of approximately 30,000 nerve fibres, most of which innervate inner hair cells, and the rest of which innervate outer hair cells. Different nerve fibres connect to different inner hair cells, each with their own characteristic frequencies; the auditory nerve therefore inherits the tonotopy of the basilar membrane, with different nerve fibres responding to different characteristic frequencies.
 
 **Outer hair cells.** The travelling wave mechanism identified by von Békésy appeared, on the face of it, to have two important limitations. The first is that a given spectral component would excite such a large portion of the basilar membrane that position information would only provide a very imprecise cue for spectral frequency. The second is that loud sounds would produce such immensely larger vibrations than quiet sounds that the latter would be very hard to detect. Recent decades of research indicate that the outer hair cells (found only in mammals) play a special role in counteracting these effects: they sharpen the physical response of the basilar membrane, meaning that spectral components excite a much smaller area, and they amplify the response to quiet sounds. The physical mechanisms of this sharpening and amplification are still being studied, but it is thought that they depend on the outer hair cells' *electromobility*, namely their ability to change length in response to electrical stimulation. See @Dallos2008-lk for a recent discussion.
@@ -71,6 +94,8 @@ The tips of the stereocilia are connected by tiny filaments called *tip links*. 
 **Deriving pitch from auditory nerve firings.** As discussed previously, a complex tone has many spectral components. According to the above process, these spectral components excite different regions of the basilar membrane, stimulating different inner hair cells, and causing different nerve fibres in the auditory nerve to fire. The brain can thereby access its own spectral representation of the incoming sound: the spectral components simply correspond to the different excited nerve fibres. But how would the brain merge these all together to form a coherent percept of pitch? According to the *spectral* theory of pitch perception, the brain uses a *template-matching process*, where the template corresponds to a set of equally spaced harmonics, each corresponding to integer multiples of a common fundamental frequency, with amplitude decreasing as harmonic number increases. This template could either be innate or learned through experience.
 
 ![**Notional harmonic template.**](images/harmonic-spectrum-2.svg){width='450px'}
+
+<br>
 
 The brain would continually search the spectrum for patterns that matched this template; whenever it identifies such patterns, it 'merges' their harmonics into a single auditory percept, corresponding to the complex tone. This percept would have a pitch corresponding to the lowest harmonic in this template, corresponding to the fundamental frequency.
 
@@ -82,13 +107,19 @@ Like the spectral theory, the temporal theory of pitch perception still relies o
 
 ![**Phase locking to an acoustic signal.** Credit: [Lvarnet](https://commons.wikimedia.org/wiki/File:Phase_locking_recorded_from_a_neuron_in_the_cochlear_nucleus.jpg), [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0).](images/phase-locking-intro.png){width='450px'}
 
+<br>
+
 Though an individual nerve cell may not be able to fire fast enough to entrain to every wave cycle, multiple nerve cells stimulated together can simulate this effect, with different cells firing on different cycles. This idea that multiple nerve cells can work together to entrain to high frequencies is called *volley theory*. Through this mechanism, the brain can therefore access the main periodicities of the sound wave, represented as temporal firing patterns in the auditory nerve.
 
 ![**Illustration of volley theory.** Credit: [Rachel Candace Law](https://commons.wikimedia.org/wiki/File:Volley_Principle_of_Hearing.png), [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0).](images/volley-theory.png){width='100%'}
 
+<br>
+
 Suppose that this temporal information does reach the brain -- how does the brain then use this for pitch perception? The proposal is that the brain implements a version of *autocorrelation analysis*, which looks for time lags at which the signal correlates highly with itself. Time lags achieving high correlations are good candidates for the wave's fundamental frequency.
 
 ![**Illustration of autocorrelation analysis.** The brackets point to time lags at which the signal correlates highly with itself.](images/autocorrelation-analysis.png){width='500px'}
+
+<br>
 
 There is a deep mathematical similarity between the autocorrelation analysis proposed here for the temporal theory and the Fourier analysis that was previously proposed for the spectral theory. We won't go into the mathematical details here. However, one thing to point out is that the autocorrelation method doesn't in general require the additional template-matching step that the Fourier method required.
 
@@ -97,6 +128,8 @@ Researchers have debated about spectral versus temporal mechanisms of pitch perc
 Interestingly, 2-4 kHz is about the limit for pitch production in conventional musical instruments; for example, the highest note produced by the piccolo is about 4 kHz. One might therefore speculate that *musical* pitch relies particularly on temporal mechanisms.
 
 ![**Photo of a piccolo.** Credit: [Metropolitan Museum of Art](https://commons.wikimedia.org/wiki/File:Piccolo_MET_254852.jpg), [CC0](https://creativecommons.org/publicdomain/zero/1.0/).](images/piccolo.jpg){width='100%'}
+
+<br>
 
 ## Pitch intervals
 

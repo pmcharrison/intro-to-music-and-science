@@ -129,25 +129,30 @@
 <div class="figure">
 <img src="images/sine-wave-amplitude=0.5.png" width="500" alt=""><p class="caption"><strong>A sine wave with an amplitude of 0.5.</strong> <audio controls controlslist="nodownload" style="display: block; margin-top: 10px"><source src="audio/tone-waveform.wav" type="audio/mpeg"></source></audio></p>
 </div>
+<p><br></p>
 
 <p>The frequency parameter determines how many complete wave cycles fit within one second. Frequency has the units ‘Hz’, so 30 cycles per second is written as 30 Hz, 40 cycles cycles per second is written as 40 Hz, and so on. Note that a complete cycle includes both the ‘upper’ segment and the ‘lower segment’ of the curve. For visualisation purposes, I’ve plotted a 5 Hz wave here, so we can see the number of cycles in a second; in practice, this frequency is below the range of human hearing:</p>
 <div class="figure">
 <img src="images/sine-wave-frequency=5.png" width="500" alt=""><p class="caption"><strong>A sine wave with a frequency of 5 Hz.</strong></p>
 </div>
+<p><br></p>
 <p>We can hear a 120 Hz wave, though:</p>
 <div class="figure">
 <img src="images/sine-wave-frequency=120.png" width="500" alt=""><p class="caption"><strong>A sine wave with a frequency of 120 Hz.</strong> <audio controls controlslist="nodownload" style="display: block; margin-top: 10px"><source src="audio/tone-frequency=120.wav" type="audio/mpeg"></source></audio></p>
 </div>
+<p><br></p>
 
 <p>If we double the frequency, it sounds an octave higher:</p>
 <div class="figure">
 <img src="images/sine-wave-frequency=240.png" width="500" alt=""><p class="caption"><strong>A sine wave with a frequency of 240 Hz.</strong> <audio controls controlslist="nodownload" style="display: block; margin-top: 10px"><source src="audio/tone-frequency=240.wav" type="audio/mpeg"></source></audio></p>
 </div>
+<p><br></p>
 
 <p>If we multiply the frequency by another 1.5, it sounds an additional perfect fifth higher:</p>
 <div class="figure">
 <img src="images/sine-wave-frequency=360.png" width="500" alt=""><p class="caption"><strong>A sine wave with a frequency of 360 Hz.</strong> <audio controls controlslist="nodownload" style="display: block; margin-top: 10px"><source src="audio/tone-frequency=360.wav" type="audio/mpeg"></source></audio></p>
 </div>
+<p><br></p>
 
 <p>Later in this course we will discuss the relationship between frequency and pitch in more detail.</p>
 <p>Lastly, the phase determines the starting point of the wave cycle. It takes values between zero and 2π, where π is a special mathematical constant with a value of approximately 3.14. A phase of zero means that the wave starts at the baseline, and immediately starts increasing in value, like all the previous examples:</p>
@@ -187,6 +192,7 @@ x(t)=A\sin\left(2 \pi f t + \phi \right)
 <div class="figure">
 <img src="images/1x1.png" alt=""><p class="caption"><video autoplay muted loop width="800px"><source src="images/wavelength.mov" type="video/mp4"></source></video><strong>Wavelength of a travelling wave.</strong> Credit: Tom Walsh, <a href="https://ophysics.com/w6.html">oPhysics</a>, free for non-profit educational purposes.</p>
 </div>
+<p><br></p>
 
 <p>Our second formula tells us how to compute this wavelength. It takes the following form:</p>
 <p><span class="math display">\[
@@ -232,41 +238,49 @@ x(t)=A\sin\left(2 \pi f t + \phi \right)
 <div class="figure">
 <img src="images/sawtooth-wave.png" width="400" alt=""><p class="caption"><strong>Sawtooth wave.</strong> <audio controls controlslist="nodownload" style="display: block; margin-top: 10px"><source src="audio/sawtooth-wave.wav" type="audio/mpeg"></source></audio></p>
 </div>
+<p><br></p>
 
 <p>Here’s a square wave, which has rectangular corners:</p>
 <div class="figure">
 <img src="images/square-wave.png" width="400" alt=""><p class="caption"><strong>Square wave.</strong> <audio controls controlslist="nodownload" style="display: block; margin-top: 10px"><source src="audio/square-wave.wav" type="audio/mpeg"></source></audio></p>
 </div>
+<p><br></p>
 
 <p>A remarkable theorem called the <em>Fourier theorem</em> tells us that every periodic wave can be expressed by adding together a collection of sine waves. These sine waves may each have different amplitudes, frequencies, and phases, but otherwise all have the same shape.</p>
 <p>It turns out then that a sawtooth wave can be created by adding together infinitely many pure tones whose frequencies follow an ascending arithmetic progression, for example 200 Hz, 400 Hz, 600 Hz, 800 Hz, and so on.<a class="footnote-ref" tabindex="0" data-toggle="popover" data-content="&lt;p&gt;Some sources describe this as a reverse sawtooth wave, with a ‘true’ sawtooth wave being produced by multiplying the wave values by minus one. In practice the two wave types are perceptually similar.&lt;/p&gt;"><sup>3</sup></a> These different pure tones are called the ‘harmonics’: 200 Hz is called the first harmonic, 400 Hz is called the second harmonic, and so on. Each harmonic is then given a relative amplitude equal to the first harmonic’s amplitude divided by the harmonic number, so the second harmonic has an amplitude of a half, the third harmonic has an amplitude of a third, and so on.</p>
 <div class="figure">
 <img src="images/sawtooth-wave-fourier.png" style="width:100.0%" alt=""><p class="caption"><strong>Fourier decomposition of a sawtooth wave.</strong></p>
 </div>
+<p><br></p>
 <p>A square wave is produced like a sawtooth wave, but with one simple change: all the even harmonics are removed.</p>
 <div class="figure">
 <img src="images/square-wave-fourier.png" style="width:100.0%" alt=""><p class="caption"><strong>Fourier decomposition of a square wave.</strong></p>
 </div>
+<p><br></p>
 <p>The sawtooth wave and the square wave are both examples of <em>harmonic complex tones</em>. A harmonic complex tone is defined as a wave built from combining many pure tones, each of which has a frequency that is a whole-number multiple of a so-called <em>fundamental frequency</em>. This sequence of whole-number multiples is called a <em>harmonic series</em>. Music scientists often use harmonic complex tones as idealised simulations of instrument timbres.</p>
 <p>This motivates an alternative way of visualising sound waves. Instead of plotting pressure as a function of time (the waveform), we plot amplitude as a function of frequency, producing what we call the <em>spectrum</em>. The mathematical process of translating from the waveform to the spectrum is called <em>Fourier analysis</em>; it is something that can be accomplished straightforwardly using modern computer software.</p>
 <div class="figure">
 <img src="images/waveforms-to-spectra.png" style="width:100.0%" alt=""><p class="caption"><strong>Spectral representations for sawtooth (top row) and square (bottom row) waves.</strong></p>
 </div>
+<p><br></p>
 <p>See how both of these spectra are built from a collection of evenly spaced lines, corresponding to integer multiples of the fundamental frequency. We call the upper frequencies <em>harmonics</em>; if we had upper frequencies that didn’t correspond to integer multiples of the fundamental frequency, we’d call them <em>partials</em>.</p>
 <div class="figure">
 <img src="images/harmonic-spectrum.png" style="width:100.0%" alt=""><p class="caption"><strong>Idealised harmonic spectrum.</strong> The sound example begins by playing the full tone, then demonstrates how the tone can be built up by superimposing pure tones one by one. <audio controls controlslist="nodownload" style="display: block; margin-top: 10px"><source src="audio/harmonic-spectrum.wav" type="audio/mpeg"></source></audio></p>
 </div>
+<p><br></p>
 
 <p>In the real world, a sound’s spectrum will typically change through time. We can plot this behaviour using a spectrogram. Here the horizontal axis corresponds to time, the vertical axis corresponds to frequency, and the colour corresponds to amplitude. Here the spectrogram is computed from a recording of a violin; you can see its very evenly spaced harmonics, manifested as parallel horizontal lines.</p>
 <div class="figure">
 <img src="images/spectrogram.png" style="width:100.0%" alt=""><p class="caption"><strong>Spectrogram computed from a recording of a violin.</strong> Credit: megatron, <a href="https://creativecommons.org/licenses/by-sa/3.0/deed.en">CC BY-SA 3.0</a> <audio controls controlslist="nodownload" style="display: block; margin-top: 10px"><source src="audio/spectrogram-violin.mp3" type="audio/mpeg"></source></audio></p>
 </div>
+<p><br></p>
 
 <p>It is also possible to construct more dynamic spectrograms in video form. For example, the following video displays a spectrogram for an old-fashioned dial-up modem connecting to the internet. Have a listen, and try to link what you see to what you hear.</p>
 <p>Have a look at the following video and try to link what you see to what you hear. Note that here, lower frequencies are on the right, and higher frequencies on the left.</p>
 <div class="figure">
 <img src="images/1x1.png" alt=""><p class="caption"><iframe width="560" height="315" src="https://www.youtube.com/embed/vvr9AMWEU-c?start=0" style="display: block; margin-bottom: 25px" title="Dialup modem handshake sound (spectrogram)." frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> <strong>Dialup modem handshake sound (spectrogram).</strong> Scotty H, via YouTube</p>
 </div>
+<p><br></p>
 
 
 </div>
