@@ -49,7 +49,7 @@ embed_image <- function(image, title = NULL, width = NULL, info = NULL, credit =
     ) %>% 
     paste(collapse = " ")
   width_str <- if (is.null(width)) "" else sprintf("{width='%s'}", width)
-  cat(sprintf("![%s](%s)%s", caption, image, width_str))
+  cat(sprintf("![%s](%s)%s\n\n<br>\n", caption, image, width_str))
 }
 
 text_reference <- function(ref) {
