@@ -475,24 +475,24 @@ be probed in more detail in experimental studies.
 
 @Cowen2020-jx present another data-driven approach to understanding musical
 emotions. As @Zentner2008-mv did with the GEMS, 
-@Cowen2020-jx begin by compiling a large number of emotional terms from the 
+the researchers compile a large number of emotional terms from the 
 literature, and then use statistical techniques to distill these terms 
-down to a smaller number of summary terms. 
-One difference though is that @Cowen2020-jx have their listeners respond
-to individual stimuli presented in real time, 
-rather than just asking the listener about their lifetime experiences of music.
-A second difference is that @Cowen2020-jx focus on *perceived* emotion 
-rather than *experienced* emotion.
-A third differences is that @Cowen2020-jx takes a cross-cultural perspective,
-looking in particular for emotions that are perceived similarly by both
-US listeners and for Chinese listeners.
-A final difference is that @Cowen2020-jx looks to contrast categorical with 
-dimensional theories of musical emotion.
+down to a smaller number of terms.
+One distinctive feature of this study is that it presents listeners 
+with actual musical stimuli to evaluate, 
+rather than just giving them questionnaires about their former musical experiences.
+Another distinctive feature is that it takes a cross-cultural perspective,
+looking in particular for emotions that are perceived similarly 
+in different cultures.
+<!-- A second difference is that @Cowen2020-jx focus on *perceived* emotion  -->
+<!-- rather than *experienced* emotion. -->
+<!-- A final difference is that @Cowen2020-jx looks to contrast categorical with  -->
+<!-- dimensional theories of musical emotion. -->
 
-Their first step was to compile a long list of 28 emotion categories
+The study begins by compiling a long list of 28 emotion categories
 (or more broadly, 'feeling' categories) that might be evoked by music,
 partly on reviews of previous music psychology research and partly based
-on their own intuitions. Here is the full list:
+on the researchers' intuitions. Here is the full list:
 
 -   Amusing
 -   Angry
@@ -523,7 +523,7 @@ on their own intuitions. Here is the full list:
 -   Transcendent, mystical
 -   Triumphant, heroic
 
-Next they asked 111 US participants to contribute 5-second musical
+Next the researchers asked 111 US participants to contribute 5-second musical
 extracts conveying each of these emotion categories.
 This produced a collection of 1,841 extracts in total.
 
@@ -664,7 +664,7 @@ These emotions are evaluated fairly consistently between US and Chinese
 listeners.
 
 When interpreting the results from this paper, it's worth bearing in mind
-that the dimensions were optimised for maximising the correlation US and 
+that the dimensions were optimised for maximising the correlation between US and 
 Chinese listeners. This can be motivated by the argument that the most 
 fundamental emotional mechanisms should be those that are present cross-culturally.
 However, such an approach will neglect emotions that are expressed in
