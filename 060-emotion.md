@@ -663,6 +663,18 @@ from specific emotions such as amusing, annoying, and anxious/tense.
 These emotions are evaluated fairly consistently between US and Chinese 
 listeners.
 
+How does this approach relate to the two traditions of emotion modelling,
+namely dimensional and categorical approaches?
+I think it's fair to say that this approach embodies aspects of both. 
+The final model is clearly dimensional: it has 13 dimensions, these
+dimensions aren't all-or-nothing (i.e. you can have intermediate values
+of a given dimensions) and they aren't mutually exclusive (i.e. you can
+have high scores on multiple dimensions simultaneously). 
+However, these dimensions don't correspond to the dimensions posited by 
+traditional dimensional models, such as arousal and valence. Rather, they 
+correspond to qualities more traditionally associated with categorical theories
+of emotion, such as fearful and triumphant.
+
 When interpreting the results from this paper, it's worth bearing in mind
 that the dimensions were optimised for maximising the correlation between US and 
 Chinese listeners. This can be motivated by the argument that the most 
@@ -781,38 +793,24 @@ criteria, for example 'joyfulness' or 'anger'. These numbers can then be
 aggregated to provide a quantitative summary of the participant's
 emotional responses.
 
-There are various kinds of rating scales we could use here. One
-prominent option is the Geneva Emotional Music Scale, or 'GEMS' (Zentner
-et al., 2008), which we discussed in Section \@ref(modelling-emotion).
-We could equivalently use the 13-dimension model derived by 
-@Cowen2020-jx (see above).
+If we don't have a particular emotion we want to test, but instead want
+to characterise emotional responses in general, then we can use rating 
+scales derived from the emotion models described above. 
+The simplest approach is to use the arousal-valence model:
+this means participants just have to rate each extract on two dimensions.
+If we want more granular information,
+we could get participants to rate emotions on
+the 13 dimensions obtained by @Cowen2020-jx.
+It is possible also to measure emotions using analogous
+questionnaires derived from the GEMS, 
+e.g. the GEMS-25, the GEMS-9, and the GEMIAC [@Coutinho2017-ze]
 
-The GEMS takes many different emotion terms (on the left hand side
-here), and clusters them together into a three-level hierarchy. The
-scale was constructed in a data-driven way: the emotion terms are terms
-that frequently occur when people describe music-induced emotional
-experiences, and the higher-level clusters (or 'factors') describe how
-these different emotion terms tend to co-occur with each other.
-
-We can use the GEMS to make questionnaires for quantifying certain kinds
-of core emotional responses to music. For example, suppose I want to
-quantify the tension that someone experiences when they listen to a
-particular piece of music. The GEMS tells me that a good way to do that
-is to give the participant rating scales for five adjectives: agitated,
-nervous, tense, impatient, and irritated. I get the participant to rate
-their experience on these five adjectives. I then combine their results,
-for example by averaging, and this gives me an overall 'tension' score.
-Similarly, the GEMS tells me that I could compute scores for a general
-'unease' factor by first computing scores for 'tension' and 'sadness',
-and then combining them.
-
-![The 'Unease' component of the GEMS, redrawn after
-@Zentner2008-mv.](images/gems-subset.png){width="600"}
-
-This kind of approach has several advantages. It's easy to get data for
+This rating scale approach has several advantages. It's easy to get data for
 very specific adjectives: if I'm interested in nostalgia, I can simply
 ask the participant 'to what extent does this music make you feel
-nostalgic'? The approach is also rather efficient -- it only takes a
+nostalgic'? Conversely, it's straightforward to get data for a broad range 
+of emotional aspects simply by administering one of these pre-existing emotion scales.
+The approach is rather efficient -- it only takes a
 moment for the participant to record what emotion they feel. There's
 also no need for expensive laboratory equipment, all you need is pen and
 paper.
