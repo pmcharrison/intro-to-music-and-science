@@ -318,7 +318,7 @@ embed_image(
 )
 ```
 
-The **registral direction** principle states that small intervals generate an implication that the next interval will continue in the same direction. Conversely, the principle also states that large intervals generate an implication that the next interval will reverse direction.
+The **registral direction** principle states that small intervals generate an implication that the next interval will continue in the same direction. Conversely, the principle also states that large intervals generate an implication that the next interval will reverse direction. A 'small interval' is defined here and elsewhere as anything smaller than a tritone (6 semitones), whereas a large interval is defined as anything larger than a tritone.
 
 The **intervallic difference** principle also makes a distinction between small and large implicative intervals. It states that a small implicative interval will create an expectation for another similarly sized interval, whereas a large implicative interval will create an expectation for a contrasting smaller interval.
 
