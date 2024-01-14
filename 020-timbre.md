@@ -12,13 +12,13 @@ Informally, we can define timbre as the 'tone colour' or 'tone quality' of a sou
 
 A good way of getting a feel for timbre is to listen to the sounds of different musical instruments playing the same pitch, as in the following video. The different sounds are visualised with a spectrogram, which as you'll remember from before describes how the spectral content of a sound develops over time.
 
-![(ref:25e314a9-a7a2-4b15-9db9-bd0a08a48f79)  **Spectrograms for different musical instruments.** Credit: [What Music Really İs
+![(ref:dc7cbbf7-ccb9-422c-886f-731e051c2a35)  **Spectrograms for different musical instruments.** Credit: [What Music Really İs
 ](https://www.youtube.com/channel/UCgqviysh9n4dbccXlOyWIfQ)](images/1x1.png)
 
 <br>
 
 
-(ref:25e314a9-a7a2-4b15-9db9-bd0a08a48f79) <iframe width="560" height="315" src="https://www.youtube.com/embed/VRAXK4QKJ1Q?start=24" style="display: block; margin-bottom: 25px" title="Spectrograms for different musical instruments." frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+(ref:dc7cbbf7-ccb9-422c-886f-731e051c2a35) <iframe width="560" height="315" src="https://www.youtube.com/embed/VRAXK4QKJ1Q?start=24" style="display: block; margin-bottom: 25px" title="Spectrograms for different musical instruments." frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 Timbre perception plays an important role in day-to-day auditory perception. Timbre is by definition independent of loudness, so it doesn't depend much on the distance to the sound source. It's also independent of pitch, meaning that we can recognise the timbre of someone's voice across a wide range of pitches. As a consequence, timbre provides an important cue for identifying different objects from their sounds.
 
@@ -94,28 +94,28 @@ In contrast, when we talk about temporal aspects of *timbre* perception, we're i
 
 If we look at different instrumental sounds at this level of representation, we see quite different envelopes. For example, the harpsichord grows fast, then immediately decays:
 
-![**Temporal envelope computed from a harpsichord.** (ref:9446213e-1be8-4ab7-bff5-6e8c82a5a45a) ](images/temporal-envelope-harpsichord.png){width='500px'}
+![**Temporal envelope computed from a harpsichord.** (ref:ccd08884-3e47-4e9e-b567-c036218bb3a6) ](images/temporal-envelope-harpsichord.png){width='500px'}
 
 <br>
 
 
-(ref:9446213e-1be8-4ab7-bff5-6e8c82a5a45a)  <audio controls controlsList='nodownload' style='display: block; margin-top: 10px'><source src='audio/temporal-envelope-harpsichord.wav' type='audio/mpeg'></audio>
+(ref:ccd08884-3e47-4e9e-b567-c036218bb3a6)  <audio controls controlsList='nodownload' style='display: block; margin-top: 10px'><source src='audio/temporal-envelope-harpsichord.wav' type='audio/mpeg'></audio>
 
 Other sounds like the flute or the violin grow slower, and then can sustain for a long time:
 
-![**Temporal envelope computed from a flute.** (ref:32cf7986-c2bf-4fe6-b774-ad53915d3c6a) ](images/temporal-envelope-flute.png){width='500px'}
+![**Temporal envelope computed from a flute.** (ref:b314a8fe-59f7-4973-906e-5b2ad65441a3) ](images/temporal-envelope-flute.png){width='500px'}
 
 <br>
 
 
-(ref:32cf7986-c2bf-4fe6-b774-ad53915d3c6a)  <audio controls controlsList='nodownload' style='display: block; margin-top: 10px'><source src='audio/temporal-envelope-flute.wav' type='audio/mpeg'></audio>
+(ref:b314a8fe-59f7-4973-906e-5b2ad65441a3)  <audio controls controlsList='nodownload' style='display: block; margin-top: 10px'><source src='audio/temporal-envelope-flute.wav' type='audio/mpeg'></audio>
 
-![**Temporal envelope computed from a violin.** (ref:ad29a14e-656c-4eec-89f7-8cda25f85146) ](images/temporal-envelope-violin.png){width='500px'}
+![**Temporal envelope computed from a violin.** (ref:31636d22-18d1-4b42-a625-6e8d45207f3c) ](images/temporal-envelope-violin.png){width='500px'}
 
 <br>
 
 
-(ref:ad29a14e-656c-4eec-89f7-8cda25f85146)  <audio controls controlsList='nodownload' style='display: block; margin-top: 10px'><source src='audio/temporal-envelope-violin.wav' type='audio/mpeg'></audio>
+(ref:31636d22-18d1-4b42-a625-6e8d45207f3c)  <audio controls controlsList='nodownload' style='display: block; margin-top: 10px'><source src='audio/temporal-envelope-violin.wav' type='audio/mpeg'></audio>
 
 The *ADSR model* is an attempt to capture the key components in which these different envelopes vary. It's a simplification of what we might see in the real world, but the important thing is that it's a simplification that's meant to retain the aspects of the envelope that are particularly salient in timbre perception.
 
@@ -136,39 +136,39 @@ The standard ADSR model splits the envelope into four portions:
 
 Let's explore how each of these components contribute to making a distinctive timbre. We'll begin with a vanilla harmonic complex tone, one with a constant amplitude and frequency:
 
-![**A vanilla harmonic complex tone.** (ref:f5f61fcd-6302-430a-a345-4cc85184c8ec) ](images/adsr-incremental-1.png){width='500px'}
+![**A vanilla harmonic complex tone.** (ref:c171ed56-be3e-4edd-838b-297a31e83097) ](images/adsr-incremental-1.png){width='500px'}
 
 <br>
 
 
-(ref:f5f61fcd-6302-430a-a345-4cc85184c8ec)  <audio controls controlsList='nodownload' style='display: block; margin-top: 10px'><source src='audio/adsr-incremental-1.wav' type='audio/mpeg'></audio>
+(ref:c171ed56-be3e-4edd-838b-297a31e83097)  <audio controls controlsList='nodownload' style='display: block; margin-top: 10px'><source src='audio/adsr-incremental-1.wav' type='audio/mpeg'></audio>
 
 Let's now try adding an *attack* portion to the envelope. First of all, let's try a rather longer attack portion, lasting for half a second. The result already feels more naturalistic than the original tone.
 
-![**Setting the attack parameter to 0.5 s.** (ref:5bae787e-8d9b-4a92-8e12-f3f40862659b) ](images/adsr-incremental-2.png){width='500px'}
+![**Setting the attack parameter to 0.5 s.** (ref:547a4991-6a0e-4779-be66-d49a9accc8b7) ](images/adsr-incremental-2.png){width='500px'}
 
 <br>
 
 
-(ref:5bae787e-8d9b-4a92-8e12-f3f40862659b)  <audio controls controlsList='nodownload' style='display: block; margin-top: 10px'><source src='audio/adsr-incremental-2.wav' type='audio/mpeg'></audio>
+(ref:547a4991-6a0e-4779-be66-d49a9accc8b7)  <audio controls controlsList='nodownload' style='display: block; margin-top: 10px'><source src='audio/adsr-incremental-2.wav' type='audio/mpeg'></audio>
 
 Now let's make the attack portion very short, and let's add a short decay portion, whereby the amplitude decays to 15% of the original. This combination of short attack and decay portions makes the tone sound somewhat like a plucked string instrument. However, the resemblance to a plucked string is marred by the constant amplitude in the latter part of the tone.
 
-![**Setting the attack parameter to 0.01 s, the decay parameter to 0.01 s, and the sustain parameter to 0.15.** (ref:745d5035-1c12-4f7d-bcf9-806ef16e85c5) ](images/adsr-incremental-3.png){width='500px'}
+![**Setting the attack parameter to 0.01 s, the decay parameter to 0.01 s, and the sustain parameter to 0.15.** (ref:824ac982-7ec0-46b1-bf26-8ab1994ec4b3) ](images/adsr-incremental-3.png){width='500px'}
 
 <br>
 
 
-(ref:745d5035-1c12-4f7d-bcf9-806ef16e85c5)  <audio controls controlsList='nodownload' style='display: block; margin-top: 10px'><source src='audio/adsr-incremental-3.wav' type='audio/mpeg'></audio>
+(ref:824ac982-7ec0-46b1-bf26-8ab1994ec4b3)  <audio controls controlsList='nodownload' style='display: block; margin-top: 10px'><source src='audio/adsr-incremental-3.wav' type='audio/mpeg'></audio>
 
 In the final version, we therefore add a one-second release portion. This improves the sound a lot, and the resulting tone now sounds pretty close to an electric guitar.
 
-![**Setting the release parameter to 1.0 s.** (ref:c6416150-d193-4911-bdf7-44f294ffd490) ](images/adsr-incremental-4.png){width='500px'}
+![**Setting the release parameter to 1.0 s.** (ref:a8148a88-529a-406b-9256-1c3120e677f4) ](images/adsr-incremental-4.png){width='500px'}
 
 <br>
 
 
-(ref:c6416150-d193-4911-bdf7-44f294ffd490)  <audio controls controlsList='nodownload' style='display: block; margin-top: 10px'><source src='audio/adsr-incremental-4.wav' type='audio/mpeg'></audio>
+(ref:a8148a88-529a-406b-9256-1c3120e677f4)  <audio controls controlsList='nodownload' style='display: block; margin-top: 10px'><source src='audio/adsr-incremental-4.wav' type='audio/mpeg'></audio>
 
 The below app allows you to manipulate the parameters of the ADSR model interactively, and explore the resulting effect on the sound.
 
@@ -838,12 +838,12 @@ It's important to recognise that the ADSR model is a big simplification compared
 
 As you'll remember from before, when a pitched musical instrument plays a given note, the resulting sound contains many different frequency components, represented visually as vertical lines. Generally speaking, these frequency components will all be integer multiples of a common fundamental frequency.
 
-![**Idealised harmonic spectrum.** (ref:0a1bf430-5ee0-4879-bd13-f33873c201c2) ](images/harmonic-spectrum.png){width='500px'}
+![**Idealised harmonic spectrum.** (ref:58cc142a-c92e-498e-9645-8f1afa01f9be) ](images/harmonic-spectrum.png){width='500px'}
 
 <br>
 
 
-(ref:0a1bf430-5ee0-4879-bd13-f33873c201c2)  <audio controls controlsList='nodownload' style='display: block; margin-top: 10px'><source src='audio/harmonic-spectrum.wav' type='audio/mpeg'></audio>
+(ref:58cc142a-c92e-498e-9645-8f1afa01f9be)  <audio controls controlsList='nodownload' style='display: block; margin-top: 10px'><source src='audio/harmonic-spectrum.wav' type='audio/mpeg'></audio>
 
 Spectral aspects of timbre concern the amplitudes of these different frequency components. We're now going to look at a few different ways of describing these spectral aspects.
 
@@ -851,61 +851,61 @@ Spectral aspects of timbre concern the amplitudes of these different frequency c
 
 The spectral centroid describes how much of the spectral energy is concentrated in higher rather than lower harmonics. A high centroid tends to make the sound appear bright and piercing.
 
-![**Tone with a high spectral centroid.** (ref:86aac8c6-4680-4287-a3ec-5420b48b7dc1) ](images/spectral-centroid-high.svg){width='400px'}
+![**Tone with a high spectral centroid.** (ref:5c437c0f-8e6b-46fb-b8e1-5a5a03e253b1) ](images/spectral-centroid-high.svg){width='400px'}
 
 <br>
 
 
-(ref:86aac8c6-4680-4287-a3ec-5420b48b7dc1)  <audio controls controlsList='nodownload' style='display: block; margin-top: 10px'><source src='audio/spectral-centroid-high.wav' type='audio/mpeg'></audio>
+(ref:5c437c0f-8e6b-46fb-b8e1-5a5a03e253b1)  <audio controls controlsList='nodownload' style='display: block; margin-top: 10px'><source src='audio/spectral-centroid-high.wav' type='audio/mpeg'></audio>
 
 Conversely, a low centroid makes the sound appear dull.
 
-![**Tone with a low spectral centroid.** (ref:5441c9c0-653e-4347-9363-3bd9992c0836) ](images/spectral-centroid-low.svg){width='400px'}
+![**Tone with a low spectral centroid.** (ref:72a83fcd-e40d-48ee-bd4a-493f89a39c32) ](images/spectral-centroid-low.svg){width='400px'}
 
 <br>
 
 
-(ref:5441c9c0-653e-4347-9363-3bd9992c0836)  <audio controls controlsList='nodownload' style='display: block; margin-top: 10px'><source src='audio/spectral-centroid-low.wav' type='audio/mpeg'></audio>
+(ref:72a83fcd-e40d-48ee-bd4a-493f89a39c32)  <audio controls controlsList='nodownload' style='display: block; margin-top: 10px'><source src='audio/spectral-centroid-low.wav' type='audio/mpeg'></audio>
 
 #### Spectral irregularity
 
 Spectral irregularity corresponds to discrepancies in amplitudes between adjacent harmonics. In the following example, adjacent harmonics have relatively similar amplitudes:
 
-![**Tone with high spectral regularity.** (ref:ac8fb2b4-6634-437b-adbb-a091d58b29d2) ](images/spectral-irregularity-regular.svg){width='400px'}
+![**Tone with high spectral regularity.** (ref:d4a28d27-2c9e-4263-910b-d6fd4fcc0957) ](images/spectral-irregularity-regular.svg){width='400px'}
 
 <br>
 
 
-(ref:ac8fb2b4-6634-437b-adbb-a091d58b29d2)  <audio controls controlsList='nodownload' style='display: block; margin-top: 10px'><source src='audio/spectral-irregularity-regular.wav' type='audio/mpeg'></audio>
+(ref:d4a28d27-2c9e-4263-910b-d6fd4fcc0957)  <audio controls controlsList='nodownload' style='display: block; margin-top: 10px'><source src='audio/spectral-irregularity-regular.wav' type='audio/mpeg'></audio>
 
 In this example, the adjacent harmonics have relatively irregular amplitudes. The clarinet and the vibraphone are both examples of instruments with high spectral irregularity.
 
-![**Tone with high spectral irregularity.** (ref:2c3ba0d9-2353-4aef-b0b4-3b2034f4bb65) ](images/spectral-irregularity-irregular.svg){width='400px'}
+![**Tone with high spectral irregularity.** (ref:74e95779-42cc-4f34-af9d-d6cc2fd84298) ](images/spectral-irregularity-irregular.svg){width='400px'}
 
 <br>
 
 
-(ref:2c3ba0d9-2353-4aef-b0b4-3b2034f4bb65)  <audio controls controlsList='nodownload' style='display: block; margin-top: 10px'><source src='audio/spectral-irregularity-irregular.wav' type='audio/mpeg'></audio>
+(ref:74e95779-42cc-4f34-af9d-d6cc2fd84298)  <audio controls controlsList='nodownload' style='display: block; margin-top: 10px'><source src='audio/spectral-irregularity-irregular.wav' type='audio/mpeg'></audio>
 
 #### Nasality
 
 A sound tends to be perceived as nasal when it has a lot of energy in the region spanning from 2000 to 5000 Hz. The following is an example of a tone without much energy in this region:
 
-![**Standard harmonic complex tone.** (ref:65d07f66-4a0b-4d83-9557-437d275485ae) ](images/nasality-none.svg){width='400px'}
+![**Standard harmonic complex tone.** (ref:45dafc73-18bb-4beb-b180-c371fecd7611) ](images/nasality-none.svg){width='400px'}
 
 <br>
 
 
-(ref:65d07f66-4a0b-4d83-9557-437d275485ae)  <audio controls controlsList='nodownload' style='display: block; margin-top: 10px'><source src='audio/nasality-none.wav' type='audio/mpeg'></audio>
+(ref:45dafc73-18bb-4beb-b180-c371fecd7611)  <audio controls controlsList='nodownload' style='display: block; margin-top: 10px'><source src='audio/nasality-none.wav' type='audio/mpeg'></audio>
 
 Now follows a version of the tone where energy has been added in the 2000-5000 Hz region, producing a nasal sound:
 
-![**Harmonic complex tone with energy added in the 2000-5000 Hz region.** (ref:780497f0-55a2-413f-ad8f-aba0cb503191) ](images/nasality-high.svg){width='400px'}
+![**Harmonic complex tone with energy added in the 2000-5000 Hz region.** (ref:3f7ca04f-6596-4d43-b7f5-aaa1a2fe7774) ](images/nasality-high.svg){width='400px'}
 
 <br>
 
 
-(ref:780497f0-55a2-413f-ad8f-aba0cb503191)  <audio controls controlsList='nodownload' style='display: block; margin-top: 10px'><source src='audio/nasality-high.wav' type='audio/mpeg'></audio>
+(ref:3f7ca04f-6596-4d43-b7f5-aaa1a2fe7774)  <audio controls controlsList='nodownload' style='display: block; margin-top: 10px'><source src='audio/nasality-high.wav' type='audio/mpeg'></audio>
 
 #### Formants
 
@@ -913,30 +913,30 @@ Formants are a particularly interesting aspect of timbre that determine vowel so
 
 The following example has formants at 850 Hz and 1650 Hz, corresponding to an 'a' vowel.
 
-![**A tone with formants at 850 Hz and 1650 Hz, corresponding to an 'a' vowel.** (ref:25a0fb43-bf33-4208-b995-f46f34f20b7b) ](images/formant-a.png){width='400px'}
+![**A tone with formants at 850 Hz and 1650 Hz, corresponding to an 'a' vowel.** (ref:880bb4e5-8eed-4d48-a9d2-23a00d8b1e87) ](images/formant-a.png){width='400px'}
 
 <br>
 
 
-(ref:25a0fb43-bf33-4208-b995-f46f34f20b7b)  <audio controls controlsList='nodownload' style='display: block; margin-top: 10px'><source src='audio/formant-a.wav' type='audio/mpeg'></audio>
+(ref:880bb4e5-8eed-4d48-a9d2-23a00d8b1e87)  <audio controls controlsList='nodownload' style='display: block; margin-top: 10px'><source src='audio/formant-a.wav' type='audio/mpeg'></audio>
 
 The following example has formants at 350 Hz and 650 Hz, corresponding to an 'o' vowel.
 
-![**A tone with formants at 350 Hz and 650 Hz, corresponding to an 'o' vowel.** (ref:a458ab25-e634-401e-b4ac-c5659f82daed) ](images/formant-o.png){width='400px'}
+![**A tone with formants at 350 Hz and 650 Hz, corresponding to an 'o' vowel.** (ref:f6390d76-1e02-48d2-8b3a-56cabfcb6380) ](images/formant-o.png){width='400px'}
 
 <br>
 
 
-(ref:a458ab25-e634-401e-b4ac-c5659f82daed)  <audio controls controlsList='nodownload' style='display: block; margin-top: 10px'><source src='audio/formant-o.wav' type='audio/mpeg'></audio>
+(ref:f6390d76-1e02-48d2-8b3a-56cabfcb6380)  <audio controls controlsList='nodownload' style='display: block; margin-top: 10px'><source src='audio/formant-o.wav' type='audio/mpeg'></audio>
 
 In human vocalisations, the formant frequencies are determined by the resonances of the vocal tract, which the speaker manipulates in large part through changing the shape and position of the tongue:
 
-![(ref:988b117a-cca8-4219-8f45-6b1d5673bfc0)  **Four professional musical theatre performers singing vowels in an MRI scanner.** Credit: [ProfEdwardsSU](https://www.youtube.com/channel/UCHuH3XfVqDbK_O-IzLQIeqA), via [YouTube](https://www.youtube.com/watch?v=jaIquq_4560).](images/1x1.png)
+![(ref:93456d29-52c5-490e-a0d1-b855b9e5893c)  **Four professional musical theatre performers singing vowels in an MRI scanner.** Credit: [ProfEdwardsSU](https://www.youtube.com/channel/UCHuH3XfVqDbK_O-IzLQIeqA), via [YouTube](https://www.youtube.com/watch?v=jaIquq_4560).](images/1x1.png)
 
 <br>
 
 
-(ref:988b117a-cca8-4219-8f45-6b1d5673bfc0) <iframe width="560" height="315" src="https://www.youtube.com/embed/jaIquq_4560?start=0" style="display: block; margin-bottom: 25px" title="Four professional musical theatre performers singing vowels in an MRI scanner." frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+(ref:93456d29-52c5-490e-a0d1-b855b9e5893c) <iframe width="560" height="315" src="https://www.youtube.com/embed/jaIquq_4560?start=0" style="display: block; margin-bottom: 25px" title="Four professional musical theatre performers singing vowels in an MRI scanner." frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 Many different vowel sounds can be produced through such manipulations:
 
@@ -946,12 +946,12 @@ Many different vowel sounds can be produced through such manipulations:
 
 The 'vocoder' is a technology that enables musicians to incorporate formants (and other speech sounds) into their musical performances in real time. As the performer vocalises into the microphone, a computer extracts the spectral characteristics of their vocalisation and uses it as the timbre for a more traditional musical instrument, for example a keyboard or a guitar. Here's a clip of a vocoder being used in a performance by the band Snarky Puppy:
 
-![(ref:9e1aff29-080f-4a57-b251-7c0c803218cf)  **'Sleeper' by Snarky Puppy.** Credit: Estival Jazz Lugano, via [YouTube](https://www.youtube.com/watch?v=cHckHVcg7vM).](images/1x1.png)
+![(ref:a817412e-1889-4191-a697-facbf0824002)  **'Sleeper' by Snarky Puppy.** Credit: Estival Jazz Lugano, via [YouTube](https://www.youtube.com/watch?v=cHckHVcg7vM).](images/1x1.png)
 
 <br>
 
 
-(ref:9e1aff29-080f-4a57-b251-7c0c803218cf) <iframe width="560" height="315" src="https://www.youtube.com/embed/cHckHVcg7vM?start=173" style="display: block; margin-bottom: 25px" title="'Sleeper' by Snarky Puppy." frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+(ref:a817412e-1889-4191-a697-facbf0824002) <iframe width="560" height="315" src="https://www.youtube.com/embed/cHckHVcg7vM?start=173" style="display: block; margin-bottom: 25px" title="'Sleeper' by Snarky Puppy." frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 The following applet enables you to explore the spectral content of your own voice. Click on the microphone button (far left) to activate the real-time spectrogram, and try making different kinds of sounds with your voice. Can you differentiate between pitched and non-pitched sounds? Can you identify signature markers of different vowel sounds?
 
