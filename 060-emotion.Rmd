@@ -800,7 +800,7 @@ to simplify the results, they get the following list:
 - Dreamy
 - Energizing/pump-up
 - Erotic/desirous
-- Indigant/defiant
+- Indignant/defiant
 - Joyful/cheerful
 - Sad/depressing
 - Scary/fearful
