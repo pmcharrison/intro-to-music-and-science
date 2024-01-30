@@ -5,7 +5,7 @@ bookdown::bs4_book:
     primary: "#096B72"
   repo: https://github.com/pmcharrison/intro-to-music-and-science
   includes:
-    in_header: [css.html]
+    in_header: [css.html, hypothesis.html]
 bookdown::pdf_book:
   includes:
     in_header: preamble.tex
