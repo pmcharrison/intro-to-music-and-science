@@ -42,21 +42,21 @@ Harmonicity is something that we observe by looking at the sound's frequency-dom
 
 Certain musical chords share these properties of harmonicity and periodicity. Take the perfect fifth, for example. The perfect fifth is built from approximately a 3:2 frequency ratio, and hence several of the harmonics in each tone overlap with one another. Moreover, it turns out that the partials in the resulting spectrum all end up being multiples of a common fundamental frequency, corresponding to one octave below the lowest tone. So, we can say that the perfect fifth exhibits high harmonicity. The claim is then that the high harmonicity and periodicity of the perfect fifth is what makes it pleasant, or consonant.
 
-![**The harmonicity and periodicity of the perfect fifth.** (ref:3c16bd15-b4f6-4e66-bd9e-0c3d5ac36ee5) ](images/consonance-perfect-fifth.png){width='100%'}
+![**The harmonicity and periodicity of the perfect fifth.** (ref:996aec5a-58f9-4cfa-a919-389ac995d8df) ](images/consonance-perfect-fifth.png){width='100%'}
 
 <br>
 
 
-(ref:3c16bd15-b4f6-4e66-bd9e-0c3d5ac36ee5)  <audio controls controlsList='nodownload' style='display: block; margin-top: 10px'><source src='audio/perfect-fifth.wav' type='audio/mpeg'></audio>
+(ref:996aec5a-58f9-4cfa-a919-389ac995d8df)  <audio controls controlsList='nodownload' style='display: block; margin-top: 10px'><source src='audio/perfect-fifth.wav' type='audio/mpeg'></audio>
 
 In contrast, the tritone behaves in an opposite way to the perfect fifth. Its spectrum does not relate clearly to any harmonic template, and its waveform is not periodic in any clear way.
 
-![**The low harmonicity and limited periodicity of the tritone.** (ref:f1cdc529-41f9-4f29-8c9d-41334bc833da) ](images/consonance-tritone.png){width='100%'}
+![**The low harmonicity and limited periodicity of the tritone.** (ref:0e10ca4c-1217-4117-bdf6-a179e091762a) ](images/consonance-tritone.png){width='100%'}
 
 <br>
 
 
-(ref:f1cdc529-41f9-4f29-8c9d-41334bc833da)  <audio controls controlsList='nodownload' style='display: block; margin-top: 10px'><source src='audio/tritone.wav' type='audio/mpeg'></audio>
+(ref:0e10ca4c-1217-4117-bdf6-a179e091762a)  <audio controls controlsList='nodownload' style='display: block; margin-top: 10px'><source src='audio/tritone.wav' type='audio/mpeg'></audio>
 
 There are various suggestions as to why humans might consider harmonicity and periodicity to be pleasant. One is that humans like harmonicity because harmonic sounds correspond to a simpler, easier to process auditory environment. Another suggestion is that humans like harmonicity because harmonicity is associated with vocalisations, and vocalisations are important features of the environment to pay attention to. A third suggestion is that humans don't have any innate preferences for harmonicity, but learn such preferences through cultural exposure.
 
@@ -70,12 +70,12 @@ Interference theories of consonance claim that consonance comes from the absence
 
 **Beating.** When you add two sine waves together, both of similar frequencies, it turns out that the resulting waveform ends up oscillating in amplitude in what is called a 'beating' effect. The frequency of this amplitude oscillation corresponds to the difference in frequency between the two sine waves. At certain frequencies, typically between about 20 and 30 Hz, this beating tends to feel unpleasant, causing a perceptual sensation that we term 'roughness'.
 
-![**Beating resulting from combining pure tones of 400 Hz and 430 Hz.** (ref:99b34d54-5152-4b3f-84b2-914760a1f5b0) ](images/consonance-beating.png){width='100%'}
+![**Beating resulting from combining pure tones of 400 Hz and 430 Hz.** (ref:46af3807-8a46-447e-abf4-7ac9421813f3) ](images/consonance-beating.png){width='100%'}
 
 <br>
 
 
-(ref:99b34d54-5152-4b3f-84b2-914760a1f5b0)  <audio controls controlsList='nodownload' style='display: block; margin-top: 10px'><source src='audio/beating-400-430.wav' type='audio/mpeg'></audio>
+(ref:46af3807-8a46-447e-abf4-7ac9421813f3)  <audio controls controlsList='nodownload' style='display: block; margin-top: 10px'><source src='audio/beating-400-430.wav' type='audio/mpeg'></audio>
 
 **Masking.** Masking concerns the auditory system's ability to resolve, or 'hear out', different partials in the acoustic spectrum. When partials are well-separated, they are easy to distinguish, because they stimulate distinct parts of the basilar membrane. However, when partials are close together, they end up stimulating overlapping regions, which makes them hard to distinguish, and causes what is known as 'masking'. It is thought that this masking effect might feel unpleasant, because it reflects an auditory environment that is hard to process accurately.
 
@@ -142,12 +142,12 @@ In the last few years a research group from MIT has performed a series of studie
 
 Moreover, one can find several musical cultures across the world that seem to actively promote the kinds of pitch intervals that Westerners would consider to be dissonant. It doesn't seem like these musicians are insensitive to the particular aesthetic effect of these intervals, like it seemed for the Tsimane' people; instead, it seems like the particular acoustic effects of these intervals are being intrinsically valued in these musical styles. There are not many formal psychological studies of people from these cultures, but music recordings from these cultures are very suggestive. Here's one such recording of a group of Bosnian Ganga singers:
 
-![(ref:792890cf-e401-41c8-88b3-eeaf49cf3ab9)  **A performance by a group of Bosnian Ganga singers.** Credit: Pantelis N. Vassilakis, http://acousticslab.org/RECA220/](images/1x1.png)
+![(ref:cdeebbeb-f813-434f-8a05-67717910f17c)  **A performance by a group of Bosnian Ganga singers.** Credit: Pantelis N. Vassilakis, http://acousticslab.org/RECA220/](images/1x1.png)
 
 <br>
 
 
-(ref:792890cf-e401-41c8-88b3-eeaf49cf3ab9) <video controls width=100%> <source src='images/GangaLive.mp4' type='video/mp4'> </video>
+(ref:cdeebbeb-f813-434f-8a05-67717910f17c) <video controls width=100%> <source src='images/GangaLive.mp4' type='video/mp4'> </video>
 
 ### Individual differences in consonance perception
 

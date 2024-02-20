@@ -22,12 +22,12 @@ We seem to see these kinds of effects in music listening too. If I play a musica
 
 When used appropriately, these prediction violations don't have to be experienced negatively; they can instead make the piece more interesting, and introduce rewarding trajectories of tension and relaxation. Prokofiev is a composer who makes very explicit use of these prediction violations, which musicologists often describe tongue-in-cheek as 'wrong notes'. In Peter's theme from Peter and the Wolf, the first two bars are harmonically very predictable, simply outlining the tonic triad. The theme then jumps without warning to the flat submediant, giving the listener a strong prediction violation.
 
-![(ref:abaafff2-284c-48b1-aa21-5b3f04255bff)  **Prokofiev 'Peter and the Wolf', opening.** Paul Barton, free for non-commercial use.](images/1x1.png)
+![(ref:6a1ce8cb-2d0f-4afd-8aa8-4aa81b6d49ca)  **Prokofiev 'Peter and the Wolf', opening.** Paul Barton, free for non-commercial use.](images/1x1.png)
 
 <br>
 
 
-(ref:abaafff2-284c-48b1-aa21-5b3f04255bff) <iframe width="560" height="315" src="https://www.youtube.com/embed/1BRp_zeLYr4?start=10" style="display: block; margin-bottom: 25px" title="Prokofiev 'Peter and the Wolf', opening." frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+(ref:6a1ce8cb-2d0f-4afd-8aa8-4aa81b6d49ca) <iframe width="560" height="315" src="https://www.youtube.com/embed/1BRp_zeLYr4?start=10" style="display: block; margin-bottom: 25px" title="Prokofiev 'Peter and the Wolf', opening." frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 Prokofiev ends up repeating the same unusual harmonic progression many times -- four times over the course of the movement. The more we hear it, the less surprising it sounds: our short-term experience starts to override our long-term stylistic knowledge. It never manages to override it completely, though. Intuitively, it feels like part of our brain keeps on trying to generate predictions based on long-term stylistic knowledge rather than short-term experience, and keeps being surprised as a result. This is probably for the best -- if knowing a piece meant that you stopped hearing it with respect to your stylistic knowledge, then it might become rather difficult to get much out of repeated listenings.
 
@@ -126,22 +126,22 @@ The most famous version of this rating method is described in an important paper
 
 In each trial of the probe-tone paradigm, the participant is first played a context stimulus. In this example, the context stimulus is a C major chord. A few moments later, the participant is played a probe tone. This tone is chosen from a selection of possibilities covering the chromatic scale. The participant is then asked, "How well does the probe tone fit with the context?", and has to respond on a 7-point rating scale. Here's an example trial with a C as the probe tone; most Western participants would say that the probe tone fits pretty well.
 
-![**Tonic probe tone after a major triad.** (ref:5d9ef77e-7c7b-479f-b23a-3d6e1f29889d) ](expectation/probe-tone-major-chord-1.svg){width='50%'}
+![**Tonic probe tone after a major triad.** (ref:24889ed3-5b34-41c6-96e2-a74381add144) ](expectation/probe-tone-major-chord-1.svg){width='50%'}
 
 <br>
 
 
-(ref:5d9ef77e-7c7b-479f-b23a-3d6e1f29889d)  <audio controls controlsList='nodownload' style='display: block; margin-top: 10px'><source src='expectation/probe-tone-major-chord.mp3' type='audio/mpeg'></audio>
+(ref:24889ed3-5b34-41c6-96e2-a74381add144)  <audio controls controlsList='nodownload' style='display: block; margin-top: 10px'><source src='expectation/probe-tone-major-chord.mp3' type='audio/mpeg'></audio>
 
 \
 In this example, C sharp is the probe tone. Most Westerners would say that this tone fits less well.
 
-![**Raised tonic probe tone after a major triad.** (ref:11ee9100-fe8b-436a-90fe-b5499ae2536b) ](expectation/probe-tone-major-chord-2-1.svg){width='50%'}
+![**Raised tonic probe tone after a major triad.** (ref:b9cfd294-b910-4b5c-a578-89f306caa2fb) ](expectation/probe-tone-major-chord-2-1.svg){width='50%'}
 
 <br>
 
 
-(ref:11ee9100-fe8b-436a-90fe-b5499ae2536b)  <audio controls controlsList='nodownload' style='display: block; margin-top: 10px'><source src='expectation/probe-tone-major-chord-2.mp3' type='audio/mpeg'></audio>
+(ref:b9cfd294-b910-4b5c-a578-89f306caa2fb)  <audio controls controlsList='nodownload' style='display: block; margin-top: 10px'><source src='expectation/probe-tone-major-chord-2.mp3' type='audio/mpeg'></audio>
 
 @krumhansl1982 studied a variety of tonal contexts in their experiment, in addition to simple tonic triads. Some trials used a diatonic scale; other trials used short cadences, like the IV-V-I cadence or the ii-V-I cadence.
 
@@ -175,21 +175,21 @@ Another important approach in the field is the 'priming' paradigm. This paradigm
 
 Here's an example of how the priming approach can be used to assess harmonic expectation, taken from a study by @Tillmann2006. In each trial, we play a chord sequence to the participant, and tell them to make a perceptual judgment about a particular chord in the sequence, called the 'target'. In this case the chord of interest is the final chord in the sequence, and the participant is being asked to say whether this final chord is played by a piano or by a harp.
 
-![**Excerpt from @Tillmann2006 with a related target and a harp final chord.** (ref:1589bb44-fd57-47e0-8034-1f15fd52bf9e) ](expectation/tillmann-2006-congruent-harp-1.svg){width='100%'}
+![**Excerpt from @Tillmann2006 with a related target and a harp final chord.** (ref:a889406d-e237-4268-b1d3-66f4287685bc) ](expectation/tillmann-2006-congruent-harp-1.svg){width='100%'}
 
 <br>
 
 
-(ref:1589bb44-fd57-47e0-8034-1f15fd52bf9e)  <audio controls controlsList='nodownload' style='display: block; margin-top: 10px'><source src='expectation/tillmann-2006-congruent-harp.mp3' type='audio/mpeg'></audio>
+(ref:a889406d-e237-4268-b1d3-66f4287685bc)  <audio controls controlsList='nodownload' style='display: block; margin-top: 10px'><source src='expectation/tillmann-2006-congruent-harp.mp3' type='audio/mpeg'></audio>
 
 In different trials we manipulate the chords used in the stimulus. In the previous example, the target would have been categorised as 'related': it's the tonic chord, and hence highly expected given the context. In the next example, the target is the subdominant chord, and is hence categorised as 'less related' to the context.
 
-![**Excerpt from @Tillmann2006 with a less-related target and a harp final chord.** (ref:535662c3-afb0-4b0c-be61-71b372d4cd25) ](expectation/tillmann-2006-less-related-harp-1.svg){width='100%'}
+![**Excerpt from @Tillmann2006 with a less-related target and a harp final chord.** (ref:1a3c8200-0fae-4870-90b6-cb4f3bdbe3de) ](expectation/tillmann-2006-less-related-harp-1.svg){width='100%'}
 
 <br>
 
 
-(ref:535662c3-afb0-4b0c-be61-71b372d4cd25)  <audio controls controlsList='nodownload' style='display: block; margin-top: 10px'><source src='expectation/tillmann-2006-less-related-harp.mp3' type='audio/mpeg'></audio>
+(ref:1a3c8200-0fae-4870-90b6-cb4f3bdbe3de)  <audio controls controlsList='nodownload' style='display: block; margin-top: 10px'><source src='expectation/tillmann-2006-less-related-harp.mp3' type='audio/mpeg'></audio>
 
 The theory behind the priming task is as follows. When the target is more expected, this makes the chord easier to process, which then speeds up the participant's decision. Conversely, when the target is less expected, this slows down the processing, causing longer reaction times. So, we can measure how expected a chord is by studying the length of its reaction times. The main appeal of this priming paradigm is that it bypasses the conscious processing that we saw in the rating task and the singing task. We can call it an 'implicit' measure of expectation: the participant generally has no awareness of what is happening. However, this implicit nature is at the same time a disadvantage. It's difficult to be certain that the results of this paradigm really are telling us about expectation. Our main evidence that priming measures expectation is that expected events tend to deliver shorter reaction times than unexpected events, but when we start using priming as a way of measuring expectation, this logic becomes circular.
 
@@ -415,6 +415,12 @@ The final feature concerns IDyOM's *long-term* and *short-term* memory modules. 
 #### Example practical application
 
 Let's see how we might apply IDyOM in practice. Here's an excerpt from a Bach chorale melody, with model outputs from IDyOM compared to human listeners. In particular, this graph is plotting the 'surprise' experienced by IDyOM and by the human listeners at each point in the melody. We can see that surprise varies somewhat over the course of the melody. If we look at note position 14, for example, we see that both the model and the listeners have very low surprise -- in other words, they were both very confident that the G was going to occur. If we look at the melody itself, we can sympathise with this prediction: the G is the obvious end of a descending scale, and it produces an obvious cadence onto the tonic.
+
+
+```
+#> Warning: ImageMagick was built without librsvg which causes poor qualty of SVG rendering.
+#> For better results use image_read_svg() which uses the rsvg package.
+```
 
 ![**Modelling listener surprise through the course of a melody [data from @Pearce2018-pw].**](expectation/idyom-dynamic-predictions-combined.svg){width='100%'}
 
