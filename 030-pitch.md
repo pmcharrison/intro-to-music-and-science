@@ -4,12 +4,12 @@
 
 In Section \@ref(foundations-of-acoustics) we saw various forms of idealised waves: the sine wave, the sawtooth wave, and the square wave. These waves all differ in shape, but they share a key property: they are all *periodic*. By periodic, we mean that the wave repeats itself at a regular time interval. This periodicity turns out to be integral to pitch perception.
 
-![**An example sine wave.** (ref:3bed1f0b-1855-4a85-9ba3-1c36ef9dadb8) ](images/sine-wave-frequency=240.png){width='400px'}
+![**An example sine wave.** (ref:b574f125-d0fa-47d8-8924-dc2bc79a51ee) ](images/sine-wave-frequency=240.png){width='400px'}
 
 <br>
 
 
-(ref:3bed1f0b-1855-4a85-9ba3-1c36ef9dadb8)  <audio controls controlsList='nodownload' style='display: block; margin-top: 10px'><source src='audio/tone-frequency=240.wav' type='audio/mpeg'></audio>
+(ref:b574f125-d0fa-47d8-8924-dc2bc79a51ee)  <audio controls controlsList='nodownload' style='display: block; margin-top: 10px'><source src='audio/tone-frequency=240.wav' type='audio/mpeg'></audio>
 
 We also covered the notion of 'frequency'. Frequency tells us the repetition rate of a periodic waveform, and is expressed in units of Hz. A frequency of 5 Hz means that the waveform repeats at a rate of 5 times per second.
 
@@ -177,25 +177,25 @@ This phenomenon of relative pitch has important implications for how we understa
 #> Warning in system(.): error in running command
 #> Warning in system(cmd): error in running command
 #> Warning in file.remove(files): cannot remove file
-#> '/var/folders/3m/p59k4qdj0f17st0gn2cmj3640000gn/T//Rtmp43Yz5r/chord-1-c5354244660f.wav',
+#> '/var/folders/3m/p59k4qdj0f17st0gn2cmj3640000gn/T//Rtmpa52TVj/chord-1-bf5cf0e7a3c.wav',
 #> reason 'No such file or directory'
 #> Warning in file.remove(files): cannot remove file
-#> '/var/folders/3m/p59k4qdj0f17st0gn2cmj3640000gn/T//Rtmp43Yz5r/chord-2-c535188884c6.wav',
+#> '/var/folders/3m/p59k4qdj0f17st0gn2cmj3640000gn/T//Rtmpa52TVj/chord-2-bf5c7f7b00dc.wav',
 #> reason 'No such file or directory'
 #> Warning in file.remove(files): cannot remove file
-#> '/var/folders/3m/p59k4qdj0f17st0gn2cmj3640000gn/T//Rtmp43Yz5r/chord-3-c5352ac4efbf.wav',
+#> '/var/folders/3m/p59k4qdj0f17st0gn2cmj3640000gn/T//Rtmpa52TVj/chord-3-bf5c6475ace6.wav',
 #> reason 'No such file or directory'
 #> Warning in file.remove(files): cannot remove file
-#> '/var/folders/3m/p59k4qdj0f17st0gn2cmj3640000gn/T//Rtmp43Yz5r/chord-4-c5356757fa88.wav',
+#> '/var/folders/3m/p59k4qdj0f17st0gn2cmj3640000gn/T//Rtmpa52TVj/chord-4-bf5c69aa6390.wav',
 #> reason 'No such file or directory'
 #> Warning in file.remove(files): cannot remove file
-#> '/var/folders/3m/p59k4qdj0f17st0gn2cmj3640000gn/T//Rtmp43Yz5r/chord-5-c53541012bb9.wav',
+#> '/var/folders/3m/p59k4qdj0f17st0gn2cmj3640000gn/T//Rtmpa52TVj/chord-5-bf5c316eb922.wav',
 #> reason 'No such file or directory'
 #> Warning in file.remove(files): cannot remove file
-#> '/var/folders/3m/p59k4qdj0f17st0gn2cmj3640000gn/T//Rtmp43Yz5r/chord-6-c53533dda006.wav',
+#> '/var/folders/3m/p59k4qdj0f17st0gn2cmj3640000gn/T//Rtmpa52TVj/chord-6-bf5c5c3c8088.wav',
 #> reason 'No such file or directory'
 #> Warning in file.remove(files): cannot remove file
-#> '/var/folders/3m/p59k4qdj0f17st0gn2cmj3640000gn/T//Rtmp43Yz5r/chord-7-c5351b350484.wav',
+#> '/var/folders/3m/p59k4qdj0f17st0gn2cmj3640000gn/T//Rtmpa52TVj/chord-7-bf5c81a9007.wav',
 #> reason 'No such file or directory'
 ```
 
@@ -221,25 +221,25 @@ However, I could equally well play the same melody starting on a different frequ
 #> Warning in system(.): error in running command
 #> Warning in system(cmd): error in running command
 #> Warning in file.remove(files): cannot remove file
-#> '/var/folders/3m/p59k4qdj0f17st0gn2cmj3640000gn/T//Rtmp43Yz5r/chord-1-c53529db51ff.wav',
+#> '/var/folders/3m/p59k4qdj0f17st0gn2cmj3640000gn/T//Rtmpa52TVj/chord-1-bf5c7c8e0ebb.wav',
 #> reason 'No such file or directory'
 #> Warning in file.remove(files): cannot remove file
-#> '/var/folders/3m/p59k4qdj0f17st0gn2cmj3640000gn/T//Rtmp43Yz5r/chord-2-c5357de451d0.wav',
+#> '/var/folders/3m/p59k4qdj0f17st0gn2cmj3640000gn/T//Rtmpa52TVj/chord-2-bf5c526956df.wav',
 #> reason 'No such file or directory'
 #> Warning in file.remove(files): cannot remove file
-#> '/var/folders/3m/p59k4qdj0f17st0gn2cmj3640000gn/T//Rtmp43Yz5r/chord-3-c53518b76f42.wav',
+#> '/var/folders/3m/p59k4qdj0f17st0gn2cmj3640000gn/T//Rtmpa52TVj/chord-3-bf5c1c674be.wav',
 #> reason 'No such file or directory'
 #> Warning in file.remove(files): cannot remove file
-#> '/var/folders/3m/p59k4qdj0f17st0gn2cmj3640000gn/T//Rtmp43Yz5r/chord-4-c53532e962bb.wav',
+#> '/var/folders/3m/p59k4qdj0f17st0gn2cmj3640000gn/T//Rtmpa52TVj/chord-4-bf5cc1a66db.wav',
 #> reason 'No such file or directory'
 #> Warning in file.remove(files): cannot remove file
-#> '/var/folders/3m/p59k4qdj0f17st0gn2cmj3640000gn/T//Rtmp43Yz5r/chord-5-c5357850fd19.wav',
+#> '/var/folders/3m/p59k4qdj0f17st0gn2cmj3640000gn/T//Rtmpa52TVj/chord-5-bf5c1956ba12.wav',
 #> reason 'No such file or directory'
 #> Warning in file.remove(files): cannot remove file
-#> '/var/folders/3m/p59k4qdj0f17st0gn2cmj3640000gn/T//Rtmp43Yz5r/chord-6-c535d18b205.wav',
+#> '/var/folders/3m/p59k4qdj0f17st0gn2cmj3640000gn/T//Rtmpa52TVj/chord-6-bf5ccd200bd.wav',
 #> reason 'No such file or directory'
 #> Warning in file.remove(files): cannot remove file
-#> '/var/folders/3m/p59k4qdj0f17st0gn2cmj3640000gn/T//Rtmp43Yz5r/chord-7-c535504f6cfa.wav',
+#> '/var/folders/3m/p59k4qdj0f17st0gn2cmj3640000gn/T//Rtmpa52TVj/chord-7-bf5c2f2e7ede.wav',
 #> reason 'No such file or directory'
 ```
 
