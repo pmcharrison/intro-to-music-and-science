@@ -47,14 +47,14 @@ jobs:
      - name: Checkout
        uses: actions/checkout@main
      - name: Download artifact
-       uses: actions/download-artifact@v1.0.0
+       uses: actions/download-artifact@4
        with:
          # Artifact name
          name: _book # optional
          # Destination path
          path: _book # optional
      - name: Deploy to GitHub Pages
-       uses: pmcharrison/GitHub-Pages-deploy@v2
+       uses: pmcharrison/GitHub-Pages-deploy@v4.1.7
        env:
           EMAIL: ${{ secrets.EMAIL }}               # must be a verified email
           GH_TOKEN: ${{ secrets.GH_PAT }} # https://github.com/settings/tokens
