@@ -96,7 +96,7 @@ embed_image(
 )
 ```
 
-In contrast, when we talk about temporal aspects of *timbre* perception, we're instead interested at temporal dynamics at longer time scales. We're interested not the specific ups and downs of the waveform, but we're instead interested in the 'envelope' within which the waveform oscillates. We can see this envelope if we 'zoom out' the visualisation, as follows (note that the wiggles in waveform are now squashed so close together that they just produce a solid block):
+In contrast, when we talk about temporal aspects of *timbre* perception, we're instead interested in temporal dynamics at longer time scales. We're interested not in the specific ups and downs of the waveform, but instead in the 'envelope' within which the waveform oscillates. We can see this envelope if we 'zoom out' the visualisation, as follows (note that the wiggles in waveform are now squashed so close together that they just produce a solid block):
 
 ```{r}
 embed_image(
