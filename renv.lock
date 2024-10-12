@@ -857,10 +857,10 @@
     },
     "gifski": {
       "Package": "gifski",
-      "Version": "1.12.0-2",
+      "Version": "1.32.0",
       "Source": "Repository",
       "Repository": "CRAN",
-      "Hash": "94ea43ec9e47684c20810e9272605425"
+      "Hash": "930e618a0c319ba3c2089991598f2909"
     },
     "glue": {
       "Package": "glue",
