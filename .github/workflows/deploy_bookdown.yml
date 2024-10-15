@@ -55,9 +55,10 @@ jobs:
          path: _book # optional
      - name: Deploy to GitHub Pages
        uses: pmcharrison/GitHub-Pages-deploy@v3
-       env:
-          EMAIL: ${{ secrets.EMAIL }}               # must be a verified email
+       with:
+         email: ${{ secrets.EMAIL }}
+         build_dir: _book
+       env:            # must be a verified email
           GH_TOKEN: ${{ secrets.GH_PAT }} # https://github.com/settings/tokens
-          INPUT_BUILD_DIR: _book/                     # "_site/" by default
     
  
