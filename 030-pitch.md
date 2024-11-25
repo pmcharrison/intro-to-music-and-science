@@ -4,12 +4,12 @@
 
 In Section \@ref(foundations-of-acoustics) we saw various forms of idealised waves: the sine wave, the sawtooth wave, and the square wave. These waves all differ in shape, but they share a key property: they are all *periodic*. By periodic, we mean that the wave repeats itself at a regular time interval. This periodicity turns out to be integral to pitch perception.
 
-![**An example sine wave.** (ref:8609a4d3-0d66-4c09-b346-e69c29b9cc62) ](images/sine-wave-frequency=240.png){width='400px'}
+![**An example sine wave.** (ref:69c89ae8-7189-456d-8b6a-922fcf1b932d) ](images/sine-wave-frequency=240.png){width='400px'}
 
 <br>
 
 
-(ref:8609a4d3-0d66-4c09-b346-e69c29b9cc62)  <audio controls controlsList='nodownload' style='display: block; margin-top: 10px'><source src='audio/tone-frequency=240.wav' type='audio/mpeg'></audio>
+(ref:69c89ae8-7189-456d-8b6a-922fcf1b932d)  <audio controls controlsList='nodownload' style='display: block; margin-top: 10px'><source src='audio/tone-frequency=240.wav' type='audio/mpeg'></audio>
 
 We also covered the notion of 'frequency'. Frequency tells us the repetition rate of a periodic waveform, and is expressed in units of Hz. A frequency of 5 Hz means that the waveform repeats at a rate of 5 times per second.
 
@@ -177,26 +177,26 @@ This phenomenon of relative pitch has important implications for how we understa
 #> Warning in system(.): error in running command
 #> Warning in system(cmd): error in running command
 #> Warning in file.remove(files): cannot remove file
-#> '/var/folders/t_/mmhnh941511_hp2lwh383bp00000gn/T//RtmphONj2l/chord-1-124d53b53d35.wav',
-#> reason 'No such file or directory'
+#> '/tmp/RtmpXtTK4S/chord-1-e4732575c3a6.wav', reason 'No such
+#> file or directory'
 #> Warning in file.remove(files): cannot remove file
-#> '/var/folders/t_/mmhnh941511_hp2lwh383bp00000gn/T//RtmphONj2l/chord-2-124d1fc58d82.wav',
-#> reason 'No such file or directory'
+#> '/tmp/RtmpXtTK4S/chord-2-e4731c7d1bd.wav', reason 'No such
+#> file or directory'
 #> Warning in file.remove(files): cannot remove file
-#> '/var/folders/t_/mmhnh941511_hp2lwh383bp00000gn/T//RtmphONj2l/chord-3-124d62cd6219.wav',
-#> reason 'No such file or directory'
+#> '/tmp/RtmpXtTK4S/chord-3-e4734f0aa125.wav', reason 'No such
+#> file or directory'
 #> Warning in file.remove(files): cannot remove file
-#> '/var/folders/t_/mmhnh941511_hp2lwh383bp00000gn/T//RtmphONj2l/chord-4-124d19e389fc.wav',
-#> reason 'No such file or directory'
+#> '/tmp/RtmpXtTK4S/chord-4-e4734a3bc838.wav', reason 'No such
+#> file or directory'
 #> Warning in file.remove(files): cannot remove file
-#> '/var/folders/t_/mmhnh941511_hp2lwh383bp00000gn/T//RtmphONj2l/chord-5-124d29780cab.wav',
-#> reason 'No such file or directory'
+#> '/tmp/RtmpXtTK4S/chord-5-e473366f0134.wav', reason 'No such
+#> file or directory'
 #> Warning in file.remove(files): cannot remove file
-#> '/var/folders/t_/mmhnh941511_hp2lwh383bp00000gn/T//RtmphONj2l/chord-6-124d887c3d2.wav',
-#> reason 'No such file or directory'
+#> '/tmp/RtmpXtTK4S/chord-6-e473445606fe.wav', reason 'No such
+#> file or directory'
 #> Warning in file.remove(files): cannot remove file
-#> '/var/folders/t_/mmhnh941511_hp2lwh383bp00000gn/T//RtmphONj2l/chord-7-124d949145e.wav',
-#> reason 'No such file or directory'
+#> '/tmp/RtmpXtTK4S/chord-7-e4735e77216e.wav', reason 'No such
+#> file or directory'
 ```
 
 <audio controls controlsList='nodownload' style='display: block; margin-top: 10px'><source src='audio/old-macdonald-440.wav' type='audio/mpeg'></audio>
@@ -221,26 +221,26 @@ However, I could equally well play the same melody starting on a different frequ
 #> Warning in system(.): error in running command
 #> Warning in system(cmd): error in running command
 #> Warning in file.remove(files): cannot remove file
-#> '/var/folders/t_/mmhnh941511_hp2lwh383bp00000gn/T//RtmphONj2l/chord-1-124d3436257e.wav',
-#> reason 'No such file or directory'
+#> '/tmp/RtmpXtTK4S/chord-1-e473679d6f48.wav', reason 'No such
+#> file or directory'
 #> Warning in file.remove(files): cannot remove file
-#> '/var/folders/t_/mmhnh941511_hp2lwh383bp00000gn/T//RtmphONj2l/chord-2-124d4ed78df9.wav',
-#> reason 'No such file or directory'
+#> '/tmp/RtmpXtTK4S/chord-2-e47330c654dd.wav', reason 'No such
+#> file or directory'
 #> Warning in file.remove(files): cannot remove file
-#> '/var/folders/t_/mmhnh941511_hp2lwh383bp00000gn/T//RtmphONj2l/chord-3-124d29a9fedf.wav',
-#> reason 'No such file or directory'
+#> '/tmp/RtmpXtTK4S/chord-3-e4736242ee85.wav', reason 'No such
+#> file or directory'
 #> Warning in file.remove(files): cannot remove file
-#> '/var/folders/t_/mmhnh941511_hp2lwh383bp00000gn/T//RtmphONj2l/chord-4-124d579bf7d7.wav',
-#> reason 'No such file or directory'
+#> '/tmp/RtmpXtTK4S/chord-4-e4732c0b88e.wav', reason 'No such
+#> file or directory'
 #> Warning in file.remove(files): cannot remove file
-#> '/var/folders/t_/mmhnh941511_hp2lwh383bp00000gn/T//RtmphONj2l/chord-5-124d40ac7130.wav',
-#> reason 'No such file or directory'
+#> '/tmp/RtmpXtTK4S/chord-5-e473b48f0d6.wav', reason 'No such
+#> file or directory'
 #> Warning in file.remove(files): cannot remove file
-#> '/var/folders/t_/mmhnh941511_hp2lwh383bp00000gn/T//RtmphONj2l/chord-6-124d793b277b.wav',
-#> reason 'No such file or directory'
+#> '/tmp/RtmpXtTK4S/chord-6-e47343d98b94.wav', reason 'No such
+#> file or directory'
 #> Warning in file.remove(files): cannot remove file
-#> '/var/folders/t_/mmhnh941511_hp2lwh383bp00000gn/T//RtmphONj2l/chord-7-124d1a9d3a6b.wav',
-#> reason 'No such file or directory'
+#> '/tmp/RtmpXtTK4S/chord-7-e47369f62dd6.wav', reason 'No such
+#> file or directory'
 ```
 
 <audio controls controlsList='nodownload' style='display: block; margin-top: 10px'><source src='audio/old-macdonald-330.wav' type='audio/mpeg'></audio>

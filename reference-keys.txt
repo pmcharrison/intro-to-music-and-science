@@ -12,7 +12,6 @@ fig:unnamed-chunk-22
 fig:dissonance-curve
 fig:unnamed-chunk-25
 overview
-undergraduate-courses
 how-to-approach-the-courses
 advice-on-essay-writing
 copyright
