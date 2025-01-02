@@ -467,7 +467,7 @@ The idea about viewpoints is that there's many different ways of looking at a pa
 
 -   We could consider the **contour** pattern, which describes whether each note goes up or down compared to its predecessor. In the below diagram I've marked ascending intervals with '+' symbols and descending intervals with '-' symbols.
 
--   We could consider an **intervallic** representation, where each note is represented as a signed number of semitones from the previous note. For example, the first interval in this melody is an ascending major third, corresponding to four semitones, so we write a 4 under the second note of the melody. The second interval is an ascending minor third, so we write a 3 under the third melody note, and so on.
+-   We could consider an **interval** representation, where each note is represented as a signed number of semitones from the previous note. For example, the first interval in this melody is an ascending major third, corresponding to four semitones, so we write a 4 under the second note of the melody. The second interval is an ascending minor third, so we write a 3 under the third melody note, and so on. Alternatively, we could use a scalar interval representation instead, which preserves the number but not the quality of the interval (e.g. not distinguishing between major or minor sixths). This is useful for capturing tonal transpositions of a motif, where the exact interval sizes are not necessarily preserved.
 
 -   We could consider a **scale degree** representation, where each note is represented relative to the local tonic. Here the first few notes outline the major triad, so we write 1, 3, and 5 underneath them, as we would do in Roman numeral analyses.
 
