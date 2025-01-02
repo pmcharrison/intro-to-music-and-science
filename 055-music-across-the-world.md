@@ -149,12 +149,12 @@ One of the most obvious features cross-culturally is that melodies tend to conta
 
 Of course, there are always counter-examples to these kinds of rules. Yodelling is an example, where we see big pitch leaps as the singer jumps rapidly between chest voice and falsetto. Experienced yodellers can create impressive pseudo-polyphonic lines as a result.
 
-![(ref:24b5bddf-7070-41e5-8acc-f21214df0e64)  **Yodelling.** 'Auf und auf voll lebenslust', sung by Franzl Lang.](images/1x1.png)
+![(ref:cfa0ecec-a290-4376-9996-6a418707f476)  **Yodelling.** 'Auf und auf voll lebenslust', sung by Franzl Lang.](images/1x1.png)
 
 <br>
 
 
-(ref:24b5bddf-7070-41e5-8acc-f21214df0e64) <iframe width="560" height="315" src="https://www.youtube.com/embed/8_UnANdDqJc?start=0" style="display: block; margin-bottom: 25px" title="Yodelling." frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+(ref:cfa0ecec-a290-4376-9996-6a418707f476) <iframe width="560" height="315" src="https://www.youtube.com/embed/8_UnANdDqJc?start=0" style="display: block; margin-bottom: 25px" title="Yodelling." frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 #### Declination
 
@@ -222,39 +222,39 @@ Let's now consider how speech patterns might shape the development of musical st
 
 For illustration, here's a clip of someone speaking with a Kentucky accent. We hear how the rhythms of the syllables tend to be rather swung, almost like dotted rhythms in Western musical notation.
 
-![(ref:f7e17427-521b-416d-9dcd-df25a3dd78ec)  **An example of a Kentucky accent.**](images/1x1.png)
+![(ref:d5863643-7603-4138-bc66-943f7aceeb8c)  **An example of a Kentucky accent.**](images/1x1.png)
 
 <br>
 
 
-(ref:f7e17427-521b-416d-9dcd-df25a3dd78ec) <iframe width="560" height="315" src="https://www.youtube.com/embed/nAE-5IG0RrU?start=0" style="display: block; margin-bottom: 25px" title="An example of a Kentucky accent." frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+(ref:d5863643-7603-4138-bc66-943f7aceeb8c) <iframe width="560" height="315" src="https://www.youtube.com/embed/nAE-5IG0RrU?start=0" style="display: block; margin-bottom: 25px" title="An example of a Kentucky accent." frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 We can contrast this to someone speaking with a Shetland accent. Here the syllables seem much more even.
 
-![(ref:2be388bb-ae09-4493-af65-c5d3e2834de1)  **An example of a Shetland accent.**](images/1x1.png)
+![(ref:207bb35d-9f75-4794-9569-5cbd48b9632b)  **An example of a Shetland accent.**](images/1x1.png)
 
 <br>
 
 
-(ref:2be388bb-ae09-4493-af65-c5d3e2834de1) <iframe width="560" height="315" src="https://www.youtube.com/embed/v37bgydws0E?start=0" style="display: block; margin-bottom: 25px" title="An example of a Shetland accent." frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+(ref:207bb35d-9f75-4794-9569-5cbd48b9632b) <iframe width="560" height="315" src="https://www.youtube.com/embed/v37bgydws0E?start=0" style="display: block; margin-bottom: 25px" title="An example of a Shetland accent." frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 Let's compare these speech rhythms now to the fiddle music rhythms. Here's an excerpt of some Kentucky fiddle music. We can hear how the basic rhythm is very much swung, analogous to the speech rhythms we heard earlier.
 
-![(ref:1ff97369-a529-4347-b19a-7889de7ac9dd)  **An example of Kentucky fiddle music.**](images/1x1.png)
+![(ref:49ebccd8-d0ce-4056-8688-5bb350e1b44f)  **An example of Kentucky fiddle music.**](images/1x1.png)
 
 <br>
 
 
-(ref:1ff97369-a529-4347-b19a-7889de7ac9dd) <iframe width="560" height="315" src="https://www.youtube.com/embed/Dx49-WxSTnM?start=0" style="display: block; margin-bottom: 25px" title="An example of Kentucky fiddle music." frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+(ref:49ebccd8-d0ce-4056-8688-5bb350e1b44f) <iframe width="560" height="315" src="https://www.youtube.com/embed/Dx49-WxSTnM?start=0" style="display: block; margin-bottom: 25px" title="An example of Kentucky fiddle music." frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 We can compare this to an excerpt of some Shetland fiddle music. Here, similar to the Shetland speaker we heard earlier, the rhythm is much more even.
 
-![(ref:620dd01d-d3a5-4754-8487-f67e5cb1aedd)  **An example of Shetland fiddle music.**](images/1x1.png)
+![(ref:f1c6d4e8-f861-4edd-9e4d-bd7643c120c3)  **An example of Shetland fiddle music.**](images/1x1.png)
 
 <br>
 
 
-(ref:620dd01d-d3a5-4754-8487-f67e5cb1aedd) <iframe width="560" height="315" src="https://www.youtube.com/embed/caFrGTt-drg?start=0" style="display: block; margin-bottom: 25px" title="An example of Shetland fiddle music." frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+(ref:f1c6d4e8-f861-4edd-9e4d-bd7643c120c3) <iframe width="560" height="315" src="https://www.youtube.com/embed/caFrGTt-drg?start=0" style="display: block; margin-bottom: 25px" title="An example of Shetland fiddle music." frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 @McGowan2011-sv performed a quantitative analysis along these lines, and found that the trends in rhythmic variability across languages were mirrored by the rhythmic variability across musical styles. Specifically, Donegal and Shetland had relatively even rhythms in both speech and music, whereas Kentucky had relatively uneven rhythms in both speech and music. Now, this is just a sample of three different cultures, so we can't read that much into the results. Nonetheless, they are suggestive of some kind of stylistic interaction between speech and music rhythms.
 
@@ -268,12 +268,12 @@ An interesting question is then, what kinds of scale systems will we see in musi
 
 The Balinese gamelan is an interesting example of a musical tradition that makes heavy use of inharmonic instruments. The following video shows an example performance:
 
-![(ref:147f6d1d-4e52-44c3-8250-8c0aa84c8e9a)  **Balinese gamelan performance** Ubud Palace, Ubud, Bali, Indonesia, January 2012](images/1x1.png)
+![(ref:f8988d9c-e930-4267-b6b0-50dacf02b47c)  **Balinese gamelan performance** Ubud Palace, Ubud, Bali, Indonesia, January 2012](images/1x1.png)
 
 <br>
 
 
-(ref:147f6d1d-4e52-44c3-8250-8c0aa84c8e9a) <iframe width="560" height="315" src="https://www.youtube.com/embed/qIq8LNbYKT8?start=0" style="display: block; margin-bottom: 25px" title="Balinese gamelan performance" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+(ref:f8988d9c-e930-4267-b6b0-50dacf02b47c) <iframe width="560" height="315" src="https://www.youtube.com/embed/qIq8LNbYKT8?start=0" style="display: block; margin-bottom: 25px" title="Balinese gamelan performance" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 The Balinese gamelan is built on two primary scales: the slendro and the pelog. The slendro scale splits the octave into five more-or-less equally sized intervals; in other words, it approximates a five-tone equal-tempered scale. The pelog scale, meanwhile, varies quite a lot in tuning between orchestras.
 
@@ -283,12 +283,12 @@ The Balinese gamelan is built on two primary scales: the slendro and the pelog. 
 
 @Sethares2005-ko has argued that these scale systems developed in order to maximise consonance. His argument begins with the bonang, one of the key instruments in the gamelan orchestra. The bonang is a collection of small gongs, typically hit with padded sticks.
 
-![(ref:51f2abbf-ac0e-4580-b097-30642e8b79ed)  **Demonstration of the bonang** Credit: Feureau, [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/deed.en)](images/1x1.png)
+![(ref:408b4263-b876-4a9d-b8dd-748d6001bebb)  **Demonstration of the bonang** Credit: Feureau, [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/deed.en)](images/1x1.png)
 
 <br>
 
 
-(ref:51f2abbf-ac0e-4580-b097-30642e8b79ed) <video controls width=100%> <source src='videos/bonang.mp4' type='video/mp4'> </video>
+(ref:408b4263-b876-4a9d-b8dd-748d6001bebb) <video controls width=100%> <source src='videos/bonang.mp4' type='video/mp4'> </video>
 
 Gamelan music often combines inharmonic instruments like the bonang with harmonic instruments such as the voice and the flute. So, let's look at the dissonance profile produced when we combine a bonang with a harmonic sound. Low points in this plot correspond to points with low dissonance, or equivalently high consonance. These consonant points fall outside the harmonic scale. We can see though that they align quite nicely to five-tone equal temperament, as manifested in the slendro scale.
 
@@ -296,12 +296,12 @@ Gamelan music often combines inharmonic instruments like the bonang with harmoni
 
 Let's consider now the saron, a second inharmonic instrument within the gamelan orchestra.
 
-![(ref:4e452318-48eb-417e-afa2-31a804b8f0a4)  **Demonstration of the saron.** Credit: UK Gamelan Network](images/1x1.png)
+![(ref:6720f9f5-10af-48a1-a8d6-c87cbd4ceffd)  **Demonstration of the saron.** Credit: UK Gamelan Network](images/1x1.png)
 
 <br>
 
 
-(ref:4e452318-48eb-417e-afa2-31a804b8f0a4) <iframe width="560" height="315" src="https://www.youtube.com/embed/W1xdd8LpHR4?start=0" style="display: block; margin-bottom: 25px" title="Demonstration of the saron." frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+(ref:6720f9f5-10af-48a1-a8d6-c87cbd4ceffd) <iframe width="560" height="315" src="https://www.youtube.com/embed/W1xdd8LpHR4?start=0" style="display: block; margin-bottom: 25px" title="Demonstration of the saron." frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 If we go through the same exercise for the saron, we find that the consonance profile fits remarkably nicely to the scale degrees of the pelog scale. You can see this by comparing the bottom two lines of numbers in this figure: the bottom line gives the tunings of the pelog scale in cents, whereas the middle line gives the consonance peaks in cents. The two sets of numbers are aligned rather closely, meaning that the pelog scale fits closely to the consonance peaks.
 
