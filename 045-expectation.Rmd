@@ -322,7 +322,7 @@ The **registral direction** principle states that small intervals generate an im
 
 The **intervallic difference** principle also makes a distinction between small and large implicative intervals. It states that a small implicative interval will create an expectation for another similarly sized interval, whereas a large implicative interval will create an expectation for a contrasting smaller interval.
 
-The **registral return** principle differs from the others in that it describes the relation between the *first* note of the implicative interval and the *second* note of the realised interval. It states that, all else aside, listeners will expect the latter note to be close in pitch to the former note. Note that this principle can end up working contrary to the intervallic difference principle, which states that large intervals should be followed by small intervals.
+The **registral return** principle differs from the others in that it describes the relation between the *first* note of the implicative interval and the *second* note of the realised interval. It states that, all else aside, listeners will expect the latter note to be no further than a major second away from the former note. Note that this principle can end up working contrary to the intervallic difference principle, which states that large intervals should be followed by small intervals.
 
 ```{r}
 embed_image(
