@@ -1018,7 +1018,7 @@ inexpensive and unobtrusive heart rate monitors. Many smart watches
 nowadays even include heart rate monitors as standard. Two aspects of
 heart rate are typically monitored: the absolute value and the
 variability. The arousal component of emotion is typically associated
-both with high absolute values and high variability in values,
+both with heightened absolute values and decreased variability in values,
 reflecting the body's preparation for imminent physical exertion.
 
 #### Respiration rate
