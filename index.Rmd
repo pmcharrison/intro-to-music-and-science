@@ -1,5 +1,5 @@
 ---
-title: "Music and Science"
+title: "Introduction to Music and Science"
 author: "Peter M. C. Harrison"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
@@ -8,7 +8,7 @@ bibliography: [book.bib, paperpile.bib, packages.bib]
 # url: your book url like https://bookdown.org/yihui/bookdown
 # cover-image: path to the social sharing image like images/cover.jpg
 description: |
-  This is a collection of draft lecture notes for Music and Science teaching 
+  This is a collection of draft lecture notes for Introduction to Music and Science teaching 
   at the Centre for Music and Science at the University of Cambridge.
 biblio-style: apalike
 csl: apa.csl
@@ -32,7 +32,7 @@ R.utils::copyDirectory(
 
 # Overview
 
-This website hosts a collection of lecture notes for Music and Science teaching at the [Centre for Music and Science](https://cms.mus.cam.ac.uk/) at the University of Cambridge. These lectures are primarily targeted at second- and third-year undergraduate Music students. As such they do not assume significant prior knowledge in mathematics or sciences. Nonetheless, students will find it useful to have studied these subjects to GCSE level.
+This website hosts a collection of lecture notes for Introduction to Music and Science teaching at the [Centre for Music and Science](https://cms.mus.cam.ac.uk/) at the University of Cambridge. These lectures are primarily targeted at second- and third-year undergraduate Music students. As such they do not assume significant prior knowledge in mathematics or sciences. Nonetheless, students will find it useful to have studied these subjects to GCSE level.
 
 My motivation for writing these lecture notes is to give students a detailed and consolidated reference for the core topics covered in the topics. By having the material presented in this fashion, we can avoid relying on long lectures focused solely on content delivery. Instead, students can read through the primary content asynchronously in advance of the lectures, allowing us then to use the lectures to discuss the content in a much more interactive way.
 
