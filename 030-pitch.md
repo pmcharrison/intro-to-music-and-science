@@ -4,12 +4,12 @@
 
 In Section \@ref(foundations-of-acoustics) we saw various forms of idealised waves: the sine wave, the sawtooth wave, and the square wave. These waves all differ in shape, but they share a key property: they are all *periodic*. By periodic, we mean that the wave repeats itself at a regular time interval. This periodicity turns out to be integral to pitch perception.
 
-![**An example sine wave.** (ref:c5bccb73-32dc-4931-9dab-3db6945ae199) ](images/sine-wave-frequency=240.png){width='400px'}
+![**An example sine wave.** (ref:311cbe76-45d4-4de3-ae75-aee212366b53) ](images/sine-wave-frequency=240.png){width='400px'}
 
 <br>
 
 
-(ref:c5bccb73-32dc-4931-9dab-3db6945ae199)  <audio controls controlsList='nodownload' style='display: block; margin-top: 10px'><source src='audio/tone-frequency=240.wav' type='audio/mpeg'></audio>
+(ref:311cbe76-45d4-4de3-ae75-aee212366b53)  <audio controls controlsList='nodownload' style='display: block; margin-top: 10px'><source src='audio/tone-frequency=240.wav' type='audio/mpeg'></audio>
 
 We also covered the notion of 'frequency'. Frequency tells us the repetition rate of a periodic waveform, and is expressed in units of Hz. A frequency of 5 Hz means that the waveform repeats at a rate of 5 times per second.
 
@@ -177,25 +177,25 @@ This phenomenon of relative pitch has important implications for how we understa
 #> Warning in system(.): error in running command
 #> Warning in system(cmd): error in running command
 #> Warning in file.remove(files): cannot remove file
-#> '/tmp/Rtmp5BDjam/chord-1-be1f4c752f49.wav', reason 'No such
+#> '/tmp/RtmpxGTj6E/chord-1-1e2a59c4914a.wav', reason 'No such
 #> file or directory'
 #> Warning in file.remove(files): cannot remove file
-#> '/tmp/Rtmp5BDjam/chord-2-be1f60862da9.wav', reason 'No such
+#> '/tmp/RtmpxGTj6E/chord-2-1e2a3df155d9.wav', reason 'No such
 #> file or directory'
 #> Warning in file.remove(files): cannot remove file
-#> '/tmp/Rtmp5BDjam/chord-3-be1f720d7540.wav', reason 'No such
+#> '/tmp/RtmpxGTj6E/chord-3-1e2a173fe821.wav', reason 'No such
 #> file or directory'
 #> Warning in file.remove(files): cannot remove file
-#> '/tmp/Rtmp5BDjam/chord-4-be1f2625cbb9.wav', reason 'No such
+#> '/tmp/RtmpxGTj6E/chord-4-1e2a29c95223.wav', reason 'No such
 #> file or directory'
 #> Warning in file.remove(files): cannot remove file
-#> '/tmp/Rtmp5BDjam/chord-5-be1f67a885fb.wav', reason 'No such
+#> '/tmp/RtmpxGTj6E/chord-5-1e2a6e773c2a.wav', reason 'No such
 #> file or directory'
 #> Warning in file.remove(files): cannot remove file
-#> '/tmp/Rtmp5BDjam/chord-6-be1f4df803f7.wav', reason 'No such
+#> '/tmp/RtmpxGTj6E/chord-6-1e2a230f58a2.wav', reason 'No such
 #> file or directory'
 #> Warning in file.remove(files): cannot remove file
-#> '/tmp/Rtmp5BDjam/chord-7-be1faccb420.wav', reason 'No such
+#> '/tmp/RtmpxGTj6E/chord-7-1e2a19907dd6.wav', reason 'No such
 #> file or directory'
 ```
 
@@ -221,25 +221,25 @@ However, I could equally well play the same melody starting on a different frequ
 #> Warning in system(.): error in running command
 #> Warning in system(cmd): error in running command
 #> Warning in file.remove(files): cannot remove file
-#> '/tmp/Rtmp5BDjam/chord-1-be1f6f557dab.wav', reason 'No such
+#> '/tmp/RtmpxGTj6E/chord-1-1e2ac9547fc.wav', reason 'No such
 #> file or directory'
 #> Warning in file.remove(files): cannot remove file
-#> '/tmp/Rtmp5BDjam/chord-2-be1f5a051fac.wav', reason 'No such
+#> '/tmp/RtmpxGTj6E/chord-2-1e2a1d1817f5.wav', reason 'No such
 #> file or directory'
 #> Warning in file.remove(files): cannot remove file
-#> '/tmp/Rtmp5BDjam/chord-3-be1f776f7109.wav', reason 'No such
+#> '/tmp/RtmpxGTj6E/chord-3-1e2a43045285.wav', reason 'No such
 #> file or directory'
 #> Warning in file.remove(files): cannot remove file
-#> '/tmp/Rtmp5BDjam/chord-4-be1f4d65eb09.wav', reason 'No such
+#> '/tmp/RtmpxGTj6E/chord-4-1e2a99c33f6.wav', reason 'No such
 #> file or directory'
 #> Warning in file.remove(files): cannot remove file
-#> '/tmp/Rtmp5BDjam/chord-5-be1f5b9caed2.wav', reason 'No such
+#> '/tmp/RtmpxGTj6E/chord-5-1e2a4f1f3315.wav', reason 'No such
 #> file or directory'
 #> Warning in file.remove(files): cannot remove file
-#> '/tmp/Rtmp5BDjam/chord-6-be1f6de6364.wav', reason 'No such
+#> '/tmp/RtmpxGTj6E/chord-6-1e2a6939db93.wav', reason 'No such
 #> file or directory'
 #> Warning in file.remove(files): cannot remove file
-#> '/tmp/Rtmp5BDjam/chord-7-be1f90ee40.wav', reason 'No such
+#> '/tmp/RtmpxGTj6E/chord-7-1e2a6ac0fe5.wav', reason 'No such
 #> file or directory'
 ```
 

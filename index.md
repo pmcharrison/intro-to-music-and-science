@@ -1,5 +1,5 @@
 ---
-title: "Music and Science"
+title: "Introduction to Music and Science"
 author: "Peter M. C. Harrison"
 date: "2026-01-22"
 site: bookdown::bookdown_site
