@@ -19,7 +19,7 @@ jobs:
           r-version: '4.3.2' # The R version to download (if necessary) and use.
       - uses: r-lib/actions/setup-pandoc@v1
       - name: Cache packages
-        uses: actions/cache@v1
+        uses: actions/cache@v4
         with:
           path: ${{ env.RENV_PATHS_ROOT }}
           key: ${{ runner.os }}-renv-${{ hashFiles('**/renv.lock') }}
