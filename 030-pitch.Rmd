@@ -253,14 +253,14 @@ cat("> ", print_freq_seq(old_mcd_440))
 
 ```{r}
 embed_melody <- function(freq, path) {
-  freq %>% 
-      map(~ hrep::fr_chord(c(., . * 2))) %>% 
-      hrep::vec("fr_chord") %>% 
+  freq %>%
+      map(~ hrep::fr_chord(c(., . * 2))) %>%
+      hrep::vec("fr_chord") %>%
       hrep::save_wav_sox(
-        file = path, 
-        timbre = "sine", 
-        chord_length = 0.5, 
-        spectrum_gain = -3, 
+        file = path,
+        timbre = "sine",
+        chord_length = 0.5,
+        spectrum_gain = -3,
         volume = 0.5
       )
   embed_audio(
@@ -295,7 +295,7 @@ One option is that listeners represent the melodies as intervals between success
 
 Alternatively, listeners might represent the intervals as intervals from the tonic, which here would be the first note of the melody, giving us something like this:
 
-> Unison; Unison; Perfect fourth below; Minor third below; Minor third below; Perfect fourth below
+> Unison; Unison; Unison; Perfect fourth below; Minor third below; Minor third below; Perfect fourth below
 
 It is not entirely clear yet what exact cognitive representation listeners use; the real answer seems to be complex and task-dependent [see e.g. @dowling1978]. Nonetheless, it seems fair to say that some kind of intervallic representation must be involved, at least for Western listeners.
 
@@ -324,7 +324,7 @@ This formula works as follows: we are counting the number of semitones between o
 We can equivalently derive an inverse formula for computing the MIDI pitch for a given frequency:
 
 $$
-\textrm{MIDI pitch} = 
+\textrm{MIDI pitch} =
 69 + 12 \log_2 \left( \frac{\textrm{frequency}}{440} \right)
 $$
 
@@ -352,7 +352,7 @@ tibble(
     `MIDI note` == 69 ~ "Concert A",
     TRUE ~ ""
   )
-) %>% 
+) %>%
   knitr::kable(align = "cccc")
 
 ```
