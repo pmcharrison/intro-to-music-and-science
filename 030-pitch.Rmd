@@ -311,7 +311,7 @@ It is useful to have standardised names for each of these notes. It is worth men
 
 ![The octave numbering scheme used by scientific pitch notation. Credit: AlwaysAngry, [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0)](images/piano-octave-numbers.svg)
 
-MIDI pitch notation assigns each note on the piano keyboard a single number, where successive integers correspond to successive semitones. For example, middle C would conventionally be 60, and concert A would be 69 (note that unfortunately there are some places have different conventions here, with middle C for example being given the number 48).
+MIDI pitch notation assigns each note on the piano keyboard a single number, where successive integers correspond to successive semitones. For example, middle C would conventionally be 60, and concert A would be 69.
 
 Historically speaking, different semitones would typically have slightly different sizes. The precise sizes of semitones would depend on the current tuning system. Nowadays, most of Western music uses twelve-tone equal temperament, where each semitone has exactly the same size. Unless otherwise specified, MIDI pitch notation is assumed to operate under this equal-temperament scheme too. This means we can have a simple mathematical formula that converts from MIDI pitch to frequency:
 
