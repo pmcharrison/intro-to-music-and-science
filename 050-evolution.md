@@ -40,12 +40,12 @@ Let's go through a few examples.
 
 The video below shows a well-known dancing cockatoo called Snowball [@patel2009]. Snowball likes to dance to the musical beat, displaying abilities that strongly imply a sophisticated capacity for beat perception. Alongside cockatoos, beat perception abilities have also been demonstrated in budgerigars and sea lions, and there are ongoing research programmes seeking to identify more species capable of beat perception. Importantly, these species seem not to have evolved beat perception in one common evolutionary event; instead, beat perception seems to have convergently evolved multiple times in multiple species, not obviously in the context of music-making.
 
-![(ref:3b339146-4b56-4918-9c97-11f7ffa19c5c)  **Snowball the parrot dancing to music.** Credit: @patel2009](images/1x1.png)
+![(ref:a52dff58-8969-4767-8682-ae4c4ff87db2)  **Snowball the parrot dancing to music.** Credit: @patel2009](images/1x1.png)
 
 <br>
 
 
-(ref:3b339146-4b56-4918-9c97-11f7ffa19c5c) <video controls width=100%> <source src='https://s3-eu-west-1.amazonaws.com/media.pmcharrison.com/music/animals/snowball.mp4' type='video/mp4'> </video>
+(ref:a52dff58-8969-4767-8682-ae4c4ff87db2) <video controls width=100%> <source src='https://s3-eu-west-1.amazonaws.com/media.pmcharrison.com/music/animals/snowball.mp4' type='video/mp4'> </video>
 
 @patel2014 proposed that beat perception abilities come as a consequence of evolving 'vocal-learning' abilities. Vocal learning means learning to produce complex vocal signals from auditory experience and sensory feedback. Vocal-learning abilities are only present in a small range of animal species (parrots, songbirds, hummingbirds, elephants, seals, and bats), and seems to require specialised neural circuitry coupling motor regions to auditory regions. Patel and Iversen's hypothesis is that beat perception comes 'for free' as a consequence of developing this neural circuitry. In later work, @Patel2021-vu has nuanced this view, arguing that the human capacity for entrainment was further finessed through selection pressures specific to music (see Section \@ref(what-are-musics-adaptive-functions)). Various scientists are currently trying to explore these hypotheses by investigating whether other vocal learners, for example seals and bats, possess latent beat perception abilities.
 
@@ -119,12 +119,12 @@ A third hypothesis is that music-making evolved as a credible signal [e.g. @Mehr
 
 Along these lines, we might suppose that performing a large-scale piece of collaborative music or dance acts as a credible signal of a group's strength, size, and cooperation ability. A well-known example is the [Maori "Haka" dance](https://www.youtube.com/watch?v=BI851yJUQQw), which is traditionally associated with the battle preparations of Maori warriors, and is often performed by New Zealand sports teams before international matches. Note that, like the social-bonding hypothesis, the credible-signaling hypothesis also provides a reasonable explanation of musical 'groove'.
 
-![(ref:820a729a-7993-4617-8d02-2f48dab397bb)  **A Maori 'Haka' dance.**](images/1x1.png)
+![(ref:faac382f-96b2-495c-bb8c-d0cd7d66f6ba)  **A Maori 'Haka' dance.**](images/1x1.png)
 
 <br>
 
 
-(ref:820a729a-7993-4617-8d02-2f48dab397bb) <iframe width="560" height="315" src="https://www.youtube.com/embed/BI851yJUQQw?start=0" style="display: block; margin-bottom: 25px" title="A Maori 'Haka' dance." frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+(ref:faac382f-96b2-495c-bb8c-d0cd7d66f6ba) <iframe width="560" height="315" src="https://www.youtube.com/embed/BI851yJUQQw?start=0" style="display: block; margin-bottom: 25px" title="A Maori 'Haka' dance." frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 A second potential form of credible signalling concerns parental attention. The idea is that singing to a child is a credible signal that you're paying attention to them, because it's guaranteeing that you're somewhere in close proximity to the child, and you can't be using your voice for other things (such as talking).
 
