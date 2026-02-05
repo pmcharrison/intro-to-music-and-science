@@ -530,9 +530,13 @@ library(tidyverse)
 
 source("plot_theme.R")
 
+chorale_image <- magick::image_read_svg(
+  "expectation/idyom-dynamic-predictions-1.svg"
+)
+
 chorale <- 
   cowplot::ggdraw() +
-  cowplot::draw_image("expectation/idyom-dynamic-predictions-1.svg")
+  cowplot::draw_image(chorale_image)
 
 graph <- 
   read_csv("expectation/idyom-dynamic-predictions.csv", col_types = cols()) |> 
