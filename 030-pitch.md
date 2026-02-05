@@ -4,12 +4,12 @@
 
 In Section \@ref(foundations-of-acoustics) we saw various forms of idealised waves: the sine wave, the sawtooth wave, and the square wave. These waves all differ in shape, but they share a key property: they are all *periodic*. By periodic, we mean that the wave repeats itself at a regular time interval. This periodicity turns out to be integral to pitch perception.
 
-![**An example sine wave.** (ref:bd530ac8-ab86-462c-a080-88de27a6ab7e) ](images/sine-wave-frequency=240.png){width='400px'}
+![**An example sine wave.** (ref:a006751d-3cba-4922-9dfa-f314c6de13a0) ](images/sine-wave-frequency=240.png){width='400px'}
 
 <br>
 
 
-(ref:bd530ac8-ab86-462c-a080-88de27a6ab7e)  <audio controls controlsList='nodownload' style='display: block; margin-top: 10px'><source src='audio/tone-frequency=240.wav' type='audio/mpeg'></audio>
+(ref:a006751d-3cba-4922-9dfa-f314c6de13a0)  <audio controls controlsList='nodownload' style='display: block; margin-top: 10px'><source src='audio/tone-frequency=240.wav' type='audio/mpeg'></audio>
 
 We also covered the notion of 'frequency'. Frequency tells us the repetition rate of a periodic waveform, and is expressed in units of Hz. A frequency of 5 Hz means that the waveform repeats at a rate of 5 times per second.
 
