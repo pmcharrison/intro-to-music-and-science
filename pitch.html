@@ -279,7 +279,7 @@
 </blockquote>
 <p>Alternatively, listeners might represent the intervals as intervals from the tonic, which here would be the first note of the melody, giving us something like this:</p>
 <blockquote>
-<p>Unison; Unison; Perfect fourth below; Minor third below; Minor third below; Perfect fourth below</p>
+<p>Unison; Unison; Unison; Perfect fourth below; Minor third below; Minor third below; Perfect fourth below</p>
 </blockquote>
 <p>It is not entirely clear yet what exact cognitive representation listeners use; the real answer seems to be complex and task-dependent <span class="citation">(see e.g. Dowling, <a href="#ref-dowling1978" role="doc-biblioref">1978</a><a href="#ref-dowling1978" role="doc-biblioref">a</a>)</span>. Nonetheless, it seems fair to say that some kind of intervallic representation must be involved, at least for Western listeners.</p>
 </div>
@@ -296,7 +296,7 @@
 <div class="figure">
 <img src="images/piano-octave-numbers.svg" alt=""><p class="caption">The octave numbering scheme used by scientific pitch notation. Credit: AlwaysAngry, <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a></p>
 </div>
-<p>MIDI pitch notation assigns each note on the piano keyboard a single number, where successive integers correspond to successive semitones. For example, middle C would conventionally be 60, and concert A would be 69 (note that unfortunately there are some places have different conventions here, with middle C for example being given the number 48).</p>
+<p>MIDI pitch notation assigns each note on the piano keyboard a single number, where successive integers correspond to successive semitones. For example, middle C would conventionally be 60, and concert A would be 69.</p>
 <p>Historically speaking, different semitones would typically have slightly different sizes. The precise sizes of semitones would depend on the current tuning system. Nowadays, most of Western music uses twelve-tone equal temperament, where each semitone has exactly the same size. Unless otherwise specified, MIDI pitch notation is assumed to operate under this equal-temperament scheme too. This means we can have a simple mathematical formula that converts from MIDI pitch to frequency:</p>
 <p><span class="math display">\[
 \textrm{frequency} = 440 \times 2 ^ {(\textrm{MIDI} - 69) / 12}
@@ -304,7 +304,7 @@
 <p>This formula works as follows: we are counting the number of semitones between our MIDI pitch and concert A, we’re dividing this by 12 to get the number of octaves, we’re expressing this as a power of 2 to get the frequency ratio, and we’re multiplying it by 440 (the frequency of concert A) to get the absolute frequency.</p>
 <p>We can equivalently derive an inverse formula for computing the MIDI pitch for a given frequency:</p>
 <p><span class="math display">\[
-\textrm{MIDI pitch} = 
+\textrm{MIDI pitch} =
 69 + 12 \log_2 \left( \frac{\textrm{frequency}}{440} \right)
 \]</span></p>
 <p>The following table illustrates these different notation systems for two octaves either side of middle C:</p>
@@ -599,7 +599,7 @@
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Introduction to Music and Science</strong>" was written by Peter M. C. Harrison. It was last built on 2026-01-28.</p>
+    <p>"<strong>Introduction to Music and Science</strong>" was written by Peter M. C. Harrison. It was last built on 2026-02-05.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

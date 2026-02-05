@@ -1,7 +1,7 @@
 ---
 title: "Introduction to Music and Science"
 author: "Peter M. C. Harrison"
-date: "2026-01-28"
+date: "2026-02-05"
 site: bookdown::bookdown_site
 documentclass: book
 bibliography: [book.bib, paperpile.bib, packages.bib]

@@ -4,12 +4,12 @@
 
 In Section \@ref(foundations-of-acoustics) we saw various forms of idealised waves: the sine wave, the sawtooth wave, and the square wave. These waves all differ in shape, but they share a key property: they are all *periodic*. By periodic, we mean that the wave repeats itself at a regular time interval. This periodicity turns out to be integral to pitch perception.
 
-![**An example sine wave.** (ref:368f74d6-aa8f-4ff7-b338-9be070789b65) ](images/sine-wave-frequency=240.png){width='400px'}
+![**An example sine wave.** (ref:bd530ac8-ab86-462c-a080-88de27a6ab7e) ](images/sine-wave-frequency=240.png){width='400px'}
 
 <br>
 
 
-(ref:368f74d6-aa8f-4ff7-b338-9be070789b65)  <audio controls controlsList='nodownload' style='display: block; margin-top: 10px'><source src='audio/tone-frequency=240.wav' type='audio/mpeg'></audio>
+(ref:bd530ac8-ab86-462c-a080-88de27a6ab7e)  <audio controls controlsList='nodownload' style='display: block; margin-top: 10px'><source src='audio/tone-frequency=240.wav' type='audio/mpeg'></audio>
 
 We also covered the notion of 'frequency'. Frequency tells us the repetition rate of a periodic waveform, and is expressed in units of Hz. A frequency of 5 Hz means that the waveform repeats at a rate of 5 times per second.
 
@@ -177,7 +177,7 @@ One option is that listeners represent the melodies as intervals between success
 
 Alternatively, listeners might represent the intervals as intervals from the tonic, which here would be the first note of the melody, giving us something like this:
 
-> Unison; Unison; Perfect fourth below; Minor third below; Minor third below; Perfect fourth below
+> Unison; Unison; Unison; Perfect fourth below; Minor third below; Minor third below; Perfect fourth below
 
 It is not entirely clear yet what exact cognitive representation listeners use; the real answer seems to be complex and task-dependent [see e.g. @dowling1978]. Nonetheless, it seems fair to say that some kind of intervallic representation must be involved, at least for Western listeners.
 
@@ -193,7 +193,7 @@ It is useful to have standardised names for each of these notes. It is worth men
 
 ![The octave numbering scheme used by scientific pitch notation. Credit: AlwaysAngry, [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0)](images/piano-octave-numbers.svg)
 
-MIDI pitch notation assigns each note on the piano keyboard a single number, where successive integers correspond to successive semitones. For example, middle C would conventionally be 60, and concert A would be 69 (note that unfortunately there are some places have different conventions here, with middle C for example being given the number 48).
+MIDI pitch notation assigns each note on the piano keyboard a single number, where successive integers correspond to successive semitones. For example, middle C would conventionally be 60, and concert A would be 69.
 
 Historically speaking, different semitones would typically have slightly different sizes. The precise sizes of semitones would depend on the current tuning system. Nowadays, most of Western music uses twelve-tone equal temperament, where each semitone has exactly the same size. Unless otherwise specified, MIDI pitch notation is assumed to operate under this equal-temperament scheme too. This means we can have a simple mathematical formula that converts from MIDI pitch to frequency:
 
@@ -206,7 +206,7 @@ This formula works as follows: we are counting the number of semitones between o
 We can equivalently derive an inverse formula for computing the MIDI pitch for a given frequency:
 
 $$
-\textrm{MIDI pitch} = 
+\textrm{MIDI pitch} =
 69 + 12 \log_2 \left( \frac{\textrm{frequency}}{440} \right)
 $$
 
