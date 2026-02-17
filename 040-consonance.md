@@ -16,7 +16,7 @@ Having operationalised consonance as perceived pleasantness, we can then do expe
 
 If we do this for all dyads between 0 and 15 semitones, we get a graph like the following:
 
-![Data from Marjieh, Harrison, Lee, Deligiannaki, & Jacoby. (in preparation), collected from behavioural experiments with US participants. Shaded regions correspond to +/- 1 standard error, computed over trials after normalising within participants.](images/consonance-profile.png){width="100%"}
+![Data from @Marjieh2024-os, collected from behavioural experiments with US participants. Shaded regions correspond to +/- 1 standard error, computed over trials after normalising within participants.](images/consonance-profile.png){width="100%"}
 
 Here we have intervals in semitones plotted on the horizontal axis, and aggregated consonance ratings plotted on the vertical axis. We see lots of peaks at integer values of semitones, showing us that dyads are most consonant (to Westerners) when they correspond to intervals from the Western 12-tone scale. Within this 12-tone scale, we still see lots of variation, though. For example, we see a big peak at 7 semitones, corresponding to the perfect fifth, in contrast to a minimal peak at 6 semitones (the tritone). Our challenge is then to explain these peaks and valleys, both in the context of simple dyads and in the context of more complex three- and four-note chords.
 
@@ -42,21 +42,21 @@ Harmonicity is something that we observe by looking at the sound's frequency-dom
 
 Certain musical chords share these properties of harmonicity and periodicity. Take the perfect fifth, for example. The perfect fifth is built from approximately a 3:2 frequency ratio, and hence several of the harmonics in each tone overlap with one another. Moreover, it turns out that the partials in the resulting spectrum all end up being multiples of a common fundamental frequency, corresponding to one octave below the lowest tone. So, we can say that the perfect fifth exhibits high harmonicity. The claim is then that the high harmonicity and periodicity of the perfect fifth is what makes it pleasant, or consonant.
 
-![**The harmonicity and periodicity of the perfect fifth.** (ref:0ea4b520-cef8-4434-b5a0-1819c0e4a08c) ](images/consonance-perfect-fifth.png){width='100%'}
+![**The harmonicity and periodicity of the perfect fifth.** (ref:70e4892e-84b8-41f6-b0b3-80889b770e18) ](images/consonance-perfect-fifth.png){width='100%'}
 
 <br>
 
 
-(ref:0ea4b520-cef8-4434-b5a0-1819c0e4a08c)  <audio controls controlsList='nodownload' style='display: block; margin-top: 10px'><source src='audio/perfect-fifth.wav' type='audio/mpeg'></audio>
+(ref:70e4892e-84b8-41f6-b0b3-80889b770e18)  <audio controls controlsList='nodownload' style='display: block; margin-top: 10px'><source src='audio/perfect-fifth.wav' type='audio/mpeg'></audio>
 
 In contrast, the tritone behaves in an opposite way to the perfect fifth. Its spectrum does not relate clearly to any harmonic template, and its waveform is not periodic in any clear way.
 
-![**The low harmonicity and limited periodicity of the tritone.** (ref:7bee7afb-201a-4c4e-b675-8e6d35aeeeaa) ](images/consonance-tritone.png){width='100%'}
+![**The low harmonicity and limited periodicity of the tritone.** (ref:69c31bcb-50cf-48b9-89cb-d80e78f28bbf) ](images/consonance-tritone.png){width='100%'}
 
 <br>
 
 
-(ref:7bee7afb-201a-4c4e-b675-8e6d35aeeeaa)  <audio controls controlsList='nodownload' style='display: block; margin-top: 10px'><source src='audio/tritone.wav' type='audio/mpeg'></audio>
+(ref:69c31bcb-50cf-48b9-89cb-d80e78f28bbf)  <audio controls controlsList='nodownload' style='display: block; margin-top: 10px'><source src='audio/tritone.wav' type='audio/mpeg'></audio>
 
 There are various suggestions as to why humans might consider harmonicity and periodicity to be pleasant. One is that humans like harmonicity because harmonic sounds correspond to a simpler, easier to process auditory environment. Another suggestion is that humans like harmonicity because harmonicity is associated with vocalisations, and vocalisations are important features of the environment to pay attention to. A third suggestion is that humans don't have any innate preferences for harmonicity, but learn such preferences through cultural exposure.
 
@@ -70,12 +70,12 @@ Interference theories of consonance claim that consonance comes from the absence
 
 **Beating.** When you add two sine waves together, both of similar frequencies, it turns out that the resulting waveform ends up oscillating in amplitude in what is called a 'beating' effect. The frequency of this amplitude oscillation corresponds to the difference in frequency between the two sine waves. At certain frequencies, typically between about 20 and 30 Hz, this beating tends to feel unpleasant, causing a perceptual sensation that we term 'roughness'.
 
-![**Beating resulting from combining pure tones of 400 Hz and 430 Hz.** (ref:b93bb3ce-dcf2-4727-9d8f-ba4cad48236e) ](images/consonance-beating.png){width='100%'}
+![**Beating resulting from combining pure tones of 400 Hz and 430 Hz.** (ref:07ff7d3d-6895-4072-8287-bf6e9b45c5ec) ](images/consonance-beating.png){width='100%'}
 
 <br>
 
 
-(ref:b93bb3ce-dcf2-4727-9d8f-ba4cad48236e)  <audio controls controlsList='nodownload' style='display: block; margin-top: 10px'><source src='audio/beating-400-430.wav' type='audio/mpeg'></audio>
+(ref:07ff7d3d-6895-4072-8287-bf6e9b45c5ec)  <audio controls controlsList='nodownload' style='display: block; margin-top: 10px'><source src='audio/beating-400-430.wav' type='audio/mpeg'></audio>
 
 **Masking.** Masking concerns the auditory system's ability to resolve, or 'hear out', different partials in the acoustic spectrum. When partials are well-separated, they are easy to distinguish, because they stimulate distinct parts of the basilar membrane. However, when partials are close together, they end up stimulating overlapping regions, which makes them hard to distinguish, and causes what is known as 'masking'. It is thought that this masking effect might feel unpleasant, because it reflects an auditory environment that is hard to process accurately.
 
@@ -106,7 +106,7 @@ It's worth pointing out now that periodicity, harmonicity, and interference theo
 
 We can visualise this common property of the theories by operationalising each theory as a computational model, and plotting its predictions for different dyadic intervals. Here I've plotted the Hutchinson-Knopoff interference model in red [@hutchinson1978] and a periodicity model in blue (derived from the Praat sound analysis toolbox), for comparison against empirical pleasantness ratings from participants. In addition, I've placed yellow lines corresponding to the simplest integer frequency ratios: 5:4, which is the major third, 4:3, which is the perfect fourth, 3:2, which is the perfect fifth, and 2:1, which is the octave. We can see that both models successfully predict the consonance of these intervals. See Section \@ref(the-hutchinson-knopoff-dissonance-algorithm) for a more in-depth exposition of the Hutchinson-Knopoff algorithm.
 
-![Data from Marjieh, Harrison, Lee, Deligiannaki, & Jacoby. (in preparation)](images/consonance-modelling.png){width="100%"}
+![Data from @Marjieh2024-os](images/consonance-modelling.png){width="100%"}
 
 ### Cultural familiarity
 
@@ -142,12 +142,12 @@ In the last few years a research group from MIT has performed a series of studie
 
 Moreover, one can find several musical cultures across the world that seem to actively promote the kinds of pitch intervals that Westerners would consider to be dissonant. It doesn't seem like these musicians are insensitive to the particular aesthetic effect of these intervals, like it seemed for the Tsimane' people; instead, it seems like the particular acoustic effects of these intervals are being intrinsically valued in these musical styles. There are not many formal psychological studies of people from these cultures, but music recordings from these cultures are very suggestive. Here's one such recording of a group of Bosnian Ganga singers:
 
-![(ref:b1749f0e-14f9-41f3-b8f2-21ca5dab9377)  **A performance by a group of Bosnian Ganga singers.** Credit: Pantelis N. Vassilakis, http://acousticslab.org/RECA220/](images/1x1.png)
+![(ref:373d7e07-5b24-4d5b-87c0-f919ac6a3cbd)  **A performance by a group of Bosnian Ganga singers.** Credit: Pantelis N. Vassilakis, http://acousticslab.org/RECA220/](images/1x1.png)
 
 <br>
 
 
-(ref:b1749f0e-14f9-41f3-b8f2-21ca5dab9377) <video controls width=100%> <source src='images/GangaLive.mp4' type='video/mp4'> </video>
+(ref:373d7e07-5b24-4d5b-87c0-f919ac6a3cbd) <video controls width=100%> <source src='images/GangaLive.mp4' type='video/mp4'> </video>
 
 ### Individual differences in consonance perception
 
@@ -169,7 +169,7 @@ Below we have a normal harmonic spectrum, where the octave corresponds to a 2.1 
 
 It turns out that, when we stretch the tone spectra in this way, the consonance profiles also stretch. In the below figure, we see that the peaks in the pleasantness ratings (top) no longer correspond to the simple integer ratios, but rather correspond to stretched versions of these integer ratios. This phenomenon is predicted by the interference model (in red), but is not predicted by the periodicity/harmonicity model (blue). This provides strong evidence that interference between partials does contribute in some way to consonance.
 
-![Data from Marjieh, Harrison, Lee, Deligiannaki, & Jacoby. (in preparation)](images/consonance-stretched-consonance-profiles.png){width="100%"}
+![Data from @Marjieh2024-os](images/consonance-stretched-consonance-profiles.png){width="100%"}
 
 Bill Sethares has produced a compelling musical illustration of this phenomenon. First, we hear a simple musical extract played with harmonic complex tones in the conventional 12-tone scale. It sounds consonant, as we might expect ([listen here](https://s3-eu-west-1.amazonaws.com/media.pmcharrison.com/music/sethares/simptun1.mp3)). Next, we play the same extract but on a stretched scale, where the octave corresponds to a 2.1 frequency ratio ([listen here](https://s3-eu-west-1.amazonaws.com/media.pmcharrison.com/music/sethares/simptun2.mp3)). The extract now sounds very dissonant, because the harmonics don't align with the musical scale. Finally, we stretch the tone spectra to match the stretched scale ([listen here](https://s3-eu-west-1.amazonaws.com/media.pmcharrison.com/music/sethares/simptun3.mp3)). As predicted by the interference theories, the music becomes consonant again.
 
