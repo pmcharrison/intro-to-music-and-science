@@ -200,7 +200,7 @@ The authors also performed an analogous set of experiments using minor context s
 embed_image(
   image = "expectation/krumhansl-kessler-minor.svg",
   width = "70%",
-  title = "Major-key tone profile derived by @krumhansl1982."
+  title = "Minor-key tone profile derived by @krumhansl1982."
 )
 ```
 
