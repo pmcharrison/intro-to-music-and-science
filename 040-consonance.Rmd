@@ -22,7 +22,7 @@ Having operationalised consonance as perceived pleasantness, we can then do expe
 
 If we do this for all dyads between 0 and 15 semitones, we get a graph like the following:
 
-![Data from Marjieh, Harrison, Lee, Deligiannaki, & Jacoby. (in preparation), collected from behavioural experiments with US participants. Shaded regions correspond to +/- 1 standard error, computed over trials after normalising within participants.](images/consonance-profile.png){width="100%"}
+![Data from @Marjieh2024-os, collected from behavioural experiments with US participants. Shaded regions correspond to +/- 1 standard error, computed over trials after normalising within participants.](images/consonance-profile.png){width="100%"}
 
 Here we have intervals in semitones plotted on the horizontal axis, and aggregated consonance ratings plotted on the vertical axis. We see lots of peaks at integer values of semitones, showing us that dyads are most consonant (to Westerners) when they correspond to intervals from the Western 12-tone scale. Within this 12-tone scale, we still see lots of variation, though. For example, we see a big peak at 7 semitones, corresponding to the perfect fifth, in contrast to a minimal peak at 6 semitones (the tritone). Our challenge is then to explain these peaks and valleys, both in the context of simple dyads and in the context of more complex three- and four-note chords.
 
@@ -118,7 +118,7 @@ It's worth pointing out now that periodicity, harmonicity, and interference theo
 
 We can visualise this common property of the theories by operationalising each theory as a computational model, and plotting its predictions for different dyadic intervals. Here I've plotted the Hutchinson-Knopoff interference model in red [@hutchinson1978] and a periodicity model in blue (derived from the Praat sound analysis toolbox), for comparison against empirical pleasantness ratings from participants. In addition, I've placed yellow lines corresponding to the simplest integer frequency ratios: 5:4, which is the major third, 4:3, which is the perfect fourth, 3:2, which is the perfect fifth, and 2:1, which is the octave. We can see that both models successfully predict the consonance of these intervals. See Section \@ref(the-hutchinson-knopoff-dissonance-algorithm) for a more in-depth exposition of the Hutchinson-Knopoff algorithm.
 
-![Data from Marjieh, Harrison, Lee, Deligiannaki, & Jacoby. (in preparation)](images/consonance-modelling.png){width="100%"}
+![Data from @Marjieh2024-os](images/consonance-modelling.png){width="100%"}
 
 ### Cultural familiarity
 
@@ -184,7 +184,7 @@ Below we have a normal harmonic spectrum, where the octave corresponds to a 2.1 
 
 It turns out that, when we stretch the tone spectra in this way, the consonance profiles also stretch. In the below figure, we see that the peaks in the pleasantness ratings (top) no longer correspond to the simple integer ratios, but rather correspond to stretched versions of these integer ratios. This phenomenon is predicted by the interference model (in red), but is not predicted by the periodicity/harmonicity model (blue). This provides strong evidence that interference between partials does contribute in some way to consonance.
 
-![Data from Marjieh, Harrison, Lee, Deligiannaki, & Jacoby. (in preparation)](images/consonance-stretched-consonance-profiles.png){width="100%"}
+![Data from @Marjieh2024-os](images/consonance-stretched-consonance-profiles.png){width="100%"}
 
 Bill Sethares has produced a compelling musical illustration of this phenomenon. First, we hear a simple musical extract played with harmonic complex tones in the conventional 12-tone scale. It sounds consonant, as we might expect ([listen here](https://s3-eu-west-1.amazonaws.com/media.pmcharrison.com/music/sethares/simptun1.mp3)). Next, we play the same extract but on a stretched scale, where the octave corresponds to a 2.1 frequency ratio ([listen here](https://s3-eu-west-1.amazonaws.com/media.pmcharrison.com/music/sethares/simptun2.mp3)). The extract now sounds very dissonant, because the harmonics don't align with the musical scale. Finally, we stretch the tone spectra to match the stretched scale ([listen here](https://s3-eu-west-1.amazonaws.com/media.pmcharrison.com/music/sethares/simptun3.mp3)). As predicted by the interference theories, the music becomes consonant again.
 
