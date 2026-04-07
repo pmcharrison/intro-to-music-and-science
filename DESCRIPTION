@@ -4,8 +4,8 @@ Title: Intro to music and science book project
 Version: 0.0.0.9000
 Description: Dependency manifest for rendering the Intro to Music and Science
     bookdown project.
-Authors@R: person("Project", "Maintainers", email = "noreply@example.com", role = c("aut", "cre"))
-License: GPL-3
+Authors@R: person("Peter", "Harrison", email = "pmch2@cam.ac.uk", role = c("aut", "cre"))
+License: CC BY-NC-SA 4.0
 Encoding: UTF-8
 Depends:
     R (>= 4.3.2)
