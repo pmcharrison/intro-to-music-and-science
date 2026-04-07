@@ -17,7 +17,7 @@ In the following we will consider the task of summarising the `distance` variabl
 
 Here is a histogram illustrating the variable's distribution (see Chapter \@ref(data-visualisation) for an introduction to histograms):
 
-<img src="148-quantitative-v-descriptive_files/figure-html/unnamed-chunk-3-1.png" width="100%" />
+<img src="148-quantitative-v-descriptive_files/figure-html/unnamed-chunk-3-1.png" alt="" width="100%" />
 
 We will now consider various descriptive statistics that can be computed for this variable.
 
@@ -43,12 +43,12 @@ $$
 
 Let's compute the mean of our larger dataset and plot it on our histogram.
 
-<img src="148-quantitative-v-descriptive_files/figure-html/unnamed-chunk-4-1.png" width="100%" />
+<img src="148-quantitative-v-descriptive_files/figure-html/unnamed-chunk-4-1.png" alt="" width="100%" />
 
 We can compute the mean in R with code like the following:
 
 
-```r
+``` r
 x <- c(5, 3, 2, 4, 3)
 mean(x)
 #> [1] 3.4
@@ -80,14 +80,14 @@ If we have an odd number of values, there will be exactly one number in the midd
 
 Let's add the median to our histogram:
 
-<img src="148-quantitative-v-descriptive_files/figure-html/unnamed-chunk-6-1.png" width="100%" />
+<img src="148-quantitative-v-descriptive_files/figure-html/unnamed-chunk-6-1.png" alt="" width="100%" />
 
 In this example the median is significantly smaller than the median. This is commonly the case with *skewed* distributions. Skewed distributions can often be found in socioeconomic studies; for example, income distributions tend to have the majority of incomes bunched towards the bottom of the distribution, contrasting with a smaller number of much higher incomes towards the top of the distribution. This yields the paradoxical situation that the 'average' person earns less than the average income.
 
 We can compute the median in R with code like the following:
 
 
-```r
+``` r
 x <- c(5, 3, 2, 4, 3)
 median(x)
 #> [1] 3
@@ -106,7 +106,7 @@ The *mode* is only properly defined for variables that can only take a finite nu
 
 We can plot the counts of each number in a bar plot:
 
-<img src="148-quantitative-v-descriptive_files/figure-html/unnamed-chunk-9-1.png" width="100%" />
+<img src="148-quantitative-v-descriptive_files/figure-html/unnamed-chunk-9-1.png" alt="" width="100%" />
 
 The mode then corresponds to the highest bar, 1.
 
@@ -133,7 +133,7 @@ The range is often described as an unreliable statistic because it is highly sen
 The standard deviation can be informally understood as the average distance of each observation from the mean. We can compute it in R using code like the following:
 
 
-```r
+``` r
 x <- c(5, 3, 2, 4, 3)
 sd(x)
 #> [1] 1.140175
@@ -160,7 +160,7 @@ If you are unfamiliar with this kind of mathematical notation, you may wish to h
 The interquartile range is another measure of spread. It is based on the concept of *percentiles*. The *x*-th percentile of a given dataset is the value below which *x*% of the sample falls. For example, the 25th percentile is the value below which 25% of the sample falls. We can compute percentiles in R with code like the following:
 
 
-```r
+``` r
 x <- c(3, 6, 4, 3, 2, 2, 2, 3, 5, 6, 4, 5, 4, 3, 2, 5)
 quantile(x, probs = c(0.25, 0.5, 0.75))
 #>  25%  50%  75% 
@@ -169,14 +169,14 @@ quantile(x, probs = c(0.25, 0.5, 0.75))
 
 The interquartile range is based on the 25th and 75th percentile:
 
-<img src="148-quantitative-v-descriptive_files/figure-html/unnamed-chunk-12-1.png" width="100%" />
+<img src="148-quantitative-v-descriptive_files/figure-html/unnamed-chunk-12-1.png" alt="" width="100%" />
 
 We compute the interquartile range as the difference between the 25th percentile and the 75th percentile. In this case, the interquartile range would be 290.4108358.
 
 In R, we can compute the interquartile range using the `IQR` function:
 
 
-```r
+``` r
 x <- c(3, 6, 4, 3, 2, 2, 2, 3, 5, 6, 4, 5, 4, 3, 2, 5)
 IQR(x)
 #> [1] 2.25
@@ -192,34 +192,34 @@ In most practical contexts we tend to report the standard deviation. It is often
 
 Often we want to understand how certain pairs of variables relate to each other. In Chapter \@ref(data-visualisation) we learned various techniques for plotting such relationships. For example, we saw that pairs of continuous variables can be visualised using a scatter plot:
 
-<img src="148-quantitative-v-descriptive_files/figure-html/unnamed-chunk-14-1.png" width="100%" />
+<img src="148-quantitative-v-descriptive_files/figure-html/unnamed-chunk-14-1.png" alt="" width="100%" />
 
 A key descriptive statistic in this context (two continuous variables) is the *correlation coefficient*. The correlation coefficient is a way of quantifying the strength of the relationship between two variables.
 
 A correlation of 1 means a perfect positive correlation, where the relationship between the two variables is perfectly summarised by a straight line with a positive (i.e. ascending) gradient:
 
-<img src="148-quantitative-v-descriptive_files/figure-html/unnamed-chunk-15-1.png" width="100%" />
+<img src="148-quantitative-v-descriptive_files/figure-html/unnamed-chunk-15-1.png" alt="" width="100%" />
 
 A correlation of -1 also means that the relationship is perfectly summarised by a straight line, but one with negative gradient:
 
-<img src="148-quantitative-v-descriptive_files/figure-html/unnamed-chunk-16-1.png" width="100%" />
+<img src="148-quantitative-v-descriptive_files/figure-html/unnamed-chunk-16-1.png" alt="" width="100%" />
 
 These cases may be contrasted with a correlation of 0, which corresponds to the absence of a relationship:
 
-<img src="148-quantitative-v-descriptive_files/figure-html/unnamed-chunk-17-1.png" width="100%" />
+<img src="148-quantitative-v-descriptive_files/figure-html/unnamed-chunk-17-1.png" alt="" width="100%" />
 
 Intermediate numbers between these values then correspond to noisy relationships. In a noisy relationship, one variable gives some information about the other variable, but not enough to perfectly predict it. Here we have an example of a correlation of 0.7:
 
-<img src="148-quantitative-v-descriptive_files/figure-html/unnamed-chunk-18-1.png" width="100%" />
+<img src="148-quantitative-v-descriptive_files/figure-html/unnamed-chunk-18-1.png" alt="" width="100%" />
 
 Here is a correlation of -0.4:
 
-<img src="148-quantitative-v-descriptive_files/figure-html/unnamed-chunk-19-1.png" width="100%" />
+<img src="148-quantitative-v-descriptive_files/figure-html/unnamed-chunk-19-1.png" alt="" width="100%" />
 
 There are different types of correlation coefficients out there. The most common is the *Pearson correlation coefficient*, which is what we've been plotting just now. This is the default used by most statistical software. In R, you can compute the Pearson correlation coefficient as follows:
 
 
-```r
+``` r
 x <- c(3, 6, 4, 3, 6, 5, 4, 8, 6)
 y <- c(0, 2, 3, 2, 3, 4, 7, 4, 5)
 cor(x, y)
@@ -230,22 +230,22 @@ cor(x, y)
 
 A troublesome thing about the Pearson correlation coefficient is that it is rather sensitive to outliers (i.e. extreme data values). This will be illustrated with an example. Suppose we start with a dataset where the correlation coefficient is 0:
 
-<img src="148-quantitative-v-descriptive_files/figure-html/unnamed-chunk-21-1.png" width="100%" />
+<img src="148-quantitative-v-descriptive_files/figure-html/unnamed-chunk-21-1.png" alt="" width="100%" />
 
 
-```r
+``` r
 cor(x, y)
 #> [1] 0.3015113
 ```
 
 Now let's add one outlier to this dataset, with a large x value and a large y value.
 
-<img src="148-quantitative-v-descriptive_files/figure-html/unnamed-chunk-23-1.png" width="100%" />
+<img src="148-quantitative-v-descriptive_files/figure-html/unnamed-chunk-23-1.png" alt="" width="100%" />
 
 If we compute the correlation between these two variables, we find that it has now increased to a rather large number, despite the fact that the original dataset had no correlation at all:
 
 
-```r
+``` r
 cor(df2$x, df2$y)
 #> [1] 0.6667556
 ```
@@ -253,7 +253,7 @@ cor(df2$x, df2$y)
 There are fortunately other types of correlation coefficient that are *robust* to these kinds of issues. These are called *non-parametric* correlation coefficients (this contrasts with the Pearson coefficient, which is a *parametric* coefficient). Two such coefficients are particularly popular: the *Spearman* and the *Kendall* correlation coefficients. These coefficients both also give numbers between -1 and 1. They are, however, much less sensitive to outliers. Let's see what they return for our dataset:
 
 
-```r
+``` r
 cor(df2$x, df2$y, method = "spearman")
 #> [1] 0.05411765
 
@@ -267,20 +267,20 @@ All else aside, many statisticians prefer the Pearson correlation coefficient be
 
 It is important to note that correlation coefficients only look for *increasing* or *decreasing* relationships. They do not look for more complex shapes. For example, the following curve illustrates a situation where $y$ is perfectly predicted from $x$, yet the correlation coefficient is 0:
 
-<img src="148-quantitative-v-descriptive_files/figure-html/unnamed-chunk-26-1.png" width="100%" />
+<img src="148-quantitative-v-descriptive_files/figure-html/unnamed-chunk-26-1.png" alt="" width="100%" />
 
 
-```r
+``` r
 cor(df$x, df$y) %>% round(3)
 #> [1] 0
 ```
 
 The Pearson correlation coefficient is particularly picky in that it looks specifically for *straight* lines (in statistics lingo: *linear relationships*). So, the following curve has a Pearson correlation coefficient less than 1:
 
-<img src="148-quantitative-v-descriptive_files/figure-html/unnamed-chunk-28-1.png" width="100%" />
+<img src="148-quantitative-v-descriptive_files/figure-html/unnamed-chunk-28-1.png" alt="" width="100%" />
 
 
-```r
+``` r
 cor(df$x, df$y) %>% round(3)
 #> [1] 0.933
 ```
@@ -288,7 +288,7 @@ cor(df$x, df$y) %>% round(3)
 In contrast, the nonparametric correlation coefficients only look for *monotonic* (i.e. always increasing or always decreasing) relationships. This means they return 1 for the above plot.
 
 
-```r
+``` r
 cor(df$x, df$y, method = "spearman") %>% round(3)
 #> [1] 1
 

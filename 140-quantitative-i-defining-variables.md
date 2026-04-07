@@ -14,11 +14,11 @@ Quantitative methods, at their core, are all about characterising two things:
 
 These relationships can be summarised either numerically (e.g. using tables) or graphically (e.g. using plots). For example, we might study how fuel efficiency (measured in miles per gallon) is distributed in a collection of cars:
 
-<img src="140-quantitative-i-defining-variables_files/figure-html/unnamed-chunk-2-1.png" width="672" />
+<img src="140-quantitative-i-defining-variables_files/figure-html/unnamed-chunk-2-1.png" alt="" width="672" />
 
 We might follow that up by studying how fuel efficiency relates to the car engine's horsepower:
 
-<img src="140-quantitative-i-defining-variables_files/figure-html/unnamed-chunk-3-1.png" width="672" />
+<img src="140-quantitative-i-defining-variables_files/figure-html/unnamed-chunk-3-1.png" alt="" width="672" />
 
 It feels very natural to speak about car engines in these numeric constructs such as miles per gallon and horsepower, and to quantify relationships between them using data plots. In contrast, it is less obvious how to construct equivalent numeric constructs for human psychology, where many of the relevant concepts (e.g. personality, attention, consciousness) are hard to define and even harder to measure. This task of defining appropriate variables is one of the key challenges of psychology research, and it's the focus of the present chapter.
 

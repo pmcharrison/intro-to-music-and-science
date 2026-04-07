@@ -11,11 +11,11 @@ Plots can be produced by many different software packages. Most of the plots in 
 This chapter contains various self-contained code examples. For example, the following example plots a histogram:
 
 
-```r
+``` r
 hist(rnorm(50))
 ```
 
-<img src="147-quantitative-iv-visualisation_files/figure-html/unnamed-chunk-2-1.png" width="100%" />
+<img src="147-quantitative-iv-visualisation_files/figure-html/unnamed-chunk-2-1.png" alt="" width="100%" />
 
 To try this code in your own coding environment (be that RStudio or Google Colab), simply press the copy-paste symbol in the top right of the code block, and then paste the code into your coding interface. If you then execute it (usually by pressing Enter or CMD/Ctrl + Enter, depending on your interface), you should replicate the figure from the textbook. Note that some pieces of code may depend on datasets or packages loaded in code blocks further up the page; you will need to copy those code blocks into your interface too in order for your code to work.
 
@@ -38,7 +38,7 @@ The available plot types depend on whether we are plotting a *continuous* variab
 A dataset containing just one categorical variable might look something like this:
 
 
-```r
+``` r
 fave_animals <- tibble(
   "favourite_animal" = sample(
     c("Dogs", "Cats", "Fish"),
@@ -72,7 +72,7 @@ Like most graphs, bar charts have two axes. Each axis is a reference line runnin
 Bar charts will generally have one column for each level of the categorical variable. The height of the column corresponds to the number of occurrences of each level (the 'count'). In this dataset we had 11 cats, so the height of the 'Cats' column is 11.
 
 
-```r
+``` r
 fave_animals %>% 
   ggplot(aes(x = favourite_animal)) + 
   geom_bar() +
@@ -80,7 +80,7 @@ fave_animals %>%
   scale_y_continuous("Count")
 ```
 
-<img src="147-quantitative-iv-visualisation_files/figure-html/unnamed-chunk-5-1.png" width="100%" />
+<img src="147-quantitative-iv-visualisation_files/figure-html/unnamed-chunk-5-1.png" alt="" width="100%" />
 
 #### Pie charts
 
@@ -93,12 +93,12 @@ Pie charts are often seen in business applications, but they have a bad reputati
 Nonetheless, we might as well show how to make one.
 
 
-```r
+``` r
 counts <- table(fave_animals)
 pie(counts)  
 ```
 
-<img src="147-quantitative-iv-visualisation_files/figure-html/unnamed-chunk-6-1.png" width="100%" />
+<img src="147-quantitative-iv-visualisation_files/figure-html/unnamed-chunk-6-1.png" alt="" width="100%" />
 
 
 ### Continuous variables
@@ -106,7 +106,7 @@ pie(counts)
 Let's now consider plotting a single *continuous* variable. A dataset containing a single continuous variable might look like this:
 
 
-```r
+``` r
 tree_heights <- tibble(height = rnorm(30, mean = 15, sd = 7))
 
 tree_heights %>% DT::datatable(
@@ -131,7 +131,7 @@ Five kinds of plots are common for plotting distributions of continuous variable
 A histogram is like a version of a bar plot but for continuous variables. Here's a histogram for our tree height data:
 
 
-```r
+``` r
 tree_heights %>% 
   ggplot(aes(x = height)) + 
   geom_histogram(binwidth = 5, fill = "lightblue", colour = "black") +
@@ -139,14 +139,14 @@ tree_heights %>%
   scale_y_continuous("Count", breaks = seq(from = 0, to = 10, by = 2)) 
 ```
 
-<img src="147-quantitative-iv-visualisation_files/figure-html/unnamed-chunk-8-1.png" width="100%" />
+<img src="147-quantitative-iv-visualisation_files/figure-html/unnamed-chunk-8-1.png" alt="" width="100%" />
 
 We can see that the histogram corresponds to a number of bars. Each bar has an associated count, just like the bar plot. Where do these counts come from? They are produced by first *binning* the continuous variable into categories based on each number's value. In the above example, each bin is 5 m wide; the first bin contains numbers between -2.5 and 2.5, the second bin contains numbers between 2.5 and 7.5, and so on. We then count the number of values that fall into each bin, and use these counts as the bin heights.
 
 The appropriate bin width depends on the amount of the data. Narrow bins give us more precision, but if we don't have enough data, most bins don't get any values, and the histogram fails to visualise the distribution well:
 
 
-```r
+``` r
 tree_heights %>% 
   ggplot(aes(x = height)) + 
   geom_histogram(binwidth = 0.1, fill = "lightblue", colour = "black") +
@@ -154,12 +154,12 @@ tree_heights %>%
   scale_y_continuous("Count", breaks = seq(from = 0, to = 10, by = 2)) 
 ```
 
-<img src="147-quantitative-iv-visualisation_files/figure-html/unnamed-chunk-9-1.png" width="100%" />
+<img src="147-quantitative-iv-visualisation_files/figure-html/unnamed-chunk-9-1.png" alt="" width="100%" />
 
 Likewise, if our bins are too wide, we lose a lot of precision:
 
 
-```r
+``` r
 tree_heights %>% 
   ggplot(aes(x = height)) + 
   geom_histogram(binwidth = 20, fill = "lightblue", colour = "black") +
@@ -167,14 +167,14 @@ tree_heights %>%
   scale_y_continuous("Count") 
 ```
 
-<img src="147-quantitative-iv-visualisation_files/figure-html/unnamed-chunk-10-1.png" width="100%" />
+<img src="147-quantitative-iv-visualisation_files/figure-html/unnamed-chunk-10-1.png" alt="" width="100%" />
 
 #### Kernel density plots
 
 A limitation of the histogram is the way that count values jump at bin boundaries, which suggests a discontinuity to the data that may not actually be present. Kernel density plots address this issue by producing what is in essence a smoothed version of a histogram. A kernel density plot for our tree heights looks like this:
 
 
-```r
+``` r
 tree_heights %>% 
   ggplot(aes(x = height)) + 
   geom_density(fill = "lightblue") +
@@ -182,14 +182,14 @@ tree_heights %>%
   scale_y_continuous("Density")
 ```
 
-<img src="147-quantitative-iv-visualisation_files/figure-html/unnamed-chunk-11-1.png" width="100%" />
+<img src="147-quantitative-iv-visualisation_files/figure-html/unnamed-chunk-11-1.png" alt="" width="100%" />
 
 Now that we no longer have bins, it is no longer meaningful to put counts on the vertical axis. Instead we have 'density'. The idea here is as follows: you get counts by multiplying distances on the horizontal axis by counts on the vertical axis (mathematically, this is formalised as the process called *integration*). So, for example, if the density plot had a density of 2.5 over the range 15-20 m, we would know that there are approximately $2.5 \times (20 - 15) = 12.5$ trees with a height between 15 and 20.
 
 Similar to histograms, it is possible to change the precision of the density estimator, with familiar trade-offs between precision and sparsity. This is achieved by changing the *bandwidth* parameter, which is analogous to the bin width in the histogram. Here is a the same density plot with a small bandwidth parameter:
 
 
-```r
+``` r
 tree_heights %>% 
   ggplot(aes(x = height)) + 
   geom_density(fill = "lightblue", bw = 0.25) +
@@ -197,12 +197,12 @@ tree_heights %>%
   scale_y_continuous("Density")
 ```
 
-<img src="147-quantitative-iv-visualisation_files/figure-html/unnamed-chunk-12-1.png" width="100%" />
+<img src="147-quantitative-iv-visualisation_files/figure-html/unnamed-chunk-12-1.png" alt="" width="100%" />
 
 And the same plot with a high bandwidth parameter:
 
 
-```r
+``` r
 tree_heights %>% 
   ggplot(aes(x = height)) + 
   geom_density(fill = "lightblue", bw = 10) +
@@ -210,14 +210,14 @@ tree_heights %>%
   scale_y_continuous("Density")
 ```
 
-<img src="147-quantitative-iv-visualisation_files/figure-html/unnamed-chunk-13-1.png" width="100%" />
+<img src="147-quantitative-iv-visualisation_files/figure-html/unnamed-chunk-13-1.png" alt="" width="100%" />
 
 #### Dotplots
 
 The definition of density can be quite difficult to understand for naive readers. This problem can be improved by overlaying the density plot with a dotplot. Dotplots illustrate each observation with an explicit 'dot'. This helps the reader understand the relationship between individual observations and the estimated density.
 
 
-```r
+``` r
 tree_heights %>% 
   ggplot(aes(x = height)) + 
   geom_density(fill = "lightblue") +
@@ -226,18 +226,18 @@ tree_heights %>%
   scale_y_continuous("Density", limits = c(0, 0.07)) 
 ```
 
-<img src="147-quantitative-iv-visualisation_files/figure-html/unnamed-chunk-14-1.png" width="100%" />
+<img src="147-quantitative-iv-visualisation_files/figure-html/unnamed-chunk-14-1.png" alt="" width="100%" />
 
 #### Box-and-whisker plots 
 
 Box-and-whisker plots (often abbreviated to 'box plots') are more common in older papers, probably because they are easier to compute and draw by hand. A box plot for tree heights looks like the following:
 
 
-```r
+``` r
 boxplot(tree_heights, ylab = "Height (m)")
 ```
 
-<img src="147-quantitative-iv-visualisation_files/figure-html/unnamed-chunk-15-1.png" width="100%" />
+<img src="147-quantitative-iv-visualisation_files/figure-html/unnamed-chunk-15-1.png" alt="" width="100%" />
 
 The box plot illustrates the data distribution in terms of several basic statistics:
 
@@ -251,14 +251,14 @@ We will discuss these quantities in a subsequent chapter. The important thing fo
 Sometimes you will see boxplots with points lying outside the whiskers:
 
 
-```r
+``` r
 tree_heights$height %>% 
   as.numeric() %>% 
   c(40) %>% 
 boxplot(ylab = "Height (m)")
 ```
 
-<img src="147-quantitative-iv-visualisation_files/figure-html/unnamed-chunk-16-1.png" width="100%" />
+<img src="147-quantitative-iv-visualisation_files/figure-html/unnamed-chunk-16-1.png" alt="" width="100%" />
 
 These points correspond to *outliers*. An outlier is a point that falls far outside the main distribution. If we take the length of the box (which is known mathematically as the *interquartile range*), multiply it by 1.5, and stack it on top and bottom of the box, this gives us the area outside of which points will be classified as outliers.
 
@@ -269,7 +269,7 @@ These points correspond to *outliers*. An outlier is a point that falls far outs
 A dataset with two continuous variables might look something like this:
 
 
-```r
+``` r
 cars <- mtcars %>% select(wt, mpg) %>% as_tibble()
 cars %>% DT::datatable(
     options = list(
@@ -291,34 +291,34 @@ cars %>% DT::datatable(
 The standard way of plotting two continuous variables together is the *scatter plot*. A scatter plot for our car dataset would look something like this:
 
 
-```r
+``` r
 cars %>% 
   ggplot(aes(x = wt, y = mpg)) +
   geom_point()
 ```
 
-<img src="147-quantitative-iv-visualisation_files/figure-html/unnamed-chunk-18-1.png" width="100%" />
+<img src="147-quantitative-iv-visualisation_files/figure-html/unnamed-chunk-18-1.png" alt="" width="100%" />
 
 Here each observation (i.e. each row in the dataset) is represented by a single point. The values of the two variables define the horizontal and vertical positions of these points.
 
 Often these points will demonstrate some kind of systematic trend. We can illustrate this trend to the reader by adding a *trend line*, which will be computed automatically using some statistical procedure like *linear regression* (we'll discuss this in a subsequent chapter).
 
 
-```r
+``` r
 cars %>%
   ggplot(aes(x = wt, y = mpg)) +
   geom_smooth(method = "lm", formula = "y ~ x", se = FALSE) +
   geom_point()
 ```
 
-<img src="147-quantitative-iv-visualisation_files/figure-html/unnamed-chunk-19-1.png" width="100%" />
+<img src="147-quantitative-iv-visualisation_files/figure-html/unnamed-chunk-19-1.png" alt="" width="100%" />
 
 #### Line plots
 
 In some situations it makes sense to connect the points with lines. This often happens when we have time as one of our variables. In this case it is often aesthetically preferable to hide the points and just show the lines. The result is called a *line plot*.
 
 
-```r
+``` r
 temp_over_time <- tibble(
   year = as.numeric(time(nhtemp)),
   temperature = as.numeric(nhtemp)
@@ -340,20 +340,20 @@ temp_over_time %>% DT::datatable(
 
 
 
-```r
+``` r
 temp_over_time %>% 
   ggplot(aes(x = year, y = temperature)) +
   geom_line()
 ```
 
-<img src="147-quantitative-iv-visualisation_files/figure-html/unnamed-chunk-21-1.png" width="100%" />
+<img src="147-quantitative-iv-visualisation_files/figure-html/unnamed-chunk-21-1.png" alt="" width="100%" />
 
 #### Kernel density plot
 
 If we try to plot a scatter plot with a huge number of observations, it'll soon become hard to read. 
 
 
-```r
+``` r
 big_dataset <- tibble(
   x = rnorm(n = 1e4),
   y = x + rnorm(n = 1e4)
@@ -364,20 +364,20 @@ big_dataset %>%
   geom_point()
 ```
 
-<img src="147-quantitative-iv-visualisation_files/figure-html/unnamed-chunk-22-1.png" width="100%" />
+<img src="147-quantitative-iv-visualisation_files/figure-html/unnamed-chunk-22-1.png" alt="" width="100%" />
 
-```r
+``` r
 big_dataset %>% 
   ggplot(aes(x = x, y = y)) + 
   geom_point(alpha = 0.1)
 ```
 
-<img src="147-quantitative-iv-visualisation_files/figure-html/unnamed-chunk-23-1.png" width="100%" />
+<img src="147-quantitative-iv-visualisation_files/figure-html/unnamed-chunk-23-1.png" alt="" width="100%" />
 
 This works quite well. An alternative though is to avoid plotting individual points at all, and instead create a two-dimensional density plot.
 
 
-```r
+``` r
 big_dataset %>% 
   ggplot(aes(x = x, y = y)) + 
   stat_density_2d(
@@ -393,19 +393,19 @@ big_dataset %>%
 #> Warning: The dot-dot notation (`..density..`) was deprecated in
 #> ggplot2 3.4.0.
 #> ℹ Please use `after_stat(density)` instead.
-#> This warning is displayed once every 8 hours.
+#> This warning is displayed once per session.
 #> Call `lifecycle::last_lifecycle_warnings()` to see where
 #> this warning was generated.
 ```
 
-<img src="147-quantitative-iv-visualisation_files/figure-html/unnamed-chunk-24-1.png" width="100%" />
+<img src="147-quantitative-iv-visualisation_files/figure-html/unnamed-chunk-24-1.png" alt="" width="100%" />
 
 ### One categorical variable, one continuous variable
 
 When we plot a categorical variable against a continuous variable, we typically take our techniques from plotting one-dimensional continuous variables, and apply them repeatedly for the different levels of the categorical variable. Consider the following dataset, for example:
 
 
-```r
+``` r
 flower_data <- 
   iris %>% select(species = Species, petal_length = Petal.Length)
 
@@ -428,7 +428,7 @@ flower_data %>%
 We can start by plotting this data using multiple box plots:
 
 
-```r
+``` r
 flower_data %>% 
   ggplot(aes(x = species, y = petal_length, fill = species)) + 
   geom_boxplot() +
@@ -437,12 +437,12 @@ flower_data %>%
   theme(legend.position = "none")
 ```
 
-<img src="147-quantitative-iv-visualisation_files/figure-html/unnamed-chunk-26-1.png" width="100%" />
+<img src="147-quantitative-iv-visualisation_files/figure-html/unnamed-chunk-26-1.png" alt="" width="100%" />
 
 We can also plot multiple kernel density plots. There are several ways of doing this. One is to place the kernel density plots on top of each other:
 
 
-```r
+``` r
 flower_data %>% 
   ggplot(aes(x = petal_length, fill = species)) +
   geom_density(alpha = 0.7) +
@@ -452,12 +452,12 @@ flower_data %>%
   theme(legend.position = "right")
 ```
 
-<img src="147-quantitative-iv-visualisation_files/figure-html/unnamed-chunk-27-1.png" width="100%" />
+<img src="147-quantitative-iv-visualisation_files/figure-html/unnamed-chunk-27-1.png" alt="" width="100%" />
 
 Or in separate rows:
 
 
-```r
+``` r
 flower_data %>% 
   ggplot(aes(x = petal_length, fill = species)) +
   geom_density(alpha = 0.7) +
@@ -468,11 +468,11 @@ flower_data %>%
   theme(legend.position = "none")
 ```
 
-<img src="147-quantitative-iv-visualisation_files/figure-html/unnamed-chunk-28-1.png" width="100%" />
+<img src="147-quantitative-iv-visualisation_files/figure-html/unnamed-chunk-28-1.png" alt="" width="100%" />
 Or as a so-called *violin plot*:
 
 
-```r
+``` r
 flower_data %>% 
   ggplot(aes(x = species, y = petal_length, fill = species)) +
   geom_violin(alpha = 0.7) +
@@ -482,7 +482,7 @@ flower_data %>%
   theme(legend.position = "none")
 ```
 
-<img src="147-quantitative-iv-visualisation_files/figure-html/unnamed-chunk-29-1.png" width="100%" />
+<img src="147-quantitative-iv-visualisation_files/figure-html/unnamed-chunk-29-1.png" alt="" width="100%" />
 
 The appropriate choice will depend on the number of variables, their distribution, and the statistical relationships you are trying to highlight in the data.
 
@@ -493,7 +493,7 @@ It is possible to plot additional variables in the same figure by manipulating t
 In the context of plotting, aesthetics correspond to particular features of graphical elements. For example, we might manipulate the size, shape, and colour of a point. We might map the size to a continuous variable, and the shape and colour to categorical variables. This way we can add more dimensions of variation to a two-dimensional scatter plot.
 
 
-```r
+``` r
 mtcars %>% 
   mutate(am = factor(am)) %>% 
   ggplot(aes(x = wt, y = mpg, size = cyl, colour = am)) +
@@ -502,11 +502,11 @@ mtcars %>%
   theme(legend.position = "right")
 ```
 
-<img src="147-quantitative-iv-visualisation_files/figure-html/unnamed-chunk-30-1.png" width="100%" />
+<img src="147-quantitative-iv-visualisation_files/figure-html/unnamed-chunk-30-1.png" alt="" width="100%" />
 Facets meanwhile correspond to the different panels of a plot. Different facets can correspond to different levels of a categorical variable, or even different *combinations* of levels of a categorical variable. For example, I could have plotted the graph above with a different facet for each value of `am`:
 
 
-```r
+``` r
 mtcars %>% 
   mutate(am = recode_factor(am, "0" = "am = 0", "1" = "am = 1")) %>% 
   ggplot(aes(x = wt, y = mpg, size = cyl, colour = am)) +
@@ -516,14 +516,14 @@ mtcars %>%
   theme(legend.position = "right")
 ```
 
-<img src="147-quantitative-iv-visualisation_files/figure-html/unnamed-chunk-31-1.png" width="100%" />
+<img src="147-quantitative-iv-visualisation_files/figure-html/unnamed-chunk-31-1.png" alt="" width="100%" />
 
 Even though colour is in theory redundant here, it can be nice to keep it anyway to differentiate different facets.
 
 More complex figures can facet by multiple variables at the same time, producing a grid of facets...
 
 
-```r
+``` r
 mtcars %>% 
   mutate(
     am = recode_factor(am, "0" = "am = 0", "1" = "am = 1"),
@@ -537,6 +537,6 @@ mtcars %>%
   theme(legend.position = "right")
 ```
 
-<img src="147-quantitative-iv-visualisation_files/figure-html/unnamed-chunk-32-1.png" width="100%" />
+<img src="147-quantitative-iv-visualisation_files/figure-html/unnamed-chunk-32-1.png" alt="" width="100%" />
 
 If we do this well, we can fit a lot of pertinent information into a figure. Beware, though -- if we do it poorly, we can confuse the reader a lot!

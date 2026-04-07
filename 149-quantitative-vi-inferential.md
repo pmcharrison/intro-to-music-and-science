@@ -18,21 +18,21 @@ When we talk about inferential statistics, we rely heavily on the mathematical c
 
 The most fundamental distribution in science is the *normal distribution*, also known as the *Gaussian distribution*. The normal distribution resembles a bell curve:
 
-<img src="149-quantitative-vi-inferential_files/figure-html/unnamed-chunk-2-1.png" width="100%" />
+<img src="149-quantitative-vi-inferential_files/figure-html/unnamed-chunk-2-1.png" alt="" width="100%" />
 
 The shape of this curve tells us what values are likely observations: in particular, the higher the probability density, the more likely the observation. When we generate samples from the probability distribution, they will cluster around these values.
 
-<img src="149-quantitative-vi-inferential_files/figure-html/unnamed-chunk-3-.gif" width="100%" />
+<img src="149-quantitative-vi-inferential_files/figure-html/unnamed-chunk-3-.gif" alt="" width="100%" />
 
 The normal distribution is defined by two parameters: its *mean* and its *standard deviation*. We encountered both of these concepts earlier in Chapter \@ref(descriptive-statistics). The normal distributions above each have a mean of 0 and a standard deviation of 1.
 
 The mean controls the location of the normal distribution. Here are some examples of normal distributions with different means:
 
-<img src="149-quantitative-vi-inferential_files/figure-html/unnamed-chunk-4-1.png" width="100%" />
+<img src="149-quantitative-vi-inferential_files/figure-html/unnamed-chunk-4-1.png" alt="" width="100%" />
 
 The standard deviation (often abbreviated to 'SD") controls the spread of the normal distribution. Here are some examples with different standard deviations:
 
-<img src="149-quantitative-vi-inferential_files/figure-html/unnamed-chunk-5-1.png" width="100%" />
+<img src="149-quantitative-vi-inferential_files/figure-html/unnamed-chunk-5-1.png" alt="" width="100%" />
 
 Much of inferential statistics can then be reduced to variants of the following logical process. We suppose that our population of interest can be modelled by some probability distribution, for example the normal distribution (which happens to resemble many real-world distributions strikingly well). We then try to *infer* the values of this distribution's parameters, for example its mean and standard deviation, based on the data we observe.
 
@@ -42,13 +42,13 @@ The size of our sample is crucial for determining our ability to infer the value
 
 For illustration, let's suppose we are trying to use data to infer the mean of a normal distribution whose true value is 1.5. In the first case, we'll plot the results from 5 experiments, each of which estimate the mean based on just 10 observations:
 
-<img src="149-quantitative-vi-inferential_files/figure-html/unnamed-chunk-6-1.png" width="100%" />
+<img src="149-quantitative-vi-inferential_files/figure-html/unnamed-chunk-6-1.png" alt="" width="100%" />
 
 These estimates of the mean are rather noisy, with a standard deviation of 0.240. We call this value the *standard error*; it tells us how unreliable our mean estimates are.
 
 Now consider an analogous set of experiments, each with 1000 observations:
 
-<img src="149-quantitative-vi-inferential_files/figure-html/unnamed-chunk-7-1.png" width="100%" />
+<img src="149-quantitative-vi-inferential_files/figure-html/unnamed-chunk-7-1.png" alt="" width="100%" />
 
 Now the standard deviation of our means (our standard error) is 0.023, more-or-less a tenth of the original standard error. In other words, increasing our dataset size by a factor of 100 has made our estimates about 10 times more precise. There is a mathematical theorem called the *Central Limit Theorem* that formalises and generalises this observation, showing that in general if you multiply your sample size by $N$, then your standard error will decrease by a factor of $\sqrt{N}$.
 
@@ -65,7 +65,7 @@ In the simple case where we are computing the mean of a dataset, it turns out th
 Here is an example of computing the standard error of the mean in R:
 
 
-```r
+``` r
 data <- c(5, 7, 3, 4, 5, 6, 2, 3, 4)
 
 sd <- sd(data)
@@ -172,7 +172,7 @@ Let's consider the following example: we wish to understand how house prices dep
 
 Let's start out by computing pairwise correlations between the two predictor variables and price (the *outcome variable*):
 
-<img src="149-quantitative-vi-inferential_files/figure-html/unnamed-chunk-14-1.png" width="100%" /><img src="149-quantitative-vi-inferential_files/figure-html/unnamed-chunk-14-2.png" width="100%" />
+<img src="149-quantitative-vi-inferential_files/figure-html/unnamed-chunk-14-1.png" alt="" width="100%" /><img src="149-quantitative-vi-inferential_files/figure-html/unnamed-chunk-14-2.png" alt="" width="100%" />
 
 In both cases, we see strong positive correlations: houses with more rooms tend to be priced higher, and houses with more floor space tend to be priced higher.
 
@@ -181,7 +181,7 @@ Let's now look at the same data through the lens of linear regression. The prima
 We begin by fitting the regression model:
 
 
-```r
+``` r
 # Fitting the regression model
 mod <- lm(price ~ rooms + floorspace, data = house_dataset)
 ```
@@ -189,7 +189,7 @@ mod <- lm(price ~ rooms + floorspace, data = house_dataset)
 We then plot the marginal effect for floorspace. As before, we see a positive association: increasing floorspace causes the price to increase.
 
 
-```r
+``` r
 # Plotting marginal effects requires the ggeffects package,
 # you can install this with the following command:
 #
@@ -210,7 +210,7 @@ We then plot the marginal effect for floorspace. As before, we see a positive as
 Now let's plot the marginal effect of room number:
 
 
-```r
+``` r
 (ggeffects::ggpredict(mod, terms = "rooms") %>% plot()) + 
   scale_x_continuous("Number of rooms") + 
   scale_y_continuous("Price") +
@@ -235,7 +235,7 @@ The example above illustrated linear regression with continuous predictor variab
 We have discussed how regression models can be used for explaining relationships between variables. However, they can also be used for generating predictions for new data points. For example, I can use the regression model from above to predict the price of a house with a floorspace of 125 square metres and 5 rooms:
 
 
-```r
+``` r
 predict(mod, newdata = tibble(rooms = 5, floorspace = 125)) %>% 
   as.numeric()
 #> [1] 391290
@@ -245,7 +245,7 @@ To compute these predictions manually, we need to have a look at the fitted
 model coefficients:
 
 
-```r
+``` r
 mod
 #> 
 #> Call:
