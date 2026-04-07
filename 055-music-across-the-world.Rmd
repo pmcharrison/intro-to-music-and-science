@@ -290,7 +290,7 @@ embed_youtube_video("W1xdd8LpHR4", title = "Demonstration of the saron.", credit
 
 If we go through the same exercise for the saron, we find that the consonance profile fits remarkably nicely to the scale degrees of the pelog scale. You can see this by comparing the bottom two lines of numbers in this figure: the bottom line gives the tunings of the pelog scale in cents, whereas the middle line gives the consonance peaks in cents. The two sets of numbers are aligned rather closely, meaning that the pelog scale fits closely to the consonance peaks.
 
-![Dissonance model for the saron, excerpted from @Sethares2005-ko.](images/sethares-bonang-model){width="100%"}
+![Dissonance model for the saron, excerpted from @Sethares2005-ko.](images/sethares-saron-model){width="100%"}
 
 These demonstrations are provocative, but they come with some caveats. One issue in particular is that gamelan tuning (in particular that of the pelog) varies substantially between gamelans. The figure above plots the pelog scale from the Swastigitha gamelan against a dissonance curve computed for the spectrum of the Swastigitha saron, as measured by @Sethares2005-ko. There is a need to replicate these analyses with a broader range of gamelan instruments and tuning systems to verify that the relationship is indeed a reliable one.
 
