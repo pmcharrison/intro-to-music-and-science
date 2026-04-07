@@ -28,9 +28,8 @@ jobs:
         env:
           GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          Rscript -e 'install.packages(c("renv", "remotes"))'
-          Rscript -e 'deps <- unique(na.omit(renv::dependencies()$Package)); deps <- setdiff(deps, rownames(installed.packages())); if (length(deps)) install.packages(deps)'
-          Rscript -e 'remotes::install_github(c("pmcharrison/abcR", "pmcharrison/hrep", "pmcharrison/specdec"), upgrade = "never", dependencies = TRUE)'
+          Rscript -e 'install.packages("remotes")'
+          Rscript -e 'remotes::install_deps(dependencies = TRUE, upgrade = "never")'
       - name: Preflight Python and reticulate
         run: |
           python3 --version
