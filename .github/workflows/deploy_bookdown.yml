@@ -23,7 +23,7 @@ jobs:
       - name: Install dependencies
         run: |
           apt-get update
-          apt-get install -y libcurl4-openssl-dev libmagick++-dev libharfbuzz-dev libfribidi-dev sox python3 python3-venv
+          apt-get install -y libcurl4-openssl-dev libmagick++-dev libharfbuzz-dev libfribidi-dev sox python3 python3-venv python3-dev
       - name: Install R dependencies
         env:
           GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
