@@ -605,9 +605,18 @@ digraph GEMS {
   Sadness->Unease [ label = 0.27 ]
   
 }
-") %>% DiagrammeRsvg::export_svg () %>% charToRaw %>% rsvg::rsvg_svg("images/GEMS.svg")
+") %>% DiagrammeRsvg::export_svg () %>% charToRaw -> gems_svg
 
-knitr::include_graphics("images/GEMS.svg")
+# LaTeX cannot include SVGs without Inkscape, so we render a PDF for it instead.
+gems_file <- if (knitr::is_html_output()) {
+  rsvg::rsvg_svg(gems_svg, "images/GEMS.svg")
+  "images/GEMS.svg"
+} else {
+  rsvg::rsvg_pdf(gems_svg, "images/GEMS.pdf")
+  "images/GEMS.pdf"
+}
+
+knitr::include_graphics(gems_file)
 ```
 
 The model is hierarchical, in that it describes musical emotions in

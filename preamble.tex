@@ -1,1 +1,13 @@
 \usepackage{booktabs}
+% Animated figures are rendered as \animategraphics in PDF output.
+\usepackage{animate}
+% Keep figures next to their surrounding text instead of floating away.
+\usepackage{float}
+\floatplacement{figure}{H}
+% Latin Modern lacks Cyrillic (and many other) glyphs used in credits.
+% unicode-math already loads fontspec under xelatex.
+\IfFontExistsTF{Times New Roman}{
+  \setmainfont{Times New Roman}
+}{
+  \setmainfont{TeX Gyre Termes}
+}

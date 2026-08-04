@@ -10,6 +10,9 @@ bookdown::pdf_book:
   includes:
     in_header: preamble.tex
   latex_engine: xelatex
-  citation_package: natbib
+  # citeproc (rather than natbib) matches the HTML build and tolerates the
+  # duplicate/malformed entries that Paperpile exports.
+  citation_package: none
   keep_tex: yes
+  pandoc_args: ["--lua-filter=latex-images.lua"]
 bookdown::epub_book: default

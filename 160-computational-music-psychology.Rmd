@@ -1060,7 +1060,7 @@ We compute the chord's final dissonance by summing all the 'dissonance contribut
 
 Let's now repeat the same approach and analyse several chords.
 
-```{r, out.width = "100%", fig.cap = "Hutchinson & Knopoff model outputs for various prototypical triads from Western music. Each chord is played in closed form and rooted on middle C."}
+```{r, out.width = "100%", fig.cap = "Hutchinson and Knopoff model outputs for various prototypical triads from Western music. Each chord is played in closed form and rooted on middle C."}
 list(
   "C major" = c(60, 64, 67),
   "C minor" = c(60, 63, 67),
