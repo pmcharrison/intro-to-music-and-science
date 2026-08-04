@@ -90,10 +90,10 @@ Of course, in practice we can't run infinitely many experiments. However, if we 
 Corpus analyses often end up being exercises in estimating probabilities. For example, we might be interested in the question "Did Baroque composers use plagal cadences more commonly than Classical composers?" We can approach this question by sampling a large number of cadences from Baroque and Classical composers, and calculating the proportion of these cadences that are plagal. Using our notation from before, we can then calculate "What's the probability that a cadence will be plagal, if I know already that it's written by a Baroque composer?", and likewise for Classical composers.
 
 $$
-\begin{align}
+\begin{aligned}
 P (\textrm{cadence is plagal } \vert \textrm{ Baroque composer}) &= \ ? \\
 P (\textrm{cadence is plagal } \vert \textrm{ Classical composer}) &= \ ?
-\end{align}
+\end{aligned}
 $$
 
 When we're talking about musical expectations, we are typically interested in a particular kind of conditional probability, calculated at a particular point in the musical piece. We suppose the listener is hearing the piece in real time, and is trying (for example) to predict what the next note in the melody is going to be. Let's call the pitch of the next note X, and let's use Y to denote the portion of the piece that the listener has heard already. The listener is then trying to estimate the conditional probability of X given Y, for different possible pitches X. In this particular example, the listener might think that an F is particularly likely, with a probability of .28. They might also think G and D are reasonably plausible, taking probabilities of .22 each. The remaining possibilities each receive lower probabilities. We call this collection of different probabilities a 'conditional probability distribution'.

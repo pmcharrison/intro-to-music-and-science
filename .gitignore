@@ -4,6 +4,8 @@
 .Ruserdata
 _book
 _bookdown_files
+_latex-images
+images/GEMS.pdf
 .DS_Store
 intro-to-music-and-science.rds
 .Rprofile

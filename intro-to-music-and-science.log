@@ -1,0 +1,4735 @@
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025/Homebrew) (preloaded format=xelatex 2025.3.15)  4 AUG 2026 05:14
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**intro-to-music-and-science.tex
+(./intro-to-music-and-science.tex
+LaTeX2e <2024-11-01> patch level 2
+L3 programming layer <2025-01-18>
+
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/base/book.c
+ls
+Document Class: book 2024/06/29 v1.4n Standard LaTeX document class
+
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/base/bk10.c
+lo
+File: bk10.clo 2024/06/29 v1.4n Standard LaTeX file (size option)
+)
+\c@part=\count192
+\c@chapter=\count193
+\c@section=\count194
+\c@subsection=\count195
+\c@subsubsection=\count196
+\c@paragraph=\count197
+\c@subparagraph=\count198
+\c@figure=\count199
+\c@table=\count266
+\abovecaptionskip=\skip49
+\belowcaptionskip=\skip50
+\bibindent=\dimen141
+)
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/xcolor/xcol
+or.sty
+Package: xcolor 2024/09/29 v3.02 LaTeX color extensions (UK)
+
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/graphics-cf
+g/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: xetex.def on input line 274.
+
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/graphics-de
+f/xetex.def
+File: xetex.def 2022/09/22 v5.0n Graphics/color driver for xetex
+)
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/graphics/ma
+thcolor.ltx)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1349.
+Package xcolor Info: Model `RGB' extended on input line 1365.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1367.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1370.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1371.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1372.
+)
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/amsmath/ams
+math.sty
+Package: amsmath 2024/11/05 v2.17t AMS math features
+\@mathmargin=\skip51
+For additional information on amsmath, use the `?' option.
+
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/amsmath/ams
+text.sty
+Package: amstext 2021/08/26 v2.01 AMS text
+
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/amsmath/ams
+gen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks17
+\ex@=\dimen142
+))
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/amsmath/ams
+bsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen143
+)
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/amsmath/ams
+opn.sty
+Package: amsopn 2022/04/08 v2.04 operator names
+)
+\inf@bad=\count267
+LaTeX Info: Redefining \frac on input line 233.
+\uproot@=\count268
+\leftroot@=\count269
+LaTeX Info: Redefining \overline on input line 398.
+LaTeX Info: Redefining \colon on input line 409.
+\classnum@=\count270
+\DOTSCASE@=\count271
+LaTeX Info: Redefining \ldots on input line 495.
+LaTeX Info: Redefining \dots on input line 498.
+LaTeX Info: Redefining \cdots on input line 619.
+\Mathstrutbox@=\box52
+\strutbox@=\box53
+LaTeX Info: Redefining \big on input line 721.
+LaTeX Info: Redefining \Big on input line 722.
+LaTeX Info: Redefining \bigg on input line 723.
+LaTeX Info: Redefining \Bigg on input line 724.
+\big@size=\dimen144
+LaTeX Font Info:    Redeclaring font encoding OML on input line 742.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 743.
+\macc@depth=\count272
+LaTeX Info: Redefining \bmod on input line 904.
+LaTeX Info: Redefining \pmod on input line 909.
+LaTeX Info: Redefining \smash on input line 939.
+LaTeX Info: Redefining \relbar on input line 969.
+LaTeX Info: Redefining \Relbar on input line 970.
+\c@MaxMatrixCols=\count273
+\dotsspace@=\muskip17
+\c@parentequation=\count274
+\dspbrk@lvl=\count275
+\tag@help=\toks18
+\row@=\count276
+\column@=\count277
+\maxfields@=\count278
+\andhelp@=\toks19
+\eqnshift@=\dimen145
+\alignsep@=\dimen146
+\tagshift@=\dimen147
+\tagwidth@=\dimen148
+\totwidth@=\dimen149
+\lineht@=\dimen150
+\@envbody=\toks20
+\multlinegap=\skip52
+\multlinetaggap=\skip53
+\mathdisplay@stack=\toks21
+LaTeX Info: Redefining \[ on input line 2953.
+LaTeX Info: Redefining \] on input line 2954.
+)
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/amsfonts/am
+ssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/amsfonts/am
+sfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+))
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/generic/iftex/ift
+ex.sty
+Package: iftex 2024/12/12 v1.0g TeX engine tests
+)
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/unicode-mat
+h/unicode-math.sty
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/l3kernel/ex
+pl3.sty
+Package: expl3 2025-01-18 L3 programming layer (loader) 
+
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/l3backend/l
+3backend-xetex.def
+File: l3backend-xetex.def 2024-05-08 L3 backend support: XeTeX
+\g__graphics_track_int=\count279
+\l__pdf_internal_box=\box54
+\g__pdf_backend_annotation_int=\count280
+\g__pdf_backend_link_int=\count281
+))
+Package: unicode-math 2023/08/13 v0.8r Unicode maths in XeLaTeX and LuaLaTeX
+
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/unicode-mat
+h/unicode-math-xetex.sty
+Package: unicode-math-xetex 2023/08/13 v0.8r Unicode maths in XeLaTeX and LuaLa
+TeX
+
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/l3packages/
+xparse/xparse.sty
+Package: xparse 2024-08-16 L3 Experimental document command parser
+)
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/l3packages/
+l3keys2e/l3keys2e.sty
+Package: l3keys2e 2024-08-16 LaTeX2e option processing using LaTeX3 keys
+)
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/fontspec/fo
+ntspec.sty
+Package: fontspec 2024/05/11 v2.9e Font selection for XeLaTeX and LuaLaTeX
+
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/fontspec/fo
+ntspec-xetex.sty
+Package: fontspec-xetex 2024/05/11 v2.9e Font selection for XeLaTeX and LuaLaTe
+X
+\l__fontspec_script_int=\count282
+\l__fontspec_language_int=\count283
+\l__fontspec_strnum_int=\count284
+\l__fontspec_tmp_int=\count285
+\l__fontspec_tmpa_int=\count286
+\l__fontspec_tmpb_int=\count287
+\l__fontspec_tmpc_int=\count288
+\l__fontspec_em_int=\count289
+\l__fontspec_emdef_int=\count290
+\l__fontspec_strong_int=\count291
+\l__fontspec_strongdef_int=\count292
+\l__fontspec_tmpa_dim=\dimen151
+\l__fontspec_tmpb_dim=\dimen152
+\l__fontspec_tmpc_dim=\dimen153
+
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/base/fonten
+c.sty
+Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
+)
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/fontspec/fo
+ntspec.cfg)))
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/base/fix-cm
+.sty
+Package: fix-cm 2020/11/24 v1.1t fixes to LaTeX
+
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/base/ts1enc
+.def
+File: ts1enc.def 2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
+LaTeX Font Info:    Redeclaring font encoding TS1 on input line 47.
+))
+\g__um_fam_int=\count293
+\g__um_fonts_used_int=\count294
+\l__um_primecount_int=\count295
+\g__um_primekern_muskip=\muskip18
+
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/unicode-mat
+h/unicode-math-table.tex)))
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/lm/lmodern.
+sty
+Package: lmodern 2015/05/01 v1.6.1 Latin Modern Fonts
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/cmr/m/n --> OT1/lmr/m/n on input line 22.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `normal'
+(Font)                  OML/cmm/m/it --> OML/lmm/m/it on input line 23.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
+(Font)                  OMS/cmsy/m/n --> OMS/lmsy/m/n on input line 24.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
+(Font)                  OMX/cmex/m/n --> OMX/lmex/m/n on input line 25.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 26.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `bold'
+(Font)                  OML/cmm/b/it --> OML/lmm/b/it on input line 27.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
+(Font)                  OMS/cmsy/b/n --> OMS/lmsy/b/n on input line 28.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
+(Font)                  OMX/cmex/m/n --> OMX/lmex/m/n on input line 29.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 31.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
+(Font)                  OT1/cmss/m/n --> OT1/lmss/m/n on input line 32.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/cmr/m/it --> OT1/lmr/m/it on input line 33.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
+(Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 34.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 35.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
+(Font)                  OT1/cmss/bx/n --> OT1/lmss/bx/n on input line 36.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/cmr/bx/it --> OT1/lmr/bx/it on input line 37.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
+(Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 38.
+)
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/upquote/upq
+uote.sty
+Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verba
+tim
+
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/base/textco
+mp.sty
+Package: textcomp 2024/04/24 v2.1b Standard LaTeX package
+))
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/microtype/m
+icrotype.sty
+Package: microtype 2025/02/11 v3.2a Micro-typographical refinements (RS)
+
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/graphics/ke
+yval.sty
+Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
+\KV@toks@=\toks22
+)
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/etoolbox/et
+oolbox.sty
+Package: etoolbox 2025/02/11 v2.5l e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count296
+)
+\MT@toks=\toks23
+\MT@tempbox=\box55
+\MT@count=\count297
+LaTeX Info: Redefining \noprotrusionifhmode on input line 1087.
+LaTeX Info: Redefining \leftprotrusion on input line 1088.
+\MT@prot@toks=\toks24
+LaTeX Info: Redefining \rightprotrusion on input line 1107.
+LaTeX Info: Redefining \textls on input line 1449.
+\MT@outer@kern=\dimen154
+LaTeX Info: Redefining \microtypecontext on input line 2053.
+LaTeX Info: Redefining \textmicrotypecontext on input line 2070.
+\MT@listname@count=\count298
+
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/microtype/m
+icrotype-xetex.def
+File: microtype-xetex.def 2025/02/11 v3.2a Definitions specific to xetex (RS)
+LaTeX Info: Redefining \lsstyle on input line 443.
+LaTeX Info: Redefining \lslig on input line 451.
+\MT@outer@space=\skip54
+)
+Package microtype Info: Loading configuration file microtype.cfg.
+
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/microtype/m
+icrotype.cfg
+File: microtype.cfg 2025/02/11 v3.2a microtype main configuration file (RS)
+)
+LaTeX Info: Redefining \microtypesetup on input line 3065.
+)
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/parskip/par
+skip.sty
+Package: parskip 2021-03-14 v2.0h non-zero parskip adjustments
+
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/kvoptions/k
+voptions.sty
+Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
+
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/generic/ltxcmds/l
+txcmds.sty
+Package: ltxcmds 2023-12-04 v1.26 LaTeX kernel commands for general use (HO)
+)
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/kvsetkeys/k
+vsetkeys.sty
+Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
+)))
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/fancyvrb/fa
+ncyvrb.sty
+Package: fancyvrb 2024/01/20 4.5c verbatim text (tvz,hv)
+\FV@CodeLineNo=\count299
+\FV@InFile=\read2
+\FV@TabBox=\box56
+\c@FancyVerbLine=\count300
+\FV@StepNumber=\count301
+\FV@OutFile=\write3
+)
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/framed/fram
+ed.sty
+Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
+\OuterFrameSep=\skip55
+\fb@frw=\dimen155
+\fb@frh=\dimen156
+\FrameRule=\dimen157
+\FrameSep=\dimen158
+)
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/tools/longt
+able.sty
+Package: longtable 2024-10-27 v4.22 Multi-page Table package (DPC)
+\LTleft=\skip56
+\LTright=\skip57
+\LTpre=\skip58
+\LTpost=\skip59
+\LTchunksize=\count302
+\LTcapwidth=\dimen159
+\LT@head=\box57
+\LT@firsthead=\box58
+\LT@foot=\box59
+\LT@lastfoot=\box60
+\LT@gbox=\box61
+\LT@cols=\count303
+\LT@rows=\count304
+\c@LT@tables=\count305
+\c@LT@chunks=\count306
+\LT@p@ftn=\toks25
+)
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/booktabs/bo
+oktabs.sty
+Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
+\heavyrulewidth=\dimen160
+\lightrulewidth=\dimen161
+\cmidrulewidth=\dimen162
+\belowrulesep=\dimen163
+\belowbottomsep=\dimen164
+\aboverulesep=\dimen165
+\abovetopsep=\dimen166
+\cmidrulesep=\dimen167
+\cmidrulekern=\dimen168
+\defaultaddspace=\dimen169
+\@cmidla=\count307
+\@cmidlb=\count308
+\@aboverulesep=\dimen170
+\@belowrulesep=\dimen171
+\@thisruleclass=\count309
+\@lastruleclass=\count310
+\@thisrulewidth=\dimen172
+)
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/tools/array
+.sty
+Package: array 2024/10/17 v2.6g Tabular extension package (FMi)
+\col@sep=\dimen173
+\ar@mcellbox=\box62
+\extrarowheight=\dimen174
+\NC@list=\toks26
+\extratabsurround=\skip60
+\backup@length=\skip61
+\ar@cellbox=\box63
+)
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/tools/calc.
+sty
+Package: calc 2023/07/08 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count311
+\calc@Bcount=\count312
+\calc@Adimen=\dimen175
+\calc@Bdimen=\dimen176
+\calc@Askip=\skip62
+\calc@Bskip=\skip63
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count313
+\calc@Cskip=\skip64
+)
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/footnotehyp
+er/footnotehyper.sty
+Package: footnotehyper 2021/08/13 v1.1e hyperref aware footnote.sty (JFB)
+\FNH@notes=\box64
+\FNH@width=\dimen177
+\FNH@toks=\toks27
+)
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/graphics/gr
+aphicx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/graphics/gr
+aphics.sty
+Package: graphics 2024/08/06 v1.4g Standard LaTeX Graphics (DPC,SPQR)
+
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/graphics/tr
+ig.sty
+Package: trig 2023/12/02 v1.11 sin cos tan (DPC)
+)
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/graphics-cf
+g/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: xetex.def on input line 106.
+)
+\Gin@req@height=\dimen178
+\Gin@req@width=\dimen179
+)
+\pandoc@box=\box65
+\cslhangindent=\skip65
+\csllabelwidth=\skip66
+
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/animate/ani
+mate.sty
+Package: animate 2024/10/14 PDF & SVG animations from files and inline graphics
+
+
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/base/ifthen
+.sty
+Package: ifthen 2024/03/16 v1.1e Standard LaTeX ifthen package (DPC)
+)
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/oberdiek/if
+draft.sty
+Package: ifdraft 2016/05/16 v1.4 Detect class options draft and final (HO)
+)
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/media9/pdfb
+ase.sty
+Package: pdfbase 2024/09/16 v0.59 driver independent access to low-level PDF fe
+atures
+\g_pbs_page_int=\count314
+\g_pbs_obj_int=\count315
+\g_pbs_oc_int=\count316
+)
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/zref/zref-a
+bspage.sty
+Package: zref-abspage 2023-09-14 v2.35 Module abspage for zref (HO)
+
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/zref/zref-b
+ase.sty
+Package: zref-base 2023-09-14 v2.35 Module base for zref (HO)
+
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/generic/infwarerr
+/infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/generic/kvdefinek
+eys/kvdefinekeys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+)
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/generic/pdftexcmd
+s/pdftexcmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode not found.
+)
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/generic/etexcmds/
+etexcmds.sty
+Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
+)
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/auxhook/aux
+hook.sty
+Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
+)
+Package zref Info: New property list: main on input line 767.
+Package zref Info: New property: default on input line 768.
+Package zref Info: New property: page on input line 769.
+)
+\c@abspage=\count317
+Package zref Info: New property: abspage on input line 67.
+)
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/ocgx2/ocgba
+se.sty
+Package: ocgbase 2024/09/15 v0.24 support package for ocgx2.sty
+)
+\@anim@box=\box66
+\@anim@measbox=\box67
+\@anim@tmpdima=\dimen180
+\@anim@tmpdimb=\dimen181
+\@anim@num=\count318
+\@anim@curframe=\count319
+\@anim@curframe@zb=\count320
+\@anim@resizeflags=\count321
+\@anim@skipfram=\count322
+\@anim@mulframecnt=\count323
+\@anim@@tmlnfile=\read3
+\@anim@tmpcnt=\count324
+\c@@anim@ltxcnt=\count325
+\@anim@curlayer=\count326
+\@anim@lineno=\count327
+\@anim@curfield=\count328
+\@anim@@resizeflags=\count329
+)
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/float/float
+.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count330
+\float@exts=\toks28
+\float@box=\box68
+\@float@everytoks=\toks29
+\@floatcapt=\box69
+)
+
+Package fontspec Info: 
+(fontspec)             Times New Roman scale = 0.963629354430423.
+
+
+Package fontspec Info: 
+(fontspec)             Times New Roman scale = 1.
+
+
+Package fontspec Info: 
+(fontspec)             Times New Roman scale = 0.963629354430423.
+
+
+Package fontspec Info: 
+(fontspec)             Times New Roman scale = 1.
+
+
+Package fontspec Info: 
+(fontspec)             Times New Roman/B scale = 0.944047646899576.
+
+
+Package fontspec Info: 
+(fontspec)             Times New Roman/B scale = 1.
+
+
+Package fontspec Info: 
+(fontspec)             Times New Roman/I scale = 1.001911883116192.
+
+
+Package fontspec Info: 
+(fontspec)             Times New Roman/I scale = 1.
+
+
+Package fontspec Info: 
+(fontspec)             Times New Roman/BI scale = 0.9818514257111176.
+
+
+Package fontspec Info: 
+(fontspec)             Times New Roman/BI scale = 1.
+
+
+Package fontspec Info: 
+(fontspec)             Font family 'TimesNewRoman(0)' created for font 'Times
+(fontspec)             New Roman' with options
+(fontspec)             [Scale=MatchLowercase,Ligatures=TeX,Scale=1].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.: <->s*[1]"Times New
+(fontspec)             Roman/OT:script=latn;language=dflt;mapping=tex-text;"
+(fontspec)             - 'bold' (b/n) with NFSS spec.: <->s*[1]"Times New
+(fontspec)             Roman/B/OT:script=latn;language=dflt;mapping=tex-text;"
+(fontspec)             - 'italic' (m/it) with NFSS spec.: <->s*[1]"Times New
+(fontspec)             Roman/I/OT:script=latn;language=dflt;mapping=tex-text;"
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.: <->s*[1]"Times
+(fontspec)             New
+(fontspec)             Roman/BI/OT:script=latn;language=dflt;mapping=tex-text;"
+
+
+LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/m/n' will be
+(Font)              scaled to size 10.0pt on input line 153.
+
+Package fontspec Info: 
+(fontspec)             Times New Roman scale = 0.9999965884395865.
+
+
+Package fontspec Info: 
+(fontspec)             Times New Roman scale = 0.9999965884395865.
+
+
+Package fontspec Info: 
+(fontspec)             Times New Roman/B scale = 0.9796758700672793.
+
+
+Package fontspec Info: 
+(fontspec)             Times New Roman/I scale = 1.039723894282441.
+
+
+Package fontspec Info: 
+(fontspec)             Times New Roman/BI scale = 1.018906358084128.
+
+
+Package fontspec Info: 
+(fontspec)             Font family 'TimesNewRoman(1)' created for font 'Times
+(fontspec)             New Roman' with options [Scale=MatchLowercase].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->s*[0.9999965884395865]"Times New
+(fontspec)             Roman/OT:script=latn;language=dflt;"
+(fontspec)             - 'bold' (b/n) with NFSS spec.:
+(fontspec)             <->s*[0.9796758700672793]"Times New
+(fontspec)             Roman/B/OT:script=latn;language=dflt;"
+(fontspec)             - 'italic' (m/it) with NFSS spec.:
+(fontspec)             <->s*[1.039723894282441]"Times New
+(fontspec)             Roman/I/OT:script=latn;language=dflt;"
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.:
+(fontspec)             <->s*[1.018906358084128]"Times New
+(fontspec)             Roman/BI/OT:script=latn;language=dflt;"
+
+LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
+(Font)                  OT1/lmr/m/n --> TU/TimesNewRoman(1)/m/n on input line 1
+53.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/lmr/m/it --> TU/TimesNewRoman(1)/m/it on input line
+ 153.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
+(Font)                  OT1/lmr/bx/n --> TU/TimesNewRoman(1)/b/n on input line 
+153.
+
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/bookmark/bo
+okmark.sty
+Package: bookmark 2023-12-10 v1.31 PDF bookmarks (HO)
+
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/hyperref/hy
+perref.sty
+Package: hyperref 2024-11-05 v7.01l Hypertext links for LaTeX
+
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/generic/pdfescape
+/pdfescape.sty
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+)
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/hycolor/hyc
+olor.sty
+Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
+)
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/hyperref/na
+meref.sty
+Package: nameref 2023-11-26 v2.56 Cross-referencing by name of section
+
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/refcount/re
+fcount.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+)
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/generic/gettitles
+tring/gettitlestring.sty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+)
+\c@section@level=\count331
+)
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/generic/stringenc
+/stringenc.sty
+Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO
+)
+)
+\@linkdim=\dimen182
+\Hy@linkcounter=\count332
+\Hy@pagecounter=\count333
+
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/hyperref/pd
+1enc.def
+File: pd1enc.def 2024-11-05 v7.01l Hyperref: PDFDocEncoding definition (HO)
+)
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/generic/intcalc/i
+ntcalc.sty
+Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
+)
+\Hy@SavedSpaceFactor=\count334
+
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/hyperref/pu
+enc.def
+File: puenc.def 2024-11-05 v7.01l Hyperref: PDF Unicode definition (HO)
+)
+Package hyperref Info: Option `unicode' set `true' on input line 4040.
+Package hyperref Info: Hyper figures OFF on input line 4157.
+Package hyperref Info: Link nesting OFF on input line 4162.
+Package hyperref Info: Hyper index ON on input line 4165.
+Package hyperref Info: Plain pages OFF on input line 4172.
+Package hyperref Info: Backreferencing OFF on input line 4177.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4424.
+\c@Hy@tempcnt=\count335
+
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip19
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 4763.
+\XeTeXLinkMargin=\dimen183
+
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/generic/bitset/bi
+tset.sty
+Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
+
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/generic/bigintcal
+c/bigintcalc.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
+)
+))
+\Fld@menulength=\count336
+\Field@Width=\dimen184
+\Fld@charsize=\dimen185
+Package hyperref Info: Hyper figures OFF on input line 6042.
+Package hyperref Info: Link nesting OFF on input line 6047.
+Package hyperref Info: Hyper index ON on input line 6050.
+Package hyperref Info: backreferencing OFF on input line 6057.
+Package hyperref Info: Link coloring OFF on input line 6062.
+Package hyperref Info: Link coloring with OCG OFF on input line 6067.
+Package hyperref Info: PDF/A mode OFF on input line 6072.
+
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/base/atbegs
+hi-ltx.sty
+Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
+package with kernel methods
+)
+\Hy@abspage=\count337
+\c@Item=\count338
+\c@Hfootnote=\count339
+)
+Package hyperref Info: Driver (autodetected): hxetex.
+
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/hyperref/hx
+etex.def
+File: hxetex.def 2024-11-05 v7.01l Hyperref driver for XeTeX
+\pdfm@box=\box70
+\c@Hy@AnnotLevel=\count340
+\HyField@AnnotCount=\count341
+\Fld@listcount=\count342
+\c@bookmark@seq@number=\count343
+
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/rerunfilech
+eck/rerunfilecheck.sty
+Package: rerunfilecheck 2022-07-10 v1.10 Rerun checks for auxiliary files (HO)
+
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/base/atvery
+end-ltx.sty
+Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend pac
+kage
+with kernel methods
+)
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/generic/uniquecou
+nter/uniquecounter.sty
+Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
+)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+85.
+)
+\Hy@SectionHShift=\skip67
+)
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/bookmark/bk
+m-dvipdfm.def
+File: bkm-dvipdfm.def 2023-12-10 v1.31 bookmark driver for dvipdfm (HO)
+\BKM@id=\count344
+))
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/xurl/xurl.s
+ty
+Package: xurl 2022/01/09 v 0.10 modify URL breaks
+) (./intro-to-music-and-science.aux
+
+LaTeX Warning: Label `fig:unnamed-chunk-10' multiply defined.
+
+
+LaTeX Warning: Label `fig:unnamed-chunk-17' multiply defined.
+
+)
+\openout1 = `intro-to-music-and-science.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 166.
+LaTeX Font Info:    ... okay on input line 166.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 166.
+LaTeX Font Info:    ... okay on input line 166.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 166.
+LaTeX Font Info:    ... okay on input line 166.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 166.
+LaTeX Font Info:    ... okay on input line 166.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 166.
+LaTeX Font Info:    ... okay on input line 166.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 166.
+LaTeX Font Info:    ... okay on input line 166.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 166.
+LaTeX Font Info:    ... okay on input line 166.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 166.
+LaTeX Font Info:    ... okay on input line 166.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 166.
+LaTeX Font Info:    ... okay on input line 166.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 166.
+LaTeX Font Info:    ... okay on input line 166.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
+(Font)                  OT1/lmss/m/n --> TU/lmss/m/n on input line 166.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
+(Font)                  OT1/lmss/bx/n --> TU/lmss/b/n on input line 166.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
+(Font)                  OT1/lmtt/m/n --> TU/lmtt/m/n on input line 166.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
+(Font)                  OT1/lmtt/m/n --> TU/lmtt/b/n on input line 166.
+
+Package fontspec Info: 
+(fontspec)             latinmodern-math scale = 1.037736183048279.
+
+
+Package fontspec Info: 
+(fontspec)             latinmodern-math scale = 1.037736183048279.
+
+
+Package fontspec Info: 
+(fontspec)             latinmodern-math scale = 1.037736183048279.
+
+
+Package fontspec Info: 
+(fontspec)             Font family 'latinmodern-math.otf(0)' created for font
+(fontspec)             'latinmodern-math.otf' with options
+(fontspec)             [Scale=MatchLowercase,BoldItalicFont={},ItalicFont={},Sm
+allCapsFont={},Script=Math,BoldFont={latinmodern-math.otf}].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->s*[1.037736183048279]"[latinmodern-math.otf]/OT:scrip
+t=math;language=dflt;"
+(fontspec)             - 'bold' (b/n) with NFSS spec.:
+(fontspec)             <->s*[1.037736183048279]"[latinmodern-math.otf]/OT:scrip
+t=math;language=dflt;"
+
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(0)/m/n' will be
+(Font)              scaled to size 10.37735pt on input line 166.
+
+Package fontspec Info: 
+(fontspec)             latinmodern-math scale = 1.037736183048279.
+
+
+Package fontspec Info: 
+(fontspec)             latinmodern-math scale = 1.037736183048279.
+
+
+Package fontspec Info: 
+(fontspec)             latinmodern-math scale = 1.037736183048279.
+
+
+Package fontspec Info: 
+(fontspec)             latinmodern-math scale = 1.037736183048279.
+
+
+Package fontspec Info: 
+(fontspec)             latinmodern-math scale = 1.037736183048279.
+
+
+Package fontspec Info: 
+(fontspec)             Font family 'latinmodern-math.otf(1)' created for font
+(fontspec)             'latinmodern-math.otf' with options
+(fontspec)             [Scale=MatchLowercase,BoldItalicFont={},ItalicFont={},Sm
+allCapsFont={},Script=Math,SizeFeatures={{Size=8.5-},{Size=6-8.5,Font=latinmode
+rn-math.otf,Style=MathScript},{Size=-6,Font=latinmodern-math.otf,Style=MathScri
+ptScript}},BoldFont={latinmodern-math.otf}].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <8.5->s*[1.037736183048279]"[latinmodern-math.otf]/OT:sc
+ript=math;language=dflt;"<6-8.5>s*[1.037736183048279]"[latinmodern-math.otf]/OT
+:script=math;language=dflt;+ssty=0;"<-6>s*[1.037736183048279]"[latinmodern-math
+.otf]/OT:script=math;language=dflt;+ssty=1;"
+(fontspec)             - 'bold' (b/n) with NFSS spec.:
+(fontspec)             <->s*[1.037736183048279]"[latinmodern-math.otf]/OT:scrip
+t=math;language=dflt;"
+
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
+(Font)              scaled to size 10.37735pt on input line 166.
+LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
+(Font)              `operators' in the math version `normal' on input line 166.
+
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/lmr/m/n --> TU/latinmodern-math.otf(1)/m/n on input
+ line 166.
+LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
+(Font)              `operators' in the math version `bold' on input line 166.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/lmr/bx/n --> TU/latinmodern-math.otf(1)/b/n on inpu
+t line 166.
+
+Package fontspec Info: 
+(fontspec)             latinmodern-math scale = 1.037736183048279.
+
+
+Package fontspec Info: 
+(fontspec)             latinmodern-math scale = 1.037839956666584.
+
+
+Package fontspec Info: 
+(fontspec)             latinmodern-math scale = 1.037736183048279.
+
+
+Package fontspec Info: 
+(fontspec)             latinmodern-math scale = 1.037839956666584.
+
+
+Package fontspec Info: 
+(fontspec)             latinmodern-math scale = 1.037736183048279.
+
+
+Package fontspec Info: 
+(fontspec)             latinmodern-math scale = 1.037839956666584.
+
+
+Package fontspec Info: 
+(fontspec)             latinmodern-math scale = 1.037736183048279.
+
+
+Package fontspec Info: 
+(fontspec)             latinmodern-math scale = 1.037839956666584.
+
+
+Package fontspec Info: 
+(fontspec)             latinmodern-math scale = 1.037736183048279.
+
+
+Package fontspec Info: 
+(fontspec)             latinmodern-math scale = 1.037839956666584.
+
+
+Package fontspec Info: 
+(fontspec)             Font family 'latinmodern-math.otf(2)' created for font
+(fontspec)             'latinmodern-math.otf' with options
+(fontspec)             [Scale=MatchLowercase,BoldItalicFont={},ItalicFont={},Sm
+allCapsFont={},Script=Math,SizeFeatures={{Size=8.5-},{Size=6-8.5,Font=latinmode
+rn-math.otf,Style=MathScript},{Size=-6,Font=latinmodern-math.otf,Style=MathScri
+ptScript}},BoldFont={latinmodern-math.otf},ScaleAgain=1.0001,FontAdjustment={\f
+ontdimen
+(fontspec)             8\font =7.02547pt\relax \fontdimen 9\font
+(fontspec)             =4.08867pt\relax \fontdimen 10\font =4.60754pt\relax
+(fontspec)             \fontdimen 11\font =7.11887pt\relax \fontdimen 12\font
+(fontspec)             =3.58018pt\relax \fontdimen 13\font =3.76698pt\relax
+(fontspec)             \fontdimen 14\font =3.76698pt\relax \fontdimen 15\font
+(fontspec)             =2.99905pt\relax \fontdimen 16\font =2.5632pt\relax
+(fontspec)             \fontdimen 17\font =2.5632pt\relax \fontdimen 18\font
+(fontspec)             =2.59435pt\relax \fontdimen 19\font =2.07547pt\relax
+(fontspec)             \fontdimen 22\font =2.59435pt\relax \fontdimen 20\font
+(fontspec)             =0pt\relax \fontdimen 21\font =0pt\relax }].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <8.5->s*[1.037839956666584]"[latinmodern-math.otf]/OT:sc
+ript=math;language=dflt;"<6-8.5>s*[1.037839956666584]"[latinmodern-math.otf]/OT
+:script=math;language=dflt;+ssty=0;"<-6>s*[1.037839956666584]"[latinmodern-math
+.otf]/OT:script=math;language=dflt;+ssty=1;"
+(fontspec)             - 'bold' (b/n) with NFSS spec.:
+(fontspec)             <->s*[1.037839956666584]"[latinmodern-math.otf]/OT:scrip
+t=math;language=dflt;"
+
+LaTeX Font Info:    Encoding `OMS' has changed to `TU' for symbol font
+(Font)              `symbols' in the math version `normal' on input line 166.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
+(Font)                  OMS/lmsy/m/n --> TU/latinmodern-math.otf(2)/m/n on inpu
+t line 166.
+LaTeX Font Info:    Encoding `OMS' has changed to `TU' for symbol font
+(Font)              `symbols' in the math version `bold' on input line 166.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
+(Font)                  OMS/lmsy/b/n --> TU/latinmodern-math.otf(2)/b/n on inpu
+t line 166.
+
+Package fontspec Info: 
+(fontspec)             latinmodern-math scale = 1.037736183048279.
+
+
+Package fontspec Info: 
+(fontspec)             latinmodern-math scale = 1.037632409429974.
+
+
+Package fontspec Info: 
+(fontspec)             latinmodern-math scale = 1.037736183048279.
+
+
+Package fontspec Info: 
+(fontspec)             latinmodern-math scale = 1.037632409429974.
+
+
+Package fontspec Info: 
+(fontspec)             latinmodern-math scale = 1.037736183048279.
+
+
+Package fontspec Info: 
+(fontspec)             latinmodern-math scale = 1.037632409429974.
+
+
+Package fontspec Info: 
+(fontspec)             latinmodern-math scale = 1.037736183048279.
+
+
+Package fontspec Info: 
+(fontspec)             latinmodern-math scale = 1.037632409429974.
+
+
+Package fontspec Info: 
+(fontspec)             latinmodern-math scale = 1.037736183048279.
+
+
+Package fontspec Info: 
+(fontspec)             latinmodern-math scale = 1.037632409429974.
+
+
+Package fontspec Info: 
+(fontspec)             Font family 'latinmodern-math.otf(3)' created for font
+(fontspec)             'latinmodern-math.otf' with options
+(fontspec)             [Scale=MatchLowercase,BoldItalicFont={},ItalicFont={},Sm
+allCapsFont={},Script=Math,SizeFeatures={{Size=8.5-},{Size=6-8.5,Font=latinmode
+rn-math.otf,Style=MathScript},{Size=-6,Font=latinmodern-math.otf,Style=MathScri
+ptScript}},BoldFont={latinmodern-math.otf},ScaleAgain=0.9999,FontAdjustment={\f
+ontdimen
+(fontspec)             8\font =0.4151pt\relax \fontdimen 9\font
+(fontspec)             =2.07547pt\relax \fontdimen 10\font =1.73302pt\relax
+(fontspec)             \fontdimen 11\font =1.15189pt\relax \fontdimen 12\font
+(fontspec)             =6.22641pt\relax \fontdimen 13\font =0pt\relax }].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <8.5->s*[1.037632409429974]"[latinmodern-math.otf]/OT:sc
+ript=math;language=dflt;"<6-8.5>s*[1.037632409429974]"[latinmodern-math.otf]/OT
+:script=math;language=dflt;+ssty=0;"<-6>s*[1.037632409429974]"[latinmodern-math
+.otf]/OT:script=math;language=dflt;+ssty=1;"
+(fontspec)             - 'bold' (b/n) with NFSS spec.:
+(fontspec)             <->s*[1.037632409429974]"[latinmodern-math.otf]/OT:scrip
+t=math;language=dflt;"
+
+LaTeX Font Info:    Encoding `OMX' has changed to `TU' for symbol font
+(Font)              `largesymbols' in the math version `normal' on input line 1
+66.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
+(Font)                  OMX/lmex/m/n --> TU/latinmodern-math.otf(3)/m/n on inpu
+t line 166.
+LaTeX Font Info:    Encoding `OMX' has changed to `TU' for symbol font
+(Font)              `largesymbols' in the math version `bold' on input line 166
+.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
+(Font)                  OMX/lmex/m/n --> TU/latinmodern-math.otf(3)/b/n on inpu
+t line 166.
+LaTeX Info: Redefining \microtypecontext on input line 166.
+Package microtype Info: Applying patch `item' on input line 166.
+Package microtype Info: Applying patch `toc' on input line 166.
+Package microtype Info: Applying patch `eqnum' on input line 166.
+Package microtype Info: Applying patch `footnote' on input line 166.
+Package microtype Info: Applying patch `verbatim' on input line 166.
+LaTeX Info: Redefining \microtypesetup on input line 166.
+Package microtype Info: Character protrusion enabled (level 2).
+Package microtype Info: Using protrusion set `basicmath'.
+Package microtype Info: No adjustment of tracking.
+Package microtype Info: No adjustment of spacing.
+Package microtype Info: No adjustment of kerning.
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `TimesNewRoman' (encoding: TU).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+Package hyperref Info: Link coloring OFF on input line 166.
+LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/m/n' will be
+(Font)              scaled to size 17.28pt on input line 168.
+LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/m/n' will be
+(Font)              scaled to size 12.0pt on input line 168.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
+(Font)              scaled to size 12.45282pt on input line 168.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
+(Font)              scaled to size 8.30188pt on input line 168.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
+(Font)              scaled to size 6.22641pt on input line 168.
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 1
+68.
+
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/lm/omllmm.f
+d
+File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
+(Font)              scaled to size 12.4541pt on input line 168.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
+(Font)              scaled to size 8.30273pt on input line 168.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
+(Font)              scaled to size 6.22705pt on input line 168.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
+(Font)              scaled to size 12.45154pt on input line 168.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
+(Font)              scaled to size 8.30103pt on input line 168.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
+(Font)              scaled to size 6.22577pt on input line 168.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 168
+.
+
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/amsfonts/um
+sa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/microtype/m
+t-msa.cfg
+File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 168
+.
+
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/amsfonts/um
+sb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/microtype/m
+t-msb.cfg
+File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
+)
+
+[1
+
+
+]
+
+LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/m/sl' in size <10> not avai
+lable
+(Font)              Font shape `TU/TimesNewRoman(0)/m/it' tried instead on inpu
+t line 171.
+LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/m/it' will be
+(Font)              scaled to size 10.0pt on input line 171.
+[2
+
+]
+LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/m/n' will be
+(Font)              scaled to size 24.88pt on input line 171.
+LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/b/n' will be
+(Font)              scaled to size 24.88pt on input line 171.
+(./intro-to-music-and-science.toc
+LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/b/n' will be
+(Font)              scaled to size 10.0pt on input line 1.
+LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/b/n' will be
+(Font)              scaled to size 12.0pt on input line 5.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
+(Font)              scaled to size 7.26414pt on input line 7.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
+(Font)              scaled to size 5.18867pt on input line 7.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
+(Font)              scaled to size 10.37842pt on input line 7.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
+(Font)              scaled to size 7.2649pt on input line 7.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
+(Font)              scaled to size 5.18921pt on input line 7.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
+(Font)              scaled to size 10.37628pt on input line 7.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
+(Font)              scaled to size 7.2634pt on input line 7.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
+(Font)              scaled to size 5.18814pt on input line 7.
+
+
+[3]
+
+[4]
+
+[5])
+\tf@toc=\write4
+\openout4 = `intro-to-music-and-science.toc'.
+
+
+
+[6]
+Chapter 1.
+LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/m/n' will be
+(Font)              scaled to size 20.74pt on input line 173.
+LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/b/n' will be
+(Font)              scaled to size 20.74pt on input line 173.
+
+
+[7
+
+]
+
+[8
+
+]
+Chapter 2.
+
+
+[9]
+
+[10
+
+]
+Chapter 3.
+
+
+[11]
+
+[12]
+Chapter 4.
+
+Underfull \hbox (badness 2503) in paragraph at lines 214--215
+\TU/TimesNewRoman(0)/m/n/10 This work is licensed under a []Creative Commons At
+tribution-NonCommercial-
+ []
+
+
+
+[13
+
+]
+
+[14
+
+]
+
+[15]
+
+[16]
+Chapter 5.
+LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/m/n' will be
+(Font)              scaled to size 14.4pt on input line 238.
+LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/b/n' will be
+(Font)              scaled to size 14.4pt on input line 238.
+
+
+[17
+
+]
+File: _latex-images/images/solar-system-inner-planets.png Graphic file (type bm
+p)
+<_latex-images/images/solar-system-inner-planets.png>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[18]
+File: images/xkcd-purity.png Graphic file (type bmp)
+<images/xkcd-purity.png>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[19]
+File: images/xkcd-replication.png Graphic file (type bmp)
+<images/xkcd-replication.png>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[20]
+
+[21]
+LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/m/n' will be
+(Font)              scaled to size 7.0pt on input line 286.
+LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/m/n' will be
+(Font)              scaled to size 8.0pt on input line 286.
+LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/m/n' will be
+(Font)              scaled to size 6.0pt on input line 286.
+LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/m/it' will be
+(Font)              scaled to size 8.0pt on input line 286.
+
+
+[22]
+Chapter 6.
+
+
+[23
+
+]
+
+[24]
+
+[25]
+
+[26]
+Underfull \vbox (badness 4846) has occurred while \output is active []
+
+
+
+[27]
+
+[28]
+
+[29
+
+]
+
+[30]
+Chapter 7.
+File: _latex-images/images/particles-in-a-gas.png Graphic file (type bmp)
+<_latex-images/images/particles-in-a-gas.png>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[31
+
+]
+File: _latex-images/images/violin-string.png Graphic file (type bmp)
+<_latex-images/images/violin-string.png>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[32]
+File: images/sine-wave-pure-tone.png Graphic file (type bmp)
+<images/sine-wave-pure-tone.png>
+
+Overfull \hbox (47.96936pt too wide) in paragraph at lines 380--381
+[][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 380--381
+
+ []
+
+
+
+[33]
+File: _latex-images/images/longitudinal-wave-2.png Graphic file (type bmp)
+<_latex-images/images/longitudinal-wave-2.png>
+
+Overfull \hbox (84.86572pt too wide) in paragraph at lines 392--393
+ [][] 
+ []
+
+File: images/sine-wave-amplitude=1.png Graphic file (type bmp)
+<images/sine-wave-amplitude=1.png>
+
+Overfull \hbox (31.40392pt too wide) in paragraph at lines 402--403
+ [][] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[34]
+File: images/sine-wave-amplitude=0.5.png Graphic file (type bmp)
+<images/sine-wave-amplitude=0.5.png>
+
+Overfull \hbox (31.39699pt too wide) in paragraph at lines 410--411
+ [][] 
+ []
+
+
+
+[35]
+File: images/sine-wave-frequency=5.png Graphic file (type bmp)
+<images/sine-wave-frequency=5.png>
+
+Overfull \hbox (31.40875pt too wide) in paragraph at lines 418--419
+ [][] 
+ []
+
+File: images/sine-wave-frequency=120.png Graphic file (type bmp)
+<images/sine-wave-frequency=120.png>
+
+Overfull \hbox (31.41724pt too wide) in paragraph at lines 426--427
+ [][] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[36]
+File: images/sine-wave-frequency=240.png Graphic file (type bmp)
+<images/sine-wave-frequency=240.png>
+
+Overfull \hbox (31.41724pt too wide) in paragraph at lines 434--435
+ [][] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[37]
+File: images/sine-wave-frequency=360.png Graphic file (type bmp)
+<images/sine-wave-frequency=360.png>
+
+Overfull \hbox (31.41724pt too wide) in paragraph at lines 442--443
+ [][] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[38]
+File: images/sine-wave-phase=0.png Graphic file (type bmp)
+<images/sine-wave-phase=0.png>
+
+Overfull \hbox (31.41724pt too wide) in paragraph at lines 452--453
+ [][] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[39]
+File: images/sine-wave-phase=pi-by-2.png Graphic file (type bmp)
+<images/sine-wave-phase=pi-by-2.png>
+
+Overfull \hbox (31.41724pt too wide) in paragraph at lines 460--461
+ [][] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[40]
+File: images/sine-wave-phase=3-pi-by-2.png Graphic file (type bmp)
+<images/sine-wave-phase=3-pi-by-2.png>
+
+Overfull \hbox (31.41724pt too wide) in paragraph at lines 468--469
+ [][] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[41]
+LaTeX Font Info:    Font shape `TU/TimesNewRoman(1)/m/n' will be
+(Font)              scaled to size 10.0pt on input line 477.
+LaTeX Font Info:    Font shape `TU/TimesNewRoman(1)/m/n' will be
+(Font)              scaled to size 7.0pt on input line 477.
+LaTeX Font Info:    Font shape `TU/TimesNewRoman(1)/m/n' will be
+(Font)              scaled to size 5.0pt on input line 477.
+
+
+[42]
+Missing character: There is no ♭ (U+266D) in font Times New Roman/OT:script=lat
+n;language=dflt;mapping=tex-text;!
+File: images/sawtooth-wave.png Graphic file (type bmp)
+<images/sawtooth-wave.png>
+
+Underfull \vbox (badness 7925) has occurred while \output is active []
+
+
+
+[43]
+File: images/square-wave.png Graphic file (type bmp)
+<images/square-wave.png>
+LaTeX Font Info:    Font shape `TU/TimesNewRoman(1)/m/n' will be
+(Font)              scaled to size 8.0pt on input line 566.
+LaTeX Font Info:    Font shape `TU/TimesNewRoman(1)/m/n' will be
+(Font)              scaled to size 6.0pt on input line 566.
+
+
+[44]
+File: images/sawtooth-wave-fourier.png Graphic file (type bmp)
+<images/sawtooth-wave-fourier.png>
+File: images/square-wave-fourier.png Graphic file (type bmp)
+<images/square-wave-fourier.png>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[45]
+File: images/waveforms-to-spectra.png Graphic file (type bmp)
+<images/waveforms-to-spectra.png>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[46]
+File: images/harmonic-spectrum.png Graphic file (type bmp)
+<images/harmonic-spectrum.png>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[47]
+File: images/spectrogram.png Graphic file (type bmp)
+<images/spectrogram.png>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[48]
+
+[49]
+
+[50
+
+]
+Chapter 8.
+
+
+[51]
+
+[52]
+File: images/similarity-matrix.png Graphic file (type bmp)
+<images/similarity-matrix.png>
+
+Overfull \hbox (31.40533pt too wide) in paragraph at lines 670--671
+ [][] 
+ []
+
+
+
+[53]
+Underfull \hbox (badness 10000) in paragraph at lines 678--679
+
+ []
+
+File: images/similarity-matrix-to-mds.png Graphic file (type bmp)
+<images/similarity-matrix-to-mds.png>
+
+
+[54]
+File: images/middle-c-waveform.png Graphic file (type bmp)
+<images/middle-c-waveform.png>
+
+Overfull \hbox (31.40753pt too wide) in paragraph at lines 702--703
+ [][] 
+ []
+
+
+
+[55]
+File: images/temporal-envelope-generic.png Graphic file (type bmp)
+<images/temporal-envelope-generic.png>
+
+Overfull \hbox (31.40582pt too wide) in paragraph at lines 710--711
+ [][] 
+ []
+
+File: images/temporal-envelope-harpsichord.png Graphic file (type bmp)
+<images/temporal-envelope-harpsichord.png>
+
+Overfull \hbox (31.41501pt too wide) in paragraph at lines 718--719
+ [][] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[56]
+File: images/temporal-envelope-flute.png Graphic file (type bmp)
+<images/temporal-envelope-flute.png>
+
+Overfull \hbox (31.40456pt too wide) in paragraph at lines 726--727
+ [][] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[57]
+File: images/temporal-envelope-violin.png Graphic file (type bmp)
+<images/temporal-envelope-violin.png>
+
+Overfull \hbox (31.40315pt too wide) in paragraph at lines 732--733
+ [][] 
+ []
+
+
+
+[58]
+File: images/adsr-example-envelope.png Graphic file (type bmp)
+<images/adsr-example-envelope.png>
+
+Overfull \hbox (31.40128pt too wide) in paragraph at lines 740--741
+ [][] 
+ []
+
+File: images/adsr-model-definition.png Graphic file (type bmp)
+<images/adsr-model-definition.png>
+
+Overfull \hbox (31.39214pt too wide) in paragraph at lines 761--762
+ [][] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[59]
+File: images/adsr-incremental-1.png Graphic file (type bmp)
+<images/adsr-incremental-1.png>
+
+Overfull \hbox (31.4119pt too wide) in paragraph at lines 769--770
+ [][] 
+ []
+
+File: images/adsr-incremental-2.png Graphic file (type bmp)
+<images/adsr-incremental-2.png>
+
+Overfull \hbox (31.4119pt too wide) in paragraph at lines 777--778
+ [][] 
+ []
+
+
+
+[60]
+File: images/adsr-incremental-3.png Graphic file (type bmp)
+<images/adsr-incremental-3.png>
+
+Overfull \hbox (31.4119pt too wide) in paragraph at lines 785--786
+ [][] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[61]
+File: images/adsr-incremental-4.png Graphic file (type bmp)
+<images/adsr-incremental-4.png>
+
+Overfull \hbox (31.4119pt too wide) in paragraph at lines 793--794
+ [][] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[62]
+
+[63]
+File: images/harmonic-spectrum.png Graphic file (type bmp)
+<images/harmonic-spectrum.png>
+
+Overfull \hbox (31.39853pt too wide) in paragraph at lines 876--877
+ [][] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[64]
+File: _latex-images/images/spectral-centroid-high.pdf Graphic file (type pdf)
+<use _latex-images/images/spectral-centroid-high.pdf>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[65]
+File: _latex-images/images/spectral-centroid-low.pdf Graphic file (type pdf)
+<use _latex-images/images/spectral-centroid-low.pdf>
+File: _latex-images/images/spectral-irregularity-regular.pdf Graphic file (type
+ pdf)
+<use _latex-images/images/spectral-irregularity-regular.pdf>
+
+
+[66]
+File: _latex-images/images/spectral-irregularity-irregular.pdf Graphic file (ty
+pe pdf)
+<use _latex-images/images/spectral-irregularity-irregular.pdf>
+File: _latex-images/images/nasality-none.pdf Graphic file (type pdf)
+<use _latex-images/images/nasality-none.pdf>
+
+
+[67]
+File: _latex-images/images/nasality-high.pdf Graphic file (type pdf)
+<use _latex-images/images/nasality-high.pdf>
+
+Underfull \vbox (badness 4913) has occurred while \output is active []
+
+
+
+[68]
+File: images/formant-a.png Graphic file (type bmp)
+<images/formant-a.png>
+File: images/formant-o.png Graphic file (type bmp)
+<images/formant-o.png>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[69]
+File: images/formant-frequencies.png Graphic file (type bmp)
+<images/formant-frequencies.png>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[70]
+
+[71]
+
+[72
+
+]
+Chapter 9.
+File: images/sine-wave-frequency=240.png Graphic file (type bmp)
+<images/sine-wave-frequency=240.png>
+File: images/sine-wave-frequency=5.png Graphic file (type bmp)
+<images/sine-wave-frequency=5.png>
+
+Underfull \vbox (badness 1178) has occurred while \output is active []
+
+
+
+[73]
+Underfull \hbox (badness 10000) in paragraph at lines 998--999
+
+ []
+
+File: images/waveforms-to-spectra.png Graphic file (type bmp)
+<images/waveforms-to-spectra.png>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[74]
+File: images/inner-ear-location.png Graphic file (type bmp)
+<images/inner-ear-location.png>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[75]
+File: images/inner-ear-and-cochlea.png Graphic file (type bmp)
+<images/inner-ear-and-cochlea.png>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[76]
+File: images/basilar-membrane.png Graphic file (type bmp)
+<images/basilar-membrane.png>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[77]
+LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/b/it' will be
+(Font)              scaled to size 10.0pt on input line 1036.
+File: images/resonance-and-travelling-waves.png Graphic file (type bmp)
+<images/resonance-and-travelling-waves.png>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[78]
+
+[79]
+File: _latex-images/images/band-pass-filter.pdf Graphic file (type pdf)
+<use _latex-images/images/band-pass-filter.pdf>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[80]
+File: images/stereocilia-of-frog-inner-ear.jpg Graphic file (type bmp)
+<images/stereocilia-of-frog-inner-ear.jpg>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[81]
+File: images/hair-cells-wellcome-collection.jpg Graphic file (type bmp)
+<images/hair-cells-wellcome-collection.jpg>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[82]
+File: _latex-images/images/hair-cell-transduction.pdf Graphic file (type pdf)
+<use _latex-images/images/hair-cell-transduction.pdf>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[83]
+
+[84]
+File: _latex-images/images/harmonic-spectrum-2.pdf Graphic file (type pdf)
+<use _latex-images/images/harmonic-spectrum-2.pdf>
+
+Underfull \vbox (badness 1661) has occurred while \output is active []
+
+
+
+[85]
+File: images/phase-locking-intro.png Graphic file (type bmp)
+<images/phase-locking-intro.png>
+File: images/volley-theory.png Graphic file (type bmp)
+<images/volley-theory.png>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[86]
+File: images/autocorrelation-analysis.png Graphic file (type bmp)
+<images/autocorrelation-analysis.png>
+
+Overfull \hbox (31.4092pt too wide) in paragraph at lines 1120--1121
+ [][] 
+ []
+
+
+
+[87]
+File: images/piccolo.jpg Graphic file (type bmp)
+<images/piccolo.jpg>
+
+
+[88]
+Underfull \hbox (badness 1048) in paragraph at lines 1149--1149
+[]\TU/TimesNewRoman(0)/m/n/10 Table 9.1: Integer-ratio approximations for music
+al intervals, from
+ []
+
+
+
+[89]
+File: _latex-images/images/piano-keyboard-with-notes.pdf Graphic file (type pdf
+)
+<use _latex-images/images/piano-keyboard-with-notes.pdf>
+
+
+[90]
+File: _latex-images/images/piano-octave-numbers.pdf Graphic file (type pdf)
+<use _latex-images/images/piano-octave-numbers.pdf>
+LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/m/n' will be
+(Font)              scaled to size 5.0pt on input line 1225.
+
+
+[91]
+
+[92]
+
+[93]
+
+[94
+
+]
+Chapter 10.
+
+
+[95]
+File: images/consonance-profile.png Graphic file (type bmp)
+<images/consonance-profile.png>
+
+LaTeX Warning: Citation `ref-Marjieh2024-os' on page 96 undefined on input line
+ 1352.
+
+
+LaTeX Warning: Citation `ref-Marjieh2024-os' on page 96 undefined on input line
+ 1352.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[96]
+File: images/consonance-harmonic-spectrum.png Graphic file (type bmp)
+<images/consonance-harmonic-spectrum.png>
+File: images/consonance-harmonicity-and-periodicity.png Graphic file (type bmp)
+
+<images/consonance-harmonicity-and-periodicity.png>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[97]
+File: images/consonance-perfect-fifth.png Graphic file (type bmp)
+<images/consonance-perfect-fifth.png>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[98]
+File: images/consonance-tritone.png Graphic file (type bmp)
+<images/consonance-tritone.png>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[99]
+File: images/consonance-interference-spectrum.png Graphic file (type bmp)
+<images/consonance-interference-spectrum.png>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[100]
+File: images/consonance-beating.png Graphic file (type bmp)
+<images/consonance-beating.png>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[101]
+File: images/consonance-masking.png Graphic file (type bmp)
+<images/consonance-masking.png>
+
+
+[102]
+File: images/consonance-interference-model.png Graphic file (type bmp)
+<images/consonance-interference-model.png>
+
+
+[103]
+File: images/consonance-modelling.png Graphic file (type bmp)
+<images/consonance-modelling.png>
+
+LaTeX Warning: Citation `ref-Marjieh2024-os' on page 104 undefined on input lin
+e 1468.
+
+
+Underfull \vbox (badness 7379) has occurred while \output is active []
+
+
+
+[104]
+File: images/consonance-feedback-loop.png Graphic file (type bmp)
+<images/consonance-feedback-loop.png>
+
+Overfull \hbox (69.04906pt too wide) in paragraph at lines 1481--1482
+[][] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[105]
+
+[106]
+File: images/consonance-stretched-spectrum.png Graphic file (type bmp)
+<images/consonance-stretched-spectrum.png>
+
+Underfull \vbox (badness 1596) has occurred while \output is active []
+
+
+
+[107]
+File: images/consonance-stretched-consonance-profiles.png Graphic file (type bm
+p)
+<images/consonance-stretched-consonance-profiles.png>
+
+LaTeX Warning: Citation `ref-Marjieh2024-os' on page 108 undefined on input lin
+e 1532.
+
+
+
+[108]
+File: images/consonance-regression.png Graphic file (type bmp)
+<images/consonance-regression.png>
+
+
+[109]
+
+[110]
+Chapter 11.
+File: expectation/melody-unknown.png Graphic file (type bmp)
+<expectation/melody-unknown.png>
+
+Underfull \vbox (badness 4739) has occurred while \output is active []
+
+
+
+[111
+
+]
+
+[112]
+File: expectation/chord-sequence.png Graphic file (type bmp)
+<expectation/chord-sequence.png>
+
+
+[113]
+
+[114]
+File: expectation/conditional-probability-distribution.png Graphic file (type b
+mp)
+<expectation/conditional-probability-distribution.png>
+
+
+[115]
+
+[116]
+File: _latex-images/expectation/probe-tone-major-chord-1.pdf Graphic file (type
+ pdf)
+<use _latex-images/expectation/probe-tone-major-chord-1.pdf>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[117]
+File: _latex-images/expectation/probe-tone-major-chord-2-1.pdf Graphic file (ty
+pe pdf)
+<use _latex-images/expectation/probe-tone-major-chord-2-1.pdf>
+File: expectation/probe-tone-tonal-contexts.png Graphic file (type bmp)
+<expectation/probe-tone-tonal-contexts.png>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[118]
+File: _latex-images/expectation/krumhansl-kessler-major.pdf Graphic file (type 
+pdf)
+<use _latex-images/expectation/krumhansl-kessler-major.pdf>
+
+
+[119]
+File: _latex-images/expectation/krumhansl-kessler-minor.pdf Graphic file (type 
+pdf)
+<use _latex-images/expectation/krumhansl-kessler-minor.pdf>
+
+
+[120]
+File: _latex-images/expectation/tillmann-2006-congruent-harp-1.pdf Graphic file
+ (type pdf)
+<use _latex-images/expectation/tillmann-2006-congruent-harp-1.pdf>
+File: _latex-images/expectation/tillmann-2006-less-related-harp-1.pdf Graphic f
+ile (type pdf)
+<use _latex-images/expectation/tillmann-2006-less-related-harp-1.pdf>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[121]
+
+[122]
+File: _latex-images/expectation/erp.pdf Graphic file (type pdf)
+<use _latex-images/expectation/erp.pdf>
+
+
+[123]
+
+[124]
+
+[125]
+File: expectation/narmour-small-intervals.png Graphic file (type bmp)
+<expectation/narmour-small-intervals.png>
+File: expectation/narmour-implication-realisation.png Graphic file (type bmp)
+<expectation/narmour-implication-realisation.png>
+
+
+[126]
+File: expectation/narmour-registral-return.png Graphic file (type bmp)
+<expectation/narmour-registral-return.png>
+
+
+[127]
+Underfull \hbox (badness 1038) in paragraph at lines 1836--1837
+[]\TU/TimesNewRoman(0)/m/n/10 Given this context, it’s particularly impressive 
+how well Narmour’s implication-
+ []
+
+
+
+[128]
+File: _latex-images/expectation/pitch-images-60.pdf Graphic file (type pdf)
+<use _latex-images/expectation/pitch-images-60.pdf>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[129]
+File: _latex-images/expectation/pitch-images-60-64-67.pdf Graphic file (type pd
+f)
+<use _latex-images/expectation/pitch-images-60-64-67.pdf>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[130]
+File: expectation/milne--probe-tone-major-chord-0-combined.png Graphic file (ty
+pe bmp)
+<expectation/milne--probe-tone-major-chord-0-combined.png>
+
+
+[131]
+File: expectation/milne--probe-tone-major-chord-1-combined.png Graphic file (ty
+pe bmp)
+<expectation/milne--probe-tone-major-chord-1-combined.png>
+
+
+[132]
+File: expectation/milne--krumhansler-kessler.png Graphic file (type bmp)
+<expectation/milne--krumhansler-kessler.png>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[133]
+File: expectation/melody-unknown.png Graphic file (type bmp)
+<expectation/melody-unknown.png>
+File: expectation/probability-continuations.png Graphic file (type bmp)
+<expectation/probability-continuations.png>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[134]
+File: expectation/multiple-viewpoints.png Graphic file (type bmp)
+<expectation/multiple-viewpoints.png>
+
+
+[135]
+File: expectation/multiple-viewpoint-context-1.png Graphic file (type bmp)
+<expectation/multiple-viewpoint-context-1.png>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[136]
+File: expectation/multiple-viewpoint-context-2.png Graphic file (type bmp)
+<expectation/multiple-viewpoint-context-2.png>
+File: expectation/multiple-viewpoint-context-3.png Graphic file (type bmp)
+<expectation/multiple-viewpoint-context-3.png>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[137]
+File: _latex-images/expectation/idyom-dynamic-predictions-combined.pdf Graphic 
+file (type pdf)
+<use _latex-images/expectation/idyom-dynamic-predictions-combined.pdf>
+
+
+[138]
+
+[139]
+
+[140]
+Chapter 12.
+
+
+[141
+
+]
+
+[142]
+
+[143]
+Missing character: There is no ﻿ (U+FEFF) in font Times New Roman/OT:script=lat
+n;language=dflt;mapping=tex-text;!
+
+Underfull \vbox (badness 1648) has occurred while \output is active []
+
+
+
+[144]
+
+[145]
+
+[146]
+
+[147]
+
+[148]
+Chapter 13.
+
+
+[149
+
+]
+
+[150]
+File: 055-music-across-the-world_files/figure-latex/unnamed-chunk-2-1.pdf Graph
+ic file (type pdf)
+<use 055-music-across-the-world_files/figure-latex/unnamed-chunk-2-1.pdf>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[151]
+Underfull \vbox (badness 1400) has occurred while \output is active []
+
+
+
+[152]
+Underfull \vbox (badness 1226) has occurred while \output is active []
+
+
+
+[153]
+
+[154]
+
+[155]
+File: 055-music-across-the-world_files/figure-latex/unnamed-chunk-3-1.pdf Graph
+ic file (type pdf)
+<use 055-music-across-the-world_files/figure-latex/unnamed-chunk-3-1.pdf>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[156]
+
+[157]
+Underfull \vbox (badness 1226) has occurred while \output is active []
+
+
+
+[158]
+
+[159]
+
+[160]
+
+[161]
+
+[162]
+
+[163]
+File: images/slendro-scale.png Graphic file (type bmp)
+<images/slendro-scale.png>
+File: images/pelog-scale.png Graphic file (type bmp)
+<images/pelog-scale.png>
+File: images/sethares-bonang-model.png Graphic file (type bmp)
+<images/sethares-bonang-model.png>
+
+
+[164]
+File: images/sethares-saron-model.png Graphic file (type bmp)
+<images/sethares-saron-model.png>
+
+
+[165]
+
+[166]
+Chapter 14.
+
+
+[167
+
+]
+
+[168]
+
+[169]
+
+[170]
+File: images/2-dimensions.png Graphic file (type bmp)
+<images/2-dimensions.png>
+File: images/3-dimensions.png Graphic file (type bmp)
+<images/3-dimensions.png>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[171]
+File: images/circumplex.png Graphic file (type bmp)
+<images/circumplex.png>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[172]
+Underfull \hbox (badness 2088) in paragraph at lines 2802--2810
+[]\TU/TimesNewRoman(0)/m/n/10 This new Dominance-Submissiveness dimension helps
+ us to distinguish certain
+ []
+
+
+
+[173]
+
+[174]
+
+[175]
+File: images/GEMS.pdf Graphic file (type pdf)
+<use images/GEMS.pdf>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[176]
+Overfull \vbox (620.6261pt too high) has occurred while \output is active []
+
+
+
+[177]
+
+[178]
+File: images/cowen-2000/cowen-2000-fig-1a.png Graphic file (type bmp)
+<images/cowen-2000/cowen-2000-fig-1a.png>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[179]
+
+[180]
+File: images/cowen-2000/cowen-2000-fig-2.png Graphic file (type bmp)
+<images/cowen-2000/cowen-2000-fig-2.png>
+
+
+[181]
+File: 060-emotion_files/figure-latex/unnamed-chunk-5-1.pdf Graphic file (type p
+df)
+<use 060-emotion_files/figure-latex/unnamed-chunk-5-1.pdf>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[182]
+File: 060-emotion_files/figure-latex/unnamed-chunk-6-1.pdf Graphic file (type p
+df)
+<use 060-emotion_files/figure-latex/unnamed-chunk-6-1.pdf>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[183]
+Underfull \vbox (badness 1264) has occurred while \output is active []
+
+
+
+[184]
+
+[185]
+
+[186]
+File: images/pneumograph.png Graphic file (type bmp)
+<images/pneumograph.png>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[187]
+File: _latex-images/images/piloerection.png Graphic file (type bmp)
+<_latex-images/images/piloerection.png>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[188]
+File: images/skin-temperature.png Graphic file (type bmp)
+<images/skin-temperature.png>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[189]
+File: images/zygomaticus-major.png Graphic file (type bmp)
+<images/zygomaticus-major.png>
+
+Overfull \hbox (31.40533pt too wide) in paragraph at lines 3486--3488
+ [][] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[190]
+File: images/zygomaticus-minor.png Graphic file (type bmp)
+<images/zygomaticus-minor.png>
+
+Overfull \hbox (31.40533pt too wide) in paragraph at lines 3493--3495
+ [][] 
+ []
+
+
+Underfull \vbox (badness 2020) has occurred while \output is active []
+
+
+
+[191]
+File: images/pupil.jpg Graphic file (type bmp)
+<images/pupil.jpg>
+
+
+[192]
+File: images/fmri.jpg Graphic file (type bmp)
+<images/fmri.jpg>
+File: images/amygdala.jpg Graphic file (type bmp)
+<images/amygdala.jpg>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[193]
+File: images/nucleus-accumbens.png Graphic file (type bmp)
+<images/nucleus-accumbens.png>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[194]
+File: images/hippocampus.jpg Graphic file (type bmp)
+<images/hippocampus.jpg>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[195]
+
+[196]
+
+[197]
+
+[198]
+File: images/juslin-aesthetic-emotions.png Graphic file (type bmp)
+<images/juslin-aesthetic-emotions.png>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[199]
+
+[200]
+
+[201
+
+]
+
+[202]
+Chapter 15.
+
+
+[203
+
+]
+
+[204
+
+]
+Chapter 16.
+
+
+[205]
+
+[206]
+
+[207]
+
+[208]
+
+[209]
+
+[210
+
+]
+Chapter 17.
+
+
+[211]
+
+[212]
+
+[213]
+
+[214
+
+]
+Chapter 18.
+
+
+[215]
+
+[216]
+Chapter 19.
+
+
+[217
+
+]
+
+[218]
+
+[219]
+
+[220]
+
+[221]
+
+[222
+
+]
+
+[223]
+
+[224]
+Chapter 20.
+File: 140-quantitative-i-defining-variables_files/figure-latex/unnamed-chunk-2-
+1.pdf Graphic file (type pdf)
+<use 140-quantitative-i-defining-variables_files/figure-latex/unnamed-chunk-2-1
+.pdf>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[225
+
+]
+File: 140-quantitative-i-defining-variables_files/figure-latex/unnamed-chunk-3-
+1.pdf Graphic file (type pdf)
+<use 140-quantitative-i-defining-variables_files/figure-latex/unnamed-chunk-3-1
+.pdf>
+
+
+[226]
+
+[227]
+
+[228]
+
+[229]
+
+[230]
+
+[231]
+
+[232]
+
+[233] [234]
+
+[235]
+
+[236]
+
+[237]
+
+[238]
+
+[239]
+
+[240
+
+]
+Chapter 21.
+
+
+[241]
+
+[242]
+
+[243]
+
+[244]
+Chapter 22.
+
+Underfull \vbox (badness 1253) has occurred while \output is active []
+
+
+
+[245
+
+]
+
+[246]
+Chapter 23.
+LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <10> not available
+(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 4969.
+File: 147-quantitative-iv-visualisation_files/figure-latex/unnamed-chunk-2-1.pd
+f Graphic file (type pdf)
+<use 147-quantitative-iv-visualisation_files/figure-latex/unnamed-chunk-2-1.pdf
+>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[247
+
+]
+
+[248]
+File: 147-quantitative-iv-visualisation_files/figure-latex/unnamed-chunk-4-1.pd
+f Graphic file (type pdf)
+<use 147-quantitative-iv-visualisation_files/figure-latex/unnamed-chunk-4-1.pdf
+>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[249]
+File: 147-quantitative-iv-visualisation_files/figure-latex/unnamed-chunk-5-1.pd
+f Graphic file (type pdf)
+<use 147-quantitative-iv-visualisation_files/figure-latex/unnamed-chunk-5-1.pdf
+>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[250]
+File: 147-quantitative-iv-visualisation_files/figure-latex/unnamed-chunk-6-1.pd
+f Graphic file (type pdf)
+<use 147-quantitative-iv-visualisation_files/figure-latex/unnamed-chunk-6-1.pdf
+>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[251]
+File: 147-quantitative-iv-visualisation_files/figure-latex/unnamed-chunk-7-1.pd
+f Graphic file (type pdf)
+<use 147-quantitative-iv-visualisation_files/figure-latex/unnamed-chunk-7-1.pdf
+>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[252]
+File: 147-quantitative-iv-visualisation_files/figure-latex/unnamed-chunk-8-1.pd
+f Graphic file (type pdf)
+<use 147-quantitative-iv-visualisation_files/figure-latex/unnamed-chunk-8-1.pdf
+>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[253]
+File: 147-quantitative-iv-visualisation_files/figure-latex/unnamed-chunk-9-1.pd
+f Graphic file (type pdf)
+<use 147-quantitative-iv-visualisation_files/figure-latex/unnamed-chunk-9-1.pdf
+>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[254]
+File: 147-quantitative-iv-visualisation_files/figure-latex/unnamed-chunk-10-1.p
+df Graphic file (type pdf)
+<use 147-quantitative-iv-visualisation_files/figure-latex/unnamed-chunk-10-1.pd
+f>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[255]
+File: 147-quantitative-iv-visualisation_files/figure-latex/unnamed-chunk-11-1.p
+df Graphic file (type pdf)
+<use 147-quantitative-iv-visualisation_files/figure-latex/unnamed-chunk-11-1.pd
+f>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[256]
+File: 147-quantitative-iv-visualisation_files/figure-latex/unnamed-chunk-12-1.p
+df Graphic file (type pdf)
+<use 147-quantitative-iv-visualisation_files/figure-latex/unnamed-chunk-12-1.pd
+f>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[257]
+File: 147-quantitative-iv-visualisation_files/figure-latex/unnamed-chunk-13-1.p
+df Graphic file (type pdf)
+<use 147-quantitative-iv-visualisation_files/figure-latex/unnamed-chunk-13-1.pd
+f>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[258]
+File: 147-quantitative-iv-visualisation_files/figure-latex/unnamed-chunk-14-1.p
+df Graphic file (type pdf)
+<use 147-quantitative-iv-visualisation_files/figure-latex/unnamed-chunk-14-1.pd
+f>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[259]
+File: 147-quantitative-iv-visualisation_files/figure-latex/unnamed-chunk-15-1.p
+df Graphic file (type pdf)
+<use 147-quantitative-iv-visualisation_files/figure-latex/unnamed-chunk-15-1.pd
+f>
+
+
+[260]
+File: 147-quantitative-iv-visualisation_files/figure-latex/unnamed-chunk-16-1.p
+df Graphic file (type pdf)
+<use 147-quantitative-iv-visualisation_files/figure-latex/unnamed-chunk-16-1.pd
+f>
+File: 147-quantitative-iv-visualisation_files/figure-latex/unnamed-chunk-17-1.p
+df Graphic file (type pdf)
+<use 147-quantitative-iv-visualisation_files/figure-latex/unnamed-chunk-17-1.pd
+f>
+
+Underfull \vbox (badness 4927) has occurred while \output is active []
+
+
+
+[261]
+File: 147-quantitative-iv-visualisation_files/figure-latex/unnamed-chunk-18-1.p
+df Graphic file (type pdf)
+<use 147-quantitative-iv-visualisation_files/figure-latex/unnamed-chunk-18-1.pd
+f>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[262]
+File: 147-quantitative-iv-visualisation_files/figure-latex/unnamed-chunk-19-1.p
+df Graphic file (type pdf)
+<use 147-quantitative-iv-visualisation_files/figure-latex/unnamed-chunk-19-1.pd
+f>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[263]
+File: 147-quantitative-iv-visualisation_files/figure-latex/unnamed-chunk-20-1.p
+df Graphic file (type pdf)
+<use 147-quantitative-iv-visualisation_files/figure-latex/unnamed-chunk-20-1.pd
+f>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[264]
+File: 147-quantitative-iv-visualisation_files/figure-latex/unnamed-chunk-21-1.p
+df Graphic file (type pdf)
+<use 147-quantitative-iv-visualisation_files/figure-latex/unnamed-chunk-21-1.pd
+f>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[265]
+File: 147-quantitative-iv-visualisation_files/figure-latex/unnamed-chunk-22-1.p
+df Graphic file (type pdf)
+<use 147-quantitative-iv-visualisation_files/figure-latex/unnamed-chunk-22-1.pd
+f>
+File: 147-quantitative-iv-visualisation_files/figure-latex/unnamed-chunk-23-1.p
+df Graphic file (type pdf)
+<use 147-quantitative-iv-visualisation_files/figure-latex/unnamed-chunk-23-1.pd
+f>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[266]
+File: 147-quantitative-iv-visualisation_files/figure-latex/unnamed-chunk-24-1.p
+df Graphic file (type pdf)
+<use 147-quantitative-iv-visualisation_files/figure-latex/unnamed-chunk-24-1.pd
+f>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[267]
+File: 147-quantitative-iv-visualisation_files/figure-latex/unnamed-chunk-25-1.p
+df Graphic file (type pdf)
+<use 147-quantitative-iv-visualisation_files/figure-latex/unnamed-chunk-25-1.pd
+f>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[268]
+File: 147-quantitative-iv-visualisation_files/figure-latex/unnamed-chunk-26-1.p
+df Graphic file (type pdf)
+<use 147-quantitative-iv-visualisation_files/figure-latex/unnamed-chunk-26-1.pd
+f>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[269]
+File: 147-quantitative-iv-visualisation_files/figure-latex/unnamed-chunk-27-1.p
+df Graphic file (type pdf)
+<use 147-quantitative-iv-visualisation_files/figure-latex/unnamed-chunk-27-1.pd
+f>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[270]
+File: 147-quantitative-iv-visualisation_files/figure-latex/unnamed-chunk-28-1.p
+df Graphic file (type pdf)
+<use 147-quantitative-iv-visualisation_files/figure-latex/unnamed-chunk-28-1.pd
+f>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[271]
+File: 147-quantitative-iv-visualisation_files/figure-latex/unnamed-chunk-29-1.p
+df Graphic file (type pdf)
+<use 147-quantitative-iv-visualisation_files/figure-latex/unnamed-chunk-29-1.pd
+f>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[272]
+File: 147-quantitative-iv-visualisation_files/figure-latex/unnamed-chunk-30-1.p
+df Graphic file (type pdf)
+<use 147-quantitative-iv-visualisation_files/figure-latex/unnamed-chunk-30-1.pd
+f>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[273]
+File: 147-quantitative-iv-visualisation_files/figure-latex/unnamed-chunk-31-1.p
+df Graphic file (type pdf)
+<use 147-quantitative-iv-visualisation_files/figure-latex/unnamed-chunk-31-1.pd
+f>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[274]
+File: 147-quantitative-iv-visualisation_files/figure-latex/unnamed-chunk-32-1.p
+df Graphic file (type pdf)
+<use 147-quantitative-iv-visualisation_files/figure-latex/unnamed-chunk-32-1.pd
+f>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[275]
+
+[276]
+Chapter 24.
+File: 148-quantitative-v-descriptive_files/figure-latex/unnamed-chunk-2-1.pdf G
+raphic file (type pdf)
+<use 148-quantitative-v-descriptive_files/figure-latex/unnamed-chunk-2-1.pdf>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[277
+
+]
+File: 148-quantitative-v-descriptive_files/figure-latex/unnamed-chunk-3-1.pdf G
+raphic file (type pdf)
+<use 148-quantitative-v-descriptive_files/figure-latex/unnamed-chunk-3-1.pdf>
+
+Underfull \vbox (badness 4316) has occurred while \output is active []
+
+
+
+[278]
+File: 148-quantitative-v-descriptive_files/figure-latex/unnamed-chunk-4-1.pdf G
+raphic file (type pdf)
+<use 148-quantitative-v-descriptive_files/figure-latex/unnamed-chunk-4-1.pdf>
+
+
+[279]
+LaTeX Font Info:    Font shape `TU/TimesNewRoman(1)/b/n' will be
+(Font)              scaled to size 9.79675pt on input line 5579.
+LaTeX Font Info:    Font shape `TU/TimesNewRoman(1)/b/n' will be
+(Font)              scaled to size 6.85773pt on input line 5579.
+LaTeX Font Info:    Font shape `TU/TimesNewRoman(1)/b/n' will be
+(Font)              scaled to size 4.89838pt on input line 5579.
+File: 148-quantitative-v-descriptive_files/figure-latex/unnamed-chunk-6-1.pdf G
+raphic file (type pdf)
+<use 148-quantitative-v-descriptive_files/figure-latex/unnamed-chunk-6-1.pdf>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[280]
+File: 148-quantitative-v-descriptive_files/figure-latex/unnamed-chunk-8-1.pdf G
+raphic file (type pdf)
+<use 148-quantitative-v-descriptive_files/figure-latex/unnamed-chunk-8-1.pdf>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[281]
+File: 148-quantitative-v-descriptive_files/figure-latex/unnamed-chunk-9-1.pdf G
+raphic file (type pdf)
+<use 148-quantitative-v-descriptive_files/figure-latex/unnamed-chunk-9-1.pdf>
+
+
+[282]
+
+[283]
+File: 148-quantitative-v-descriptive_files/figure-latex/unnamed-chunk-12-1.pdf 
+Graphic file (type pdf)
+<use 148-quantitative-v-descriptive_files/figure-latex/unnamed-chunk-12-1.pdf>
+
+
+[284]
+File: 148-quantitative-v-descriptive_files/figure-latex/unnamed-chunk-14-1.pdf 
+Graphic file (type pdf)
+<use 148-quantitative-v-descriptive_files/figure-latex/unnamed-chunk-14-1.pdf>
+
+
+[285]
+File: 148-quantitative-v-descriptive_files/figure-latex/unnamed-chunk-15-1.pdf 
+Graphic file (type pdf)
+<use 148-quantitative-v-descriptive_files/figure-latex/unnamed-chunk-15-1.pdf>
+File: 148-quantitative-v-descriptive_files/figure-latex/unnamed-chunk-16-1.pdf 
+Graphic file (type pdf)
+<use 148-quantitative-v-descriptive_files/figure-latex/unnamed-chunk-16-1.pdf>
+
+
+[286]
+File: 148-quantitative-v-descriptive_files/figure-latex/unnamed-chunk-17-1.pdf 
+Graphic file (type pdf)
+<use 148-quantitative-v-descriptive_files/figure-latex/unnamed-chunk-17-1.pdf>
+File: 148-quantitative-v-descriptive_files/figure-latex/unnamed-chunk-18-1.pdf 
+Graphic file (type pdf)
+<use 148-quantitative-v-descriptive_files/figure-latex/unnamed-chunk-18-1.pdf>
+
+
+[287]
+File: 148-quantitative-v-descriptive_files/figure-latex/unnamed-chunk-19-1.pdf 
+Graphic file (type pdf)
+<use 148-quantitative-v-descriptive_files/figure-latex/unnamed-chunk-19-1.pdf>
+File: 148-quantitative-v-descriptive_files/figure-latex/unnamed-chunk-21-1.pdf 
+Graphic file (type pdf)
+<use 148-quantitative-v-descriptive_files/figure-latex/unnamed-chunk-21-1.pdf>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[288]
+File: 148-quantitative-v-descriptive_files/figure-latex/unnamed-chunk-23-1.pdf 
+Graphic file (type pdf)
+<use 148-quantitative-v-descriptive_files/figure-latex/unnamed-chunk-23-1.pdf>
+
+
+[289]
+File: 148-quantitative-v-descriptive_files/figure-latex/unnamed-chunk-26-1.pdf 
+Graphic file (type pdf)
+<use 148-quantitative-v-descriptive_files/figure-latex/unnamed-chunk-26-1.pdf>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[290]
+File: 148-quantitative-v-descriptive_files/figure-latex/unnamed-chunk-28-1.pdf 
+Graphic file (type pdf)
+<use 148-quantitative-v-descriptive_files/figure-latex/unnamed-chunk-28-1.pdf>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[291]
+
+[292]
+Chapter 25.
+
+
+[293
+
+]
+File: 149-quantitative-vi-inferential_files/figure-latex/unnamed-chunk-2-1.pdf 
+Graphic file (type pdf)
+<use 149-quantitative-vi-inferential_files/figure-latex/unnamed-chunk-2-1.pdf>
+File: 149-quantitative-vi-inferential_files/figure-latex/unnamed-chunk-3-1.pdf 
+Graphic file (type pdf)
+<use 149-quantitative-vi-inferential_files/figure-latex/unnamed-chunk-3-1.pdf, 
+page 1>
+<a0,fr0>
+File: 149-quantitative-vi-inferential_files/figure-latex/unnamed-chunk-3-2.pdf 
+Graphic file (type pdf)
+<use 149-quantitative-vi-inferential_files/figure-latex/unnamed-chunk-3-2.pdf, 
+page 1>
+<a0,fr1>
+File: 149-quantitative-vi-inferential_files/figure-latex/unnamed-chunk-3-3.pdf 
+Graphic file (type pdf)
+<use 149-quantitative-vi-inferential_files/figure-latex/unnamed-chunk-3-3.pdf, 
+page 1>
+<a0,fr2>
+File: 149-quantitative-vi-inferential_files/figure-latex/unnamed-chunk-3-4.pdf 
+Graphic file (type pdf)
+<use 149-quantitative-vi-inferential_files/figure-latex/unnamed-chunk-3-4.pdf, 
+page 1>
+<a0,fr3>
+File: 149-quantitative-vi-inferential_files/figure-latex/unnamed-chunk-3-5.pdf 
+Graphic file (type pdf)
+<use 149-quantitative-vi-inferential_files/figure-latex/unnamed-chunk-3-5.pdf, 
+page 1>
+<a0,fr4>
+File: 149-quantitative-vi-inferential_files/figure-latex/unnamed-chunk-3-6.pdf 
+Graphic file (type pdf)
+<use 149-quantitative-vi-inferential_files/figure-latex/unnamed-chunk-3-6.pdf, 
+page 1>
+<a0,fr5>
+File: 149-quantitative-vi-inferential_files/figure-latex/unnamed-chunk-3-7.pdf 
+Graphic file (type pdf)
+<use 149-quantitative-vi-inferential_files/figure-latex/unnamed-chunk-3-7.pdf, 
+page 1>
+<a0,fr6>
+File: 149-quantitative-vi-inferential_files/figure-latex/unnamed-chunk-3-8.pdf 
+Graphic file (type pdf)
+<use 149-quantitative-vi-inferential_files/figure-latex/unnamed-chunk-3-8.pdf, 
+page 1>
+<a0,fr7>
+File: 149-quantitative-vi-inferential_files/figure-latex/unnamed-chunk-3-9.pdf 
+Graphic file (type pdf)
+<use 149-quantitative-vi-inferential_files/figure-latex/unnamed-chunk-3-9.pdf, 
+page 1>
+<a0,fr8>
+File: 149-quantitative-vi-inferential_files/figure-latex/unnamed-chunk-3-10.pdf
+ Graphic file (type pdf)
+<use 149-quantitative-vi-inferential_files/figure-latex/unnamed-chunk-3-10.pdf,
+ page 1>
+<a0,fr9>
+File: 149-quantitative-vi-inferential_files/figure-latex/unnamed-chunk-3-11.pdf
+ Graphic file (type pdf)
+<use 149-quantitative-vi-inferential_files/figure-latex/unnamed-chunk-3-11.pdf,
+ page 1>
+<a0,fr10>
+File: 149-quantitative-vi-inferential_files/figure-latex/unnamed-chunk-3-12.pdf
+ Graphic file (type pdf)
+<use 149-quantitative-vi-inferential_files/figure-latex/unnamed-chunk-3-12.pdf,
+ page 1>
+<a0,fr11>
+File: 149-quantitative-vi-inferential_files/figure-latex/unnamed-chunk-3-13.pdf
+ Graphic file (type pdf)
+<use 149-quantitative-vi-inferential_files/figure-latex/unnamed-chunk-3-13.pdf,
+ page 1>
+<a0,fr12>
+File: 149-quantitative-vi-inferential_files/figure-latex/unnamed-chunk-3-14.pdf
+ Graphic file (type pdf)
+<use 149-quantitative-vi-inferential_files/figure-latex/unnamed-chunk-3-14.pdf,
+ page 1>
+<a0,fr13>
+File: 149-quantitative-vi-inferential_files/figure-latex/unnamed-chunk-3-15.pdf
+ Graphic file (type pdf)
+<use 149-quantitative-vi-inferential_files/figure-latex/unnamed-chunk-3-15.pdf,
+ page 1>
+<a0,fr14>
+File: 149-quantitative-vi-inferential_files/figure-latex/unnamed-chunk-3-16.pdf
+ Graphic file (type pdf)
+<use 149-quantitative-vi-inferential_files/figure-latex/unnamed-chunk-3-16.pdf,
+ page 1>
+<a0,fr15>
+File: 149-quantitative-vi-inferential_files/figure-latex/unnamed-chunk-3-17.pdf
+ Graphic file (type pdf)
+<use 149-quantitative-vi-inferential_files/figure-latex/unnamed-chunk-3-17.pdf,
+ page 1>
+<a0,fr16>
+File: 149-quantitative-vi-inferential_files/figure-latex/unnamed-chunk-3-18.pdf
+ Graphic file (type pdf)
+<use 149-quantitative-vi-inferential_files/figure-latex/unnamed-chunk-3-18.pdf,
+ page 1>
+<a0,fr17>
+File: 149-quantitative-vi-inferential_files/figure-latex/unnamed-chunk-3-19.pdf
+ Graphic file (type pdf)
+<use 149-quantitative-vi-inferential_files/figure-latex/unnamed-chunk-3-19.pdf,
+ page 1>
+<a0,fr18>
+File: 149-quantitative-vi-inferential_files/figure-latex/unnamed-chunk-3-20.pdf
+ Graphic file (type pdf)
+<use 149-quantitative-vi-inferential_files/figure-latex/unnamed-chunk-3-20.pdf,
+ page 1>
+<a0,fr19>
+File: 149-quantitative-vi-inferential_files/figure-latex/unnamed-chunk-3-21.pdf
+ Graphic file (type pdf)
+<use 149-quantitative-vi-inferential_files/figure-latex/unnamed-chunk-3-21.pdf,
+ page 1>
+<a0,fr20>
+File: 149-quantitative-vi-inferential_files/figure-latex/unnamed-chunk-3-22.pdf
+ Graphic file (type pdf)
+<use 149-quantitative-vi-inferential_files/figure-latex/unnamed-chunk-3-22.pdf,
+ page 1>
+<a0,fr21>
+File: 149-quantitative-vi-inferential_files/figure-latex/unnamed-chunk-3-23.pdf
+ Graphic file (type pdf)
+<use 149-quantitative-vi-inferential_files/figure-latex/unnamed-chunk-3-23.pdf,
+ page 1>
+<a0,fr22>
+File: 149-quantitative-vi-inferential_files/figure-latex/unnamed-chunk-3-24.pdf
+ Graphic file (type pdf)
+<use 149-quantitative-vi-inferential_files/figure-latex/unnamed-chunk-3-24.pdf,
+ page 1>
+<a0,fr23>
+File: 149-quantitative-vi-inferential_files/figure-latex/unnamed-chunk-3-25.pdf
+ Graphic file (type pdf)
+<use 149-quantitative-vi-inferential_files/figure-latex/unnamed-chunk-3-25.pdf,
+ page 1>
+<a0,fr24>
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[294]
+File: 149-quantitative-vi-inferential_files/figure-latex/unnamed-chunk-4-1.pdf 
+Graphic file (type pdf)
+<use 149-quantitative-vi-inferential_files/figure-latex/unnamed-chunk-4-1.pdf>
+
+
+[295]
+File: 149-quantitative-vi-inferential_files/figure-latex/unnamed-chunk-5-1.pdf 
+Graphic file (type pdf)
+<use 149-quantitative-vi-inferential_files/figure-latex/unnamed-chunk-5-1.pdf>
+File: 149-quantitative-vi-inferential_files/figure-latex/unnamed-chunk-6-1.pdf 
+Graphic file (type pdf)
+<use 149-quantitative-vi-inferential_files/figure-latex/unnamed-chunk-6-1.pdf>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[296]
+Overfull \vbox (94.31529pt too high) has occurred while \output is active []
+
+
+
+[297]
+File: 149-quantitative-vi-inferential_files/figure-latex/unnamed-chunk-7-1.pdf 
+Graphic file (type pdf)
+<use 149-quantitative-vi-inferential_files/figure-latex/unnamed-chunk-7-1.pdf>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[298]
+Overfull \vbox (94.31529pt too high) has occurred while \output is active []
+
+
+
+[299]
+
+[300]
+File: 149-quantitative-vi-inferential_files/figure-latex/unnamed-chunk-9-1.pdf 
+Graphic file (type pdf)
+<use 149-quantitative-vi-inferential_files/figure-latex/unnamed-chunk-9-1.pdf>
+
+Underfull \vbox (badness 1442) has occurred while \output is active []
+
+
+
+[301]
+File: 149-quantitative-vi-inferential_files/figure-latex/unnamed-chunk-10-1.pdf
+ Graphic file (type pdf)
+<use 149-quantitative-vi-inferential_files/figure-latex/unnamed-chunk-10-1.pdf>
+
+File: 149-quantitative-vi-inferential_files/figure-latex/unnamed-chunk-10-2.pdf
+ Graphic file (type pdf)
+<use 149-quantitative-vi-inferential_files/figure-latex/unnamed-chunk-10-2.pdf>
+
+
+
+[302]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[303]
+File: 149-quantitative-vi-inferential_files/figure-latex/unnamed-chunk-11-1.pdf
+ Graphic file (type pdf)
+<use 149-quantitative-vi-inferential_files/figure-latex/unnamed-chunk-11-1.pdf>
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[304]
+File: 149-quantitative-vi-inferential_files/figure-latex/unnamed-chunk-12-1.pdf
+ Graphic file (type pdf)
+<use 149-quantitative-vi-inferential_files/figure-latex/unnamed-chunk-12-1.pdf>
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[305]
+
+[306]
+File: 149-quantitative-vi-inferential_files/figure-latex/unnamed-chunk-13-1.pdf
+ Graphic file (type pdf)
+<use 149-quantitative-vi-inferential_files/figure-latex/unnamed-chunk-13-1.pdf>
+
+File: 149-quantitative-vi-inferential_files/figure-latex/unnamed-chunk-14-1.pdf
+ Graphic file (type pdf)
+<use 149-quantitative-vi-inferential_files/figure-latex/unnamed-chunk-14-1.pdf>
+
+File: 149-quantitative-vi-inferential_files/figure-latex/unnamed-chunk-14-2.pdf
+ Graphic file (type pdf)
+<use 149-quantitative-vi-inferential_files/figure-latex/unnamed-chunk-14-2.pdf>
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[307]
+Underfull \vbox (badness 1092) has occurred while \output is active []
+
+
+
+[308]
+File: 149-quantitative-vi-inferential_files/figure-latex/unnamed-chunk-16-1.pdf
+ Graphic file (type pdf)
+<use 149-quantitative-vi-inferential_files/figure-latex/unnamed-chunk-16-1.pdf>
+
+
+
+[309]
+File: 149-quantitative-vi-inferential_files/figure-latex/unnamed-chunk-17-1.pdf
+ Graphic file (type pdf)
+<use 149-quantitative-vi-inferential_files/figure-latex/unnamed-chunk-17-1.pdf>
+
+
+
+[310]
+
+[311]
+
+[312]
+
+[313]
+
+[314
+
+]
+Chapter 26.
+
+
+[315]
+
+[316]
+Underfull \vbox (badness 3780) has occurred while \output is active []
+
+
+
+[317]
+
+[318]
+
+[319]
+
+[320
+
+]
+
+[321]
+
+[322]
+Chapter 27.
+
+
+[323
+
+]
+
+[324]
+LaTeX Font Info:    Font shape `TU/TimesNewRoman(1)/b/n' will be
+(Font)              scaled to size 7.8374pt on input line 6379.
+LaTeX Font Info:    Font shape `TU/TimesNewRoman(1)/b/n' will be
+(Font)              scaled to size 5.87805pt on input line 6379.
+
+
+[325]
+
+[326]
+Overfull \vbox (0.74997pt too high) detected at line 6496
+ []
+
+
+
+[327]
+
+[328]
+
+[329]
+Underfull \hbox (badness 1983) in paragraph at lines 6606--6607
+\TU/TimesNewRoman(0)/m/n/10 Krumhansl-Schmuckler algorithm, these templates are
+ derived empirically from
+ []
+
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-8-1.p
+df Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-8-1.pd
+f>
+
+
+[330]
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-9-1.p
+df Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-9-1.pd
+f, page 1>
+<a1,fr0>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-9-2.p
+df Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-9-2.pd
+f, page 1>
+<a1,fr1>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-9-3.p
+df Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-9-3.pd
+f, page 1>
+<a1,fr2>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-9-4.p
+df Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-9-4.pd
+f, page 1>
+<a1,fr3>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-9-5.p
+df Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-9-5.pd
+f, page 1>
+<a1,fr4>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-9-6.p
+df Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-9-6.pd
+f, page 1>
+<a1,fr5>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-9-7.p
+df Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-9-7.pd
+f, page 1>
+<a1,fr6>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-9-8.p
+df Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-9-8.pd
+f, page 1>
+<a1,fr7>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-9-9.p
+df Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-9-9.pd
+f, page 1>
+<a1,fr8>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-9-10.
+pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-9-10.p
+df, page 1>
+<a1,fr9>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-9-11.
+pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-9-11.p
+df, page 1>
+<a1,fr10>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-9-12.
+pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-9-12.p
+df, page 1>
+<a1,fr11>
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[331]
+File: images/twinkle-twinkle.png Graphic file (type bmp)
+<images/twinkle-twinkle.png>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[332]
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-10-1.
+pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-10-1.p
+df>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-11-1.
+pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-11-1.p
+df>
+
+
+[333]
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-12-1.
+pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-12-1.p
+df, page 1>
+<a2,fr0>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-12-2.
+pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-12-2.p
+df, page 1>
+<a2,fr1>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-12-3.
+pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-12-3.p
+df, page 1>
+<a2,fr2>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-12-4.
+pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-12-4.p
+df, page 1>
+<a2,fr3>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-12-5.
+pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-12-5.p
+df, page 1>
+<a2,fr4>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-12-6.
+pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-12-6.p
+df, page 1>
+<a2,fr5>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-12-7.
+pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-12-7.p
+df, page 1>
+<a2,fr6>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-12-8.
+pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-12-8.p
+df, page 1>
+<a2,fr7>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-12-9.
+pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-12-9.p
+df, page 1>
+<a2,fr8>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-12-10
+.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-12-10.
+pdf, page 1>
+<a2,fr9>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-12-11
+.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-12-11.
+pdf, page 1>
+<a2,fr10>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-12-12
+.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-12-12.
+pdf, page 1>
+<a2,fr11>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-12-13
+.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-12-13.
+pdf, page 1>
+<a2,fr12>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-12-14
+.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-12-14.
+pdf, page 1>
+<a2,fr13>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-12-15
+.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-12-15.
+pdf, page 1>
+<a2,fr14>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-12-16
+.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-12-16.
+pdf, page 1>
+<a2,fr15>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-12-17
+.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-12-17.
+pdf, page 1>
+<a2,fr16>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-12-18
+.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-12-18.
+pdf, page 1>
+<a2,fr17>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-12-19
+.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-12-19.
+pdf, page 1>
+<a2,fr18>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-12-20
+.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-12-20.
+pdf, page 1>
+<a2,fr19>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-12-21
+.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-12-21.
+pdf, page 1>
+<a2,fr20>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-12-22
+.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-12-22.
+pdf, page 1>
+<a2,fr21>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-12-23
+.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-12-23.
+pdf, page 1>
+<a2,fr22>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-12-24
+.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-12-24.
+pdf, page 1>
+<a2,fr23>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-12-25
+.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-12-25.
+pdf, page 1>
+<a2,fr24>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-12-26
+.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-12-26.
+pdf, page 1>
+<a2,fr25>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-12-27
+.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-12-27.
+pdf, page 1>
+<a2,fr26>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-12-28
+.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-12-28.
+pdf, page 1>
+<a2,fr27>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-12-29
+.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-12-29.
+pdf, page 1>
+<a2,fr28>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-12-30
+.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-12-30.
+pdf, page 1>
+<a2,fr29>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-12-31
+.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-12-31.
+pdf, page 1>
+<a2,fr30>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-12-32
+.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-12-32.
+pdf, page 1>
+<a2,fr31>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-12-33
+.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-12-33.
+pdf, page 1>
+<a2,fr32>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-12-34
+.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-12-34.
+pdf, page 1>
+<a2,fr33>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-12-35
+.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-12-35.
+pdf, page 1>
+<a2,fr34>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-12-36
+.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-12-36.
+pdf, page 1>
+<a2,fr35>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-12-37
+.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-12-37.
+pdf, page 1>
+<a2,fr36>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-12-38
+.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-12-38.
+pdf, page 1>
+<a2,fr37>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-12-39
+.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-12-39.
+pdf, page 1>
+<a2,fr38>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-12-40
+.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-12-40.
+pdf, page 1>
+<a2,fr39>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-12-41
+.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-12-41.
+pdf, page 1>
+<a2,fr40>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-12-42
+.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-12-42.
+pdf, page 1>
+<a2,fr41>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-12-43
+.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-12-43.
+pdf, page 1>
+<a2,fr42>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-12-44
+.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-12-44.
+pdf, page 1>
+<a2,fr43>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-12-45
+.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-12-45.
+pdf, page 1>
+<a2,fr44>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-12-46
+.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-12-46.
+pdf, page 1>
+<a2,fr45>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-12-47
+.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-12-47.
+pdf, page 1>
+<a2,fr46>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-12-48
+.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-12-48.
+pdf, page 1>
+<a2,fr47>
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[334]
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-13-1.
+pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-13-1.p
+df>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[335]
+Underfull \vbox (badness 3449) has occurred while \output is active []
+
+
+
+[336]
+File: _latex-images/images/matsunaga-tonally-clear-1.pdf Graphic file (type pdf
+)
+<use _latex-images/images/matsunaga-tonally-clear-1.pdf>
+File: _latex-images/images/matsunaga-tonally-ambiguous-1.pdf Graphic file (type
+ pdf)
+<use _latex-images/images/matsunaga-tonally-ambiguous-1.pdf>
+
+
+[337]
+Underfull \hbox (badness 2318) in paragraph at lines 6678--6679
+[]\TU/TimesNewRoman(0)/m/n/10 Consequently, an interesting avenue of future res
+earch concerns extending the
+ []
+
+
+Underfull \hbox (badness 1629) in paragraph at lines 6678--6679
+\TU/TimesNewRoman(0)/m/n/10 & Widmer ([]2007[]) presented a version of the Krum
+hansl-Schmuckler algorithm
+ []
+
+
+
+[338]
+Underfull \vbox (badness 10000) detected at line 6841
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 6841
+ []
+
+
+
+[339]
+Underfull \vbox (badness 10000) detected at line 6841
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 6841
+ []
+
+
+
+[340]
+Underfull \hbox (badness 1097) in paragraph at lines 6847--6848
+\TU/TimesNewRoman(0)/m/n/10 The Hutchinson-Knopoff dissonance algorithm attempt
+s to explain how listeners
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[341]
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-17-1.
+pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-17-1.p
+df>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[342]
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-1.
+pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-1.p
+df, page 1>
+<a3,fr0>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-2.
+pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-2.p
+df, page 1>
+<a3,fr1>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-3.
+pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-3.p
+df, page 1>
+<a3,fr2>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-4.
+pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-4.p
+df, page 1>
+<a3,fr3>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-5.
+pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-5.p
+df, page 1>
+<a3,fr4>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-6.
+pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-6.p
+df, page 1>
+<a3,fr5>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-7.
+pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-7.p
+df, page 1>
+<a3,fr6>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-8.
+pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-8.p
+df, page 1>
+<a3,fr7>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-9.
+pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-9.p
+df, page 1>
+<a3,fr8>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-10
+.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-10.
+pdf, page 1>
+<a3,fr9>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-11
+.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-11.
+pdf, page 1>
+<a3,fr10>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-12
+.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-12.
+pdf, page 1>
+<a3,fr11>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-13
+.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-13.
+pdf, page 1>
+<a3,fr12>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-14
+.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-14.
+pdf, page 1>
+<a3,fr13>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-15
+.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-15.
+pdf, page 1>
+<a3,fr14>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-16
+.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-16.
+pdf, page 1>
+<a3,fr15>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-17
+.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-17.
+pdf, page 1>
+<a3,fr16>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-18
+.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-18.
+pdf, page 1>
+<a3,fr17>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-19
+.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-19.
+pdf, page 1>
+<a3,fr18>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-20
+.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-20.
+pdf, page 1>
+<a3,fr19>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-21
+.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-21.
+pdf, page 1>
+<a3,fr20>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-22
+.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-22.
+pdf, page 1>
+<a3,fr21>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-23
+.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-23.
+pdf, page 1>
+<a3,fr22>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-24
+.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-24.
+pdf, page 1>
+<a3,fr23>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-25
+.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-25.
+pdf, page 1>
+<a3,fr24>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-26
+.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-26.
+pdf, page 1>
+<a3,fr25>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-27
+.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-27.
+pdf, page 1>
+<a3,fr26>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-28
+.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-28.
+pdf, page 1>
+<a3,fr27>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-29
+.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-29.
+pdf, page 1>
+<a3,fr28>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-30
+.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-30.
+pdf, page 1>
+<a3,fr29>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-31
+.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-31.
+pdf, page 1>
+<a3,fr30>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-32
+.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-32.
+pdf, page 1>
+<a3,fr31>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-33
+.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-33.
+pdf, page 1>
+<a3,fr32>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-34
+.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-34.
+pdf, page 1>
+<a3,fr33>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-35
+.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-35.
+pdf, page 1>
+<a3,fr34>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-36
+.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-36.
+pdf, page 1>
+<a3,fr35>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-37
+.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-37.
+pdf, page 1>
+<a3,fr36>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-38
+.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-38.
+pdf, page 1>
+<a3,fr37>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-39
+.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-39.
+pdf, page 1>
+<a3,fr38>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-40
+.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-40.
+pdf, page 1>
+<a3,fr39>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-41
+.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-41.
+pdf, page 1>
+<a3,fr40>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-42
+.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-42.
+pdf, page 1>
+<a3,fr41>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-43
+.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-43.
+pdf, page 1>
+<a3,fr42>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-44
+.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-44.
+pdf, page 1>
+<a3,fr43>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-45
+.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-45.
+pdf, page 1>
+<a3,fr44>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-46
+.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-46.
+pdf, page 1>
+<a3,fr45>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-47
+.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-47.
+pdf, page 1>
+<a3,fr46>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-48
+.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-48.
+pdf, page 1>
+<a3,fr47>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-49
+.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-49.
+pdf, page 1>
+<a3,fr48>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-50
+.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-50.
+pdf, page 1>
+<a3,fr49>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-51
+.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-51.
+pdf, page 1>
+<a3,fr50>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-52
+.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-52.
+pdf, page 1>
+<a3,fr51>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-53
+.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-53.
+pdf, page 1>
+<a3,fr52>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-54
+.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-54.
+pdf, page 1>
+<a3,fr53>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-55
+.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-55.
+pdf, page 1>
+<a3,fr54>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-56
+.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-56.
+pdf, page 1>
+<a3,fr55>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-57
+.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-57.
+pdf, page 1>
+<a3,fr56>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-58
+.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-58.
+pdf, page 1>
+<a3,fr57>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-59
+.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-59.
+pdf, page 1>
+<a3,fr58>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-60
+.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-60.
+pdf, page 1>
+<a3,fr59>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-61
+.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-61.
+pdf, page 1>
+<a3,fr60>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-62
+.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-62.
+pdf, page 1>
+<a3,fr61>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-63
+.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-63.
+pdf, page 1>
+<a3,fr62>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-64
+.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-64.
+pdf, page 1>
+<a3,fr63>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-65
+.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-65.
+pdf, page 1>
+<a3,fr64>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-66
+.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-66.
+pdf, page 1>
+<a3,fr65>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-67
+.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-67.
+pdf, page 1>
+<a3,fr66>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-68
+.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-68.
+pdf, page 1>
+<a3,fr67>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-69
+.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-69.
+pdf, page 1>
+<a3,fr68>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-70
+.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-70.
+pdf, page 1>
+<a3,fr69>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-71
+.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-71.
+pdf, page 1>
+<a3,fr70>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-72
+.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-72.
+pdf, page 1>
+<a3,fr71>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-73
+.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-73.
+pdf, page 1>
+<a3,fr72>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-74
+.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-74.
+pdf, page 1>
+<a3,fr73>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-75
+.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-75.
+pdf, page 1>
+<a3,fr74>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-76
+.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-76.
+pdf, page 1>
+<a3,fr75>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-77
+.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-77.
+pdf, page 1>
+<a3,fr76>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-78
+.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-78.
+pdf, page 1>
+<a3,fr77>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-79
+.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-79.
+pdf, page 1>
+<a3,fr78>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-80
+.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-80.
+pdf, page 1>
+<a3,fr79>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-81
+.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-81.
+pdf, page 1>
+<a3,fr80>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-82
+.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-82.
+pdf, page 1>
+<a3,fr81>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-83
+.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-83.
+pdf, page 1>
+<a3,fr82>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-84
+.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-84.
+pdf, page 1>
+<a3,fr83>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-85
+.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-85.
+pdf, page 1>
+<a3,fr84>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-86
+.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-86.
+pdf, page 1>
+<a3,fr85>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-87
+.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-87.
+pdf, page 1>
+<a3,fr86>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-88
+.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-88.
+pdf, page 1>
+<a3,fr87>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-89
+.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-89.
+pdf, page 1>
+<a3,fr88>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-90
+.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-90.
+pdf, page 1>
+<a3,fr89>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-91
+.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-91.
+pdf, page 1>
+<a3,fr90>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-92
+.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-92.
+pdf, page 1>
+<a3,fr91>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-93
+.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-93.
+pdf, page 1>
+<a3,fr92>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-94
+.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-94.
+pdf, page 1>
+<a3,fr93>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-95
+.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-95.
+pdf, page 1>
+<a3,fr94>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-96
+.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-96.
+pdf, page 1>
+<a3,fr95>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-97
+.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-97.
+pdf, page 1>
+<a3,fr96>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-98
+.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-98.
+pdf, page 1>
+<a3,fr97>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-99
+.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-99.
+pdf, page 1>
+<a3,fr98>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-10
+0.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-100
+.pdf, page 1>
+<a3,fr99>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-10
+1.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-101
+.pdf, page 1>
+<a3,fr100>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-10
+2.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-102
+.pdf, page 1>
+<a3,fr101>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-10
+3.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-103
+.pdf, page 1>
+<a3,fr102>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-10
+4.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-104
+.pdf, page 1>
+<a3,fr103>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-10
+5.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-105
+.pdf, page 1>
+<a3,fr104>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-10
+6.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-106
+.pdf, page 1>
+<a3,fr105>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-10
+7.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-107
+.pdf, page 1>
+<a3,fr106>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-10
+8.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-108
+.pdf, page 1>
+<a3,fr107>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-10
+9.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-109
+.pdf, page 1>
+<a3,fr108>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-11
+0.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-110
+.pdf, page 1>
+<a3,fr109>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-11
+1.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-111
+.pdf, page 1>
+<a3,fr110>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-11
+2.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-112
+.pdf, page 1>
+<a3,fr111>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-11
+3.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-113
+.pdf, page 1>
+<a3,fr112>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-11
+4.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-114
+.pdf, page 1>
+<a3,fr113>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-11
+5.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-115
+.pdf, page 1>
+<a3,fr114>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-11
+6.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-116
+.pdf, page 1>
+<a3,fr115>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-11
+7.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-117
+.pdf, page 1>
+<a3,fr116>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-11
+8.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-118
+.pdf, page 1>
+<a3,fr117>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-11
+9.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-119
+.pdf, page 1>
+<a3,fr118>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-12
+0.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-120
+.pdf, page 1>
+<a3,fr119>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-12
+1.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-121
+.pdf, page 1>
+<a3,fr120>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-12
+2.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-122
+.pdf, page 1>
+<a3,fr121>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-12
+3.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-123
+.pdf, page 1>
+<a3,fr122>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-12
+4.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-124
+.pdf, page 1>
+<a3,fr123>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-12
+5.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-125
+.pdf, page 1>
+<a3,fr124>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-12
+6.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-126
+.pdf, page 1>
+<a3,fr125>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-12
+7.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-127
+.pdf, page 1>
+<a3,fr126>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-12
+8.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-128
+.pdf, page 1>
+<a3,fr127>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-12
+9.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-129
+.pdf, page 1>
+<a3,fr128>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-13
+0.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-130
+.pdf, page 1>
+<a3,fr129>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-13
+1.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-131
+.pdf, page 1>
+<a3,fr130>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-13
+2.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-132
+.pdf, page 1>
+<a3,fr131>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-13
+3.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-133
+.pdf, page 1>
+<a3,fr132>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-13
+4.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-134
+.pdf, page 1>
+<a3,fr133>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-13
+5.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-135
+.pdf, page 1>
+<a3,fr134>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-13
+6.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-136
+.pdf, page 1>
+<a3,fr135>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-13
+7.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-137
+.pdf, page 1>
+<a3,fr136>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-13
+8.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-138
+.pdf, page 1>
+<a3,fr137>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-13
+9.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-139
+.pdf, page 1>
+<a3,fr138>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-14
+0.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-140
+.pdf, page 1>
+<a3,fr139>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-14
+1.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-141
+.pdf, page 1>
+<a3,fr140>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-14
+2.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-142
+.pdf, page 1>
+<a3,fr141>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-14
+3.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-143
+.pdf, page 1>
+<a3,fr142>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-14
+4.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-144
+.pdf, page 1>
+<a3,fr143>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-14
+5.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-145
+.pdf, page 1>
+<a3,fr144>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-14
+6.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-146
+.pdf, page 1>
+<a3,fr145>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-14
+7.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-147
+.pdf, page 1>
+<a3,fr146>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-14
+8.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-148
+.pdf, page 1>
+<a3,fr147>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-14
+9.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-149
+.pdf, page 1>
+<a3,fr148>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-15
+0.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-150
+.pdf, page 1>
+<a3,fr149>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-15
+1.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-151
+.pdf, page 1>
+<a3,fr150>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-15
+2.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-152
+.pdf, page 1>
+<a3,fr151>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-15
+3.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-18-153
+.pdf, page 1>
+<a3,fr152>
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[343]
+
+[344]
+File: 160-computational-music-psychology_files/figure-latex/critical-bandwidth-
+frequency-1.pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/critical-bandwidth-f
+requency-1.pdf>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-21-1.
+pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-21-1.p
+df>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[345]
+Underfull \vbox (badness 2469) has occurred while \output is active []
+
+
+
+[346]
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-22-1.
+pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-22-1.p
+df, page 1>
+<a4,fr0>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-22-2.
+pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-22-2.p
+df, page 1>
+<a4,fr1>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-22-3.
+pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-22-3.p
+df, page 1>
+<a4,fr2>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-22-4.
+pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-22-4.p
+df, page 1>
+<a4,fr3>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-22-5.
+pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-22-5.p
+df, page 1>
+<a4,fr4>
+File: 160-computational-music-psychology_files/figure-latex/dissonance-curve-1.
+pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/dissonance-curve-1.p
+df, page 1>
+<a5,fr0>
+File: 160-computational-music-psychology_files/figure-latex/dissonance-curve-2.
+pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/dissonance-curve-2.p
+df, page 1>
+<a5,fr1>
+File: 160-computational-music-psychology_files/figure-latex/dissonance-curve-3.
+pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/dissonance-curve-3.p
+df, page 1>
+<a5,fr2>
+File: 160-computational-music-psychology_files/figure-latex/dissonance-curve-4.
+pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/dissonance-curve-4.p
+df, page 1>
+<a5,fr3>
+File: 160-computational-music-psychology_files/figure-latex/dissonance-curve-5.
+pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/dissonance-curve-5.p
+df, page 1>
+<a5,fr4>
+
+[347]
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-23-1.
+pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-23-1.p
+df>
+
+
+[348]
+
+[349]
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-24-1.
+pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-24-1.p
+df>
+File: 160-computational-music-psychology_files/figure-latex/unnamed-chunk-25-1.
+pdf Graphic file (type pdf)
+<use 160-computational-music-psychology_files/figure-latex/unnamed-chunk-25-1.p
+df>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[350]
+
+[351]
+
+[352]
+
+[353]
+Underfull \vbox (badness 10000) detected at line 7155
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 7155
+ []
+
+
+
+[354]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[355]
+
+[356]
+
+[357]
+
+[358]
+
+[359]
+
+[360]
+
+[361]
+Underfull \hbox (badness 1484) in paragraph at lines 7465--7466
+[]\TU/TimesNewRoman(0)/m/n/10 Narmour, E. (1992). \TU/TimesNewRoman(0)/m/it/10 
+The analysis and cognition of melodic complexity: The
+ []
+
+
+
+[362]
+
+[363]
+
+[364]
+
+[365]
+
+LaTeX Warning: Hook 'shipout/lastpage' executed on wrong page (363 not 365).
+               Rerun to correct this.
+
+(./intro-to-music-and-science.aux)
+ ***********
+LaTeX2e <2024-11-01> patch level 2
+L3 programming layer <2025-01-18>
+ ***********
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 26072 strings out of 473832
+ 701701 string characters out of 5719382
+ 1122779 words of memory out of 5000000
+ 48409 multiletter control sequences out of 15000+600000
+ 565536 words of font info for 120 fonts, out of 8000000 for 9000
+ 1348 hyphenation exceptions out of 8191
+ 90i,9n,116p,2286b,636s stack positions out of 10000i,1000n,20000p,200000b,200000s
+
+Output written on intro-to-music-and-science.pdf (365 pages).
